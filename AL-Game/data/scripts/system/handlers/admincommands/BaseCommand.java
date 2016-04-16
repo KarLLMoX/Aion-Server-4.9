@@ -147,13 +147,14 @@ public class BaseCommand extends AdminCommand {
 				base.spawnAttackers(race);
 			}
 		}
+		else PacketSendUtility.sendMessage(player, "This Base doesn't exists!");
 	}
 
 	protected void showHelp(Player player) {
 		PacketSendUtility.sendMessage(player, "AdminCommand //base Help\n"
 				+ "//base list\n"
 				+ "//base capture <Id> <Race (ELYOS,ASMODIANS,NPC)>\n"
-				+ "//base assault <Id> <delaySec>");
+				+ "//base assault <Id> <Race (ELYOS,ASMODIANS,NPC)> <delaySec>");
 	}
 
 }

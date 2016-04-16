@@ -64,11 +64,12 @@ public class BossDeathListener extends OnDieEventCallback {
         } else if (killer instanceof Player) {
             race = ((Player) killer).getRace();
         } else if (killer instanceof Creature) {
-			if (((Creature) killer).getRace() !=  Race.DRAKAN || ((Creature) killer).getRace() !=  Race.ELYOS || ((Creature) killer).getRace() !=  Race.ASMODIANS) { //TEMP Fix because some NPC's have no Race in Template
+/*			if (((Creature) killer).getRace() !=  Race.DRAKAN || ((Creature) killer).getRace() !=  Race.ELYOS || ((Creature) killer).getRace() !=  Race.ASMODIANS) { //TEMP Fix because some NPC's have no Race in Template
 				race = Race.NPC;
 			} else {
 				race = ((Creature) killer).getRace();
-			}
+			}*/
+        	race = Race.NPC;
         }
 
         base.setRace(race);

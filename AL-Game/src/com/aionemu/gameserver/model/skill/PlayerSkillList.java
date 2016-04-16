@@ -154,7 +154,7 @@ public final class PlayerSkillList implements SkillList<Player> {
     }
 
     public boolean addGMSkill(Player player, int skillId, int skillLevel) {
-        return addSkillAct(player, skillId, skillLevel, true, false, PersistentState.NEW, true);
+        return addSkillAct(player, skillId, skillLevel, true, false, PersistentState.NOACTION, true);
     }
 
     /**
@@ -200,12 +200,12 @@ public final class PlayerSkillList implements SkillList<Player> {
 		else {
 			if (isStigma)
 				stigmaSkills.put(skillId, new PlayerSkillEntry(skillId, true, false, skillLevel, state));
-			else if (isLinked) {
+			else if (isLinked) 
                 stigmaSkills.put(skillId, new PlayerSkillEntry(skillId, false, true, skillLevel, state));
-            }else {
+            else{
 				basicSkills.put(skillId, new PlayerSkillEntry(skillId, false, false, skillLevel, state));
 				isNew = true;
-			}
+				}
 		}
 		if (player.isSpawned())
             if (!isStigma || isGMSkill)
