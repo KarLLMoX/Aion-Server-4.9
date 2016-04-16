@@ -1,3 +1,49 @@
-h1. Assembla.readme
+h1. AionNA 4.9 TODO Liste
 
-In assembla you can use "textile(Textile Basics)":http://bit.ly/textile-basics, "html(Html Basics)":http://bit.ly/html-basics or "markdown(Markdown Basics)":http://bit.ly/markdown-basics to add some sugar to your readme files. Just add the extention to your readme file, so we can recognize the markup you want to use!
+h2. High Priority:
+* write new or update Packets:
+  - Stonespear Siege (CM+SM)
+  - Challenge_List (SM)
+  - 0x131 (SM)
+  - 0x98 (SM)
+  - 0x12F (SM)
+  - 0x2F (SM) (Templer Bodygard Skill)
+  - 0x30 (SM) (Templer Bodygard Skill End)
+  - 0x18B (CM) (SM Bodygard Skills)
+* add "occupy_count" to Siege System
+* add new Pet Functions - Buff and Merchant
+
+* rework/update Reshanta Siege Spawns
+* rework/update Reshanta Siege Bosses
+* rework Reshanta Spawnfiles
+
+
+h2. High Priority (Preview):
+* for Aion 4.9.1 (27.04.2016)
+- CM_Landing_Reinforcement
+- SM_Landing_Reinforcement
+- parse new npc_template.xml
+
+
+h3. Middle Priority:
+* update Conquest Spawns
+* check and update Quest Scripts
+* test the Reshanta Artifact/Base Spawns 
+
+
+h3. Low Priority:
+* update Dropfiles with new Drops, delete old drops
+* create new Dropfiles for all old Maps
+
+
+h3. Completed parser tasks:
+* gather_templates.xml
+* player_titles.xml
+* ride.xml
+* flypath_template.xml
+* goodslists.xml
+* npc_trade_list.xml
+* item_templates.xml (THX Killer & Voidstar)
+* npc_teleporter.xml  
+* tribe_relations.xml
+* TribeClass.java
