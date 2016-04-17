@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 15.04.2016 07:58 aus PS-Drop-Datei: Eltnen_4.9_loot_live387792328.xml -->
+<!-- generiert am/um 17.04.2016 14:19 aus PS-Drop-Datei: Eltnen_4.9_loot_live387792328.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="210755">
         <drop_group name="FLUX_COMMON_LVL18" use_category="true" race="PC_ALL">
