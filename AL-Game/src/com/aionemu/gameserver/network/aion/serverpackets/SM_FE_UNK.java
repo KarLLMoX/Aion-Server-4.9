@@ -24,8 +24,14 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  */
 public class SM_FE_UNK extends AionServerPacket {
 
+    private int unk = 0;
+ 
+    public SM_FE_UNK(int unk) {
+        this.unk = unk;
+    }
+ 
     @Override
     protected void writeImpl(AionConnection con) {
-    	writeD(0);
+        writeD(unk);
     }
 }
