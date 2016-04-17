@@ -76,7 +76,7 @@ public class FortressSiege extends Siege<FortressLocation> {
     @Override
     public void onSiegeStart() {
         if (LoggingConfig.LOG_SIEGE) {
-            log.info("[SIEGE] > Siege started. [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LegionId:" + getSiegeLocation().getLegionId() + "]");
+            log.info("[FortressSiege] Siege started. [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LegionId:" + getSiegeLocation().getLegionId() + "]");
         }
         // Mark fortress as vulnerable
         getSiegeLocation().setVulnerable(true);
@@ -116,9 +116,9 @@ public class FortressSiege extends Siege<FortressLocation> {
         SiegeRace looser = getSiegeLocation().getRace();
         if (LoggingConfig.LOG_SIEGE) {
             if (winner != null) {
-                log.info("[SIEGE] > Siege finished. [FORTRESS:" + getSiegeLocationId() + "] [OLD RACE: " + getSiegeLocation().getRace() + "] [OLD LegionId:" + getSiegeLocation().getLegionId() + "] [NEW RACE: " + winner.getSiegeRace() + "] [NEW LegionId:" + (winner.getWinnerLegionId() == null ? 0 : winner.getWinnerLegionId()) + "]");
+                log.info("[FortressSiege] Siege finished. [FORTRESS:" + getSiegeLocationId() + "] [OLD RACE: " + getSiegeLocation().getRace() + "] [OLD LegionId:" + getSiegeLocation().getLegionId() + "] [NEW RACE: " + winner.getSiegeRace() + "] [NEW LegionId:" + (winner.getWinnerLegionId() == null ? 0 : winner.getWinnerLegionId()) + "]");
             } else {
-                log.info("[SIEGE] > Siege finished. No winner found [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LegionId:" + getSiegeLocation().getLegionId() + "]");
+                log.info("[FortressSiege] Siege finished. No winner found [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LegionId:" + getSiegeLocation().getLegionId() + "]");
             }
         }
 
@@ -194,9 +194,9 @@ public class FortressSiege extends Siege<FortressLocation> {
         getSiegeLocation().setRace(winner.getSiegeRace());
         getArtifact().setRace(winner.getSiegeRace());
 
-        log.info("Global Elyos Influence = " + Influence.getInstance().getGlobalElyosInfluence() + ".");
-        log.info("Global Asmodians Influence = " + Influence.getInstance().getGlobalAsmodiansInfluence() + ".");
-        log.info("Global Balaurs Influence = " + Influence.getInstance().getGlobalBalaursInfluence() + ".");
+        log.info("[FortressSiege] Global Elyos Influence = " + Influence.getInstance().getGlobalElyosInfluence() + ".");
+        log.info("[FortressSiege] Global Asmodians Influence = " + Influence.getInstance().getGlobalAsmodiansInfluence() + ".");
+        log.info("[FortressSiege] Global Balaurs Influence = " + Influence.getInstance().getGlobalBalaursInfluence() + ".");
 
         final Influence inf = Influence.getInstance();
         World.getInstance().doOnAllPlayers(new Visitor<Player>() {
@@ -208,24 +208,24 @@ public class FortressSiege extends Siege<FortressLocation> {
                 if (inf.getGlobalElyosInfluence() >= 0.30f) {
                     if (player.getRace() == Race.ASMODIANS) {
                         getPlayerReward(object).applyBoostEffect(player);
-                        log.info("Abyss Race buff start Asmodians.");
+                        log.info("[FortressSiege] Abyss Race buff starts for Asmodians.");
                     }
                 } else if (inf.getGlobalElyosInfluence() < 0.30f) {
                     if (player.getRace() == Race.ASMODIANS) {
                         getPlayerReward(object).endBoostEffect(player);
-                        log.info("Abyss Race buff end Asmodians.");
+                        log.info("[FortressSiege] Abyss Race buff ends for Asmodians.");
                     }
                 }
 
                 if (inf.getGlobalAsmodiansInfluence() >= 0.30f) {
                     if (player.getRace() == Race.ELYOS) {
                         getPlayerReward(object).applyBoostEffect(player);
-                        log.info("Abyss Race buff start Elyos.");
+                        log.info("[FortressSiege] Abyss Race buff starts for Elyos.");
                     }
                 } else if (inf.getGlobalAsmodiansInfluence() < 0.30f) {
                     if (player.getRace() == Race.ELYOS) {
                         getPlayerReward(object).endBoostEffect(player);
-                        log.info("Abyss Race buff end Elyos.");
+                        log.info("[FortressSiege] Abyss Race buff ends for Elyos.");
                     }
                 }
             }
@@ -267,7 +267,7 @@ public class FortressSiege extends Siege<FortressLocation> {
         // We do not give rewards if fortress was captured for first time
         if (isBossKilled()) {
             if (LoggingConfig.LOG_SIEGE) {
-                log.info("[SIEGE] > [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LEGION :" + getSiegeLocation().getLegionId() + "] Legion Reward not sending because fortress was captured(siege boss killed).");
+                log.info("[FortressSiege] [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LEGION :" + getSiegeLocation().getLegionId() + "] Legion Reward not sending because fortress was captured(siege boss killed).");
             }
             return;
         }
@@ -275,7 +275,7 @@ public class FortressSiege extends Siege<FortressLocation> {
         // Legion with id 0 = not exists?
         if (getSiegeLocation().getLegionId() == 0) {
             if (LoggingConfig.LOG_SIEGE) {
-                log.info("[SIEGE] > [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LEGION :" + getSiegeLocation().getLegionId() + "] Legion Reward not sending because fortress not owned by any legion.");
+                log.info("[FortressSiege] [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LEGION :" + getSiegeLocation().getLegionId() + "] Legion Reward not sending because fortress not owned by any legion.");
             }
             return;
         }
@@ -285,13 +285,13 @@ public class FortressSiege extends Siege<FortressLocation> {
         if (legionBGeneral != 0) {
             PlayerCommonData BGeneral = DAOManager.getDAO(PlayerDAO.class).loadPlayerCommonData(legionBGeneral);
             if (LoggingConfig.LOG_SIEGE) {
-                log.info("[SIEGE] > [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] Legion Reward in process... LegionId:"
+                log.info("[FortressSiege] [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] Legion Reward in process... LegionId:"
                         + getSiegeLocation().getLegionId() + " General Name:" + BGeneral.getName());
             }
             if (legionRewards != null) {
                 for (SiegeLegionReward medalsType : legionRewards) {
                     if (LoggingConfig.LOG_SIEGE) {
-                        log.info("[SIEGE] > [Legion Reward to: " + BGeneral.getName() + "] ITEM RETURN "
+                        log.info("[FortressSiege] [Legion Reward to: " + BGeneral.getName() + "] ITEM RETURN "
                                 + medalsType.getItemId() + " ITEM COUNT " + medalsType.getCount() * SiegeConfig.SIEGE_MEDAL_RATE);
                     }
                     MailFormatter.sendAbyssRewardMail(getSiegeLocation(), BGeneral, AbyssSiegeLevel.NONE, SiegeResult.PROTECT, System.currentTimeMillis(), medalsType.getItemId(), medalsType.getCount() * SiegeConfig.SIEGE_MEDAL_RATE, 0);
@@ -364,7 +364,7 @@ public class FortressSiege extends Siege<FortressLocation> {
                 PlayerCommonData pcd = DAOManager.getDAO(PlayerDAO.class).loadPlayerCommonData(playerId);
                 ++rewardedPC;
                 if (LoggingConfig.LOG_SIEGE) {
-                    log.info("[SIEGE]  > [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] Player Reward to: " + playerNames.get(playerId) + "] ITEM RETURN " + topGrade.getItemId() + " ITEM COUNT " + topGrade.getCount() * SiegeConfig.SIEGE_MEDAL_RATE);
+                    log.info("[FortressSiege] [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] Player Reward to: " + playerNames.get(playerId) + "] ITEM RETURN " + topGrade.getItemId() + " ITEM COUNT " + topGrade.getCount() * SiegeConfig.SIEGE_MEDAL_RATE);
                 }
                 MailFormatter.sendAbyssRewardMail(getSiegeLocation(), pcd, level, result, System.currentTimeMillis(), topGrade.getItemId(), topGrade.getCount() * SiegeConfig.SIEGE_MEDAL_RATE, 0);
 

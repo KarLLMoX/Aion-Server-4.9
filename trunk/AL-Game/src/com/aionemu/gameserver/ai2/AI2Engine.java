@@ -20,6 +20,7 @@ import com.aionemu.commons.scripting.classlistener.AggregatedClassListener;
 import com.aionemu.commons.scripting.classlistener.OnClassLoadUnloadListener;
 import com.aionemu.commons.scripting.classlistener.ScheduledTaskClassListener;
 import com.aionemu.commons.scripting.scriptmanager.ScriptManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.GameServerError;
 import com.aionemu.gameserver.configs.main.AIConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -51,7 +52,7 @@ public class AI2Engine implements GameEngine {
 
     @Override
     public void load(CountDownLatch progressLatch) {
-        log.info("AI2 engine load started");
+        log.info("[AIEngine] engine load started");
         scriptManager = new ScriptManager();
 
         AggregatedClassListener acl = new AggregatedClassListener();
@@ -62,10 +63,10 @@ public class AI2Engine implements GameEngine {
 
         try {
             scriptManager.load(INSTANCE_DESCRIPTOR_FILE);
-            log.info("Loaded " + aiMap.size() + " ai handlers.");
+            GameServer.log.info("[AIEngine] Loaded " + aiMap.size() + " ai handlers.");
             validateScripts();
         } catch (Exception e) {
-            throw new GameServerError("Can't initialize ai handlers.", e);
+            throw new GameServerError("[AIEngine] Can't initialize ai handlers.", e);
         } finally {
             if (progressLatch != null) {
                 progressLatch.countDown();
@@ -75,11 +76,11 @@ public class AI2Engine implements GameEngine {
 
     @Override
     public void shutdown() {
-        log.info("AI2 engine shutdown started");
+        log.info("[AIEngine] engine shutdown started");
         scriptManager.shutdown();
         scriptManager = null;
         aiMap.clear();
-        log.info("AI2 engine shutdown complete");
+        log.info("[AIEngine] engine shutdown complete");
     }
 
     public void registerAI(Class<? extends AbstractAI> class1) {
@@ -99,7 +100,7 @@ public class AI2Engine implements GameEngine {
                 aiInstance.setLogging(true);
             }
         } catch (Exception e) {
-            log.error("[AI2] AI factory error: " + name, e);
+            log.error("[AIEngine] AI factory error: " + name, e);
         }
         return aiInstance;
     }
@@ -116,7 +117,7 @@ public class AI2Engine implements GameEngine {
         Collection<String> npcAINames = selectDistinct(with(DataManager.NPC_DATA.getNpcData().valueCollection()).extract(on(NpcTemplate.class).getAi()));
         npcAINames.removeAll(aiMap.keySet());
         if (npcAINames.size() > 0) {
-            log.warn("Bad AI names: " + join(npcAINames));
+            log.warn("[AIEngine] Bad AI names: " + join(npcAINames));
         }
     }
 

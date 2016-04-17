@@ -20,6 +20,7 @@ import com.aionemu.commons.scripting.classlistener.AggregatedClassListener;
 import com.aionemu.commons.scripting.classlistener.OnClassLoadUnloadListener;
 import com.aionemu.commons.scripting.classlistener.ScheduledTaskClassListener;
 import com.aionemu.commons.scripting.scriptmanager.ScriptManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.GameServerError;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.QuestsData;
@@ -138,7 +139,7 @@ public class QuestEngine implements GameEngine {
                 env.setQuestId(0);
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onDialog", ex);
+            log.error("[QuestEngine] exception in onDialog - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return false;
@@ -155,7 +156,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onKill", ex);
+            log.error("[QuestEngine] exception in onKill - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -172,7 +173,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onAttack", ex);
+        	log.error("[QuestEngine] exception in onAttack - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -193,7 +194,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onLvlUp", ex);
+        	log.error("[QuestEngine] exception in onLvlUp - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -209,7 +210,7 @@ public class QuestEngine implements GameEngine {
                 questHandler.onZoneMissionEndEvent(env);
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onLvlUp", ex);
+        	log.error("[QuestEngine] exception in onEnterZoneMissionEnd - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -223,7 +224,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onDie", ex);
+        	log.error("[QuestEngine] exception in onDie - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -237,7 +238,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onLogOut", ex);
+        	log.error("[QuestEngine] exception in onLogOut - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -251,7 +252,7 @@ public class QuestEngine implements GameEngine {
             }
          }
       } catch (Exception ex) {
-         log.error("QE: exception in onProtectEndEvent", ex);
+    	  log.error("[QuestEngine] exception in onNpcReachTarget - QuestId: "+env.getQuestId()+" Error: ", ex);
       }
    }
 
@@ -265,7 +266,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onProtectFailEvent", ex);
+        	log.error("[QuestEngine] exception in onNpcLostTarget - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -280,7 +281,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onFlyRingPassEvent", ex);
+        	log.error("[QuestEngine] exception in onPassFlyingRing - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -294,7 +295,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onEnterWorld", ex);
+        	log.error("[QuestEngine] exception in onEnterWorld - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -314,7 +315,7 @@ public class QuestEngine implements GameEngine {
             }
             return HandlerResult.UNKNOWN;
         } catch (Exception ex) {
-            log.error("QE: exception in onItemUseEvent", ex);
+        	log.error("[QuestEngine] exception in onItemUseEvent - QuestId: "+env.getQuestId()+" Error: ", ex);
             return HandlerResult.FAILED;
         }
     }
@@ -329,7 +330,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onHouseItemUseEvent", ex);
+        	log.error("[QuestEngine] exception in onHouseItemUseEvent - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -360,7 +361,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onKillRanked", ex);
+        	log.error("[QuestEngine] exception in onKillRanked - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -379,7 +380,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onKillInWorld", ex);
+        	log.error("[QuestEngine] exception in onKillInWorld - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -396,7 +397,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onEnterZone", ex);
+        	log.error("[QuestEngine] exception in onEnterZone - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -415,7 +416,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onLeaveZone", ex);
+        	log.error("[QuestEngine] exception in onLeaveZone - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -434,7 +435,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onMovieEnd", ex);
+        	log.error("[QuestEngine] exception in onMovieEnd - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
         return false;
     }
@@ -472,7 +473,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onUseSkill", ex);
+        	log.error("[QuestEngine] exception in onUseSkill - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -577,7 +578,7 @@ public class QuestEngine implements GameEngine {
             }
             return HandlerResult.UNKNOWN;
         } catch (Exception ex) {
-            log.error("QE: exception in onBonusApply", ex);
+        	log.error("[QuestEngine] exception in onBonusApply - QuestId: "+env.getQuestId()+" Error: ", ex);
             return HandlerResult.FAILED;
         }
     }
@@ -593,7 +594,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onAddAggroList", ex);
+        	log.error("[QuestEngine] exception in onAddAggroList - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -622,7 +623,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onAtDistance", ex);
+        	log.error("[QuestEngine] exception in onAtDistance - QuestId: "+env.getQuestId()+" Error: ", ex);
             return false;
         }
         return true;
@@ -638,7 +639,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in onWindStream", ex);
+        	log.error("[QuestEngine] exception in onEnterWindStram - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -652,7 +653,7 @@ public class QuestEngine implements GameEngine {
                 }
             }
         } catch (Exception ex) {
-            log.error("QE: exception in rideAction", ex);
+        	log.error("[QuestEngine] exception in rideAction - QuestId: "+env.getQuestId()+" Error: ", ex);
         }
     }
 
@@ -955,7 +956,7 @@ public class QuestEngine implements GameEngine {
         questHandler.register();
         int questId = questHandler.getQuestId();
         if (questHandlers.containsKey(questId)) {
-            log.warn("Duplicate quest: " + questId);
+            log.warn("[QuestEngine] Duplicate quest: " + questId);
         }
         questHandlers.put(questId, questHandler);
     }
@@ -1008,7 +1009,7 @@ public class QuestEngine implements GameEngine {
             }
         }
         if (sb.length() > 0) {
-            sb.insert(0, "Missing quest npcs:\n");
+            sb.insert(0, "[QuestEngine] Missing spawn for quest npcs:\n");
             log.warn(sb.toString());
         }
     }
@@ -1016,7 +1017,7 @@ public class QuestEngine implements GameEngine {
     // Loading the QE on start up
     @Override
     public void load(CountDownLatch progressLatch) {
-        log.info("Quest engine load started");
+        GameServer.log.info("[QuestEngine] Quest engine load started");
 
         QuestsData questData = DataManager.QUEST_DATA;
         for (QuestTemplate data : questData.getQuestsData()) {
@@ -1046,9 +1047,9 @@ public class QuestEngine implements GameEngine {
             for (XMLQuest xmlQuest : xmlQuests.getQuest()) {
                 xmlQuest.register(this);
             }
-            log.info("Loaded " + questHandlers.size() + " quest handlers.");
+            GameServer.log.info("[QuestEngine] Loaded " + questHandlers.size() + " quest handlers.");
         } catch (Exception e) {
-            throw new GameServerError("Can't initialize quest handlers.", e);
+            throw new GameServerError("[QuestEngine] Can't initialize quest handlers.", e);
         } finally {
             if (progressLatch != null) {
                 progressLatch.countDown();
@@ -1063,7 +1064,7 @@ public class QuestEngine implements GameEngine {
 
     // reloading the QE by request
     public void reload(CountDownLatch progressLatch) {
-        log.info("Quest engine reload started");
+        log.info("[QuestEngine] Quest engine reload started");
 
         scriptManager = new ScriptManager();
 
@@ -1080,9 +1081,9 @@ public class QuestEngine implements GameEngine {
             for (XMLQuest xmlQuest : xmlQuests.getQuest()) {
                 xmlQuest.register(this);
             }
-            log.info("Loaded " + questHandlers.size() + " quest handlers.");
+            log.info("[QuestEngine] ReLoaded " + questHandlers.size() + " quest handlers.");
         } catch (Exception e) {
-            throw new GameServerError("Can't initialize quest handlers.", e);
+            throw new GameServerError("[QuestEngine] Can't initialize quest handlers.", e);
         } finally {
             if (progressLatch != null) {
                 progressLatch.countDown();
@@ -1134,7 +1135,7 @@ public class QuestEngine implements GameEngine {
         scriptManager.shutdown();
         clear();
         scriptManager = null;
-        log.info("Quests are shutdown...");
+        log.info("[QuestEngine] Quests are shutdown...");
     }
 
     public void clear() {

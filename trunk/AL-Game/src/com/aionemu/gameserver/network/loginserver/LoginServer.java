@@ -92,7 +92,7 @@ public class LoginServer {
         SocketChannel sc;
         for (; ; ) {
             loginServer = null;
-            log.info("Connecting to LoginServer: " + NetworkConfig.LOGIN_ADDRESS);
+            log.info("[LoginServer] Connecting to LoginServer: " + NetworkConfig.LOGIN_ADDRESS);
             try {
                 sc = SocketChannel.open(NetworkConfig.LOGIN_ADDRESS);
                 sc.configureBlocking(false);
@@ -107,7 +107,7 @@ public class LoginServer {
 
                 return loginServer;
             } catch (Exception e) {
-                log.info("Cant connect to LoginServer: " + e.getMessage());
+                log.info("[LoginServer] Cant connect to LoginServer: " + e.getMessage());
             }
             try {
                 /**
@@ -125,7 +125,7 @@ public class LoginServer {
      * reconnect to LoginServer.
      */
     public void loginServerDown() {
-        log.warn("Connection with LoginServer lost...");
+        log.warn("[LoginServer] Connection with LoginServer lost...");
 
         loginServer = null;
         synchronized (this) {
@@ -196,7 +196,7 @@ public class LoginServer {
          */
         if (loginServer == null || loginServer.getState() != State.AUTHED) {
             log.debug("LS !!! " + (loginServer == null ? "NULL" : loginServer.getState()));
-            // TODO! somme error packet!
+            // TODO! some error packet!
             client.close(/* closePacket, */true);
             return;
         }
@@ -229,7 +229,7 @@ public class LoginServer {
 
         Account account = AccountService.getAccount(accountId, accountName, accountTime, accessLevel, membership, toll);
         if (!validateAccount(account)) {
-            log.info("Illegal account auth detected: " + accountId);
+            log.info("[LoginServer] Illegal account auth detected: " + accountId);
             client.close(new SM_L2AUTH_LOGIN_CHECK(false, accountName), true);
             return;
         }
@@ -238,10 +238,10 @@ public class LoginServer {
             client.setAccount(account);
             client.setState(AionConnection.State.AUTHED);
             loggedInAccounts.put(accountId, client);
-            log.info("Account authed: " + accountId + " = " + accountName);
+            log.info("[LoginServer] Account authed: " + accountId + " = " + accountName);
             client.sendPacket(new SM_L2AUTH_LOGIN_CHECK(true, accountName));
         } else {
-            log.info("Account not authed: " + accountId);
+            log.info("[LoginServer] Account not authed: " + accountId);
             client.close(new SM_L2AUTH_LOGIN_CHECK(false, accountName), true);
         }
     }
@@ -253,7 +253,7 @@ public class LoginServer {
     private boolean validateAccount(Account account) {
         for (PlayerAccountData accountData : account) {
             if (accountData.getPlayerCommonData().isOnline()) {
-                log.warn("[AUDIT] Possible dupe hack account: " + account.getId());
+                log.warn("[LoginServer] [AUDIT] Possible dupe hack account: " + account.getId());
                 Player player = World.getInstance().findPlayer(accountData.getPlayerCommonData().getPlayerObjId());
                 if (player != null) {
                     // kick
@@ -310,7 +310,7 @@ public class LoginServer {
             return;
         }
 
-        log.info("Account reconnecting: " + accountId + " = " + client.getAccount().getName());
+        log.info("[LoginServer] Account reconnecting: " + accountId + " = " + client.getAccount().getName());
         client.close(new SM_RECONNECT_KEY(reconnectKey), false);
     }
 
@@ -333,14 +333,14 @@ public class LoginServer {
     }
 
     private void closeClientWithCheck(AionConnection client, final int accountId) {
-        log.info("Closing client connection " + accountId);
+        log.info("[LoginServer] Closing client connection " + accountId);
         client.close(/* closePacket, */false);
         ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
                 AionConnection client = loggedInAccounts.get(accountId);
                 if (client != null) {
-                    log.warn("Removing client from server because of stalled connection");
+                    log.warn("[LoginServer] Removing client from server because of stalled connection");
                     client.close(false);
                     loggedInAccounts.remove(accountId);
                     sendAccountDisconnected(accountId);
@@ -379,7 +379,7 @@ public class LoginServer {
             }
         }
 
-        log.info("GameServer disconnected from the Login Server...");
+        log.info("[LoginServer] GameServer disconnected from the Login Server...");
     }
 
     public void sendLsControlPacket(String accountName, String playerName, String adminName, int param, int type) {

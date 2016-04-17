@@ -46,174 +46,174 @@ public class Config {
         try {
             Properties myProps = null;
             try {
-                log.info("Loading: mygs.properties");
+                log.info("[Config] Loading: mygs.properties");
                 myProps = PropertiesUtils.load("./config/mygs.properties");
             } catch (Exception e) {
-                log.info("No override properties found");
+                log.info("[Config] No override properties found");
             }
 
             // Administration
-            Util.printSection("ADMINISTRATION");
+            Util.printSsSection("ADMINISTRATION");
             String administration = "./config/administration";
 
             Properties[] adminProps = PropertiesUtils.loadAllFromDirectory(administration);
             PropertiesUtils.overrideProperties(adminProps, myProps);
 
             ConfigurableProcessor.process(AdminConfig.class, adminProps);
-            log.info("Loading: " + administration + "/admin.properties");
+            log.info("[Config] Loading: " + administration + "/admin.properties");
 
             ConfigurableProcessor.process(DeveloperConfig.class, adminProps);
-            log.info("Loading: " + administration + "/developer.properties");
+            log.info("[Config] Loading: " + administration + "/developer.properties");
 
             // Main
-            Util.printSection("MAIN");
+            Util.printSsSection("MAIN");
             String main = "./config/main";
 
             Properties[] mainProps = PropertiesUtils.loadAllFromDirectory(main);
             PropertiesUtils.overrideProperties(mainProps, myProps);
 
             ConfigurableProcessor.process(AgentFightConfig.class, mainProps);
-            log.info("Loading: " + main + "/agentfight.properties");
+            log.info("[Config] Loading: " + main + "/agentfight.properties");
 
             ConfigurableProcessor.process(AIConfig.class, mainProps);
-            log.info("Loading: " + main + "/ai.properties");
+            log.info("[Config] Loading: " + main + "/ai.properties");
 
             ConfigurableProcessor.process(AutoGroupConfig.class, mainProps);
-            log.info("Loading: " + main + "/autogroup.properties");
+            log.info("[Config] Loading: " + main + "/autogroup.properties");
 
             ConfigurableProcessor.process(BaseConfig.class, mainProps);
-            log.info("Loading: " + main + "/base.properties");
+            log.info("[Config] Loading: " + main + "/base.properties");
 
             ConfigurableProcessor.process(BeritraConfig.class, mainProps);
-            log.info("Loading: " + main + "/beritra.properties");
+            log.info("[Config] Loading: " + main + "/beritra.properties");
             
             ConfigurableProcessor.process(CompositionConfig.class, mainProps);
-            log.info("Loading: " + main + "/composition.properties");
+            log.info("[Config] Loading: " + main + "/composition.properties");
             
             ConfigurableProcessor.process(ConquerorProtectorConfig.class, mainProps);
-            log.info("Loading: " + main + "/conqueror.properties");
+            log.info("[Config] Loading: " + main + "/conqueror.properties");
 			
             ConfigurableProcessor.process(DualBoxConfig.class, mainProps);
-            log.info("Loading: " + main + "/DualBoxConfig.properties");
+            log.info("[Config] Loading: " + main + "/DualBoxConfig.properties");
 
             ConfigurableProcessor.process(CommonsConfig.class, mainProps);
-            log.info("Loading: " + main + "/commons.properties");
+            log.info("[Config] Loading: " + main + "/commons.properties");
 
             ConfigurableProcessor.process(CacheConfig.class, mainProps);
-            log.info("Loading: " + main + "/cache.properties");
+            log.info("[Config] Loading: " + main + "/cache.properties");
 
             ConfigurableProcessor.process(CleaningConfig.class, mainProps);
-            log.info("Loading: " + main + "/cleaning.properties");
+            log.info("[Config] Loading: " + main + "/cleaning.properties");
 			
 			ConfigurableProcessor.process(CompositionConfig.class, mainProps);
-            log.info("Loading: " + main + "/composition.properties");
+            log.info("[Config] Loading: " + main + "/composition.properties");
 
             ConfigurableProcessor.process(CraftConfig.class, mainProps);
-            log.info("Loading: " + main + "/craft.properties");
+            log.info("[Config] Loading: " + main + "/craft.properties");
 
             ConfigurableProcessor.process(CustomConfig.class, mainProps);
-            log.info("Loading: " + main + "/custom.properties");
+            log.info("[Config] Loading: " + main + "/custom.properties");
 
             ConfigurableProcessor.process(DropConfig.class, mainProps);
-            log.info("Loading: " + main + "/drop.properties");
+            log.info("[Config] Loading: " + main + "/drop.properties");
 
             ConfigurableProcessor.process(EnchantsConfig.class, mainProps);
-            log.info("Loading: " + main + "/enchants.properties");
+            log.info("[Config] Loading: " + main + "/enchants.properties");
 
             ConfigurableProcessor.process(EventsConfig.class, mainProps);
-            log.info("Loading: " + main + "/events.properties");
+            log.info("[Config] Loading: " + main + "/events.properties");
 
             ConfigurableProcessor.process(FallDamageConfig.class, mainProps);
-            log.info("Loading: " + main + "/falldamage.properties");
+            log.info("[Config] Loading: " + main + "/falldamage.properties");
 
             ConfigurableProcessor.process(FastTrackConfig.class, mainProps);
-            log.info("Loading: " + main + "/fasttrack.properties");
+            log.info("[Config] Loading: " + main + "/fasttrack.properties");
 
             ConfigurableProcessor.process(GSConfig.class, mainProps);
-            log.info("Loading: " + main + "/gameserver.properties");
+            log.info("[Config] Loading: " + main + "/gameserver.properties");
 
             ConfigurableProcessor.process(GeoDataConfig.class, mainProps);
-            log.info("Loading: " + main + "/geodata.properties");
+            log.info("[Config] Loading: " + main + "/geodata.properties");
 
             ConfigurableProcessor.process(GroupConfig.class, mainProps);
-            log.info("Loading: " + main + "/group.properties");
+            log.info("[Config] Loading: " + main + "/group.properties");
 
             ConfigurableProcessor.process(HousingConfig.class, mainProps);
-            log.info("Loading: " + main + "/housing.properties");
+            log.info("[Config] Loading: " + main + "/housing.properties");
 
             ConfigurableProcessor.process(HTMLConfig.class, mainProps);
-            log.info("Loading: " + main + "/html.properties");
+            log.info("[Config] Loading: " + main + "/html.properties");
 
             ConfigurableProcessor.process(InGameShopConfig.class, mainProps);
-            log.info("Loading: " + main + "/ingameshop.properties");
+            log.info("[Config] Loading: " + main + "/ingameshop.properties");
 
             ConfigurableProcessor.process(LegionConfig.class, mainProps);
-            log.info("Loading: " + main + "/legion.properties");
+            log.info("[Config] Loading: " + main + "/legion.properties");
 
             ConfigurableProcessor.process(LoggingConfig.class, mainProps);
-            log.info("Loading: " + main + "/logging.properties");
+            log.info("[Config] Loading: " + main + "/logging.properties");
 
             ConfigurableProcessor.process(MembershipConfig.class, mainProps);
-            log.info("Loading: " + main + "/membership.properties");
+            log.info("[Config] Loading: " + main + "/membership.properties");
 
             ConfigurableProcessor.process(MoltenusConfig.class, mainProps);
-            log.info("Loading: " + main + "/moltenus.properties");
+            log.info("[Config] Loading: " + main + "/moltenus.properties");
 
             ConfigurableProcessor.process(NameConfig.class, mainProps);
-            log.info("Loading: " + main + "/name.properties");
+            log.info("[Config] Loading: " + main + "/name.properties");
 
             ConfigurableProcessor.process(PeriodicSaveConfig.class, mainProps);
-            log.info("Loading: " + main + "/periodicsave.properties");
+            log.info("[Config] Loading: " + main + "/periodicsave.properties");
 
             ConfigurableProcessor.process(PlayerTransferConfig.class, mainProps);
-            log.info("Loading: " + main + "/playertransfer.properties");
+            log.info("[Config] Loading: " + main + "/playertransfer.properties");
 
             ConfigurableProcessor.process(PricesConfig.class, mainProps);
-            log.info("Loading: " + main + "/prices.properties");
+            log.info("[Config] Loading: " + main + "/prices.properties");
 
             ConfigurableProcessor.process(PunishmentConfig.class, mainProps);
-            log.info("Loading: " + main + "/punishment.properties");
+            log.info("[Config] Loading: " + main + "/punishment.properties");
 
             ConfigurableProcessor.process(RankingConfig.class, mainProps);
-            log.info("Loading: " + main + "/ranking.properties");
+            log.info("[Config] Loading: " + main + "/ranking.properties");
 
             ConfigurableProcessor.process(RateConfig.class, mainProps);
-            log.info("Loading: " + main + "/rates.properties");
+            log.info("[Config] Loading: " + main + "/rates.properties");
 
             ConfigurableProcessor.process(SecurityConfig.class, mainProps);
-            log.info("Loading: " + main + "/security.properties");
+            log.info("[Config] Loading: " + main + "/security.properties");
 
             ConfigurableProcessor.process(ShutdownConfig.class, mainProps);
-            log.info("Loading: " + main + "/shutdown.properties");
+            log.info("[Config] Loading: " + main + "/shutdown.properties");
 
             ConfigurableProcessor.process(SiegeConfig.class, mainProps);
-            log.info("Loading: " + main + "/siege.properties");
+            log.info("[Config] Loading: " + main + "/siege.properties");
 
             ConfigurableProcessor.process(ThreadConfig.class, mainProps);
-            log.info("Loading: " + main + "/thread.properties");
+            log.info("[Config] Loading: " + main + "/thread.properties");
 
             ConfigurableProcessor.process(WeddingsConfig.class, mainProps);
-            log.info("Loading: " + main + "/weddings.properties");
+            log.info("[Config] Loading: " + main + "/weddings.properties");
 
             ConfigurableProcessor.process(WorldConfig.class, mainProps);
-            log.info("Loading: " + main + "/world.properties");
+            log.info("[Config] Loading: " + main + "/world.properties");
 
             // Network
-            Util.printSection("NETWORK");
+            Util.printSsSection("NETWORK");
             String network = "./config/network";
 
             Properties[] networkProps = PropertiesUtils.loadAllFromDirectory(network);
             PropertiesUtils.overrideProperties(networkProps, myProps);
 
-            log.info("Loading: " + network + "/database.properties");
+            log.info("[Config] Loading: " + network + "/database.properties");
             ConfigurableProcessor.process(DatabaseConfig.class, networkProps);
 
-            log.info("Loading: " + network + "/network.properties");
+            log.info("[Config] Loading: " + network + "/network.properties");
             ConfigurableProcessor.process(NetworkConfig.class, networkProps);
 
         } catch (Exception e) {
-            log.error("Can't load gameserver configuration: ", e);
-            throw new Error("Can't load gameserver configuration: ", e);
+            log.error("[Config] Can't load gameserver configuration: ", e);
+            throw new Error("[Config] Can't load gameserver configuration: ", e);
         }
 
         IPConfig.load();
@@ -226,10 +226,10 @@ public class Config {
         try {
             Properties myProps = null;
             try {
-                log.info("Loading: mygs.properties");
+                log.info("[Config] Loading: mygs.properties");
                 myProps = PropertiesUtils.load("./config/mygs.properties");
             } catch (Exception e) {
-                log.info("No override properties found");
+                log.info("[Config] No override properties found");
             }
 
             // Administration
@@ -239,10 +239,10 @@ public class Config {
             PropertiesUtils.overrideProperties(adminProps, myProps);
 
             ConfigurableProcessor.process(AdminConfig.class, adminProps);
-            log.info("Reload: " + administration + "/admin.properties");
+            log.info("[Config] Reload: " + administration + "/admin.properties");
 
             ConfigurableProcessor.process(DeveloperConfig.class, adminProps);
-            log.info("Reload: " + administration + "/developer.properties");
+            log.info("[Config] Reload: " + administration + "/developer.properties");
 
             // Main
             String main = "./config/main";
@@ -251,127 +251,127 @@ public class Config {
             PropertiesUtils.overrideProperties(mainProps, myProps);
 
             ConfigurableProcessor.process(AgentFightConfig.class, mainProps);
-            log.info("Reload: " + main + "/agentfight.properties");
+            log.info("[Config] Reload: " + main + "/agentfight.properties");
 
             ConfigurableProcessor.process(AIConfig.class, mainProps);
-            log.info("Reload: " + main + "/ai.properties");
+            log.info("[Config] Reload: " + main + "/ai.properties");
 
             ConfigurableProcessor.process(AutoGroupConfig.class, mainProps);
-            log.info("Reload: " + main + "/autogroup.properties");
+            log.info("[Config] Reload: " + main + "/autogroup.properties");
 
             ConfigurableProcessor.process(BaseConfig.class, mainProps);
-            log.info("Reload: " + main + "/base.properties");
+            log.info("[Config] Reload: " + main + "/base.properties");
 
             ConfigurableProcessor.process(BeritraConfig.class, mainProps);
-            log.info("Reload: " + main + "/beritra.properties");
+            log.info("[Config] Reload: " + main + "/beritra.properties");
             
             ConfigurableProcessor.process(CompositionConfig.class, mainProps);
-            log.info("Reload: " + main + "/composition.properties");
+            log.info("[Config] Reload: " + main + "/composition.properties");
             
             ConfigurableProcessor.process(ConquerorProtectorConfig.class, mainProps);
-            log.info("Reload: " + main + "/conqueror.properties");
+            log.info("[Config] Reload: " + main + "/conqueror.properties");
 
             ConfigurableProcessor.process(DualBoxConfig.class, mainProps);
-            log.info("Reload: " + main + "/DualBoxConfig.properties");
+            log.info("[Config] Reload: " + main + "/DualBoxConfig.properties");
 			
             ConfigurableProcessor.process(CommonsConfig.class, mainProps);
-            log.info("Reload: " + main + "/commons.properties");
+            log.info("[Config] Reload: " + main + "/commons.properties");
 
             ConfigurableProcessor.process(CacheConfig.class, mainProps);
-            log.info("Reload: " + main + "/cache.properties");
+            log.info("[Config] Reload: " + main + "/cache.properties");
 			
 			ConfigurableProcessor.process(CompositionConfig.class, mainProps);
-            log.info("Reload: " + main + "/composition.properties");
+            log.info("[Config] Reload: " + main + "/composition.properties");
 
             ConfigurableProcessor.process(CraftConfig.class, mainProps);
-            log.info("Reload: " + main + "/craft.properties");
+            log.info("[Config] Reload: " + main + "/craft.properties");
 
             ConfigurableProcessor.process(CustomConfig.class, mainProps);
-            log.info("Reload: " + main + "/custom.properties");
+            log.info("[Config] Reload: " + main + "/custom.properties");
 
             ConfigurableProcessor.process(DropConfig.class, mainProps);
-            log.info("Reload: " + main + "/drop.properties");
+            log.info("[Config] Reload: " + main + "/drop.properties");
 
             ConfigurableProcessor.process(EnchantsConfig.class, mainProps);
-            log.info("Reload: " + main + "/enchants.properties");
+            log.info("[Config] Reload: " + main + "/enchants.properties");
 
             ConfigurableProcessor.process(EventsConfig.class, mainProps);
-            log.info("Reload: " + main + "/events.properties");
+            log.info("[Config] Reload: " + main + "/events.properties");
 
             ConfigurableProcessor.process(FallDamageConfig.class, mainProps);
-            log.info("Reload: " + main + "/falldamage.properties");
+            log.info("[Config] Reload: " + main + "/falldamage.properties");
 
             ConfigurableProcessor.process(FastTrackConfig.class, mainProps);
-            log.info("Reload: " + main + "/fasttrack.properties");
+            log.info("[Config] Reload: " + main + "/fasttrack.properties");
 
             ConfigurableProcessor.process(GSConfig.class, mainProps);
-            log.info("Reload: " + main + "/gameserver.properties");
+            log.info("[Config] Reload: " + main + "/gameserver.properties");
 
             ConfigurableProcessor.process(GeoDataConfig.class, mainProps);
-            log.info("Reload: " + main + "/geodata.properties");
+            log.info("[Config] Reload: " + main + "/geodata.properties");
 
             ConfigurableProcessor.process(GroupConfig.class, mainProps);
-            log.info("Reload: " + main + "/group.properties");
+            log.info("[Config] Reload: " + main + "/group.properties");
 
             ConfigurableProcessor.process(HousingConfig.class, mainProps);
-            log.info("Reload: " + main + "/housing.properties");
+            log.info("[Config] Reload: " + main + "/housing.properties");
 
             ConfigurableProcessor.process(HTMLConfig.class, mainProps);
-            log.info("Reload: " + main + "/html.properties");
+            log.info("[Config] Reload: " + main + "/html.properties");
 
             ConfigurableProcessor.process(InGameShopConfig.class, mainProps);
-            log.info("Reload: " + main + "/ingameshop.properties");
+            log.info("[Config] Reload: " + main + "/ingameshop.properties");
 
             ConfigurableProcessor.process(LegionConfig.class, mainProps);
-            log.info("Reload: " + main + "/legion.properties");
+            log.info("[Config] Reload: " + main + "/legion.properties");
 
             ConfigurableProcessor.process(LoggingConfig.class, mainProps);
-            log.info("Reload: " + main + "/logging.properties");
+            log.info("[Config] Reload: " + main + "/logging.properties");
 
             ConfigurableProcessor.process(MembershipConfig.class, mainProps);
-            log.info("Reload: " + main + "/membership.properties");
+            log.info("[Config] Reload: " + main + "/membership.properties");
             
             ConfigurableProcessor.process(MoltenusConfig.class, mainProps);
-            log.info("Reload: " + main + "/moltenus.properties");
+            log.info("[Config] Reload: " + main + "/moltenus.properties");
             
             ConfigurableProcessor.process(NameConfig.class, mainProps);
-            log.info("Reload: " + main + "/name.properties");
+            log.info("[Config] Reload: " + main + "/name.properties");
 
             ConfigurableProcessor.process(PeriodicSaveConfig.class, mainProps);
-            log.info("Reload: " + main + "/periodicsave.properties");
+            log.info("[Config] Reload: " + main + "/periodicsave.properties");
 
             ConfigurableProcessor.process(PlayerTransferConfig.class, mainProps);
-            log.info("Reload: " + main + "/playertransfer.properties");
+            log.info("[Config] Reload: " + main + "/playertransfer.properties");
 
             ConfigurableProcessor.process(PricesConfig.class, mainProps);
-            log.info("Reload: " + main + "/prices.properties");
+            log.info("[Config] Reload: " + main + "/prices.properties");
 
             ConfigurableProcessor.process(PunishmentConfig.class, mainProps);
-            log.info("Reload: " + main + "/punishment.properties");
+            log.info("[Config] Reload: " + main + "/punishment.properties");
 
             ConfigurableProcessor.process(RankingConfig.class, mainProps);
-            log.info("Reload: " + main + "/ranking.properties");
+            log.info("[Config] Reload: " + main + "/ranking.properties");
 
             ConfigurableProcessor.process(RateConfig.class, mainProps);
-            log.info("Reload: " + main + "/rates.properties");
+            log.info("[Config] Reload: " + main + "/rates.properties");
 
             ConfigurableProcessor.process(SecurityConfig.class, mainProps);
-            log.info("Reload: " + main + "/security.properties");
+            log.info("[Config] Reload: " + main + "/security.properties");
 
             ConfigurableProcessor.process(ShutdownConfig.class, mainProps);
-            log.info("Reload: " + main + "/shutdown.properties");
+            log.info("[Config] Reload: " + main + "/shutdown.properties");
 
             ConfigurableProcessor.process(SiegeConfig.class, mainProps);
-            log.info("Reload: " + main + "/siege.properties");
+            log.info("[Config] Reload: " + main + "/siege.properties");
 
             ConfigurableProcessor.process(ThreadConfig.class, mainProps);
-            log.info("Reload: " + main + "/thread.properties");
+            log.info("[Config] Reload: " + main + "/thread.properties");
 
             ConfigurableProcessor.process(WeddingsConfig.class, mainProps);
-            log.info("Reload: " + main + "/weddings.properties");
+            log.info("[Config] Reload: " + main + "/weddings.properties");
 
             ConfigurableProcessor.process(WorldConfig.class, mainProps);
-            log.info("Reload: " + main + "/world.properties");
+            log.info("[Config] Reload: " + main + "/world.properties");
         } catch (Exception e) {
             log.error("Can't reload configuration: ", e);
             throw new Error("Can't reload configuration: ", e);

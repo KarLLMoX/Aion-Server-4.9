@@ -45,15 +45,15 @@ public class OnlineBonus {
                         int time = MembershipConfig.ONLINE_BONUS_TIME;
                         try {
                             if (object.getInventory().isFull()) {
-                                log.warn("[OnlineBonus] Player " + object.getName() + " tried to receive item with full inventory.");
+                                log.warn("[OnlineBonusService] Player " + object.getName() + " tried to receive item with full inventory.");
                             } else {
                                 ItemService.addItem(object, MembershipConfig.ONLINE_BONUS_ITEM, MembershipConfig.ONLINE_BONUS_COUNT);
                                 if(MembershipConfig.ONLINE_BONUS_ABYSS_ENABLE){
                                     AbyssPointsService.addAp(object, MembershipConfig.ONLINE_BONUS_AP);
                                     AbyssPointsService.addGp(object, MembershipConfig.ONLINE_BONUS_GP);
-                                    PacketSendUtility.sendMessage(object, "[Online Bonus Service]: You've Played " + time + " Minutes. You earn a Bonus Item and Some AP! :)");
+                                    PacketSendUtility.sendMessage(object, "[OnlineBonusService]: You've Played " + time + " Minutes. You earn a Bonus Item and Some AP! :)");
                                 }else{
-                                    PacketSendUtility.sendMessage(object, "[Online Bonus Service]: You've Played " + time + " Minutes. You earn a Bonus Item! :)");
+                                    PacketSendUtility.sendMessage(object, "[OnlineBonusService]: You've Played " + time + " Minutes. You earn a Bonus Item! :)");
                                 }
                             }
                         } catch (Exception ex) {

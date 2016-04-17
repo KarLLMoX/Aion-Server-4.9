@@ -41,13 +41,12 @@ public class BaseService {
     private Map<Integer, BaseLocation> bases;
 
     public void initBaseLocations() {
-        log.info("Loading Bases...");
         bases = DataManager.BASE_DATA.getBaseLocations();
-        log.info("Loaded " + bases.size() + " bases.");
+        log.info("[BaseService] Loaded " + bases.size() + " bases.");
     }
 
     public void initBases() {
-        log.info("Init Bases...");
+        log.info("[BaseService] started ...");
         for (BaseLocation base : getBaseLocations().values()) {
             start(base.getId());
         }
@@ -77,7 +76,7 @@ public class BaseService {
 
     public void stop(int id) {
         if (!isActive(id)) {
-            log.info("Trying to stop not active base:" + id);
+            log.info("[BaseService] Trying to stop not active base:" + id);
             return;
         }
 
@@ -87,7 +86,7 @@ public class BaseService {
         }
 
         if (base == null || base.isFinished()) {
-            log.info("Trying to stop null or finished base:" + id);
+            log.info("[BaseService] Trying to stop null or finished base:" + id);
             return;
         }
 
@@ -97,7 +96,7 @@ public class BaseService {
 
     public void capture(int id, Race race) {
         if (!isActive(id)) {
-            log.info("Detecting not active base capture baseId: " + id);
+            log.info("[BaseService] Detecting not active base capture baseId: " + id);
             return;
         }
 

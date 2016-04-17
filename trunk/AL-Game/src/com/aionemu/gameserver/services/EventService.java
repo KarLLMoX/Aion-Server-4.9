@@ -207,7 +207,7 @@ public class EventService {
                 }
             }
         }
-        log.info("EventCron: clean limits in db " + size + " size.");
+        log.info("[EventService] EventCron: clean limits in db " + size + " size.");
     }
 
     public void start() {

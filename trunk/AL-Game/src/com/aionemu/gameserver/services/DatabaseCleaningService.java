@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.services;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.CleaningConfig;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.services.player.PlayerService;
@@ -130,6 +131,7 @@ public class DatabaseCleaningService {
      * @return a singleton DatabaseCleaningService
      */
     public static DatabaseCleaningService getInstance() {
+        GameServer.log.info("[DatabaseCleaningService] started ...");
         return instance;
     }
 
@@ -145,6 +147,6 @@ public class DatabaseCleaningService {
                 deletedChars += PlayerService.deleteAccountsCharsFromDB(id);
             }
             _READY = true;
-        }
+        }        
     }
 }

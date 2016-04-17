@@ -74,7 +74,7 @@ public abstract class Siege<SL extends SiegeLocation> {
         }
 
         if (doubleStart) {
-            log.error("Attempt to start siege of SiegeLocation#" + siegeLocation.getLocationId() + " for 2 times");
+            log.error("[SiegeService] Attempt to start siege of SiegeLocation#" + siegeLocation.getLocationId() + " for 2 times");
             return;
         }
 
@@ -97,7 +97,7 @@ public abstract class Siege<SL extends SiegeLocation> {
                 BalaurAssaultService.getInstance().onSiegeFinish(this);
             }
         } else {
-            log.error("Attempt to stop siege of SiegeLocation#" + siegeLocation.getLocationId() + " for 2 times");
+            log.error("[SiegeService] Attempt to stop siege of SiegeLocation#" + siegeLocation.getLocationId() + " for 2 times");
         }
     }
 
@@ -209,7 +209,7 @@ public abstract class Siege<SL extends SiegeLocation> {
 				|| npc.getObjectTemplate().getAi().equals("artifact_protector")) { //TODO: AbyssNpcType for artifacts
 
                 if (boss != null) {
-                    throw new SiegeException("Found 2 siege bosses for outpost " + getSiegeLocationId() + " NPC " + npc.getNpcId());
+                    throw new SiegeException("[SiegeService] Found 2 siege bosses for outpost " + getSiegeLocationId() + " NPC " + npc.getNpcId());
                 }
 
                 boss = npc;
@@ -217,7 +217,7 @@ public abstract class Siege<SL extends SiegeLocation> {
         }
 
         if (boss == null) {
-            throw new SiegeException("Siege Boss not found for siege " + getSiegeLocationId());
+            throw new SiegeException("[SiegeService] Siege Boss not found for siege " + getSiegeLocationId());
         }
 
         setBoss(boss);

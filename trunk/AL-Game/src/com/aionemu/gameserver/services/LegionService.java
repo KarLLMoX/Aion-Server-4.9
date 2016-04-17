@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.services;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.LegionConfig;
 import com.aionemu.gameserver.dao.InventoryDAO;
 import com.aionemu.gameserver.dao.ItemStoneListDAO;
@@ -1079,7 +1080,7 @@ public class LegionService {
      * @param legion
      */
     public void performRankingUpdate(Map<Integer, Integer> legionRanking) {
-        log.info("Legion ranking update task started");
+        GameServer.log.info("[LegionService] Legion ranking update task started");
         long startTime = System.currentTimeMillis();
 
         Iterator<Legion> legionsIterator = allCachedLegions.iterator();
@@ -1097,7 +1098,7 @@ public class LegionService {
         }
 
         long workTime = System.currentTimeMillis() - startTime;
-        log.info("Legion ranking update: " + workTime + " ms, legions: " + legionsUpdated);
+        log.info("[LegionService] Legion ranking update: " + workTime + " ms, legions: " + legionsUpdated);
     }
 
     public void LegionWhUpdate(Player player) {
@@ -1120,7 +1121,7 @@ public class LegionService {
              */
             DAOManager.getDAO(ItemStoneListDAO.class).save(allItems);
         } catch (Exception ex) {
-            log.error("Exception during periodic saving of legion WH", ex);
+            log.error("[LegionService] Exception during periodic saving of legion WH", ex);
         }
     }
 
@@ -1213,28 +1214,28 @@ public class LegionService {
                         .getCustomEmblemData().length));
         ByteBuffer buf = ByteBuffer.allocate(legionEmblem.getCustomEmblemData().length);
         buf.put(legionEmblem.getCustomEmblemData()).position(0);
-        log.debug("legionEmblem size: " + buf.capacity() + " bytes");
+        log.debug("[LegionService] legionEmblem size: " + buf.capacity() + " bytes");
         int maxSize = 7993;
         int currentSize;
         byte[] bytes;
         do {
-            log.debug("legionEmblem data position: " + buf.position());
+            log.debug("[LegionService] legionEmblem data position: " + buf.position());
             currentSize = buf.capacity() - buf.position();
-            log.debug("legionEmblem data remaining capacity: " + currentSize + " bytes");
+            log.debug("[LegionService] legionEmblem data remaining capacity: " + currentSize + " bytes");
 
             if (currentSize >= maxSize) {
                 bytes = new byte[maxSize];
                 for (int i = 0; i < maxSize; i++) {
                     bytes[i] = buf.get();
                 }
-                log.debug("legionEmblem data send size: " + (bytes.length) + " bytes");
+                log.debug("[LegionService] legionEmblem data send size: " + (bytes.length) + " bytes");
                 PacketSendUtility.sendPacket(player, new SM_LEGION_SEND_EMBLEM_DATA(maxSize, bytes));
             } else {
                 bytes = new byte[currentSize];
                 for (int i = 0; i < currentSize; i++) {
                     bytes[i] = buf.get();
                 }
-                log.debug("legionEmblem data send size: " + (bytes.length) + " bytes");
+                log.debug("[LegionService] legionEmblem data send size: " + (bytes.length) + " bytes");
                 PacketSendUtility.sendPacket(player, new SM_LEGION_SEND_EMBLEM_DATA(currentSize, bytes));
             }
         } while (buf.capacity() != buf.position());
@@ -1398,7 +1399,7 @@ public class LegionService {
          */
         LegionMemberEx legionMember = getLegionMemberEx(charName);
         if (legionMember == null) {
-            log.error("Char name does not exist in legion member table: " + charName);
+            log.error("[LegionService] Char name does not exist in legion member table: " + charName);
             return false;
         }
 
@@ -1733,7 +1734,7 @@ public class LegionService {
              */
             LegionMemberEx legionMember = getLegionMemberEx(charName);
             if (legionMember == null) {
-                log.error("Char name does not exist in legion member table: " + charName);
+                log.error("[LegionService] Char name does not exist in legion member table: " + charName);
                 return false;
             }
 

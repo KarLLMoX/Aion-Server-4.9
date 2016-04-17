@@ -30,13 +30,16 @@ public class Util {
      * @param s
      */
     public static void printSection(String s) {
-        s = "[ " + s + " ]";
+        if (!s.isEmpty())
+        	s = "[ " + s + " ]";
 
         while (s.length() < 79) {
             s = "=" + s + "=";
         }
 
+        System.out.println("");
         System.out.println(s);
+        System.out.println("");
     }
 
     public static void printSsSection(String s) {
@@ -46,7 +49,9 @@ public class Util {
             s = "-" + s + "-";
         }
 
+        System.out.println("");
         System.out.println(s);
+        System.out.println("");
     }
 
     public static void printProgressBarHeader(int size) {

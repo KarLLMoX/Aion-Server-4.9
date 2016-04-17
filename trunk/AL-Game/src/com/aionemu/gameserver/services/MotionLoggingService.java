@@ -138,7 +138,7 @@ public class MotionLoggingService {
         WeaponTypeWrapper weapon = new WeaponTypeWrapper(mainHandWeapon, offHandWeapon);
         //check if its present
         if (this.isPresent(motionName, weapon, skillId, currentAttackSpeed, race, gender)) {
-            log.info("motionName: " + motionName + " weapon: " + (offHandWeapon != null ? "dual" : mainHandWeapon.toString()) + " skillId: " + skillId + " currentAttackSpeed: " + currentAttackSpeed
+            log.info("[MotionLoggingService] motionName: " + motionName + " weapon: " + (offHandWeapon != null ? "dual" : mainHandWeapon.toString()) + " skillId: " + skillId + " currentAttackSpeed: " + currentAttackSpeed
                     + "baseTime: " + baseTime + " storedTime: " + this.getTime(motionName, weapon, skillId, currentAttackSpeed, race, gender));
             PacketSendUtility.sendMessage(player, "Its already stored. storedTime: " + this.getTime(motionName, weapon, skillId, currentAttackSpeed, race, gender));
             return;
@@ -534,7 +534,7 @@ public class MotionLoggingService {
                     race = Race.valueOf(sRace);
                     gender = Gender.valueOf(sGender);
                 } catch (Exception e) {
-                    log.info("cant load gender or race for motion_name: " + motionName);
+                    log.info("[MotionLoggingService] cant load gender or race for motion_name: " + motionName);
                 } finally {
                     this.addTime(motionName, weapon, skillId, attackSpeed, race, gender, time);
                 }
@@ -596,7 +596,7 @@ public class MotionLoggingService {
     }
 
     private MotionLoggingService() {
-        log.info("MotionLoggingService started.");
+        log.info("[MotionLoggingService] started ...");
     }
 
     @SuppressWarnings("synthetic-access")
@@ -810,7 +810,7 @@ public class MotionLoggingService {
                         value = i;
                     }
                 }
-                log.info("maxFrequency: " + maxFrequency + " value: " + value + " size: " + entry2.getValue().size());
+                log.info("[MotionLoggingService] maxFrequency: " + maxFrequency + " value: " + value + " size: " + entry2.getValue().size());
                 //if frequency of given value is higher than 70% take it, otherwise do Arithmetic mean
                 if (Math.round((float) entry2.getValue().size() * 0.7f) <= maxFrequency) {
                     finalValue = value;
@@ -818,7 +818,7 @@ public class MotionLoggingService {
                     finalValue = total / entry2.getValue().size();
                 }
 
-                log.info("weaponTime.process() finalValue: " + finalValue);
+                log.info("[MotionLoggingService] weaponTime.process() finalValue: " + finalValue);
                 weaponMap.put(entry2.getKey(), finalValue);
             }
 

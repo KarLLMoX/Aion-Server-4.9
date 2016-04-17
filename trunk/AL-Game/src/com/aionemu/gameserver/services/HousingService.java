@@ -18,6 +18,7 @@ package com.aionemu.gameserver.services;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.utils.internal.chmv8.PlatformDependent;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.controllers.HouseController;
 import com.aionemu.gameserver.dao.HousesDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -75,10 +76,10 @@ public class HousingService {
     }
 
     private HousingService() {
-        log.info("Loading housing data...");
+        log.debug("[HousingService] Loading housing data...");
         customHouses = PlatformDependent.newConcurrentHashMap(DAOManager.getDAO(HousesDAO.class).loadHouses(DataManager.HOUSE_DATA.getLands(), false));
         studios = PlatformDependent.newConcurrentHashMap(DAOManager.getDAO(HousesDAO.class).loadHouses(DataManager.HOUSE_DATA.getLands(), true));
-        log.info("Housing Service loaded.");
+        log.debug("[HousingService] Housing Service loaded.");
     }
 
     /**
@@ -153,8 +154,9 @@ public class HousingService {
                 housesForMap.add(customHouse);
             }
         }
-        if (spawnedCounter > 0) {
-            log.info("Spawned houses " + worldId + " [" + instanceId + "] : " + spawnedCounter);
+        String worldName = DataManager.WORLD_MAPS_DATA.getTemplate(worldId).getName()+" (id:"+worldId+")"; 
+        if (spawnedCounter > 0 && instanceId == 1) {
+            GameServer.log.info("[HousingService] Spawned " +spawnedCounter+ " houses in " + worldName);
         }
     }
 

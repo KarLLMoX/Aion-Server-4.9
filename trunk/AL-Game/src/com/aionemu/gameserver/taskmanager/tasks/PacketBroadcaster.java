@@ -36,7 +36,7 @@ public final class PacketBroadcaster extends AbstractFIFOPeriodicTaskManager<Cre
 
     private PacketBroadcaster() {
         super(200);
-        log.info("Init Packet Broadcaster...");
+        log.debug("[PacketBroadCaster] Init Packet Broadcaster...");
     }
 
     public static enum BroadcastMode {

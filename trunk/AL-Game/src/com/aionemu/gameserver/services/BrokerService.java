@@ -90,7 +90,7 @@ public class BrokerService {
     }
 
     private void initBrokerService() {
-        log.info("Loading broker...");
+        log.debug("Loading broker...");
         int loadedBrokerItemsCount = 0;
         int loadedSettledItemsCount = 0;
 
@@ -116,7 +116,7 @@ public class BrokerService {
             }
         }
 
-        log.info("Broker loaded with " + loadedBrokerItemsCount + " broker items, " + loadedSettledItemsCount + " settled items.");
+        log.info("[BrokerService] Broker loaded with " + loadedBrokerItemsCount + " broker items and " + loadedSettledItemsCount + " settled items.");
     }
 
     /**

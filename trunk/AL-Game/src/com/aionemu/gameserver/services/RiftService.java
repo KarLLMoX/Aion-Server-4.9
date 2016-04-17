@@ -44,10 +44,12 @@ import com.aionemu.gameserver.model.templates.spawns.riftspawns.RiftSpawnTemplat
 import com.aionemu.gameserver.services.rift.RiftInformer;
 import com.aionemu.gameserver.services.rift.RiftManager;
 import com.aionemu.gameserver.services.rift.RiftOpenRunnable;
+import com.aionemu.gameserver.services.rift.RiftStatistics;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 
 /**
  * @author Source
+ * @modified CoolyT
  */
 public class RiftService {
 
@@ -67,7 +69,7 @@ public class RiftService {
         private static final RiftService INSTANCE = new RiftService();
     } 
     
-    public void openRifts(RiftLocation location, boolean guards) {
+    public RiftStatistics openRifts(RiftLocation location, boolean guards) {
         location.setOpened(true);
 
         // Spawn NPC guards
@@ -81,9 +83,9 @@ public class RiftService {
             }
         }
 
-        // Spawn rifts
-        RiftManager.getInstance().spawnRift(location);
+        // Spawn rifts        
         activeRifts.putEntry(location.getId(), location);
+        return RiftManager.getInstance().spawnRift(location);
     }
 
     public void closeRift(RiftLocation location) {
@@ -131,9 +133,8 @@ public class RiftService {
     
     public void initRiftLocations() {
         if (CustomConfig.RIFT_ENABLED) {
-            log.info("Loading Rift Locations...");
             locations = DataManager.RIFT_DATA.getRiftLocations();
-            log.info("Loaded " + locations.size() + " rift locations");
+            log.info("[RiftService] Loaded " + locations.size() + " rift locations");
         } else {
             locations = Collections.emptyMap();
         }
@@ -141,7 +142,7 @@ public class RiftService {
 
     public void initRifts() {
     	if (CustomConfig.RIFT_ENABLED) {
-            log.info("Init Rifts...");
+            log.debug("[RiftService] Init Rifts...");
             RiftSchedule schedule = RiftSchedule.load();
             for (RiftSchedule.Rift rift : schedule.getRiftsList()) {
                 for (OpenRift open : rift.getRift()) {

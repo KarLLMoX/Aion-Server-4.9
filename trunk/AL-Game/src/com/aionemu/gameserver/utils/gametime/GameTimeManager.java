@@ -55,7 +55,7 @@ public class GameTimeManager {
      */
     public static void startClock() {
         if (clockStarted) {
-            throw new IllegalStateException("Clock is already started");
+            throw new IllegalStateException("[GameTimeService] Clock is already started");
         }
 
         updater = new GameTimeUpdater(getGameTime());
@@ -70,7 +70,7 @@ public class GameTimeManager {
      * @return Success
      */
     public static boolean saveTime() {
-        log.info("Game time saved...");
+        log.debug("Game time saved...");
         return DAOManager.getDAO(ServerVariablesDAO.class).store("time", getGameTime().getTime());
     }
 
@@ -84,6 +84,6 @@ public class GameTimeManager {
         clockStarted = false;
 
         startClock();
-        log.info("Game time changed by admin and clock restarted...");
+        log.info("[GameTimeService] Game time changed by admin and clock restarted...");
     }
 }

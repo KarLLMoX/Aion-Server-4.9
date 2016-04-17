@@ -166,7 +166,7 @@ public class NpcDropData {
             }
         }
         final NpcDropData dropData = new NpcDropData();
-        NpcDropData.log.info("Drop loader: Npc drops loading done.");
+        //NpcDropData.log.info("Drop loader: Npc drops loading done.");
         dropData.setNpcDrop(npcDrops);
         return dropData;
     }

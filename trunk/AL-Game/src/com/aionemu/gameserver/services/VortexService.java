@@ -55,7 +55,6 @@ public class VortexService {
 
     public void initVortexLocations() {
         if (CustomConfig.VORTEX_ENABLED) {
-            log.info("Loading Vortex Locations...");
             vortex = DataManager.VORTEX_DATA.getVortexLocations();
 
             // Spawn peace
@@ -63,7 +62,7 @@ public class VortexService {
                 spawn(loc, VortexStateType.PEACE);
             }
 
-            log.info("Loaded " + vortex.size() + " vortex locations");
+            log.info("[VortexService] Loaded " + vortex.size() + " vortex locations");
 
             // Brusthonin schedule
             CronService.getInstance().schedule(new Runnable() {

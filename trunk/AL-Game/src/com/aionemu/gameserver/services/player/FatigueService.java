@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services.player;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FATIGUE;
@@ -57,7 +58,7 @@ public class FatigueService {
     private Calendar calendar = Calendar.getInstance();
 
     private FatigueService() {
-        log.info("FatigueService initialized");
+        GameServer.log.info("[FatigueService] started ...");
     }
 
     public void onPlayerLogin(Player player) {
@@ -109,7 +110,7 @@ public class FatigueService {
 
         PacketSendUtility.sendPacket(player, new SM_FATIGUE(effectEnabled, isFull, fatigueRecover, iconSet));
         players.add(player);
-        log.info("Added player " + player.getName() + " to fatigue update pool");
+        log.info("[FatigueService] Added player " + player.getName() + " to fatigue update pool");
         load();
 
 
@@ -117,7 +118,7 @@ public class FatigueService {
 
     public void onPlayerLogout(Player player) {
         players.remove(player);
-        log.info("Removed player " + player.getName() + " from fatigue update pool");
+        log.info("[FatigueService] Removed player " + player.getName() + " from fatigue update pool");
     }
 
     public void checkFatigueLost(Player player) {
@@ -245,12 +246,12 @@ public class FatigueService {
                 activePlayer.getCommonData().setFatigueReset(1);
                 players.add(activePlayer);
             } catch (Exception e) {
-                log.error("Error while reset player fatigue " + e.getMessage());
+                log.error("[FatigueService] Error while reset player fatigue " + e.getMessage());
             }
         }
-        log.info("All players fatigue are reseted...");
+        log.info("[FatigueService] All players fatigue are reseted...");
         load();
-        log.info("Fatigue got reseted...");
+        log.info("[FatigueService] Fatigue got reseted...");
     }
 
     public static FatigueService getInstance() {

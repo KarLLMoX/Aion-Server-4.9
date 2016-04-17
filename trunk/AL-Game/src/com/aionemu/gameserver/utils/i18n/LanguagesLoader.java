@@ -18,6 +18,8 @@ package com.aionemu.gameserver.utils.i18n;
 
 import com.aionemu.commons.scripting.classlistener.ClassListener;
 import com.aionemu.commons.utils.ClassUtils;
+import com.aionemu.gameserver.GameServer;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -59,7 +61,7 @@ public class LanguagesLoader implements ClassListener {
             }
         }
 
-        log.info("Loaded " + handler.size() + " custom message handlers.");
+        GameServer.log.info("[LanguagesLoader] Loaded " + handler.size() + " custom message handlers.");
     }
 
     @Override

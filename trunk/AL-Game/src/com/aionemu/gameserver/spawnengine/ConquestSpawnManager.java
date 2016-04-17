@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
@@ -30,6 +31,7 @@ public class ConquestSpawnManager {
 	
 	public static void spawnAll()
 	{
+		int spawns = 0;
 		for (Entry<WorldPosition, FastList<SpawnTemplate>> spawnpos : spawnsByPosition.entrySet())
 		{
 			if (spawnpos.getValue().size() == 0)
@@ -38,8 +40,10 @@ public class ConquestSpawnManager {
 			int index =  Rnd.get(0,(spawnpos.getValue().size()-1));
 
 			SpawnTemplate st = spawnpos.getValue().get(index);
+			spawns++;
 			spawn(st);
 		}
+		GameServer.log.info("[ConquestSpawnManager] Spawned "+spawns+" ConquestNpcs");
 		//writeTemplate();
 	}
 

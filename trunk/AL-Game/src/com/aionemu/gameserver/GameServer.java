@@ -99,7 +99,7 @@ import java.util.zip.ZipOutputStream;
  */
 public class GameServer {
 
-    private static final Logger log = LoggerFactory.getLogger(GameServer.class);
+    public static final Logger log = LoggerFactory.getLogger(GameServer.class);
 
     private static void initalizeLoggger() {
         new File("./log/backup/").mkdirs();
@@ -141,7 +141,7 @@ public class GameServer {
             lc.reset();
             configurator.doConfigure("config/slf4j-logback.xml");
         } catch (JoranException je) {
-            throw new RuntimeException("Failed to configure loggers, shutting down...", je);
+            throw new RuntimeException("[LoggerFactory] Failed to configure loggers, shutting down...", je);
         }
     }
 
@@ -162,30 +162,23 @@ public class GameServer {
         final CountDownLatch progressLatch = new CountDownLatch(parallelEngines.length);
         initalizeLoggger();
         initUtilityServicesAndConfig();
-		Util.printSection("===========Data============");
+		Util.printSection(" ### StaticData ### ");
         DataManager.getInstance();
-        Util.printSection("===========================");
-        Util.printSection("==========Stigma===========");
 		DataManager.SKILL_TREE_DATA.setStigmaTree();
 		StigmaService.reparseHiddenStigmas();
-		Util.printSection("===========================");
-		Util.printSection("=========IDFactory=========");
+		Util.printSection(" ### IDFactory ### ");
         IDFactory.getInstance();
-        Util.printSection("===========================");
-        Util.printSection("===========World===========");
-        ZoneService.getInstance().load(null);
-        GeoService.getInstance().initializeGeo();
+        Util.printSection(" ### World ### ");
+        ZoneService.getInstance().load(null);        
         System.gc();
         World.getInstance();
+        Util.printSection(" ### GeoData ### ");
+        GeoService.getInstance().initializeGeo();
         DropRegistrationService.getInstance();
-        Util.printSection("===========================");
-        Util.printSection("==========Cleaning=========");
         GameServer gs = new GameServer();
         DAOManager.getDAO(PlayerDAO.class).setPlayersOffline(false);
-        DatabaseCleaningService.getInstance();
-        BannedMacManager.getInstance();
-        Util.printSection("===========================");
-        Util.printSection("==========Engines==========");
+        
+        Util.printSection(" ### Engines ### ");
         for (int i = 0; i < parallelEngines.length; i++) {
             final int index = i;
             ThreadPoolManager.getInstance().execute(new Runnable() {
@@ -201,52 +194,87 @@ public class GameServer {
         } catch (InterruptedException e1) {
             e1.printStackTrace();
         }
-        Util.printSection("===========================");
         // This is loading only siege location data
         // No Siege schedule or spawns
-		Util.printSection("====Siege Location Data====");
+		Util.printSection(" ### Siege Location Data ### ");
         BaseService.getInstance().initBaseLocations();
         BeritraService.getInstance().initBeritraLocations();
         SiegeService.getInstance().initSiegeLocations();
         VortexService.getInstance().initVortexLocations();
         RiftService.getInstance().initRiftLocations();
-        Util.printSection("===========================");
-		Util.printSection("==========Spawns===========");
+		Util.printSection(" ### Spawns ### ");
 		SpawnEngine.spawnAll();
         if (EventsConfig.EVENT_ENABLED) {
             PlayerEventService.getInstance();
         }
         if (EventsConfig.ENABLE_EVENT_SERVICE) {
             EventService.getInstance().start();
-            EventService.getInstance().startCronCleanBase();
+           
         }
         RiftService.getInstance().initRifts();
         InstanceRiftSpawnManager.spawnAll();
         TemporarySpawnEngine.spawnAll();
+
+        Util.printSection(" ### Sieges ### ");
+        // Init Sieges... It's separated due to spawn engine.
+        // It should not spawn siege NPCs
         if (SiegeConfig.SIEGE_ENABLED) {
             ShieldService.getInstance().spawnAll();
         }
-        Util.printSection("===========================");
-        Util.printSection("==========Sieges===========");
-        // Init Sieges... It's separated due to spawn engine.
-        // It should not spawn siege NPCs
         SiegeService.getInstance().initSieges();
         AgentFightService.getInstance().initAgentFight();
         MoltenusService.getInstance().initMoltenus();
+        SerialKillerService.getInstance().initSerialKillers();
+        DisputeLandService.getInstance().init();
+        Util.printSsSection("Bases");
         if(BaseConfig.BASE_ENABLED) {
             BaseService.getInstance().initBases();
         }
-        SerialKillerService.getInstance().initSerialKillers();
-        DisputeLandService.getInstance().init();
-        Util.printSection("===========================");
-		Util.printSection("=======TaskManagers========");
+        Util.printSection(" ### Cleaning ### ");
+        DatabaseCleaningService.getInstance();
+        EventService.getInstance().startCronCleanBase();
+		Util.printSection(" ### TaskManagers ### ");
         PacketBroadcaster.getInstance();
         PeriodicSaveService.getInstance();
-        AbyssRankUpdateService.getInstance().scheduleUpdate();
         TaskFromDBManager.getInstance();
-        Util.printSection("===========================");
-        Util.printSection("=========Services==========");
+        
+        Util.printSection(" ### Services ### ");        
+        Util.printSsSection("Atreian Passport");
+        AtreianPassportService.getInstance().onStart();
+        Util.printSsSection("HTML");
+        HTMLCache.getInstance();
+        if (CustomConfig.ENABLE_REWARD_SERVICE) {
+            RewardService.getInstance();
+        }
+        if (WeddingsConfig.WEDDINGS_ENABLE) {
+            WeddingService.getInstance();
+        }
+        Util.printSsSection("Sheduled Services");
         LimitedItemTradeService.getInstance().start();
+        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.DREDGION2_ENABLE)
+            DredgionService.getInstance().start();
+        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.KAMAR_ENABLE)
+            KamarBattlefieldService.getInstance().start();
+        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.OPHIDAN_ENABLE)
+            OphidanBridgeService.getInstance().start();
+        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.IRONWALL_ENABLE)
+            IronWallWarFrontService.getInstance().start();
+        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.IDGELDOME_ENABLE)
+            IdgelDomeService.getInstance().start();
+        if (ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP)
+            ConquerorsService.getInstance().initConquerorPvPSystem();        
+        AbyssRankUpdateService.getInstance().scheduleUpdate();        
+        /**
+         *  Schedules Garbage Collector to be launched at the specified time to 
+         *  be optimized unused memory. (Avoids OutOfMemoryException)
+         */
+        GarbageCollector.getInstance().start();  
+        Util.printSsSection("Other Services");
+        WorldBuffService.getInstance();
+        //PetitionService.getInstance();
+        if (AIConfig.SHOUTS_ENABLE) {
+            NpcShoutsService.getInstance();
+        }
         if (CustomConfig.LIMITS_ENABLED) {
             PlayerLimitService.getInstance().scheduleUpdate();
         }
@@ -259,93 +287,53 @@ public class GameServer {
         Influence.getInstance();
         ExchangeService.getInstance();
         FatigueService.getInstance();
-        AtreianPassportService.getInstance().onStart();
-        WorldBuffService.getInstance();
-        //PetitionService.getInstance();
-        if (AIConfig.SHOUTS_ENABLE) {
-            NpcShoutsService.getInstance();
-        }
         InstanceService.load();
         FlyRingService.getInstance();
         LanguageHandler.getInstance();
         CuringZoneService.getInstance();
         RoadService.getInstance();
-        HTMLCache.getInstance();
-        if (CustomConfig.ENABLE_REWARD_SERVICE) {
-            RewardService.getInstance();
-        }
-        if (WeddingsConfig.WEDDINGS_ENABLE) {
-            WeddingService.getInstance();
-        }
-        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.DREDGION2_ENABLE) {
-            DredgionService.getInstance().start();
-        }
-        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.KAMAR_ENABLE) {
-            KamarBattlefieldService.getInstance().start();
-        }
-        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.OPHIDAN_ENABLE) {
-            OphidanBridgeService.getInstance().start();
-        }
-        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.IRONWALL_ENABLE) {
-            IronWallWarFrontService.getInstance().start();
-        }
-        if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.IDGELDOME_ENABLE) {
-            IdgelDomeService.getInstance().start();
-        }
-        if (ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP){
-            ConquerorsService.getInstance().initConquerorPvPSystem();
-        }
         LivePartyConcertHall.getInstance().init();
         AdminService.getInstance();
         PlayerTransferService.getInstance();
-        Util.printSection("===========================");
-        Util.printSection("==========Housing==========");
+        Util.printSection(" ### Housing ### ");
         HousingBidService.getInstance().start();
         MaintenanceTask.getInstance();
         TownService.getInstance();
         ChallengeTaskService.getInstance();
-        Util.printSection("===========================");
-		Util.printSection("==========Customs==========");
+		Util.printSection(" ### Customs ### ");
         LookManager.getInstance().onStart();
         SupportService.getInstance();
-        if (MembershipConfig.ONLINE_BONUS_ENABLE) {
+        if (MembershipConfig.ONLINE_BONUS_ENABLE)
             OnlineBonus.getInstance();
-        }
 		RestartService.getInstance();
-        Util.printSection("===========================");
-		Util.printSection("==========System===========");
+
+		Util.printSection(" ### System ### ");
         System.gc();
         AEInfos.printAllInfos();
 
-        Util.printSection("GameServerLog");
-        log.info("AL GameServer started in " + (System.currentTimeMillis() - start) / 1000 + " seconds.");
+        Util.printSection(" ### Credits ### ");
         try {
             ZCXInfo.getInfo();
         } catch (IOException e) {
             e.printStackTrace();
         }
-			
-        gs.startServers();
 
+        log.info("[GameServer] GameServer started in " + (System.currentTimeMillis() - start) / 1000 + " seconds.");			
+        gs.startServers();
         Runtime.getRuntime().addShutdownHook(ShutdownHook.getInstance());
 
         ZCXInfo.checkForRatioLimitation();
         onStartup();
         
-        /**
-         *  Schedules Garbage Collector to be launched at the specified time to 
-         *  be optimized unused memory. (Avoids OutOfMemoryException)
-         */
-        GarbageCollector.getInstance().start();   
     }
 
     /**
      * Starts servers for connection with aion client and login\chat server.
      */
     private void startServers() {
-		Util.printSection("=====Starting Network======");
+		Util.printSection(" ### Network ### ");
         NioServer nioServer = new NioServer(NetworkConfig.NIO_READ_WRITE_THREADS, new ServerCfg(NetworkConfig.GAME_BIND_ADDRESS, NetworkConfig.GAME_PORT, "Game Connections", new GameConnectionFactoryImpl()));
-
+        BannedMacManager.getInstance();
         LoginServer ls = LoginServer.getInstance();
         ChatServer cs = ChatServer.getInstance();
 
@@ -359,7 +347,8 @@ public class GameServer {
         if (GSConfig.ENABLE_CHAT_SERVER) {
             cs.connect();
         }
-        Util.printSection("===========================");
+
+        Util.printSection(" ### Misc ###");
     }
 
     /**
@@ -378,29 +367,26 @@ public class GameServer {
 
         // make sure that callback code was initialized
         if (JavaAgentUtils.isConfigured()) {
-            log.info("JavaAgent [Callback Support] is configured.");
+            log.info("[GameServer] JavaAgent [Callback Support] is configured.");
         }
 
         // Initialize cron service
         CronService.initSingleton(ThreadPoolManagerRunnableRunner.class);
 
-        Util.printSection("===========Config==========");
+        Util.printSection(" ### Config ### ");
         // init config
         Config.load();
         // DateTime zone override from configs
         DateTimeUtil.init();
         // Second should be database factory
-        Util.printSection("===========================");
-		Util.printSection("=========DataBase==========");
+		Util.printSection(" ### DataBase ### ");
         DatabaseFactory.init();
         // Initialize DAOs
         DAOManager.init();
         // Initialize thread pools
-        Util.printSection("===========================");
-		Util.printSection("=========Threads===========");
+		Util.printSection(" ### Threads ### ");
         ThreadConfig.load();
         ThreadPoolManager.getInstance();
-        Util.printSection("===========================");
     }
 
     private static Set<StartupHook> startUpHooks = new HashSet<StartupHook>();

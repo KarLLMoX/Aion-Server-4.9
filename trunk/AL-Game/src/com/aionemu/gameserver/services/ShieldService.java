@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.GeoDataConfig;
 import com.aionemu.gameserver.controllers.observer.ActionObserver;
 import com.aionemu.gameserver.controllers.observer.CollisionDieActor;
@@ -81,6 +82,8 @@ public class ShieldService {
                 log.debug("Not bound shield " + shield.getGeometry().getName());
             }
         }
+        
+        GameServer.log.info("[ShieldService] Loaded "+sphereShields.size()+" FortressShields");
     }
 
     public ActionObserver createShieldObserver(int locationId, Creature observed) {

@@ -24,6 +24,7 @@ import javolution.util.FastMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.ConquerorProtectorConfig;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -78,7 +79,7 @@ public class ConquerorsService {
             return;
         }
 
-        log.info("Initializing Conqueror/Protector Buff System...");
+        GameServer.log.info("[ConquerorsService] Initializing Conqueror/Protector Buff System...");
 
         sGbuff = new SerialGuardDebuff();
         sKbuff = new SerialKillerDebuff();
@@ -93,7 +94,7 @@ public class ConquerorsService {
 
                 if (!(type == 1 || type == 2)){
                     type = 1;
-                    log.info("[CONQUEROR NOTE] Please Verify the Map Id's Given in conqueror.properties!!");
+                    log.info("[ConquerorsService] [CONQUEROR NOTE] Please Verify the Map Id's Given in conqueror.properties!!");
                 }
 
                 MapTypes mType = type == 1 ? MapTypes.ELYOS : MapTypes.ASMODIANS;
@@ -119,7 +120,7 @@ public class ConquerorsService {
 
             if (!(type == 1 || type == 2)){
                 type = 3;
-                log.info("[CONQUEROR NOTE] Please Verify the Map Id's Given in conqueror.properties OR In an Instance?");
+                log.info("[ConquerorsService] [CONQUEROR NOTE] Please Verify the Map Id's Given in conqueror.properties OR In an Instance?");
             }
 
             MapTypes mType = type == 1 ? MapTypes.ELYOS : MapTypes.ASMODIANS;
@@ -463,12 +464,12 @@ public class ConquerorsService {
 
     public void msgLog(String msg){
         if (ConquerorProtectorConfig.ENABLE_CONQUEROR_DEBUGMODE){
-            log.info("[Guardian System] " + msg);
+            log.info("[ConquerorsService] " + msg);
         }
     }
 
     public void sendNormalLogMsg(String msg){
-        log.info("[Guardian System] " + msg);
+        log.info("[ConquerorsService] " + msg);
     }
 
 

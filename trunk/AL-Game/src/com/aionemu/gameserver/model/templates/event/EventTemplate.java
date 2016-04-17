@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.model.templates.event;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.SpawnsData2;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
@@ -150,7 +151,7 @@ public class EventTemplate {
                     }
                 }
             }
-            log.info("Spawned " + spawnCount + " Event objects:" + " (" + this.getName() + ")");
+            GameServer.log.info("[EventService] Spawned " + spawnCount + " Event objects:" + " (" + this.getName() + ")");
             DataManager.SPAWNS_DATA2.afterUnmarshal(null, null);
             DataManager.SPAWNS_DATA2.clearTemplates();
         }
@@ -199,7 +200,7 @@ public class EventTemplate {
                 }
             }
             DataManager.SPAWNS_DATA2.removeEventSpawnObjects(spawnedObjects);
-            log.info("Despawned " + spawnedObjects.size() + " Event objects (" + this.getName() + ")");
+            GameServer.log.info("[EventService] Despawned " + spawnedObjects.size() + " Event objects (" + this.getName() + ")");
             spawnedObjects.clear();
             spawnedObjects = null;
         }

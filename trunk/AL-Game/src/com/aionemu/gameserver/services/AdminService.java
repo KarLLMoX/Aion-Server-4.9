@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -78,7 +79,7 @@ public class AdminService {
             }
         }
 
-        log.info("AdminService loaded " + list.size() + " operational items.");
+        GameServer.log.info("[AdminService] loaded " + list.size() + " operational items.");
     }
 
     public boolean canOperate(Player player, Player target, Item item, String type) {
