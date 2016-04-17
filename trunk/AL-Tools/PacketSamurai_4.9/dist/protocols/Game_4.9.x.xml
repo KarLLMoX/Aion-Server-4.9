@@ -8457,7 +8457,7 @@
 			<part name="time" type="h"/>
 			<part name="unk" type="c"/>
 		</packet>
-		<packet id="0x190" name="CM_SUMMON_CASTSPELL">
+		<packet id="0x18B" name="CM_SUMMON_CASTSPELL">
 			<part name="summonObjectId" type="d"/>
 			<part name="skillId" type="h"/>
 			<part name="skillLvl" type="c"/>
@@ -8708,13 +8708,6 @@
 			<part name="unk" type="c"/>
 			<part name="legionId" type="d"/>
 			<part name="joinMsg" type="S"/>
-		</packet>
-		<packet id="0x18B" name="________________CM_Spirit_Preserve"><!-- SM Skill für Geist Befehl: Schützender Geist und Befehl: Schutz -->
-			<part name="attackerObjectId" type="d"/>
-			<part name="spellId" type="h"/>
-			<part name="level" type="c"/>
-			<part name="targetObjectId" type="d"/>
-			<part name="unk" type="f"/>
 		</packet>
         <packet id="0x182" name="________________CM_0x182"> <!-- New / TODO -->
 			<part name="unk" type="c"/>
