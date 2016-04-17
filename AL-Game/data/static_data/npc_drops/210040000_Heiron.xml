@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 15.04.2016 07:57 aus PS-Drop-Datei: Heiron_4.9_loot_live387045736.xml -->
+<!-- generiert am/um 17.04.2016 14:19 aus PS-Drop-Datei: Heiron_4.9_loot_live387045736.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="211046">
         <drop_group name="ACCESSORY_COMMON_LVL30" use_category="true" race="PC_ALL">
