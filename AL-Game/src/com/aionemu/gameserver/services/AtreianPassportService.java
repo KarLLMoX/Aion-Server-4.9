@@ -203,9 +203,9 @@ public class AtreianPassportService {
         if (raw.size() != 0) {
             getPassports(raw);
         } else {
-            log.warn("[ATREIAN PASSPORT] passports from static data = 0");
+            log.warn("[AtreianPassportService] passports from static data = 0");
         }
-        log.info("AtreianPassportService initialized");
+        log.info("[AtreianPassportService] AtreianPassportService initialized");
     }
 
     /**
@@ -241,9 +241,9 @@ public class AtreianPassportService {
                     break;
             }
         }
-        log.info("[ATREIAN PASSPORT] Loaded " + daily.size() + " daily passports");
-        log.info("[ATREIAN PASSPORT] Loaded " + cumu.size() + " cumulative passports");
-        log.info("[ATREIAN PASSPORT] Loaded " + anny.size() + " anniversary passports");
+        log.info("[AtreianPassportService] Loaded " + daily.size() + " daily passports");
+        log.info("[AtreianPassportService] Loaded " + cumu.size() + " cumulative passports");
+        log.info("[AtreianPassportService] Loaded " + anny.size() + " anniversary passports");
     }
 
     public void getDailyPassports(int id, AtreianPassport atp) {

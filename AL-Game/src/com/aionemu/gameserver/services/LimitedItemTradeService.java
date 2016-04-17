@@ -47,7 +47,7 @@ public class LimitedItemTradeService {
             for (TradeTab list : tradeListData.getTradeListTemplate(npcId).getTradeTablist()) {
                 GoodsList goodsList = goodsListData.getGoodsListById(list.getId());
                 if (goodsList == null) {
-                    log.warn("No goodslist for tradelist of npc " + npcId);
+                    log.warn("[LimitedItemTradService] No goodslist for tradelist of npc " + npcId);
                     continue;
                 }
                 FastList<LimitedItem> limitedItems = goodsList.getLimitedItems();
@@ -72,7 +72,7 @@ public class LimitedItemTradeService {
                 }, limitedItem.getSalesTime());
             }
         }
-        log.info("Scheduled Limited Items based on cron expression size: " + limitedTradeNpcs.size());
+        log.info("[LimitedItemTradService] Scheduled Limited Items based on cron expression size: " + limitedTradeNpcs.size());
     }
 
     public LimitedItem getLimitedItem(int itemId, int npcId) {

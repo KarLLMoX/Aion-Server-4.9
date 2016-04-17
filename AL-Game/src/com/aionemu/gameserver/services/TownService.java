@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.services;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.dao.TownDAO;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
@@ -80,8 +81,7 @@ public class TownService {
                 }
             }
         }
-        log.info("Loaded " + asmosTowns.size() + " elyos towns.");
-        log.info("Loaded " + asmosTowns.size() + " asmodians towns.");
+        GameServer.log.info("[TownService] Loaded totally "+(asmosTowns.size()+elyosTowns.size())+ " Towns (Elyos: "+elyosTowns.size()+ " / Asmos: "+asmosTowns.size()+")");
     }
 
     public Town getTownById(int townId) {
@@ -110,7 +110,7 @@ public class TownService {
         int townId = 0;
         MapRegion region = creature.getPosition().getMapRegion();
         if (region == null) {
-            log.warn("TownService: npc " + creature.getName() + " haven't any map region!");
+            log.warn("[TownService] npc " + creature.getName() + " haven't any map region!");
             return 0;
         } else {
             List<ZoneInstance> zones = region.getZones(creature);

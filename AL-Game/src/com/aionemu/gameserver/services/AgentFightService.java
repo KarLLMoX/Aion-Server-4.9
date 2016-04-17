@@ -48,10 +48,10 @@ public class AgentFightService {
 
     public void initAgentFight() {
         if (!AgentFightConfig.AGENT_ENABLE) {
-            log.info("Agent Fight are disabled...");
+            log.info("[AgentFightService] Agent Fight are disabled...");
         }
         else {
-            log.info("Agent Fight are actived...");
+            log.info("[AgentFightService] Agent Fight are actived...");
             startAgentFight();
         }
     }
@@ -62,7 +62,7 @@ public class AgentFightService {
             public void run() {
                 spawnAgent();
 				announceAgent();
-                log.info("Veille VS Mastarius Started");
+                log.info("[AgentFightService] Veille VS Mastarius Started");
                 World.getInstance().doOnAllPlayers(new Visitor<Player>() {
                     @Override
                     public void visit(Player player) {
@@ -77,7 +77,7 @@ public class AgentFightService {
         TimerStop = ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
-                log.info("Veille VS Mastarius Announce (10 Min left)"); //10 Min left
+                log.info("[AgentFightService] Veille VS Mastarius Announce (10 Min left)"); //10 Min left
 				announceAgent2();
                 World.getInstance().doOnAllPlayers(new Visitor<Player>() {
                     @Override
@@ -93,7 +93,7 @@ public class AgentFightService {
         TimerStop2 = ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
-                log.info("Veille VS Mastarius (5 min left)");
+                log.info("[AgentFightService] Veille VS Mastarius (5 min left)");
                 World.getInstance().doOnAllPlayers(new Visitor<Player>() {
                     @Override
                     public void visit(Player player) {
@@ -109,7 +109,7 @@ public class AgentFightService {
             @Override
             public void visit(Player player) {
                 PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_LDF4_Advance_GodElite_time_03);
-                log.info("Veille VS Mastarius Finish");
+                log.info("[AgentFightService] Veille VS Mastarius Finish");
             }
         });
     }
@@ -163,7 +163,7 @@ public class AgentFightService {
     public void devMod() {
         announceAgent();
         spawnAgent();
-        log.info("Veille VS Mastarius 4.7 Started");
+        log.info("[AgentFightService] Veille VS Mastarius 4.9 Started");
         World.getInstance().doOnAllPlayers(new Visitor<Player>() {
             @Override
             public void visit(Player player) {

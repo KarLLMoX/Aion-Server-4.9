@@ -22,6 +22,7 @@ import javolution.util.FastList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.administration.DeveloperConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.Gatherable;
@@ -204,7 +205,7 @@ public class SpawnEngine {
      */
     public static void spawnAll() {
         if (!DeveloperConfig.SPAWN_ENABLE) {
-            log.info("Spawns are disabled");
+            log.info("[SpawnService] Spawns are disabled ??!!??");
             return;
         }
         for (WorldMapTemplate worldMapTemplate : DataManager.WORLD_MAPS_DATA) {
@@ -307,7 +308,7 @@ public class SpawnEngine {
 
     private static boolean checkPool(SpawnGroup2 spawn) {
         if (spawn.getSpawnTemplates().size() < spawn.getPool()) {
-            log.warn("Pool size more then spots, npcId: " + spawn.getNpcId() + ", worldId: " + spawn.getWorldId());
+            log.warn("[SpawnService] Pool size more then spots, npcId: " + spawn.getNpcId() + ", worldId: " + spawn.getWorldId());
             return false;
         }
         return true;
@@ -316,8 +317,8 @@ public class SpawnEngine {
     public static void printWorldSpawnStats() {
         StatsCollector visitor = new StatsCollector();
         World.getInstance().doOnAllObjects(visitor);
-        log.info("Loaded " + visitor.getNpcMapCount()+" Maps with "+ visitor.getNpcCount() + " npc spawns");
-        log.info("Loaded " + visitor.getGatherMapCount()+" Maps with "+ visitor.getGatherableCount() + " gatherable spawns");
+        GameServer.log.info("[SpawnEngine] Loaded totally " + visitor.getNpcCount() + " NpcSpawns on "+visitor.getNpcMapCount()+" Maps");        
+        GameServer.log.info("[SpawnEngine] Loaded totally " + visitor.getGatherableCount() + " GatherableSpawns on " + visitor.getGatherMapCount()+" Maps");
         QuestEngine.getInstance().printMissingSpawns();
     }
 

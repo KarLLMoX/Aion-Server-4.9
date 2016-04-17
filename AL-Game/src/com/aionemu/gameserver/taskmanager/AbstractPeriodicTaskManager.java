@@ -38,7 +38,7 @@ public abstract class AbstractPeriodicTaskManager extends AbstractLockManager im
 
         GameServer.addStartupHook(this);
 
-        log.info(getClass().getSimpleName() + ": Initialized.");
+        log.debug("[PeriodicTaskManager] "+getClass().getSimpleName() + ": Initialized.");
     }
 
     @Override

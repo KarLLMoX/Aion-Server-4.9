@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
@@ -61,7 +62,7 @@ public class SerialKillerService {
             return;
         }
 
-        log.info("Init SK...");
+        GameServer.log.info("[SerialKillerService] started ...");
 
         for (String world : CustomConfig.SERIALKILLER_WORLDS.split(",")) {
             if ("".equals(world)) {

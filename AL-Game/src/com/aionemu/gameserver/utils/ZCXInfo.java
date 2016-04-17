@@ -49,16 +49,26 @@ public class ZCXInfo {
 
     public static void getInfo() throws IOException {
         readInfo();
-        log.info("==================================================");
-        log.info("==============>Aion Lightning Core<===============");
-        log.info("==================>developed by <=================");
-        log.info("===============>Aion German Group<================");
-        log.info("==================================================");
-        log.info("Thanks to all who helped this project!");
-        log.info("Major Patch: " + getVersion());
-        log.info("Minor Patch: " + getMinor());
-        log.info("Copyright: " + getCopyright());
-        log.info("==================================================");
+        System.out.println("");
+        System.out.println("      .o.        o8o                          .oooooo.");                       
+        System.out.println("     .888.       `\"'                         d8P'  `Y8b");                      
+        System.out.println("    .8\"888.     oooo   .ooooo.  ooo. .oo.   888            .ooooo.  oooo d8b"); 
+        System.out.println("   .8' `888.    `888  d88' `88b `888P\"Y88b  888           d88' `88b `888\"\"8P ");
+        System.out.println("  .88ooo8888.    888  888   888  888   888  888     ooooo 888ooo888  888");     
+        System.out.println(" .8'     `888.   888  888   888  888   888  `88.    .88'  888    .o  888");     
+        System.out.println(" o88o     o8888o o888o `Y8bod8P' o888o o888o  `Y8bood8P'   `Y8bod8P' d888b");
+        System.out.println("");
+        System.out.println("######## This is an AionGerman-Core - based on an AionLightning Source ########");
+        System.out.println("");
+        Util.printSection("");
+        //System.out.println("==================================================");
+        System.out.println("\t\t\tThanks to all who helped this project!");
+        System.out.println("\t\t\tMajor Patch: " + getVersion());
+        System.out.println("\t\t\tMinor Patch: " + getMinor());
+        System.out.println("\t\t\tCopyright: " + getCopyright());
+        Util.printSection("");
+        //System.out.println("==================================================");
+        System.out.println("");
     }
 
     public static void readInfo() throws IOException {
@@ -119,7 +129,7 @@ public class ZCXInfo {
                     } finally {
                         lock.unlock();
                     }
-                    displayRatios(false);
+                    displayRatios(false);                    
                 }
             });
         }
@@ -160,7 +170,7 @@ public class ZCXInfo {
 	}
 
 	private static void displayRatios(boolean updated) {
-		log.info("FACTIONS RATIO " + (updated ? "UPDATED " : "") + ": E " + String.format("%.1f", ELYOS_RATIO) + " % / A "
+		GameServer.log.info("[GameServer] Actual Factions Ratio " + (updated ? "updated " : "") + ": Elyos " + String.format("%.1f", ELYOS_RATIO) + " % - Asmodians "
 				+ String.format("%.1f", ASMOS_RATIO) + " %");
 	}
 

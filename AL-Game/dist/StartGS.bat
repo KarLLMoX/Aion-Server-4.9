@@ -1,4 +1,6 @@
 @ECHO off
+mode con:cols=150 
+color 1B 
 TITLE Aion Lightning - Game Server Console
 :START
 CLS

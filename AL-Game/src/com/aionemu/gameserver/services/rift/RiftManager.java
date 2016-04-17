@@ -16,8 +16,6 @@
  */
 package com.aionemu.gameserver.services.rift;
 
-import com.aionemu.commons.utils.Rnd;
-import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.controllers.RVController;
 import com.aionemu.gameserver.controllers.effect.EffectController;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -30,9 +28,6 @@ import com.aionemu.gameserver.model.vortex.VortexLocation;
 import com.aionemu.gameserver.utils.idfactory.IDFactory;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.NpcKnownList;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,10 +35,10 @@ import java.util.Map;
 
 /**
  * @author Source
+ * @modified CoolyT
  */
 public class RiftManager {
 
-    private static Logger log = LoggerFactory.getLogger(RiftManager.class);
     private static List<Npc> rifts = new ArrayList<Npc>();
     private static Map<String, SpawnTemplate> riftGroups = new HashMap<String, SpawnTemplate>();
 
@@ -58,22 +53,25 @@ public class RiftManager {
         }
     }
 
-    public void spawnRift(RiftLocation loc) {
+    public RiftStatistics spawnRift(RiftLocation loc) {
         RiftEnum rift = RiftEnum.getRift(loc.getId());
-        spawnRift(rift, null, loc);
+        return spawnRift(rift, null, loc);
     }
 
-    public void spawnVortex(VortexLocation loc) {
+    public RiftStatistics spawnVortex(VortexLocation loc) {
         RiftEnum rift = RiftEnum.getVortex(loc.getDefendersRace());
-        spawnRift(rift, loc, null);
+        return spawnRift(rift, loc, null);
     }
 
-    private void spawnRift(RiftEnum rift, VortexLocation vl, RiftLocation rl) {
-        SpawnTemplate masterTemplate = riftGroups.get(rift.getMaster());
+    private RiftStatistics spawnRift(RiftEnum rift, VortexLocation vl, RiftLocation rl) {
+        RiftStatistics stat = new RiftStatistics();
+    	SpawnTemplate masterTemplate = riftGroups.get(rift.getMaster());
         SpawnTemplate slaveTemplate = riftGroups.get(rift.getSlave());
 
+        stat.setWorldMap(masterTemplate.getWorldId());
+        
         if (masterTemplate == null || slaveTemplate == null) {
-            return;
+            return stat;
         }
 
         int spawned = 0;
@@ -84,11 +82,7 @@ public class RiftManager {
         }
 
         for (int i = 1; i <= instanceCount; i++) 
-        {
-            boolean spawn = Rnd.chance(CustomConfig.RIFT_SPAWNCHANCE);
-            if (!spawn && !rift.isVortex())
-            	continue;
-        	
+        {	
         	Npc slave = spawnInstance(i, slaveTemplate, new RVController(null, rift));
             Npc master = spawnInstance(i, masterTemplate, new RVController(slave, rift));
 
@@ -97,14 +91,21 @@ public class RiftManager {
                 spawned = vl.getSpawned().size();
                 vl.getSpawned().add(master);
                 vl.getSpawned().add(slave);
+                stat.setVortex(true);
             } else {
                 spawned = rl.getSpawned().size();
                 rl.getSpawned().add(master);
                 rl.getSpawned().add(slave);
             }
+            
+            if (i == 1)
+            {
+            	stat.setSpawnedNpcs(spawned);
+            	stat.addSpawnedRifts(1);
+            }            
         }
-
-        log.info("Rift opened: " + rift.name() + " successfully spawned " + spawned + " Npc.");
+        return stat;
+        //log.info("Rift opened: " + rift.name() + " successfully spawned " + spawned + " Npc.");
     }
 
     private Npc spawnInstance(int instance, SpawnTemplate template, RVController controller) {

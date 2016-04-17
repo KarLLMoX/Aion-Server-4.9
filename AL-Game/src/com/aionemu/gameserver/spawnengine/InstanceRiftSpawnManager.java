@@ -17,6 +17,9 @@
 package com.aionemu.gameserver.spawnengine;
 
 import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.GameServer;
+import com.aionemu.gameserver.configs.main.CustomConfig;
+import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -33,6 +36,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * @author ginho1
+ * @modified CoolyT
  */
 public class InstanceRiftSpawnManager {
 
@@ -48,7 +52,7 @@ public class InstanceRiftSpawnManager {
             public void run() {
 
                 for (RiftEnum rift : RiftEnum.values()) {
-                    if (Rnd.get(1, 100) > 30) {
+                    if (!Rnd.chance(CustomConfig.RIFT_SPAWNCHANCE)) {
                         continue;
                     }
 
@@ -59,7 +63,8 @@ public class InstanceRiftSpawnManager {
     }
 
     private static void spawnInstanceRift(RiftEnum rift) {
-        log.info("Spawning Instance Rift: " + rift.name());
+    	int worldId = rift.getWorldId();
+    	String mapName = DataManager.WORLD_MAPS_DATA.getTemplate(worldId).getName()+" (id:"+worldId+")";
 
         SpawnTemplate spawn = SpawnEngine.addNewSpawn(rift.getWorldId(), rift.getNpcId(),
                 rift.getX(), rift.getY(), rift.getZ(), (byte) 0, 0);
@@ -74,6 +79,8 @@ public class InstanceRiftSpawnManager {
 
         scheduleDelete(visibleObject);
         sendAnnounce(visibleObject);
+        
+        GameServer.log.info("[RiftService] Spawned in "+mapName+" Instance Rift: " + rift.name());
     }
 
     private static void scheduleDelete(final VisibleObject visObj) {

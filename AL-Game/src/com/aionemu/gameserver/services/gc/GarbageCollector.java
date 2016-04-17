@@ -22,6 +22,7 @@ import java.util.TimerTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.GSConfig;
 
 /**
@@ -53,10 +54,10 @@ public class GarbageCollector extends Thread {
 	public void run()
 	{
 		if (GSConfig.ENABLE_MEMORY_GC) {
-			log.info("Garbage Collector is scheduled at duration: " + String.valueOf(g_Period) + " in milliseconds.");
+			GameServer.log.info("[GarbageCollector] Garbage Collector is scheduled to start in " + String.valueOf((g_Period/1000)/60) + " minutes.");
 			StartMemoryOptimization();
 		} else {
-			log.info("Garbage Collector is turned off by administrator.");
+			GameServer.log.info("[GarbageCollector] Garbage Collector is turned off by administrator.");
 		}
 	}
     
@@ -74,13 +75,13 @@ public class GarbageCollector extends Thread {
 		    		g_Period = g_Period * 60 * 1000;
 		    		
 		    		if (GSConfig.ENABLE_MEMORY_GC) {
-			    		log.info("Garbage Collector is optimizing memory to free unused heap memory.");
+			    		log.info("[GarbageCollector] Garbage Collector is optimizing memory to free unused heap memory.");
 			    		System.gc();
 			    		System.runFinalization();
-			    		log.info("Garbage Collector has finished optimizing memory.");		    			
+			    		log.info("[GarbageCollector] Garbage Collector has finished optimizing memory.");		    			
 		    		}
 		    	} catch (Exception e) {
-					log.error("Error on optimizing memory: " + e.getMessage());
+					log.error("[GarbageCollector] Error on optimizing memory: " + e.getMessage());
 		    	}				
 			}
     	}, g_Period);

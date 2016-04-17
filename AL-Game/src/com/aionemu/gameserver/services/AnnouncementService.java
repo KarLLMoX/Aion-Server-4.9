@@ -111,7 +111,7 @@ public class AnnouncementService {
             }, announce.getDelay() * 1000, announce.getDelay() * 1000));
         }
 
-        log.info("Loaded " + announcements.size() + " announcements");
+        log.info("[AnnouncementService] Loaded " + announcements.size() + " announcements");
     }
 
     public void addAnnouncement(Announcement announce) {

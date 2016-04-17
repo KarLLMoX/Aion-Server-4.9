@@ -42,7 +42,7 @@ public class CuringZoneService {
             obj.spawn();
             curingObjects.add(obj);
         }
-        log.info("spawned Curing Zones");
+        log.info("[CuringZoneService] spawned "+curingObjects.size()+" Curing Zones");
         startTask();
     }
 

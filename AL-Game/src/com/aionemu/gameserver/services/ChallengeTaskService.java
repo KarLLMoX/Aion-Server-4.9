@@ -28,6 +28,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.dao.ChallengeTasksDAO;
 import com.aionemu.gameserver.dao.LegionMemberDAO;
@@ -61,7 +62,7 @@ public class ChallengeTaskService {
     private ChallengeTaskService() {
         cityTasks = new FastMap<Integer, Map<Integer, ChallengeTask>>().shared();
         legionTasks = new FastMap<Integer, Map<Integer, ChallengeTask>>().shared();
-        log.info("ChallengeTaskService initialized.");
+        GameServer.log.info("[ChallengeTaskService] started ...");
     }
 
     public void onChallengeQuestFinish(Player player, int questId) {
@@ -81,13 +82,13 @@ public class ChallengeTaskService {
         if (cityTasks.get(townId) == null) {
             buildTaskList(player, ChallengeType.TOWN, townId, TownService.getInstance().getTownById(townId).getLevel());
             if (cityTasks.get(townId) == null) {
-                log.warn("Town not in CityTasks! TownId:" + townId + "; Player town residence:" + TownService.getInstance().getTownResidence(player));
+                log.warn("[ChallengeTaskService] Town not in CityTasks! TownId:" + townId + "; Player town residence:" + TownService.getInstance().getTownResidence(player));
                 return;
             }
         }
         ChallengeTask task = cityTasks.get(townId).get(taskTemplate.getId());
         if (task == null || task.getQuests().get(questId) == null) {
-            log.warn("Player " + player.getName() + " trying to finish city task in the city which haven't task with this id. Town id:" + townId + ", task id:" + taskTemplate.getId() + ", quest id:" + questId);
+            log.warn("[ChallengeTaskService] Player " + player.getName() + " trying to finish city task in the city which haven't task with this id. Town id:" + townId + ", task id:" + taskTemplate.getId() + ", quest id:" + questId);
             return;
         }
         ChallengeQuest quest = task.getQuests().get(questId);

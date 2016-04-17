@@ -86,7 +86,7 @@ public class LivePartyConcertHall {
 			setRace("ASMODIANS");
 		
 		if (isActive()) {
-			log.info("Starting Live Party Service...");
+			log.info("[LivePartyConcertHall] Starting Live Party Service...");
 			startChecker();
 		}
 	}
@@ -128,7 +128,7 @@ public class LivePartyConcertHall {
 					TeleportService2.moveToBindLocation(player, true);
 				}
 				players.clear();
-				log.info("Live Party Concert Event ended.");
+				log.info("[LivePartyConcertHall] Live Party Concert Event ended.");
 			}
 
 		}, 180 * 1000);//3 min
@@ -170,7 +170,7 @@ public class LivePartyConcertHall {
 				
 					prepared = true;
 					spawnPhase1();
-					log.info("[Live Party] The show begins...");
+					log.info("[LivePartyConcertHall] The show begins...");
 			}
 			
 		}, 1200 * 1000, 1200 * 1000);//20 minutes to start
@@ -207,7 +207,7 @@ public class LivePartyConcertHall {
             	portalSpawns.put(831592, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(120010000, 831592, 1625f, 1379f, 193.1272f, (byte) 39), 1));//Portal
             	portalSpawns.put(831592, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(120010000, 831592, 1351f, 1362f, 208.125f, (byte) 57), 1));//Portal
             	
-            	log.info("[Live Party] Entrance spawned in captial citys...");
+            	log.info("[LivePartyConcertHall] Entrance spawned in captial citys...");
             	prepareConcert();
             	announceTask(5);// every 5 min announce
             	ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable() {
@@ -222,7 +222,7 @@ public class LivePartyConcertHall {
         					}
         				}
         				portalSpawns.clear();
-    					log.info("[Live Party] Entrance Portals are removed...");
+    					log.info("[LivePartyConcertHall] Entrance Portals are removed...");
         			}
         			
         		}, 2400 * 1000, 2400 * 1000);//after 40 min portals will despawn
@@ -232,7 +232,7 @@ public class LivePartyConcertHall {
 	
 	// You and I
 	private void spawnPhase1() {
-		log.info("[Live Party] Phase 1 You and I started");
+		log.info("[LivePartyConcertHall] Phase 1 You and I started");
 		spawnPhase1.put(831630, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831573, 1551.627441f, 1511.607300f, 567.63f, (byte) 60), 1));//IU
 		spawnPhase1.put(831654, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831654, 1532.48f, 1511.5601f, 565.88226f, (byte) 90), 1));//Lightning
 		spawnPhase1.put(831633, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831633, 1553.855347f, 1505.208984f, 567.63f, (byte) 60), 1));//Dancer1
@@ -254,7 +254,7 @@ public class LivePartyConcertHall {
 					}
 				}
 				spawnPhase1.clear();
-				log.info("[Live Party] Phase 1 You and I finished");
+				log.info("[LivePartyConcertHall] Phase 1 You and I finished");
 				spawnPhase2();
 			}
 
@@ -264,7 +264,7 @@ public class LivePartyConcertHall {
 	
 	// Good Day
 	private void spawnPhase2() {
-		log.info("[Live Party] Phase 2 Good Day started");
+		log.info("[LivePartyConcertHall] Phase 2 Good Day started");
 		spawnPhase2.put(831630, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831573, 1551.627441f, 1511.607300f, 567.63f, (byte) 60), 1));//IU
 		spawnPhase2.put(831655, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831655, 1532.48f, 1511.5601f, 565.88226f, (byte) 90), 1));//Lightning
 		spawnPhase2.put(831640, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831640, 1551.468872f, 1508.395752f, 567.63f, (byte) 60), 1));//Dancer1
@@ -288,7 +288,7 @@ public class LivePartyConcertHall {
 					}
 				}
 				spawnPhase2.clear();
-				log.info("[Live Party] Phase 2 Good Day finished");
+				log.info("[LivePartyConcertHall] Phase 2 Good Day finished");
 				spawnPhase3();
 			}
 
@@ -298,7 +298,7 @@ public class LivePartyConcertHall {
 	
 	// Theme Song
 	private void spawnPhase3() {
-		log.info("[Live Party] Phase 3 Theme Song started");
+		log.info("[LivePartyConcertHall] Phase 3 Theme Song started");
 		spawnPhase3.put(831630, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831573, 1551.627441f, 1511.607300f, 567.63f, (byte) 60), 1));//IU
 		spawnPhase3.put(831656, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831656, 1532.48f, 1511.5601f, 565.88226f, (byte) 90), 1));//Lightning
 		spawnPhase3.put(831648, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831648, 1551.003296f, 1504.785889f, 567.63f, (byte) 60), 1));//Surama
@@ -320,7 +320,7 @@ public class LivePartyConcertHall {
 					}
 				}
 				spawnPhase3.clear();
-				log.info("[Live Party] Phase 3 Theme Song finished");
+				log.info("[LivePartyConcertHall] Phase 3 Theme Song finished");
 				spawnPhase4();
 			}
 
@@ -334,7 +334,7 @@ public class LivePartyConcertHall {
 		if (chance < 50) {
 			stopConcert();
 		}	
-		log.info("[Live Party] Phase 4 New Song started");
+		log.info("[LivePartyConcertHall] Phase 4 New Song started");
 		spawnPhase4.put(831630, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831573, 1551.627441f, 1511.607300f, 567.63f, (byte) 60), 1));//IU
 		spawnPhase4.put(831656, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831656, 1532.48f, 1511.5601f, 565.88226f, (byte) 90), 1));//Lightning
 		spawnPhase4.put(831655, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(worldId, 831655, 1532.48f, 1511.5601f, 565.88226f, (byte) 90), 1));//Lightning
@@ -354,7 +354,7 @@ public class LivePartyConcertHall {
 					}
 				}
 				spawnPhase4.clear();
-				log.info("[Live Party] Phase 4 New Song finished");
+				log.info("[LivePartyConcertHall] Phase 4 New Song finished");
 				stopConcert();
 			}
 		}, 300 * 1000);//5 min 

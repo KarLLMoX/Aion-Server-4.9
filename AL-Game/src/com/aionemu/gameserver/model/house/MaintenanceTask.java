@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.model.house;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.HousingConfig;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -89,13 +90,13 @@ public class MaintenanceTask extends AbstractCronTask {
 
     @Override
     protected void preInit() {
-        log.info("Initializing House maintenance task...");
+        GameServer.log.info("[HouseService] Initializing House maintenance task...");
     }
 
     @Override
     protected void preRun() {
         updateMaintainedHouses();
-        log.info("Executing House maintenance. Maintained Houses: " + maintainedHouses.size());
+        GameServer.log.info("[HouseService] Executing House maintenance. Maintained Houses: " + maintainedHouses.size());
     }
 
     private void updateMaintainedHouses() {
@@ -159,7 +160,7 @@ public class MaintenanceTask extends AbstractCronTask {
 
             if (pcd == null) {
                 // player doesn't exist already for some reasons
-                log.warn("House " + house.getAddress().getId() + " had player assigned but no player exists. Auctioned.");
+                log.warn("[HouseService] House " + house.getAddress().getId() + " had player assigned but no player exists. Auctioned.");
                 putHouseToAuction(house, null);
                 continue;
             }
@@ -198,7 +199,7 @@ public class MaintenanceTask extends AbstractCronTask {
         house.revokeOwner();
         HousingBidService.getInstance().addHouseToAuction(house);
         house.save();
-        log.info("House " + house.getAddress().getId() + " overdued and put to auction.");
+        log.info("[HouseService] House " + house.getAddress().getId() + " overdued and put to auction.");
         if (playerCommonData == null) {
             return;
         }

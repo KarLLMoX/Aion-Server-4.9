@@ -47,7 +47,7 @@ public class GameTimeService {
         ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable() {
             @Override
             public void run() {
-                log.info("Sending current game time to all players");
+                log.debug("[GameTimeService] Sending current game time to all players");
                 Iterator<Player> iterator = World.getInstance().getPlayersIterator();
                 while (iterator.hasNext()) {
                     Player next = iterator.next();
@@ -58,7 +58,7 @@ public class GameTimeService {
             }
         }, GAMETIME_UPDATE, GAMETIME_UPDATE);
 
-        log.info("GameTimeService started. Update interval:" + GAMETIME_UPDATE);
+        log.info("[GameTimeService] GameTimeService started. Update interval: every " + (GAMETIME_UPDATE/1000)/60 +" minutes.");
     }
 
     @SuppressWarnings("synthetic-access")

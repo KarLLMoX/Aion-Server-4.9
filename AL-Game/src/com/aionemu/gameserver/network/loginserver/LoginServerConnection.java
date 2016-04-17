@@ -18,6 +18,7 @@ package com.aionemu.gameserver.network.loginserver;
 
 import com.aionemu.commons.network.AConnection;
 import com.aionemu.commons.network.Dispatcher;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.network.factories.LsPacketHandlerFactory;
 import com.aionemu.gameserver.network.loginserver.serverpackets.SM_GS_AUTH;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
@@ -80,7 +81,7 @@ public class LoginServerConnection extends AConnection {
         this.lsPacketHandler = lsPacketHandlerFactory.getPacketHandler();
 
         state = State.CONNECTED;
-        log.info("Connected to LoginServer!");
+        GameServer.log.info("[LoginServer] Connected to LoginServer!");
     }
 
     @Override
@@ -102,7 +103,7 @@ public class LoginServerConnection extends AConnection {
     @Override
     public boolean processData(ByteBuffer data) {
         LsClientPacket pck = lsPacketHandler.handle(data, this);
-        log.debug("recived packet: " + pck);
+        log.debug("[LoginServer] recived packet: " + pck);
 
         /**
          * Execute packet only if packet exist (!= null) and read was ok.
@@ -179,7 +180,7 @@ public class LoginServerConnection extends AConnection {
                 return;
             }
 
-            log.debug("sending packet: " + bp);
+            log.debug("[LoginServer] sending packet: " + bp);
 
             sendMsgQueue.addLast(bp);
             enableWriteInterest();
@@ -202,7 +203,7 @@ public class LoginServerConnection extends AConnection {
                 return;
             }
 
-            log.debug("sending packet: " + closePacket + " and closing connection after that.");
+            log.debug("[LoginServer] sending packet: " + closePacket + " and closing connection after that.");
 
             pendingClose = true;
             isForcedClosing = forced;

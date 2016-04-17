@@ -16,18 +16,26 @@
  */
 package com.aionemu.gameserver.services.rift;
 
+import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.configs.main.CustomConfig;
+import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.rift.RiftLocation;
 import com.aionemu.gameserver.services.RiftService;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author Source
+ * @modified CoolyT
  */
 public class RiftOpenRunnable implements Runnable {
 
-    private final int worldId;
+	private static final Logger log = LoggerFactory.getLogger(RiftOpenRunnable.class);
+	private final int worldId;
     private final boolean guards;
 
     public RiftOpenRunnable(int worldId, boolean guards) {
@@ -38,12 +46,46 @@ public class RiftOpenRunnable implements Runnable {
     @Override
     public void run() {
         Map<Integer, RiftLocation> locations = RiftService.getInstance().getRiftLocations();
-        for (RiftLocation loc : locations.values()) {
-            if (loc.getWorldId() == worldId) {
-                RiftService.getInstance().openRifts(loc, guards);
+        String mapName = DataManager.WORLD_MAPS_DATA.getTemplate(worldId).getName();
+        RiftStatistics riftStat = new RiftStatistics();
+        RiftStatistics vortexStat = new RiftStatistics();
+        riftStat.setWorldMap(worldId);
+        vortexStat.setWorldMap(worldId);
+        
+        for (RiftLocation loc : locations.values()) 
+        {
+            if (loc.getWorldId() == worldId) 
+            {
+            	RiftEnum rift = RiftEnum.getRift(loc.getId());  
+               	boolean spawn = Rnd.chance(CustomConfig.RIFT_SPAWNCHANCE);
+               	
+                
+               	if (!spawn && !rift.isVortex())
+                	continue;
+                
+            	RiftStatistics stat = RiftService.getInstance().openRifts(loc, guards);
+                if (stat.isSpawned)
+                {
+                	if (stat.isVortex)
+                	{
+                		vortexStat.addSpawnedNpcs(stat.getSpawnedNpcs());
+                        vortexStat.addSpawnedRifts(stat.getSpawnedRifts());
+                	}
+                	else
+                	{
+                    	riftStat.addSpawnedNpcs(stat.getSpawnedNpcs());
+                        riftStat.addSpawnedRifts(stat.getSpawnedRifts());
+                	}
+                }
             }
         }
 
+        if (vortexStat.getSpawnedRifts() > 0)
+        	log.info("[VortexService] Spawned "+vortexStat.spawnedRifts + " Vortex "+(vortexStat.getSpawnedNpcs() > 0 ? "with "+vortexStat.getSpawnedNpcs()+" Guard Npcs" : "")+" in Map: "+ mapName + " (id:"+worldId+")");
+        
+        if (riftStat.getSpawnedRifts() > 0)
+        	log.info("[RiftService] Spawned "+riftStat.spawnedRifts + (riftStat.getSpawnedRifts() == 1 ? "Rift" : "Rifts")+(riftStat.getSpawnedNpcs() > 0 ? "with "+riftStat.getSpawnedNpcs()+" Guard Npcs" : "")+" in Map: "+ mapName + " (id:"+worldId+")");        
+        
         // Scheduled rifts close
         ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
@@ -53,5 +95,7 @@ public class RiftOpenRunnable implements Runnable {
         }, RiftService.getInstance().getDuration() * 3540 * 1000);
         // Broadcast rift spawn on map
         RiftInformer.sendRiftsInfo(worldId);
+        
+        
     }
 }

@@ -55,7 +55,7 @@ public class AbyssRankUpdateService {
             performUpdate();
         }
 
-        log.info("Starting ranking update task based on cron expression: " + RankingConfig.TOP_RANKING_UPDATE_RULE);
+        log.info("[AbyssRankUpdateService] Starting ranking update task based on cron expression: " + RankingConfig.TOP_RANKING_UPDATE_RULE);
         CronService.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
@@ -68,7 +68,7 @@ public class AbyssRankUpdateService {
      * Perform update of all ranks
      */
     public void performUpdate() {
-        log.info("AbyssRankUpdateService: executing rank update");
+        log.info("[AbyssRankUpdateService] executing rank update");
         long startTime = System.currentTimeMillis();
 
         World.getInstance().doOnAllPlayers(new Visitor<Player>() {
@@ -82,7 +82,7 @@ public class AbyssRankUpdateService {
         updateLimitedRanks();
         updateLimitedGpRanks();
         AbyssRankingCache.getInstance().reloadRankings();
-        log.info("AbyssRankUpdateService: execution time: " + (System.currentTimeMillis() - startTime) / 1000);
+        log.info("[AbyssRankUpdateService] execution time: " + (System.currentTimeMillis() - startTime) / 1000);
     }
 
     /**

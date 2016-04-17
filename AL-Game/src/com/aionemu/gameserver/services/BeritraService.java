@@ -96,12 +96,11 @@ public class BeritraService {
 		if (!BeritraConfig.BERITRA_ENABLED) {
 			beritra = Collections.emptyMap();
 		} else {
-			log.info("Loading Beritra Invasions...");
 			beritra = DataManager.BERITRA_DATA.getBeritraLocations();
 			for (BeritraLocation loc: getBeritraLocations().values()) {
 				spawn(loc, BeritraStateType.PEACE);
 			}
-			log.info("Loaded " + beritra.size() + " Beritra Invasions.");
+			log.info("[BeritaService] Loaded " + beritra.size() + " Beritra Invasions.");
 			CronService.getInstance().schedule(new Runnable() {
 				@Override
 				public void run() {

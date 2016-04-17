@@ -141,7 +141,7 @@ public final class DataManager {
     }
 
     private DataManager() {
-        log.info("Loading Static Data...");
+        //log.info("Loading Static Data...");
         this.loader = XmlDataLoader.getInstance();
 
         long start = System.currentTimeMillis();
@@ -251,7 +251,7 @@ public final class DataManager {
 
         String timeMsg = seconds > 0 ? seconds + " seconds" : time + " miliseconds";
 
-        log.info("##### [Static Data loaded in: " + timeMsg + "] #####");
+        log.info("#### StaticData loaded in " + timeMsg + ". ####");
     }
 
     @SuppressWarnings("synthetic-access")

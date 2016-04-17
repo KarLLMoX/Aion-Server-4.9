@@ -44,11 +44,11 @@ public class DebugService {
                 analyzeWorldPlayers();
             }
         }, ANALYZE_PLAYERS_INTERVAL, ANALYZE_PLAYERS_INTERVAL);
-        log.info("DebugService started. Analyze iterval: " + ANALYZE_PLAYERS_INTERVAL);
+        log.info("[DebugService] started... Analyze iterval: every " + (ANALYZE_PLAYERS_INTERVAL/1000)/60+" minutes.");
     }
 
     private void analyzeWorldPlayers() {
-        log.info("Starting analysis of world players at " + System.currentTimeMillis());
+        log.debug("[DebugService] Starting analysis of world players at " + System.currentTimeMillis());
 
         Iterator<Player> playersIterator = World.getInstance().getPlayersIterator();
         while (playersIterator.hasNext()) {

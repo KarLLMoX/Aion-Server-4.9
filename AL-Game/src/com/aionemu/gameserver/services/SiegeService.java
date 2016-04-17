@@ -35,6 +35,7 @@ import org.slf4j.LoggerFactory;
 
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.services.CronService;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.SiegeConfig;
 import com.aionemu.gameserver.configs.schedule.SiegeSchedule;
 import com.aionemu.gameserver.dao.SiegeDAO;
@@ -145,10 +146,9 @@ public class SiegeService {
      */
     public void initSiegeLocations() {
         if (SiegeConfig.SIEGE_ENABLED) {
-            log.info("Loading Siege Locations...");
 
             if (siegeSchedule != null) {
-                log.error("SiegeService should not be initialized two times!");
+                log.error("[SiegeService] SiegeService should not be initialized two times!");
                 return;
             }
 
@@ -158,7 +158,7 @@ public class SiegeService {
             outposts = DataManager.SIEGE_LOCATION_DATA.getOutpost();
             locations = DataManager.SIEGE_LOCATION_DATA.getSiegeLocations();
             DAOManager.getDAO(SiegeDAO.class).loadSiegeLocations(locations);
-            log.info("Loaded " + locations.size() + " siege locations");
+            log.info("[SiegeService] Loaded " + locations.size() + " siege locations");
         } else {
             artifacts = Collections.emptyMap();
             fortresses = Collections.emptyMap();
@@ -173,8 +173,9 @@ public class SiegeService {
         if (!SiegeConfig.SIEGE_ENABLED) {
             return;
         }
-        log.info("Init Sieges...");
-
+        
+        GameServer.log.info("[SiegeService] started ...");
+        
         // despawn all NPCs spawned by spawn engine.
         // Siege spawns should be controlled by siege service
         for (Integer i : getSiegeLocations().keySet()) {
@@ -205,7 +206,7 @@ public class SiegeService {
         for (final SiegeSchedule.Fortress f : siegeSchedule.getFortressesList()) {
             for (String siegeTime : f.getSiegeTimes()) {
                 CronService.getInstance().schedule(new SiegeStartRunnable(f.getId()), siegeTime);
-                log.debug("Scheduled siege of fortressID " + f.getId() + " based on cron expression: " + siegeTime);
+                log.debug("[SiegeService] Scheduled siege of fortressID " + f.getId() + " based on cron expression: " + siegeTime);
             }
         }
 
@@ -225,10 +226,10 @@ public class SiegeService {
         // Start siege of artifacts
         for (ArtifactLocation artifact : artifacts.values()) {
             if (artifact.isStandAlone()) {
-                log.debug("Starting siege of artifact #" + artifact.getLocationId());
+                log.debug("[SiegeService] Starting siege of artifact #" + artifact.getLocationId());
                 startSiege(artifact.getLocationId());
             } else {
-                log.debug("Artifact #" + artifact.getLocationId() + " siege was not started, it belongs to fortress");
+                log.debug("[SiegeService] Artifact #" + artifact.getLocationId() + " siege was not started, it belongs to fortress");
             }
         }
 
@@ -257,7 +258,7 @@ public class SiegeService {
                 });
             }
         }, SIEGE_LOCATION_STATUS_BROADCAST_SCHEDULE);
-        log.debug("Broadcasting Siege Location status based on expression: " + SIEGE_LOCATION_STATUS_BROADCAST_SCHEDULE);
+        log.debug("[SiegeService] Broadcasting Siege Location status based on expression: " + SIEGE_LOCATION_STATUS_BROADCAST_SCHEDULE);
     }
 
     public void checkSiegeStart(final int locationId) {
@@ -265,13 +266,13 @@ public class SiegeService {
     }
 
     public void startSiege(final int siegeLocationId) {
-        log.debug("Starting siege of siege location: " + siegeLocationId);
+    	log.debug("[SiegeService] Starting siege of siege location: " + siegeLocationId);
 
         // Siege should not be started two times. Never.
         Siege<?> siege;
         synchronized (this) {
             if (activeSieges.containsKey(siegeLocationId)) {
-                log.error("Attempt to start siege twice for siege location: " + siegeLocationId);
+                log.error("[SiegeService] Attempt to start siege twice for siege location: " + siegeLocationId);
                 return;
             }
             siege = newSiege(siegeLocationId);
@@ -296,13 +297,13 @@ public class SiegeService {
     }
 
     public void stopSiege(int siegeLocationId) {
-        log.debug("Stopping siege of siege location: " + siegeLocationId);
+        log.debug("[SiegeService] Stopping siege of siege location: " + siegeLocationId);
 
         // Just a check here...
         // If fortresses was captured in 99% the siege timer will return here
         // without concurrent race
         if (!isSiegeInProgress(siegeLocationId)) {
-            log.debug("Siege of siege location " + siegeLocationId + " is not in progress, it was captured earlier?");
+            log.debug("[SiegeService] Siege of siege location " + siegeLocationId + " is not in progress, it was captured earlier?");
             return;
         }
 
@@ -508,7 +509,7 @@ public class SiegeService {
         } else if (artifacts.containsKey(siegeLocationId)) {
             return new ArtifactSiege(artifacts.get(siegeLocationId));
         } else {
-            throw new SiegeException("Unknown siege handler for siege location: " + siegeLocationId);
+            throw new SiegeException("[SiegeService] Unknown siege handler for siege location: " + siegeLocationId);
         }
     }
 

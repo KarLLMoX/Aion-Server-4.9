@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.services.abyss;
 
 import com.aionemu.commons.database.dao.DAOManager;
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.RankingConfig;
 import com.aionemu.gameserver.dao.AbyssRankDAO;
 import com.aionemu.gameserver.model.AbyssRankingResult;
@@ -47,7 +48,7 @@ public class AbyssRankingCache {
     private final FastMap<Race, SM_ABYSS_RANKING_LEGIONS> legions = new FastMap<Race, SM_ABYSS_RANKING_LEGIONS>();
 
     public void reloadRankings() {
-        log.info("Updating abyss ranking cache");
+        GameServer.log.info("[AbyssRankingCache] Updating abyss ranking cache");
         this.lastUpdate = (int) (System.currentTimeMillis() / 1000);
         getDAO().updateRankList(RankingConfig.TOP_RANKING_MAX_OFFLINE_DAYS);
 
