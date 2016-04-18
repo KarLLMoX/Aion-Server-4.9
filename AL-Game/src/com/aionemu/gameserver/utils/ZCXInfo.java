@@ -60,14 +60,11 @@ public class ZCXInfo {
         System.out.println("");
         System.out.println("######## This is an AionGerman-Core - based on an AionLightning Source ########");
         System.out.println("");
-        Util.printSection("");
-        //System.out.println("==================================================");
+        System.out.println("");
         System.out.println("\t\t\tThanks to all who helped this project!");
         System.out.println("\t\t\tMajor Patch: " + getVersion());
         System.out.println("\t\t\tMinor Patch: " + getMinor());
         System.out.println("\t\t\tCopyright: " + getCopyright());
-        Util.printSection("");
-        //System.out.println("==================================================");
         System.out.println("");
     }
 
