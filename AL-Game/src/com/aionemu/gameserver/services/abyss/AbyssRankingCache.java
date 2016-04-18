@@ -29,8 +29,6 @@ import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import javolution.util.FastMap;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,7 +40,6 @@ import java.util.Map;
  */
 public class AbyssRankingCache {
 
-    private static final Logger log = LoggerFactory.getLogger(AbyssRankingCache.class);
     private int lastUpdate;
     private final FastMap<Race, List<SM_ABYSS_RANKING_PLAYERS>> players = new FastMap<Race, List<SM_ABYSS_RANKING_PLAYERS>>();
     private final FastMap<Race, SM_ABYSS_RANKING_LEGIONS> legions = new FastMap<Race, SM_ABYSS_RANKING_LEGIONS>();

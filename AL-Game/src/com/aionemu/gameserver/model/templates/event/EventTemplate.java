@@ -33,8 +33,6 @@ import com.aionemu.gameserver.utils.gametime.DateTimeUtil;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import org.joda.time.DateTime;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -50,7 +48,6 @@ import java.util.concurrent.Future;
 @XmlType(name = "EventTemplate")
 public class EventTemplate {
 
-    private static Logger log = LoggerFactory.getLogger(EventTemplate.class);
     @XmlElement(name = "event_drops", required = false)
     protected EventDrops eventDrops;
     @XmlElement(name = "quests", required = false)

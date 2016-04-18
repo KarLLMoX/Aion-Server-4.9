@@ -33,8 +33,6 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
 import javolution.util.FastList;
 import javolution.util.FastMap;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Source
@@ -48,7 +46,6 @@ public class SerialKillerService {
     private int refresh = CustomConfig.SERIALKILLER_REFRESH;
     private int levelDiff = CustomConfig.SERIALKILLER_LEVEL_DIFF;
     private SerialKillerDebuff debuff;
-    private static final Logger log = LoggerFactory.getLogger(SerialKillerService.class);
 
     public enum WorldType {
 

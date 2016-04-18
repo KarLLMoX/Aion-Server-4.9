@@ -34,7 +34,6 @@ import java.io.IOException;
  */
 public class AdminService {
 
-    private final Logger log = LoggerFactory.getLogger(AdminService.class);
     private static final Logger itemLog = LoggerFactory.getLogger("GMITEMRESTRICTION");
     private FastList<Integer> list;
     private static AdminService instance = new AdminService();

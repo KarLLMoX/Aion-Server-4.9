@@ -23,7 +23,6 @@ import com.aionemu.gameserver.model.team.legion.Legion;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.stats.KiskStatsTemplate;
-import com.aionemu.gameserver.model.templates.zone.ZoneType;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.SerialKillerService;
@@ -81,7 +80,7 @@ public class Kisk extends SummonedObject<Player> {
      */
     @Override
     public boolean isEnemyFrom(Player player) {
-        int worldId = getPosition().getMapId();
+        // int worldId = getPosition().getMapId();
         // if (worldId == 600020000 || worldId == 600030000) {
             // if (!isInsideZoneType(ZoneType.PVP)) {
                 // return false;
