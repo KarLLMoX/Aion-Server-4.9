@@ -146,6 +146,7 @@ public class RiftService {
             RiftSchedule schedule = RiftSchedule.load();
             for (RiftSchedule.Rift rift : schedule.getRiftsList()) {
                 for (OpenRift open : rift.getRift()) {
+                	log.debug("[RiftService] Sheduling rift by cron : "+open.getSchedule());
                     CronService.getInstance().schedule(new RiftOpenRunnable(rift.getWorldId(), open.spawnGuards()), open.getSchedule());
                 }
             }
