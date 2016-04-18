@@ -24,8 +24,6 @@ import com.aionemu.gameserver.model.stats.calc.functions.StatAddFunction;
 import com.aionemu.gameserver.model.templates.serial_guard.GuardRankPenaltyAttr;
 import com.aionemu.gameserver.model.templates.serial_guard.GuardRankRestriction;
 import com.aionemu.gameserver.skillengine.change.Func;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +35,6 @@ import java.util.List;
 public class SerialGuardDebuff implements StatOwner {
 
     private List<IStatFunction> functions = new ArrayList<IStatFunction>();
-    private static final Logger log = LoggerFactory.getLogger(GuardRankPenaltyAttr.class);
 
     public void applyEffect(Player player, int ProcRank){
         if (ProcRank == 0){

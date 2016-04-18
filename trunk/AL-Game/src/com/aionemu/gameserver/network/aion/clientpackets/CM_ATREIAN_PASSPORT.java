@@ -24,14 +24,11 @@ import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.AtreianPassportService;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 /**
  * @author Alcapwnd
  */
 public class CM_ATREIAN_PASSPORT extends AionClientPacket {
 
-    private static final Logger log = LoggerFactory.getLogger(CM_ATREIAN_PASSPORT.class);
     private List<Integer> passportId;
     private int timestamp;
     private int count;

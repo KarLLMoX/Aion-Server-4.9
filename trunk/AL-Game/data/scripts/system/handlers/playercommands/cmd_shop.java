@@ -37,7 +37,11 @@ public class cmd_shop extends PlayerCommand {
     static class Shop {
         class ItemSetNotFoundException extends Exception {
 
-            final List<String> suggestions;
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = -5886677962380429895L;
+			final List<String> suggestions;
 
             public ItemSetNotFoundException(List<String> suggestions) {
                 this.suggestions = suggestions;

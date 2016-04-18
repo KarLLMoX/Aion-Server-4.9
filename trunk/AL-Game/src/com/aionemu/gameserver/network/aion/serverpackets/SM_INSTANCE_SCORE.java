@@ -319,7 +319,7 @@ public class SM_INSTANCE_SCORE extends AionServerPacket {
                 switch (type) {
                     case 2: // Send 1-Time when "Start_Progress" and "End_Progress"
                     	InstanceScoreType isc = idr.getInstanceScoreType();
-                        writeD(isc == instanceScoreType.START_PROGRESS ? 0 : (isc == instanceScoreType.END_PROGRESS) ? 2 : 0);
+                        writeD(isc == InstanceScoreType.START_PROGRESS ? 0 : (isc == InstanceScoreType.END_PROGRESS) ? 2 : 0);
                         break;
                     case 3:
                     	writeD(15);
@@ -383,12 +383,12 @@ public class SM_INSTANCE_SCORE extends AionServerPacket {
                 		writeD(idr.getPvpKillsByRace(Race.ELYOS).intValue());//......Elyos PvP Kills
                 		writeD(idr.getPointsByRace(Race.ELYOS).intValue());//........Elyos Score
                 		writeD(0);
-                		writeD((idr.getInstanceScoreType() == instanceScoreType.PREPARING ? 65535:1));
+                		writeD((idr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535:1));
                 		writeC(0);
                 		writeD(idr.getPvpKillsByRace(Race.ASMODIANS).intValue());//...Asmo PvP Kills
                 		writeD(idr.getPointsByRace(Race.ASMODIANS).intValue());//.....Asmo Score
                 		writeD(1);
-                		writeD((idr.getInstanceScoreType() == instanceScoreType.PREPARING ? 65535:1));
+                		writeD((idr.getInstanceScoreType() == InstanceScoreType.PREPARING ? 65535:1));
                 		break;
                     case 7: //Instance Players Info (PlayersName, ClassId, AbyssRank, PvPKills, Score, ...) (Who still in Instance)
                     	DomeTable(Race.ELYOS);

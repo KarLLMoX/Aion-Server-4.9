@@ -29,8 +29,6 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.WorldMapInstance;
 import com.aionemu.gameserver.world.knownlist.Visitor;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
@@ -40,7 +38,6 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class InstanceRiftSpawnManager {
 
-    private static final Logger log = LoggerFactory.getLogger(InstanceRiftSpawnManager.class);
     private static final ConcurrentLinkedQueue<VisibleObject> rifts = new ConcurrentLinkedQueue<VisibleObject>();
     private static final int RIFT_RESPAWN_DELAY = 3600;    // 1 hour
     private static final int RIFT_LIFETIME = 3500;    // 1 hour

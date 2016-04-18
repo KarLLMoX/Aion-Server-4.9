@@ -55,7 +55,7 @@ public class Appearance extends AdminCommand {
             return;
         }
         PlayersAppearanceData appData = DataManager.PLAYER_APPEARANCE_DATA;
-        FastList<PlayerApp> apps = appData.getApp();
+        FastList<PlayerApp> apps = PlayersAppearanceData.getApp();
         VisibleObject target = admin.getTarget();
         Player player;
 

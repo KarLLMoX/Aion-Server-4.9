@@ -28,7 +28,6 @@ import com.aionemu.gameserver.controllers.attack.PlayerAggroList;
 import com.aionemu.gameserver.controllers.effect.PlayerEffectController;
 import com.aionemu.gameserver.controllers.movement.PlayerMoveController;
 import com.aionemu.gameserver.controllers.observer.ActionObserver;
-import com.aionemu.gameserver.dao.LegionDAO;
 import com.aionemu.gameserver.dao.PlayerDAO;
 import com.aionemu.gameserver.dao.PlayerVarsDAO;
 import com.aionemu.gameserver.dao.PlayerWorldBanDAO;
@@ -89,7 +88,6 @@ import com.aionemu.gameserver.model.templates.item.ItemUseLimits;
 import com.aionemu.gameserver.model.templates.ride.RideInfo;
 import com.aionemu.gameserver.model.templates.stats.PlayerStatsTemplate;
 import com.aionemu.gameserver.model.templates.windstreams.WindstreamPath;
-import com.aionemu.gameserver.model.templates.zone.ZoneType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
@@ -1259,7 +1257,7 @@ public class Player extends Creature {
     }
 
     private boolean canPvP(Player enemy) {
-        int worldId = enemy.getWorldId();
+        // int worldId = enemy.getWorldId();
         if (!enemy.getRace().equals(getRace())) {
             if (World.getInstance().getWorldMap(getWorldId()).isPvpAllowed()) {
                 return (!this.isInDisablePvPZone() && !enemy.isInDisablePvPZone());

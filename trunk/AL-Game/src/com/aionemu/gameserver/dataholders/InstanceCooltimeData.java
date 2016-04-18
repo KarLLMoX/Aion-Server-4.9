@@ -17,7 +17,7 @@
 package com.aionemu.gameserver.dataholders;
 
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.gameobjects.player.PortalCooldownItem;
+//import com.aionemu.gameserver.model.gameobjects.player.PortalCooldownItem; TODO?
 import com.aionemu.gameserver.model.templates.InstanceCooltime;
 import javolution.util.FastMap;
 import org.joda.time.DateTime;
