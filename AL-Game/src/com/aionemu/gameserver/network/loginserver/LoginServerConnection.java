@@ -81,7 +81,8 @@ public class LoginServerConnection extends AConnection {
         this.lsPacketHandler = lsPacketHandlerFactory.getPacketHandler();
 
         state = State.CONNECTED;
-        GameServer.log.info("[LoginServer] Connected to LoginServer!");
+        GameServer.log.info("Connected to LoginServer!");
+        System.out.println("");
     }
 
     @Override
