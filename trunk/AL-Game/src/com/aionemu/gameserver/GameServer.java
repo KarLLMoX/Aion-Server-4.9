@@ -310,6 +310,8 @@ public class GameServer {
 		Util.printSection(" ### System ### ");
         System.gc();
         AEInfos.printAllInfos();
+		System.out.println("");
+		log.info("[GameServer] GameServer started in " + (System.currentTimeMillis() - start) / 1000 + " seconds.");			
 
         Util.printSection(" ### Credits ### ");
         try {
@@ -318,7 +320,6 @@ public class GameServer {
             e.printStackTrace();
         }
 
-        log.info("[GameServer] GameServer started in " + (System.currentTimeMillis() - start) / 1000 + " seconds.");			
         gs.startServers();
         Runtime.getRuntime().addShutdownHook(ShutdownHook.getInstance());
 
