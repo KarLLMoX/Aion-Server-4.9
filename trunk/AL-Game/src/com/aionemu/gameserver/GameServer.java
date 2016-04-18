@@ -334,7 +334,7 @@ public class GameServer {
     private void startServers() {
 		Util.printSection(" ### Network ### ");
         NioServer nioServer = new NioServer(NetworkConfig.NIO_READ_WRITE_THREADS, new ServerCfg(NetworkConfig.GAME_BIND_ADDRESS, NetworkConfig.GAME_PORT, "Game Connections", new GameConnectionFactoryImpl()));
-        BannedMacManager.getInstance();
+		BannedMacManager.getInstance();
         LoginServer ls = LoginServer.getInstance();
         ChatServer cs = ChatServer.getInstance();
 
@@ -343,6 +343,7 @@ public class GameServer {
 
         // Nio must go first
         nioServer.connect();
+		System.out.println("");
         ls.connect();
 
         if (GSConfig.ENABLE_CHAT_SERVER) {

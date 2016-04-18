@@ -92,7 +92,7 @@ public class LoginServer {
         SocketChannel sc;
         for (; ; ) {
             loginServer = null;
-            log.info("[LoginServer] Connecting to LoginServer: " + NetworkConfig.LOGIN_ADDRESS);
+            log.info("Connecting to LoginServer: " + NetworkConfig.LOGIN_ADDRESS);
             try {
                 sc = SocketChannel.open(NetworkConfig.LOGIN_ADDRESS);
                 sc.configureBlocking(false);
@@ -107,7 +107,8 @@ public class LoginServer {
 
                 return loginServer;
             } catch (Exception e) {
-                log.info("[LoginServer] Cant connect to LoginServer: " + e.getMessage());
+                log.info("Cant connect to LoginServer: " + e.getMessage());
+                System.out.println("");
             }
             try {
                 /**
@@ -125,7 +126,7 @@ public class LoginServer {
      * reconnect to LoginServer.
      */
     public void loginServerDown() {
-        log.warn("[LoginServer] Connection with LoginServer lost...");
+        log.warn("Connection with LoginServer lost...");
 
         loginServer = null;
         synchronized (this) {

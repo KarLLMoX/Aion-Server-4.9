@@ -77,6 +77,7 @@ public class ChatServer {
                 return chatServer;
             } catch (Exception e) {
                 log.info("Cant connect to ChatServer: " + e.getMessage());
+				System.out.println("");
             }
             try {
                 /**
