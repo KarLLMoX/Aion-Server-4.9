@@ -1,7 +1,7 @@
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for abyss_rank
+-- Table structure for `abyss_rank`
 -- ----------------------------
 DROP TABLE IF EXISTS `abyss_rank`;
 CREATE TABLE `abyss_rank` (
@@ -34,7 +34,7 @@ CREATE TABLE `abyss_rank` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for announcements
+-- Table structure for `announcements`
 -- ----------------------------
 DROP TABLE IF EXISTS `announcements`;
 CREATE TABLE `announcements` (
@@ -51,7 +51,7 @@ CREATE TABLE `announcements` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for blocks
+-- Table structure for `blocks`
 -- ----------------------------
 DROP TABLE IF EXISTS `blocks`;
 CREATE TABLE `blocks` (
@@ -69,7 +69,7 @@ CREATE TABLE `blocks` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for bookmark
+-- Table structure for `bookmark`
 -- ----------------------------
 DROP TABLE IF EXISTS `bookmark`;
 CREATE TABLE `bookmark` (
@@ -88,7 +88,7 @@ CREATE TABLE `bookmark` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for broker
+-- Table structure for `broker`
 -- ----------------------------
 DROP TABLE IF EXISTS `broker`;
 CREATE TABLE `broker` (
@@ -105,7 +105,7 @@ CREATE TABLE `broker` (
   `seller_id` int(11) NOT NULL,
   `is_sold` tinyint(1) NOT NULL,
   `is_settled` tinyint(1) NOT NULL,
-  `is_partsale` TINYINT(1) NOT NULL,
+  `is_partsale` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `seller_id` (`seller_id`),
   CONSTRAINT `broker_ibfk_1` FOREIGN KEY (`seller_id`) REFERENCES `players` (`id`) ON DELETE CASCADE
@@ -116,7 +116,7 @@ CREATE TABLE `broker` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for challenge_tasks
+-- Table structure for `challenge_tasks`
 -- ----------------------------
 DROP TABLE IF EXISTS `challenge_tasks`;
 CREATE TABLE `challenge_tasks` (
@@ -134,7 +134,7 @@ CREATE TABLE `challenge_tasks` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for craft_cooldowns
+-- Table structure for `craft_cooldowns`
 -- ----------------------------
 DROP TABLE IF EXISTS `craft_cooldowns`;
 CREATE TABLE `craft_cooldowns` (
@@ -150,12 +150,29 @@ CREATE TABLE `craft_cooldowns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for friends
+-- Table structure for `event_items`
+-- ----------------------------
+DROP TABLE IF EXISTS `event_items`;
+CREATE TABLE `event_items` (
+  `player_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `counts` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`player_id`,`item_id`),
+  CONSTRAINT `event_items_ibfk_1` FOREIGN KEY (`player_id`) REFERENCES `players` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of event_items
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `friends`
 -- ----------------------------
 DROP TABLE IF EXISTS `friends`;
 CREATE TABLE `friends` (
   `player` int(11) NOT NULL,
   `friend` int(11) NOT NULL,
+  `note` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`player`,`friend`),
   KEY `friend` (`friend`),
   CONSTRAINT `friends_ibfk_1` FOREIGN KEY (`player`) REFERENCES `players` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -167,7 +184,7 @@ CREATE TABLE `friends` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for guides
+-- Table structure for `guides`
 -- ----------------------------
 DROP TABLE IF EXISTS `guides`;
 CREATE TABLE `guides` (
@@ -184,7 +201,7 @@ CREATE TABLE `guides` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for guild_quests
+-- Table structure for `guild_quests`
 -- ----------------------------
 DROP TABLE IF EXISTS `guild_quests`;
 CREATE TABLE `guild_quests` (
@@ -202,7 +219,7 @@ CREATE TABLE `guild_quests` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for houses
+-- Table structure for `houses`
 -- ----------------------------
 DROP TABLE IF EXISTS `houses`;
 CREATE TABLE `houses` (
@@ -227,7 +244,7 @@ CREATE TABLE `houses` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for house_bids
+-- Table structure for `house_bids`
 -- ----------------------------
 DROP TABLE IF EXISTS `house_bids`;
 CREATE TABLE `house_bids` (
@@ -245,7 +262,7 @@ CREATE TABLE `house_bids` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for house_object_cooldowns
+-- Table structure for `house_object_cooldowns`
 -- ----------------------------
 DROP TABLE IF EXISTS `house_object_cooldowns`;
 CREATE TABLE `house_object_cooldowns` (
@@ -260,7 +277,7 @@ CREATE TABLE `house_object_cooldowns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for house_scripts
+-- Table structure for `house_scripts`
 -- ----------------------------
 DROP TABLE IF EXISTS `house_scripts`;
 CREATE TABLE `house_scripts` (
@@ -276,7 +293,7 @@ CREATE TABLE `house_scripts` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for ingameshop
+-- Table structure for `ingameshop`
 -- ----------------------------
 DROP TABLE IF EXISTS `ingameshop`;
 CREATE TABLE `ingameshop` (
@@ -300,7 +317,7 @@ CREATE TABLE `ingameshop` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for ingameshop_log
+-- Table structure for `ingameshop_log`
 -- ----------------------------
 DROP TABLE IF EXISTS `ingameshop_log`;
 CREATE TABLE `ingameshop_log` (
@@ -321,7 +338,7 @@ CREATE TABLE `ingameshop_log` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for inventory
+-- Table structure for `inventory`
 -- ----------------------------
 DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE `inventory` (
@@ -361,7 +378,7 @@ CREATE TABLE `inventory` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for item_cooldowns
+-- Table structure for `item_cooldowns`
 -- ----------------------------
 DROP TABLE IF EXISTS `item_cooldowns`;
 CREATE TABLE `item_cooldowns` (
@@ -378,7 +395,7 @@ CREATE TABLE `item_cooldowns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for item_stones
+-- Table structure for `item_stones`
 -- ----------------------------
 DROP TABLE IF EXISTS `item_stones`;
 CREATE TABLE `item_stones` (
@@ -397,7 +414,7 @@ CREATE TABLE `item_stones` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for legions
+-- Table structure for `legions`
 -- ----------------------------
 DROP TABLE IF EXISTS `legions`;
 CREATE TABLE `legions` (
@@ -414,6 +431,9 @@ CREATE TABLE `legions` (
   `rank_pos` int(11) NOT NULL DEFAULT '0',
   `old_rank_pos` int(11) NOT NULL DEFAULT '0',
   `world_owner` int(11) NOT NULL DEFAULT '0',
+  `description` varchar(255) NOT NULL DEFAULT '',
+  `joinType` int(1) NOT NULL DEFAULT '0',
+  `minJoinLevel` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_unique` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -423,7 +443,7 @@ CREATE TABLE `legions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for legion_announcement_list
+-- Table structure for `legion_announcement_list`
 -- ----------------------------
 DROP TABLE IF EXISTS `legion_announcement_list`;
 CREATE TABLE `legion_announcement_list` (
@@ -439,7 +459,7 @@ CREATE TABLE `legion_announcement_list` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for legion_emblems
+-- Table structure for `legion_emblems`
 -- ----------------------------
 DROP TABLE IF EXISTS `legion_emblems`;
 CREATE TABLE `legion_emblems` (
@@ -459,7 +479,7 @@ CREATE TABLE `legion_emblems` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for legion_history
+-- Table structure for `legion_history`
 -- ----------------------------
 DROP TABLE IF EXISTS `legion_history`;
 CREATE TABLE `legion_history` (
@@ -480,7 +500,28 @@ CREATE TABLE `legion_history` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for legion_members
+-- Table structure for `legion_join_requests`
+-- ----------------------------
+DROP TABLE IF EXISTS `legion_join_requests`;
+CREATE TABLE `legion_join_requests` (
+  `legionId` int(11) NOT NULL DEFAULT '0',
+  `playerId` int(11) NOT NULL DEFAULT '0',
+  `playerName` varchar(64) NOT NULL DEFAULT '',
+  `playerClassId` int(2) NOT NULL DEFAULT '0',
+  `playerRaceId` int(2) NOT NULL DEFAULT '0',
+  `playerLevel` int(4) NOT NULL DEFAULT '0',
+  `playerGenderId` int(2) NOT NULL DEFAULT '0',
+  `joinRequestMsg` varchar(40) NOT NULL DEFAULT '',
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`legionId`,`playerId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of legion_join_requests
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `legion_members`
 -- ----------------------------
 DROP TABLE IF EXISTS `legion_members`;
 CREATE TABLE `legion_members` (
@@ -502,14 +543,14 @@ CREATE TABLE `legion_members` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for mail
+-- Table structure for `mail`
 -- ----------------------------
 DROP TABLE IF EXISTS `mail`;
 CREATE TABLE `mail` (
   `mail_unique_id` int(11) NOT NULL,
   `mail_recipient_id` int(11) NOT NULL,
   `sender_name` varchar(26) NOT NULL,
-  `mail_title` varchar(26) NOT NULL,
+  `mail_title` varchar(32) NOT NULL,
   `mail_message` varchar(1000) NOT NULL,
   `unread` tinyint(4) NOT NULL DEFAULT '1',
   `attached_item_id` int(11) NOT NULL,
@@ -526,7 +567,7 @@ CREATE TABLE `mail` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for old_names
+-- Table structure for `old_names`
 -- ----------------------------
 DROP TABLE IF EXISTS `old_names`;
 CREATE TABLE `old_names` (
@@ -542,7 +583,7 @@ CREATE TABLE `old_names` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for petitions
+-- Table structure for `petitions`
 -- ----------------------------
 DROP TABLE IF EXISTS `petitions`;
 CREATE TABLE `petitions` (
@@ -562,7 +603,7 @@ CREATE TABLE `petitions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for players
+-- Table structure for `players`
 -- ----------------------------
 DROP TABLE IF EXISTS `players`;
 CREATE TABLE `players` (
@@ -607,6 +648,8 @@ CREATE TABLE `players` (
   `stamps` int(11) NOT NULL DEFAULT '0',
   `last_stamp` timestamp NULL DEFAULT NULL,
   `rewarded_pass` int(1) NOT NULL DEFAULT '0',
+  `joinRequestLegionId` int(11) NOT NULL DEFAULT '0',
+  `joinRequestState` enum('NONE','DENIED','ACCEPTED') NOT NULL DEFAULT 'NONE',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_unique` (`name`),
   KEY `account_id` (`account_id`)
@@ -617,7 +660,7 @@ CREATE TABLE `players` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_appearance
+-- Table structure for `player_appearance`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_appearance`;
 CREATE TABLE `player_appearance` (
@@ -684,7 +727,7 @@ CREATE TABLE `player_appearance` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_bind_point
+-- Table structure for `player_bind_point`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_bind_point`;
 CREATE TABLE `player_bind_point` (
@@ -703,7 +746,7 @@ CREATE TABLE `player_bind_point` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_cooldowns
+-- Table structure for `player_cooldowns`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_cooldowns`;
 CREATE TABLE `player_cooldowns` (
@@ -719,7 +762,7 @@ CREATE TABLE `player_cooldowns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_effects
+-- Table structure for `player_effects`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_effects`;
 CREATE TABLE `player_effects` (
@@ -737,7 +780,7 @@ CREATE TABLE `player_effects` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_emotions
+-- Table structure for `player_emotions`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_emotions`;
 CREATE TABLE `player_emotions` (
@@ -753,7 +796,7 @@ CREATE TABLE `player_emotions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_game_stats
+-- Table structure for `player_game_stats`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_game_stats`;
 CREATE TABLE `player_game_stats` (
@@ -790,7 +833,7 @@ CREATE TABLE `player_game_stats` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_life_stats
+-- Table structure for `player_life_stats`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_life_stats`;
 CREATE TABLE `player_life_stats` (
@@ -807,7 +850,7 @@ CREATE TABLE `player_life_stats` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_macrosses
+-- Table structure for `player_macrosses`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_macrosses`;
 CREATE TABLE `player_macrosses` (
@@ -823,7 +866,7 @@ CREATE TABLE `player_macrosses` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_motions
+-- Table structure for `player_motions`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_motions`;
 CREATE TABLE `player_motions` (
@@ -840,7 +883,7 @@ CREATE TABLE `player_motions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_npc_factions
+-- Table structure for `player_npc_factions`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_npc_factions`;
 CREATE TABLE `player_npc_factions` (
@@ -859,7 +902,7 @@ CREATE TABLE `player_npc_factions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_passkey
+-- Table structure for `player_passkey`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_passkey`;
 CREATE TABLE `player_passkey` (
@@ -873,16 +916,16 @@ CREATE TABLE `player_passkey` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_passports
+-- Table structure for `player_passports`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_passports`;
 CREATE TABLE `player_passports` (
-	`account_id`  int(11) NOT NULL ,
-	`passport_id`  int(11) NOT NULL ,
-	`stamps`  int(11) NOT NULL DEFAULT 0 ,
-	`last_stamp`  timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
-	`rewarded`  tinyint(1) NOT NULL DEFAULT 0 ,
-	UNIQUE INDEX `account_passport` USING BTREE (`account_id`, `passport_id`) 
+  `account_id` int(11) NOT NULL,
+  `passport_id` int(11) NOT NULL,
+  `stamps` int(11) NOT NULL DEFAULT '0',
+  `last_stamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `rewarded` tinyint(1) NOT NULL DEFAULT '0',
+  UNIQUE KEY `account_passport` (`account_id`,`passport_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -890,7 +933,7 @@ CREATE TABLE `player_passports` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_pets
+-- Table structure for `player_pets`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_pets`;
 CREATE TABLE `player_pets` (
@@ -918,7 +961,7 @@ CREATE TABLE `player_pets` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_punishments
+-- Table structure for `player_punishments`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_punishments`;
 CREATE TABLE `player_punishments` (
@@ -936,7 +979,7 @@ CREATE TABLE `player_punishments` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_quests
+-- Table structure for `player_quests`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_quests`;
 CREATE TABLE `player_quests` (
@@ -957,7 +1000,7 @@ CREATE TABLE `player_quests` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_recipes
+-- Table structure for `player_recipes`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_recipes`;
 CREATE TABLE `player_recipes` (
@@ -972,7 +1015,7 @@ CREATE TABLE `player_recipes` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_registered_items
+-- Table structure for `player_registered_items`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_registered_items`;
 CREATE TABLE `player_registered_items` (
@@ -999,7 +1042,7 @@ CREATE TABLE `player_registered_items` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_settings
+-- Table structure for `player_settings`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_settings`;
 CREATE TABLE `player_settings` (
@@ -1015,7 +1058,7 @@ CREATE TABLE `player_settings` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_skills
+-- Table structure for `player_skills`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_skills`;
 CREATE TABLE `player_skills` (
@@ -1031,7 +1074,7 @@ CREATE TABLE `player_skills` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_titles
+-- Table structure for `player_titles`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_titles`;
 CREATE TABLE `player_titles` (
@@ -1047,7 +1090,7 @@ CREATE TABLE `player_titles` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_vars
+-- Table structure for `player_vars`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_vars`;
 CREATE TABLE `player_vars` (
@@ -1064,7 +1107,7 @@ CREATE TABLE `player_vars` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for player_world_bans
+-- Table structure for `player_world_bans`
 -- ----------------------------
 DROP TABLE IF EXISTS `player_world_bans`;
 CREATE TABLE `player_world_bans` (
@@ -1081,7 +1124,7 @@ CREATE TABLE `player_world_bans` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for portal_cooldowns
+-- Table structure for `portal_cooldowns`
 -- ----------------------------
 DROP TABLE IF EXISTS `portal_cooldowns`;
 CREATE TABLE `portal_cooldowns` (
@@ -1098,7 +1141,7 @@ CREATE TABLE `portal_cooldowns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for server_variables
+-- Table structure for `server_variables`
 -- ----------------------------
 DROP TABLE IF EXISTS `server_variables`;
 CREATE TABLE `server_variables` (
@@ -1113,7 +1156,7 @@ CREATE TABLE `server_variables` (
 INSERT INTO `server_variables` VALUES ('time', '3341');
 
 -- ----------------------------
--- Table structure for siege_locations
+-- Table structure for `siege_locations`
 -- ----------------------------
 DROP TABLE IF EXISTS `siege_locations`;
 CREATE TABLE `siege_locations` (
@@ -1128,7 +1171,7 @@ CREATE TABLE `siege_locations` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for siege_spawns
+-- Table structure for `siege_spawns`
 -- ----------------------------
 DROP TABLE IF EXISTS `siege_spawns`;
 CREATE TABLE `siege_spawns` (
@@ -1145,7 +1188,7 @@ CREATE TABLE `siege_spawns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for skill_motions
+-- Table structure for `skill_motions`
 -- ----------------------------
 DROP TABLE IF EXISTS `skill_motions`;
 CREATE TABLE `skill_motions` (
@@ -1163,7 +1206,7 @@ CREATE TABLE `skill_motions` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for spawns
+-- Table structure for `spawns`
 -- ----------------------------
 DROP TABLE IF EXISTS `spawns`;
 CREATE TABLE `spawns` (
@@ -1191,7 +1234,7 @@ CREATE TABLE `spawns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for surveys
+-- Table structure for `surveys`
 -- ----------------------------
 DROP TABLE IF EXISTS `surveys`;
 CREATE TABLE `surveys` (
@@ -1213,7 +1256,7 @@ CREATE TABLE `surveys` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for tasks
+-- Table structure for `tasks`
 -- ----------------------------
 DROP TABLE IF EXISTS `tasks`;
 CREATE TABLE `tasks` (
@@ -1231,7 +1274,7 @@ CREATE TABLE `tasks` (
 INSERT INTO `tasks` VALUES ('1', 'RESTART', 'FIXED_IN_TIME', '04:20:00', '60 5 320');
 
 -- ----------------------------
--- Table structure for towns
+-- Table structure for `towns`
 -- ----------------------------
 DROP TABLE IF EXISTS `towns`;
 CREATE TABLE `towns` (
@@ -1248,7 +1291,7 @@ CREATE TABLE `towns` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for web_reward
+-- Table structure for `web_reward`
 -- ----------------------------
 DROP TABLE IF EXISTS `web_reward`;
 CREATE TABLE `web_reward` (
@@ -1269,7 +1312,7 @@ CREATE TABLE `web_reward` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for weddings
+-- Table structure for `weddings`
 -- ----------------------------
 DROP TABLE IF EXISTS `weddings`;
 CREATE TABLE `weddings` (
@@ -1288,7 +1331,7 @@ CREATE TABLE `weddings` (
 -- ----------------------------
 
 -- ----------------------------
--- View structure for pet_feed_data
+-- View structure for `pet_feed_data`
 -- ----------------------------
 DROP VIEW IF EXISTS `pet_feed_data`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER  VIEW `pet_feed_data` AS select `player_pets`.`player_id` AS `player_id`,`player_pets`.`pet_id` AS `pet_id`,`player_pets`.`name` AS `name`,`player_pets`.`hungry_level` AS `hungry_level`,(`player_pets`.`feed_progress` >> 24) AS `regular_count`,(((`player_pets`.`feed_progress` & 0xfffc00) >> 10) * 4) AS `feed_points`,((`player_pets`.`feed_progress` & 0x03f0) >> 4) AS `loved_count` from `player_pets` where (`player_pets`.`feed_progress` <> 0) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pet_feed_data` AS select `al_server_gs`.`player_pets`.`player_id` AS `player_id`,`al_server_gs`.`player_pets`.`pet_id` AS `pet_id`,`al_server_gs`.`player_pets`.`name` AS `name`,`al_server_gs`.`player_pets`.`hungry_level` AS `hungry_level`,(`al_server_gs`.`player_pets`.`feed_progress` >> 24) AS `regular_count`,(((`al_server_gs`.`player_pets`.`feed_progress` & 0xfffc00) >> 10) * 4) AS `feed_points`,((`al_server_gs`.`player_pets`.`feed_progress` & 0x03f0) >> 4) AS `loved_count` from `player_pets` where (`al_server_gs`.`player_pets`.`feed_progress` <> 0) ;
