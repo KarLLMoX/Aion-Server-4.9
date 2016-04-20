@@ -249,7 +249,7 @@ public class GoTo extends AdminCommand {
          * Abyss
          */        
 		else if (destination.equalsIgnoreCase("?reshanta")) {
-            PacketSendUtility.sendMessage(player, "Reshanta | Teminon | Primum | Tigraki | Nuage noir | Leibos | Eye of Reshanta | Divine Fortress");
+            PacketSendUtility.sendMessage(player, "Reshanta | Teminon | Primum | Tigraki | Magos | Tokanu | Leibos");
 		} else if (destination.equalsIgnoreCase("Reshanta")) {
             goTo(player, WorldMapType.RESHANTA.getId(), 951, 936, 1667);
         } else if (destination.equalsIgnoreCase("Teminon")) {
@@ -258,22 +258,12 @@ public class GoTo extends AdminCommand {
             goTo(player, WorldMapType.RESHANTA.getId(), 1078, 2839, 1636);
         } else if (destination.equalsIgnoreCase("Tigraki")) {
             goTo(player, WorldMapType.RESHANTA.getId(), 539, 1100, 2843);
-        } else if (destination.equalsIgnoreCase("Nuage noir") || destination.equalsIgnoreCase("Nuage")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 3429, 2439, 2765);
+        } else if (destination.equalsIgnoreCase("Magos")) {
+            goTo(player, WorldMapType.RESHANTA.getId(), 2393, 376, 2938);
+        } else if (destination.equalsIgnoreCase("Tokanu")) {
+            goTo(player, WorldMapType.RESHANTA.getId(), 1304, 3134, 3033);
         } else if (destination.equalsIgnoreCase("Leibos")) {
             goTo(player, WorldMapType.RESHANTA.getId(), 2136, 1943, 1597);
-        } else if (destination.equalsIgnoreCase("ORSL") || destination.equalsIgnoreCase("Ori sup Latesran")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 1596, 2952, 2943);
-        } else if (destination.equalsIgnoreCase("OCSL") || destination.equalsIgnoreCase("Occi sup Latesran")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 2054, 660, 2843);
-        } else if (destination.equalsIgnoreCase("ORIL") || destination.equalsIgnoreCase("Ori inf Latesran")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 1639, 2968, 1668);
-        } else if (destination.equalsIgnoreCase("OCIL") || destination.equalsIgnoreCase("Occi inf Latesran")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 2095, 679, 1567);
-        } else if (destination.equalsIgnoreCase("Eye of Reshanta") || destination.equalsIgnoreCase("Eye")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 1979, 2114, 2291);
-        } else if (destination.equalsIgnoreCase("Divine Fortress") || destination.equalsIgnoreCase("Divine") || destination.equalsIgnoreCase("1011")) {
-            goTo(player, WorldMapType.RESHANTA.getId(), 2130, 1925, 2322);
         }/**
          * Sieges
          */
