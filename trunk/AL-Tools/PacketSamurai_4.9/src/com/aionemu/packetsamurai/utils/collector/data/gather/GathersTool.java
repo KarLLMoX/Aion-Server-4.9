@@ -22,7 +22,6 @@ import java.util.Map;
 import javax.xml.bind.JAXBException;
 import com.aionemu.packetsamurai.PacketSamurai;
 import com.aionemu.packetsamurai.utils.collector.DataLoader;
-import com.aionemu.packetsamurai.utils.collector.data.conquestPortal.ConquestPortalData;
 import com.aionemu.packetsamurai.utils.collector.data.gather.GatherableData;
 import com.aionemu.packetsamurai.utils.collector.data.gather.GatherableTemplate;
 

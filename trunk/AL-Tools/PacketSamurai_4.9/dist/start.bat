@@ -1,3 +1,3 @@
 @echo off
-start javaw -Xms8096m -Xmx8096m -cp ./libs/*;packetsamurai.jar com.aionemu.packetsamurai.PacketSamurai
+start C:\java\jre1.8\bin\javaw -Xms8192m -Xmx8192m -cp ./libs/*;packetsamurai.jar com.aionemu.packetsamurai.PacketSamurai
 exit

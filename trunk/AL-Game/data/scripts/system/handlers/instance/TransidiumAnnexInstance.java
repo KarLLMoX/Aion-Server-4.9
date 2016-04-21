@@ -36,7 +36,6 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 @InstanceID(400030000)
 public class TransidiumAnnexInstance extends GeneralInstanceHandler {
 
-	private long startTime;
 	private Future<?> instanceTimer;
 	private Map<Integer, StaticDoor> doors;
 	protected boolean isInstanceDestroyed = false;
@@ -68,7 +67,7 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler {
 	
 	@Override
     public void onDie(Npc npc) {
-		Player player = npc.getAggroList().getMostPlayerDamage();
+		//Player player = npc.getAggroList().getMostPlayerDamage();
 		switch (npc.getObjectTemplate().getTemplateId()) {
 			case 277224: //Ahserion.
 				sendMsg("[Congratulation]: you finish <Transidium Annex>");
@@ -86,7 +85,6 @@ public class TransidiumAnnexInstance extends GeneralInstanceHandler {
 	public void onEnterInstance(final Player player) {
 		super.onInstanceCreate(instance);
 		if (instanceTimer == null) {
-			startTime = System.currentTimeMillis();
 			instanceTimer = ThreadPoolManager.getInstance().schedule(new Runnable() {
 				@Override
 				public void run() {

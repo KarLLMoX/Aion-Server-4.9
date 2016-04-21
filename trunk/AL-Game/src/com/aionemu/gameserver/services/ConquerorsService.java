@@ -52,7 +52,7 @@ public class ConquerorsService {
     private FastMap<Integer, Future<?>> pduration = new FastMap<Integer, Future<?>>();
     private FastMap<Integer, Future<?>> cduration = new FastMap<Integer, Future<?>>();
     // PlayerObjId , IsOnTheirMap , KillCount
-    private FastMap<Integer, FastMap<Boolean, Integer>> getCorrectKillCForMap = new FastMap<Integer, FastMap<Boolean, Integer>>();
+    //private FastMap<Integer, FastMap<Boolean, Integer>> getCorrectKillCForMap = new FastMap<Integer, FastMap<Boolean, Integer>>();
     private SerialGuardDebuff sGbuff;
     private SerialKillerDebuff sKbuff;
     private Future<?> pbuffLvl1; //Protectors Buffs
@@ -115,7 +115,7 @@ public class ConquerorsService {
     public boolean isOnTheirMap(Player player){
         if (ConquerorProtectorConfig.IGNORE_MAPS){
             String worldidsAsString = String.valueOf(player.getWorldId());
-            int worldId = Integer.parseInt(worldidsAsString);
+            //int worldId = Integer.parseInt(worldidsAsString);
             int type = worldidsAsString.charAt(1);
 
             if (!(type == 1 || type == 2)){

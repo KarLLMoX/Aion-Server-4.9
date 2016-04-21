@@ -28,7 +28,8 @@ import com.aionemu.gameserver.services.TradeService;
 public class CM_BUY_TRADE_IN_TRADE extends AionClientPacket {
 
     private int sellerObjId; //NPC Object Id
-    private int BuyMask; // v4.7.5.7 Maybe implemented at future
+    @SuppressWarnings("unused")
+	private int BuyMask; // v4.7.5.7 Maybe implemented at future
     private int itemId;
     private int BuyCount;
     

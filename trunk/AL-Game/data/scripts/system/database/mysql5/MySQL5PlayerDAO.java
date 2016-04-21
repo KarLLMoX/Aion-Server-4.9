@@ -35,6 +35,7 @@ import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.player.Mailbox;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
+import com.aionemu.gameserver.model.gameobjects.player.PlayerUpgradeArcade;
 import com.aionemu.gameserver.model.team.legion.LegionJoinRequestState;
 import com.aionemu.gameserver.world.MapRegion;
 import com.aionemu.gameserver.world.World;
@@ -137,7 +138,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
         try {
             con = DatabaseFactory.getConnection();
             PreparedStatement stmt = con
-                    .prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, quest_expands=?, npc_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=? WHERE id=?");
+                    .prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, quest_expands=?, npc_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=? WHERE id=?");
 
             log.debug("[DAO: MySQL5PlayerDAO] storing player " + player.getObjectId() + " " + player.getName());
             PlayerCommonData pcd = player.getCommonData();
@@ -184,7 +185,9 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             stmt.setTimestamp(34, pcd.getLastStamp());
             stmt.setInt(35, pcd.getJoinRequestLegionId());
             stmt.setString(36, pcd.getJoinRequestState().name());
-            stmt.setInt(37, player.getObjectId());
+            stmt.setInt(37, player.getUpgradeArcade().getFrenzyPoints());
+            stmt.setInt(38, player.getUpgradeArcade().getFrenzyCount());
+            stmt.setInt(39, player.getObjectId());
             stmt.execute();
             stmt.close();
         } catch (Exception e) {
@@ -361,6 +364,11 @@ public class MySQL5PlayerDAO extends PlayerDAO {
                 cd.setLastStamp(resultSet.getTimestamp("last_stamp"));
                 cd.setJoinRequestLegionId(resultSet.getInt("joinRequestLegionId"));
                 cd.setJoinRequestState(LegionJoinRequestState.valueOf(resultSet.getString("joinRequestState")));
+                
+                PlayerUpgradeArcade pua = new PlayerUpgradeArcade();
+                pua.setFrenzyPoints(resultSet.getInt("frenzy_points"));
+                pua.setFrenzyCount(resultSet.getInt("frenzy_count"));
+                cd.setUpgradeArcade(pua);
             } else {
                 log.info("Missing PlayerCommonData from db " + playerObjId);
             }

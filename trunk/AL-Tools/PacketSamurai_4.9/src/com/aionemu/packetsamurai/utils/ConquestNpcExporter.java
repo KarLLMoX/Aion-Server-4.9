@@ -46,7 +46,7 @@ import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnsTool;
 public class ConquestNpcExporter {
 	private FastList<DataPacket> packets;
 	private FastList<NpcSpawn> spawns;
-	private static String sessionName;
+
 	public static SpawnTemplates template;
 	private static FastMap<Integer, Stat> statMap = new FastMap<Integer,Stat>();
 	public static Long start = System.currentTimeMillis();
@@ -57,17 +57,13 @@ public class ConquestNpcExporter {
 	private static FastMap<Integer, FastMap<Integer, SpawnTemplate>> conquestSpawnsByMap = SpawnsTool.conquestSpawnsByWorldId;
 	private static TreeMap<Integer, TreeMap<Float, SpawnSpot>> spotsByMap = new TreeMap<Integer,TreeMap<Float,SpawnSpot>>();
 
-	@SuppressWarnings("static-access")
 	public ConquestNpcExporter(List<DataPacket> packets, String sessionName) {
 		this.packets = new FastList<DataPacket>(packets);
-		this.sessionName = sessionName;
 		this.spawns = new FastList<NpcSpawn>();
 	}
 
-	@SuppressWarnings("static-access")
 	public void parse()	
 	{		
-
 		try
 		{
 			// Collect info about all seen NPCs

@@ -98,6 +98,7 @@ public class PlayerCommonData extends VisibleObjectTemplate {
     private int passportReward = 0;
     private int joinRequestLegionId = 0;
     private LegionJoinRequestState joinRequestState = LegionJoinRequestState.NONE;
+    private PlayerUpgradeArcade upgradeArcade;
 
 	public Map<Integer, AtreianPassport> playerPassports = new HashMap<Integer, AtreianPassport>(1);
     private PlayerPassports completedPassports;
@@ -824,4 +825,22 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	public void setJoinRequestState(LegionJoinRequestState joinRequestState) {
 		this.joinRequestState = joinRequestState;
 	}
+
+
+	public PlayerUpgradeArcade getUpgradeArcade() {
+		return upgradeArcade;
+	}
+	
+	public int getUpgradeArcadeFrenzyPoints() {
+		return upgradeArcade.getFrenzyPoints();
+	}
+
+	public void setUpgradeArcade(PlayerUpgradeArcade upgradeArcade) {
+		this.upgradeArcade = upgradeArcade;
+	}
+
+	public void setUpgradeArcadeFrenzyPoints(int points) {
+		this.upgradeArcade.setFrenzyPoints(points);
+	}
+
 }

@@ -19,7 +19,6 @@ package com.aionemu.packetsamurai.utils.collector.data.towns;
 import javax.xml.bind.JAXBException;
 
 import com.aionemu.packetsamurai.PacketSamurai;
-import com.aionemu.packetsamurai.Util;
 import com.aionemu.packetsamurai.utils.collector.DataLoader;
 import com.aionemu.packetsamurai.utils.collector.JAXBExtractor;
 

@@ -71,7 +71,7 @@ public class DanuarMysticariumSoloInstance extends GeneralInstanceHandler {
             instanceReward.addPlayerReward(new DanuarPlayerReward(player.getObjectId()));
         }
 
-        private boolean containPlayer(Integer object) {
+        public boolean containPlayer(Integer object) {
             return instanceReward.containPlayer(object);
         }
 

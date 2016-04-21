@@ -30,11 +30,8 @@ import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
 import com.aionemu.packetsamurai.PacketSamurai;
-import com.aionemu.packetsamurai.Util;
 import com.aionemu.packetsamurai.parser.valuereader.ClientStringReader;
 import com.aionemu.packetsamurai.utils.collector.DataManager;
-import com.aionemu.packetsamurai.utils.collector.data.gather.GatherableData;
-import com.aionemu.packetsamurai.utils.collector.data.gather.GatherableTemplate;
 
 public class NpcsTool {
 

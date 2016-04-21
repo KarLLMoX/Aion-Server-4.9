@@ -36,7 +36,6 @@ import javax.xml.bind.Unmarshaller;
 import org.apache.commons.lang.math.IntRange;
 
 import com.aionemu.packetsamurai.PacketSamurai;
-import com.aionemu.packetsamurai.Util;
 
 public class NpcSkillsTool {
 

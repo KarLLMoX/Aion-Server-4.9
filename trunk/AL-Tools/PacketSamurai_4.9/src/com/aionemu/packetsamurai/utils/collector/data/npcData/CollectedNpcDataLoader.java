@@ -51,7 +51,6 @@ import javax.xml.bind.PropertyException;
 import javax.xml.bind.Unmarshaller;
 
 import com.aionemu.packetsamurai.PacketSamurai;
-import com.aionemu.packetsamurai.Util;
 
 /**
  * @author Mr. Poke

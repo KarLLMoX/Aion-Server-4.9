@@ -10,8 +10,6 @@ import com.aionemu.gameserver.services.LegionService;
  */
 public class CM_LEGION_JOIN_REQUEST extends AionClientPacket {
 
-    
-    private String legionName;
     private String joinRequestMsg;
     private int legionId;
     private int joinType;
@@ -24,7 +22,7 @@ public class CM_LEGION_JOIN_REQUEST extends AionClientPacket {
     protected void readImpl() 
     {
         legionId = readD();
-        legionName = readS();
+        readS(); //LegionName
         joinType = readC();
         joinRequestMsg = readS();
         

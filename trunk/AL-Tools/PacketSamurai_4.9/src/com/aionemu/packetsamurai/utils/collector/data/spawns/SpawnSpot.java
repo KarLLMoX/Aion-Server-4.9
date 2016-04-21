@@ -17,7 +17,6 @@
 package com.aionemu.packetsamurai.utils.collector.data.spawns;
 
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 

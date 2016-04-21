@@ -45,6 +45,7 @@ public class EmptyAethericCannonAI2 extends ActionItemNpcAI2 {
 
 	@Override
 	protected void handleUseItemFinish(Player player) {
+		@SuppressWarnings("unused")
 		Npc owner = getOwner();
 		player.getController().stopProtectionActiveTask();
 		SkillEngine.getInstance().getSkill(player, 21385, 1, player).useNoAnimationSkill();

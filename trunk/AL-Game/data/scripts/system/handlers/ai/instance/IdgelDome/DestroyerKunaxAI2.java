@@ -319,7 +319,8 @@ public class DestroyerKunaxAI2 extends AggressiveNpcAI2 {
 	 * 
 	 ***********************************/
     
-    private void useSkill(int skillId, VisibleObject target) {
+    @SuppressWarnings("unused")
+	private void useSkill(int skillId, VisibleObject target) {
         SkillEngine.getInstance().getSkill(getOwner(), skillId, 65, target).useSkill();
     }
     
@@ -337,7 +338,8 @@ public class DestroyerKunaxAI2 extends AggressiveNpcAI2 {
         }
     }    
     
-    private void castSkillTask(final int skillId, int time, final VisibleObject firstTarget) {
+    @SuppressWarnings("unused")
+	private void castSkillTask(final int skillId, int time, final VisibleObject firstTarget) {
     	ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {

@@ -203,7 +203,7 @@ public class FortressSiege extends Siege<FortressLocation> {
             @Override
             public void visit(Player player) {
                 instanceReward = new SiegePlayerReward(player.getWorldId());
-                SiegeAbyssRace ownerReward = getPlayerReward(player.getObjectId());
+                //SiegeAbyssRace ownerReward = getPlayerReward(player.getObjectId());
                 Integer object = player.getObjectId();
                 if (inf.getGlobalElyosInfluence() >= 0.30f) {
                     if (player.getRace() == Race.ASMODIANS) {
