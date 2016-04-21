@@ -16,28 +16,31 @@
  */
 package com.aionemu.gameserver.model.templates.arcadeupgrade;
 
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
  * @author Raziel
  */
-@XmlType(name = "ArcadeTab")
-public class ArcadeTab {
+@XmlType(name = "ArcadeTabItemList")
+public class ArcadeTabItem {
 
-	@XmlAttribute(name = "id")
-	private int id;
-	@XmlElement(name = "item")
-	private List<ArcadeTabItem> arcadeTabItem;
+	@XmlAttribute(name = "item_id")
+	protected int item_id;
+	@XmlAttribute(name = "normalcount")
+	protected int normalcount;
+	@XmlAttribute(name = "frenzycount")
+	protected int frenzycount;
 
-	public int getId() {
-		return id;
+	public final int getItemId() {
+		return item_id;
 	}
 
-	public List<ArcadeTabItem> getArcadeTabItems() {
-		return arcadeTabItem;
+	public final int getNormalCount() {
+		return normalcount;
+	}
+
+	public final int getFrenzyCount() {
+		return frenzycount;
 	}
 }

@@ -90,7 +90,7 @@ public class IlluminaryObeliskHeroInstance extends GeneralInstanceHandler
     
     @Override
     public void onDie(Npc npc) {
-        Player player = npc.getAggroList().getMostPlayerDamage();
+        //Player player = npc.getAggroList().getMostPlayerDamage();
         switch (npc.getObjectTemplate().getTemplateId()) {
             case 284851: //Beritra Ranger.
             case 284853: //Beritra Songweaver.

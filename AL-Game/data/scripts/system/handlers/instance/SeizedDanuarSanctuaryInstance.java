@@ -74,7 +74,7 @@ public class SeizedDanuarSanctuaryInstance extends GeneralInstanceHandler {
 		if (isInstanceDestroyed) {
 			return;
 		}
-		 Player player = npc.getAggroList().getMostPlayerDamage();
+		 //Player player = npc.getAggroList().getMostPlayerDamage();
 	 	 switch (npc.getObjectTemplate().getTemplateId()) {
 	 		case 233391:
 				 RefugeRuneTasksStart ++;

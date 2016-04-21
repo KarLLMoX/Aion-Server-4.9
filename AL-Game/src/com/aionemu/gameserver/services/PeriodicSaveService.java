@@ -54,7 +54,7 @@ public class PeriodicSaveService {
 
         @Override
         public void run() {
-            log.info("Legion WH update task started.");
+            log.debug("Legion WH update task started.");
             long startTime = System.currentTimeMillis();
             Iterator<Legion> legionsIterator = LegionService.getInstance().getCachedLegionIterator();
             int legionWhUpdated = 0;
@@ -79,7 +79,7 @@ public class PeriodicSaveService {
                 legionWhUpdated++;
             }
             long workTime = System.currentTimeMillis() - startTime;
-            log.info("Legion WH update: " + workTime + " ms, legions: " + legionWhUpdated + ".");
+            log.debug("Legion WH update: " + workTime + " ms, legions: " + legionWhUpdated + ".");
         }
     }
 

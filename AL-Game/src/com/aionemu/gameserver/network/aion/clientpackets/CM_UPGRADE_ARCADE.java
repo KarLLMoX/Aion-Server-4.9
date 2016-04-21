@@ -16,10 +16,10 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_UPGRADE_ARCADE;
 import com.aionemu.gameserver.services.ArcadeUpgradeService;
 
 /**
@@ -28,6 +28,7 @@ import com.aionemu.gameserver.services.ArcadeUpgradeService;
 public class CM_UPGRADE_ARCADE extends AionClientPacket {
 
 	private int action;
+	@SuppressWarnings("unused")
 	private int sessionId;
 
 	public CM_UPGRADE_ARCADE(int opcode, State state, State... restStates) {
@@ -45,23 +46,30 @@ public class CM_UPGRADE_ARCADE extends AionClientPacket {
 		Player player = getConnection().getActivePlayer();
 		if(player == null)
 			return;
-
+		//GameServer.log.info("[CM_UPGRADE_ARCADE] SessionId: "+sessionId+ " ActionId: "+action);
 		switch(action) {
 			case 0://get start upgrade arcade info
 				ArcadeUpgradeService.getInstance().startArcadeUpgrade(player);
-			break;
+				break;
 			case 1: //Close window
 				ArcadeUpgradeService.getInstance().closeWindow(player);
 				break;
 			case 2://try upgrade arcade
 				ArcadeUpgradeService.getInstance().tryArcadeUpgrade(player);
-			break;
+				break;
 			case 3://get reward
 				ArcadeUpgradeService.getInstance().getReward(player);
-			break;
+				break;
+			case 4://ReTry upgrade arcade
+				player.getUpgradeArcade().setReTry(true);
+				ArcadeUpgradeService.getInstance().tryArcadeUpgrade(player);
+				break;				
 			case 5://get reward list
 				ArcadeUpgradeService.getInstance().showRewardList(player);
-			break;
+				break;
+			default:
+				GameServer.log.info("Found new switch : "+action);
+				break;
 		}
 	}
 }

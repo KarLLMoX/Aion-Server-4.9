@@ -232,7 +232,7 @@ public class Player extends Creature {
     private float instanceStartPosX, instanceStartPosY, instanceStartPosZ;
     private int rebirthResurrectPercent = 1;
     private int rebirthSkill = 0;
-    private int frenzy = 0;
+    
     /**
      * Connection of this Player.
      */
@@ -2629,16 +2629,6 @@ public class Player extends Creature {
 	public void setInLiveParty(boolean isInLiveParty) {
 		this.isInLiveParty = isInLiveParty;
 	}
-
-    public int getFrenzy()
-    {
-        return this.frenzy;
-    }
-
-    public void setFrenzy(int frenzy)
-    {
-        this.frenzy = frenzy;
-    }
 	
     public int getLinkedSkill() {
     	return linkedSkill;
@@ -2705,5 +2695,9 @@ public class Player extends Creature {
 		playerCommonData.setJoinRequestLegionId(0);
 		playerCommonData.setJoinRequestState(LegionJoinRequestState.NONE);
 		DAOManager.getDAO(PlayerDAO.class).clearJoinRequest(getObjectId());
+	}
+
+	public PlayerUpgradeArcade getUpgradeArcade() {
+		return playerCommonData.getUpgradeArcade();
 	}
 }

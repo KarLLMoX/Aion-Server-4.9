@@ -16,8 +16,9 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.arcadeupgrade.ArcadeTab;
-import com.aionemu.gameserver.model.templates.arcadeupgrade.ArcadeTabItemList;
+import com.aionemu.gameserver.model.templates.arcadeupgrade.ArcadeTabItem;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.services.ArcadeUpgradeService;
@@ -40,19 +41,25 @@ public class SM_UPGRADE_ARCADE extends AionServerPacket {
 
 	private int action;
 	private int showicon = 1;
-	private int frenzy = 0;
+	private int frenzyPoints = 0;
 	private boolean success = false;
 	private int level;
-	private ArcadeTabItemList itemList;
+	private ArcadeTabItem itemList;
+	private int sessionId = 64519;
+	private Player player;
+	private int frenzyTime;
+	private int frenzyCount;
 
 	public SM_UPGRADE_ARCADE(boolean showicon) {
 		this.action = 0;
 		this.showicon = showicon ? 1 : 0;
 	}
 
-	public SM_UPGRADE_ARCADE()
+	public SM_UPGRADE_ARCADE(int frenzyPoints, int frenzyCount)
 	{
 		this.action = 1;
+		this.frenzyPoints = frenzyPoints;
+		this.frenzyCount = frenzyCount;
 	}
 	
 	public SM_UPGRADE_ARCADE(int action) {
@@ -63,19 +70,27 @@ public class SM_UPGRADE_ARCADE extends AionServerPacket {
 	{
 		this.action = action;
 		this.success = success;
-		this.frenzy = frenzy;
+		this.frenzyPoints = frenzy;
 	}
 
-	public SM_UPGRADE_ARCADE(int action, int level)
+	public SM_UPGRADE_ARCADE(Player player, int action, int level)
 	{
 		this.action = action;
 		this.level = level;
+		this.player = player;
 	}
 
-	public SM_UPGRADE_ARCADE(int action, ArcadeTabItemList itemList)
+	public SM_UPGRADE_ARCADE(int action, ArcadeTabItem itemList)
 	{
 		this.action = action;
 		this.itemList = itemList;
+	}
+
+	public SM_UPGRADE_ARCADE(int action, int frenzyTime, int frenzyCount) 
+	{
+		this.action = action;
+		this.frenzyTime = frenzyTime;
+		this.frenzyCount = frenzyCount;		
 	}
 
 	@Override
@@ -88,15 +103,15 @@ public class SM_UPGRADE_ARCADE extends AionServerPacket {
 				writeD(this.showicon);
 				break;
 			case 1: //show start upgrade arcade info
-				writeD(64519);//SessionId
-				writeD(0);//unk
-				writeD(0);//frenzy meter
+				writeD(sessionId);//SessionId
+				writeD(frenzyPoints);//frenzymeter
+				writeD(frenzyCount);
 				writeD(1);
 				writeD(4);
 				writeD(6);
 				writeD(8);
-				writeD(8);//max upgrade
-				writeH(272);
+				writeD(8);//max upgrade				
+				writeH(272); //icon
 				writeS("success_weapon01");
 				writeS("success_weapon01");
 				writeS("success_weapon01");
@@ -107,30 +122,37 @@ public class SM_UPGRADE_ARCADE extends AionServerPacket {
 				writeS("success_weapon04");
 				break;
 			case 2:
-				writeD(64519);
+				writeD(sessionId);
 				break;
 			case 3: //try result
-				writeC(this.success ? 1 : 0);//1 success - 0 fail
-				writeD(this.frenzy > 100 ? 100 : this.frenzy);//frenzyPoints
+				writeC(success ? 1 : 0);//1 success - 0 fail
+				writeD(frenzyPoints > 100 ? 100 : frenzyPoints);//frenzyPoints
 			break;
 			case 4: //try result
-				writeD(this.level);//upgradeLevel
+				writeD(level);//upgradeLevel
 			break;
 			case 5: //show fail
-				writeD(this.level);//upgradeLevel
-				writeC(level >= 6 ? 1 : 0);//canResume? 1 yes - 0 no
-				writeD(level >= 6 ? 2 : 0);//needed Arcade Token
+				writeD(level);//upgradeLevel
+				writeC(level >= 6 && !player.getUpgradeArcade().isReTry() ? 1 : 0);//canResume? 1 yes - 0 no
+				writeD(level >= 6 && !player.getUpgradeArcade().isReTry() ? 2 : 0);//needed Arcade Token
 				writeD(0);//unk
+				player.getUpgradeArcade().setReTry(false);
+				player.getUpgradeArcade().setFailed(false);				
 			break;
 			case 6: //show reward icon
-				writeD(this.itemList.getItemId());//templateId
-				writeD(this.itemList.getNormalCount() > 0 ? this.itemList.getNormalCount() : this.itemList.getFrenzyCount());//itemCount
+				writeD(itemList.getItemId());//templateId
+				writeD(itemList.getNormalCount() > 0 ? this.itemList.getNormalCount() : this.itemList.getFrenzyCount());//itemCount
 				writeD(0);//unk
 			break;
-			case 7:
-				writeD(0); //unk 4.9
-				writeD(0); //unk 4.9 
+			case 7: // Frenzy !!!!
+				writeD(frenzyTime); //frenzySeconds !
+				writeD(frenzyCount); //frenzyCount
 			break;			
+			case 8: //some configuration switch first option 1 displays a "You have not enough frenzycoins" window, 
+					//the second changes the appearance of the frenzyBar
+				writeD(1); //unk
+				writeD(0); //unk
+			break;		
 			case 10: //show reward list
 				List<ArcadeTab> tabs = ArcadeUpgradeService.getInstance().getTabs();
 				for(ArcadeTab tab : tabs)
@@ -139,7 +161,7 @@ public class SM_UPGRADE_ARCADE extends AionServerPacket {
 				}
 
 				for (ArcadeTab arcadetab : tabs){
-					for (ArcadeTabItemList arcadetabitem : arcadetab.getArcadeTabItems()){
+					for (ArcadeTabItem arcadetabitem : arcadetab.getArcadeTabItems()){
 						writeD(arcadetabitem.getItemId()); //getId()
 						writeD(arcadetabitem.getNormalCount()); //getUncheckedcount()
 						writeD(0);
@@ -148,6 +170,7 @@ public class SM_UPGRADE_ARCADE extends AionServerPacket {
 					}
 				}
 			break;
+			//case 11: Empty Packet for BonusReward :)
 		}
 	}
 }

@@ -1,24 +1,15 @@
 package com.aionemu.packetsamurai.utils;
 
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import org.apache.commons.io.IOUtils;
-
 import com.aionemu.packetsamurai.PacketSamurai;
 import com.aionemu.packetsamurai.parser.datatree.IntValuePart;
-import com.aionemu.packetsamurai.parser.datatree.StringValuePart;
 import com.aionemu.packetsamurai.parser.datatree.ValuePart;
-import com.aionemu.packetsamurai.parser.formattree.Part;
-import com.aionemu.packetsamurai.parser.parttypes.StringPartType;
-import com.aionemu.packetsamurai.parser.parttypes.StringPartType.stringType;
 import com.aionemu.packetsamurai.session.DataPacket;
 import com.aionemu.packetsamurai.utils.collector.objects.player.Player;
 import com.aionemu.packetsamurai.utils.collector.objects.player.PlayerAppearance;

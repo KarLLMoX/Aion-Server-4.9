@@ -17,20 +17,10 @@
 package com.aionemu.packetsamurai.utils.collector.data.spawns;
 
 import java.io.File;
-import java.nio.file.Path;
-import java.util.Map.Entry;
-
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-
 import com.aionemu.packetsamurai.PacketSamurai;
-import com.aionemu.packetsamurai.Util;
 import com.aionemu.packetsamurai.utils.collector.DataLoader;
 import com.aionemu.packetsamurai.utils.collector.DataManager;
-import com.aionemu.packetsamurai.utils.collector.JAXBExtractor;
-import com.aionemu.packetsamurai.utils.collector.data.npcTemplates.NpcTemplate;
-import com.aionemu.packetsamurai.utils.collector.data.npcTemplates.NpcTemplates;
 import com.aionemu.packetsamurai.utils.collector.data.npcTemplates.NpcsTool;
 
 import javolution.util.FastList;

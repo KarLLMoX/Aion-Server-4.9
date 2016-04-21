@@ -12,7 +12,7 @@ echo Starting Aion Lightning Login Server.
 echo.
 REM -------------------------------------
 REM Default parameters for a basic server.
-java -Xms8m -Xmx32m -server -cp ./libs/*;AL-Login.jar com.aionemu.loginserver.LoginServer
+C:\java\jre1.7\bin\java -Xms8m -Xmx32m -server -cp ./libs/*;AL-Login.jar com.aionemu.loginserver.LoginServer
 REM
 REM -------------------------------------
 

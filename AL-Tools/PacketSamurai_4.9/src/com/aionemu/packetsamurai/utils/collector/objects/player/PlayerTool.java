@@ -7,8 +7,6 @@ import javax.xml.bind.JAXBException;
 import com.aionemu.packetsamurai.PacketSamurai;
 import com.aionemu.packetsamurai.utils.collector.DataLoader;
 import com.aionemu.packetsamurai.utils.collector.DataManager;
-import com.aionemu.packetsamurai.utils.collector.data.conquestPortal.ConquestPortalData;
-
 import javolution.util.FastMap;
 
 /**

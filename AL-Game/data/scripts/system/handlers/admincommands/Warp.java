@@ -56,7 +56,7 @@ public class Warp extends AdminCommand {
             LocS = "";
             int mapL = 0;
             int layerI = -1;
-            int race;
+            //int race;
 
             first = params[0];
             mapL = Integer.parseInt(params[1]);
@@ -73,7 +73,7 @@ public class Warp extends AdminCommand {
 
             if(fm.find()){
                 LocS = fm.group(1);
-                race = Integer.parseInt(fm.group(2));
+                //race = Integer.parseInt(fm.group(2));
             }
 
             if(lm.find()){

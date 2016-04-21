@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.aionemu.gameserver.model.templates.arcadeupgrade.ArcadeTab;
-import com.aionemu.gameserver.model.templates.arcadeupgrade.ArcadeTabItemList;
+import com.aionemu.gameserver.model.templates.arcadeupgrade.ArcadeTabItem;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
@@ -38,7 +38,7 @@ public class ArcadeUpgradeData {
 
 	@XmlElement(name = "tab")
 	private List<ArcadeTab> arcadeTabTemplate;
-	private TIntObjectHashMap<List<ArcadeTabItemList>> arcadeItemList = new TIntObjectHashMap<>();
+	private TIntObjectHashMap<List<ArcadeTabItem>> arcadeItemList = new TIntObjectHashMap<>();
 
 	/**
 	 * @param u  
@@ -54,7 +54,7 @@ public class ArcadeUpgradeData {
 		return arcadeItemList.size();
 	}
 
-	public List<ArcadeTabItemList> getArcadeTabById(int id) {
+	public List<ArcadeTabItem> getArcadeTabById(int id) {
 		return arcadeItemList.get(id);
 	}
 

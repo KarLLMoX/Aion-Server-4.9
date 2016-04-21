@@ -38,7 +38,6 @@ import com.aionemu.packetsamurai.session.DataPacket;
 import com.aionemu.packetsamurai.utils.collector.DataManager;
 import com.aionemu.packetsamurai.utils.collector.data.gather.GatherableTemplate;
 import com.aionemu.packetsamurai.utils.collector.data.gather.GathersTool;
-import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnMap;
 import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnSpot;
 import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnTemplate;
 import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnsTool;
@@ -53,7 +52,7 @@ public class NpcGatherExporter {
 	private static FastMap<Integer, FastMap<Integer, SpawnTemplate>> gatherSpawns = SpawnsTool.gatherSpawnsByWorldId;
 			//new FastMap<Integer, FastMap<Integer, SpawnTemplate>>();
 	private static FastMap<Integer, Stat> statMap = new FastMap<Integer,Stat>();
-	private String sessionName;
+
 	static Long start = System.currentTimeMillis();
 	static int _spots = 0;
 	static int _spawns = 0;
@@ -62,7 +61,6 @@ public class NpcGatherExporter {
 
 	public NpcGatherExporter(List<DataPacket> packets, String sessionName) {
 		this.packets = new FastList<DataPacket>(packets);
-		this.sessionName = sessionName;
 		this.spawns = new FastList<GatherSpawn>();
 	}
 

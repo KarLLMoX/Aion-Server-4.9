@@ -31,7 +31,7 @@ public class CmdChangeClass extends AbstractGMHandler {
     }
 
     public void run() {
-        Player t = target != null ? target : admin;
+        // Only for admins !
         byte classId;
         String ClassChoose = params;
         if (ClassChoose.equalsIgnoreCase("warrior")) {

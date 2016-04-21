@@ -29,7 +29,8 @@ public class SM_SELL_ITEM extends AionServerPacket {
     private int targetObjectId;
     private TradeListTemplate plist;
     private int sellPercentage;
-    private byte action = 0x01;
+    @SuppressWarnings("unused")
+	private byte action = 0x01; // ?! WTF
 
     public SM_SELL_ITEM(int targetObjectId, int sellPercentage) {
         this.sellPercentage = sellPercentage;
