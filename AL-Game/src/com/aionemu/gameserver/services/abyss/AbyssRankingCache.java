@@ -45,7 +45,7 @@ public class AbyssRankingCache {
     private final FastMap<Race, SM_ABYSS_RANKING_LEGIONS> legions = new FastMap<Race, SM_ABYSS_RANKING_LEGIONS>();
 
     public void reloadRankings() {
-        GameServer.log.info("[AbyssRankingCache] Updating abyss ranking cache");
+        GameServer.log.debug("[AbyssRankingCache] Updating abyss ranking cache");
         this.lastUpdate = (int) (System.currentTimeMillis() / 1000);
         getDAO().updateRankList(RankingConfig.TOP_RANKING_MAX_OFFLINE_DAYS);
 
