@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.skillengine.effect;
 
 import com.aionemu.gameserver.model.gameobjects.Creature;
+import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.skillengine.model.Effect;
 
@@ -44,6 +45,8 @@ public class SleepEffect extends EffectTemplate {
     @Override
     public void startEffect(final Effect effect) {
         final Creature effected = effect.getEffected();
+        if (effected.isInState(CreatureState.RESTING))
+        	effected.unsetState(CreatureState.RESTING);
         effected.getController().cancelCurrentSkill();
         effect.setAbnormal(AbnormalState.SLEEP.getId());
         effected.getEffectController().setAbnormal(AbnormalState.SLEEP.getId());
