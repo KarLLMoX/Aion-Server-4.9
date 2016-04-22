@@ -92,6 +92,10 @@ public class ArcadeUpgradeService {
     public void startArcadeUpgrade(Player player)
     {
     	PlayerUpgradeArcade arcade = player.getUpgradeArcade();
+    	
+    	if (arcade == null)
+    		arcade = new PlayerUpgradeArcade();
+    	
     	arcade.reset();
     	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(arcade.getFrenzyPoints(), arcade.getFrenzyCount()));
     }
@@ -117,7 +121,6 @@ public class ArcadeUpgradeService {
         
         if (localStorage.getFreeSlots() < 1)
         {
-        	//fsc 0x12A cdd 8 1 0  - window pops up that you havent enough frenzy coins.
         	PacketSendUtility.sendMessage(player, "Your Inventory is full. You need at least 1 free Slot to play Upgrade Arcade..");
         	return;
         }
