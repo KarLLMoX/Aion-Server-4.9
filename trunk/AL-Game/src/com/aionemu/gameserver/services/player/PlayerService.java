@@ -133,7 +133,7 @@ public class PlayerService {
      * @param player player to store
      * @return true if character was successful saved.
      */
-    public static boolean storeNewPlayer(Player player, String accountName, int accountId) {
+    public static boolean storeNewPlayer(Player player, String accountName, int accountId) {    	
         return DAOManager.getDAO(PlayerDAO.class).saveNewPlayer(player.getCommonData(), accountId, accountName)
                 && DAOManager.getDAO(PlayerAppearanceDAO.class).store(player)
                 && DAOManager.getDAO(PlayerSkillListDAO.class).storeSkills(player)

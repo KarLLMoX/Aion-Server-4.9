@@ -812,35 +812,24 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 		this.joinRequestLegionId = joinRequestLegionId;
 	}
 	
-    /**
-	 * @return the joinRequestState
-	 */
 	public LegionJoinRequestState getJoinRequestState() {
 		return joinRequestState;
 	}
 
-	/**
-	 * @param joinRequestState the joinRequestState to set
-	 */
 	public void setJoinRequestState(LegionJoinRequestState joinRequestState) {
 		this.joinRequestState = joinRequestState;
 	}
 
 
-	public PlayerUpgradeArcade getUpgradeArcade() {
+	public PlayerUpgradeArcade getUpgradeArcade() 
+	{
+		if (upgradeArcade == null)
+			this.upgradeArcade = new PlayerUpgradeArcade();
+		
 		return upgradeArcade;
-	}
-	
-	public int getUpgradeArcadeFrenzyPoints() {
-		return upgradeArcade.getFrenzyPoints();
 	}
 
 	public void setUpgradeArcade(PlayerUpgradeArcade upgradeArcade) {
 		this.upgradeArcade = upgradeArcade;
 	}
-
-	public void setUpgradeArcadeFrenzyPoints(int points) {
-		this.upgradeArcade.setFrenzyPoints(points);
-	}
-
 }
