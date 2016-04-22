@@ -20,6 +20,7 @@ import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.controllers.observer.ActionObserver;
 import com.aionemu.gameserver.controllers.observer.ObserverType;
 import com.aionemu.gameserver.model.gameobjects.Creature;
+import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.stats.container.StatEnum;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TARGET_IMMOBILIZE;
 import com.aionemu.gameserver.skillengine.model.Effect;
@@ -53,7 +54,10 @@ public class RootEffect extends EffectTemplate {
     @Override
     public void startEffect(final Effect effect) {
         final Creature effected = effect.getEffected();
+        if (effected.isInState(CreatureState.RESTING))
+        	effected.unsetState(CreatureState.RESTING);
         effected.getMoveController().abortMove();
+        
         effected.getEffectController().setAbnormal(AbnormalState.ROOT.getId());
         effect.setAbnormal(AbnormalState.ROOT.getId());
         PacketSendUtility.broadcastPacketAndReceive(effected, new SM_TARGET_IMMOBILIZE(effected));
