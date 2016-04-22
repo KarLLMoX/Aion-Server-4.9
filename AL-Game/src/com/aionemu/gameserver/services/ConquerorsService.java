@@ -165,10 +165,10 @@ public class ConquerorsService {
             public void visit(Player p) {
                 if (!player.getRace().equals(p.getRace()) && player != p) {
                     if (isOnTheirMap(player)){
-                        PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, false, false, player.getConquerorBuffId()));
+                    	PacketSendUtility.broadcastPacketAndReceive(p, new SM_SERIAL_KILLER(player, false, false, player.getConquerorBuffId()));
                     }
                     if (!isOnTheirMap(player)){
-                        PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, true, false, player.getProtectorBuffId()));
+                        PacketSendUtility.broadcastPacketAndReceive(p, new SM_SERIAL_KILLER(player, true, false, player.getProtectorBuffId()));
                     }
                 }
             }
