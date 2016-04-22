@@ -288,19 +288,24 @@ public class World {
      */
     public void updatePosition(VisibleObject object, float newX, float newY, float newZ, byte newHeading, boolean updateKnownList) {
         // prevent updating object position in despawned state
-        if (!object.isSpawned()) {
+        Npc npc = null;
+    	
+    	if (!object.isSpawned()) {
             return;
         }
+        
+        if (object instanceof Npc)
+        	npc = (Npc) object;
 
         MapRegion oldRegion = object.getActiveRegion();
         if (oldRegion == null) {
-            log.warn(String.format("CHECKPOINT: oldRegion is null, map - %d, object coordinates - %f %f %f", object.getWorldId(), object.getX(), object.getY(), object.getZ()));
+            log.warn(String.format("CHECKPOINT: %sId:%d oldRegion is null, map - %d, object coordinates - %f %f %f", object.getClass().getSimpleName().replace(".class", ""), npc != null ? npc.getNpcId() : 0, object.getWorldId(), object.getX(), object.getY(), object.getZ()));
             return;
         }
-
+        
         MapRegion newRegion = oldRegion.getParent().getRegion(newX, newY, newZ);
         if (newRegion == null) {
-            log.warn(String.format("CHECKPOINT: newRegion is null, map - %d, object coordinates - %f %f %f", object.getWorldId(), newX, newY, newZ), new Throwable());
+            log.warn(String.format("CHECKPOINT: %sId:%d newRegion is null, map - %d, object coordinates - %f %f %f", object.getClass().getSimpleName().replace(".class", ""), npc != null ? npc.getNpcId() : 0, object.getWorldId(), newX, newY, newZ), new Throwable());
             if (object instanceof Creature) {
                 ((Creature) object).getMoveController().abortMove();
             }

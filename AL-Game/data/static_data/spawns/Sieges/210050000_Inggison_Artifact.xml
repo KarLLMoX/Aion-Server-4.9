@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210050000">
+        <siege_spawn siege_id="2023">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257456" respawn_time="295">
+                        <spot x="695.358" y="1665.54" z="329.431" h="43"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257463" respawn_time="295">
+                        <spot x="676.799" y="1672.22" z="331.282" h="15"/>
+                    </spawn>
+                    <!-- Artifact Archduke -->
+                    <spawn npc_id="257475" respawn_time="295">
+                        <spot x="692.664" y="1691.9" z="330.91" h="40"/>
+                    </spawn>
+                    <!-- Artifact Murderer -->
+                    <spawn npc_id="257481" respawn_time="295">
+                        <spot x="697.996" y="1681.04" z="330.565"/>
+                    </spawn>
+                    <!-- Artifact Magus -->
+                    <spawn npc_id="257487" respawn_time="295">
+                        <spot x="683.363" y="1660.15" z="329.5" h="86"/>
+                    </spawn>
+                    <!-- (A): Cyclone -->
+                    <spawn npc_id="257508" respawn_time="295">
+                        <spot x="686.663" y="1676.41" z="331.752" static_id="371"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257457" respawn_time="295">
+                        <spot x="695.358" y="1665.541" z="329.431" h="40"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257464" respawn_time="295">
+                        <spot x="676.799" y="1672.219" z="331.298" h="56"/>
+                    </spawn>
+                    <!-- Artifact Archduke -->
+                    <spawn npc_id="257476" respawn_time="295">
+                        <spot x="692.664" y="1691.895" z="330.914" h="40"/>
+                    </spawn>
+                    <!-- Artifact Murderer -->
+                    <spawn npc_id="257482" respawn_time="295">
+                        <spot x="697.996" y="1681.035" z="330.565"/>
+                    </spawn>
+                    <!-- Artifact Magus -->
+                    <spawn npc_id="257488" respawn_time="295">
+                        <spot x="683.363" y="1660.152" z="329.493" h="13"/>
+                    </spawn>
+                    <!-- (B): Cyclone of Void -->
+                    <spawn npc_id="257509" respawn_time="295">
+                        <spot x="686.621" y="1676.368" z="331.086" static_id="386"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257451" respawn_time="295">
+                        <spot x="695.358" y="1665.541" z="329.431" h="115"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257462" respawn_time="295">
+                        <spot x="676.799" y="1672.219" z="331.298" h="56"/>
+                    </spawn>
+                    <!-- Artifact Archduke -->
+                    <spawn npc_id="257474" respawn_time="295">
+                        <spot x="692.664" y="1691.895" z="330.914" h="40"/>
+                    </spawn>
+                    <!-- Artifact Murderer -->
+                    <spawn npc_id="257480" respawn_time="295">
+                        <spot x="697.996" y="1681.035" z="330.565"/>
+                    </spawn>
+                    <!-- Artifact Magus -->
+                    <spawn npc_id="257486" respawn_time="295">
+                        <spot x="683.363" y="1660.152" z="329.493" h="97"/>
+                    </spawn>
+                    <!-- (E): Cyclone of Void -->
+                    <spawn npc_id="257507" respawn_time="295">
+                        <spot x="686.621" y="1676.368" z="331.086" static_id="480"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="2022">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257407" respawn_time="295">
+                        <spot x="838.818" y="1480.29" z="360.213" h="40"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257418" respawn_time="295">
+                        <spot x="841.961" y="1507.86" z="358.002" h="23"/>
+                    </spawn>
+                    <!-- Artifact Assassin -->
+                    <spawn npc_id="257421" respawn_time="295">
+                        <spot x="813.179" y="1499.43" z="360.406" h="56"/>
+                    </spawn>
+                    <!-- Artifact Cadet -->
+                    <spawn npc_id="257433" respawn_time="295">
+                        <spot x="816.891" y="1485.36" z="360.55" h="60"/>
+                    </spawn>
+                    <!-- Artifact Priest -->
+                    <spawn npc_id="257445" respawn_time="295">
+                        <spot x="829.05" y="1510.62" z="360.645" h="30"/>
+                    </spawn>
+                    <!-- (A): Spectral Mist -->
+                    <spawn npc_id="257505" respawn_time="295">
+                        <spot x="831.153" y="1493.52" z="361.539" static_id="364"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257412" respawn_time="295">
+                        <spot x="838.818" y="1480.294" z="360.206" h="119"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257419" respawn_time="295">
+                        <spot x="841.961" y="1507.865" z="358.003" h="23"/>
+                    </spawn>
+                    <!-- Artifact Assassin -->
+                    <spawn npc_id="257422" respawn_time="295">
+                        <spot x="813.178" y="1499.431" z="360.392" h="56"/>
+                    </spawn>
+                    <!-- Artifact Cadet -->
+                    <spawn npc_id="257434" respawn_time="295">
+                        <spot x="816.891" y="1485.356" z="360.550" h="60"/>
+                    </spawn>
+                    <!-- Artifact Priest -->
+                    <spawn npc_id="257446" respawn_time="295">
+                        <spot x="829.050" y="1510.620" z="360.665" h="30"/>
+                    </spawn>
+                    <!-- (B): Spectral Mist -->
+                    <spawn npc_id="257506" respawn_time="295">
+                        <spot x="831.170" y="1493.400" z="359.089" static_id="482"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257402" respawn_time="295">
+                        <spot x="838.818" y="1480.294" z="360.206" h="40"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257417" respawn_time="295">
+                        <spot x="841.961" y="1507.865" z="358.003" h="23"/>
+                    </spawn>
+                    <!-- Artifact Assassin -->
+                    <spawn npc_id="257420" respawn_time="295">
+                        <spot x="813.178" y="1499.431" z="360.392" h="56"/>
+                    </spawn>
+                    <!-- Artifact Cadet -->
+                    <spawn npc_id="257432" respawn_time="295">
+                        <spot x="816.891" y="1485.356" z="360.550" h="60"/>
+                    </spawn>
+                    <!-- Artifact Priest -->
+                    <spawn npc_id="257444" respawn_time="295">
+                        <spot x="829.050" y="1510.620" z="360.665" h="30"/>
+                    </spawn>
+                    <!-- (E): Spectral Mist -->
+                    <spawn npc_id="257504" respawn_time="295">
+                        <spot x="831.170" y="1493.400" z="359.089" static_id="476"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="2012">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257109" respawn_time="295">
+                        <spot x="1887.76" y="1857.53" z="301.25" h="20"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257118" respawn_time="295">
+                        <spot x="1865.32" y="1839.82" z="304.331" h="56"/>
+                    </spawn>
+                    <!-- Artifact Archduke -->
+                    <spawn npc_id="257130" respawn_time="295">
+                        <spot x="1890.56" y="1830.19" z="301.956" h="42"/>
+                    </spawn>
+                    <!-- Artifact Murderer -->
+                    <spawn npc_id="257136" respawn_time="295">
+                        <spot x="1870.14" y="1855.77" z="302.117" h="46"/>
+                    </spawn>
+                    <!-- Artifact Magus -->
+                    <spawn npc_id="257142" respawn_time="295">
+                        <spot x="1896.54" y="1845.7" z="301.785" h="26"/>
+                    </spawn>
+                    <!-- (A): Glimmering Aura -->
+                    <spawn npc_id="257205" respawn_time="295">
+                        <spot x="1881.76" y="1843.69" z="304.206" static_id="477"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257112" respawn_time="295">
+                        <spot x="1887.756" y="1857.526" z="301.250" h="23"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257119" respawn_time="295">
+                        <spot x="1865.322" y="1839.818" z="304.335" h="56"/>
+                    </spawn>
+                    <!-- Artifact Archduke -->
+                    <spawn npc_id="257131" respawn_time="295">
+                        <spot x="1890.558" y="1830.187" z="301.953"/>
+                    </spawn>
+                    <!-- Artifact Murderer -->
+                    <spawn npc_id="257137" respawn_time="295">
+                        <spot x="1870.138" y="1855.768" z="302.124" h="46"/>
+                    </spawn>
+                    <!-- Artifact Magus -->
+                    <spawn npc_id="257143" respawn_time="295">
+                        <spot x="1896.538" y="1845.703" z="301.758" h="6"/>
+                    </spawn>
+                    <!-- (B): Glimmering Aura -->
+                    <spawn npc_id="257206" respawn_time="295">
+                        <spot x="1881.674" y="1843.851" z="304.206" static_id="385"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257102" respawn_time="295">
+                        <spot x="1887.756" y="1857.526" z="301.250" h="23"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257117" respawn_time="295">
+                        <spot x="1865.322" y="1839.818" z="304.335" h="56"/>
+                    </spawn>
+                    <!-- Artifact Archduke -->
+                    <spawn npc_id="257129" respawn_time="295">
+                        <spot x="1890.558" y="1830.187" z="301.953"/>
+                    </spawn>
+                    <!-- Artifact Murderer -->
+                    <spawn npc_id="257135" respawn_time="295">
+                        <spot x="1870.138" y="1855.768" z="302.124" h="46"/>
+                    </spawn>
+                    <!-- Artifact Magus -->
+                    <spawn npc_id="257141" respawn_time="295">
+                        <spot x="1896.538" y="1845.703" z="301.758" h="6"/>
+                    </spawn>
+                    <!-- (E): Glimmering Aura -->
+                    <spawn npc_id="257204" respawn_time="295">
+                        <spot x="1881.674" y="1843.851" z="304.206" static_id="369"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="2013">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257154" respawn_time="295">
+                        <spot x="1551.54" y="2105.22" z="322.074"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257163" respawn_time="295">
+                        <spot x="1522.07" y="2117.49" z="322.505" h="90"/>
+                    </spawn>
+                    <!-- Artifact High Magus -->
+                    <spawn npc_id="257172" respawn_time="295">
+                        <spot x="1524.79" y="2102.8" z="321.497" h="90"/>
+                    </spawn>
+                    <!-- Artifact Cadet -->
+                    <spawn npc_id="257178" respawn_time="295">
+                        <spot x="1540.05" y="2095.71" z="320.425" h="90"/>
+                    </spawn>
+                    <!-- Artifact Priest -->
+                    <spawn npc_id="257190" respawn_time="295">
+                        <spot x="1532.59" y="2120.85" z="322.723" h="46"/>
+                    </spawn>
+                    <!-- (A): Mookie Revenge -->
+                    <spawn npc_id="257208" respawn_time="295">
+                        <spot x="1537.46" y="2111.61" z="323.7" static_id="382"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257157" respawn_time="295">
+                        <spot x="1551.542" y="2105.217" z="322.086"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257164" respawn_time="295">
+                        <spot x="1522.069" y="2117.486" z="322.502" h="90"/>
+                    </spawn>
+                    <!-- Artifact High Magus -->
+                    <spawn npc_id="257173" respawn_time="295">
+                        <spot x="1524.790" y="2102.796" z="321.517" h="55"/>
+                    </spawn>
+                    <!-- Artifact Cadet -->
+                    <spawn npc_id="257179" respawn_time="295">
+                        <spot x="1540.051" y="2095.713" z="320.428" h="90"/>
+                    </spawn>
+                    <!-- Artifact Priest -->
+                    <spawn npc_id="257191" respawn_time="295">
+                        <spot x="1532.588" y="2120.855" z="322.723" h="46"/>
+                    </spawn>
+                    <!-- (B): Mookie Revenge -->
+                    <spawn npc_id="257209" respawn_time="295">
+                        <spot x="1537.335" y="2111.386" z="322.038" static_id="475"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact Guardian -->
+                    <spawn npc_id="257147" respawn_time="295">
+                        <spot x="1551.542" y="2105.217" z="322.086"/>
+                    </spawn>
+                    <!-- Artifact Champion -->
+                    <spawn npc_id="257162" respawn_time="295">
+                        <spot x="1522.069" y="2117.486" z="322.502" h="90"/>
+                    </spawn>
+                    <!-- Artifact High Magus -->
+                    <spawn npc_id="257171" respawn_time="295">
+                        <spot x="1524.790" y="2102.796" z="321.517" h="90"/>
+                    </spawn>
+                    <!-- Artifact Cadet -->
+                    <spawn npc_id="257177" respawn_time="295">
+                        <spot x="1540.051" y="2095.713" z="320.428" h="90"/>
+                    </spawn>
+                    <!-- Artifact Priest -->
+                    <spawn npc_id="257189" respawn_time="295">
+                        <spot x="1532.588" y="2120.855" z="322.723" h="46"/>
+                    </spawn>
+                    <!-- (E): Mookie Revenge -->
+                    <spawn npc_id="257207" respawn_time="295">
+                        <spot x="1537.335" y="2111.386" z="322.038" static_id="484"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="2014">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <spawn npc_id="256702" respawn_time="295">
+                        <spot x="1702.151" y="1940.392" z="308.88422" h="44"/>
+                        <spot x="1727.269" y="1930.779" z="308.59427" h="31"/>
+                        <spot x="1740.056" y="1914.983" z="308.625" h="0"/>
+                    </spawn>
+                    <spawn npc_id="256705" respawn_time="295">
+                        <spot x="1713.877" y="1926.511" z="308.92352" h="41"/>
+                    </spawn>
+                    <spawn npc_id="256699" respawn_time="295">
+                        <spot x="1736.128" y="1930.15" z="308.44775" h="15"/>
+                        <spot x="1711.0626" y="1913.521" z="308.644" h="67"/>
+                    </spawn>
+                    <spawn npc_id="256696" respawn_time="295">
+                        <spot x="1743.145" y="1895.612" z="308.8723" h="0"/>
+                    </spawn>
+                    <spawn npc_id="252473" respawn_time="295">
+                        <spot x="1725.966" y="1901.13" z="308.6686" h="31"/>
+                    </spawn>
+                    <spawn npc_id="252325" respawn_time="295">
+                        <spot x="1725.0594" y="1917.6074" z="308.90961" static_id="3622"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <spawn npc_id="256700" respawn_time="295">
+                        <spot x="1702.151" y="1940.392" z="308.88422" h="44"/>
+                        <spot x="1727.269" y="1930.779" z="308.59427" h="31"/>
+                        <spot x="1740.056" y="1914.983" z="308.625" h="0"/>
+                    </spawn>
+                    <spawn npc_id="256703" respawn_time="295">
+                        <spot x="1713.877" y="1926.511" z="308.92352" h="41"/>
+                    </spawn>
+                    <spawn npc_id="256697" respawn_time="295">
+                        <spot x="1736.128" y="1930.15" z="308.44775" h="15"/>
+                        <spot x="1711.0626" y="1913.521" z="308.644" h="67"/>
+                    </spawn>
+                    <spawn npc_id="256706" respawn_time="295">
+                        <spot x="1743.145" y="1895.612" z="308.8723" h="0"/>
+                    </spawn>
+                    <spawn npc_id="252478" respawn_time="295">
+                        <spot x="1725.966" y="1901.13" z="308.6686" h="31"/>
+                    </spawn>
+                    <spawn npc_id="252326" respawn_time="295">
+                        <spot x="1725.0594" y="1917.6074" z="308.90961" static_id="3623"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <spawn npc_id="256701" respawn_time="295">
+                        <spot x="1702.151" y="1940.392" z="308.88422" h="44"/>
+                        <spot x="1727.269" y="1930.779" z="308.59427" h="31"/>
+                        <spot x="1740.056" y="1914.983" z="308.625" h="0"/>
+                    </spawn>
+                    <spawn npc_id="256704" respawn_time="295">
+                        <spot x="1713.877" y="1926.511" z="308.92352" h="41"/>
+                    </spawn>
+                    <spawn npc_id="256698" respawn_time="295">
+                        <spot x="1736.128" y="1930.15" z="308.44775" h="15"/>
+                        <spot x="1711.0626" y="1913.521" z="308.644" h="67"/>
+                    </spawn>
+                    <spawn npc_id="256695" respawn_time="295">
+                        <spot x="1743.145" y="1895.612" z="308.8723" h="0"/>
+                    </spawn>
+                    <spawn npc_id="252467" respawn_time="295">
+                        <spot x="1725.966" y="1901.13" z="308.6686" h="31"/>
+                    </spawn>
+                    <spawn npc_id="252324" respawn_time="295">
+                        <spot x="1725.0594" y="1917.6074" z="308.90961" static_id="3624"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+        <siege_spawn siege_id="2024">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <spawn npc_id="256708" respawn_time="295">
+                        <spot x="877.5114" y="1616.232" z="340.35327" h="16"/>
+                        <spot x="821.0914" y="1598.516" z="341.78687" h="61"/>
+                        <spot x="835.7728" y="1616.736" z="341.37042" h="47"/>
+                    </spawn>
+                    <spawn npc_id="256711" respawn_time="295">
+                        <spot x="858.8646" y="1614.494" z="341.5" h="10"/>
+                        <spot x="832.799" y="1601.595" z="341.5" h="61"/>
+                        <spot x="844.6854" y="1621.129" z="341.37186" h="31"/>
+                    </spawn>
+                    <spawn npc_id="256714" respawn_time="295">
+                        <spot x="860.3774" y="1597.17" z="341.59167" h="100"/>
+                    </spawn>
+                    <spawn npc_id="256717" respawn_time="295">
+                        <spot x="834.8801" y="1631.611" z="340.15268" h="41"/>
+                    </spawn>
+                    <spawn npc_id="252488" respawn_time="295">
+                        <spot x="848.474" y="1590.393" z="341.5559" h="31"/>
+                    </spawn>
+                    <spawn npc_id="252328" respawn_time="295">
+                        <spot x="846.53088" y="1607.6472" z="341.89032" static_id="3617"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <spawn npc_id="256712" respawn_time="295">
+                        <spot x="877.5114" y="1616.232" z="340.35327" h="16"/>
+                        <spot x="821.0914" y="1598.516" z="341.78687" h="61"/>
+                        <spot x="835.7728" y="1616.736" z="341.37042" h="47"/>
+                    </spawn>
+                    <spawn npc_id="256709" respawn_time="295">
+                        <spot x="858.8646" y="1614.494" z="341.5" h="10"/>
+                        <spot x="832.799" y="1601.595" z="341.5" h="61"/>
+                        <spot x="844.6854" y="1621.129" z="341.37186" h="31"/>
+                    </spawn>
+                    <spawn npc_id="256718" respawn_time="295">
+                        <spot x="860.3774" y="1597.17" z="341.59167" h="100"/>
+                    </spawn>
+                    <spawn npc_id="256715" respawn_time="295">
+                        <spot x="834.8801" y="1631.611" z="340.15268" h="41"/>
+                    </spawn>
+                    <spawn npc_id="252493" respawn_time="295">
+                        <spot x="848.474" y="1590.393" z="341.5559" h="31"/>
+                    </spawn>
+                    <spawn npc_id="252329" respawn_time="295">
+                        <spot x="846.53088" y="1607.6472" z="341.89032" static_id="3619"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <spawn npc_id="256707" respawn_time="295">
+                        <spot x="877.5114" y="1616.232" z="340.35327" h="16"/>
+                        <spot x="821.0914" y="1598.516" z="341.78687" h="61"/>
+                        <spot x="835.7728" y="1616.736" z="341.37042" h="47"/>
+                    </spawn>
+                    <spawn npc_id="256710" respawn_time="295">
+                        <spot x="858.8646" y="1614.494" z="341.5" h="10"/>
+                        <spot x="832.799" y="1601.595" z="341.5" h="61"/>
+                        <spot x="844.6854" y="1621.129" z="341.37186" h="31"/>
+                    </spawn>
+                    <spawn npc_id="256713" respawn_time="295">
+                        <spot x="860.3774" y="1597.17" z="341.59167" h="100"/>
+                    </spawn>
+                    <spawn npc_id="256716" respawn_time="295">
+                        <spot x="834.8801" y="1631.611" z="340.15268" h="41"/>
+                    </spawn>
+                    <spawn npc_id="252483" respawn_time="295">
+                        <spot x="848.474" y="1590.393" z="341.5559" h="31"/>
+                    </spawn>
+                    <spawn npc_id="252327" respawn_time="295">
+                        <spot x="846.53088" y="1607.6472" z="341.89032" static_id="3620"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+    </spawn_map>
+</spawns>
