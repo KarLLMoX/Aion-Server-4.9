@@ -198,6 +198,7 @@ public class PvpService {
         }
 
         SerialKillerService.getInstance().updateRank(winner, victim);
+        ConquerorsService.getInstance().onKill(winner, victim);
 
         //notify Quest engine for winner + his group
         notifyKillQuests(winner, victim);
