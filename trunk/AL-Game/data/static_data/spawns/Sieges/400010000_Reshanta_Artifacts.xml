@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="400010000">
+        <siege_spawn siege_id="1133">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="263625" respawn_time="295">
+                        <spot x="2693.119" y="2397.665" z="1553.878" h="65"/>
+                        <spot x="2703.133" y="2383.241" z="1552.986" h="76"/>
+                        <spot x="2722.758" y="2392.382" z="1551.071" h="40"/>
+                        <spot x="2711.604" y="2409.972" z="1552.703" h="16"/>
+                        <spot x="2722.573" y="2401.066" z="1551.408" h="78"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="263670" respawn_time="295">
+                        <spot x="2700.184" y="2397.434" z="1554.159" h="60"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="263655" respawn_time="295">
+                        <spot x="2711.320" y="2382.046" z="1552.129" h="20"/>
+                        <spot x="2700.279" y="2417.520" z="1553.717" h="58"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="263610" respawn_time="295">
+                        <spot x="2715.699" y="2397.276" z="1554.148"/>
+                    </spawn>
+                    <!-- (A): Abyssal Aura -->
+                    <spawn npc_id="276727" respawn_time="295">
+                        <spot x="2708.425" y="2397.415" z="1552.520" static_id="10"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="263640" respawn_time="295">
+                        <spot x="2702.847" y="2410.914" z="1553.510" h="107"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Acolyte Protector -->
+                    <spawn npc_id="263613" respawn_time="295">
+                        <spot x="2715.699" y="2397.276" z="1554.148" h="60"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="263630" respawn_time="295">
+                        <spot x="2693.119" y="2397.665" z="1553.878" h="65"/>
+                        <spot x="2703.133" y="2383.241" z="1552.986" h="76"/>
+                        <spot x="2722.758" y="2392.382" z="1551.071"/>
+                        <spot x="2711.604" y="2409.972" z="1552.703" h="16"/>
+                        <spot x="2722.573" y="2401.066" z="1551.408"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="263675" respawn_time="295">
+                        <spot x="2700.184" y="2397.434" z="1554.159" h="60"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="263660" respawn_time="295">
+                        <spot x="2711.320" y="2382.046" z="1552.129" h="103"/>
+                        <spot x="2694.617" y="2408.357" z="1553.985" h="82"/>
+                    </spawn>
+                    <!-- (B): Abyssal Aura -->
+                    <spawn npc_id="276728" respawn_time="295">
+                        <spot x="2708.425" y="2397.415" z="1552.520" static_id="12"/>
+                    </spawn>
+                    <!-- Seasoned Strongbow -->
+                    <spawn npc_id="263645" respawn_time="295">
+                        <spot x="2702.847" y="2410.914" z="1553.510" h="40"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="263601" respawn_time="295">
+                        <spot x="2715.699" y="2397.276" z="1554.148" h="60"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="263620" respawn_time="295">
+                        <spot x="2703.133" y="2383.241" z="1552.986" h="76"/>
+                        <spot x="2693.119" y="2397.665" z="1553.878" h="65"/>
+                        <spot x="2722.758" y="2392.382" z="1551.071"/>
+                        <spot x="2711.604" y="2409.972" z="1552.703" h="16"/>
+                        <spot x="2722.573" y="2401.066" z="1551.408"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="263665" respawn_time="295">
+                        <spot x="2700.184" y="2397.434" z="1554.159" h="60"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="263650" respawn_time="295">
+                        <spot x="2711.320" y="2382.046" z="1552.129" h="103"/>
+                        <spot x="2690.181" y="2401.785" z="1554.168" h="79"/>
+                    </spawn>
+                    <!-- (E): Abyssal Aura -->
+                    <spawn npc_id="276726" respawn_time="295">
+                        <spot x="2708.425" y="2397.415" z="1552.520" static_id="224"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="263635" respawn_time="295">
+                        <spot x="2702.847" y="2410.914" z="1553.510" h="40"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+		
+        <siege_spawn siege_id="1134">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="263925" respawn_time="295">
+                        <spot x="2457.394" y="2716.641" z="1564.111"/>
+                        <spot x="2437.029" y="2706.493" z="1562.326" h="83"/>
+                        <spot x="2457.208" y="2725.325" z="1564.830"/>
+                        <spot x="2446.381" y="2735.077" z="1565.149" h="20"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="263955" respawn_time="295">
+                        <spot x="2445.442" y="2705.863" z="1562.659" h="96"/>
+                        <spot x="2450.183" y="2739.750" z="1565.074" h="60"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="263940" respawn_time="295">
+                        <spot x="2427.680" y="2721.289" z="1564.198" h="60"/>
+                        <spot x="2438.934" y="2735.979" z="1565.111" h="36"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="263910" respawn_time="295">
+                        <spot x="2450.335" y="2721.536" z="1566.249" h="60"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="263970" respawn_time="295">
+                        <spot x="2434.820" y="2721.693" z="1566.243"/>
+                    </spawn>
+                    <!-- (A): Abyssal Aura -->
+                    <spawn npc_id="276727" respawn_time="295">
+                        <spot x="2442.380" y="2721.605" z="1563.837" static_id="13"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="263930" respawn_time="295">
+                        <spot x="2457.394" y="2716.641" z="1564.111"/>
+                        <spot x="2437.029" y="2706.493" z="1562.326" h="83"/>
+                        <spot x="2446.381" y="2735.077" z="1565.149" h="20"/>
+                        <spot x="2457.208" y="2725.325" z="1564.830"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="263960" respawn_time="295">
+                        <spot x="2445.442" y="2705.863" z="1562.659" h="96"/>
+                        <spot x="2453.805" y="2737.192" z="1564.970" h="42"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="263945" respawn_time="295">
+                        <spot x="2427.680" y="2721.289" z="1564.198" h="60"/>
+                        <spot x="2438.934" y="2735.979" z="1565.111" h="36"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="263914" respawn_time="295">
+                        <spot x="2450.335" y="2721.536" z="1566.249" h="60"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="263975" respawn_time="295">
+                        <spot x="2434.820" y="2721.693" z="1566.243"/>
+                    </spawn>
+                    <!-- (B): Abyssal Aura -->
+                    <spawn npc_id="276728" respawn_time="295">
+                        <spot x="2442.380" y="2721.605" z="1563.837" static_id="14"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="263950" respawn_time="295">
+                        <spot x="2438.335" y="2701.722" z="1561.986" h="119"/>
+                        <spot x="2445.442" y="2705.863" z="1562.659" h="96"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="263920" respawn_time="295">
+                        <spot x="2437.029" y="2706.493" z="1562.326" h="83"/>
+                        <spot x="2457.394" y="2716.641" z="1564.111"/>
+                        <spot x="2457.208" y="2725.325" z="1564.830"/>
+                        <spot x="2446.381" y="2735.077" z="1565.149" h="20"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="263935" respawn_time="295">
+                        <spot x="2427.680" y="2721.289" z="1564.198" h="60"/>
+                        <spot x="2438.934" y="2735.979" z="1565.111" h="36"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="263901" respawn_time="295">
+                        <spot x="2450.335" y="2721.536" z="1566.249" h="60"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="263965" respawn_time="295">
+                        <spot x="2434.820" y="2721.693" z="1566.243"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="276726" respawn_time="295">
+                        <spot x="2442.380" y="2721.605" z="1563.837" static_id="55"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+		
+		<siege_spawn siege_id="1135">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- High Protector -->
+                    <spawn npc_id="264210" respawn_time="295">
+                        <spot x="2909.310" y="2841.483" z="1453.086"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="264255" respawn_time="295">
+                        <spot x="2926.406" y="2821.412" z="1451.615" h="15"/>
+                        <spot x="2916.840" y="2825.040" z="1451.697" h="100"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="264225" respawn_time="295">
+                        <spot x="2927.362" y="2841.355" z="1452.215"/>
+                    </spawn>
+                    <!-- (A): Abyssal Aegis -->
+                    <spawn npc_id="276730" respawn_time="295">
+                        <spot x="2917.352" y="2841.743" z="1451.369" static_id="7"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="264240" respawn_time="295">
+                        <spot x="2916.760" y="2856.705" z="1452.839" h="13"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- High Protector -->
+                    <spawn npc_id="264214" respawn_time="295">
+                        <spot x="2909.310" y="2841.483" z="1453.086"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="264230" respawn_time="295">
+                        <spot x="2927.362" y="2841.355" z="1452.215"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="264260" respawn_time="295">
+                        <spot x="2916.840" y="2825.040" z="1451.697" h="100"/>
+                        <spot x="2934.491" y="2857.068" z="1452.704" h="101"/>
+                    </spawn>
+                    <!-- (B): Abyssal Aegis -->
+                    <spawn npc_id="276731" respawn_time="295">
+                        <spot x="2917.352" y="2841.743" z="1451.369" static_id="66"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="264245" respawn_time="295">
+                        <spot x="2916.760" y="2856.705" z="1452.839" h="13"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="264201" respawn_time="295">
+                        <spot x="2909.310" y="2841.483" z="1453.086"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="264220" respawn_time="295">
+                        <spot x="2927.362" y="2841.355" z="1452.215"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="264250" respawn_time="295">
+                        <spot x="2916.840" y="2825.040" z="1451.697" h="100"/>
+                        <spot x="2898.354" y="2851.840" z="1451.896" h="9"/>
+                    </spawn>
+                    <!-- (E): Abyssal Aegis -->
+                    <spawn npc_id="276729" respawn_time="295">
+                        <spot x="2917.352" y="2841.743" z="1451.369" static_id="9"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="264235" respawn_time="295">
+                        <spot x="2916.760" y="2856.705" z="1452.839" h="13"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+		<siege_spawn siege_id="1142">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="264855" respawn_time="295">
+                        <spot x="1298.762" y="1249.905" z="1513.827" h="119"/>
+                        <spot x="1307.436" y="1256.853" z="1513.025" h="103"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="264825" respawn_time="295">
+                        <spot x="1290.595" y="1271.881" z="1513.178" h="65"/>
+                        <spot x="1299.631" y="1257.648" z="1513.457" h="76"/>
+                        <spot x="1319.276" y="1275.281" z="1511.289"/>
+                        <spot x="1319.462" y="1266.597" z="1511.943"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="264870" respawn_time="295">
+                        <spot x="1296.377" y="1271.990" z="1513.771" h="56"/>
+                    </spawn>
+                    <!-- (A): Abyssal Aura -->
+                    <spawn npc_id="276727" respawn_time="295">
+                        <spot x="1304.497" y="1271.720" z="1512.495" static_id="228"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="264806" respawn_time="295">
+                        <spot x="1312.403" y="1271.491" z="1513.774" h="60"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="264840" respawn_time="295">
+                        <spot x="1304.360" y="1287.981" z="1510.716" h="26"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="264860" respawn_time="295">
+                        <spot x="1286.435" y="1275.051" z="1513.359" h="16"/>
+                        <spot x="1307.436" y="1256.853" z="1513.025" h="7"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="264875" respawn_time="295">
+                        <spot x="1296.377" y="1271.990" z="1513.771" h="56"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="264830" respawn_time="295">
+                        <spot x="1299.631" y="1257.648" z="1513.457" h="76"/>
+                        <spot x="1290.595" y="1271.881" z="1513.178" h="65"/>
+                        <spot x="1319.276" y="1275.281" z="1511.289"/>
+                        <spot x="1319.462" y="1266.597" z="1511.943" h="118"/>
+                    </spawn>
+                    <!-- (B): Abyssal Aura -->
+                    <spawn npc_id="276728" respawn_time="295">
+                        <spot x="1304.497" y="1271.720" z="1512.495" static_id="226"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="264814" respawn_time="295">
+                        <spot x="1312.403" y="1271.491" z="1513.774" h="114"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="264850" respawn_time="295">
+                        <spot x="1305.953" y="1248.305" z="1512.756" h="58"/>
+                        <spot x="1307.436" y="1256.853" z="1513.025" h="103"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="264865" respawn_time="295">
+                        <spot x="1296.377" y="1271.990" z="1513.771" h="56"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="264820" respawn_time="295">
+                        <spot x="1290.595" y="1271.881" z="1513.178" h="65"/>
+                        <spot x="1299.631" y="1257.648" z="1513.457" h="76"/>
+                        <spot x="1319.276" y="1275.281" z="1511.289"/>
+                        <spot x="1319.462" y="1266.597" z="1511.943"/>
+                    </spawn>
+                    <!-- (E): Abyssal Aura -->
+                    <spawn npc_id="276726" respawn_time="295">
+                        <spot x="1304.497" y="1271.720" z="1512.495" static_id="227"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="264804" respawn_time="295">
+                        <spot x="1312.403" y="1271.491" z="1513.774" h="60"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="264835" respawn_time="295">
+                        <spot x="1304.360" y="1287.981" z="1510.716" h="26"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1143">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265125" respawn_time="295">
+                        <spot x="1232.210" y="1069.532" z="1694.320" h="92"/>
+                        <spot x="1264.566" y="1073.224" z="1692.061"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265140" respawn_time="295">
+                        <spot x="1240.982" y="1072.958" z="1693.601" h="60"/>
+                        <spot x="1251.241" y="1089.872" z="1691.500" h="16"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="265106" respawn_time="295">
+                        <spot x="1258.703" y="1073.239" z="1694.638" h="61"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265155" respawn_time="295">
+                        <spot x="1251.183" y="1059.153" z="1693.784" h="111"/>
+                    </spawn>
+                    <!-- (A): Abyssal Aegis -->
+                    <spawn npc_id="276730" respawn_time="295">
+                        <spot x="1250.457" y="1072.726" z="1692.895" static_id="190"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265130" respawn_time="295">
+                        <spot x="1262.574" y="1055.646" z="1693.925" h="4"/>
+                        <spot x="1264.566" y="1073.224" z="1692.061"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265145" respawn_time="295">
+                        <spot x="1240.982" y="1072.958" z="1693.601" h="60"/>
+                        <spot x="1251.241" y="1089.872" z="1691.500" h="16"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="265114" respawn_time="295">
+                        <spot x="1258.703" y="1073.239" z="1694.638" h="61"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265160" respawn_time="295">
+                        <spot x="1251.183" y="1059.153" z="1693.784" h="103"/>
+                    </spawn>
+                    <!-- (B): Abyssal Aegis -->
+                    <spawn npc_id="276731" respawn_time="295">
+                        <spot x="1250.457" y="1072.726" z="1692.895" static_id="95"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265120" respawn_time="295">
+                        <spot x="1249.920" y="1054.558" z="1694.184" h="119"/>
+                        <spot x="1264.566" y="1073.224" z="1692.061"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265135" respawn_time="295">
+                        <spot x="1240.982" y="1072.958" z="1693.601" h="60"/>
+                        <spot x="1251.241" y="1089.872" z="1691.500" h="16"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265150" respawn_time="295">
+                        <spot x="1251.183" y="1059.153" z="1693.784" h="103"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="265104" respawn_time="295">
+                        <spot x="1258.703" y="1073.239" z="1694.638" h="61"/>
+                    </spawn>
+                    <!-- (E): Abyssal Aegis -->
+                    <spawn npc_id="276729" respawn_time="295">
+                        <spot x="1250.457" y="1072.726" z="1692.895" static_id="96"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1144">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265425" respawn_time="295">
+                        <spot x="1486.906" y="991.750" z="1691.683"/>
+                        <spot x="1515.066" y="1007.888" z="1693.541"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265440" respawn_time="295">
+                        <spot x="1488.769" y="1007.722" z="1693.742" h="60"/>
+                        <spot x="1501.106" y="1022.478" z="1694.429" h="30"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265455" respawn_time="295">
+                        <spot x="1501.476" y="992.360" z="1691.913" h="90"/>
+                    </spawn>
+                    <!-- (A): Tenebrous Cloak -->
+                    <spawn npc_id="276733" respawn_time="295">
+                        <spot x="1500.249" y="1007.804" z="1693.363" static_id="100"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="265406" respawn_time="295">
+                        <spot x="1508.427" y="1008.061" z="1695.606" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265430" respawn_time="295">
+                        <spot x="1504.098" y="987.543" z="1691.130" h="2"/>
+                        <spot x="1515.066" y="1007.888" z="1693.541"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265460" respawn_time="295">
+                        <spot x="1501.476" y="992.360" z="1691.913" h="90"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265445" respawn_time="295">
+                        <spot x="1488.769" y="1007.722" z="1693.742" h="60"/>
+                        <spot x="1501.106" y="1022.478" z="1694.429" h="30"/>
+                    </spawn>
+                    <!-- (B): Tenebrous Cloak -->
+                    <spawn npc_id="276734" respawn_time="295">
+                        <spot x="1500.249" y="1007.804" z="1693.363" static_id="98"/>
+                    </spawn>
+                    <!-- Acolyte Protector -->
+                    <spawn npc_id="265413" respawn_time="295">
+                        <spot x="1508.427" y="1008.061" z="1695.606" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265420" respawn_time="295">
+                        <spot x="1495.068" y="987.764" z="1691.403" h="114"/>
+                        <spot x="1515.066" y="1007.888" z="1693.541"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265435" respawn_time="295">
+                        <spot x="1501.106" y="1022.478" z="1694.429" h="30"/>
+                        <spot x="1488.769" y="1007.722" z="1693.742" h="60"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265450" respawn_time="295">
+                        <spot x="1501.476" y="992.360" z="1691.913" h="90"/>
+                    </spawn>
+                    <!-- (E): Tenebrous Cloak -->
+                    <spawn npc_id="276732" respawn_time="295">
+                        <spot x="1500.249" y="1007.804" z="1693.363" static_id="99"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="265401" respawn_time="295">
+                        <spot x="1508.427" y="1008.061" z="1695.606" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+		<siege_spawn siege_id="1145">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="271755" respawn_time="295">
+                        <spot x="1531.753" y="1277.096" z="1692.239" h="90"/>
+                        <spot x="1513.162" y="1289.833" z="1691.025" h="92"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="260369" respawn_time="295">
+                        <spot x="1524.036" y="1292.361" z="1694.333"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="260339" respawn_time="295">
+                        <spot x="1518.320" y="1292.508" z="1691.577" h="60"/>
+                        <spot x="1532.192" y="1305.780" z="1693.480" h="30"/>
+                    </spawn>
+                    <!-- (E): Kerubic Metamorphosis -->
+                    <spawn npc_id="276736" respawn_time="295">
+                        <spot x="1531.957" y="1292.950" z="1692.807" static_id="94"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="265110" respawn_time="295">
+                        <spot x="1539.366" y="1292.335" z="1694.323" h="60"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="260324" respawn_time="295">
+                        <spot x="1545.373" y="1296.422" z="1694.121"/>
+                        <spot x="1545.558" y="1287.738" z="1693.837"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265760" respawn_time="295">
+                        <spot x="1531.753" y="1277.096" z="1692.239" h="90"/>
+                        <spot x="1517.750" y="1300.527" z="1692.429" h="91"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="265775" respawn_time="295">
+                        <spot x="1524.036" y="1292.361" z="1694.333"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265745" respawn_time="295">
+                        <spot x="1518.320" y="1292.508" z="1691.577" h="60"/>
+                        <spot x="1532.192" y="1305.780" z="1693.480" h="30"/>
+                    </spawn>
+                    <!-- (B): Kerubic Metamorphosis -->
+                    <spawn npc_id="276737" respawn_time="295">
+                        <spot x="1531.957" y="1292.950" z="1692.807" static_id="93"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="265714" respawn_time="295">
+                        <spot x="1539.366" y="1292.335" z="1694.323" h="60"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265730" respawn_time="295">
+                        <spot x="1545.373" y="1296.422" z="1694.121"/>
+                        <spot x="1545.558" y="1287.738" z="1693.837"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Artifact (E): Kerubic Metamorphosis -->
+                    <spawn npc_id="276735" respawn_time="295">
+                        <spot x="1531.98" y="1292.94" z="1694.27" static_id="94"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="265765" respawn_time="295">
+                        <spot x="1524.04" y="1292.36" z="1694.33"/>
+                    </spawn>
+                    <!-- High Protector -->
+                    <spawn npc_id="265704" respawn_time="295">
+                        <spot x="1539.37" y="1292.33" z="1694.32" h="13"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="265750" respawn_time="295">
+                        <spot x="1553.88" y="1294.3" z="1694.45" h="42"/>
+                        <spot x="1531.75" y="1277.1" z="1692.24" h="90"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="265720" respawn_time="295">
+                        <spot x="1545.56" y="1287.74" z="1693.84"/>
+                        <spot x="1545.37" y="1296.42" z="1694.12"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="265735" respawn_time="295">
+                        <spot x="1532.19" y="1305.78" z="1693.48" h="30"/>
+                        <spot x="1518.32" y="1292.51" z="1691.58" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+		<siege_spawn siege_id="1146">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="266025" respawn_time="295">
+                        <spot x="1291.782" y="1370.875" z="1694.561" h="104"/>
+                        <spot x="1322.674" y="1377.604" z="1692.673"/>
+                        <spot x="1322.489" y="1386.288" z="1691.530"/>
+                    </spawn>
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="266055" respawn_time="295">
+                        <spot x="1308.771" y="1367.237" z="1693.751" h="90"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="266070" respawn_time="295">
+                        <spot x="1300.908" y="1382.146" z="1694.195"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="266040" respawn_time="295">
+                        <spot x="1308.890" y="1397.590" z="1691.648" h="30"/>
+                        <spot x="1295.972" y="1382.118" z="1693.569" h="60"/>
+                    </spawn>
+                    <!-- (A): Daevic Efflux -->
+                    <spawn npc_id="276739" respawn_time="295">
+                        <spot x="1308.822" y="1382.164" z="1692.717" static_id="103"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="266006" respawn_time="295">
+                        <spot x="1316.238" y="1382.119" z="1694.185" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="266060" respawn_time="295">
+                        <spot x="1308.771" y="1367.237" z="1693.751" h="90"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="266030" respawn_time="295">
+                        <spot x="1290.104" y="1377.608" z="1694.268" h="92"/>
+                        <spot x="1322.674" y="1377.604" z="1692.673"/>
+                        <spot x="1322.489" y="1386.288" z="1691.530"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="266045" respawn_time="295">
+                        <spot x="1308.890" y="1397.590" z="1691.648" h="30"/>
+                        <spot x="1295.972" y="1382.118" z="1693.569" h="60"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="266075" respawn_time="295">
+                        <spot x="1300.908" y="1382.146" z="1694.195"/>
+                    </spawn>
+                    <!-- (B): Daevic Efflux -->
+                    <spawn npc_id="276740" respawn_time="295">
+                        <spot x="1308.822" y="1382.164" z="1692.717" static_id="101"/>
+                    </spawn>
+                    <!-- Acolyte Protector -->
+                    <spawn npc_id="266013" respawn_time="295">
+                        <spot x="1316.238" y="1382.119" z="1694.185" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Veteran Magus -->
+                    <spawn npc_id="266050" respawn_time="295">
+                        <spot x="1308.771" y="1367.237" z="1693.751" h="90"/>
+                    </spawn>
+                    <!-- Veteran Crusader -->
+                    <spawn npc_id="266020" respawn_time="295">
+                        <spot x="1293.876" y="1389.456" z="1693.201" h="79"/>
+                        <spot x="1322.674" y="1377.604" z="1692.673"/>
+                        <spot x="1322.489" y="1386.288" z="1691.530"/>
+                    </spawn>
+                    <!-- Veteran Curate -->
+                    <spawn npc_id="266065" respawn_time="295">
+                        <spot x="1300.908" y="1382.146" z="1694.195"/>
+                    </spawn>
+                    <!-- Veteran Strongbow -->
+                    <spawn npc_id="266035" respawn_time="295">
+                        <spot x="1295.972" y="1382.118" z="1693.569" h="60"/>
+                        <spot x="1308.890" y="1397.590" z="1691.648" h="30"/>
+                    </spawn>
+                    <!-- (E): Daevic Efflux -->
+                    <spawn npc_id="276738" respawn_time="295">
+                        <spot x="1308.822" y="1382.164" z="1692.717" static_id="102"/>
+                    </spawn>
+                    <!-- Initiate Protector -->
+                    <spawn npc_id="266001" respawn_time="295">
+                        <spot x="1316.238" y="1382.119" z="1694.185" h="60"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+		
+        <siege_spawn siege_id="1224">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- BOSS - High Protector -->
+                    <spawn npc_id="268710" respawn_time="295">
+                        <spot x="2145.168" y="1940.198" z="3104.113" h="60"/>
+                    </spawn>
+                    <!-- (A): Hellfire Array -->
+                    <spawn npc_id="276751" respawn_time="295">
+                        <spot x="2152.672" y="1940.154" z="3103.240" static_id="256"/>
+                    </spawn>
+                    <spawn npc_id="805414" respawn_time="295">
+                        <spot x="2166.9888" y="1943.3335" z="3101.7576" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805567" respawn_time="295">
+                        <spot x="2166.9575" y="1937.0302" z="3101.4275" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805568" respawn_time="295">
+                        <spot x="2166.9976" y="1939.067" z="3101.5" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805569" respawn_time="295">
+                        <spot x="2167.0173" y="1941.1798" z="3101.6265" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805596" respawn_time="295">
+                        <spot x="2166.9119" y="1935.018" z="3101.4253" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883227" respawn_time="295">
+                        <spot x="2168.905" y="1921.5164" z="3097.7893" h="103"/>
+                        <spot x="2169.089" y="1960.4443" z="3098.9321" h="13"/>
+                        <spot x="2140.5574" y="1918.7612" z="3100.8574" h="73"/>
+                        <spot x="2138.2515" y="1964.327" z="3102.0283" h="46"/>
+                    </spawn>
+                    <spawn npc_id="883228" respawn_time="295">
+                        <spot x="2160.3352" y="1940.3313" z="3104.1116" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883229" respawn_time="295">
+                        <spot x="2176.9146" y="1940.3672" z="3098.434" h="0"/>
+                        <spot x="2139.9543" y="1934.5701" z="3103.421" h="115"/>
+                        <spot x="2139.4915" y="1945.4277" z="3102.9514" h="95"/>
+                    </spawn>
+                    <spawn npc_id="883231" respawn_time="295">
+                        <spot x="2180.5825" y="1940.7095" z="3096.4036" h="38"/>
+                        <spot x="2152.5996" y="1925.3645" z="3103.4583" h="90"/>
+                        <spot x="2152.7483" y="1958.3007" z="3101.983" h="62"/>
+                        <spot x="2125.542" y="1939.8352" z="3100.4375" h="103"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- BOSS - Initiate Protector -->
+                    <spawn npc_id="268712" respawn_time="295">
+                        <spot x="2145.168" y="1940.198" z="3104.113"/>
+                    </spawn>
+                    <!-- (B): Hellfire Array -->
+                    <spawn npc_id="276752" respawn_time="295">
+                        <spot x="2152.672" y="1940.154" z="3103.240" static_id="231"/>
+                    </spawn>
+                    <!-- <spawn npc_id="883554" handler="ATTACKER">
+                        <spot x="2139.61" y="1940.36" z="3102.9275" h="91"/>
+                    </spawn> -->
+                    <spawn npc_id="883053" respawn_time="295">
+                        <spot x="2138.2515" y="1964.327" z="3102.0283" h="46"/>
+                        <spot x="2169.089" y="1960.4443" z="3098.9321" h="13"/>
+                        <spot x="2140.5574" y="1918.7612" z="3100.8574" h="73"/>
+                        <spot x="2168.905" y="1921.5164" z="3097.7893" h="103"/>
+                    </spawn>
+                    <spawn npc_id="883054" respawn_time="295">
+                        <spot x="2160.3352" y="1940.3313" z="3104.1116" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883055" respawn_time="295">
+                        <spot x="2139.4915" y="1945.4277" z="3102.9514" h="60"/>
+                        <spot x="2139.9543" y="1934.5701" z="3103.421" h="60"/>
+                        <spot x="2176.9146" y="1940.3672" z="3098.434" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883057" respawn_time="295">
+                        <spot x="2152.7483" y="1958.3007" z="3101.983" h="30"/>
+                        <spot x="2125.542" y="1939.8352" z="3100.4375" h="60"/>
+                        <spot x="2152.5996" y="1925.3645" z="3103.4583" h="90"/>
+                        <spot x="2180.217" y="1940.3362" z="3096.5947" h="13"/>
+                    </spawn>                    
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- BOSS - Initiate Protector -->
+                    <spawn npc_id="268701" respawn_time="295">
+                        <spot x="2145.168" y="1940.198" z="3104.113"/>
+                    </spawn>
+                    <!-- (E): Hellfire Array -->
+                    <spawn npc_id="276750" respawn_time="295">
+                        <spot x="2152.672" y="1940.154" z="3103.240" static_id="257"/>
+                    </spawn>
+                    <spawn npc_id="805391" respawn_time="295">
+                        <spot x="2166.9888" y="1943.3335" z="3101.7576" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805564" respawn_time="295">
+                        <spot x="2166.9575" y="1937.0302" z="3101.4275" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805565" respawn_time="295">
+                        <spot x="2166.9976" y="1939.067" z="3101.5" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805566" respawn_time="295">
+                        <spot x="2167.0173" y="1941.1798" z="3101.6265" h="0"/>
+                    </spawn>
+                    <spawn npc_id="805588" respawn_time="295">
+                        <spot x="2166.9119" y="1935.018" z="3101.4253" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883221" respawn_time="295">
+                        <spot x="2138.2515" y="1964.327" z="3102.0283" h="46"/>
+                        <spot x="2169.089" y="1960.4443" z="3098.9321" h="13"/>
+                        <spot x="2140.5574" y="1918.7612" z="3100.8574" h="73"/>
+                        <spot x="2168.905" y="1921.5164" z="3097.7893" h="103"/>
+                    </spawn>
+                    <spawn npc_id="883222" respawn_time="295">
+                        <spot x="2160.3352" y="1940.3313" z="3104.1116" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883223" respawn_time="295">
+                        <spot x="2139.4915" y="1945.4277" z="3102.9514" h="60"/>
+                        <spot x="2176.9146" y="1940.3672" z="3098.434" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883225" respawn_time="295">
+                        <spot x="2152.7483" y="1958.3007" z="3101.983" h="30"/>
+                        <spot x="2125.542" y="1939.8352" z="3100.4375" h="60"/>
+                        <spot x="2179.6665" y="1939.9413" z="3096.877" h="74"/>
+                        <spot x="2152.5996" y="1925.3645" z="3103.4583" h="90"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+		</spawn_map>
+</spawns>

@@ -38,8 +38,8 @@ public class CmdGiveTitle extends AbstractGMHandler {
             t = World.getInstance().findPlayer(Util.convertName(admin.getTarget().getName()));
         Integer titleId = Integer.parseInt(params);
 
-        if ((titleId > 272) || (titleId < 1)) {
-            PacketSendUtility.sendMessage(admin, "title id " + titleId + " is invalid (must be between 1 and 272)");
+        if ((titleId > 301) || (titleId < 1)) {
+            PacketSendUtility.sendMessage(admin, "title id " + titleId + " is invalid (must be between 1 and 301)");
         } else {
             if (t != null) {
                 if (!t.getTitleList().addTitle(titleId, false, 0)) {

@@ -80,7 +80,7 @@ public class EventsConfig {
 	@Property(key="gameserver.event.arcade.enable", defaultValue="false")
 	public static boolean ENABLE_EVENT_ARCADE;
 
-    @Property(key="gameserver.event.arcade.chance", defaultValue="50")
+    @Property(key="gameserver.event.arcade.chance", defaultValue="70")
     public static int EVENT_ARCADE_CHANCE;
     
     @Property(key="gameserver.event.arcade.frenzy_time", defaultValue="90")
