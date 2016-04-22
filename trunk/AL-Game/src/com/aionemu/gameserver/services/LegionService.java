@@ -1080,7 +1080,7 @@ public class LegionService {
      * @param legion
      */
     public void performRankingUpdate(Map<Integer, Integer> legionRanking) {
-        GameServer.log.info("[LegionService] Legion ranking update task started");
+        GameServer.log.debug("[LegionService] Legion ranking update task started");
         long startTime = System.currentTimeMillis();
 
         Iterator<Legion> legionsIterator = allCachedLegions.iterator();
@@ -1098,7 +1098,7 @@ public class LegionService {
         }
 
         long workTime = System.currentTimeMillis() - startTime;
-        log.info("[LegionService] Legion ranking update: " + workTime + " ms, legions: " + legionsUpdated);
+        log.debug("[LegionService] Legion ranking update: " + workTime + " ms, legions: " + legionsUpdated);
     }
 
     public void LegionWhUpdate(Player player) {
