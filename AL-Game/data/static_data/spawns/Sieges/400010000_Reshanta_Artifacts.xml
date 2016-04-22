@@ -917,6 +917,456 @@
                 </siege_mod>
             </siege_race>
         </siege_spawn>
+        <siege_spawn siege_id="1401">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Archon Blaze of the Abyss -->
+                    <spawn npc_id="251580" respawn_time="295">
+                        <spot h="0" static_id="2364" x="1591.5039" y="1752.8395" z="2890.4531"/>
+                    </spawn>
+                    <!-- Harbinger Captain -->
+                    <spawn npc_id="251484" respawn_time="295">
+                        <spot x="1583.733" y="1744.82" z="2891.735" h="74"/>
+                    </spawn>
+                    <spawn npc_id="805415" respawn_time="295">
+                        <spot x="1603.2788" y="1760.1482" z="2890.4531" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805573" respawn_time="295">
+                        <spot x="1598.82" y="1764.5796" z="2890.4534" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805574" respawn_time="295">
+                        <spot x="1600.2408" y="1763.1702" z="2890.4534" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805575" respawn_time="295">
+                        <spot x="1601.7885" y="1761.6532" z="2890.4531" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805599" respawn_time="295">
+                        <spot x="1597.3903" y="1765.9799" z="2890.4534" h="16"/>
+                    </spawn>
+                    <spawn npc_id="883239" respawn_time="295">
+                        <spot x="1617.8104" y="1727.5051" z="2888.7927" h="110"/>
+                        <spot x="1608.8586" y="1738.0294" z="2884.2488" h="110"/>
+                        <spot x="1569.0938" y="1768.4929" z="2882.7588" h="46"/>
+                        <spot x="1560.5278" y="1779.7361" z="2889.0037" h="46"/>
+                    </spawn>
+                    <spawn npc_id="883240" respawn_time="295">
+                        <spot x="1596.8518" y="1757.4265" z="2892.939" h="15"/>
+                    </spawn>
+                    <spawn npc_id="883241" respawn_time="295">
+                        <spot x="1615.4652" y="1769.6737" z="2890.4531" h="70"/>
+                        <spot x="1622.4839" y="1735.089" z="2889.0422" h="106"/>
+                        <spot x="1594.0221" y="1759.805" z="2892.9397" h="15"/>
+                        <spot x="1577.597" y="1745.0522" z="2890.4531" h="74"/>
+                        <spot x="1561.4012" y="1736.925" z="2890.4531" h="10"/>
+                        <spot x="1555.7784" y="1773.4371" z="2888.9597" h="46"/>
+                    </spawn>
+                    <spawn npc_id="883243">
+                        <spot x="1603.8219" y="1748.0208" z="2890.4531" h="113"/>
+                        <spot x="1595.8912" y="1784.026" z="2890.4531" h="83"/>
+                        <spot x="1585.471" y="1739.0618" z="2890.4531" h="74"/>
+                        <spot x="1583.8945" y="1764.4528" z="2890.4531" h="43"/>
+                        <spot x="1581.5219" y="1722.2617" z="2890.4531" h="16"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Balaur Blaze of the Abyss -->
+                    <spawn npc_id="251581" respawn_time="295">
+                        <spot x="1591.5039" y="1752.8395" z="2890.4531" static_id="2364"/>
+                    </spawn>
+                    <!-- Boss - Dread Remnant Lieutenant -->
+                    <spawn npc_id="251454" respawn_time="295">
+                        <spot x="1583.733" y="1744.82" z="2891.735" h="74"/>
+                    </spawn>
+                    <!-- <spawn npc_id="883573" handler="ATTACKER">
+                        <spot x="1581.5" y="1742" z="2890.4531" h="101"/>
+                    </spawn> -->
+                    <spawn npc_id="883059" respawn_time="295">
+                        <spot x="1560.5278" y="1779.7361" z="2889.0037" h="46"/>
+                        <spot x="1569.0938" y="1768.4929" z="2882.7588" h="46"/>
+                        <spot x="1608.8586" y="1738.0294" z="2884.2488" h="110"/>
+                        <spot x="1617.8104" y="1727.5051" z="2888.7927" h="110"/>
+                    </spawn>
+                    <spawn npc_id="883060" respawn_time="295">
+                        <spot x="1596.8518" y="1757.4265" z="2892.939" h="15"/>
+                    </spawn>
+                    <spawn npc_id="883061" respawn_time="295">
+                        <spot x="1615.4652" y="1769.6737" z="2890.4531" h="70"/>
+                        <spot x="1594.0221" y="1759.805" z="2892.9397" h="15"/>
+                        <spot x="1555.7784" y="1773.4371" z="2888.9597" h="46"/>
+                        <spot x="1577.597" y="1745.0522" z="2890.4531" h="74"/>
+                        <spot x="1622.4839" y="1735.089" z="2889.0422" h="106"/>
+                        <spot x="1561.4012" y="1736.925" z="2890.4531" h="10"/>
+                    </spawn>
+                    <spawn npc_id="883063" respawn_time="295">
+                        <spot x="1595.8912" y="1784.026" z="2890.4531" h="83"/>
+                        <spot x="1603.8219" y="1748.0208" z="2890.4531" h="113"/>
+                        <spot x="1583.8945" y="1764.4528" z="2890.4531" h="43"/>
+                        <spot x="1585.471" y="1739.0618" z="2890.4531" h="74"/>
+                        <spot x="1581.5219" y="1722.2617" z="2890.4531" h="16"/>
+                    </spawn>                    
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Guardian Blaze of the Abyss -->
+                    <spawn npc_id="251579" respawn_time="295">
+                        <spot h="0" static_id="2364" x="1591.5039" y="1752.8395" z="2890.4531"/>
+                    </spawn>
+                    <!-- Upright Captain -->
+                    <spawn npc_id="251471" respawn_time="295">
+                        <spot x="1583.733" y="1744.82" z="2891.735" h="74"/>
+                    </spawn>
+                    <spawn npc_id="805392" respawn_time="295">
+                        <spot x="1603.2788" y="1760.1482" z="2890.4531" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805570" respawn_time="295">
+                        <spot x="1598.82" y="1764.5796" z="2890.4534" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805571" respawn_time="295">
+                        <spot x="1600.2408" y="1763.1702" z="2890.4534" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805572" respawn_time="295">
+                        <spot x="1601.7885" y="1761.6532" z="2890.4531" h="16"/>
+                    </spawn>
+                    <spawn npc_id="805591" respawn_time="295">
+                        <spot x="1597.3903" y="1765.9799" z="2890.4534" h="16"/>
+                    </spawn>
+                    <spawn npc_id="883233" respawn_time="295">
+                        <spot x="1617.8104" y="1727.5051" z="2888.7927" h="110"/>
+                        <spot x="1608.8586" y="1738.0294" z="2884.2488" h="110"/>
+                        <spot x="1569.0938" y="1768.4929" z="2882.7588" h="46"/>
+                        <spot x="1560.5278" y="1779.7361" z="2889.0037" h="46"/>
+                    </spawn>
+                    <spawn npc_id="883234" respawn_time="295">
+                        <spot x="1596.8518" y="1757.4265" z="2892.939" h="15"/>
+                    </spawn>
+                    <spawn npc_id="883235" respawn_time="295">
+                        <spot x="1622.4839" y="1735.089" z="2889.0422" h="106"/>
+                        <spot x="1615.4652" y="1769.6737" z="2890.4531" h="70"/>
+                        <spot x="1594.0221" y="1759.805" z="2892.9397" h="15"/>
+                        <spot x="1577.597" y="1745.0522" z="2890.4531" h="74"/>
+                        <spot x="1561.4012" y="1736.925" z="2890.4531" h="10"/>
+                        <spot x="1555.7784" y="1773.4371" z="2888.9597" h="46"/>
+                    </spawn>
+                    <spawn npc_id="883237" respawn_time="295">
+                        <spot x="1603.8219" y="1748.0208" z="2890.4531" h="113"/>
+                        <spot x="1581.5219" y="1722.2617" z="2890.4531" h="16"/>
+                        <spot x="1585.471" y="1739.0618" z="2890.4531" h="74"/>
+                        <spot x="1595.8912" y="1784.026" z="2890.4531" h="83"/>
+                        <spot x="1583.8945" y="1764.4528" z="2890.4531" h="43"/>
+                        <spot x="1491.9044" y="1680.3906" z="2903.3982" h="16"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1402">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Archon Blaze of the Abyss -->
+                    <spawn npc_id="251583" respawn_time="295">
+                        <spot h="0" static_id="2362" x="2414.9963" y="1641.8105" z="2885.056"/>
+                    </spawn>
+                    <!-- Harbinger Captain -->
+                    <spawn npc_id="251527" respawn_time="295">
+                        <spot x="2408.21" y="1651.24" z="2885.65" h="37"/>
+                    </spawn>
+                    <spawn npc_id="805416" respawn_time="295">
+                        <spot x="2424.6619" y="1631.5353" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805579" respawn_time="295">
+                        <spot x="2418.5852" y="1626.9427" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805580" respawn_time="295">
+                        <spot x="2420.0154" y="1628.1908" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805581" respawn_time="295">
+                        <spot x="2421.5156" y="1629.193" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805600" respawn_time="295">
+                        <spot x="2423.093" y="1630.2649" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="883251" respawn_time="295">
+                        <spot x="2449.37" y="1660.9135" z="2883.2974" h="6"/>
+                        <spot x="2439.7268" y="1657.794" z="2885.056" h="6"/>
+                        <spot x="2393.0144" y="1624.3562" z="2885.056" h="70"/>
+                        <spot x="2380.8013" y="1620.9789" z="2883.1084" h="70"/>
+                    </spawn>
+                    <spawn npc_id="883252" respawn_time="295">
+                        <spot x="2420.772" y="1636.1188" z="2887.5833" h="106"/>
+                    </spawn>
+                    <spawn npc_id="883253" respawn_time="295">
+                        <spot x="2444.141" y="1668.2983" z="2883.2625" h="15"/>
+                        <spot x="2410.6602" y="1656.0194" z="2885.0562" h="50"/>
+                        <spot x="2408.4294" y="1671.337" z="2885.0562" h="93"/>
+                        <spot x="2417.7913" y="1634.184" z="2887.5808" h="106"/>
+                        <spot x="2423.0913" y="1609.4629" z="2885.056" h="36"/>
+                        <spot x="2385.191" y="1612.9786" z="2883.3208" h="73"/>
+                    </spawn>
+                    <spawn npc_id="883255" respawn_time="295">
+                        <spot x="2428.7393" y="1644.4404" z="2885.056" h="3"/>
+                        <spot x="2443.1548" y="1623.329" z="2885.0562" h="50"/>
+                        <spot x="2402.588" y="1650.752" z="2885.0562" h="40"/>
+                        <spot x="2388.6787" y="1657.6315" z="2885.0564" h="103"/>
+                        <spot x="2406.6335" y="1629.7112" z="2885.056" h="66"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Balaur Blaze of the Abyss -->
+                    <spawn npc_id="251584" respawn_time="295">
+                        <spot h="0" static_id="2362" x="2414.9963" y="1641.8105" z="2885.056"/>
+                    </spawn>
+                    <!-- Dread Remnant Captain -->
+                    <spawn npc_id="251497" respawn_time="295">
+                        <spot x="2408.21" y="1651.24" z="2885.65" h="37"/>
+                    </spawn>
+                    <!-- <spawn npc_id="883592" handler="ATTACKER">
+                        <spot x="2406" y="1654.5" z="2885.056" h="101"/>
+                    </spawn> -->
+                    <spawn npc_id="883065" respawn_time="295">
+                        <spot x="2380.8013" y="1620.9789" z="2883.1084" h="70"/>
+                        <spot x="2393.0144" y="1624.3562" z="2885.056" h="70"/>
+                        <spot x="2439.7268" y="1657.794" z="2885.056" h="6"/>
+                        <spot x="2449.37" y="1660.9135" z="2883.2974" h="6"/>
+                    </spawn>
+                    <spawn npc_id="883066" respawn_time="295">
+                        <spot x="2420.772" y="1636.1188" z="2887.5833" h="106"/>
+                    </spawn>
+                    <spawn npc_id="883067" respawn_time="295">
+                        <spot x="2385.191" y="1612.9786" z="2883.3208" h="73"/>
+                        <spot x="2423.0913" y="1609.4629" z="2885.056" h="36"/>
+                        <spot x="2417.7913" y="1634.184" z="2887.5808" h="106"/>
+                        <spot x="2410.6602" y="1656.0194" z="2885.0562" h="50"/>
+                        <spot x="2408.4294" y="1671.337" z="2885.0562" h="93"/>
+                        <spot x="2444.141" y="1668.2983" z="2883.2625" h="15"/>
+                    </spawn>
+                    <spawn npc_id="883069" respawn_time="295">
+                        <spot x="2406.6335" y="1629.7112" z="2885.056" h="66"/>
+                        <spot x="2443.1548" y="1623.329" z="2885.0562" h="50"/>
+                        <spot x="2428.7393" y="1644.4404" z="2885.056" h="3"/>
+                        <spot x="2402.588" y="1650.752" z="2885.0562" h="40"/>
+                        <spot x="2388.6787" y="1657.6315" z="2885.0564" h="103"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Guardian Blaze of the Abyss -->
+                    <spawn npc_id="251582" respawn_time="295">
+                        <spot h="0" static_id="2362" x="2414.9963" y="1641.8105" z="2885.056"/>
+                    </spawn>
+                    <!-- Upright Captain -->
+                    <spawn npc_id="251514" respawn_time="295">
+                        <spot x="2408.21" y="1651.24" z="2885.65" h="37"/>
+                    </spawn>
+                    <spawn npc_id="805393" respawn_time="295">
+                        <spot x="2424.6619" y="1631.5353" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805576" respawn_time="295">
+                        <spot x="2418.5852" y="1626.9427" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805577" respawn_time="295">
+                        <spot x="2420.0154" y="1628.1908" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805578" respawn_time="295">
+                        <spot x="2421.5156" y="1629.193" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="805592" respawn_time="295">
+                        <spot x="2423.093" y="1630.2649" z="2885.056" h="101"/>
+                    </spawn>
+                    <spawn npc_id="883245" respawn_time="295">
+                        <spot x="2449.37" y="1660.9135" z="2883.2974" h="6"/>
+                        <spot x="2439.7268" y="1657.794" z="2885.056" h="6"/>
+                        <spot x="2393.0144" y="1624.3562" z="2885.056" h="70"/>
+                        <spot x="2380.8013" y="1620.9789" z="2883.1084" h="70"/>
+                    </spawn>
+                    <spawn npc_id="883246" respawn_time="295">
+                        <spot x="2420.772" y="1636.1188" z="2887.5833" h="106"/>
+                    </spawn>
+                    <spawn npc_id="883247" respawn_time="295">
+                        <spot x="2423.0913" y="1609.4629" z="2885.056" h="36"/>
+                        <spot x="2417.7913" y="1634.184" z="2887.5808" h="106"/>
+                        <spot x="2444.141" y="1668.2983" z="2883.2625" h="15"/>
+                        <spot x="2410.6602" y="1656.0194" z="2885.0562" h="50"/>
+                        <spot x="2385.191" y="1612.9786" z="2883.3208" h="73"/>
+                        <spot x="2408.4294" y="1671.337" z="2885.0562" h="93"/>
+                    </spawn>
+                    <spawn npc_id="883249" respawn_time="295">
+                        <spot x="2443.1548" y="1623.329" z="2885.0562" h="50"/>
+                        <spot x="2428.7393" y="1644.4404" z="2885.056" h="3"/>
+                        <spot x="2406.6335" y="1629.7112" z="2885.056" h="66"/>
+                        <spot x="2402.588" y="1650.752" z="2885.0562" h="40"/>
+                        <spot x="2388.6787" y="1657.6315" z="2885.0564" h="103"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
+
+        <siege_spawn siege_id="1403">
+            <siege_race race="ASMODIANS">
+                <siege_mod mod="PEACE">
+                    <!-- Archon Blaze of the Abyss -->
+                    <spawn npc_id="251586" respawn_time="295">
+                        <spot h="0" static_id="2363" x="2319.5107" y="2540.6848" z="2877.0798"/>
+                    </spawn>
+                    <!-- Harbinger Captain -->
+                    <spawn npc_id="251570" respawn_time="295">
+                        <spot x="2327.79" y="2545.464" z="2878.7693" h="14"/>
+                    </spawn>
+                    <spawn npc_id="805417" respawn_time="295">
+                        <spot x="2310.065" y="2529.9924" z="2877.0796" h="73"/>
+                    </spawn>
+                    <spawn npc_id="805585" respawn_time="295">
+                        <spot x="2308.754" y="2531.6716" z="2877.0796" h="73"/>
+                    </spawn>
+                    <spawn npc_id="805586" respawn_time="295">
+                        <spot x="2307.5066" y="2533.4172" z="2877.0796" h="73"/>
+                    </spawn>
+                    <spawn npc_id="805587" respawn_time="295">
+                        <spot x="2306.0793" y="2535.0884" z="2877.0796" h="73"/>
+                    </spawn>
+                    <spawn npc_id="805601" respawn_time="295">
+                        <spot x="2304.7085" y="2536.664" z="2877.0798" h="73"/>
+                    </spawn>
+                    <spawn npc_id="883263" respawn_time="295">
+                        <spot x="2304.994" y="2559.376" z="2877.0796" h="46"/>
+                        <spot x="2299.1528" y="2572.855" z="2875.313" h="46"/>
+                        <spot x="2334.6492" y="2520.562" z="2868.5247" h="110"/>
+                        <spot x="2340.8162" y="2505.819" z="2875.3245" h="110"/>
+                    </spawn>
+                    <spawn npc_id="883264" respawn_time="295">
+                        <spot x="2314.17" y="2534.6272" z="2879.3389" h="73"/>
+                    </spawn>
+                    <spawn npc_id="883265" respawn_time="295">
+                        <spot x="2288.9846" y="2530.5984" z="2877.0796" h="10"/>
+                        <spot x="2294.1987" y="2567.8494" z="2875.5498" h="43"/>
+                        <spot x="2312.0967" y="2537.354" z="2879.3386" h="73"/>
+                        <spot x="2334.6562" y="2544.2092" z="2877.0798" h="13"/>
+                        <spot x="2335.6323" y="2566.4155" z="2877.0798" h="76"/>
+                        <spot x="2346.9866" y="2510.7104" z="2875.3513" h="103"/>
+                    </spawn>
+                    <spawn npc_id="883267" respawn_time="295">
+                        <spot x="2303.645" y="2511.032" z="2877.0798" h="16"/>
+                        <spot x="2308.2205" y="2548.56" z="2877.0796" h="50"/>
+                        <spot x="2323.246" y="2526.5261" z="2877.0796" h="100"/>
+                        <spot x="2327.9211" y="2553.6396" z="2877.0798" h="13"/>
+                        <spot x="2350.799" y="2544.897" z="2877.0796" h="66"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="BALAUR">
+                <siege_mod mod="PEACE">
+                    <!-- Balaur Blaze of the Abyss -->
+                    <spawn npc_id="251587" respawn_time="295">
+                        <spot x="2319.5107" y="2540.6848" z="2877.0798" static_id="2363"/>
+                    </spawn>
+                    <!-- Dread Remnant Captain -->
+                    <spawn npc_id="251540" respawn_time="295">
+                        <spot x="2327.79" y="2545.464" z="2878.7693" h="14"/>
+                    </spawn>
+                    <!-- <spawn npc_id="883611" handler="ATTACKER">
+                        <spot x="2331.3" y="2549.7" z="2877.0796" h="101"/>
+                    </spawn> -->
+                    <spawn npc_id="883071" respawn_time="295">
+                        <spot x="2340.8162" y="2505.819" z="2875.3245" h="110"/>
+                        <spot x="2334.6492" y="2520.562" z="2868.5247" h="110"/>
+                        <spot x="2304.994" y="2559.376" z="2877.0796" h="46"/>
+                        <spot x="2299.1528" y="2572.855" z="2875.313" h="46"/>
+                    </spawn>
+                    <spawn npc_id="883072" respawn_time="295">
+                        <spot x="2314.17" y="2534.6272" z="2879.3389" h="73"/>
+                    </spawn>
+                    <spawn npc_id="883073" respawn_time="295">
+                        <spot x="2346.9866" y="2510.7104" z="2875.3513" h="103"/>
+                        <spot x="2312.0967" y="2537.354" z="2879.3386" h="73"/>
+                        <spot x="2288.9846" y="2530.5984" z="2877.0796" h="10"/>
+                        <spot x="2334.6562" y="2544.2092" z="2877.0798" h="13"/>
+                        <spot x="2294.1987" y="2567.8494" z="2875.5498" h="43"/>
+                        <spot x="2335.6323" y="2566.4155" z="2877.0798" h="76"/>
+                    </spawn>
+                    <spawn npc_id="883075" respawn_time="295">
+                        <spot x="2303.645" y="2511.032" z="2877.0798" h="16"/>
+                        <spot x="2323.246" y="2526.5261" z="2877.0796" h="100"/>
+                        <spot x="2327.9211" y="2553.6396" z="2877.0798" h="13"/>
+                        <spot x="2308.2205" y="2548.56" z="2877.0796" h="50"/>
+                        <spot x="2350.799" y="2544.897" z="2877.0796" h="66"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+            <siege_race race="ELYOS">
+                <siege_mod mod="PEACE">
+                    <!-- Guardian Blaze of the Abyss -->
+                    <spawn npc_id="251585" respawn_time="295">
+                        <spot x="2319.5107" y="2540.6848" z="2877.0798" static_id="2363"/>
+                    </spawn>
+                    <!-- Upright Captain -->
+                    <spawn npc_id="251557" respawn_time="295">
+                        <spot x="2327.79" y="2545.464" z="2878.7693" h="14"/>
+                    </spawn>
+                    <spawn npc_id="805394" respawn_time="295">
+                        <spot x="2310.065" y="2529.9924" z="2877.0796" h="78"/>
+                    </spawn>                
+                    <spawn npc_id="805582" respawn_time="295">
+                        <spot x="2308.754" y="2531.6716" z="2877.0796" h="73"/>
+                    </spawn>                
+                    <spawn npc_id="805583" respawn_time="295">
+                        <spot x="2307.5066" y="2533.4172" z="2877.0796" h="73"/>
+                    </spawn>                
+                    <spawn npc_id="805584" respawn_time="295">
+                        <spot x="2306.0793" y="2535.0884" z="2877.0796" h="73"/>
+                    </spawn>                   
+                    <spawn npc_id="805593" respawn_time="295">
+                        <spot x="2304.7085" y="2536.664" z="2877.0798" h="73"/>
+                    </spawn>
+                    <spawn npc_id="883257" respawn_time="295">
+                        <spot x="2299.1528" y="2572.855" z="2875.313" h="46"/>
+                        <spot x="2304.994" y="2559.376" z="2877.0796" h="46"/>
+                        <spot x="2334.6492" y="2520.562" z="2868.5247" h="110"/>
+                        <spot x="2340.8162" y="2505.819" z="2875.3245" h="110"/>
+                    </spawn>
+                    <spawn npc_id="883258" respawn_time="295">
+                        <spot x="2314.17" y="2534.6272" z="2879.3389" h="73"/>
+                    </spawn>
+                    <spawn npc_id="883259" respawn_time="295">
+                        <spot x="2294.1987" y="2567.8494" z="2875.5498" h="43"/>
+                        <spot x="2288.9846" y="2530.5984" z="2877.0796" h="10"/>
+                        <spot x="2312.0967" y="2537.354" z="2879.3386" h="73"/>
+                        <spot x="2335.6323" y="2566.4155" z="2877.0798" h="76"/>
+                        <spot x="2334.6562" y="2544.2092" z="2877.0798" h="13"/>
+                        <spot x="2346.9866" y="2510.7104" z="2875.3513" h="103"/>
+                    </spawn>
+                    <spawn npc_id="883261" respawn_time="295">
+                        <spot x="2308.2205" y="2548.56" z="2877.0796" h="50"/>
+                        <spot x="2303.645" y="2511.032" z="2877.0798" h="16"/>
+                        <spot x="2327.9211" y="2553.6396" z="2877.0798" h="13"/>
+                        <spot x="2323.246" y="2526.5261" z="2877.0796" h="100"/>
+                        <spot x="2350.799" y="2544.897" z="2877.0796" h="66"/>
+                    </spawn>
+                </siege_mod>
+                <siege_mod mod="SIEGE">
+                </siege_mod>
+            </siege_race>
+        </siege_spawn>
 
 		</spawn_map>
 </spawns>
