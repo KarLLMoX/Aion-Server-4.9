@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerAppearance;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
+import com.aionemu.gameserver.model.gameobjects.player.PlayerConquererDefenderData;
 import com.aionemu.gameserver.model.items.GodStone;
 import com.aionemu.gameserver.model.items.ItemSlot;
 import com.aionemu.gameserver.model.stats.calc.Stat2;
@@ -368,8 +369,9 @@ public class SM_PLAYER_INFO extends AionServerPacket {
          * 0x02 = Protector Lvl 2
          * 0x03 = Protector Lvl 3
          */
-        writeC(player.getConquerorBuffId());
-        writeC(player.getProtectorBuffId());        
+        PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+        writeC(pcdd.getConquerorBuffId());
+        writeC(pcdd.getProtectorBuffId());        
         writeC(0x00); // 4.8
     }
 }

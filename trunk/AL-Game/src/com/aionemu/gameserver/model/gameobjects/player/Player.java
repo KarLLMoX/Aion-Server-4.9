@@ -129,6 +129,7 @@ import java.util.concurrent.ScheduledFuture;
  * @author cura
  * @author GiGatR00n v4.7.5.x
  */
+@SuppressWarnings("unused")
 public class Player extends Creature {
 
     public RideInfo ride;
@@ -281,18 +282,8 @@ public class Player extends Creature {
     public int FAST_TRACK_TYPE = 0;// 0 = nothing,1 = moved exact current,2 = already moved
     private boolean isOnFastTrack = false;
     private boolean isInLiveParty = false;
-	private int linkedSkill;
-
-	/**
-     * Intruder/Protector System
-     */
-    private boolean isProtector = false;
-    private boolean isIntruder = false;
-    private int ProtectorBuffId = 0;
-    private int ConquerorBuffId = 0;
-    private int killCountC = 0;
-    private int killCountP = 0;
-
+	//private int linkedSkill;
+    private PlayerConquererDefenderData conquerorDefenderData;
     /**
      * Used for JUnit tests
      */
@@ -2629,7 +2620,7 @@ public class Player extends Creature {
 	public void setInLiveParty(boolean isInLiveParty) {
 		this.isInLiveParty = isInLiveParty;
 	}
-	
+/*	
     public int getLinkedSkill() {
     	return linkedSkill;
     }
@@ -2637,46 +2628,7 @@ public class Player extends Creature {
     public void setLinkedSkill(int skillId) {
     	this.linkedSkill = skillId;
     }
-
-    public boolean isProtector(){
-        return isProtector;
-    }
-
-    public boolean isIntruder(){
-        return isIntruder;
-    }
-
-    public int getProtectorBuffId(){
-        return ProtectorBuffId;
-    }
-
-    public int getConquerorBuffId(){
-        return ConquerorBuffId;
-    }
-
-    public void setProtectorBuffId(int BuffLvl){
-        this.ProtectorBuffId = BuffLvl;
-    }
-
-    public void setConquerorBuffId(int BuffLvl){
-        this.ConquerorBuffId = BuffLvl;
-    }
-
-    public void setKillCount(int kCount){
-        if (ConquerorsService.getInstance().isOnTheirMap(this)){
-            this.killCountC = kCount;
-        }else{
-            this.killCountP = kCount;
-        }
-    }
-
-    public int getKillCount(){
-        if (ConquerorsService.getInstance().isOnTheirMap(this)){
-            return killCountC;
-        }else{
-            return killCountP;
-        }
-    }
+*/
 
     public FastList<WorldBuff> getWorldBuffList() {
         return worldBuff;
@@ -2699,5 +2651,16 @@ public class Player extends Creature {
 
 	public PlayerUpgradeArcade getUpgradeArcade() {
 		return playerCommonData.getUpgradeArcade();
+	}
+
+	public PlayerConquererDefenderData getConquerorDefenderData() {
+		if (conquerorDefenderData == null)
+			this.conquerorDefenderData = new PlayerConquererDefenderData();
+		
+		return conquerorDefenderData;
+	}
+
+	public void setConquerorDefenderData(PlayerConquererDefenderData conquerorDefenderData) {
+		this.conquerorDefenderData = conquerorDefenderData;
 	}
 }

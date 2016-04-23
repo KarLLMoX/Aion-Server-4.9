@@ -60,13 +60,14 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
             case 1: // Conqueror With Msg
             case 6:
             case 7:
+            case 9:
             case 8: // Protector With Msg
                 writeD(type);
                 writeD(0x01); //0x01
                 writeD(0x01); //0x01
                 writeH(0x01); //0x01
                 writeD(debuffLvl); //lvl
-                writeD(0x00);
+                writeD(player.getObjectId());
                 break;
             case 4:
                 writeD(type);
@@ -88,7 +89,7 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
                     writeD(0x00); // unk
                 }
                 break;
-            case 9: // Protector Without msg
+/*            case 9: // Protector Without msg
                 writeD(type);
                 writeD(0x01); //0x01
                 writeD(0x01); //0x01
@@ -96,6 +97,7 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
                 writeD(debuffLvl); //lvl
                 writeD(player.getObjectId());
                 break;
+*/     
         }
     }
 }
