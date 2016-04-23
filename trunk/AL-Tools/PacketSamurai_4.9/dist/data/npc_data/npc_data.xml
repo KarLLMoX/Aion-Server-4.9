@@ -7041,6 +7041,7 @@
     <npc_stat npcId="219949" lvl="61" xp="0" hp="29796" titleId="335185" npcType="8"/>
     <npc_stat npcId="219952" lvl="61" xp="0" hp="31150" titleId="333895" npcType="8"/>
     <npc_stat npcId="219953" lvl="61" xp="0" hp="22482" titleId="333895" npcType="8"/>
+    <npc_stat npcId="219957" lvl="63" xp="0" hp="31846" titleId="349951" npcType="8"/>
     <npc_stat npcId="219958" lvl="65" xp="0" hp="24781" titleId="0" npcType="8"/>
     <npc_stat npcId="219959" lvl="65" xp="0" hp="18699" titleId="0" npcType="8"/>
     <npc_stat npcId="219961" lvl="65" xp="0" hp="19634" titleId="0" npcType="8"/>
@@ -11164,6 +11165,10 @@
     <npc_stat npcId="297600" lvl="55" xp="0" hp="18756" titleId="0" npcType="34"/>
     <npc_stat npcId="297601" lvl="55" xp="0" hp="18756" titleId="0" npcType="34"/>
     <npc_stat npcId="297602" lvl="55" xp="0" hp="18756" titleId="0" npcType="34"/>
+    <npc_stat npcId="297690" lvl="65" xp="0" hp="19457419" titleId="0" npcType="8"/>
+    <npc_stat npcId="297691" lvl="65" xp="0" hp="19457419" titleId="0" npcType="8"/>
+    <npc_stat npcId="297692" lvl="65" xp="0" hp="19457419" titleId="0" npcType="8"/>
+    <npc_stat npcId="297693" lvl="65" xp="0" hp="19457419" titleId="0" npcType="8"/>
     <npc_stat npcId="297694" lvl="80" xp="0" hp="55684" titleId="0" npcType="2"/>
     <npc_stat npcId="297695" lvl="80" xp="0" hp="55684" titleId="0" npcType="2"/>
     <npc_stat npcId="297696" lvl="80" xp="0" hp="55684" titleId="0" npcType="2"/>
@@ -13924,17 +13929,17 @@
     <npc_stat npcId="802093" lvl="65" xp="0" hp="26116" titleId="462143" npcType="38"/>
     <npc_stat npcId="802094" lvl="65" xp="0" hp="26116" titleId="350417" npcType="38"/>
     <npc_stat npcId="802095" lvl="65" xp="0" hp="26116" titleId="463208" npcType="38"/>
-    <npc_stat npcId="802096" lvl="65" xp="0" hp="26116" titleId="463214" npcType="0"/>
+    <npc_stat npcId="802096" lvl="65" xp="0" hp="26116" titleId="463214" npcType="38"/>
     <npc_stat npcId="802097" lvl="65" xp="0" hp="26116" titleId="463628" npcType="38"/>
     <npc_stat npcId="802098" lvl="65" xp="0" hp="26116" titleId="463209" npcType="38"/>
-    <npc_stat npcId="802099" lvl="65" xp="0" hp="26116" titleId="463213" npcType="0"/>
+    <npc_stat npcId="802099" lvl="65" xp="0" hp="26116" titleId="463213" npcType="38"/>
     <npc_stat npcId="802100" lvl="65" xp="0" hp="26116" titleId="463211" npcType="38"/>
     <npc_stat npcId="802102" lvl="65" xp="0" hp="26116" titleId="370523" npcType="38"/>
-    <npc_stat npcId="802104" lvl="65" xp="0" hp="26116" titleId="350377" npcType="0"/>
+    <npc_stat npcId="802104" lvl="65" xp="0" hp="26116" titleId="350377" npcType="38"/>
     <npc_stat npcId="802105" lvl="65" xp="0" hp="26116" titleId="463212" npcType="38"/>
-    <npc_stat npcId="802107" lvl="65" xp="0" hp="26116" titleId="370401" npcType="0"/>
-    <npc_stat npcId="802108" lvl="65" xp="0" hp="26116" titleId="462143" npcType="0"/>
-    <npc_stat npcId="802109" lvl="65" xp="0" hp="26116" titleId="350417" npcType="0"/>
+    <npc_stat npcId="802107" lvl="65" xp="0" hp="26116" titleId="370401" npcType="38"/>
+    <npc_stat npcId="802108" lvl="65" xp="0" hp="26116" titleId="462143" npcType="38"/>
+    <npc_stat npcId="802109" lvl="65" xp="0" hp="26116" titleId="350417" npcType="38"/>
     <npc_stat npcId="802110" lvl="65" xp="0" hp="26116" titleId="463208" npcType="38"/>
     <npc_stat npcId="802111" lvl="65" xp="0" hp="26116" titleId="463214" npcType="38"/>
     <npc_stat npcId="802112" lvl="65" xp="0" hp="26116" titleId="463628" npcType="38"/>
@@ -15126,6 +15131,9 @@
     <npc_stat npcId="805471" lvl="65" xp="0" hp="26116" titleId="0" npcType="2"/>
     <npc_stat npcId="805472" lvl="65" xp="0" hp="26116" titleId="0" npcType="2"/>
     <npc_stat npcId="805473" lvl="65" xp="0" hp="26116" titleId="0" npcType="2"/>
+    <npc_stat npcId="805486" lvl="65" xp="0" hp="26116" titleId="0" npcType="2"/>
+    <npc_stat npcId="805488" lvl="65" xp="0" hp="26116" titleId="0" npcType="2"/>
+    <npc_stat npcId="805490" lvl="65" xp="0" hp="26116" titleId="0" npcType="2"/>
     <npc_stat npcId="805492" lvl="65" xp="0" hp="26116" titleId="358313" npcType="38"/>
     <npc_stat npcId="805493" lvl="65" xp="0" hp="26116" titleId="358314" npcType="38"/>
     <npc_stat npcId="805494" lvl="65" xp="0" hp="26116" titleId="358315" npcType="38"/>
@@ -16434,11 +16442,11 @@
     <npc_stat npcId="833250" lvl="1" xp="0" hp="8785" titleId="0" npcType="38"/>
     <npc_stat npcId="833251" lvl="65" xp="0" hp="117149" titleId="335062" npcType="8"/>
     <npc_stat npcId="833253" lvl="61" xp="0" hp="19288" titleId="0" npcType="38"/>
-    <npc_stat npcId="833254" lvl="61" xp="0" hp="18389" titleId="0" npcType="8"/>
+    <npc_stat npcId="833254" lvl="61" xp="0" hp="18605" titleId="0" npcType="38"/>
     <npc_stat npcId="833255" lvl="64" xp="0" hp="10366" titleId="0" npcType="38"/>
     <npc_stat npcId="833256" lvl="64" xp="0" hp="9867" titleId="0" npcType="38"/>
     <npc_stat npcId="833257" lvl="63" xp="0" hp="12720" titleId="0" npcType="38"/>
-    <npc_stat npcId="833258" lvl="63" xp="0" hp="12741" titleId="0" npcType="0"/>
+    <npc_stat npcId="833258" lvl="63" xp="0" hp="12305" titleId="0" npcType="38"/>
     <npc_stat npcId="833259" lvl="65" xp="0" hp="14490" titleId="0" npcType="38"/>
     <npc_stat npcId="833260" lvl="65" xp="0" hp="14640" titleId="0" npcType="8"/>
     <npc_stat npcId="833261" lvl="65" xp="0" hp="18789" titleId="0" npcType="38"/>
@@ -16504,7 +16512,7 @@
     <npc_stat npcId="833435" lvl="60" xp="0" hp="5755" titleId="0" npcType="38"/>
     <npc_stat npcId="833436" lvl="60" xp="0" hp="5023" titleId="0" npcType="38"/>
     <npc_stat npcId="833437" lvl="65" xp="0" hp="9659" titleId="0" npcType="38"/>
-    <npc_stat npcId="833438" lvl="65" xp="0" hp="9127" titleId="0" npcType="38"/>
+    <npc_stat npcId="833438" lvl="65" xp="0" hp="8222" titleId="0" npcType="38"/>
     <npc_stat npcId="833440" lvl="45" xp="0" hp="5349" titleId="0" npcType="38"/>
     <npc_stat npcId="833441" lvl="49" xp="0" hp="5514" titleId="0" npcType="38"/>
     <npc_stat npcId="833442" lvl="49" xp="0" hp="4993" titleId="0" npcType="38"/>
@@ -16513,7 +16521,7 @@
     <npc_stat npcId="833447" lvl="61" xp="0" hp="6936" titleId="0" npcType="38"/>
     <npc_stat npcId="833448" lvl="61" xp="0" hp="5258" titleId="0" npcType="38"/>
     <npc_stat npcId="833449" lvl="65" xp="0" hp="10693" titleId="0" npcType="38"/>
-    <npc_stat npcId="833450" lvl="65" xp="0" hp="10161" titleId="0" npcType="38"/>
+    <npc_stat npcId="833450" lvl="65" xp="0" hp="9256" titleId="0" npcType="38"/>
     <npc_stat npcId="833454" lvl="63" xp="0" hp="8638" titleId="0" npcType="38"/>
     <npc_stat npcId="833455" lvl="63" xp="0" hp="7806" titleId="0" npcType="8"/>
     <npc_stat npcId="833458" lvl="65" xp="0" hp="5584" titleId="0" npcType="38"/>
@@ -16550,6 +16558,9 @@
     <npc_stat npcId="833508" lvl="55" xp="0" hp="18756" titleId="466471" npcType="38"/>
     <npc_stat npcId="833522" lvl="10" xp="0" hp="1392" titleId="350377" npcType="38"/>
     <npc_stat npcId="833580" lvl="65" xp="0" hp="26116" titleId="0" npcType="38"/>
+    <npc_stat npcId="833605" lvl="65" xp="0" hp="26116" titleId="0" npcType="38"/>
+    <npc_stat npcId="833607" lvl="65" xp="0" hp="26116" titleId="0" npcType="38"/>
+    <npc_stat npcId="833609" lvl="65" xp="0" hp="26116" titleId="0" npcType="38"/>
     <npc_stat npcId="855000" lvl="80" xp="0" hp="55684" titleId="0" npcType="38"/>
     <npc_stat npcId="855001" lvl="80" xp="0" hp="55684" titleId="0" npcType="38"/>
     <npc_stat npcId="855003" lvl="80" xp="0" hp="55684" titleId="0" npcType="38"/>
@@ -17903,4 +17914,7 @@
     <npc_stat npcId="884022" lvl="65" xp="0" hp="246945" titleId="0" npcType="8"/>
     <npc_stat npcId="884023" lvl="65" xp="0" hp="246945" titleId="0" npcType="8"/>
     <npc_stat npcId="884026" lvl="65" xp="0" hp="246945" titleId="0" npcType="8"/>
+    <npc_stat npcId="884027" lvl="65" xp="0" hp="654522901" titleId="0" npcType="8"/>
+    <npc_stat npcId="884028" lvl="65" xp="0" hp="654522901" titleId="0" npcType="8"/>
+    <npc_stat npcId="884029" lvl="65" xp="0" hp="654522901" titleId="0" npcType="8"/>
 </NpcStats>
