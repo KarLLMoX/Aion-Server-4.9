@@ -3055,15 +3055,21 @@
 		</packet>
 		<packet id="0x54" name="SM_SERIAL_KILLER">
 			<part name="type" type="d" id="0"/>
-			<part name="size" type="h" id="1"/>
-			<for id="1">
-				<part name="unk(0x0)" type="h"/>
-				<part name="unk(0x1)" type="d"/>
-			</for>
-			<part name="size" type="h" id="2"/>
+			<part name="unk" type="h"/>
+			<part name="unk(0x0)" type="h"/>
+			<part name="unk(0x1)" type="d"/>
+			<part name="maybe size" type="h" id="2"/>
 			<for id="2">
 				<switch id="0">
-					<case id="4">
+					<case id="0" comment="Conquerer - noMsg"> 
+						<part name="buffLevel" type="d"/>
+						<part name="0" type="d"/>					
+					</case>
+					<case id="1" comment="Conquerer - Msg"> 
+						<part name="buffLevel" type="d"/>
+						<part name="0" type="d"/>					
+					</case>
+					<case id="4" comment="SerialKiller">
 						<part name="rank" type="d"/>
 						<part name="playerObjId" type="d"/>
 						<part name="0x01" type="h"/>
@@ -3071,14 +3077,32 @@
 						<part name="playerLvl" type="h"/>
 						<part name="x" type="f"/>
 						<part name="y" type="f"/>
-						<part name="S" type="f"/>
+						<part name="z" type="f"/>
 						<part name="unk" type="d"/>
 						<part name="unk" type="d"/>
 						<part name="unk" type="d"/>
 					</case>
+					<case id="5" comment="Intruder Radar">
+
+					</case>					
+					<case id="6" comment="broadcastPacket Conquerer"> 
+						<part name="buffLevel" type="d"/>
+						<part name="playerId" type="d"/>					
+					</case>
+					<case id="7" comment="Protector - noMsg"> 
+						<part name="buffLevel" type="d"/>
+						<part name="0" type="d"/>					
+					</case>					
+					<case id="8" comment="Protector - Msg"> 
+						<part name="buffLevel" type="d"/>
+						<part name="0" type="d"/>					
+					</case>
+					<case id="9" comment="broadcastPacket Protector"> 
+						<part name="buffLevel" type="d"/>
+						<part name="playerId" type="d"/>					
+					</case>					
 					<case id="default">
-						<part name="debuffLvl" type="d"/> <!-- should be switched ? -->
-						<part name="unk" type="d"/><!-- should be switched ? -->
+					
 					</case>
 				</switch>
 			</for>
