@@ -641,6 +641,10 @@ public final class PlayerEnterWorldService {
             PlayerTransferService.getInstance().onEnterWorld(player);
             player.setPartnerId(DAOManager.getDAO(WeddingDAO.class).loadPartnerId(player));
             
+            if (ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP)
+                ConquerorsService.getInstance().onEnterWorld(player);
+            
+            
             //EnchantService.getGloryShield(player);
         } else {
             log.info("[DEBUG] enter world" + objectId + ", Player: " + player);

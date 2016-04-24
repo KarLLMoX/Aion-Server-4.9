@@ -155,7 +155,7 @@ public class PvpService {
             String mac1 = winner.getClientConnection().getMacAddress();
             String ip2 = victim.getClientConnection().getIP();
             String mac2 = victim.getClientConnection().getMacAddress();
-            if ((mac1 != null) && (mac2 != null)) {
+            if ((mac1 != null) && (mac2 != null) && winner.getAccessLevel() < 3 && victim.getAccessLevel() < 3) {
                 if ((ip1.equalsIgnoreCase(ip2)) && (mac1.equalsIgnoreCase(mac2))) {
                     AuditLogger.info(winner, "Power Leveling : " + winner.getName() + " with " + victim.getName() + ", They have the sames ip=" + ip1 + " and mac=" + mac1 + ".");
                     if (reduceap > 0) {

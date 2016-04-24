@@ -370,8 +370,8 @@ public class SM_PLAYER_INFO extends AionServerPacket {
          * 0x03 = Protector Lvl 3
          */
         PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
-        writeC(pcdd.getConquerorBuffId());
-        writeC(pcdd.getProtectorBuffId());        
+        writeC(pcdd.getConquerorBuffLevel());
+        writeC(pcdd.getProtectorBuffLevel());        
         writeC(0x00); // 4.8
     }
 }

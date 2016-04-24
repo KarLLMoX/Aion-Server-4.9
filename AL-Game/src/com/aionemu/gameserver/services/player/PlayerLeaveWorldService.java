@@ -45,6 +45,7 @@ import com.aionemu.gameserver.services.AccessLevelEnum;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChatService;
+import com.aionemu.gameserver.services.ConquerorsService;
 import com.aionemu.gameserver.services.DuelService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FindGroupService;
@@ -124,6 +125,7 @@ public class PlayerLeaveWorldService {
         InstanceService.onLogOut(player);
         KiskService.getInstance().onLogout(player);
         WorldBuffService.getInstance().onLogOut(player);
+        ConquerorsService.getInstance().onLogOut(player);
         FatigueService.getInstance().onPlayerLogout(player);
         player.getMoveController().abortMove();
 
