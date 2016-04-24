@@ -28,13 +28,13 @@ public class PlayerConquererDefenderData
 	private void setIntruder(boolean isIntruder) {
 		this.isIntruder = isIntruder;
 	}
-	public int getProtectorBuffId() {
+	public int getProtectorBuffLevel() {
 		return ProtectorBuffId;
 	}
 	public void setProtectorBuffId(int protectorBuffId) {
 		ProtectorBuffId = protectorBuffId;
 	}
-	public int getConquerorBuffId() {
+	public int getConquerorBuffLevel() {
 		return ConquerorBuffId;
 	}
 	public void setConquerorBuffId(int conquerorBuffId) {

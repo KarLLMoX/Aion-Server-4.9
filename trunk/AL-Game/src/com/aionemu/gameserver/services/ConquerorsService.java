@@ -48,64 +48,52 @@ public class ConquerorsService {
     private FastMap<Integer, PlayerConquererDefenderData> players = new FastMap<Integer, PlayerConquererDefenderData>();
     private FastMap<Integer, Future<?>> pduration = new FastMap<Integer, Future<?>>();
     private FastMap<Integer, Future<?>> cduration = new FastMap<Integer, Future<?>>();
-    // PlayerObjId , IsOnTheirMap , KillCount
-    //private FastMap<Integer, FastMap<Boolean, Integer>> getCorrectKillCForMap = new FastMap<Integer, FastMap<Boolean, Integer>>();
     private SerialGuardDebuff sGbuff;
     private SerialKillerDebuff sKbuff;
-    private Future<?> pbuffLvl1; //Protectors Buffs
-    private Future<?> pbuffLvl2;
-    private Future<?> pbuffLvl3;
-    private Future<?> cbuffLvl1; // Conquerors buffs
-    private Future<?> cbuffLvl2;
-    private Future<?> cbuffLvl3;
 
-    private static final Logger log = LoggerFactory.getLogger(SerialKillerService.class);
+    private static final Logger log = LoggerFactory.getLogger(ConquerorsService.class);
 
-    public enum MapTypes{
+    public enum MapTypes
+    {
         ELYOS,
         ASMODIANS;
     }
 
-    public enum BuffState{
-        UPDATE_REQUIRED,
-        FINE;
-    }
-
-    public void initConquerorPvPSystem(){
-        if(!ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP){
+    public void initConquerorPvPSystem()
+    {
+        if(!ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP)
             return;
-        }
 
         GameServer.log.info("[ConquerorsService] Initializing Conqueror/Protector Buff System...");
 
         sGbuff = new SerialGuardDebuff();
         sKbuff = new SerialKillerDebuff();
-        if(!ConquerorProtectorConfig.IGNORE_MAPS){
-            for (String worldids : ConquerorProtectorConfig.ENABLED_MAPS_GUARDIAN.split(",")){
-                if(worldids.equals("")){
+        if(!ConquerorProtectorConfig.IGNORE_MAPS)
+        {
+            for (String worldids : ConquerorProtectorConfig.ENABLED_MAPS_GUARDIAN.split(","))
+            {
+                if(worldids.equals(""))
                     break;
-                }
 
                 int worldId = Integer.parseInt(worldids); // world Id from Config
                 int type = Integer.parseInt(String.valueOf(worldids.charAt(1))); // 220000000 , second number from worldId , to get Wat Type of World
 
-                if (!(type == 1 || type == 2)){
-                    type = 1;
+                if (!(type == 1 || type == 2))
+                {
+                    type = 3;
                     log.info("[ConquerorsService] [CONQUEROR NOTE] Please Verify the Map Id's Given in conqueror.properties!!");
                 }
-
                 MapTypes mType = type == 1 ? MapTypes.ELYOS : MapTypes.ASMODIANS;
-
                 usedWorldMaps.put(worldId, mType);
-
             }
         }
     }
 
-    public boolean isOnConquerorPvPMap(int worldid){
-        if(ConquerorProtectorConfig.IGNORE_MAPS){
+    public boolean isOnConquerorPvPMap(int worldid)
+    {
+        if(ConquerorProtectorConfig.IGNORE_MAPS)
             return true;
-        }
+        
         return usedWorldMaps.containsKey(worldid);
     }
     
@@ -119,27 +107,35 @@ public class ConquerorsService {
     
     public int getKills(Player player)
     {
-        if (isOnEnemyMap(player))
-            return player.getConquerorDefenderData().getKillCountAsConquerer();
-        else
-        	return player.getConquerorDefenderData().getKillCountAsProtector();
+    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	//msgLog("GetKills for "+player.getName()+": KillsAsProtector: "+pcdd.getKillCountAsProtector()+" KillsAsConquerer: "+pcdd.getKillCountAsConquerer()+" isProtector: "+pcdd.isProtector());
+    	if (pcdd.isProtector())
+    		return player.getConquerorDefenderData().getKillCountAsProtector();
+    	else
+            return player.getConquerorDefenderData().getKillCountAsConquerer();        	
     }
     
     public void addKills(Player player, int kills)
     {
-        if (isOnEnemyMap(player))
-            player.getConquerorDefenderData().setKillCountAsConquerer(player.getConquerorDefenderData().getKillCountAsConquerer() + kills);
+    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	int oldKills = getKills(player);
+    	if (isOnEnemyMap(player))
+            pcdd.setKillCountAsConquerer(pcdd.getKillCountAsConquerer() + kills);
         else
-        	player.getConquerorDefenderData().setKillCountAsProtector(player.getConquerorDefenderData().getKillCountAsProtector() + kills);
+        	pcdd.setKillCountAsProtector(pcdd.getKillCountAsProtector() + kills);
+    	
+    	int newKills = getKills(player);
+    	msgLog((oldKills > newKills ? "De" : "In") +"creased Kills for "+player.getName()+" from: "+oldKills+" to: "+newKills);
     }    
 
     public boolean isOnEnemyMap(Player player){
-        if (ConquerorProtectorConfig.IGNORE_MAPS){
+        if (ConquerorProtectorConfig.IGNORE_MAPS)
+        {
             String worldidsAsString = String.valueOf(player.getWorldId());
-            //int worldId = Integer.parseInt(worldidsAsString);
             int type = worldidsAsString.charAt(1);
 
-            if (!(type == 1 || type == 2)){
+            if (!(type == 1 || type == 2))
+            {
                 type = 3;
                 log.info("[ConquerorsService] [CONQUEROR NOTE] Please Verify the Map Id's Given in conqueror.properties OR In an Instance?");
             }
@@ -157,92 +153,94 @@ public class ConquerorsService {
         return false;
     }
 
-    public void onKill(Player player, Player diedPlayer){
-        
+    public void onKill(Player player, Player diedPlayer)
+    {        
     	PlayerConquererDefenderData pcdd_killer = player.getConquerorDefenderData();
-    	//PlayerConquererDefenderData pcdd_died = diedPlayer.getConquerorDefenderData();
     	// Add new player if he's not in players and give first buff lvl
     	if (!players.containsKey(player.getObjectId()))
         {
             players.put(player.getObjectId(), pcdd_killer);
             msgLog("Added New Player : " + player.getName() + " to playerList of PvP.");
             msgLog(player.getName() + "'s Buff Lvl's " + players.get(player.getObjectId()) + " {ProtectorBuffLvl = ConquerorBuffLvl}.");
-        }
-        //check if player got enough kills for next bufflevel and update it in case.
-    	else
-        {
-            updateBuffLvls(player);
-        }
-
+        }    	
         msgLog("Current Kill Count : " + getKills(player));
         addKills(player,1);
         msgLog("New Kill Count : " + getKills(player));
-
-        //set ActualBuffLevel
+        
+        //check if player got enough kills for next bufflevel and update it in case.
         checkKillCountAndUpdateBuffLvls(player);
-        //set timer for buff deactivate and start buff
-        addToKillAndStartCounting(player);
+        //set timer kiilDownCount
+        sheduleCountDownKills(player);
+        
         //only for Msg
         checkIfTargetIsHighestRankIntruder(player, diedPlayer);
+        
+        if (getKills(diedPlayer) > 0)
+        {
+        	addKills(diedPlayer,-1);
+            checkKillCountAndUpdateBuffLvls(diedPlayer);
+            sheduleCountDownKills(diedPlayer);
+        }
     }
 
-    public void updateTagPacketToNearby(final Player player){ // NEED TO RE-CHECK
-        World.getInstance().getWorldMap(player.getWorldId()).getWorldMapInstanceById(player.getInstanceId()).doOnAllPlayers(new Visitor<Player>() {
+    public void updateTagPacketToNearby(final Player player) // NEED TO RE-CHECK
+    { 
+    	final PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	World.getInstance().getWorldMap(player.getWorldId()).getWorldMapInstanceById(player.getInstanceId()).doOnAllPlayers(new Visitor<Player>() {
             @Override
-            public void visit(Player p) {
-                if (!player.getRace().equals(p.getRace()) && player != p) {
-                    if (isOnEnemyMap(player)){ //conquerer
-                    	PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, false, false, player.getConquerorDefenderData().getConquerorBuffId()));
-                    }
-                    if (!isOnEnemyMap(player)){ //protector
-                        PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, true, false, player.getConquerorDefenderData().getProtectorBuffId()));
-                    }
+            public void visit(Player p) 
+            {
+                if (player != p) 
+                {
+                    if (pcdd.isProtector()) //Protector
+                    	PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, true, true, pcdd.getProtectorBuffLevel()));                    
+                    else //Conqueror
+                    	PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, false, true, pcdd.getConquerorBuffLevel()));                                                        
                 }
             }
         });
     }
 
-    public void sendPacketToEveryoneInMap(Player player, Player diedPlayer){
+    public void sendPacketToEveryoneInMap(Player player, Player diedPlayer)
+    {
         Iterator<Player> ita = World.getInstance().getPlayersIterator();
-        while(ita.hasNext()){
+        while(ita.hasNext())
+        {
             Player p1 = ita.next();
-            if(player.getWorldId() == p1.getWorldId()){
-                if(diedPlayer.getRace() == Race.ELYOS && !isOnEnemyMap(player)){
+            if(player.getWorldId() == p1.getWorldId())
+            {
+                if(diedPlayer.getRace() == Race.ELYOS && !isOnEnemyMap(player))
                     // Hero of Asmodian %0 killed the Divinely Punished Intruder %1.
                     PacketSendUtility.sendPacket(p1, new SM_SYSTEM_MESSAGE(1400141, player.getName(), diedPlayer.getName()));
-                }else if(diedPlayer.getRace() == Race.ASMODIANS && !isOnEnemyMap(player)){
+                else if(diedPlayer.getRace() == Race.ASMODIANS && !isOnEnemyMap(player))                
                     // Hero of Elyos %0 killed the Divinely Punished Intruder %1.
-                    PacketSendUtility.sendPacket(p1, new SM_SYSTEM_MESSAGE(1400142, player.getName(), diedPlayer.getName()));
-                }
+                    PacketSendUtility.sendPacket(p1, new SM_SYSTEM_MESSAGE(1400142, player.getName(), diedPlayer.getName()));                
             }
         }
     }
 
-    public void checkIfTargetIsHighestRankIntruder(Player player, Player diedPlayer){
-        if (diedPlayer.getConquerorDefenderData().getProtectorBuffId() == 3 || diedPlayer.getConquerorDefenderData().getConquerorBuffId() == 3){
-            sendPacketToEveryoneInMap(player, diedPlayer);
-        }
+    public void checkIfTargetIsHighestRankIntruder(Player player, Player diedPlayer)
+    {
+        if (diedPlayer.getConquerorDefenderData().getProtectorBuffLevel() == 3 || diedPlayer.getConquerorDefenderData().getConquerorBuffLevel() == 3)
+            sendPacketToEveryoneInMap(player, diedPlayer);        
     }
 
-    public void checkKillCountAndUpdateBuffLvls(Player player){
-        
+    public void checkKillCountAndUpdateBuffLvls(Player player)
+    {        
     	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
     	int kills = getKills(player);
     	boolean isProtector = pcdd.isProtector();
-        int buffLevel = isProtector ? pcdd.getProtectorBuffId() : pcdd.getConquerorBuffId();
-        int oldBuffLevel = buffLevel;
-        BuffState buffUpdate = BuffState.FINE;
+        int buffLevel = 0;
+        int oldBuffLevel = isProtector ? pcdd.getProtectorBuffLevel() : pcdd.getConquerorBuffLevel();
 
         if (isProtector)
         {
-            if ((kills >= ConquerorProtectorConfig.PROTECTOR_LVL1_KILLCOUNT && kills < ConquerorProtectorConfig.PROTECTOR_LVL2_KILLCOUNT))            
+        	if ((kills >= ConquerorProtectorConfig.PROTECTOR_LVL1_KILLCOUNT && kills < ConquerorProtectorConfig.PROTECTOR_LVL2_KILLCOUNT))            
                 buffLevel = 1; // sets Protector lvl 1 buff            
             else if((kills >= ConquerorProtectorConfig.PROTECTOR_LVL2_KILLCOUNT && kills < ConquerorProtectorConfig.PROTECTOR_LVL3_KILLCOUNT))
             	buffLevel = 2; // sets Protector lvl 2 Buff            
             else if(kills >= ConquerorProtectorConfig.PROTECTOR_LVL3_KILLCOUNT)
             	buffLevel = 3; // sets Protector lvl 3 Buff
-            if (buffLevel != oldBuffLevel)    
-            	buffUpdate = BuffState.UPDATE_REQUIRED;
         }
         else 
         {
@@ -251,224 +249,197 @@ public class ConquerorsService {
             else if((kills >= ConquerorProtectorConfig.CONQUEROR_LVL2_KILLCOUNT && kills < ConquerorProtectorConfig.CONQUEROR_LVL3_KILLCOUNT))
             	buffLevel = 2; //sets Conquerur lvl 2 buff
             else if(kills >= ConquerorProtectorConfig.CONQUEROR_LVL3_KILLCOUNT)
-            	buffLevel = 3; //sets Conquerur lvl 3 buff
-            
-            if (buffLevel != oldBuffLevel)
-            	buffUpdate = BuffState.UPDATE_REQUIRED;           
+            	buffLevel = 3; //sets Conquerur lvl 3 buff       
         }
 
-        if (buffUpdate == BuffState.UPDATE_REQUIRED) 
-        {
-            msgLog("Setting ProtectorBuffLvl : " + pcdd.getProtectorBuffId() + " , Setting ConquerorBuffLvl : " + pcdd.getConquerorBuffId() + " Player " + player.getName());
-            msgLog("KILL COUNT : " + getKills(player) + " on Enemy Map : " + isOnEnemyMap(player)+" is Protector: "+pcdd.isProtector());
-            setBuffLvls(player, pcdd.getProtectorBuffId(), pcdd.getConquerorBuffId());
+        if (buffLevel != oldBuffLevel) 
+        {        	
+            int protectorBuffLevel = 0;
+        	int conquerorBuffLevel = 0;
+        	
+        	if (isProtector)
+        	{
+        		protectorBuffLevel = buffLevel;
+        		conquerorBuffLevel = pcdd.getConquerorBuffLevel();
+        	}
+        	else
+        	{
+        		conquerorBuffLevel = buffLevel;
+        		protectorBuffLevel = pcdd.getProtectorBuffLevel();
+        	}
+        	
+        	msgLog("---------------------------------- [ setBuffLevels ] -----------------------------------");
+        	msgLog("Player : "+player.getName()+" Setting ProtectorBuffLvl : " + protectorBuffLevel + " , Setting ConquerorBuffLvl : " + conquerorBuffLevel);
+            msgLog("Player : "+player.getName()+" KILL COUNT : " + getKills(player) + " on Enemy Map : " + isOnEnemyMap(player)+" is Protector: "+pcdd.isProtector());     
+            msgLog("---------------------------------- [ endBuffLevels ] -----------------------------------");
+            setBuffLvls(player, protectorBuffLevel, conquerorBuffLevel);
         }
     }
 
-    public void onLogOut(Player player){
-        if(!ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP){
+    public void onLogOut(Player player)
+    {
+        if(!ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP)
             return;
-        }
-        //hmm.. don't know what this should have a sense ... 
+        
+        if (players.containsKey(player.getObjectId()))
+        	players.remove(player.getObjectId());
+        
+        if (pduration.containsKey(player.getObjectId()) || cduration.containsKey(player.getObjectId()))
+        	players.put(player.getObjectId(), player.getConquerorDefenderData());
     }
 
-/*    public FastMap<Integer, Integer> getPlayerProtectorConquerorLvl(Player player){
-        FastMap<Integer, Integer> bufflvls = new FastMap<Integer, Integer>();
-        bufflvls.put(player.getProtectorBuffId(), player.getConquerorBuffId());
-        return bufflvls;
-    }
-*/
-    public void onLogin(Player player){
+    public void onEnterWorld(Player player)
+    {
+        if (!ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP)
+            return;
+    	//if already in list - update players data with the saved one.
+        if (players.containsKey(player.getObjectId()))
+        {
+    		PlayerConquererDefenderData savedData = players.get(player.getObjectId());
+        	msgLog("Found saved Data for Player : "+player.getName()+"Kills: "+getKills(player)+" ConquererBuffLevel: "+savedData.getConquerorBuffLevel()+" ProtectorBuffLevel: "+savedData.getProtectorBuffLevel());
+        	player.setConquerorDefenderData(savedData);
+        }
     	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
     	checkKillCountAndUpdateBuffLvls(player);
 
-        sendPacket(player, pcdd.getProtectorBuffId(), pcdd.getConquerorBuffId());
-        msgLog("==You're Last Activity==");
+        sendPacket(player, pcdd.getProtectorBuffLevel(), pcdd.getConquerorBuffLevel());
+        msgLog("==You're Last Activity ["+player.getName()+"]==");
         msgLog("Kills : " + getKills(player));
-        msgLog("Buffs Protector : " + pcdd.getProtectorBuffId());
-        msgLog("Buffs Conqueror : " + pcdd.getConquerorBuffId());
+        msgLog("Buffs Protector : " + pcdd.getProtectorBuffLevel());
+        msgLog("Buffs Conqueror : " + pcdd.getConquerorBuffLevel());        
     }
 
-    public void onEnterWorld(Player player){
-        if (!ConquerorProtectorConfig.ENABLE_GUARDIAN_PVP){
-            return;
-        }
+    public void sheduleCountDownKills(final Player player)
+    {
+    	Future<?> timer = null;
+    	int time = 0;
+    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	
+    	if (pcdd.isProtector() && pduration.containsKey(player.getObjectId()))
+    	{
+    		timer = pduration.get(player.getObjectId());
+    		pduration.remove(player.getObjectId());
+    	}
+    	else if (cduration.containsKey(player.getObjectId()))
+    	{
+    		timer = cduration.get(player.getObjectId());
+    		cduration.remove(player.getObjectId());
+    	}
+    	
+    	if (pcdd.isProtector())
+    	{
+	        switch (pcdd.getProtectorBuffLevel())
+	        {
+	            case 1:
+	            	time = ConquerorProtectorConfig.DURATION_PBUFF1;
+	            	break;
+	            case 2:
+	            	time= ConquerorProtectorConfig.DURATION_PBUFF2;
+	            	break;
+	            case 3:
+	            	time= ConquerorProtectorConfig.DURATION_PBUFF3;
+	            	break;
+	        }
+    	} 
+    	else
+    	{
+            switch (pcdd.getConquerorBuffLevel())
+            {            
+            	case 1:
+	            	time = ConquerorProtectorConfig.DURATION_CBUFF1;
+	            	break;
+	            case 2:
+	            	time= ConquerorProtectorConfig.DURATION_CBUFF2;
+	            	break;
+	            case 3:
+	            	time= ConquerorProtectorConfig.DURATION_CBUFF3;
+	            	break;
+            }
+    	}
 
-        onLogin(player);
-        updateTagPacketToNearby(player);
+    	if (timer != null)
+    		timer.cancel(true);
+    	
+    	timer = ThreadPoolManager.getInstance().schedule(new Runnable() 
+    	{
+            @Override
+            public void run() 
+            {
+            	if (getKills(player) <= 0)
+            		return;
+            	
+            	//Decrease kills by one
+            	if (getKills(player) > 1)
+            	{
+            		msgLog("Runnable : decreasing "+player.getName()+"'s KillCount by 1");
+            		addKills(player,-1);
+            	}
+            	else if (getKills(player) == 1)
+            	{
+            		addKills(player,-1);
+            		//Kills should be 0 now .. so we can remove te player from players list ...             		
+            		msgLog("Removed Player: "+player.getName()+" from PVPList... because KillCount is : "+getKills(player));
+            		players.remove(player.getObjectId());            		
+            	}
+            	//Call CheckRoutine
+            	checkKillCountAndUpdateBuffLvls(player);
+            	//Shedule next downCount
+            	sheduleCountDownKills(player);
+            }
+        }, time * 1000 * 60); // Need to find retail time , for how long it takes for kill countdown each bufflevel ...
+    	
+    	if (pcdd.isProtector())
+    		pduration.put(player.getObjectId(), timer);
+    	else cduration.put(player.getObjectId(), timer);
     }
 
-    public void addToKillAndStartCounting(final Player player){
-    	final PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
-    	//Protector
-    	switch (pcdd.getProtectorBuffId()){
-            case 0:
-                break;
-            case 1:
-                if (pbuffLvl1 != null)
-                    pbuffLvl1.cancel(true);// After a kill is taken, the time resets and start again.
-                
-                pbuffLvl1 = ThreadPoolManager.getInstance().schedule(new Runnable() {
-                    @Override
-                    public void run() {
-                    	
-                        if(pcdd.getProtectorBuffId() != 0 && pcdd.getProtectorBuffId() == 1){
-                            setBuffLvls(player, pcdd.getProtectorBuffId() - 1, pcdd.getConquerorBuffId());
-                            setKills(player, 0); // Player is not PvPing, so times up, decreasing BuffLvl and reseting Kill to killCount of decreased lvl
-                        }
-                    }
-                }, ConquerorProtectorConfig.DURATION_PBUFF1 * 1000 * 60); // Need to find retail time , for how long it takes to wear off the buff
-                
-                // kill old timers
-                if (pbuffLvl2 != null){
-                    pbuffLvl2.cancel(true);
-                }
-                if(pbuffLvl3 != null){
-                    pbuffLvl3.cancel(true);
-                }
-                pduration.put(player.getObjectId(), pbuffLvl1);
-                break;
-            case 2:
-                if (pbuffLvl2 != null){
-                    pbuffLvl2.cancel(true); // After a kill is taken, the time resets and start again.
-                }
-                pbuffLvl2 = ThreadPoolManager.getInstance().schedule(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(pcdd.getProtectorBuffId() != 0 && pcdd.getProtectorBuffId() == 2){
-                            setBuffLvls(player, pcdd.getProtectorBuffId() - 1, pcdd.getConquerorBuffId());
-                            setKills(player, ConquerorProtectorConfig.PROTECTOR_LVL2_KILLCOUNT);  // Player is not PvPing, so times up, decreasing BuffLvl and reseting Kill to killCount of decreased lvl
-                        }
-                    }
-                }, ConquerorProtectorConfig.DURATION_PBUFF2 * 1000 * 60);
-                if (pbuffLvl1 != null){
-                    pbuffLvl1.cancel(true);
-                }
-                pduration.put(player.getObjectId(), pbuffLvl2);
-                break;
-            case 3:
-                if (pbuffLvl3 != null){
-                    pbuffLvl3.cancel(true); // After a kill is taken, the time resets and start again.
-                }
-                pbuffLvl3 = ThreadPoolManager.getInstance().schedule(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(pcdd.getProtectorBuffId() != 0 && pcdd.getProtectorBuffId() == 3){
-                            setBuffLvls(player, pcdd.getProtectorBuffId() - 1, pcdd.getConquerorBuffId());
-                            setKills(player, ConquerorProtectorConfig.PROTECTOR_LVL3_KILLCOUNT);  // Player is not PvPing, so times up, decreasing BuffLvl and reseting Kill to killCount of decreased lvl
-                        }
-                    }
-                }, ConquerorProtectorConfig.DURATION_PBUFF3 * 1000 * 60);
-                if (pbuffLvl2 != null){
-                    pbuffLvl2.cancel(true);
-                }
-                pduration.put(player.getObjectId(), pbuffLvl3);
-                break;
-        }
-
-        switch (pcdd.getConquerorBuffId()){
-            case 0:
-                break;
-            case 1:
-                if(cbuffLvl1 != null){
-                    cbuffLvl1.cancel(true);
-                }
-                cbuffLvl1 = ThreadPoolManager.getInstance().schedule(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(pcdd.getConquerorBuffId() != 0 && pcdd.getConquerorBuffId() == 1){
-                            setBuffLvls(player, pcdd.getProtectorBuffId(), pcdd.getConquerorBuffId() - 1);
-                            setKills(player,0); // Player is not PvPing, so times up, decreasing BuffLvl and reseting Kill to killCount of decreased lvl
-                        }
-                    }
-                }, ConquerorProtectorConfig.DURATION_CBUFF1 * 1000 * 60); // Need to find retail time , for how long it takes to wear off the buff
-                if (cbuffLvl2 != null){
-                    cbuffLvl2.cancel(true);
-                }
-                if(cbuffLvl3 != null){
-                    cbuffLvl3.cancel(true);
-                }
-                cduration.put(player.getObjectId(), cbuffLvl1);
-                break;
-            case 2:
-                if (cbuffLvl2 != null){
-                    cbuffLvl2.cancel(true);
-                }
-                cbuffLvl2 = ThreadPoolManager.getInstance().schedule(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(pcdd.getConquerorBuffId() != 0 && pcdd.getConquerorBuffId() == 1){
-                            setBuffLvls(player, pcdd.getProtectorBuffId(), pcdd.getConquerorBuffId() - 1);
-                            setKills(player, ConquerorProtectorConfig.CONQUEROR_LVL2_KILLCOUNT); // Player is not PvPing, so times up, decreasing BuffLvl and reseting Kill to killCount of decreased lvl
-                        }
-                    }
-                }, ConquerorProtectorConfig.DURATION_CBUFF2 * 1000 * 60);
-                if (cbuffLvl1 != null){
-                    cbuffLvl1.cancel(true);
-                }
-                cduration.put(player.getObjectId(), cbuffLvl2);
-                break;
-            case 3:
-                if (cbuffLvl3 != null){
-                    cbuffLvl3.cancel(true);
-                }
-                cbuffLvl3 = ThreadPoolManager.getInstance().schedule(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(pcdd.getConquerorBuffId() != 0 && pcdd.getConquerorBuffId() == 1){
-                            setBuffLvls(player, pcdd.getProtectorBuffId(), pcdd.getConquerorBuffId() - 1);
-                            setKills(player, ConquerorProtectorConfig.CONQUEROR_LVL3_KILLCOUNT); // Player is not PvPing, so times up, decreasing BuffLvl and reseting Kill to killCount of decreased lvl
-                        }
-                    }
-                }, ConquerorProtectorConfig.DURATION_CBUFF3 * 1000 * 60);
-                if (cbuffLvl2 != null){
-                    cbuffLvl2.cancel(true);
-                }
-                cduration.put(player.getObjectId(), cbuffLvl3);
-                break;
-        }
-    }
-
-    public void setBuffLvls(Player player, int ProtectorBuffLvl, int ConquerorBuffLvl) {
-        player.getConquerorDefenderData().setConquerorBuffId(ConquerorBuffLvl);
-        player.getConquerorDefenderData().setProtectorBuffId(ProtectorBuffLvl);
+    public void setBuffLvls(Player player, int ProtectorBuffLvl, int ConquerorBuffLvl) 
+    {
+    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	pcdd.setConquerorBuffId(ConquerorBuffLvl);
+        pcdd.setProtectorBuffId(ProtectorBuffLvl);
         updateBuffLvls(player);
         updateTagPacketToNearby(player);
-        msgLog("Updated Player " + player.getName() + "'s Buffs to Protector : " + ProtectorBuffLvl + " || Conquerors : " + ConquerorBuffLvl);
+        msgLog("Set Player " + player.getName() + "'s Buffs to Protector Lvl: " + pcdd.getProtectorBuffLevel() + " | Conquerors Lvl: " + pcdd.getConquerorBuffLevel());
     }
 
-    public void updateBuffLvls(Player player){
+    public void updateBuffLvls(Player player)
+    {
     	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
-        sendPacket(player, pcdd.getProtectorBuffId(), pcdd.getConquerorBuffId());
-        sGbuff.applyEffect(player, pcdd.getProtectorBuffId());
-        sKbuff.applyEffect(player, pcdd.getConquerorBuffId());
+        sendPacket(player, pcdd.getProtectorBuffLevel(), pcdd.getConquerorBuffLevel());
+        sGbuff.applyEffect(player, pcdd.getProtectorBuffLevel());
+        sKbuff.applyEffect(player, pcdd.getConquerorBuffLevel());
+        msgLog("Updated Player " + player.getName() + "'s Buffs to Protector Lvl: " + pcdd.getProtectorBuffLevel() + " | Conquerors Lvl: " + pcdd.getConquerorBuffLevel());
         player.getGameStats().updateStatsAndSpeedVisually();
     }
 
-    public void sendPacket(Player player, int ProtectorLvl, int ConquerorLvl){
-        //ShowBuff ? Packet for Conqueror
-        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(player, false, true, ConquerorLvl));
-        //ShowBuff ? Packet for Protector
-        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(player, true, true, ProtectorLvl));
+    public void sendPacket(Player player, int ProtectorLvl, int ConquerorLvl)
+    {
+        //Packet for the Conqueror
+        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(player, false, false, ConquerorLvl));
+        //Packet for the Protector
+        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(player, true, false, ProtectorLvl));
     }
 
-    public void msgLog(String msg){
+    public void msgLog(String msg)
+    {
         if (ConquerorProtectorConfig.ENABLE_CONQUEROR_DEBUGMODE){
             log.info("[ConquerorsService] " + msg);
         }
     }
 
-    public void sendNormalLogMsg(String msg){
+    public void sendNormalLogMsg(String msg)
+    {
         log.info("[ConquerorsService] " + msg);
     }
 
-
-    public static ConquerorsService getInstance() {
+    public static ConquerorsService getInstance()
+    {
         return ConquerorsService.SingletonHolder.instance;
     }
 
-    private static class SingletonHolder {
-
+    private static class SingletonHolder
+    {
         protected static final ConquerorsService instance = new ConquerorsService();
     }
 

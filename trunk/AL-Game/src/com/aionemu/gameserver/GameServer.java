@@ -250,7 +250,7 @@ public class GameServer {
             WeddingService.getInstance();
         }
         Util.printSsSection("Sheduled Services");
-        LimitedItemTradeService.getInstance().start();
+        //LimitedItemTradeService.getInstance().start();
         if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.DREDGION2_ENABLE)
             DredgionService.getInstance().start();
         if (AutoGroupConfig.AUTO_GROUP_ENABLE && AutoGroupConfig.KAMAR_ENABLE)
