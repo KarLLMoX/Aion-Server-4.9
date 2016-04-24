@@ -8709,7 +8709,7 @@
 			<part name="legionId" type="d"/>
 			<part name="joinMsg" type="S"/>
 		</packet>
-        <packet id="0x182" name="________________CM_0x182"> <!-- New / TODO -->
+        <packet id="0x182" name="CM_INTRUDER_SCAN"> <!-- New -->
 			<part name="unk" type="c"/>
 		</packet>
 
