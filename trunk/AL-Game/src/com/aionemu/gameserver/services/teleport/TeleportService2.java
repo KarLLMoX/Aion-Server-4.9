@@ -345,7 +345,7 @@ public class TeleportService2 {
             SerialKillerService sks = SerialKillerService.getInstance();
             PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(false, player.getSKInfo().getRank()));
             if (sks.isHandledWorld(player.getWorldId()) && !sks.isEnemyWorld(player)) {
-                PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(sks.getWorldKillers(player.getWorldId()).values()));
+                PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(sks.getWorldKillers(player.getWorldId()).values(),false));
             }
         } else if (player.getLifeStats().isAlreadyDead()) {
             teleportDeadTo(player, pos.getMapId(), 1, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading());
@@ -481,7 +481,7 @@ public class TeleportService2 {
         SerialKillerService sks = SerialKillerService.getInstance();
         PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(false, player.getSKInfo().getRank()));
         if (sks.isHandledWorld(player.getWorldId()) && !sks.isEnemyWorld(player)) {
-            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(sks.getWorldKillers(player.getWorldId()).values()));
+            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(sks.getWorldKillers(player.getWorldId()).values(),false));
         }
 
         sendWorldSwitchMessage(player, currentWorldId, worldId, isInstance);

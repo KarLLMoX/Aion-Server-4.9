@@ -155,12 +155,12 @@ public class SerialKillerService {
                 @Override
                 public void visit(Player victim) {
                     if (!player.getRace().equals(victim.getRace())) {
-                        PacketSendUtility.sendPacket(victim, new SM_SERIAL_KILLER(world.values()));
+                        PacketSendUtility.sendPacket(victim, new SM_SERIAL_KILLER(world.values(),false));
                     }
                 }
             });
         } else {
-            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(getWorldKillers(worldId).values()));
+            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(getWorldKillers(worldId).values(),false));
         }
     }
 
@@ -183,7 +183,7 @@ public class SerialKillerService {
                 for (Player victim : World.getInstance().getWorldMap(worldId).
                         getWorldMapInstanceById(player.getInstanceId()).getPlayersInside()) {
                     if (!player.getRace().equals(victim.getRace())) {
-                        PacketSendUtility.sendPacket(victim, new SM_SERIAL_KILLER(kill));
+                        PacketSendUtility.sendPacket(victim, new SM_SERIAL_KILLER(kill,false));
                     }
                 }
             }
@@ -192,7 +192,7 @@ public class SerialKillerService {
 
     public void updateIcons(Player player) {
         if (!isEnemyWorld(player)) {
-            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(getWorldKillers(player.getWorldId()).values()));
+            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(getWorldKillers(player.getWorldId()).values(),false));
         }
     }
 
@@ -200,7 +200,7 @@ public class SerialKillerService {
         if (isEnemyWorld(killer)) {
             SerialKiller info = killer.getSKInfo();
 
-            if (killer.getLevel() >= victim.getLevel() + levelDiff) {
+            if (killer.getLevel() >= (victim.getLevel() + levelDiff)) {
                 int rank = getKillerRank(++info.victims);
 
                 if (info.getRank() != rank) {
@@ -213,7 +213,7 @@ public class SerialKillerService {
                         @Override
                         public void visit(Player observed) {
                             if (!killer.getRace().equals(observed.getRace())) {
-                                PacketSendUtility.sendPacket(observed, new SM_SERIAL_KILLER(killers.values()));
+                                PacketSendUtility.sendPacket(observed, new SM_SERIAL_KILLER(killers.values(),false));
                             }
                         }
                     });

@@ -16,25 +16,30 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.services.ConquerorsService;
 
 /**
  * @author Falke_34
  */
 public class CM_INTRUDER_SCAN extends AionClientPacket {
 
-    public CM_INTRUDER_SCAN(int opcode, State state, State... restStates) {
+    int type = 0;
+    
+	public CM_INTRUDER_SCAN(int opcode, State state, State... restStates) {
         super(opcode, state, restStates);
     }
 
     @Override
     protected void readImpl() {
-        readC(); //unk
+        type = readC(); //0 is Protector IntruderScan / 1 is automatic TerretoryScan
     }
 
     @Override
     protected void runImpl() {
-        // empty
+        GameServer.log.info("CM_INTRUDER_SCAN: Type : "+type);
+    	ConquerorsService.getInstance().scanForIntruder(getConnection().getActivePlayer());
     }
 }
