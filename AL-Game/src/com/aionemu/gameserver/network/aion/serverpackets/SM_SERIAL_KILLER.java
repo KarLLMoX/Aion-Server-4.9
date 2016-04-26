@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
@@ -38,9 +39,10 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
         this.debuffLvl = debuffLvl;
     }
 
-    public SM_SERIAL_KILLER(Collection<Player> players) {
-        this.type = 4;
+    public SM_SERIAL_KILLER(Collection<Player> players, boolean intruderRadar) {
+        this.type = intruderRadar ? 5 : 4;
         this.players = players;
+        GameServer.log.info("Sending SM_SERIAL_KILLER Type: "+type+ " Players Size: "+players.size());
     }
 
     public SM_SERIAL_KILLER(Player player, boolean isProtector, boolean broadcastPacket, int buffLvl){
@@ -55,25 +57,22 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
     
     @Override
     protected void writeImpl(AionConnection con) {
-        switch (type) {
+        writeD(type);
+        writeD(1); //0x01
+        writeD(1); //0x01
+    	switch (type) {
             //case 0: // Conqueror Without Msg (not used)
             case 1: // Conqueror With Msg
             case 6: //goes to other players Conquerer
             //case 7: // Protector Without msg  (not used)           
             case 8: // Protector With Msg
             case 9: // goes to other players Protector
-                writeD(type);
-                writeH(1); //0x01
-                writeH(0); //0x01
-                writeD(1); //0x01
-                writeH(1); //0x01
+                writeH(1); //size ?!
                 writeD(debuffLvl); //lvl
                 writeD(type == 9 || type == 6 ? player.getObjectId() : 0);
-                break;
-            case 4:
-                writeD(type);
-                writeD(0x01); // unk
-                writeD(0x01); // unk
+                break;            
+            case 5:
+            case 4: // Serial Killer
                 writeH(players.size());
                 for (Player player : players) {
                     writeD(player.getSKInfo().getRank());
@@ -83,15 +82,17 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
                     writeH(player.getLevel());
                     writeF(player.getX());
                     writeF(player.getY());
-                    writeS(player.getName(), 118);
-                    writeD(0x00); // unk
-                    writeD(0x00); // unk
-                    writeD(0x00); // unk
-                    writeD(0x00); // unk
+                    writeS(player.getName(), 134);
+                    writeH(4); // unk
                 }
-                break;
-            case 5: // Intruder Radar
-                break;    
-        }
+                break;  
+/*            case 5: // Intruder Radar
+                writeH(players.size());
+                for (Player player : players) 
+                {
+                	
+                }
+                break;  
+*/        }
     }
 }

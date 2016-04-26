@@ -16,6 +16,8 @@
  */
 package com.aionemu.gameserver.services;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.concurrent.Future;
 
@@ -33,6 +35,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SERIAL_KILLER;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.serialguards.SerialGuardDebuff;
 import com.aionemu.gameserver.services.serialkillers.SerialKillerDebuff;
+import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.world.World;
@@ -103,6 +106,29 @@ public class ConquerorsService {
             player.getConquerorDefenderData().setKillCountAsConquerer(kills);
         else
         	player.getConquerorDefenderData().setKillCountAsProtector(kills);
+    }
+    
+    public void scanForIntruder(Player player)
+    {
+    	if (!isOnConquerorPvPMap(player.getWorldId()))
+    		return;
+    	
+        int protectorLevel = player.getConquerorDefenderData().getProtectorBuffLevel();
+    	Collection<Player> players = new ArrayList<Player>();
+    	Iterator<Player> ita = World.getInstance().getPlayersIterator();
+        while(ita.hasNext())
+        {
+            Player p1 = ita.next();
+            if(player.getWorldId() == p1.getWorldId() 
+            		&& player.getRace() != p1.getRace() 
+            		&& protectorLevel >= p1.getConquerorDefenderData().getConquerorBuffLevel()
+            		&& MathUtil.getDistance(player, p1) <= 500)
+            {
+            		players.add(p1);
+            }
+        }
+        msgLog("Sending SM_SERIAL_KILLER with "+players.size()+" Players");
+        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(players, true));
     }
     
     public int getKills(Player player)

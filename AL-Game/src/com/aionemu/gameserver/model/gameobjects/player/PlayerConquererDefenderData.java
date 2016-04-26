@@ -10,7 +10,6 @@ package com.aionemu.gameserver.model.gameobjects.player;
 public class PlayerConquererDefenderData 
 {
     private boolean isProtector = false;
-    private boolean isIntruder = false;
     private int ProtectorBuffId = 0;
     private int ConquerorBuffId = 0;
     private int killCountAsConquerer = 0;
@@ -21,12 +20,6 @@ public class PlayerConquererDefenderData
 	}
 	private void setProtector(boolean isProtector) {
 		this.isProtector = isProtector;
-	}
-	public boolean isIntruder() {
-		return isIntruder;
-	}
-	private void setIntruder(boolean isIntruder) {
-		this.isIntruder = isIntruder;
 	}
 	public int getProtectorBuffLevel() {
 		return ProtectorBuffId;
@@ -45,7 +38,6 @@ public class PlayerConquererDefenderData
 	}
 	public void setKillCountAsConquerer(int killCountAsConquerer) {
 		setProtector(false);
-		setIntruder(true);
 		this.killCountAsConquerer = killCountAsConquerer;
 	}
 	public int getKillCountAsProtector() {
@@ -53,7 +45,6 @@ public class PlayerConquererDefenderData
 	}
 	public void setKillCountAsProtector(int killCountAsProtector) {
 		setProtector(true);
-		setIntruder(false);
 		this.killCountAsProtector = killCountAsProtector;
 	}
 
