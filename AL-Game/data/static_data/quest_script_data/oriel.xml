@@ -5,15 +5,12 @@
                     18800 [XML] [Housing] The Living Is Easy
                     18801 [XML] [Housing] Heart of Rock
                     18802 [SCRIPT] [Housing] And A Home for Every Daeva
-                    18803 [TODO] Design Star (level 99)
-                    18804 [XML] My House For An Update (level 99)
                     18805 [SCRIPT] Going Thrifting
                     18806 [SCRIPT] No Accounting for Taste
                     18807 [SCRIPT] Blessed Be Thy Hame
                     18808 [SCRIPT] Foolproof Packaging
                     18809 [SCRIPT] Daeva on the Ride
                     18810 [XML] Taltaros' Proxy
-                    18811 [TODO] The Real Thing (level 99)
                     18812 [XML] Pink Is the Color
                     18813 [XML] Exquisite Shugo Reproduction
                     18814 [XML] Sprigg Up The House
@@ -41,30 +38,19 @@
                     18836 [XML] [Daily] Compost Program
                     18837 [SCRIPT] [Daily] Eye Cutting
                     18838 [XML] [Daily] Bridgeside Compost
-                    18839 [XML] Making Miris Outmoded
                     18840 [XML] Leaves of Four Seasons
                     18841 [XML] Leaves of Four Seasons
                     18842 [XML] Leaves of Four Seasons
                     18843 [XML] Homeowners Anonymous
                     18844 [XML] [Daily] Fertile Deal
-                    18845 [XML] Oriel is Calling
                     18846 [XML] Free Gift Just For Visiting!
                     18847 [SCRIPT] Housewarming
-                    18848 [XML] [Weekly] How to Garden Aggressively
                     18849 [XML] [Relic Bundle Reward] Ancient Goblet
                     18850 [XML] [Relic Bundle Reward] Ancient Crown
                     50007 [XML] [Event/Daily] Cranky Grankers
                     50008 [TODO] [Event/Daily] Solorius Shugo Slackers!
                     50009 [SCRIPT] [Event/Daily] 'Tis The Season...
                     50010 [TODO] [Event] Lover or Loner?
-                    50011 [UNUSED] [Event/Daily] Cranky Grankers
-                    50012 [UNUSED] [Event/Daily] Cranky Grankers
-                    50013 [UNUSED] [Event/Daily] Relationship Manuals
-                    50014 [UNUSED] [Event/Daily] Manual Relationships
-                    50015 [UNUSED] [Event/Daily] Fine Handmade Candy for Girlfriend
-                    50016 [UNUSED] [Event/Daily] Mission of Friends who are Not Lonely
-                    50017 [UNUSED] [Event/Daily] Fine Handmade Candy for Girlfriend
-                    50018 [UNUSED] [Event/Daily] Mission of Friends who are Not Lonely
                     50019 [TODO] [Event/Daily] Sweetie Choco Wuv-ums
                     50020 [TODO] [Event/Daily] Extra-Bitter Chocolate
                     50021 [TODO] [Event/Daily] Candygeddon
@@ -89,12 +75,10 @@
     <!-- REPORTING QUESTS -->
     <report_to id="18800" start_npc_ids="798458" end_npc_ids="830365"/>
     <report_to id="18801" start_npc_ids="830001" end_npc_ids="830005"/>
-    <report_to id="18804" start_npc_ids="830194" end_npc_ids="830070"/>
     <report_to id="18810" start_npc_ids="830034" end_npc_ids="830070"/>
     <report_to id="18827" start_npc_ids="830069" end_npc_ids="810017 810018 810019 810020 810021"/>
     <report_to id="18829" start_npc_ids="810017 810018 810019 810020 810021" end_npc_ids="830584"/>
     <report_to id="18831" start_npc_ids="830645" end_npc_ids="810017 810018 810019 810020 810021"/>
-    <report_to id="18839" start_npc_ids="830195" end_npc_ids="830194"/>
     <report_to id="18843" start_npc_ids="830365" end_npc_ids="830194"/>
     <report_to id="18846" start_npc_ids="830205" end_npc_ids="798455"/>
     <!-- COLLECTING QUESTS -->
@@ -118,7 +102,6 @@
     <item_collecting id="18841" start_npc_ids="830196"/>
     <item_collecting id="18842" start_npc_ids="830196"/>
     <item_collecting id="18844" start_npc_ids="830192"/>
-    <item_collecting id="18848" start_npc_ids="830365"/>
     <item_collecting id="50007" start_npc_ids="831032 831038"/>
     <relic_rewards id="18849" start_npc_ids="831252" relic_var1="186000058" relic_var2="186000057" relic_var3="186000056" relic_var4="186000055" relic_count="10"/>
     <relic_rewards id="18850" start_npc_ids="831210" relic_var1="186000054" relic_var2="186000053" relic_var3="186000052" relic_var4="186000051" relic_count="10"/>

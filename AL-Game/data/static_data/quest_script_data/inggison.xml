@@ -22,17 +22,11 @@
             11004 [XML] Alchemical Solution
             11005 [SCRIPT] The Limits of Genius
             11006 [SCRIPT] Testing the Waters
-            11007 [UNUSED] Finding Lephar
             11008 [SCRIPT] Letter of Encouragement
             11009 [SCRIPT] Meiria's Friendly Suggestion
             11010 [SCRIPT] Angel to the Wounded
             11011 [XML] Healing Elixir
             11012 [SCRIPT] Practical Nursing
-            11013 [UNUSED] Kill Them Twice level 99
-            11014 [UNUSED] A Fool Such As I level 99
-            11015 [XML] For Ribbits
-            11016 [XML] Trading Up
-            11021 [UNUSED] MithrilCoin_GamblingQuest level 99
             11022 [XML] For the Scholars
             11023 [XML] Lapide Preservation
             11024 [XML] Talking Crestlich
@@ -52,15 +46,12 @@
             11038 [XML] Squip's Lamentation
             11039 [XML] Undying Sorrow
             11040 [SCRIPT] Squamp on the Cooking Plate
-            11041 [XML] Marica's Collection REMOVED IN 4.7
             11042 [XML] Example: Shulacks
             11043 [XML] Core of the Problem
             11044 [XML] Pompous Adias
             11045 [XML] Crosia's Circumstances
             11046 [SCRIPT] That Pretty Box
             11047 [XML] What's up, Brohum?
-            11048 [XML] Taloc Rebirth Operation REMOVED IN 4.7
-            11050 [XML] Inggison Coin Fountain REMOVED IN 4.7
             11056 [SCRIPT] Elimination Order
             11057 [SCRIPT] Stanis's Secret Order
             11058 [SCRIPT] Temenos's Secret Order
@@ -112,15 +103,7 @@
             11126 [XML] A Worthy Adversary
             11127 [XML] Perfect Killing Machines
             11128 [XML] Dead in Three Breaths
-            11129 [UNUSED] Blessing to the Agent
             11130 [XML] Tiamat's Mark
-            11131 [UNUSED] Blessing to the Agent level 99
-            11132 [UNUSED] Blessing to the Agent level 99
-            11133 [UNUSED] Blessing to the Agent level 99
-            11134 [UNUSED] Blessing to the Agent level 99
-            11135 [UNUSED] Blessing to the Agent level 99
-            11136 [UNUSED] Blessing to the Agent level 99
-            11137 [UNUSED] Blessing to the Agent level 99
             11138 [XML] Death Comes With a Smile
             11139 [SCRIPT] The Bad News
             11140 [XML] Me Jewels Be Stoled!
@@ -136,32 +119,21 @@
             11150 [XML] Drana Farm Alarm
             11151 [XML] Silence the Murmurs and Hush the Snufflers
             11152 [XML] Get to the Root of it
-            11200 [XML] An Urgent Mission
-            11201 [XML] Securing Avarice
             11202 [XML] A Safer Crater
             11203 [XML] Essence of Sulfur
             11204 [XML] For the Crater Good
             11205 [XML] Protect What's Ours
             11206 [XML] Acidproof Armor
-            11207 [UNUSED] Balaur Bind Point 1 (Infiltration 1) level 99
-            11208 [UNUSED] Balaur Bind Point 1 (Infiltration 2) level 99
-            11209 [UNUSED] Balaur Bind Point 1 (Infiltration 3) level 99
             11210 [XML] The Dramata's Long Shadow
             11211 [XML] Chaser's Backpack
             11212 [SCRIPT] Balaur Records
             11213 [XML] Damn Tree Creatures
-            11214 [XML] Moras's Cool Judgment REMOVED IN 4.7
-            11215 [XML] Reclaim Temple of Scales REMOVED IN 4.7
             11216 [XML] How Many Draks Does It Take To Map?
-            11217 [XML] Seat of Civilization?
-            11218 [XML] Drakanstaffs at Dawn
-            11219 [XML] A Stealthy Science
             11220 [XML] Making Do
             11221 [XML] Living in Obscura-ty
             11222 [XML] Watching the Past
             11223 [XML] Just a Taste
             11224 [XML] Swords and Spectacles
-            11225 [XML] Shadows on the Road
             11226 [XML] Pudding it Together
             11227 [XML] Easy as 4,3,2,1
             11228 [SCRIPT] No, He Never Returned
@@ -195,8 +167,6 @@
             11272 [XML] Favors of Fancy
             11273 [XML] Veilled Weapon
             11274 [XML] Shield Veille
-            11277 [XML] The Pitch
-            11278 [XML] A Higher Pitch
             11279 [XML] Ancient Icon
             11280 [XML] Ancient Seal
             11281 [XML] Ancient Goblet
@@ -238,7 +208,6 @@
             11323 [SCRIPT] ShuGo Go Go
             11324 [SCRIPT] [Daily/Spy] No Mo' Asmos
             11325 [SCRIPT] [Daily] Get 'em out of Inggison
-            11450 [XML] Many Nibbles in a Bite REMOVED IN 4.7
             11451 [XML] For What Ails You
             11452 [XML] Last Part of the Cure
             11453 [XML] Fruit of My Labor
@@ -322,18 +291,14 @@
     <report_to id="30042" start_npc_ids="798927" end_npc_ids="799029"/>
     <!-- 4.5 -->
     <!-- COLLECTING QUESTS -->
-    <!-- <fountain_rewards id="11050" start_npc_ids="730241"/> --> <!-- REMOVED IN 4.7 -->
     <item_collecting id="11004" start_npc_ids="798933" action_item_ids="700609"/>
     <item_collecting id="11011" start_npc_ids="799071" action_item_ids="700908"/>
-    <item_collecting id="11015" start_npc_ids="798910"/>
-    <item_collecting id="11016" start_npc_ids="798910"/>
     <item_collecting id="11022" start_npc_ids="798914"/>
     <item_collecting id="11024" start_npc_ids="799049"/>
     <item_collecting id="11025" start_npc_ids="798950"/>
     <item_collecting id="11028" start_npc_ids="798951"/>
     <item_collecting id="11037" start_npc_ids="798956"/>
     <item_collecting id="11039" start_npc_ids="799035"/>
-    <!-- <item_collecting id="11041" start_npc_ids="798955"/> --> <!-- REMOVED IN 4.7 -->
     <item_collecting id="11042" start_npc_ids="798957"/>
     <item_collecting id="11043" start_npc_ids="798953" action_item_ids="700611 700612 700613 700614"/>
     <item_collecting id="11044" start_npc_ids="798953"/>
@@ -365,8 +330,6 @@
     <item_collecting id="11206" start_npc_ids="799005"/>
     <item_collecting id="11211" start_npc_ids="799010" action_item_ids="700620 700621 700622 700623"/>
     <item_collecting id="11216" start_npc_ids="799017"/>
-    <item_collecting id="11218" start_npc_ids="799017"/>
-    <item_collecting id="11219" start_npc_ids="799017"/>
     <item_collecting id="11220" start_npc_ids="799016"/>
     <item_collecting id="11221" start_npc_ids="799015"/>
     <item_collecting id="11223" start_npc_ids="799000"/>
@@ -391,12 +354,9 @@
     <item_collecting id="11272" start_npc_ids="798958"/>
     <item_collecting id="11273" start_npc_ids="798958"/>
     <item_collecting id="11274" start_npc_ids="798958"/>
-    <item_collecting id="11277" start_npc_ids="798910"/>
-    <item_collecting id="11278" start_npc_ids="798910"/>
     <item_collecting id="11297" start_npc_ids="798316"/>
     <item_collecting id="11299" start_npc_ids="798316"/>
     <item_collecting id="11301" start_npc_ids="798316"/>
-    <!-- <item_collecting id="11450" start_npc_ids="798952" action_item_ids="700634"/> --> <!-- REMOVED IN 4.7 -->
     <item_collecting id="11452" start_npc_ids="798933"/>
     <item_collecting id="11454" start_npc_ids="799070"/>
     <item_collecting id="11457" start_npc_ids="798953" action_item_ids="700635"/>
@@ -476,11 +436,6 @@
     <monster_hunt id="11045" start_npc_ids="798952">
         <monster var="0" npc_ids="215525" end_var="10"/>
     </monster_hunt>
-    <!-- <monster_hunt id="11048" start_npc_ids="798954"> 
-        <monster var="0" npc_ids="216139 216140" end_var="329"/>
-        <monster var="2" npc_ids="215464 215465" end_var="231"/>
-        <monster var="4" npc_ids="215454 215455" end_var="77"/>
-    </monster_hunt> --> <!-- REMOVED IN 4.7 -->
     <monster_hunt id="11071" start_npc_ids="798943">
         <monster var="0" npc_ids="215532 215533" end_var="10"/>
     </monster_hunt>
@@ -542,17 +497,6 @@
         <monster var="0" npc_ids="215628" end_var="4"/>
         <monster var="1" npc_ids="215629" end_var="4"/>
     </monster_hunt>
-    <!-- <monster_hunt id="11200" start_npc_ids="799007" end_npc_ids="799005">
-        <monster var="0" npc_ids="257331 257340 257343 799375 257361 257367 257364 257370 799357 257346 799356"
-                 end_var="10"/>
-        <monster var="0" npc_ids="799359 799358 799353 799352 257355 257352 799350 257358 257529 257332 257528"
-                 end_var="10"/>
-        <monster var="0" npc_ids="257530 257362 257365 257371 257368 257347 295092 257344 257353 257359 257356"
-                 end_var="10"/>
-    </monster_hunt>
-    <monster_hunt id="11201" start_npc_ids="799007" end_npc_ids="799005">
-        <monster var="0" npc_ids="257605 257312" end_var="1"/>
-    </monster_hunt>  --> <!-- REMOVED IN 4.7 -->
     <monster_hunt id="11202" start_npc_ids="799009">
         <monster var="0" npc_ids="215730" end_var="4"/>
         <monster var="1" npc_ids="215732 215733 216732" end_var="6"/>
@@ -565,18 +509,6 @@
         <monster var="0" npc_ids="215758" end_var="6"/>
         <monster var="1" npc_ids="215870" end_var="4"/>
     </monster_hunt>
-    <!-- <monster_hunt id="11214" start_npc_ids="799018" end_npc_ids="799015">
-        <monster var="0" npc_ids="257061 799360 257058 257070 257067 799374 257064 257031 257037 257046" end_var="10"/>
-        <monster var="0" npc_ids="799355 257043 799354 257052 799351 257055 799350 257062 257059 257056" end_var="10"/>
-        <monster var="0" npc_ids="257071 257068 257065 257038 257032 257044 257047 257053" end_var="10"/>
-    </monster_hunt>
-    <monster_hunt id="11215" start_npc_ids="799018" end_npc_ids="799015">
-        <monster var="0" npc_ids="257007 257010" end_var="1"/>
-    </monster_hunt>  --> <!-- REMOVED IN 4.7 -->
-    <monster_hunt id="11217" start_npc_ids="799017">
-        <monster var="0" npc_ids="215768" end_var="6"/>
-        <monster var="1" npc_ids="215773" end_var="4"/>
-    </monster_hunt>
     <monster_hunt id="11222" start_npc_ids="257225">
         <monster var="0" npc_ids="215872" end_var="4"/>
         <monster var="1" npc_ids="215873" end_var="6"/>
@@ -584,9 +516,6 @@
     <monster_hunt id="11224" start_npc_ids="799019">
         <monster var="0" npc_ids="216593" end_var="5"/>
         <monster var="1" npc_ids="216594" end_var="5"/>
-    </monster_hunt>
-    <monster_hunt id="11225" start_npc_ids="799006">
-        <monster var="0" npc_ids="215871" end_var="10"/>
     </monster_hunt>
     <monster_hunt id="11250" start_npc_ids="799038" start_dialog_id="4762">
         <monster var="0" npc_ids="257605" end_var="1"/>

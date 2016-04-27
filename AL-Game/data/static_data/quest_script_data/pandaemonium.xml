@@ -43,9 +43,6 @@
             2943 [XML] Homebody Honir
             2944 [XML] Cloth for Bacht
             2948 [SCRIPT] Huron's Letter
-            2949 [XML] Just Dye, Already
-            2950 [XML] Materials for 100-slot Cube
-            2951 [XML] Looking for Garkbinerk
             2952 [SCRIPT] Winning Vindachinerk's Favor
             2953 [SCRIPT] Delivering Supply Request
             2954 [SCRIPT] Delivering Odella Juice
@@ -94,14 +91,9 @@
             4215 [XML] The Medicine Thief
             4216 [XML] A Present for Father
             4218 [SCRIPT] Mysterious Amabille
-            4901 [XML] Kalsten's Recommendation
-            4902 [XML] Thialfi's Recommendation
-            4903 [XML] Ve's Recommendation
-            4904 [XML] Lyfjaberga's Recommendation
             4905 [SCRIPT] Interviewing the Veterans
             4906 [SCRIPT] Tales of Heroes
             4907 [XML] Lepharists in Elysea
-            4908 [4.0] Shugo Express Mail
             4909 [XML] 3 Fragments of Agrif's Rage
             4910 [XML] 2 Fragments of Agrif's Rage
             4911 [XML] Hilt of Agrif's Rage
@@ -123,9 +115,7 @@
             4927 [XML] The Spiritmaster Preceptor's Test
             4928 [XML] The Cleric Preceptor's Test
             4929 [XML] The Chanter Preceptor's Test
-            4930 [XML] Advice of Destiny
             4931 [XML] Enlightenment of Destiny
-            4932 [XML] Teachings of Destiny
             4933 [XML] Intention of Lord Marchutan
             4945 [XML] [Top Expert] Weaponsmithing Zeal
             4946 [XML] [Top Expert] Weaponsmith's Skill
@@ -166,7 +156,6 @@
             9552 [XML] [Event] Runaway Invitations
             9553 [TODO] [Event] Solorius Romance
             9559 [TODO] [Event] The Taste of Success
-            9561 [TODO] [Event] Daeva's Day
             23832 [SCRIPT] Better Than Great
             23833 [SCRIPT] You Aud-a Know
             29000 [SCRIPT] [Expert] Essencetapper's Test
@@ -199,23 +188,13 @@
             29051 [TODO] Running the Tables
             29052 [SCRIPT] [Expert] Passion for Construction
             29053 [SCRIPT] [Expert] Expert of Construction
-            29054 [XML] [Expert] Construction Zeal
             29055 [SCRIPT] [Expert] Constructor's Final Exam
             29056 [XML] [Expert] Expert Constructor
             29057 [SCRIPT] [Master] Constructor's Potential
             29058 [XML] [Master] Construction Master
             29059 [TODO] Possession Isn't Integrity
-            29060 [XML] New Trainer
-            29061 [XML] New Trainer
-            29062 [XML] New Trainer
-            29063 [XML] New Trainer
-            29072 [XML] Mezaina's Recommendation
-            29073 [XML] Machi's Recommendation
             29074 [XML] The Gunslinger Preceptor's Test
             29075 [XML] The Songweaver Preceptor's Test
-            29076 [XML] A New Preceptor
-            29077 [XML] A New Preceptor
-            48008 [TODO] The Art of the Craft
             51000 [TODO] [Event] Heat of High Summer
             51001 [TODO] [Event] Heat of High Summer
             51005 [TODO] [Event] Festival Energy
@@ -250,7 +229,6 @@
             80067 [XML] [Event] Earning Envelopes
             80068 [XML] [Event] Before the Ink Dries
             80069 [XML] [Event] Wax On, Wax Off
-            80071 [TODO] [Event] Remember your Roots
             80074 [TODO] [Event] Swimsuits Galore
             80075 [TODO] [Event] Kinah Galore
             80077 [XML] [Event] Delving Into Daru Days
@@ -284,7 +262,6 @@
             80131 [XML] [Event] Information Exchange
             80132 [XML] [Event] Drawn Into the Game
             80133 [TODO] [Event] Making Contact
-            80161 [XML] [Event] Fashion Advice
             80166 [XML] [Event] Prizes Galore!
             80167 [XML] [Event] Everyone's Having Fun... Right?
             80168 [XML] [Event] Taking a Powder
@@ -305,7 +282,6 @@
     <report_to id="2942" start_npc_ids="204100" end_npc_ids="278007" item_id="182207030"/>
     <report_to id="2943" start_npc_ids="204102" end_npc_ids="278010" item_id="182207032"/>
     <report_to id="2944" start_npc_ids="204110" end_npc_ids="278011" item_id="182207032"/>
-    <report_to id="2951" start_npc_ids="798059" end_npc_ids="279006"/>
     <report_to id="2955" start_npc_ids="204242" end_npc_ids="204127"/>
     <report_to id="2959" start_npc_ids="204211" end_npc_ids="204164"/>
     <report_to id="2961" start_npc_ids="204055" end_npc_ids="204253"/>
@@ -313,10 +289,6 @@
     <report_to id="2984" start_npc_ids="204138" end_npc_ids="204121" item_id="182207064"/>
     <report_to id="4204" start_npc_ids="204283" end_npc_ids="279008" item_id="182209100"/>
     <report_to id="4209" start_npc_ids="204284" end_npc_ids="798331"/>
-    <report_to id="4901" start_npc_ids="204080" end_npc_ids="204056" item_id="182207067"/>
-    <report_to id="4902" start_npc_ids="204081" end_npc_ids="204057" item_id="182207068"/>
-    <report_to id="4903" start_npc_ids="204082" end_npc_ids="204058" item_id="182207069"/>
-    <report_to id="4904" start_npc_ids="204083" end_npc_ids="204059" item_id="182207070"/>
     <report_to id="4913" start_npc_ids="204182" end_npc_ids="279027"/>
     <report_to id="4921" start_npc_ids="798358" end_npc_ids="279022" item_id="182207128"/>
     <report_to id="4954" start_npc_ids="204100" end_npc_ids="204052"/>
@@ -334,14 +306,6 @@
     <report_to id="29045" start_npc_ids="798441" end_npc_ids="798442"/>
     <report_to id="29047" start_npc_ids="204052" end_npc_ids="204052"/>
     <report_to id="29056" start_npc_ids="798452" end_npc_ids="204052" item_id="182212230"/>
-    <report_to id="29060" start_npc_ids="204056" end_npc_ids="798701" item_id="182215168"/>
-    <report_to id="29061" start_npc_ids="204057" end_npc_ids="798702" item_id="182215169"/>
-    <report_to id="29062" start_npc_ids="204058" end_npc_ids="798703" item_id="182215170"/>
-    <report_to id="29063" start_npc_ids="204059" end_npc_ids="798704" item_id="182215171"/>
-    <report_to id="29072" start_npc_ids="801220" end_npc_ids="801222" item_id="182213281"/>
-    <report_to id="29073" start_npc_ids="801221" end_npc_ids="801223" item_id="182213282"/>
-    <report_to id="29076" start_npc_ids="801222" end_npc_ids="801224" item_id="182213283"/>
-    <report_to id="29077" start_npc_ids="801223" end_npc_ids="801225" item_id="182213284"/>
     <report_to id="80270" start_npc_ids="831177" end_npc_ids="831178"/>
     <report_to_many id="4201" start_npc_ids="204282" end_npc_ids="204173">
         <npc_infos npc_id="279009" var="0" quest_dialog="1352"/>
@@ -375,14 +339,8 @@
     <skill_use id="4929" start_npc_id="204059">
         <skill end_var="10" ids="1328"/>
     </skill_use>
-    <skill_use id="4930" start_npc_id="204083" end_npc_id="204059">
-        <skill end_var="10" ids="9912"/>
-    </skill_use>
     <skill_use id="4931" start_npc_id="204059">
         <skill end_var="100" ids="9912"/>
-    </skill_use>
-    <skill_use id="4932" start_npc_id="204083" end_npc_id="204059">
-        <skill end_var="10" ids="972 973 974 990 1057 1128 1051 2139"/>
     </skill_use>
     <skill_use id="4933" start_npc_id="204059">
         <skill end_var="20" ids="972 973 974 990 1057 1128 1051 2139"/>
@@ -408,8 +366,6 @@
     <item_collecting id="2924" start_npc_ids="204108"/>
     <item_collecting id="2926" start_npc_ids="204261"/>
     <item_collecting id="2927" start_npc_ids="204261" end_npc_ids="204261"/>
-    <item_collecting id="2949" start_npc_ids="204121"/>
-    <item_collecting id="2950" start_npc_ids="798059"/>
     <item_collecting id="2956" start_npc_ids="204127"/>
     <item_collecting id="2960" start_npc_ids="204164"/>
     <item_collecting id="4202" start_npc_ids="204173" action_item_ids="700523"/>
@@ -445,7 +401,6 @@
     <item_collecting id="9552" start_npc_ids="204209"/>
     <item_collecting id="29042" start_npc_ids="204286"/>
     <item_collecting id="29043" start_npc_ids="798445"/>
-    <item_collecting id="29054" start_npc_ids="798452"/>
     <item_collecting id="80015" start_npc_ids="799788"/>
     <item_collecting id="80025" start_npc_ids="799777"/>
     <item_collecting id="80026" start_npc_ids="799777"/>
@@ -494,7 +449,6 @@
     <item_collecting id="80131" start_npc_ids="205487"/>
     <item_collecting id="80132" start_npc_ids="205487"/>
     <item_collecting start_npc_ids="205477" id="80133"/>
-    <item_collecting id="80161" start_npc_ids="830536"/>
     <item_collecting id="80166" start_npc_ids="800274"/>
     <item_collecting id="80167" start_npc_ids="800275"/>
     <item_collecting id="80168" start_npc_ids="800276"/>
