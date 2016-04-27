@@ -7297,6 +7297,10 @@
             <part name="unk" type="d"/>
             <part name="unk" type="d"/>            
 		</packet>
+		<packet id="0x7E" name="________________SM_0x7E">
+            <part name="unk" type="c"/>
+            <part name="unk" type="c"/>
+		</packet>
 		<!-- =============== -->
 		<!-- Not coded in AL -->
 		<!-- =============== -->
