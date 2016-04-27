@@ -34,7 +34,6 @@
             2934 [XML] [Expert] Cooking Expert
             2935 [XML] [Expert] Alchemy Expert
             2936 [XML] [Expert] Tailoring Expert
-            2937 [SCRIPT] Unexpected Reward
             2938 [SCRIPT] Secret Library Access
             2939 [XML] Weapon for Fraiban
             2940 [XML] Kinterun's Package
@@ -43,7 +42,6 @@
             2943 [XML] Homebody Honir
             2944 [XML] Cloth for Bacht
             2948 [SCRIPT] Huron's Letter
-            2952 [SCRIPT] Winning Vindachinerk's Favor
             2953 [SCRIPT] Delivering Supply Request
             2954 [SCRIPT] Delivering Odella Juice
             2955 [XML] A Feast for a Son
@@ -56,7 +54,6 @@
             2962 [SCRIPT] Jafnhar's Whereabouts
             2963 [SCRIPT] On Behalf of a Friend
             2964 [XML] Striking at Shadows
-            2965 [SCRIPT] Ancient Weapons
             2966 [XML] A Sword Gone Astray
             2967 [XML] A Helmet Gone Astray
             2968 [XML] A Staff Gone Astray
@@ -195,10 +192,6 @@
             29059 [TODO] Possession Isn't Integrity
             29074 [XML] The Gunslinger Preceptor's Test
             29075 [XML] The Songweaver Preceptor's Test
-            51000 [TODO] [Event] Heat of High Summer
-            51001 [TODO] [Event] Heat of High Summer
-            51005 [TODO] [Event] Festival Energy
-            51006 [TODO] [Event] The Day of the Daeva
             80001 [SCRIPT] [Event] Festive Daeva's Day
             80009 [SCRIPT] [Event] The Cake is the Truth!
             80013 [XML] [Event] The Pumpkin King

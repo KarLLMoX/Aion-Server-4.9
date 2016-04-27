@@ -2,10 +2,6 @@
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
             [BEGIN] SUMMARY
-                    50000 [XML] [Event] Heat of High Summer (Asmodians)
-                    50001 [XML] [Event] Heat of High Summer (Elyos)
-                    50005 [SCRIPT] [Event] Daeva's Day Energy
-                    50006 [SCRIPT] [Event] Ascension Extravaganza
                     50008 [SCRIPT] [Event/Daily] Solorius Shugo Slackers!
                     50010 [XML] [Event] Lover or Loner?
                     50019 [XML] [Event/Daily] Sweetie Choco Wuv-ums
@@ -22,10 +18,6 @@
                     50030 [XML] [Event/Repeatable Event] The Alchemist's Proposal
                     50031 [XML] [Event/Daily] Deal a critical love hit
                     50032 [XML] [Event/Weekly] Extensive Critical Love Hit
-                    51000 [XML] [Event] Heat of High Summer (Asmodians)
-                    51001 [XML] [Event] Heat of High Summer (Elyos)
-                    51005 [SCRIPT] [Event] Festival Energy
-                    51006 [SCRIPT] [Event] The Day of the Daeva
                     51008 [SCRIPT] [Event/Daily] Non-Helping Hands
                     51010 [XML] [Event] Bitter or Sweet?
                     51019 [XML] [Event/Daily] Cutie-Wootie Choco Wuv
@@ -145,10 +137,6 @@
             [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
-    <report_to id="50000" start_npc_ids="799707" end_npc_ids="799705"/>
-    <report_to id="50001" start_npc_ids="799706" end_npc_ids="799705"/>
-    <report_to id="51000" start_npc_ids="799795" end_npc_ids="799793"/>
-    <report_to id="51001" start_npc_ids="799794" end_npc_ids="799793"/>
     <report_to id="80324" start_npc_ids="831434" end_npc_ids="831447"/>
     <report_to id="80325" start_npc_ids="831433" end_npc_ids="831447"/>
     <report_to id="80326" start_npc_ids="831440" end_npc_ids="831448"/>

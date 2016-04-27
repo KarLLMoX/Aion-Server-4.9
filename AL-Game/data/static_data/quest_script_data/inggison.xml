@@ -3,13 +3,6 @@
                xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
         [BEGIN] SUMMARY
-            10020 [SCRIPT] Proving Yourself to Outremus
-            10021 [SCRIPT] Friends for Life
-            10022 [SCRIPT] Support the Inggison Outpost
-            10023 [SCRIPT] Sulla's Startling Discovery
-            10024 [SCRIPT] Will the Aether Rain?
-            10025 [SCRIPT] It's Better! It's an Obelisk!
-            10026 [SCRIPT] Secret of Inggison
             10031 [SCRIPT] A Risk for the Obelisk
             10032 [SCRIPT] Help in the Hollow
             10033 [SCRIPT] Petrified Subside
@@ -220,9 +213,6 @@
             11460 [SCRIPT] The Shulack of Taloc
             11461 [XML] What Book?
             13834 [SCRIPT] StigMajor
-            14060 [SCRIPT] The Land of Ide
-            14061 [SCRIPT] Holy Problems
-            14062 [SCRIPT] Ide-ling Dragonbound
             21233 [XML] Food for Rationing
             21234 [XML] Worm Scourge
             21235 [XML] Bolstering Our Defenses
