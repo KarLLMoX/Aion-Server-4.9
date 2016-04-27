@@ -90,7 +90,6 @@
                     1204 [XML] Potcrab Pincers
                     1208 [XML] Secret Trade
                     1210 [XML] Feed a Cold
-                    1211 [XML] Targena for Titania
                     1213 [XML] A Hungry Abex
                     1214 [XML] Give and Take
                     1215 [XML] Can't Please Everyone
@@ -100,7 +99,6 @@
                     1219 [XML] Lepharist Treasure Box
                     1220 [SCRIPT] A Secret Delivery
                     1221 [XML] Brainwashed Tursin Krall
-                    1222 [XML] Union Blues
                     1224 [XML] Summons from Anontrite
                     1225 [XML] A Coin in Hand
                     14010 [SCRIPT] Terrain of the Verteron Fortress
@@ -171,12 +169,10 @@
     <item_collecting id="1204" start_npc_ids="203166"/>
     <item_collecting id="1208" start_npc_ids="203137"/>
     <item_collecting id="1210" start_npc_ids="203157"/>
-    <!-- <item_collecting id="1211" start_npc_ids="203180"/> --> <!-- Removed in 4.7 -->
     <item_collecting id="1213" start_npc_ids="203153"/>
     <item_collecting id="1214" start_npc_ids="203153" end_npc_ids="203157"/>
     <item_collecting id="1215" start_npc_ids="203172"/>
     <item_collecting id="1219" start_npc_ids="203172" action_item_ids="700283"/>
-    <item_collecting id="1222" start_npc_ids="203332"/>
     <item_collecting id="1225" start_npc_ids="203179"/>
     <item_collecting id="14110" start_npc_ids="203111"/>
 	<item_collecting id="14113" start_npc_ids="203178"/>
