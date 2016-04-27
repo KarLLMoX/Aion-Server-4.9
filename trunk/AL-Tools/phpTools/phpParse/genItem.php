@@ -1288,7 +1288,10 @@ function makeMissingItemTemplateData()
         
         //  Wert = FALSE wird nicht berücksichtigt
         setFalseToBlank($key,"exceed_enchant");
-                    
+        
+        if (isset($tabTpls[$key]['exceed_enchant']))
+            $tabTpls[$key]['exceed_enchant']= strtolower($tabTpls[$key]['exceed_enchant']);
+        
         // funktionale Ermittlungen
         $tabTpls[$key]['outname']           = getName($key);
         $tabTpls[$key]['outdesc']           = getDesc($key);
