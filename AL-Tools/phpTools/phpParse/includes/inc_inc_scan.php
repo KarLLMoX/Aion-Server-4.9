@@ -1064,7 +1064,7 @@ function makeIncludeItemNames()
             elseif (stripos($line,"<name>") !== false)
                 $desc  = strtoupper(getXmlValue("name",$line));
             elseif (stripos($line,"<body>") !== false)
-                $body = str_replace('"','\"',getXmlValue("body",$line));
+                $body = ltrim(str_replace('"','',getXmlValue("body",$line)));
                 
             if (stripos($line,"</string>") !== false)
             {  
@@ -1107,6 +1107,7 @@ function makeIncludeNpcInfos()
     $maxFiles = count($tabFiles);
     $tabnpcs  = array();
     $tabdesc  = array();
+    $errdesc  = array();
     
 	writeHinweisVorarbeiten();
 	
@@ -1151,7 +1152,7 @@ function makeIncludeNpcInfos()
             if     (stripos($line,"<id>") !== false)
                 $id    = getXmlValue("id",$line);
             elseif (stripos($line,"<name>") !== false)
-                $name = getXmlValue("name",$line);
+                $name = ltrim(str_replace('"','',getXmlValue("name",$line)));
             elseif (stripos($line,"<desc") !== false)
                 $desc = strtoupper(getXmlValue("desc",$line));
                 
@@ -1222,7 +1223,7 @@ function makeIncludeNpcInfos()
             elseif (stripos($line,"<name>") !== false)
                 $desc  = strtoupper(getXmlValue("name",$line));
             elseif (stripos($line,"<body>") !== false)
-                $body = str_replace('"','\"',getXmlValue("body",$line));
+                $body = str_replace('"','',getXmlValue("body",$line));
                 
             if (stripos($line,"</string>") !== false)
             {                
@@ -1262,9 +1263,19 @@ function makeIncludeNpcInfos()
         }
         $desc = $tabnpcs[$key]['desc'];
         
-        $lastline = '                 "'.strtoupper($tabnpcs[$key]['name']).'" => array("npc_id" => "'.$tabnpcs[$key]['id'].'"'.
-                    ', "name" => "'.$tabdesc[$desc]['body'].'", "offiname" => "'.$tabnpcs[$key]['desc'].'"'.
-                    ', "nameid" => "'.$tabdesc[$desc]['nameid'].'")';
+        if (isset($tabdesc[$desc]))
+        {
+            $lastline = '                 "'.strtoupper($tabnpcs[$key]['name']).'" => array("npc_id" => "'.$tabnpcs[$key]['id'].'"'.
+                        ', "name" => "'.$tabdesc[$desc]['body'].'", "offiname" => "'.$tabnpcs[$key]['desc'].'"'.
+                        ', "nameid" => "'.$tabdesc[$desc]['nameid'].'")';
+        }
+        else
+        {
+            if (!isset($errdesc[$desc]))
+                $errdesc[$desc] = 1;
+                
+            $lastline = "";
+        }
     }
     if ($lastline != "")
     {
@@ -1275,6 +1286,15 @@ function makeIncludeNpcInfos()
     fwrite($hdlout,"               );\n");
     fwrite($hdlout,"?>");
     fclose($hdlout);
+    
+    $errkeys = array_keys($errdesc);
+    sort($errkeys);
+    $domax = count($errkeys);
+    
+    for ($e=0;$e<$domax;$e++)
+    {
+        logLine("- <font color=red>Eintrag fehlt zu</font>",$errkeys[$e]);
+    }
     
     logLine("- Anzahl Npcs ausgegeben",$cntnpc);
     
