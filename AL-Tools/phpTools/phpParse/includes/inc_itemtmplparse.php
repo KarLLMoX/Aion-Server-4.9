@@ -410,9 +410,42 @@ function getWeaponType($key)
 function getArmorType($key)
 {
     global $tabTpls;
-    
+    /*
+    <xs:simpleType name="armorType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NO_ARMOR"/>
+            <xs:enumeration value="CHAIN"/>
+            <xs:enumeration value="CLOTHES"/>
+            <xs:enumeration value="LEATHER"/>
+            <xs:enumeration value="PLATE"/>
+            <xs:enumeration value="ROBE"/>
+            <xs:enumeration value="ARROW"/>
+            <xs:enumeration value="SHIELD"/>
+            <xs:enumeration value="WING"/>
+            <xs:enumeration value="PLUME"/>
+	        <xs:enumeration value="ACCESSORY"/>
+        </xs:restriction>
+    </xs:simpleType>
+    */
     if (isset($tabTpls[$key]['armor_type']))
-        return "ARMOR";
+    {
+        switch (strtoupper($tabTpls[$key]['armor_type']))
+        {
+            case "CHAIN":
+            case "CLOTHES":
+            case "LEATHER":
+            case "PLATE":
+            case "ROBE":
+            case "ARROW":
+            case "SHIELD":
+            case "WING":
+            case "PLUME":
+                return strtoupper($tabTpls[$key]['armor_type']);
+                break;
+            default:
+                break;
+        }
+    }
     
     if (!isset($tabTpls[$key]['desc']))
     {
@@ -428,7 +461,7 @@ function getArmorType($key)
         $icon = strtolower($tabTpls[$key]['icon_name']);
     else
         $icon = "";
-    
+    /*
     if (stripos($desc,"stigma")       === false
     && (stripos($desc,"shield")       !== false
     ||  stripos($desc,"buckler")      !== false
@@ -437,7 +470,14 @@ function getArmorType($key)
     ||  stripos($desc,"str_battery_") !== false
     ||  stripos($icon,"_arrow")       !== false))
         return "ARMOR";
-    
+    */
+    if (stripos($desc,"stigma")       === false)
+    {
+        if (stripos($desc,"shield")   !== false
+        ||  stripos($desc,"buckler")  !== false) return "SHIELD";
+        if (stripos($desc,"_wing_")   !== false) return "WING";
+        if (stripos($icon,"_arrow")   !== false) return "ARROW";
+    }
     if (stripos($desc,"stigma")       === false
     && (stripos($desc,"str_ring_")    !== false
     ||  stripos($icon,"_ring_")       !== false
@@ -1308,9 +1348,12 @@ function getActionLines($key)
             $excost = trim(str_replace("%","",$excost));
         }
         else
+        {
             $percnt = "";
+            $excost = intval($excost * 100); // 0.2 wird 20, siehe 188920028
+        }
             
-        $ret .= '            <expextract item_id="'.strtoupper($exprew).'" '.$percnt.' cost="'.$excost.'"/>'."\n";
+        $ret .= '            <expextract item_id="'.getClientItemId($exprew).'"'.$percnt.' cost="'.$excost.'"/>'."\n";
     }    
     
     unset($exprew,$excost,$percnt);
@@ -1337,14 +1380,21 @@ function getActionLines($key)
     
     if ($funpet != "")
     {
-        $ret .= '            <adoptpet petId="'.getToypetNameId($funpet).'"';
+        $petid = getToypetNameId($funpet);
         
-        if (strtoupper($confir) == "TRUE")
-            $ret .= ' sidekick="true"';
-        if ($petmin != "" && $petmin != "0")
-            $ret .= ' minutes="'.$petmin.'"';
-        
-        $ret .= '/>'."\n";
+        if ($petid != "")
+        {
+            $ret .= '            <adoptpet petId="'.$petid).'"';
+            
+            if (strtoupper($confir) == "TRUE")
+                $ret .= ' sidekick="true"';
+            if ($petmin != "" && $petmin != "0")
+                $ret .= ' minutes="'.$petmin.'"';
+            
+            $ret .= '/>'."\n";
+        }
+        else
+            logLine("<font color=red>PetId fehlt",$funpet);
     }
     unset($funpet,$confir,$petmin);
     
@@ -1352,7 +1402,8 @@ function getActionLines($key)
     $asitem = getTabTplsValue($key,'assembly_item');
     
     if (trim($asitem != ""))
-        $ret .= '            <assemble item_id="'.strtolower($asitem).'"/>'."\n";
+        $ret .= '            <assemble item="'.getClientItemId($asitem).'"/>'."\n"; 
+        
     unset($asitem);
     
     // housedeco
