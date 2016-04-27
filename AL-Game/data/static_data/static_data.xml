@@ -169,8 +169,6 @@
     <import file="abyss_race_bonus/abyss_race_bonus.xml"/>
     <import file="base/base_locations.xml"/>
     <import file="beritra/beritra_invasion.xml"/>
-    <import file="serial_killer/serial_killer.xml"/>
-	<import file="serial_guard/serial_guard.xml"/>
     <import file="skills/skill_charge.xml"/>
     <import file="items/item_purifications.xml"/>
     <import file="decomposable_items/decomposable_selectitems.xml"/>

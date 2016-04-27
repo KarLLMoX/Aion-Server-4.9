@@ -37,7 +37,7 @@ public class SM_LEGION_ADD_MEMBER extends AionServerPacket {
         this.msgId = msgId;
         this.text = text;
     }
-
+    
     @Override
     protected void writeImpl(AionConnection con) {
     	writeD(player.getObjectId());
@@ -48,6 +48,11 @@ public class SM_LEGION_ADD_MEMBER extends AionServerPacket {
         writeC(player.getLevel());
         writeD(player.getPosition().getMapId());
         writeD(NetworkConfig.GAMESERVER_ID);
+        writeC(0);
+        writeC(0);
+        writeC(0);
+        writeC(0);
+        writeC(0);
         writeD(msgId);
         writeS(text);
     }

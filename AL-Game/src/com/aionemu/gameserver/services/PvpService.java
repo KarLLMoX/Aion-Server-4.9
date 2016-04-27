@@ -31,6 +31,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
+import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.utils.MathUtil;
@@ -39,7 +40,9 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.utils.stats.StatFunctions;
+
 import javolution.util.FastMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -196,8 +199,6 @@ public class PvpService {
                 playerDamage += aggro.getDamage();
             }
         }
-
-        SerialKillerService.getInstance().updateRank(winner, victim);
         ConquerorsService.getInstance().onKill(winner, victim);
 
         //notify Quest engine for winner + his group

@@ -17,9 +17,11 @@
 package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.GameServer;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.services.ConquerorsService;
+import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
+import com.aionemu.gameserver.services.territory.TerritoryService;
 
 /**
  * @author Falke_34
@@ -39,7 +41,16 @@ public class CM_INTRUDER_SCAN extends AionClientPacket {
 
     @Override
     protected void runImpl() {
-        GameServer.log.info("CM_INTRUDER_SCAN: Type : "+type);
-    	ConquerorsService.getInstance().scanForIntruder(getConnection().getActivePlayer());
+        Player player = getConnection().getActivePlayer();
+    	GameServer.log.info("CM_INTRUDER_SCAN: Type : "+type);
+    	switch (type)
+    	{
+	    	case 0: //IntruderRadar
+	    		ConquerorsService.getInstance().scanForIntruders(player);
+	    		break;
+	    	case 1: //Automatic TerritoryScan
+	    		TerritoryService.getInstance().scanForIntruders(player);
+	    		break;
+    	}        
     }
 }

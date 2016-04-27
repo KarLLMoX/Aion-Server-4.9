@@ -47,7 +47,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.DuelService;
 import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.PrivateStoreService;
-import com.aionemu.gameserver.services.SerialKillerService;
+
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.services.trade.PricesService;
@@ -342,11 +342,6 @@ public class TeleportService2 {
             player.getKnownList().clear();
             player.updateKnownlist();
 
-            SerialKillerService sks = SerialKillerService.getInstance();
-            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(false, player.getSKInfo().getRank()));
-            if (sks.isHandledWorld(player.getWorldId()) && !sks.isEnemyWorld(player)) {
-                PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(sks.getWorldKillers(player.getWorldId()).values(),false));
-            }
         } else if (player.getLifeStats().isAlreadyDead()) {
             teleportDeadTo(player, pos.getMapId(), 1, pos.getX(), pos.getY(), pos.getZ(), pos.getHeading());
         } else {
@@ -476,12 +471,6 @@ public class TeleportService2 {
         }
         if (player.isLegionMember()) {
             PacketSendUtility.broadcastPacketToLegion(player.getLegion(), new SM_LEGION_UPDATE_MEMBER(player, 0, ""));
-        }
-
-        SerialKillerService sks = SerialKillerService.getInstance();
-        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(false, player.getSKInfo().getRank()));
-        if (sks.isHandledWorld(player.getWorldId()) && !sks.isEnemyWorld(player)) {
-            PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(sks.getWorldKillers(player.getWorldId()).values(),false));
         }
 
         sendWorldSwitchMessage(player, currentWorldId, worldId, isInstance);

@@ -35,7 +35,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_MOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAYER_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_TARGET_SELECTED;
-import com.aionemu.gameserver.services.SerialKillerService;
 import com.aionemu.gameserver.services.VortexService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -155,14 +154,6 @@ public class PlayerReviveService {
     }
 
     public static final void kiskRevive(Player player, int skillId) {
-        // TODO: find right place for this
-        if (player.getSKInfo().getRank() > 1) {
-            if (SerialKillerService.getInstance().isEnemyWorld(player)) {
-                bindRevive(player);
-                return;
-            }
-        }
-
         Kisk kisk = player.getKisk();
         if (kisk == null) {
             return;

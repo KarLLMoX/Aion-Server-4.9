@@ -61,6 +61,7 @@ public class Legion {
     private String description = "";
     private int minJoinLevel = 0;
     private int joinType = 0;
+    private LegionTerritory territory;
 
     /**
      * Only called when a legion is created!
@@ -631,5 +632,17 @@ public class Legion {
 	{
 		if (!joinRequestMap.containsKey(joinRequest.getPlayerId()))
 			this.joinRequestMap.put(joinRequest.getPlayerId(), joinRequest);
+	}
+
+	public boolean ownsTerretory() {
+		return getTerritory().getId() > 0;
+	}
+
+	public LegionTerritory getTerritory() {
+		return territory;
+	}
+
+	public void setTerritory(LegionTerritory territory) {
+		this.territory = territory;
 	}
 }

@@ -52,7 +52,11 @@ public class SM_LEGION_INFO extends AionServerPacket {
         writeH(legion.getLegionaryPermission());
         writeH(legion.getVolunteerPermission());
         writeQ(legion.getContributionPoints());
-        writeB(new byte[24]); //UNK but not a spacer ... 
+        writeQ(0); //definatly some kind of points ... but what ?!
+        writeB(new byte[4]); //UNK but not a spacer ... ?!
+        writeD(legion.getTerritory().getId()); //TerritoryId colors the terrritory on map 
+        writeD(legion.getTerritory().getId()); //0x4 on offi maybe territoryid again ?
+        writeD(4); //0x4 on offi ?
         writeS(legion.getLegionDiscription());
         writeC(legion.getLegionJoinType());
         writeH(legion.getMinLevel());
@@ -65,14 +69,18 @@ public class SM_LEGION_INFO extends AionServerPacket {
         /**
          * Show max 7 announcements *
          */
-        int i = 0;
-        for (Timestamp unixTime : announcementList.keySet()) {
-            writeS(announcementList.get(unixTime));
-            writeD((int) (unixTime.getTime() / 1000));
-            i++;
-            if (i >= 7) {
-                break;
-            }
+        if (!announcementList.isEmpty())
+        {
+	        int i = 0;
+	        for (Timestamp unixTime : announcementList.keySet()) 
+	        {
+	            writeS(announcementList.get(unixTime));
+	            writeD((int) (unixTime.getTime() / 1000));
+	            i++;
+	            if (i >= 7) 
+	                break;
+	            
+	        }
         }
     }
 }

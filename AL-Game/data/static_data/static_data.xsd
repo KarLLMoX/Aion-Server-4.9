@@ -81,8 +81,6 @@
     <xs:include schemaLocation="abyss_race_bonus/abyss_race_bonus.xsd"/>
     <xs:include schemaLocation="base/base_locations.xsd"/>
     <xs:include schemaLocation="beritra/beritra_invasion.xsd"/>
-    <xs:include schemaLocation="serial_killer/serial_killer.xsd"/>
-	<xs:include schemaLocation="serial_guard/serial_guard.xsd"/>
     <xs:include schemaLocation="skills/skill_charge.xsd"/>
     <xs:include schemaLocation="items/item_purifications.xsd"/>
     <xs:include schemaLocation="decomposable_items/decomposable_selectitems.xsd"/>
@@ -180,8 +178,6 @@
                 <xs:element ref="abyss_race_bonuses" minOccurs="0"/>
                 <xs:element ref="base_locations" minOccurs="0"/>
                 <xs:element ref="beritra_invasion" minOccurs="0"/>
-                <xs:element ref="serial_killers" minOccurs="0"/>
-				<xs:element ref="serial_guards" minOccurs="0"/>
                 <xs:element ref="skill_charge" minOccurs="0"/>
                 <xs:element ref="item_purifications" minOccurs="0"/>
                 <xs:element ref="decomposable_selectitems" minOccurs="0"/>

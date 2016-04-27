@@ -201,10 +201,6 @@ public class StaticData {
     public HotspotTeleporterData hotspotTeleporterData;
     @XmlElement(name = "login_events")
     public AtreianPassportData atreianPassportData;
-    @XmlElement(name = "serial_killers")
-    public SerialKillerData serialKillerData;
-    @XmlElement(name = "serial_guards")
-    public SerialGuardData serialGuardData;
     @XmlElement(name = "base_locations")
     public BaseData baseData;
   	@XmlElement(name="beritra_invasion")
@@ -313,8 +309,6 @@ public class StaticData {
         DataManager.log.info("[DataManager] Loaded " + hotspotTeleporterData.size() + " hotspot templates");
 		DataManager.log.info("[DataManager] Loaded " + arcadeUpgradeData.size() + " arcade upgrade entries");
         DataManager.log.info("[DataManager] Loaded " + atreianPassportData.size() + " atreian passports");
-        DataManager.log.info("[DataManager] Loaded " + serialKillerData.size() + " serial killer entries");
-        DataManager.log.info("[DataManager] Loaded " + serialGuardData.size() + " serial guard entires");
         DataManager.log.info("[DataManager] Loaded " + baseData.size() + " base entries");
     	DataManager.log.info("[DataManager] Loaded " + beritraData.size() + " beritra invasion entries");
         DataManager.log.info("[DataManager] Loaded " + absoluteStatsData.size() + " absolute stat templates");

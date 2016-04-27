@@ -26,7 +26,7 @@ import java.util.Collection;
 /**
  * @author Source & xTz
  */
-public class SM_SERIAL_KILLER extends AionServerPacket {
+public class SM_CONQUEROR_PROTECTOR extends AionServerPacket {
 
 	private int type;
     private int debuffLvl;
@@ -34,18 +34,18 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
     private Player player;
 
 
-    public SM_SERIAL_KILLER(boolean showMsg, int debuffLvl) {
+    public SM_CONQUEROR_PROTECTOR(boolean showMsg, int debuffLvl) {
         this.type = showMsg ? 1 : 0;
         this.debuffLvl = debuffLvl;
     }
 
-    public SM_SERIAL_KILLER(Collection<Player> players, boolean intruderRadar) {
+    public SM_CONQUEROR_PROTECTOR(Collection<Player> players, boolean intruderRadar) {
         this.type = intruderRadar ? 5 : 4;
         this.players = players;
         GameServer.log.info("Sending SM_SERIAL_KILLER Type: "+type+ " Players Size: "+players.size());
     }
 
-    public SM_SERIAL_KILLER(Player player, boolean isProtector, boolean broadcastPacket, int buffLvl){
+    public SM_CONQUEROR_PROTECTOR(Player player, boolean isProtector, boolean broadcastPacket, int buffLvl){
         this.player = player;
         if (broadcastPacket){
             this.type = isProtector ? 9 : 6;
@@ -63,29 +63,41 @@ public class SM_SERIAL_KILLER extends AionServerPacket {
     	switch (type) {
             //case 0: // Conqueror Without Msg (not used)
             case 1: // Conqueror With Msg
-            case 6: //goes to other players Conquerer
+            case 6: //goes to other players - Conquerer
             //case 7: // Protector Without msg  (not used)           
             case 8: // Protector With Msg
-            case 9: // goes to other players Protector
+            case 9: // goes to other players - Protector
                 writeH(1); //size ?!
                 writeD(debuffLvl); //lvl
                 writeD(type == 9 || type == 6 ? player.getObjectId() : 0);
                 break;            
-            case 5:
-            case 4: // Serial Killer
+            case 4: // Automatic Territory Intruder Scan
                 writeH(players.size());
                 for (Player player : players) {
-                    writeD(player.getSKInfo().getRank());
+                    writeD(1);//player.getSKInfo().getRank());
                     writeD(player.getObjectId());
                     writeD(0x01); // unk
                     writeD(player.getAbyssRank().getRank().getId());
                     writeH(player.getLevel());
                     writeF(player.getX());
                     writeF(player.getY());
-                    writeS(player.getName(), 134);
-                    writeH(4); // unk
+                    writeS(player.getName(),134); //134
+                    /*                    //fill the rest with some crap ... 
+                    int nameSize = (player.getName().length() * 2) + 2;
+                    int fordiffsize = (134 - nameSize)/4;
+                    //int restdiffsize = 134 - (fordiffsize*4);
+                    for (int i=0; i < fordiffsize; i++)
+                    {
+                    	writeD(Rnd.get(0, 8547584));
+                    }
+                    if (restdiffsize > 0)
+                    {
+                    	for (int i=0; i < restdiffsize;i++)
+                    		writeC(5);
+                    }
+*/                    writeH(4); // unk
                 }
-                break;  
+                break;    
 /*            case 5: // Intruder Radar
                 writeH(players.size());
                 for (Player player : players) 

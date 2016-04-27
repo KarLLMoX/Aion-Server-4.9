@@ -14,56 +14,41 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.serialguards;
+package com.aionemu.gameserver.services.territory;
 
-import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.stats.calc.StatOwner;
 import com.aionemu.gameserver.model.stats.calc.functions.IStatFunction;
 import com.aionemu.gameserver.model.stats.calc.functions.StatAddFunction;
-import com.aionemu.gameserver.model.templates.serial_guard.GuardRankPenaltyAttr;
-import com.aionemu.gameserver.model.templates.serial_guard.GuardRankRestriction;
-import com.aionemu.gameserver.skillengine.change.Func;
-
+import com.aionemu.gameserver.model.stats.container.StatEnum;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Kill3r
- * @modify Elo
+ * @author CoolyT
  */
-public class SerialGuardDebuff implements StatOwner {
+public class TerritoryBuff implements StatOwner {
 
     private List<IStatFunction> functions = new ArrayList<IStatFunction>();
 
-    public void applyEffect(Player player, int ProcRank){
-        if (ProcRank == 0){
-            if (hasBuff()){
-                player.getGameStats().endEffect(this);
-            }
-            return;
-        }
+    public void applyEffect(Player player)
+    {
+        int addvalue = 60; //there is only one BuffLevel = 60; regarding client Xml ...... 
 
-        GuardRankRestriction grrProc = DataManager.SERIAL_GUARD_DATA.getGuardRankRestriction(ProcRank, player.getRace());
-
-        if (hasBuff()){
+        if (hasBuff())
             endEffect(player);
-        }
 
-        for (GuardRankPenaltyAttr GRPA : grrProc.getGuardPenaltyAttr()){
-            if (GRPA.getFunc().equals(Func.ADD)){
-                functions.add(new StatAddFunction(GRPA.getStat(), GRPA.getValue(), true));
-            }
-        }
-
+        functions.add(new StatAddFunction(StatEnum.PVP_DEFEND_RATIO, addvalue, true));
         player.getGameStats().addEffect(this, functions);
     }
 
-    public boolean hasBuff(){
+    public boolean hasBuff()
+    {
         return !functions.isEmpty();
     }
 
-    public void endEffect(Player player){
+    public void endEffect(Player player)
+    {
         functions.clear();
         player.getGameStats().endEffect(this);
     }

@@ -20,6 +20,7 @@ import ch.lambdaj.Lambda;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
 import ch.qos.logback.core.joran.spi.JoranException;
+
 import com.aionemu.commons.database.DatabaseFactory;
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.commons.network.NioServer;
@@ -45,6 +46,7 @@ import com.aionemu.gameserver.network.loginserver.LoginServer;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.services.*;
 import com.aionemu.gameserver.services.abyss.AbyssRankUpdateService;
+import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.gc.GarbageCollector;
 import com.aionemu.gameserver.services.instance.*;
@@ -53,6 +55,7 @@ import com.aionemu.gameserver.services.player.PlayerEventService;
 import com.aionemu.gameserver.services.player.PlayerLimitService;
 import com.aionemu.gameserver.services.reward.OnlineBonus;
 import com.aionemu.gameserver.services.reward.RewardService;
+import com.aionemu.gameserver.services.territory.TerritoryService;
 import com.aionemu.gameserver.services.transfers.PlayerTransferService;
 import com.aionemu.gameserver.spawnengine.InstanceRiftSpawnManager;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
@@ -224,7 +227,6 @@ public class GameServer {
         SiegeService.getInstance().initSieges();
         AgentFightService.getInstance().initAgentFight();
         MoltenusService.getInstance().initMoltenus();
-        SerialKillerService.getInstance().initSerialKillers();
         DisputeLandService.getInstance().init();
         Util.printSsSection("Bases");
         if(BaseConfig.BASE_ENABLED) {
@@ -294,7 +296,7 @@ public class GameServer {
         RoadService.getInstance();
         LivePartyConcertHall.getInstance().init();
         AdminService.getInstance();
-        PlayerTransferService.getInstance();
+        PlayerTransferService.getInstance();        
         Util.printSection(" ### Housing ### ");
         HousingBidService.getInstance().start();
         MaintenanceTask.getInstance();
@@ -303,6 +305,7 @@ public class GameServer {
 		Util.printSection(" ### Customs ### ");
         LookManager.getInstance().onStart();
         SupportService.getInstance();
+        TerritoryService.getInstance().init();
         if (MembershipConfig.ONLINE_BONUS_ENABLE)
             OnlineBonus.getInstance();
 		RestartService.getInstance();

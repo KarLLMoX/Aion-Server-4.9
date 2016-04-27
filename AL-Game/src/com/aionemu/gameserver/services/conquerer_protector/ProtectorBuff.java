@@ -14,56 +14,50 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services.serialkillers;
+package com.aionemu.gameserver.services.conquerer_protector;
 
-import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.stats.calc.StatOwner;
 import com.aionemu.gameserver.model.stats.calc.functions.IStatFunction;
 import com.aionemu.gameserver.model.stats.calc.functions.StatAddFunction;
-import com.aionemu.gameserver.model.stats.calc.functions.StatRateFunction;
-import com.aionemu.gameserver.model.templates.serial_killer.RankPenaltyAttr;
-import com.aionemu.gameserver.model.templates.serial_killer.RankRestriction;
-import com.aionemu.gameserver.skillengine.change.Func;
-
+import com.aionemu.gameserver.model.stats.container.StatEnum;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Dtem
+ * @author CoolyT
  */
-public class SerialKillerDebuff implements StatOwner {
+public class ProtectorBuff implements StatOwner {
 
     private List<IStatFunction> functions = new ArrayList<IStatFunction>();
-    private RankRestriction rankRestriction;
 
-    public void applyEffect(Player player, int rank) {
-        if (rank == 0) {
+    public void applyEffect(Player player, int buffLevel)
+    {
+        int addvalue = buffLevel*20; //BuffLevel 1 = 20; BuffLevel 2 = 40; Bufflevel 3 = 60; regarding client Xml ...... 
+    	
+        if (buffLevel == 0)
+        {
+            if (hasBuff())
+                player.getGameStats().endEffect(this);
             return;
         }
 
-        rankRestriction = DataManager.SERIAL_KILLER_DATA.getRankRestriction(rank, player.getRace());
-
-        if (hasDebuff()) {
+        if (hasBuff())
             endEffect(player);
-        }
 
-        for (RankPenaltyAttr rankPenaltyAttr : rankRestriction.getPenaltyAttr()) {
-            if (rankPenaltyAttr.getFunc().equals(Func.PERCENT)) {
-                functions.add(new StatRateFunction(rankPenaltyAttr.getStat(), rankPenaltyAttr.getValue(), true));
-            } else {
-                functions.add(new StatAddFunction(rankPenaltyAttr.getStat(), rankPenaltyAttr.getValue(), true));
-            }
-        }
+        functions.add(new StatAddFunction(StatEnum.PVP_DEFEND_RATIO, addvalue, true));
         player.getGameStats().addEffect(this, functions);
     }
 
-    public boolean hasDebuff() {
+    public boolean hasBuff()
+    {
         return !functions.isEmpty();
     }
 
-    public void endEffect(Player player) {
+    public void endEffect(Player player)
+    {
         functions.clear();
         player.getGameStats().endEffect(this);
     }
+
 }

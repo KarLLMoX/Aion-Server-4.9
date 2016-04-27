@@ -45,7 +45,6 @@ import com.aionemu.gameserver.services.AccessLevelEnum;
 import com.aionemu.gameserver.services.AutoGroupService;
 import com.aionemu.gameserver.services.BrokerService;
 import com.aionemu.gameserver.services.ChatService;
-import com.aionemu.gameserver.services.ConquerorsService;
 import com.aionemu.gameserver.services.DuelService;
 import com.aionemu.gameserver.services.ExchangeService;
 import com.aionemu.gameserver.services.FindGroupService;
@@ -53,10 +52,10 @@ import com.aionemu.gameserver.services.KiskService;
 import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.RepurchaseService;
-import com.aionemu.gameserver.services.SerialKillerService;
 import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.StigmaService;
 import com.aionemu.gameserver.services.WorldBuffService;
+import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropService;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.summons.SummonsService;
@@ -121,7 +120,6 @@ public class PlayerLeaveWorldService {
         if (AutoGroupConfig.AUTO_GROUP_ENABLE) {
             AutoGroupService.getInstance().onPlayerLogOut(player);
         }
-        SerialKillerService.getInstance().onLogout(player);
         InstanceService.onLogOut(player);
         KiskService.getInstance().onLogout(player);
         WorldBuffService.getInstance().onLogOut(player);

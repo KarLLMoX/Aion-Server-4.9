@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.services;
+package com.aionemu.gameserver.services.conquerer_protector;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -30,11 +30,9 @@ import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.configs.main.ConquerorProtectorConfig;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.gameobjects.player.PlayerConquererDefenderData;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_SERIAL_KILLER;
+import com.aionemu.gameserver.model.gameobjects.player.PlayerConquererProtectorData;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_CONQUEROR_PROTECTOR;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.serialguards.SerialGuardDebuff;
-import com.aionemu.gameserver.services.serialkillers.SerialKillerDebuff;
 import com.aionemu.gameserver.utils.MathUtil;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
@@ -48,11 +46,11 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
 public class ConquerorsService {
 
     private FastMap<Integer, MapTypes> usedWorldMaps = new FastMap<Integer, MapTypes>();
-    private FastMap<Integer, PlayerConquererDefenderData> players = new FastMap<Integer, PlayerConquererDefenderData>();
+    private FastMap<Integer, PlayerConquererProtectorData> players = new FastMap<Integer, PlayerConquererProtectorData>();
     private FastMap<Integer, Future<?>> pduration = new FastMap<Integer, Future<?>>();
     private FastMap<Integer, Future<?>> cduration = new FastMap<Integer, Future<?>>();
-    private SerialGuardDebuff sGbuff;
-    private SerialKillerDebuff sKbuff;
+    private ProtectorBuff protectorBuff;
+    private ConquerorBuff conquerorBuff;
 
     private static final Logger log = LoggerFactory.getLogger(ConquerorsService.class);
 
@@ -69,8 +67,8 @@ public class ConquerorsService {
 
         GameServer.log.info("[ConquerorsService] Initializing Conqueror/Protector Buff System...");
 
-        sGbuff = new SerialGuardDebuff();
-        sKbuff = new SerialKillerDebuff();
+        protectorBuff = new ProtectorBuff();
+        conquerorBuff = new ConquerorBuff();
         if(!ConquerorProtectorConfig.IGNORE_MAPS)
         {
             for (String worldids : ConquerorProtectorConfig.ENABLED_MAPS_GUARDIAN.split(","))
@@ -103,17 +101,17 @@ public class ConquerorsService {
     public void setKills(Player player, int kills)
     {
         if (isOnEnemyMap(player))
-            player.getConquerorDefenderData().setKillCountAsConquerer(kills);
+            player.getConquerorProtectorData().setKillCountAsConquerer(kills);
         else
-        	player.getConquerorDefenderData().setKillCountAsProtector(kills);
+        	player.getConquerorProtectorData().setKillCountAsProtector(kills);
     }
     
-    public void scanForIntruder(Player player)
+    public void scanForIntruders(Player player)
     {
     	if (!isOnConquerorPvPMap(player.getWorldId()))
     		return;
     	
-        int protectorLevel = player.getConquerorDefenderData().getProtectorBuffLevel();
+        int protectorLevel = player.getConquerorProtectorData().getProtectorBuffLevel();
     	Collection<Player> players = new ArrayList<Player>();
     	Iterator<Player> ita = World.getInstance().getPlayersIterator();
         while(ita.hasNext())
@@ -121,29 +119,30 @@ public class ConquerorsService {
             Player p1 = ita.next();
             if(player.getWorldId() == p1.getWorldId() 
             		&& player.getRace() != p1.getRace() 
-            		&& protectorLevel >= p1.getConquerorDefenderData().getConquerorBuffLevel()
+            		&& protectorLevel >= p1.getConquerorProtectorData().getConquerorBuffLevel()
             		&& MathUtil.getDistance(player, p1) <= 500)
             {
             		players.add(p1);
             }
         }
         msgLog("Sending SM_SERIAL_KILLER with "+players.size()+" Players");
-        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(players, true));
+        PacketSendUtility.sendPacket(player, new SM_CONQUEROR_PROTECTOR(players, false));
+        PacketSendUtility.sendPacket(player, new SM_CONQUEROR_PROTECTOR(players, true));
     }
     
     public int getKills(Player player)
     {
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	//msgLog("GetKills for "+player.getName()+": KillsAsProtector: "+pcdd.getKillCountAsProtector()+" KillsAsConquerer: "+pcdd.getKillCountAsConquerer()+" isProtector: "+pcdd.isProtector());
     	if (pcdd.isProtector())
-    		return player.getConquerorDefenderData().getKillCountAsProtector();
+    		return pcdd.getKillCountAsProtector();
     	else
-            return player.getConquerorDefenderData().getKillCountAsConquerer();        	
+            return pcdd.getKillCountAsConquerer();        	
     }
     
     public void addKills(Player player, int kills)
     {
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	int oldKills = getKills(player);
     	if (isOnEnemyMap(player))
             pcdd.setKillCountAsConquerer(pcdd.getKillCountAsConquerer() + kills);
@@ -181,7 +180,10 @@ public class ConquerorsService {
 
     public void onKill(Player player, Player diedPlayer)
     {        
-    	PlayerConquererDefenderData pcdd_killer = player.getConquerorDefenderData();
+    	if (!isOnConquerorPvPMap(player.getWorldId()))
+    		return;
+    	
+    	PlayerConquererProtectorData pcdd_killer = player.getConquerorProtectorData();
     	// Add new player if he's not in players and give first buff lvl
     	if (!players.containsKey(player.getObjectId()))
         {
@@ -211,7 +213,7 @@ public class ConquerorsService {
 
     public void updateTagPacketToNearby(final Player player) // NEED TO RE-CHECK
     { 
-    	final PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	final PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	World.getInstance().getWorldMap(player.getWorldId()).getWorldMapInstanceById(player.getInstanceId()).doOnAllPlayers(new Visitor<Player>() {
             @Override
             public void visit(Player p) 
@@ -219,9 +221,9 @@ public class ConquerorsService {
                 if (player != p) 
                 {
                     if (pcdd.isProtector()) //Protector
-                    	PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, true, true, pcdd.getProtectorBuffLevel()));                    
+                    	PacketSendUtility.sendPacket(p, new SM_CONQUEROR_PROTECTOR(player, true, true, pcdd.getProtectorBuffLevel()));                    
                     else //Conqueror
-                    	PacketSendUtility.sendPacket(p, new SM_SERIAL_KILLER(player, false, true, pcdd.getConquerorBuffLevel()));                                                        
+                    	PacketSendUtility.sendPacket(p, new SM_CONQUEROR_PROTECTOR(player, false, true, pcdd.getConquerorBuffLevel()));                                                        
                 }
             }
         });
@@ -247,13 +249,13 @@ public class ConquerorsService {
 
     public void checkIfTargetIsHighestRankIntruder(Player player, Player diedPlayer)
     {
-        if (diedPlayer.getConquerorDefenderData().getProtectorBuffLevel() == 3 || diedPlayer.getConquerorDefenderData().getConquerorBuffLevel() == 3)
+        if (diedPlayer.getConquerorProtectorData().getProtectorBuffLevel() == 3 || diedPlayer.getConquerorProtectorData().getConquerorBuffLevel() == 3)
             sendPacketToEveryoneInMap(player, diedPlayer);        
     }
 
     public void checkKillCountAndUpdateBuffLvls(Player player)
     {        
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	int kills = getKills(player);
     	boolean isProtector = pcdd.isProtector();
         int buffLevel = 0;
@@ -311,7 +313,7 @@ public class ConquerorsService {
         	players.remove(player.getObjectId());
         
         if (pduration.containsKey(player.getObjectId()) || cduration.containsKey(player.getObjectId()))
-        	players.put(player.getObjectId(), player.getConquerorDefenderData());
+        	players.put(player.getObjectId(), player.getConquerorProtectorData());
     }
 
     public void onEnterWorld(Player player)
@@ -321,11 +323,11 @@ public class ConquerorsService {
     	//if already in list - update players data with the saved one.
         if (players.containsKey(player.getObjectId()))
         {
-    		PlayerConquererDefenderData savedData = players.get(player.getObjectId());
+    		PlayerConquererProtectorData savedData = players.get(player.getObjectId());
         	msgLog("Found saved Data for Player : "+player.getName()+"Kills: "+getKills(player)+" ConquererBuffLevel: "+savedData.getConquerorBuffLevel()+" ProtectorBuffLevel: "+savedData.getProtectorBuffLevel());
         	player.setConquerorDefenderData(savedData);
         }
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	checkKillCountAndUpdateBuffLvls(player);
 
         sendPacket(player, pcdd.getProtectorBuffLevel(), pcdd.getConquerorBuffLevel());
@@ -339,7 +341,7 @@ public class ConquerorsService {
     {
     	Future<?> timer = null;
     	int time = 0;
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	
     	if (pcdd.isProtector() && pduration.containsKey(player.getObjectId()))
     	{
@@ -421,7 +423,7 @@ public class ConquerorsService {
 
     public void setBuffLvls(Player player, int ProtectorBuffLvl, int ConquerorBuffLvl) 
     {
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
     	pcdd.setConquerorBuffId(ConquerorBuffLvl);
         pcdd.setProtectorBuffId(ProtectorBuffLvl);
         updateBuffLvls(player);
@@ -431,10 +433,11 @@ public class ConquerorsService {
 
     public void updateBuffLvls(Player player)
     {
-    	PlayerConquererDefenderData pcdd = player.getConquerorDefenderData();
+    	PlayerConquererProtectorData pcdd = player.getConquerorProtectorData();
         sendPacket(player, pcdd.getProtectorBuffLevel(), pcdd.getConquerorBuffLevel());
-        sGbuff.applyEffect(player, pcdd.getProtectorBuffLevel());
-        sKbuff.applyEffect(player, pcdd.getConquerorBuffLevel());
+        protectorBuff.applyEffect(player, pcdd.getProtectorBuffLevel());
+        conquerorBuff.applyEffect(player, pcdd.getConquerorBuffLevel());
+        
         msgLog("Updated Player " + player.getName() + "'s Buffs to Protector Lvl: " + pcdd.getProtectorBuffLevel() + " | Conquerors Lvl: " + pcdd.getConquerorBuffLevel());
         player.getGameStats().updateStatsAndSpeedVisually();
     }
@@ -442,9 +445,9 @@ public class ConquerorsService {
     public void sendPacket(Player player, int ProtectorLvl, int ConquerorLvl)
     {
         //Packet for the Conqueror
-        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(player, false, false, ConquerorLvl));
+        PacketSendUtility.sendPacket(player, new SM_CONQUEROR_PROTECTOR(player, false, false, ConquerorLvl));
         //Packet for the Protector
-        PacketSendUtility.sendPacket(player, new SM_SERIAL_KILLER(player, true, false, ProtectorLvl));
+        PacketSendUtility.sendPacket(player, new SM_CONQUEROR_PROTECTOR(player, true, false, ProtectorLvl));
     }
 
     public void msgLog(String msg)

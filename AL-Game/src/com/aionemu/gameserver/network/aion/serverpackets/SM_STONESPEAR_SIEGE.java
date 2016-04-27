@@ -23,10 +23,15 @@ import com.aionemu.gameserver.network.aion.AionServerPacket;
  * @author
  */
 public class SM_STONESPEAR_SIEGE extends AionServerPacket {
+	
+	public SM_STONESPEAR_SIEGE()
+	{
+		
+	}
 
     @Override
     protected void writeImpl(AionConnection con) {
-    	writeC(0); //todo
+    	writeC(4); //todo
     	writeD(0); //todo
     	writeH(0); //todo
     }
