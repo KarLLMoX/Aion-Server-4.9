@@ -3053,13 +3053,12 @@
 			<part name="checkTicket" type="c"/>
 			<part name="changeSex" type="c"/>
 		</packet>
-		<packet id="0x54" name="SM_SERIAL_KILLER">
+		<packet id="0x54" name="SM_CONQUEROR_PROTECTOR">
 			<part name="type" type="d" id="0"/>
-			<part name="unk" type="h"/>
-			<part name="unk(0x0)" type="h"/>
+			<part name="unk(0x1)" type="d"/>
 			<part name="unk(0x1)" type="d"/>
 			<part name="maybe size" type="h" id="2"/>
-			<for id="2">
+			<for id="2" >
 				<switch id="0">
 					<case id="0" comment="Conquerer - noMsg"> 
 						<part name="buffLevel" type="d"/>
@@ -3069,18 +3068,16 @@
 						<part name="buffLevel" type="d"/>
 						<part name="0" type="d"/>					
 					</case>
-					<case id="4" comment="SerialKiller">
+					<case id="4" comment="Automatic Territory Radar">
 						<part name="rank" type="d"/>
 						<part name="playerObjId" type="d"/>
-						<part name="0x01" type="h"/>
+						<part name="0x01" type="d"/>
 						<part name="abyssRankId" type="d"/>
 						<part name="playerLvl" type="h"/>
 						<part name="x" type="f"/>
-						<part name="y" type="f"/>
-						<part name="z" type="f"/>
-						<part name="unk" type="d"/>
-						<part name="unk" type="d"/>
-						<part name="unk" type="d"/>
+						<part name="y" type="f"/>						
+						<part name="playerName" type="Ss" size="134"/>
+						<part name="0x04" type="h"/>
 					</case>
 					<case id="5" comment="Intruder Radar">
 
@@ -3106,6 +3103,7 @@
 					</case>
 				</switch>
 			</for>
+			
 		</packet>
 		<packet id="0x55" name="SM_INFLUENCE_RATIO">
 			<part name="fortressesTimer" type="d"/>
@@ -3518,9 +3516,11 @@
 			<part name="legionary permissions" type="h"/>
 			<part name="volunteer permissions" type="h"/>
 			<part name="contribution points" type="Q"/>
-			<part name="unk" type="d"/>
-			<part name="unk[0x00] [4.9]" type="b" size="16"/>
-			<part name="unk" type="d"/>
+			<part name="unk points" type="Q"/>
+			<part name="unk[0x00] [4.9]" type="b" size="4"/>
+			<part name="legionTerretoryId" type="d"/>
+			<part name="unk 0x4" type="d"/>
+			<part name="unk 0x4" type="d"/>
 			<part name="LegionDescription" type="S"/>
 			<part name="joinType" type="c"/>
 			<part name="minJoinLevel" type="h"/>
@@ -7158,15 +7158,19 @@
             <part name="SiegeId" type="d" id="0">
 				<reader type="MultiValue" name="Stonespear_SiegeId"/>
 			</part>
- 			<part name="unk" type="c"/>
-            <part name="Rank" type="h"/>
-            <part name="Points" type="d"/>
-            <part name="TimeNeeded(in Sec)" type="d"/>
-            <part name="Participation-Date(IngameEu + 2Std)" type="d">
-				<reader type="UnixDate" name="Date"/>
-			</part>
-            <part name="unk" type="d"/>
-            <part name="LegionName" type="S"/>
+ 			<part name="type" type="c" id="0"/>
+			<switch id="0">
+				<case id="1">
+					<part name="Rank" type="h"/>
+					<part name="Points" type="d"/>
+					<part name="TimeNeeded(in Sec)" type="d"/>
+					<part name="Participation-Date(IngameEu + 2Std)" type="d">
+						<reader type="UnixDate" name="Date"/>
+					</part>
+					<part name="unk" type="d"/>
+					<part name="LegionName" type="S"/> 
+				</case>
+			</switch>
 		</packet>
 		<packet id="0x112" name="SM_SECURITY_TOKEN"> <!-- TODO -->
 			<part name="token(MD5)" type="b" size="32"/>									
@@ -7270,15 +7274,17 @@
 		<packet id="0x30" name="_________SM_BODYGARD_END"> <!-- Bodygard on Groupmember ended -->
             <part name="unk" type="c"/>
 		</packet>
-		<packet id="0x12F" name="________________SM_TERRETORY_LIST"> <!-- NEW/TODO 4.9 -->
+		<packet id="0x12F" name="SM_TERRITORY_LIST"> 
 			<part name="size" type="h" id="0"/>
 			<for id="0">
-				<part name="Rank?" type="d"/>
-				<part name="Some Id" type="d"/>
+				<part name="Territory ID" type="d">
+					<reader type="MultiValue" name="Stonespear_SiegeId"/>
+				</part>
+				<part name="LegionId" type="d"/>
 				<part name="unk" type="h"/>
 				<part name="unk" type="h"/>
 				<part name="unk" type="h"/>
-				<part name="Legion-Name?" type="S"/>
+				<part name="Legion-Name" type="S"/>
 			</for>
 		</packet>
 		<packet id="0x13B" name="________________SM_LANDING_REINFORCEMENT"> <!-- NEW/TODO AionNA 4.9 -->
