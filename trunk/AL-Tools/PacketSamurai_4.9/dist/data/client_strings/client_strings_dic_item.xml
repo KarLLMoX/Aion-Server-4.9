@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/08/07 16:04:34">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1090000</id>
     <name>STR_DIC_TEST05</name>
@@ -1928,7 +1928,7 @@
   <string>
     <id>1090385</id>
     <name>STR_DIC_I_QUEST_1076c</name>
-    <body>Black Blaze Stone;A stone that can be obtained by defeating [%dic:STR_DIC_M_Ab1_1141_RottenTreeB_29_An].</body>
+    <body>Stone of Black Flame; A stone of black flame that can be obtained from [%dic:STR_DIC_M_Ab1_1141_RottenTreeB_29_An].</body>
   </string>
   <string>
     <id>1090386</id>
@@ -6573,7 +6573,7 @@
   <string>
     <id>1095135</id>
     <name>STR_DIC_I_quest_11454a</name>
-    <body>Growth Sap;A potent sap found inside the body of a [%dic:STR_DIC_M_Ab1_1011_AgrintGi_50_An] in Reshanta. It is known to revive withered plants.</body>
+    <body>Growth Sap; Special sap found in the body of [%dic:STR_DIC_M_LF4_A3_Rottentree_Green_52_An]. It is full of growth energy because it has been influenced by Caspa's energy.</body>
   </string>
   <string>
     <id>1095136</id>
@@ -6608,7 +6608,7 @@
   <string>
     <id>1095142</id>
     <name>STR_DIC_I_quest_21454a</name>
-    <body>Growth Fertilizer;Mysterious liquid known to revive withered plants. Obtained from a [%dic:STR_DIC_M_Ab1_1011_AgrintGi_50_An] in Reshanta.</body>
+    <body>Growth Accelerant; Mysterious sap found in the body of [%dic:STR_DIC_M_DF4_Slime_DR_52_An]. It was collected from the tree with Aether energy in the Krug Basin and is full of growth energy.</body>
   </string>
   <string>
     <id>1095143</id>
@@ -13466,7 +13466,7 @@
   <string>
     <id>1096568</id>
     <name>STR_DIC_I_quest_36530a</name>
-    <body>Black Rose;A black rose that is said to be found only in the Garden of the Balaur Lord. It can be collected from [%dic:STR_DIC_OBJ_LF5_FOBJ_Q36530].</body>
+    <body>Black Rose;A black rose that is said to be found only in the Garden of the Dragon Lord. It can be collected from [%dic:STR_DIC_OBJ_LF5_FOBJ_Q36530].</body>
   </string>
   <string>
     <id>1096569</id>
@@ -13611,7 +13611,7 @@
   <string>
     <id>1096597</id>
     <name>STR_DIC_I_quest_15053a</name>
-    <body>World's Wondrous Treasures;CChillrunerk's treasure book that was stolen by [%dic:STR_DIC_M_LF5_E_Cellatu_59_An].</body>
+    <body>World's Wondrous Treasures;Chairunerk's treasure book that was stolen by [%dic:STR_DIC_M_LF5_E_Cellatu_59_An].</body>
   </string>
   <string>
     <id>1096598</id>
@@ -13861,7 +13861,7 @@
   <string>
     <id>1096647</id>
     <name>STR_DIC_wrap_event_2014xmas_snow_4</name>
-    <body>Greater Katalium Snowball;A high-grade snowball that Daeva made by trimming the [%dic:STR_DIC_wrap_event_2014xmas_snow_1] for 3 times. It must be painful when hit by it.</body>
+    <body>High Grade Katalium Snowball;A high-grade snowball that Daeva made by trimming the [%dic:STR_DIC_wrap_event_2014xmas_snow_1] for 3 times. It must be painful when hit by it.</body>
   </string>
   <string>
     <id>1096648</id>
@@ -14016,7 +14016,7 @@
   <string>
     <id>1096678</id>
     <name>STR_DIC_I_quest_15455a</name>
-    <body>Krotan Spirit Pendant;An old pendant that can be found at Krotan Refuge.</body>
+    <body>Krotan Spirit Pendant;An old pendant that can be found at Krotan Fortress.</body>
   </string>
   <string>
     <id>1096679</id>
@@ -14231,17 +14231,17 @@
   <string>
     <id>1096721</id>
     <name>STR_DIC_I_key_ab1_crotan_raid_01a</name>
-    <body>Krotan Spirit's Soulstone;A soulstone from the Krotan Enraged Guardian. Used with [%dic:STR_DIC_OBJ_Ab1_crotan_Named_Spawn_FOBJ_L] to summon the 'Krotan Enraged Guardian'.</body>
+    <body>Krotan Spirit's Soulstone;A soulstone used with [%dic:STR_DIC_OBJ_Ab1_crotan_Named_Spawn_FOBJ_L] to summon the 'Krotan Spirit Guardian'.</body>
   </string>
   <string>
     <id>1096722</id>
     <name>STR_DIC_I_key_ab1_lamiren_raid_01a</name>
-    <body>Miren Spirit's Soulstone;A soulstone from the Miren Enraged Guardian. Used with [%dic:STR_DIC_OBJ_Ab1_lamiren_Named_Spawn_FOBJ_L] to summon the 'Miren Enraged Guardian'.</body>
+    <body>Miren Spirit's Soulstone;A soulstone used with [%dic:STR_DIC_OBJ_Ab1_lamiren_Named_Spawn_FOBJ_L] to summon the 'Miren Spirit Guardian'.</body>
   </string>
   <string>
     <id>1096723</id>
     <name>STR_DIC_I_key_ab1_dkisas_raid_01a</name>
-    <body>Kysis Spirit's Soulstone;A soulstone from the Kysis Enraged Guardian. Used with [%dic:STR_DIC_OBJ_Ab1_dkisas_Named_Spawn_FOBJ_L] to summon the 'Kysis Enraged Guardian'.</body>
+    <body>Kysis Spirit's Soulstone;A soulstone used with [%dic:STR_DIC_OBJ_Ab1_dkisas_Named_Spawn_FOBJ_L] to summon the 'Kysis Spirit Guardian'.</body>
   </string>
   <string>
     <id>1096724</id>
@@ -14284,8 +14284,88 @@
     <body>Lannok's Crown; The old crown Lanmark was wearing.</body>
   </string>
   <string>
+    <id>1096732</id>
+    <name>STR_DIC_I_quest_15478a</name>
+    <body>Aether  Heatometer;A tool used to remove the core of the Frost Crystal of Magic, currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096733</id>
+    <name>STR_DIC_I_quest_15478b</name>
+    <body>Solid Frost Core;A crystal core collected from [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q15478], currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096734</id>
+    <name>STR_DIC_I_quest_15479a</name>
+    <body>Wizard's Extractor;A tool used to remove the core of the Ice Crystal of Magic, currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096735</id>
+    <name>STR_DIC_I_quest_15479b</name>
+    <body>Solid Ice Core;A crystal core collected from [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q15479], currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096736</id>
+    <name>STR_DIC_I_quest_25478a</name>
+    <body>Chemical Heatometer;A tool used to remove the core of the Collapsed Frost Crystal, currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096737</id>
+    <name>STR_DIC_I_quest_25478b</name>
+    <body>Hard Frost Core;A crystal core collected from [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q25478], currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096738</id>
+    <name>STR_DIC_I_quest_25479a</name>
+    <body>Alchemist's Extractor;A tool used to remove the cores of the Ice Crystals, currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096739</id>
+    <name>STR_DIC_I_quest_25479b</name>
+    <body>Hard Ice Core;A crystal core collected from [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q25479], currently spreading in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096740</id>
+    <name>STR_DIC_I_quest_18745a</name>
+    <body>Stolen Danuar Valuables;A Danuar valuables stolen by the Beritra and currently stored in [%dic:STR_DIC_OBJ_IDRaksha_solo_FOBJ_Vritra_Box_Q18745a].</body>
+  </string>
+  <string>
+    <id>1096741</id>
+    <name>STR_DIC_I_quest_28745a</name>
+    <body>Stolen Danuar Artifact;A Danuar artifact stolen by the Beritra and currently stored in [%dic:STR_DIC_OBJ_IDRaksha_solo_FOBJ_Vritra_Box_Q18745a].</body>
+  </string>
+  <string>
+    <id>1096742</id>
+    <name>STR_DIC_I_quest_16977a</name>
+    <body>Seized Danuar Valuables;Danuar valuables seized by the Beritra and currently stored in [%dic:STR_DIC_OBJ_IDLDF5_Under_01_FOBJ_Vritra_Box_Q16977a].</body>
+  </string>
+  <string>
+    <id>1096743</id>
+    <name>STR_DIC_I_quest_26977a</name>
+    <body>Seized Danuar Artifact;A Danuar artifact seized by the Beritra and currently stored in [%dic:STR_DIC_OBJ_IDLDF5_Under_01_FOBJ_Vritra_Box_Q16977a].</body>
+  </string>
+  <string>
+    <id>1096744</id>
+    <name>STR_DIC_I_quest_16994a</name>
+    <body>Robbed Danuar Valuables;Danuar valuables stolen by the Beritra and currently stored in [%dic:STR_DIC_OBJ_IDLDF5_Under_02_FOBJ_Vritra_Box_Q16989a].</body>
+  </string>
+  <string>
+    <id>1096745</id>
+    <name>STR_DIC_I_quest_26994a</name>
+    <body>Robbed Danuar Artifact;A Danuar artifact robbed by the Beritra and currently stored in [%dic:STR_DIC_OBJ_IDLDF5_Under_02_FOBJ_Vritra_Box_Q16989a].</body>
+  </string>
+  <string>
     <id>1096746</id>
     <name>STR_DIC_DF3_jewelry_n_c_40c</name>
     <body>Diamond Ore;An ore that is common in the [%dic:STR_DIC_DF3_gb_source_jewelry_d_40c].</body>
+  </string>
+  <string>
+    <id>1096747</id>
+    <name>STR_DIC_I_quest_15481a</name>
+    <body>Redeemer's Commendation;A commendation of gratitude given for defeating a Guardian Spirit in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1096748</id>
+    <name>STR_DIC_I_quest_25481a</name>
+    <body>Herald's Commendation;A commendation of gratitude given for defeating a Guardian Spirit in the Upper Abyss.</body>
   </string>
 </strings>

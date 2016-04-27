@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/09/22 16:05:52">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>900001</id>
     <name>STR_LOBBY_USER_AGREEMENT__TITLE</name>
@@ -15297,7 +15297,7 @@
   <string>
     <id>912964</id>
     <name>STR_SKILL_DIALOG__SKILL_DETAIL_CHAIN_INFO</name>
-    <body>Chain Skill Info</body>
+    <body>Chain Skill</body>
   </string>
   <string>
     <id>912965</id>
@@ -16129,14 +16129,84 @@ Become a true master of Aion in the new battlefield!</body>
     <body>Total</body>
   </string>
   <string>
+    <id>913123</id>
+    <name>STR_NEW_MAP_SHOW_ABYSS_OP_LIGHT</name>
+    <body>[%gchar:abyss_op_light] Redemption Landing</body>
+  </string>
+  <string>
+    <id>913124</id>
+    <name>STR_NEW_MAP_SHOW_ABYSS_OP_DARK</name>
+    <body>[%gchar:abyss_op_dark] Harbinger's Landing</body>
+  </string>
+  <string>
+    <id>913125</id>
+    <name>STR_ABYSS_OP_DIALOG__TITLE</name>
+    <body>Landing Reinforcement Bonuses</body>
+  </string>
+  <string>
+    <id>913126</id>
+    <name>STR_ABYSS_OP_DIALOG__LEVEL</name>
+    <body>Landing Reinforcement Level</body>
+  </string>
+  <string>
+    <id>913127</id>
+    <name>STR_ABYSS_OP_DIALOG__LIGHT</name>
+    <body>Elyos</body>
+  </string>
+  <string>
+    <id>913128</id>
+    <name>STR_ABYSS_OP_DIALOG__DARK</name>
+    <body>Asmodians</body>
+  </string>
+  <string>
+    <id>913129</id>
+    <name>STR_ABYSS_OP_DIALOG__POINT</name>
+    <body>Landing Reinforcement Status</body>
+  </string>
+  <string>
+    <id>913130</id>
+    <name>STR_ABYSS_OP_DIALOG__FORTRESS</name>
+    <body>Fortress Occupation</body>
+  </string>
+  <string>
+    <id>913131</id>
+    <name>STR_ABYSS_OP_DIALOG__ARTIFACT</name>
+    <body>Artifact Occupation</body>
+  </string>
+  <string>
+    <id>913132</id>
+    <name>STR_ABYSS_OP_DIALOG__BASECAMP</name>
+    <body>Base Occupation</body>
+  </string>
+  <string>
+    <id>913133</id>
+    <name>STR_ABYSS_OP_DIALOG__OP_OBJECT</name>
+    <body>Facility Control</body>
+  </string>
+  <string>
+    <id>913134</id>
+    <name>STR_ABYSS_OP_DIALOG__RAID_OBJECT</name>
+    <body>Monument Control</body>
+  </string>
+  <string>
+    <id>913135</id>
+    <name>STR_ABYSS_OP_DIALOG__QUEST</name>
+    <body>Quest Completion</body>
+  </string>
+  <string>
     <id>913136</id>
     <name>STR_EVENTMSG_DIALOG__TITLE</name>
     <body>Important Message</body>
   </string>
   <string>
+    <id>913137</id>
+    <name>STR_START_DIALOG__TOOLTIP_ABYSS_OP</name>
+    <body>Landing Reinforcement</body>
+  </string>
+  <string>
     <id>913138</id>
     <name>STR_EVENTMSG_DIALOG__NO_MSG</name>
-    <body>No important messages.</body>
+    <body>No game notices.</body>
   </string>
   <string>
     <id>913139</id>
@@ -16147,9 +16217,74 @@ Become a true master of Aion in the new battlefield!</body>
     <id>913140</id>
     <name>STR_EVENTMSG_DIALOG__TOOLTIP</name>
     <body>&lt;html&gt;
-&lt;font font_xml = "tooltip_guide_title"&gt;Important Message&lt;/font&gt;
+&lt;font font_xml = "tooltip_guide_title"&gt;Game Notices&lt;/font&gt;
 &lt;br&gt;&lt;br&gt;
-&lt;font font_xml = "tooltip_guide_body"&gt;We are informing you of important information regarding game access. You can check the important message in your inbox by pressing the button.&lt;/font&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;Important game notices are displayed here. You can click the button to check them.&lt;/font&gt;
 &lt;/html&gt;</body>
+  </string>
+  <string>
+    <id>913141</id>
+    <name>STR_ABYSS_OP_DIALOG__OWNERSHIP_OBJECT</name>
+    <body>Commander Defense</body>
+  </string>
+  <string>
+    <id>913142</id>
+    <name>STR_ABYSS_OP_DIALOG__FORTRESS_TOOLTIP</name>
+    <body>Points gained from victories in Krotan, Miren, and Kysis fortresses.</body>
+  </string>
+  <string>
+    <id>913143</id>
+    <name>STR_ABYSS_OP_DIALOG__OWNERSHIP_OBJECT_TOOLTIP</name>
+    <body>A Fortress Commander appears in the Landing when a Fortress is controlled.\nPoints are deducted if the Commander dies, or gained by killing the enemy Commander.</body>
+  </string>
+  <string>
+    <id>913144</id>
+    <name>STR_ABYSS_OP_DIALOG__ARTIFACT_TOOLTIP</name>
+    <body>Points gained from capturing Artifacts in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>913145</id>
+    <name>STR_ABYSS_OP_DIALOG__BASECAMP_TOOLTIP</name>
+    <body>Points gained from capturing Bases in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>913146</id>
+    <name>STR_ABYSS_OP_DIALOG__OP_OBJECT_TOOLTIP</name>
+    <body>Points gained from Landing Facilities.\nPoints are deducted if a Facility is destroyed, or gained by destroying enemy Landing Facilities.</body>
+  </string>
+  <string>
+    <id>913147</id>
+    <name>STR_ABYSS_OP_DIALOG__RAID_OBJECT_TOOLTIP</name>
+    <body>Points are gained and monuments are created by defeating certain bosses in the Upper Abyss.\nPoints are deducted if the monument is destroyed, or gained by destroying enemy monuments.</body>
+  </string>
+  <string>
+    <id>913148</id>
+    <name>STR_ABYSS_OP_DIALOG__QUEST_TOOLTIP</name>
+    <body>Points gained from completing quests in the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>913149</id>
+    <name>STR_INDUN_COOLTIME_DIALOG__GRADE</name>
+    <body>Difficulty</body>
+  </string>
+  <string>
+    <id>913221</id>
+    <name>STR_RETRY_DIALOG__TITLE</name>
+    <body>Check Results</body>
+  </string>
+  <string>
+    <id>913222</id>
+    <name>STR_RETRY_DIALOG__DESC</name>
+    <body>May be replaced by being disassembled, at the cost of a small fee.</body>
+  </string>
+  <string>
+    <id>913223</id>
+    <name>STR_RETRY_DIALOG__BUTTON_TAKE</name>
+    <body>Gain</body>
+  </string>
+  <string>
+    <id>913224</id>
+    <name>STR_RETRY_DIALOG__BUTTON_CLOSE</name>
+    <body>Close</body>
   </string>
 </strings>

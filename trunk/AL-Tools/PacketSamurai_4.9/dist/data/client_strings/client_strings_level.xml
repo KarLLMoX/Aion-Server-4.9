@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/07/13 10:38:45">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>400000</id>
     <name>STR_SZ_EE3_EAST_PLATEAU</name>
@@ -20219,17 +20219,17 @@
   <string>
     <id>404061</id>
     <name>STR_ZONE_NAME_IDAbRe_Up3_Crotan_02</name>
-    <body>Legion's Krotan Barracks</body>
+    <body>Hidden Krotan Barracks</body>
   </string>
   <string>
     <id>404062</id>
     <name>STR_ZONE_NAME_IDAbRe_Up3_Dkisas_02</name>
-    <body>Legion's Kysis Barracks</body>
+    <body>Hidden Kysis Barracks</body>
   </string>
   <string>
     <id>404063</id>
     <name>STR_ZONE_NAME_IDAbRe_Up3_Lamiren_02</name>
-    <body>Legion's Miren Barracks</body>
+    <body>Hidden Miren Barracks</body>
   </string>
   <string>
     <id>404064</id>
@@ -23634,22 +23634,22 @@
   <string>
     <id>404745</id>
     <name>STR_Ab1_Up_SZ_BaseCamp_56</name>
-    <body>Wildersage Artifact Outpost</body>
+    <body>Wildersage Outpost</body>
   </string>
   <string>
     <id>404746</id>
     <name>STR_Ab1_Up_SZ_BaseCamp_57</name>
-    <body>Dauntless Artifact Outpost</body>
+    <body>Dauntless Outpost</body>
   </string>
   <string>
     <id>404747</id>
     <name>STR_Ab1_Up_SZ_BaseCamp_58</name>
-    <body>Anchorbrak Artifact Outpost</body>
+    <body>Anchorbrak Outpost</body>
   </string>
   <string>
     <id>404748</id>
     <name>STR_Ab1_Up_SZ_BaseCamp_59</name>
-    <body>Brokenblade Artifact Outpost</body>
+    <body>Brokenblade Outpost</body>
   </string>
   <string>
     <id>404749</id>
@@ -23680,5 +23680,60 @@
     <id>404754</id>
     <name>STR_Ab1_Up_SZ_BaseCamp_65</name>
     <body>Moltenspike Outpost</body>
+  </string>
+  <string>
+    <id>404776</id>
+    <name>STR_LF3_SZ_F_New</name>
+    <body>Black Cloud Landing</body>
+  </string>
+  <string>
+    <id>404777</id>
+    <name>STR_DF3_SZ_F_New</name>
+    <body>Black Cloud Port</body>
+  </string>
+  <string>
+    <id>404841</id>
+    <name>STR_ZONE_NAME_LF3_RVR_1</name>
+    <body>Tauric Island</body>
+  </string>
+  <string>
+    <id>404842</id>
+    <name>STR_ZONE_NAME_LF3_RVR_2</name>
+    <body>West Poya Island</body>
+  </string>
+  <string>
+    <id>404843</id>
+    <name>STR_ZONE_NAME_LF3_RVR_3</name>
+    <body>Cacoon Island</body>
+  </string>
+  <string>
+    <id>404844</id>
+    <name>STR_ZONE_NAME_LF3_RVR_4</name>
+    <body>East Poya Island</body>
+  </string>
+  <string>
+    <id>404845</id>
+    <name>STR_ZONE_NAME_DF3_RVR_1</name>
+    <body>Wailing Woods</body>
+  </string>
+  <string>
+    <id>404846</id>
+    <name>STR_ZONE_NAME_DF3_RVR_2</name>
+    <body>Ashensand Island</body>
+  </string>
+  <string>
+    <id>404847</id>
+    <name>STR_ZONE_NAME_DF3_RVR_3</name>
+    <body>Fangdrop Island</body>
+  </string>
+  <string>
+    <id>404848</id>
+    <name>STR_ZONE_NAME_DF3_RVR_4</name>
+    <body>Besfer Island</body>
+  </string>
+  <string>
+    <id>404870</id>
+    <name>STR_ZONE_NAME_IDSweep_02</name>
+    <body>Shugo Emperor's Vault </body>
   </string>
 </strings>

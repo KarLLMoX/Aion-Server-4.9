@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/07/13 10:38:45">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1060000</id>
     <name>STR_DIC_TEST03</name>
@@ -2743,7 +2743,7 @@
   <string>
     <id>1061043</id>
     <name>STR_DIC_W_LF4_SZ_C2</name>
-    <body>Angrief Wastes;The northern part of the Angrief Ruins tainted by Tiamat's power.</body>
+    <body>#N/A</body>
   </string>
   <string>
     <id>1061044</id>
@@ -5478,17 +5478,17 @@
   <string>
     <id>1061608</id>
     <name>STR_DIC_W_IDAbRe_Up3_Crotan_02</name>
-    <body>Legion's Krotan Barracks;The Balaur fortress in [%dic:STR_DIC_W_AB1_32]. It is currently occupied by the Ereshkigal Legion, having joined the Beritra Army. Only legions that hold [%dic:STR_DIC_W_AB1_33] may enter this area.</body>
+    <body>Hidden Krotan Barracks; The Balaurs' hidden warehouse that can be accessed from [%dic:STR_DIC_W_AB1_33]. You may enter this area by talking to the Barracks Entrance Support Officer inside the fortress after reaching a level 6 landing reinforcement and occupying [%dic:STR_DIC_W_AB1_33].</body>
   </string>
   <string>
     <id>1061609</id>
     <name>STR_DIC_W_IDAbRe_Up3_Dkisas_02</name>
-    <body>Legion's Kysis Barracks;The Balaur fortress in [%dic:STR_DIC_W_AB1_36]. It is currently guarded by the Ereshkigal Legion, having joined the Beritra Army. Only legions that have occupied [%dic:STR_DIC_W_AB1_37] may enter this area.</body>
+    <body>Hidden Kysis Barracks; The Balaurs' hidden warehouse that can be accessed from [%dic:STR_DIC_W_AB1_37]. You may enter this area by talking to the Barracks Entrance Support Officer inside the fortress after reaching a level 6 landing reinforcement and occupying [%dic:STR_DIC_W_AB1_37].</body>
   </string>
   <string>
     <id>1061610</id>
     <name>STR_DIC_W_IDAbRe_Up3_Lamiren_02</name>
-    <body>Legion's Miren Barracks;The Balaur fortress in [%dic:STR_DIC_W_AB1_29]. It is currently guarded by the Ereshkigal Legion, having joined the Beritra Army. Only legions that have occupied [%dic:STR_DIC_W_AB1_30] may enter this area.</body>
+    <body>Hidden Miren Barracks; The Balaurs' hidden warehouse that can be accessed from [%dic:STR_DIC_W_AB1_30]. You may enter this area by talking to the Barracks Entrance Support Officer inside the fortress after reaching a level 6 landing reinforcement and occupying [%dic:STR_DIC_W_AB1_30].</body>
   </string>
   <string>
     <id>1061611</id>
@@ -6203,17 +6203,17 @@
   <string>
     <id>1061753</id>
     <name>STR_DIC_W_LF5_SZ_D_01</name>
-    <body>Dragon Lord's Gardens;A garden of the Balaur Lords located in the northern region of [%dic:STR_DIC_W_LF5]. [%dic:STR_DIC_W_LF5_SZ_OP_02] is located in the gardens.</body>
+    <body>Dragon Lord's Gardens;A garden of the Dragon Lords located in the northern region of [%dic:STR_DIC_W_LF5]. [%dic:STR_DIC_W_LF5_SZ_OP_02] is located in the gardens.</body>
   </string>
   <string>
     <id>1061754</id>
     <name>STR_DIC_W_LF5_SZ_E_01</name>
-    <body>Dragon Lord's Centerpiece;A central garden shrine of the Balaur Lords located in the center of [%dic:STR_DIC_W_LF5].</body>
+    <body>Dragon Lord's Centerpiece;A central garden shrine of the Dragon Lords located in the center of [%dic:STR_DIC_W_LF5].</body>
   </string>
   <string>
     <id>1061755</id>
     <name>STR_DIC_W_LF5_SZ_F_01</name>
-    <body>Twilight Temple;A temple built in the center of [%dic:STR_DIC_W_LF5] to exalt the power of the Balaur Lords. It is currently in ruins.</body>
+    <body>Twilight Temple;A temple built in the center of [%dic:STR_DIC_W_LF5] to exalt the power of the Dragon Lords. It is currently in ruins.</body>
   </string>
   <string>
     <id>1061756</id>
@@ -6398,7 +6398,7 @@
   <string>
     <id>1061793</id>
     <name>STR_DIC_W_DF5_SZ_OP_01</name>
-    <body>Dragonrest Temple;A temple built a long time ago by a dragon that became a Balaur Lord. The expedition established its first base here after arriving at [%dic:STR_DIC_W_DF5_SZ_A_01] in [%dic:STR_DIC_W_DF5].</body>
+    <body>Dragonrest Temple;A temple built a long time ago by a dragon that became a Dragon Lord. The expedition established its first base here after arriving at [%dic:STR_DIC_W_DF5_SZ_A_01] in [%dic:STR_DIC_W_DF5].</body>
   </string>
   <string>
     <id>1061794</id>
@@ -6548,7 +6548,7 @@
   <string>
     <id>1061823</id>
     <name>STR_DIC_W_IDTiamat_2_F5_FOBJ_Entrance</name>
-    <body>Anguished Dragon Lord's Refuge;An abode of Balaur Lord Tiamat in the enemy camp. The Elyos may enter it through [%dic:STR_DIC_OBJ_IDTiamat_2_F5_FOBJ_Entrance_Dark], and the Asmodians through [%dic:STR_DIC_OBJ_IDTiamat_2_F5_FOBJ_Entrance].</body>
+    <body>Anguished Dragon Lord's Refuge;An abode of Dragon Lord Tiamat in the enemy camp. The Elyos may enter it through [%dic:STR_DIC_OBJ_IDTiamat_2_F5_FOBJ_Entrance_Dark], and the Asmodians through [%dic:STR_DIC_OBJ_IDTiamat_2_F5_FOBJ_Entrance].</body>
   </string>
   <string>
     <id>1061824</id>
@@ -6608,57 +6608,57 @@
   <string>
     <id>1061835</id>
     <name>STR_DIC_W_AB1_SZ_UPOP_L</name>
-    <body>Redemption Landing Bind Point;A newly constructed Elyos Bind Point in Upper Reshanta.</body>
+    <body>Redemption Landing;A newly constructed Elyos Landing in Upper Reshanta.</body>
   </string>
   <string>
     <id>1061836</id>
     <name>STR_DIC_W_AB1_SZ_UPOP_D</name>
-    <body>Harbinger's Landing Bind Point;A newly constructed Asmodian Bind Point in Upper Reshanta.</body>
+    <body>Harbinger's Landing;A newly constructed Asmodian Landing in Upper Reshanta.</body>
   </string>
   <string>
     <id>1061837</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_0</name>
-    <body>Sullenscale Rive;A collection of eight islands in the center of the Lower Abyss. They consist of the Psiform Isle, Carpus Isle, Triquetral Isle, Hamate Isle, Capitate Isle, Lunate Isle, Scaphoid Isle, and Ulna Isle.</body>
+    <body>Tempest Islands; A collection of 8 islands at the center of the lower layer of the Abyss. They consist of the Island of Waves, Island of Wind, Island of Cold, Island of Clouds, Island of Gust, Storm Island, Gale Island, and Zephyr Island.</body>
   </string>
   <string>
     <id>1061838</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_1</name>
-    <body>Psiform Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Island of Waves; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061839</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_2</name>
-    <body>Carpus Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Island of Wind; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061840</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_3</name>
-    <body>Triquetral Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Island of Cold; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061841</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_4</name>
-    <body>Hamate Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Island of Clouds; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061842</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_5</name>
-    <body>Capitate Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Island of Gust; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061843</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_6</name>
-    <body>Lunate Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Storm Island; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061844</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_7</name>
-    <body>Scaphoid Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Gale Island; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061845</id>
     <name>STR_DIC_AB1_SZ_Low_Typhoon_8</name>
-    <body>Ulna Isle;An island located in [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
+    <body>Zephyr Island; An island located at [%dic:STR_DIC_AB1_SZ_Low_Typhoon_0].</body>
   </string>
   <string>
     <id>1061846</id>
@@ -6749,5 +6749,20 @@
     <id>1061863</id>
     <name>STR_DIC_W_Ab1_Village65</name>
     <body>Moltenspike Outpost;A capturable defense base located in Upper% Reshanta.</body>
+  </string>
+  <string>
+    <id>1061864</id>
+    <name>STR_DIC_W_LF4</name>
+    <body>Inggison;A region located in the south of Balaurea, where Empyrean Lord Kaisinel built an Illusion Fortress to prepare for the advance into Balaurea.</body>
+  </string>
+  <string>
+    <id>1061865</id>
+    <name>STR_DIC_W_DF4</name>
+    <body>Gelkmaros;Empyrean Lord Marchutan has seized this area in Balaurea to keep Tiamat in check. At the center is Silentera Corridor, which connects to Inggison.</body>
+  </string>
+  <string>
+    <id>1061866</id>
+    <name>STR_DIC_W_LC1</name>
+    <body>Sanctum;The main city of Elysea, known for major landmarks like the Great Holy Shrine, Elyos Square, and Protectors Hall. It was built to inspire and unite the Elyos after the Cataclysm.</body>
   </string>
 </strings>

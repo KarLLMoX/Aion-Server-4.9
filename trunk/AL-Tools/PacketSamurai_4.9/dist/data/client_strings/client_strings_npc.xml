@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/10/13 15:24:23">
+<strings generated_time="2015/12/03 14:51:12">
   <string>
     <id>350000</id>
     <name>STR_NPC_NO_NAME</name>
@@ -35421,7 +35421,7 @@
   <string>
     <id>358441</id>
     <name>STR_Ab1_OP_L_Apseller_Fortress_matter</name>
-    <body>Tanos</body>
+    <body>Nerisa</body>
   </string>
   <string>
     <id>358442</id>
@@ -35451,7 +35451,7 @@
   <string>
     <id>358447</id>
     <name>STR_Ab1_OP_L_conversion_growth_seller</name>
-    <body>Ciaobinerk</body>
+    <body>Chaorinrin</body>
   </string>
   <string>
     <id>358448</id>
@@ -35601,7 +35601,7 @@
   <string>
     <id>358477</id>
     <name>STR_Ab1_OP_D_conversion_growth_seller</name>
-    <body>Shuobinerk</body>
+    <body>Shuorinrin</body>
   </string>
   <string>
     <id>358478</id>
@@ -35631,12 +35631,12 @@
   <string>
     <id>358483</id>
     <name>STR_Ab1_OP_D_NHoly_Recharger</name>
-    <body>Klaudelle</body>
+    <body>Adarald</body>
   </string>
   <string>
     <id>358484</id>
     <name>STR_Ab1_OP_D_NSpell_Recharger</name>
-    <body>Adarald</body>
+    <body>Klaudelle</body>
   </string>
   <string>
     <id>358485</id>
@@ -35684,12 +35684,12 @@
   <string>
     <id>358494</id>
     <name>STR_NPCTITLE_Ab1_OP_L_seller_PvPNCoin_Wp</name>
-    <body>&lt;Honorable Blood Medal Weapon Officer&gt;</body>
+    <body>&lt;Blood Medal Weapon Officer&gt;</body>
   </string>
   <string>
     <id>358495</id>
     <name>STR_NPCTITLE_Ab1_OP_L_seller_PvPNCoin_Am</name>
-    <body>&lt;Honorable Blood Medal Armor Officer&gt;</body>
+    <body>&lt;Blood Medal Armor Officer&gt;</body>
   </string>
   <string>
     <id>358496</id>
@@ -35767,7 +35767,7 @@
   <string>
     <id>358511</id>
     <name>STR_NPCTITLE_Ab1_OP_L_NPvPequipment_seller_Goods</name>
-    <body>&lt;Honorable Blood Medal Consumables Officer&gt;</body>
+    <body>&lt;Blood Medal Consumables Officer&gt;</body>
   </string>
   <string>
     <id>358512</id>
@@ -35830,12 +35830,12 @@
   <string>
     <id>358524</id>
     <name>STR_NPCTITLE_Ab1_OP_D_seller_PvPNCoin_Wp</name>
-    <body>&lt;Honorable Blood Medal Weapon Officer&gt;</body>
+    <body>&lt;Blood Medal Weapon Officer&gt;</body>
   </string>
   <string>
     <id>358525</id>
     <name>STR_NPCTITLE_Ab1_OP_D_seller_PvPNCoin_Am</name>
-    <body>&lt;Honorable Blood Medal Armor Officer&gt;</body>
+    <body>&lt;Blood Medal Armor Officer&gt;</body>
   </string>
   <string>
     <id>358526</id>
@@ -35913,7 +35913,7 @@
   <string>
     <id>358541</id>
     <name>STR_NPCTITLE_Ab1_OP_D_NPvPequipment_seller_Goods</name>
-    <body>&lt;Honorable Blood Medal Consumables Officer&gt;</body>
+    <body>&lt;Blood Medal Consumables Officer&gt;</body>
   </string>
   <string>
     <id>358542</id>
@@ -35979,6 +35979,36 @@
     <id>358554</id>
     <name>STR_DF1_Munin_Teleport</name>
     <body>Ishalgen Teleport Statue</body>
+  </string>
+  <string>
+    <id>358555</id>
+    <name>STR_LF3_ShulackShip_Entrance</name>
+    <body>Hitarune</body>
+  </string>
+  <string>
+    <id>358556</id>
+    <name>STR_DF3_ShulackShip_Entrance</name>
+    <body>Minarinerk</body>
+  </string>
+  <string>
+    <id>358557</id>
+    <name>STR_LF3_ShulackShip_Solo_Entrance</name>
+    <body>Anirin</body>
+  </string>
+  <string>
+    <id>358558</id>
+    <name>STR_DF3_ShulackShip_Solo_Entrance</name>
+    <body>Sagorinerk</body>
+  </string>
+  <string>
+    <id>358559</id>
+    <name>STR_LF3_ShulackShip_Merchant</name>
+    <body>Chaukin</body>
+  </string>
+  <string>
+    <id>358560</id>
+    <name>STR_DF3_ShulackShip_Merchant</name>
+    <body>Chakik</body>
   </string>
   <string>
     <id>360001</id>
@@ -36733,12 +36763,12 @@
   <string>
     <id>360151</id>
     <name>STR_Ab1_OP_L_LF5_Entrance_In</name>
-    <body>Cygnea Teleporter</body>
+    <body>Cygnia Corridor</body>
   </string>
   <string>
     <id>360152</id>
     <name>STR_LF5_OP_L_Ab1_Entrance_In</name>
-    <body>Redemption Landing Teleporter</body>
+    <body>Redemption Landing Corridor</body>
   </string>
   <string>
     <id>360153</id>
@@ -36783,7 +36813,7 @@
   <string>
     <id>360161</id>
     <name>STR_Ab1_OP_L_Lamiren_Fortress_Entrance_In</name>
-    <body>Miren Barracks Corridor</body>
+    <body>Miren Fortress Corridor</body>
   </string>
   <string>
     <id>360162</id>
@@ -36803,12 +36833,12 @@
   <string>
     <id>360165</id>
     <name>STR_Ab1_OP_D_DF5_Entrance_In</name>
-    <body>Enshar Teleporter</body>
+    <body>Enshar Corridor</body>
   </string>
   <string>
     <id>360166</id>
     <name>STR_DF5_OP_D_Ab1_Entrance_In</name>
-    <body>Harbinger's Landing Teleporter</body>
+    <body>Harbinger's Landing Corridor</body>
   </string>
   <string>
     <id>360167</id>
@@ -36853,7 +36883,7 @@
   <string>
     <id>360175</id>
     <name>STR_Ab1_OP_D_Lamiren_Fortress_Entrance_In</name>
-    <body>Miren Barracks Corridor</body>
+    <body>Miren Fortress Corridor</body>
   </string>
   <string>
     <id>360176</id>
@@ -36878,57 +36908,57 @@
   <string>
     <id>360180</id>
     <name>STR_NPCTITLE_LF5_OP_L_Ab1_Entrance_In</name>
-    <body>&lt;Redemption Landing Bind Point Portal&gt;</body>
+    <body>&lt;Redemption Landing Portal&gt;</body>
   </string>
   <string>
     <id>360181</id>
     <name>STR_NPCTITLE_Ab1_OP_L_LF4_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 3 Facility&gt;</body>
   </string>
   <string>
     <id>360182</id>
     <name>STR_NPCTITLE_Ab1_OP_L_LDF5_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 4 Facility&gt;</body>
   </string>
   <string>
     <id>360183</id>
     <name>STR_NPCTITLE_Ab1_OP_L_LDF4_Advance_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 4 Facility&gt;</body>
   </string>
   <string>
     <id>360184</id>
     <name>STR_NPCTITLE_Ab1_OP_L_IDSeal_Entrance_In</name>
-    <body>&lt;Drakenspire Depths Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 5 Illuminary Obelisk Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360185</id>
     <name>STR_NPCTITLE_Ab1_OP_L_IDYun_H_Entrance_In</name>
-    <body>&lt;Occupied Rentus Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 6 Danuar Reliquary Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360186</id>
     <name>STR_NPCTITLE_Ab1_OP_L_IDRuneWeapon_Entrance_In</name>
-    <body>&lt;Infinity Shard Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 7 Infinity Shard Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360187</id>
     <name>STR_NPCTITLE_Ab1_OP_L_IDLDF5b_Td_Entrance_In</name>
-    <body>&lt;Eternal Bastion Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 8 Eternal Bastion Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360188</id>
     <name>STR_NPCTITLE_Ab1_OP_L_Crotan_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 2 Facility&gt;</body>
   </string>
   <string>
     <id>360189</id>
     <name>STR_NPCTITLE_Ab1_OP_L_Lamiren_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 2 Facility&gt;</body>
   </string>
   <string>
     <id>360190</id>
     <name>STR_NPCTITLE_Ab1_OP_L_Dkisas_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Basic Facility&gt;</body>
   </string>
   <string>
     <id>360191</id>
@@ -36953,52 +36983,52 @@
   <string>
     <id>360195</id>
     <name>STR_NPCTITLE_Ab1_OP_D_DF4_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 3 Facility&gt;</body>
   </string>
   <string>
     <id>360196</id>
     <name>STR_NPCTITLE_Ab1_OP_D_LDF5_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 4 Facility&gt;</body>
   </string>
   <string>
     <id>360197</id>
     <name>STR_NPCTITLE_Ab1_OP_D_LDF4_Advance_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 4 Facility&gt;</body>
   </string>
   <string>
     <id>360198</id>
     <name>STR_NPCTITLE_Ab1_OP_D_IDSeal_Entrance_In</name>
-    <body>&lt;Drakenspire Depths Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 5 Illuminary Obelisk Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360199</id>
     <name>STR_NPCTITLE_Ab1_OP_D_IDYun_H_Entrance_In</name>
-    <body>&lt;Occupied Rentus Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 6 Danuar Reliquary Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360200</id>
     <name>STR_NPCTITLE_Ab1_OP_D_IDRuneWeapon_Entrance_In</name>
-    <body>&lt;Infinity Shard Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 7 Infinity Shard Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360201</id>
     <name>STR_NPCTITLE_Ab1_OP_D_IDLDF5b_Td_Entrance_In</name>
-    <body>&lt;Eternal Bastion Entrance Guard&gt;</body>
+    <body>&lt;Landing Level 8 Eternal Bastion Entrance Officer&gt;</body>
   </string>
   <string>
     <id>360202</id>
     <name>STR_NPCTITLE_Ab1_OP_D_Crotan_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 2 Facility&gt;</body>
   </string>
   <string>
     <id>360203</id>
     <name>STR_NPCTITLE_Ab1_OP_D_Lamiren_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 2 Facility&gt;</body>
   </string>
   <string>
     <id>360204</id>
     <name>STR_NPCTITLE_Ab1_OP_D_Dkisas_Fortress_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Basic Facility&gt;</body>
   </string>
   <string>
     <id>360205</id>
@@ -37188,12 +37218,12 @@
   <string>
     <id>360242</id>
     <name>STR_NPCTITLE_Ab1_OP_L_LC1_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 2 Facility&gt;</body>
   </string>
   <string>
     <id>360243</id>
     <name>STR_NPCTITLE_Ab1_OP_D_DC1_Entrance_In</name>
-    <body>&lt;Teleportation Corridor&gt;</body>
+    <body>&lt;Landing Level 2 Facility&gt;</body>
   </string>
   <string>
     <id>370000</id>
@@ -73918,12 +73948,12 @@
   <string>
     <id>461839</id>
     <name>STR_NPC_event_Neltise</name>
-    <body>Neltise</body>
+    <body>Landrian</body>
   </string>
   <string>
     <id>461840</id>
     <name>STR_NPC_event_Hinjel</name>
-    <body>Hinjel</body>
+    <body>Madareke</body>
   </string>
   <string>
     <id>461841</id>
@@ -82228,7 +82258,7 @@
   <string>
     <id>463512</id>
     <name>STR_NPCTITLE_IDF5re_L_IN</name>
-    <body>&lt;Legion Entrance Officer&gt;</body>
+    <body>&lt;Landing Level 6 Fortress Officer&gt;</body>
   </string>
   <string>
     <id>463513</id>
@@ -85044,7 +85074,7 @@
   <string>
     <id>464077</id>
     <name>STR_NPC_IDAbRe_Up3_Dkisas_02_In_L</name>
-    <body>Ombrios</body>
+    <body>Ombria</body>
   </string>
   <string>
     <id>464078</id>
@@ -94097,7 +94127,7 @@
   <string>
     <id>465904</id>
     <name>STR_NPCTITLE_DF5_Gilgamesh_E</name>
-    <body>&lt;One Who Rose Against the Balaur Lord&gt;</body>
+    <body>&lt;One Who Rose Against the Dragon Lord&gt;</body>
   </string>
   <string>
     <id>465905</id>
@@ -95072,7 +95102,7 @@
   <string>
     <id>466114</id>
     <name>STR_NPC_LF5_Chairun_E</name>
-    <body>CChillrunerk</body>
+    <body>Chairunerk</body>
   </string>
   <string>
     <id>466115</id>
@@ -95547,7 +95577,7 @@
   <string>
     <id>466209</id>
     <name>STR_OBJ_LF5_FOBJ_Q36537</name>
-    <body>Balaur Priest's Relic Reliquary</body>
+    <body>Balaur Priest's Reliquary</body>
   </string>
   <string>
     <id>466210</id>
@@ -95612,12 +95642,12 @@
   <string>
     <id>466222</id>
     <name>STR_IDSeal_Boss_TreasureBox</name>
-    <body>Cloak of Balaur Lord Beritra</body>
+    <body>Cloak of Dragon Lord Beritra</body>
   </string>
   <string>
     <id>466223</id>
     <name>STR_IDSeal_TrueBoss_TreasureBox</name>
-    <body>Sacred Beast of Balaur Lord Beritra</body>
+    <body>Sacred Beast of Dragon Lord Beritra</body>
   </string>
   <string>
     <id>466224</id>
@@ -95642,12 +95672,12 @@
   <string>
     <id>466228</id>
     <name>STR_SEN_DF5_SensoryArea_Q30722</name>
-    <body>Place where Unstable Energy of Balaur Lord Flows</body>
+    <body>Place where Unstable Energy of Dragon Lord Flows</body>
   </string>
   <string>
     <id>466229</id>
     <name>STR_SEN_LF5_SensoryArea_Q30772</name>
-    <body>Hill where Unstable Energy of Balaur Lord Pools</body>
+    <body>Hill where Unstable Energy of Dragon Lord Pools</body>
   </string>
   <string>
     <id>466230</id>
@@ -95752,7 +95782,7 @@
   <string>
     <id>466250</id>
     <name>STR_EVENT_DEVASDAY_SHUGO</name>
-    <body>&lt;Shugo Wanderer Group Leader&gt;</body>
+    <body>&lt;Songpyon Master&gt;</body>
   </string>
   <string>
     <id>466251</id>
@@ -95767,12 +95797,12 @@
   <string>
     <id>466253</id>
     <name>STR_IDSeal_Twin_P_TreasureBox02</name>
-    <body>Greater Twin Reward Box 01</body>
+    <body>High Grade Twin Reward Box 01</body>
   </string>
   <string>
     <id>466254</id>
     <name>STR_IDSeal_Twin_M_TreasureBox02</name>
-    <body>Greater Twin Reward Box 02</body>
+    <body>High Grade Twin Reward Box 02</body>
   </string>
   <string>
     <id>466255</id>
@@ -96947,12 +96977,12 @@
   <string>
     <id>466491</id>
     <name>STR_EVENT_SPECIAL_SHUGO_L_01</name>
-    <body>Nararinerk</body>
+    <body>Mandeurunerk</body>
   </string>
   <string>
     <id>466492</id>
     <name>STR_EVENT_SPECIAL_SHUGO_D_01</name>
-    <body>Nararinerk</body>
+    <body>Mandeurunerk</body>
   </string>
   <string>
     <id>466493</id>
@@ -97282,7 +97312,7 @@
   <string>
     <id>466558</id>
     <name>STR_NPCTITLE_BLUESHEEP_MANDROONG</name>
-    <body>&lt;Master Shepherd&gt;</body>
+    <body>&lt;Songpyon Master&gt;</body>
   </string>
   <string>
     <id>466559</id>
@@ -99380,11 +99410,6 @@
     <body>&lt;Matryoshka Brothers&gt;</body>
   </string>
   <string>
-    <id>466993</id>
-    <name>STR_NPC_Shugo_AB1_30</name>
-    <body>Funinerk</body>
-  </string>
-  <string>
     <id>467035</id>
     <name>STR_EVENT_L_CONQUEROR_01</name>
     <body>Elyos Conquest Captain</body>
@@ -99457,42 +99482,272 @@
   <string>
     <id>467049</id>
     <name>STR_EVENT_MYPET_SPAWN</name>
-    <body>Godmother Koko</body>
+    <body>Cluckers Bigington</body>
+  </string>
+  <string>
+    <id>467050</id>
+    <name>STR_NPC_Ab1_Bonar_E</name>
+    <body>Jonar</body>
+  </string>
+  <string>
+    <id>467051</id>
+    <name>STR_NPC_Ab1_Buildup_Guard50_L</name>
+    <body>Desarion</body>
+  </string>
+  <string>
+    <id>467052</id>
+    <name>STR_NPC_Ab1_Buildup_Guard51_L</name>
+    <body>Geovera</body>
+  </string>
+  <string>
+    <id>467053</id>
+    <name>STR_NPC_Ab1_Buildup_Guard52_L</name>
+    <body>Tendro</body>
+  </string>
+  <string>
+    <id>467054</id>
+    <name>STR_NPC_Ab1_Buildup_Guard53_L</name>
+    <body>Alia</body>
+  </string>
+  <string>
+    <id>467055</id>
+    <name>STR_NPC_Ab1_Buildup_Guard54_L</name>
+    <body>Kaben</body>
+  </string>
+  <string>
+    <id>467056</id>
+    <name>STR_NPC_Ab1_Buildup_Guard55_L</name>
+    <body>Menita</body>
+  </string>
+  <string>
+    <id>467057</id>
+    <name>STR_NPC_Ab1_Buildup_Guard56_L</name>
+    <body>Monte</body>
+  </string>
+  <string>
+    <id>467058</id>
+    <name>STR_NPC_Ab1_Buildup_Guard57_L</name>
+    <body>Pomin</body>
+  </string>
+  <string>
+    <id>467059</id>
+    <name>STR_NPC_Ab1_Buildup_Guard58_L</name>
+    <body>Galio</body>
+  </string>
+  <string>
+    <id>467060</id>
+    <name>STR_NPC_Ab1_Buildup_Guard59_L</name>
+    <body>Ptea</body>
+  </string>
+  <string>
+    <id>467061</id>
+    <name>STR_NPC_Ab1_Buildup_Guard60_L</name>
+    <body>Kianathe</body>
+  </string>
+  <string>
+    <id>467062</id>
+    <name>STR_NPC_Ab1_Buildup_Guard61_L</name>
+    <body>Nerodan</body>
+  </string>
+  <string>
+    <id>467063</id>
+    <name>STR_NPC_Ab1_Buildup_Guard62_L</name>
+    <body>Kinosius</body>
+  </string>
+  <string>
+    <id>467064</id>
+    <name>STR_NPC_Ab1_Buildup_Guard63_L</name>
+    <body>Merion</body>
+  </string>
+  <string>
+    <id>467065</id>
+    <name>STR_NPC_Ab1_Buildup_Guard64_L</name>
+    <body>Nedarion</body>
+  </string>
+  <string>
+    <id>467066</id>
+    <name>STR_NPC_Ab1_Buildup_Guard65_L</name>
+    <body>Katrina</body>
+  </string>
+  <string>
+    <id>467067</id>
+    <name>STR_NPC_Ab1_Morzaex_E</name>
+    <body>Jex</body>
+  </string>
+  <string>
+    <id>467068</id>
+    <name>STR_NPC_Ab1_Buildup_Guard50_D</name>
+    <body>Muska</body>
+  </string>
+  <string>
+    <id>467069</id>
+    <name>STR_NPC_Ab1_Buildup_Guard51_D</name>
+    <body>Pinothia</body>
+  </string>
+  <string>
+    <id>467070</id>
+    <name>STR_NPC_Ab1_Buildup_Guard52_D</name>
+    <body>Trelian</body>
+  </string>
+  <string>
+    <id>467071</id>
+    <name>STR_NPC_Ab1_Buildup_Guard53_D</name>
+    <body>Malbasia</body>
+  </string>
+  <string>
+    <id>467072</id>
+    <name>STR_NPC_Ab1_Buildup_Guard54_D</name>
+    <body>Bernos</body>
+  </string>
+  <string>
+    <id>467073</id>
+    <name>STR_NPC_Ab1_Buildup_Guard55_D</name>
+    <body>Palanak</body>
+  </string>
+  <string>
+    <id>467074</id>
+    <name>STR_NPC_Ab1_Buildup_Guard56_D</name>
+    <body>Shendoa</body>
+  </string>
+  <string>
+    <id>467075</id>
+    <name>STR_NPC_Ab1_Buildup_Guard57_D</name>
+    <body>Grikk</body>
+  </string>
+  <string>
+    <id>467076</id>
+    <name>STR_NPC_Ab1_Buildup_Guard58_D</name>
+    <body>Pernir</body>
+  </string>
+  <string>
+    <id>467077</id>
+    <name>STR_NPC_Ab1_Buildup_Guard59_D</name>
+    <body>Greko</body>
+  </string>
+  <string>
+    <id>467078</id>
+    <name>STR_NPC_Ab1_Buildup_Guard60_D</name>
+    <body>Ichuria</body>
+  </string>
+  <string>
+    <id>467079</id>
+    <name>STR_NPC_Ab1_Buildup_Guard61_D</name>
+    <body>Katara</body>
+  </string>
+  <string>
+    <id>467080</id>
+    <name>STR_NPC_Ab1_Buildup_Guard62_D</name>
+    <body>Naku</body>
+  </string>
+  <string>
+    <id>467081</id>
+    <name>STR_NPC_Ab1_Buildup_Guard63_D</name>
+    <body>Jilia</body>
+  </string>
+  <string>
+    <id>467082</id>
+    <name>STR_NPC_Ab1_Buildup_Guard64_D</name>
+    <body>Neriad</body>
+  </string>
+  <string>
+    <id>467083</id>
+    <name>STR_NPC_Ab1_Buildup_Guard65_D</name>
+    <body>Sagran</body>
+  </string>
+  <string>
+    <id>467084</id>
+    <name>STR_NPCTITLE_Magos_Assistance_Lv2</name>
+    <body>&lt;Redemption Landing Captain&gt;</body>
+  </string>
+  <string>
+    <id>467085</id>
+    <name>STR_NPCTITLE_Magos_Assistance_Lv4</name>
+    <body>&lt;Redemption Landing Soldier&gt;</body>
+  </string>
+  <string>
+    <id>467086</id>
+    <name>STR_NPCTITLE_Magos_Assistance_Lv6</name>
+    <body>&lt;Redemption Landing Soldier&gt;</body>
+  </string>
+  <string>
+    <id>467087</id>
+    <name>STR_NPCTITLE_Magos_Assistance_Lv8</name>
+    <body>&lt;Redemption Landing Soldier&gt;</body>
+  </string>
+  <string>
+    <id>467088</id>
+    <name>STR_NPCTITLE_Toscanum_Assistance_Lv2</name>
+    <body>&lt;Harbinger's Landing Captain&gt;</body>
+  </string>
+  <string>
+    <id>467089</id>
+    <name>STR_NPCTITLE_Toscanum_Assistance_Lv4</name>
+    <body>&lt;Harbinger's Landing Soldier&gt;</body>
+  </string>
+  <string>
+    <id>467090</id>
+    <name>STR_NPCTITLE_Toscanum_Assistance_Lv6</name>
+    <body>&lt;Harbinger's Landing Soldier&gt;</body>
+  </string>
+  <string>
+    <id>467091</id>
+    <name>STR_NPCTITLE_Toscanum_Assistance_Lv8</name>
+    <body>&lt;Harbinger's Landing Soldier&gt;</body>
+  </string>
+  <string>
+    <id>467092</id>
+    <name>STR_OBJ_AB1_FOBJ_IceSprout_Q15478</name>
+    <body>Shattered Frost Crystal</body>
+  </string>
+  <string>
+    <id>467093</id>
+    <name>STR_OBJ_AB1_FOBJ_IceSprout_Q15479</name>
+    <body>Shattered Ice Crystal</body>
+  </string>
+  <string>
+    <id>467094</id>
+    <name>STR_OBJ_AB1_FOBJ_IceSprout_Q25478</name>
+    <body>Collapsed Frost Crystal</body>
+  </string>
+  <string>
+    <id>467095</id>
+    <name>STR_OBJ_AB1_FOBJ_IceSprout_Q25479</name>
+    <body>Collapsed Ice Crystal</body>
   </string>
   <string>
     <id>467096</id>
     <name>STR_NPCTITLE_EVENT_TOY</name>
-    <body>&lt;Giftrunerk Industries&gt;</body>
+    <body>&lt;Tonirunerk Industry&gt;</body>
   </string>
   <string>
     <id>467097</id>
     <name>STR_WORLD_EVENT_TOY_TONY_01_A</name>
-    <body>Giftrunerk</body>
+    <body>Tonirunerk</body>
   </string>
   <string>
     <id>467098</id>
     <name>STR_WORLD_EVENT_TOY_HIRUNG_01_A</name>
-    <body>Chillrunerk</body>
+    <body>Hairunerk</body>
   </string>
   <string>
     <id>467099</id>
     <name>STR_WORLD_EVENT_TOY_HIRING_01_A</name>
-    <body>Holyrinerk</body>
+    <body>Hairinerk</body>
   </string>
   <string>
     <id>467100</id>
     <name>STR_WORLD_EVENT_FOBJ_TOY_CAPSULE_01_A</name>
-    <body>Solorius Capsule</body>
+    <body>Shining Capsule</body>
   </string>
   <string>
     <id>467101</id>
     <name>STR_WORLD_EVENT_TOY_BONUSMACHINE_01_A</name>
-    <body>Festivities Generator</body>
+    <body>Bonus Machine</body>
   </string>
   <string>
     <id>467102</id>
     <name>STR_WORLD_EVENT_TOY_ROBOT_01_A</name>
-    <body>Aspiring Hero Toy</body>
+    <body>Strong Hero's Rookie Toy</body>
   </string>
   <string>
     <id>467103</id>
@@ -99502,12 +99757,27 @@
   <string>
     <id>467104</id>
     <name>STR_WORLD_EVENT_TOY_BEAR_01_A</name>
-    <body>Snuggle Crusher 9000 Plushie</body>
+    <body>Legendary Toy Bear</body>
   </string>
   <string>
     <id>467105</id>
     <name>STR_WORLD_EVENT_TOY_ROBOT_01_C</name>
     <body>Bulldozer Toy</body>
+  </string>
+  <string>
+    <id>467106</id>
+    <name>STR_OBJ_IDRaksha_solo_FOBJ_Vritra_Box_Q18745a</name>
+    <body>Beritra Chest of Stolen Loot</body>
+  </string>
+  <string>
+    <id>467107</id>
+    <name>STR_OBJ_IDLDF5_Under_01_FOBJ_Vritra_Box_Q16977a</name>
+    <body>Beritra Chest of Loot</body>
+  </string>
+  <string>
+    <id>467108</id>
+    <name>STR_OBJ_IDLDF5_Under_02_FOBJ_Vritra_Box_Q16989a</name>
+    <body>Beritra Chest of Supplies</body>
   </string>
   <string>
     <id>467109</id>
@@ -99533,6 +99803,201 @@
     <id>467114</id>
     <name>STR_NPCTITLE_WORLD_EVENT_DRSHUGO</name>
     <body>&lt;Prestige Society Medical Attendant&gt;</body>
+  </string>
+  <string>
+    <id>467115</id>
+    <name>STR_NPC_LF3_Traming_E</name>
+    <body>Tramine</body>
+  </string>
+  <string>
+    <id>467116</id>
+    <name>STR_NPC_LF3_Pacuroongroong_E</name>
+    <body>Pakurune</body>
+  </string>
+  <string>
+    <id>467117</id>
+    <name>STR_NPC_LF3_Peepeerinrin_E</name>
+    <body>Pipirinerk</body>
+  </string>
+  <string>
+    <id>467118</id>
+    <name>STR_NPC_LF3_Konaching_E</name>
+    <body>Konachinerk</body>
+  </string>
+  <string>
+    <id>467119</id>
+    <name>STR_NPC_LF3_Nakaching_E</name>
+    <body>Nakarinerk</body>
+  </string>
+  <string>
+    <id>467120</id>
+    <name>STR_NPC_LF3_Retroa_E</name>
+    <body>Retroa</body>
+  </string>
+  <string>
+    <id>467121</id>
+    <name>STR_NPC_LF3_Hyorung_E</name>
+    <body>Horyn</body>
+  </string>
+  <string>
+    <id>467122</id>
+    <name>STR_NPC_DF3_Fairringring_E</name>
+    <body>Fairrinerk</body>
+  </string>
+  <string>
+    <id>467123</id>
+    <name>STR_NPC_DF3_Halfringring_E</name>
+    <body>Halfrinerk</body>
+  </string>
+  <string>
+    <id>467124</id>
+    <name>STR_NPC_DF3_Muguring_E</name>
+    <body>Mugurinerk</body>
+  </string>
+  <string>
+    <id>467125</id>
+    <name>STR_NPC_DF3_Terryroong_E</name>
+    <body>Terrinerk</body>
+  </string>
+  <string>
+    <id>467126</id>
+    <name>STR_NPC_DF3_Hasiroong_E</name>
+    <body>Hashirinerk</body>
+  </string>
+  <string>
+    <id>467127</id>
+    <name>STR_NPC_DF3_Recaro_E</name>
+    <body>Rekaro</body>
+  </string>
+  <string>
+    <id>467128</id>
+    <name>STR_NPC_DF3_Kaorun_E</name>
+    <body>Kaorun</body>
+  </string>
+  <string>
+    <id>467129</id>
+    <name>STR_NPC_DF3_Onnaring_E</name>
+    <body>Onnarin</body>
+  </string>
+  <string>
+    <id>467130</id>
+    <name>STR_NPCTITLE_Supplies_Manager</name>
+    <body>&lt;Supply Manager&gt;</body>
+  </string>
+  <string>
+    <id>467131</id>
+    <name>STR_NPC_Shugo_AB1_30</name>
+    <body>Funinerk</body>
+  </string>
+  <string>
+    <id>467331</id>
+    <name>STR_NPC_LF3_Meio_E</name>
+    <body>Meiyo</body>
+  </string>
+  <string>
+    <id>467332</id>
+    <name>STR_NPC_DF3_Estado_E</name>
+    <body>Estado</body>
+  </string>
+  <string>
+    <id>467333</id>
+    <name>STR_NPC_DF3_Desant_E</name>
+    <body>Desant</body>
+  </string>
+  <string>
+    <id>467334</id>
+    <name>STR_NPC_LF3_Radak_E</name>
+    <body>Ladak</body>
+  </string>
+  <string>
+    <id>467335</id>
+    <name>STR_NPC_LF3_Estado_E_Idle</name>
+    <body>Estado</body>
+  </string>
+  <string>
+    <id>467336</id>
+    <name>STR_NPC_LF3_Meio_E_Idle</name>
+    <body>Meiyo</body>
+  </string>
+  <string>
+    <id>467337</id>
+    <name>STR_NPC_LF3_Miltar_E_Idle</name>
+    <body>Miltar</body>
+  </string>
+  <string>
+    <id>467338</id>
+    <name>STR_NPC_LF3_Cupiaro_E_Idle</name>
+    <body>Kuparo</body>
+  </string>
+  <string>
+    <id>467339</id>
+    <name>STR_NPC_LF3_Ranstri_E_Idle</name>
+    <body>Lanstri</body>
+  </string>
+  <string>
+    <id>467340</id>
+    <name>STR_NPC_DF3_Radak_E_Idle</name>
+    <body>Ladak</body>
+  </string>
+  <string>
+    <id>467341</id>
+    <name>STR_NPC_DF3_Desant_E_Idle</name>
+    <body>Desant</body>
+  </string>
+  <string>
+    <id>467342</id>
+    <name>STR_NPC_DF3_Megken_E_Idle</name>
+    <body>Magken</body>
+  </string>
+  <string>
+    <id>467343</id>
+    <name>STR_NPC_DF3_Hark_E_Idle</name>
+    <body>Hark</body>
+  </string>
+  <string>
+    <id>467344</id>
+    <name>STR_NPC_DF3_Tombolk_E_Idle</name>
+    <body>Tombolk</body>
+  </string>
+  <string>
+    <id>467345</id>
+    <name>STR_NPCTITLE_Shugo_RVR</name>
+    <body>&lt;Legion Medal Reward Officer&gt;</body>
+  </string>
+  <string>
+    <id>467346</id>
+    <name>STR_NPCTITLE_Pguard</name>
+    <body>&lt;Legion Corridor Manager&gt;</body>
+  </string>
+  <string>
+    <id>467347</id>
+    <name>STR_NPCTITLE_LF3_RVRGuard</name>
+    <body>&lt;Heiron Protectors&gt;</body>
+  </string>
+  <string>
+    <id>467348</id>
+    <name>STR_NPCTITLE_DF3_RVRGuard</name>
+    <body>&lt;Beluslan Protectors&gt;</body>
+  </string>
+  <string>
+    <id>467349</id>
+    <name>STR_LGuard_Wizard_Ae_lv50_Pguard</name>
+    <body>Atarr</body>
+  </string>
+  <string>
+    <id>467350</id>
+    <name>STR_DGuard_Wizard_Ae_lv50_Pguard</name>
+    <body>Veete</body>
+  </string>
+  <string>
+    <id>467351</id>
+    <name>STR_LGuard_Fighter_Ae_lv50_RVRguard</name>
+    <body>Inggison Combatant</body>
+  </string>
+  <string>
+    <id>467352</id>
+    <name>STR_DGuard_Fighter_Ae_lv50_RVRguard</name>
+    <body>Beluslan Combatant</body>
   </string>
   <string>
     <id>467360</id>
@@ -99570,9 +100035,19 @@
     <body>Devil Stigma Master of Fascination</body>
   </string>
   <string>
-    <id>467369</id>
+    <id>467381</id>
     <name>STR_WORLD_EVENT_TOY_ROBOT_01_G</name>
-    <body>Spoopy Shu-Ghost of Solorius Timeline</body>
+    <body>Shugost the Startler</body>
+  </string>
+  <string>
+    <id>467386</id>
+    <name>STR_EVENT_DREAM_SHUGO_SELLER</name>
+    <body>Luxuring</body>
+  </string>
+  <string>
+    <id>467387</id>
+    <name>STR_NPCTITLE_DREAM_SHUGO_SELLER</name>
+    <body>&lt;Mysterious Accessories Merchant&gt;</body>
   </string>
   <string>
     <id>467451</id>
@@ -99610,6 +100085,426 @@
     <body>Dragon Lord's Refuge Entrance</body>
   </string>
   <string>
+    <id>467458</id>
+    <name>STR_LF3_RVR_Teleporter_1_D</name>
+    <body>Tauric Teleport Statue</body>
+  </string>
+  <string>
+    <id>467459</id>
+    <name>STR_LF3_RVR_Teleporter_2_D</name>
+    <body>West Poie Teleport Statue</body>
+  </string>
+  <string>
+    <id>467460</id>
+    <name>STR_LF3_RVR_Teleporter_3_D</name>
+    <body>Kakuna Teleport Statue</body>
+  </string>
+  <string>
+    <id>467461</id>
+    <name>STR_DF3_RVR_Teleporter_1_L</name>
+    <body>Wailing Woods Teleport Statue</body>
+  </string>
+  <string>
+    <id>467462</id>
+    <name>STR_DF3_RVR_Teleporter_2_L</name>
+    <body>Black Plain Teleport Statue</body>
+  </string>
+  <string>
+    <id>467463</id>
+    <name>STR_DF3_RVR_Teleporter_3_L</name>
+    <body>Garkion Teleport Statue</body>
+  </string>
+  <string>
+    <id>467464</id>
+    <name>STR_NPCTITLE_LF3_RVR_Teleporter_D</name>
+    <body>&lt;Infiltration Transporter&gt;</body>
+  </string>
+  <string>
+    <id>467465</id>
+    <name>STR_NPCTITLE_DF3_RVR_Teleporter_L</name>
+    <body>&lt;Infiltration Transporter&gt;</body>
+  </string>
+  <string>
+    <id>467466</id>
+    <name>STR_NPC_DF3_invisible_Teleport_1</name>
+    <body>Wailing Woods Island</body>
+  </string>
+  <string>
+    <id>467467</id>
+    <name>STR_NPC_DF3_invisible_Teleport_2</name>
+    <body>Black Plain Island</body>
+  </string>
+  <string>
+    <id>467468</id>
+    <name>STR_NPC_DF3_invisible_Teleport_3</name>
+    <body>Garkion Island</body>
+  </string>
+  <string>
+    <id>467469</id>
+    <name>STR_NPC_LF3_invisible_Teleport_1</name>
+    <body>Tauric Island</body>
+  </string>
+  <string>
+    <id>467470</id>
+    <name>STR_NPC_LF3_invisible_Teleport_2</name>
+    <body>West Poie Island</body>
+  </string>
+  <string>
+    <id>467471</id>
+    <name>STR_NPC_LF3_invisible_Teleport_3</name>
+    <body>Kakuna Island</body>
+  </string>
+  <string>
+    <id>467472</id>
+    <name>STR_OBJ_directportal_Start_LF3_DF3</name>
+    <body>Legion Infiltration Corridor</body>
+  </string>
+  <string>
+    <id>467473</id>
+    <name>STR_OBJ_directportal_Start_LF3_LF3</name>
+    <body>Legion Advance Corridor</body>
+  </string>
+  <string>
+    <id>467474</id>
+    <name>STR_OBJ_directportal_Start_DF3_LF3</name>
+    <body>Legion Infiltration Corridor</body>
+  </string>
+  <string>
+    <id>467475</id>
+    <name>STR_OBJ_directportal_Start_DF3_DF3</name>
+    <body>Legion Advance Corridor</body>
+  </string>
+  <string>
+    <id>467476</id>
+    <name>STR_OBJ_directportal_Destination_LF3_DF3</name>
+    <body>Legion Infiltration Corridor</body>
+  </string>
+  <string>
+    <id>467477</id>
+    <name>STR_OBJ_directportal_Destination_LF3_LF3</name>
+    <body>Legion Advance Corridor</body>
+  </string>
+  <string>
+    <id>467478</id>
+    <name>STR_OBJ_directportal_Destination_DF3_LF3</name>
+    <body>Legion Infiltration Corridor</body>
+  </string>
+  <string>
+    <id>467479</id>
+    <name>STR_OBJ_directportal_Destination_DF3_DF3</name>
+    <body>Legion Advance Corridor</body>
+  </string>
+  <string>
+    <id>467480</id>
+    <name>STR_NPCTITLE_directportal_LF3_DF3</name>
+    <body>&lt;To Beluslan&gt;</body>
+  </string>
+  <string>
+    <id>467481</id>
+    <name>STR_NPCTITLE_directportal_LF3_LF3</name>
+    <body>&lt;Poie Merchant&gt;</body>
+  </string>
+  <string>
+    <id>467482</id>
+    <name>STR_NPCTITLE_directportal_DF3_LF3</name>
+    <body>&lt;To Heiron&gt;</body>
+  </string>
+  <string>
+    <id>467483</id>
+    <name>STR_NPCTITLE_directportal_DF3_DF3</name>
+    <body>&lt;To Besfer Ghost Village&gt;</body>
+  </string>
+  <string>
+    <id>467492</id>
+    <name>STR_LF3_RVR_Named_Flag_1</name>
+    <body>General Miltar</body>
+  </string>
+  <string>
+    <id>467493</id>
+    <name>STR_LF3_RVR_Named_Flag_2</name>
+    <body>General Kupiaro</body>
+  </string>
+  <string>
+    <id>467494</id>
+    <name>STR_LF3_RVR_Named_Flag_3</name>
+    <body>General Lanstri</body>
+  </string>
+  <string>
+    <id>467495</id>
+    <name>STR_DF3_RVR_Named_Flag_1</name>
+    <body>General Magken</body>
+  </string>
+  <string>
+    <id>467496</id>
+    <name>STR_DF3_RVR_Named_Flag_2</name>
+    <body>General Hark</body>
+  </string>
+  <string>
+    <id>467497</id>
+    <name>STR_DF3_RVR_Named_Flag_3</name>
+    <body>General Tombolk</body>
+  </string>
+  <string>
+    <id>467513</id>
+    <name>STR_NPCTITLE_LF_CGuard_a_RVR</name>
+    <body>&lt;Heiron Protectors&gt;</body>
+  </string>
+  <string>
+    <id>467514</id>
+    <name>STR_NPCTITLE_DF_CGuard_a_RVR</name>
+    <body>&lt;Beluslan Protectors&gt;</body>
+  </string>
+  <string>
+    <id>467515</id>
+    <name>STR_LGuard_Ranger_Ae2_lv51_RVR</name>
+    <body>Floating Island Scout</body>
+  </string>
+  <string>
+    <id>467516</id>
+    <name>STR_LGuard_Ranger_Ah_lv52_RVR</name>
+    <body>Floating Island Elite Scout</body>
+  </string>
+  <string>
+    <id>467517</id>
+    <name>STR_DGuard_Ranger_Ae2_lv51_RVR</name>
+    <body>Floating Island Scout</body>
+  </string>
+  <string>
+    <id>467518</id>
+    <name>STR_DGuard_Ranger_Ah_lv52_RVR</name>
+    <body>Floating Island Elite Scout</body>
+  </string>
+  <string>
+    <id>467519</id>
+    <name>STR_LGuard_Fighter_Ae2_lv51_RVR</name>
+    <body>Protector Brawler</body>
+  </string>
+  <string>
+    <id>467520</id>
+    <name>STR_LGuard_Ranger_Ae_lv50_RVR</name>
+    <body>Protector Scout</body>
+  </string>
+  <string>
+    <id>467521</id>
+    <name>STR_LGuard_Wizard_Ae_lv50_RVR</name>
+    <body>Protector Warmage</body>
+  </string>
+  <string>
+    <id>467522</id>
+    <name>STR_LGuard_Priest_Ae_lv50_RVR</name>
+    <body>Protector Mystic</body>
+  </string>
+  <string>
+    <id>467523</id>
+    <name>STR_DGuard_Fighter_Ae2_lv51_RVR</name>
+    <body>Protector Crusader</body>
+  </string>
+  <string>
+    <id>467524</id>
+    <name>STR_DGuard_Ranger_Ae_lv50_RVR</name>
+    <body>Protector Stiker</body>
+  </string>
+  <string>
+    <id>467525</id>
+    <name>STR_DGuard_Wizard_Ae_lv50_RVR</name>
+    <body>Protector Cursecaster</body>
+  </string>
+  <string>
+    <id>467526</id>
+    <name>STR_DGuard_Priest_Ae_lv50_RVR</name>
+    <body>Protector Lifekeeper</body>
+  </string>
+  <string>
+    <id>467527</id>
+    <name>STR_NPC_LC1_Yunian_E</name>
+    <body>Yunian</body>
+  </string>
+  <string>
+    <id>467528</id>
+    <name>STR_NPC_LC1_Suminus_E</name>
+    <body>Suminus</body>
+  </string>
+  <string>
+    <id>467529</id>
+    <name>STR_NPC_LC1_Duyona_E</name>
+    <body>Duyona</body>
+  </string>
+  <string>
+    <id>467530</id>
+    <name>STR_NPC_LC1_Juhiina_E</name>
+    <body>Juina</body>
+  </string>
+  <string>
+    <id>467531</id>
+    <name>STR_NPC_DC1_Chouto_E</name>
+    <body>Chouto</body>
+  </string>
+  <string>
+    <id>467532</id>
+    <name>STR_NPC_DC1_Hooshuun_E</name>
+    <body>Hulvar</body>
+  </string>
+  <string>
+    <id>467533</id>
+    <name>STR_NPC_DC1_Hyobomiyan_E</name>
+    <body>Bomiyan</body>
+  </string>
+  <string>
+    <id>467534</id>
+    <name>STR_NPC_DC1_Kirr_E</name>
+    <body>Kirr</body>
+  </string>
+  <string>
+    <id>467535</id>
+    <name>STR_OBJ_LC1_StoryBook_HighDeva01</name>
+    <body>Can't Stop Me Now: Barriers</body>
+  </string>
+  <string>
+    <id>467536</id>
+    <name>STR_OBJ_LC1_StoryBook_HighDeva02</name>
+    <body>Siel's Sacrifice: The Cataclysm</body>
+  </string>
+  <string>
+    <id>467537</id>
+    <name>STR_OBJ_LC1_StoryBook_HighDeva03</name>
+    <body>Eutere's Records</body>
+  </string>
+  <string>
+    <id>467538</id>
+    <name>STR_OBJ_LC1_StoryBook_HighDeva04</name>
+    <body>Essential Lullabies</body>
+  </string>
+  <string>
+    <id>467539</id>
+    <name>STR_OBJ_LC1_StoryBook_HighDeva05</name>
+    <body>Ascending to Agent</body>
+  </string>
+  <string>
+    <id>467540</id>
+    <name>STR_OBJ_LC1_StoryBook_HighDeva06</name>
+    <body>Blessed Heroes of the Millennium War</body>
+  </string>
+  <string>
+    <id>467541</id>
+    <name>STR_OBJ_FOBJ_v491_HighDeva_Chirashi_01a</name>
+    <body>Make Kinah NOW!</body>
+  </string>
+  <string>
+    <id>467542</id>
+    <name>STR_OBJ_DC1_StoryBook_HighDeva01</name>
+    <body>Barriers and How to Break Them</body>
+  </string>
+  <string>
+    <id>467543</id>
+    <name>STR_OBJ_DC1_StoryBook_HighDeva02</name>
+    <body>Siel's Act: The Cataclysm</body>
+  </string>
+  <string>
+    <id>467544</id>
+    <name>STR_OBJ_DC1_StoryBook_HighDeva03</name>
+    <body>Kirhine's Records</body>
+  </string>
+  <string>
+    <id>467545</id>
+    <name>STR_OBJ_DC1_StoryBook_HighDeva04</name>
+    <body>Baby's First Warsongs</body>
+  </string>
+  <string>
+    <id>467546</id>
+    <name>STR_OBJ_DC1_StoryBook_HighDeva05</name>
+    <body>So You Want to Be an Agent?</body>
+  </string>
+  <string>
+    <id>467547</id>
+    <name>STR_OBJ_DC1_StoryBook_HighDeva06</name>
+    <body>Dark Heroes of the Millennium War</body>
+  </string>
+  <string>
+    <id>467553</id>
+    <name>STR_NPC_LF3_Exchange_RVR_1</name>
+    <body>Insia</body>
+  </string>
+  <string>
+    <id>467554</id>
+    <name>STR_NPC_DF3_Exchange_RVR_1</name>
+    <body>Lajeko</body>
+  </string>
+  <string>
+    <id>467555</id>
+    <name>STR_NPCTITLE_Exchange_RVR_1</name>
+    <body>&lt;Legion Medal Reward Officer&gt;</body>
+  </string>
+  <string>
+    <id>467556</id>
+    <name>STR_NPC_LF3_RVR_Recovery_L</name>
+    <body>Almaden</body>
+  </string>
+  <string>
+    <id>467557</id>
+    <name>STR_NPC_DF3_RVR_Recovery_L</name>
+    <body>Spignia</body>
+  </string>
+  <string>
+    <id>467558</id>
+    <name>STR_NPC_LF3_RVR_Recovery_1</name>
+    <body>Soul Healer</body>
+  </string>
+  <string>
+    <id>467559</id>
+    <name>STR_NPC_LF3_RVR_Recovery_D</name>
+    <body>Medibez</body>
+  </string>
+  <string>
+    <id>467560</id>
+    <name>STR_NPC_DF3_RVR_Recovery_D</name>
+    <body>Restavera</body>
+  </string>
+  <string>
+    <id>467561</id>
+    <name>STR_NPC_DF3_RVR_Recovery_1</name>
+    <body>Soul Healer</body>
+  </string>
+  <string>
+    <id>467562</id>
+    <name>STR_NPCTITLE_LF_CGuard_a_RVR_1</name>
+    <body>&lt;Heiron Protectors&gt;</body>
+  </string>
+  <string>
+    <id>467563</id>
+    <name>STR_NPCTITLE_DF_CGuard_a_RVR_1</name>
+    <body>&lt;Beluslan Protectors&gt;</body>
+  </string>
+  <string>
+    <id>467564</id>
+    <name>STR_NPC_event_Lanne_1</name>
+    <body>Lanne</body>
+  </string>
+  <string>
+    <id>467565</id>
+    <name>STR_NPC_event_Jelta_1</name>
+    <body>Jelta</body>
+  </string>
+  <string>
+    <id>467566</id>
+    <name>STR_NPC_event_Neltise_1</name>
+    <body>Neltise</body>
+  </string>
+  <string>
+    <id>467567</id>
+    <name>STR_NPC_event_Hinjel_1</name>
+    <body>Hinjel</body>
+  </string>
+  <string>
+    <id>467568</id>
+    <name>STR_NPC_event_Lanne_2</name>
+    <body>Lanne</body>
+  </string>
+  <string>
+    <id>467569</id>
+    <name>STR_NPC_event_Jelta_2</name>
+    <body>Jelta</body>
+  </string>
+  <string>
     <id>467687</id>
     <name>STR_WORLD_BLACKSTAR_L_MATRYOSHKA_01</name>
     <body>Shugodroid</body>
@@ -99628,5 +100523,50 @@
     <id>467715</id>
     <name>STR_WORLD_EVENT_BUFF_SHUGO</name>
     <body>Buffotron 9000</body>
+  </string>
+  <string>
+    <id>467736</id>
+    <name>STR_WORLD_ABYSSFULLEQUIP_TREASUREBOX</name>
+    <body>Treasure Box</body>
+  </string>
+  <string>
+    <id>467752</id>
+    <name>STR_WORLD_EVENT_MEGAQUEST_SHUGO_01</name>
+    <body>Special Shugorobo</body>
+  </string>
+  <string>
+    <id>467753</id>
+    <name>STR_WORLD_EVENT_JACKPOT_ASSISTANT_1</name>
+    <body>Namiko</body>
+  </string>
+  <string>
+    <id>467754</id>
+    <name>STR_NPCTITLE_EVENT_JACKPOT_ASSISTANT</name>
+    <body>&lt;Smart Assistant&gt;</body>
+  </string>
+  <string>
+    <id>467755</id>
+    <name>STR_EVENT_HIDDEN_SPOT_BOSS_L</name>
+    <body>Elysea Captain</body>
+  </string>
+  <string>
+    <id>467756</id>
+    <name>STR_EVENT_HIDDEN_SPOT_NPC_L</name>
+    <body>Elysea Combatant</body>
+  </string>
+  <string>
+    <id>467757</id>
+    <name>STR_EVENT_HIDDEN_SPOT_BOSS_D</name>
+    <body>Asmodae Captain</body>
+  </string>
+  <string>
+    <id>467758</id>
+    <name>STR_EVENT_HIDDEN_SPOT_NPC_D</name>
+    <body>Asmodae Combatant</body>
+  </string>
+  <string>
+    <id>467764</id>
+    <name>STR_WORLD_EVENT_JACKPOT_ASSISTANT_2</name>
+    <body>Miyuki</body>
   </string>
 </strings>

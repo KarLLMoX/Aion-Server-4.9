@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/07/13 10:38:45">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1040000</id>
     <name>STR_DIC_TEST02</name>
@@ -8793,7 +8793,7 @@
   <string>
     <id>1042270</id>
     <name>STR_DIC_N_Shugo_AB1_10</name>
-    <body>Kuenunerk;A Shugo of the Kidorun Grave Robber Band in [%dic:STR_DIC_W_AB1_51]. He is very assertive.</body>
+    <body>Kuenunerk; A Shugo of the Kidorun Grave Robber Band at [%dic:STR_DIC_W_AB1_51] in the lower part of Ereshuranta. He is strongly assertive.</body>
   </string>
   <string>
     <id>1042271</id>
@@ -8813,12 +8813,12 @@
   <string>
     <id>1042274</id>
     <name>STR_DIC_N_Shugo_AB1_15</name>
-    <body>Guuminerk;A Shugo merchant of the Tigraki Workshop at [%dic:STR_DIC_E_AB1_name] in Reshanta.</body>
+    <body>Guuminerk; A Shugo merchant of the Tigraki Studio at [%dic:STR_DIC_W_AB1_1] in Ereshuranta.</body>
   </string>
   <string>
     <id>1042275</id>
     <name>STR_DIC_N_Shugo_AB1_16</name>
-    <body>Sienrurerk;A Shugo merchant of the Tigraki Workshop at [%dic:STR_DIC_E_AB1_name] in Reshanta.</body>
+    <body>Sienrurerk; A Shugo merchant of the Tigraki Studio at [%dic:STR_DIC_W_AB1_3] in Ereshuranta.</body>
   </string>
   <string>
     <id>1042276</id>
@@ -10733,7 +10733,7 @@
   <string>
     <id>1042658</id>
     <name>STR_DIC_N_Shugo_AB1_19</name>
-    <body>Baoninerk;A Shugo master Weaponsmith in [%dic:STR_DIC_E_AB1_name].</body>
+    <body>Baoninerk; A Shugo weapon-crafting master in [%dic:STR_DIC_W_AB1_1].</body>
   </string>
   <string>
     <id>1042659</id>
@@ -13223,7 +13223,7 @@
   <string>
     <id>1043157</id>
     <name>STR_DIC_N_Shugo_Exchange_02</name>
-    <body>Lolarinerk;A Shugo on Black Cloud Island in Reshanta. She is known to collect rare coins.</body>
+    <body>Chaorinrinerk; A Shugo at [%dic:STR_DIC_W_AB1_21] in Ereshuranta. She is known to collect rare coins.</body>
   </string>
   <string>
     <id>1043158</id>
@@ -19758,7 +19758,7 @@
   <string>
     <id>1051357</id>
     <name>STR_DIC_N_IDEvent01_In_NPC</name>
-    <body>Indianerk;A Shugo adventurer who wants to retrieve ancient relics before the Pillagers get to them. Look for him in [%dic:STR_DIC_FLA31], [%dic:STR_DIC_W_LF4_SZ_OP], on [%dic:STR_DIC_W_DC1_1], in Gelkmaros Fortress, or at Peace Square in [%dic:STR_DIC_W_LDF4a_SZ_OP].</body>
+    <body>Indianerk;A Shugo adventurer who wants to retrieve ancient relics before the Pillagers get to them. Look for him in [%dic:STR_DIC_FLA31], [%dic:STR_DIC_W_LF4_SZ_OP], on [%dic:STR_DIC_W_DC1_1], or in Gelkmaros Fortress.</body>
   </string>
   <string>
     <id>1051358</id>
@@ -22808,32 +22808,32 @@
   <string>
     <id>1051967</id>
     <name>STR_DIC_N_IDAbRe_Up3_Crotan_02_Entrance_In_L</name>
-    <body>Oseanos;The entrance manager of [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02]. He appears when the Elyos capture [%dic:STR_DIC_W_AB1_33].</body>
+    <body>Oseanos;A [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02] entrance support officer. He appears in Krotan Fortress when Redemption Landing reaches Reinforcement Level 6 and the Elyos occupy [%dic:STR_DIC_W_AB1_33]</body>
   </string>
   <string>
     <id>1051968</id>
     <name>STR_DIC_N_IDAbRe_Up3_Dkisas_02_Entrance_In_L</name>
-    <body>Ombrios;The entrance manager of [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02]. He appears when the Elyos capture [%dic:STR_DIC_W_AB1_37].</body>
+    <body>Ombrios;A [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02] entrance support officer. He appears in Kysis Fortress when Redemption Landing reaches Reinforcement Level 6 and the Elyos occupy [%dic:STR_DIC_W_AB1_37].</body>
   </string>
   <string>
     <id>1051969</id>
     <name>STR_DIC_N_IDAbRe_Up3_Lamiren_02_Entrance_In_L</name>
-    <body>Iaphetus;The entrance manager of [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02]. He appears when the Elyos capture [%dic:STR_DIC_W_AB1_30].</body>
+    <body>Iaphetus;A [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02] entrance support officer. He appears in Miren Fortress when Redemption Landing reaches Reinforcement Level 6 and the Elyos occupy [%dic:STR_DIC_W_AB1_30].</body>
   </string>
   <string>
     <id>1051970</id>
     <name>STR_DIC_N_IDAbRe_Up3_Crotan_02_Entrance_In_D</name>
-    <body>Grendel;The entrance manager of [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02]. He appears when Asmodians capture [%dic:STR_DIC_W_AB1_33].</body>
+    <body>Grendel;A [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02] entrance support officer. He appears in Krotan Fortress when Harbinger's Landing reaches Reinforcement Level 6 and the Asmodians occupy [%dic:STR_DIC_W_AB1_33].</body>
   </string>
   <string>
     <id>1051971</id>
     <name>STR_DIC_N_IDAbRe_Up3_Dkisas_02_Entrance_In_D</name>
-    <body>Danan;The entrance manager of [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02]. He appears when Asmodians capture [%dic:STR_DIC_W_AB1_37].</body>
+    <body>Danan;A [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02] entrance support officer. He appears in Kysis Fortress when Harbinger's Landing reaches Reinforcement Level 6 and the Asmodians occupy [%dic:STR_DIC_W_AB1_37].</body>
   </string>
   <string>
     <id>1051972</id>
     <name>STR_DIC_N_IDAbRe_Up3_Lamiren_02_Entrance_In_D</name>
-    <body>Bress;The entrance manager of [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02]. He appears when Asmodians capture [%dic:STR_DIC_W_AB1_30].</body>
+    <body>Bress;A [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02] entrance support officer. He appears in Miren Fortress when Harbinger's Landing reaches Reinforcement Level 6 and the Asmodians occupy [%dic:STR_DIC_W_AB1_30].</body>
   </string>
   <string>
     <id>1051973</id>
@@ -24318,7 +24318,7 @@
   <string>
     <id>1052270</id>
     <name>STR_DIC_N_DF5_Gilgamesh_E</name>
-    <body>Gilgamesh;He was displeased with Tiamat's rise to Balaur Lord and organized a resistance force, but he was defeated, cursed, and became an undead Drakan in [%dic:STR_DIC_W_DF5].</body>
+    <body>Gilgamesh;He was displeased with Tiamat's rise to Dragon Lord and organized a resistance force, but he was defeated, cursed, and became an undead Drakan in [%dic:STR_DIC_W_DF5].</body>
   </string>
   <string>
     <id>1052271</id>
@@ -25233,7 +25233,7 @@
   <string>
     <id>1052454</id>
     <name>STR_DIC_N_LF5_Chairun_E</name>
-    <body>CChillrunerk;A treasure hunter Shugo who arrived after hearing a rumor that the Balaur Lord's treasures were hidden in [%dic:STR_DIC_W_LF5].</body>
+    <body>Chairunerk;A treasure hunter Shugo who arrived after hearing a rumor that the Dragon Lord's treasures were hidden in [%dic:STR_DIC_W_LF5].</body>
   </string>
   <string>
     <id>1052455</id>
@@ -25748,7 +25748,7 @@
   <string>
     <id>1052557</id>
     <name>STR_DIC_N_Ab1_Marqudalen_E</name>
-    <body>Makidalenne;General Reward Officer of the Redeemer's Wing. Can be found at [%dic:STR_DIC_W_AB1_SZ_UPOP_L].</body>
+    <body>Makidarlene;General Reward Officer of the Redeemer's Wing. Can be found at [%dic:STR_DIC_W_AB1_SZ_UPOP_L].</body>
   </string>
   <string>
     <id>1052558</id>
@@ -25888,7 +25888,7 @@
   <string>
     <id>1052585</id>
     <name>STR_DIC_N_Ab1_Kroaze_E</name>
-    <body>Kroaje;General Reward Officer of the Omen's Herald. Can be found at [%dic:STR_DIC_W_AB1_SZ_UPOP_D].</body>
+    <body>Kroaze;General Reward Officer of the Omen's Herald. Can be found at [%dic:STR_DIC_W_AB1_SZ_UPOP_D].</body>
   </string>
   <string>
     <id>1052586</id>
@@ -26188,7 +26188,7 @@
   <string>
     <id>1052645</id>
     <name>STR_DIC_N_IDSeal_Boss_Teleport_Q</name>
-    <body>Entrance to Agony's Well;Leads to Balaur Lord Beritra.</body>
+    <body>Entrance to Agony's Well;Leads to Dragon Lord Beritra.</body>
   </string>
   <string>
     <id>1052646</id>
@@ -26208,7 +26208,7 @@
   <string>
     <id>1052649</id>
     <name>STR_DIC_N_Ab1_1241_Guardian_L_E</name>
-    <body>Mutos;A Captain stationed at the Krotan Fortress. Appears after [%dic:STR_DIC_M_Ab1_BossNamed_65_2_Al] is killed.</body>
+    <body>Mutos;A Captain stationed at the Miren Fortress. Appears after [%dic:STR_DIC_M_Ab1_BossNamed_65_2_Al] is killed.</body>
   </string>
   <string>
     <id>1052650</id>
@@ -26223,7 +26223,7 @@
   <string>
     <id>1052652</id>
     <name>STR_DIC_N_Ab1_1241_Guardian_D_E</name>
-    <body>Mutoko;A Captain stationed at the Krotan Fortress. Appears after [%dic:STR_DIC_M_Ab1_BossNamed_65_2_Da_Al] is killed.</body>
+    <body>Mutoko;A Captain stationed at the Miren Fortress. Appears after [%dic:STR_DIC_M_Ab1_BossNamed_65_2_Da_Al] is killed.</body>
   </string>
   <string>
     <id>1052653</id>
@@ -26278,12 +26278,12 @@
   <string>
     <id>1052663</id>
     <name>STR_DIC_N_LF5_OP_L_Ab1_Entrance_In</name>
-    <body>Redemption Landing Portal;A portal that leads to [%dic:STR_DIC_W_AB1_SZ_UPOP_L] in the Upper Abyss. It's located in [%dic:STR_DIC_W_LF5]'s [%dic:STR_DIC_W_LF5_SZ_OP_01].</body>
+    <body>Redemption Landing Corridor;A corridor that leads to [%dic:STR_DIC_W_AB1_SZ_UPOP_L] at the upper layer of the Abyss. It's located in [%dic:STR_DIC_W_LF5]'s [%dic:STR_DIC_W_LF5_SZ_OP_01].</body>
   </string>
   <string>
     <id>1052664</id>
     <name>STR_DIC_N_DF5_OP_D_Ab1_Entrance_In</name>
-    <body>Harbinger's Landing Portal;A portal that leads to [%dic:STR_DIC_W_AB1_SZ_UPOP_D] in the Upper Abyss. It's located in [%dic:STR_DIC_W_DF5]'s [%dic:STR_DIC_W_DF5_SZ_OP_01].</body>
+    <body>Harbinger's Landing Corridor;A corridor that leads to [%dic:STR_DIC_W_AB1_SZ_UPOP_D] at the upper layer of the Abyss. It's located in [%dic:STR_DIC_W_LF5]'s [%dic:STR_DIC_W_DF5_SZ_OP_01].</body>
   </string>
   <string>
     <id>1052665</id>
@@ -26334,5 +26334,445 @@
     <id>1052674</id>
     <name>STR_DIC_N_IDLF1_Zukunt_E_SP</name>
     <body>Zukul;Researcher dispatched to Dark Poeta in order to investigate the Balaur. Saw a strange creature during a battle.</body>
+  </string>
+  <string>
+    <id>1052675</id>
+    <name>STR_DIC_N_Ab1_Bonar_E</name>
+    <body>Jonar;A Landing reinforcement general of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_AB1_SZ_UPOP_L] when Redemption Landing is level is 2.</body>
+  </string>
+  <string>
+    <id>1052676</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard50_L</name>
+    <body>Desarion;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village50] when Redemption Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052677</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard51_L</name>
+    <body>Geovera;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village51] when Redemption Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052678</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard52_L</name>
+    <body>Tendro;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village52] when Redemption Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052679</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard53_L</name>
+    <body>Alia;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village53] when Redemption Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052680</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard54_L</name>
+    <body>Kabern;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village54] when Redemption Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052681</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard55_L</name>
+    <body>Mentia;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village55] when Redemption Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052682</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard56_L</name>
+    <body>Monteron;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village56] when Redemption Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052683</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard57_L</name>
+    <body>Pumin;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village57] when Redemption Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052684</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard58_L</name>
+    <body>Galio;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village58] when Redemption Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052685</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard59_L</name>
+    <body>Ptea;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village59] when Redemption Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052686</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard60_L</name>
+    <body>Kianas;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village60] when Redemption Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052687</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard61_L</name>
+    <body>Nerodanan;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village61] when Redemption Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052688</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard62_L</name>
+    <body>Kannosius;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village62] when Redemption Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052689</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard63_L</name>
+    <body>Merion;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village63] when Redemption Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052690</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard64_L</name>
+    <body>Nedarion;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village64] when Redemption Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052691</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard65_L</name>
+    <body>Katrina;A Landing reinforcement of the Redeemer's Wing Legion that appears in [%dic:STR_DIC_W_Ab1_Village50] when Redemption Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052692</id>
+    <name>STR_DIC_N_Ab1_Morzaex_E</name>
+    <body>Jex;A Landing reinforcement general of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_AB1_SZ_UPOP_D] when Harbinger's Landing is level is 2.</body>
+  </string>
+  <string>
+    <id>1052693</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard50_D</name>
+    <body>Muiska;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village50] when Harbinger's Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052694</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard51_D</name>
+    <body>Pinothia;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village51] when Harbinger's Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052695</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard52_D</name>
+    <body>Trelian;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village52] when Harbinger's Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052696</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard53_D</name>
+    <body>Malbasia;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village53] when Harbinger's Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052697</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard54_D</name>
+    <body>Bernos;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village54] when Harbinger's Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052698</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard55_D</name>
+    <body>Palanak;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village55] when Harbinger's Landing is level is 6.</body>
+  </string>
+  <string>
+    <id>1052699</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard56_D</name>
+    <body>Shendoa;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village56] when Harbinger's Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052700</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard57_D</name>
+    <body>Grikk;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village57] when Harbinger's Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052701</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard58_D</name>
+    <body>Pernir;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village58] when Harbinger's Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052702</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard59_D</name>
+    <body>Greko;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village59] when Harbinger's Landing is level is 8.</body>
+  </string>
+  <string>
+    <id>1052703</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard60_D</name>
+    <body>Ichuria;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village60] when Harbinger's Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052704</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard61_D</name>
+    <body>Katarat;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village61] when Harbinger's Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052705</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard62_D</name>
+    <body>Nuak;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village62] when Harbinger's Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052706</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard63_D</name>
+    <body>Jilia;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village63] when Harbinger's Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052707</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard64_D</name>
+    <body>Neriad;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village64] when Harbinger's Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052708</id>
+    <name>STR_DIC_N_Ab1_Buildup_Guard65_D</name>
+    <body>Sagran;A Landing reinforcement officer of the Omen's Herald Legion that appears in [%dic:STR_DIC_W_Ab1_Village65] when Harbinger's Landing is level is 4.</body>
+  </string>
+  <string>
+    <id>1052709</id>
+    <name>STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q15478</name>
+    <body>Scattered Frost Crystal;Frost Crystal that is spreading near the Upper Abyss and cannot be destroyed with regular heat.</body>
+  </string>
+  <string>
+    <id>1052710</id>
+    <name>STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q15479</name>
+    <body>Scattered Ice Crystal;Ice Crystal that is spreading near the Upper Abyss and cannot be destroyed with regular heat.</body>
+  </string>
+  <string>
+    <id>1052711</id>
+    <name>STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q25478</name>
+    <body>Collapsed Frost Crystal;Frost Crystal that is spreading near the Upper Abyss and cannot be destroyed with regular heat.</body>
+  </string>
+  <string>
+    <id>1052712</id>
+    <name>STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q25479</name>
+    <body>Collapsed Ice Crystal;Ice Crystal that is spreading near the Upper Abyss and cannot be destroyed with regular heat.</body>
+  </string>
+  <string>
+    <id>1052713</id>
+    <name>STR_DIC_OBJ_IDRaksha_solo_FOBJ_Vritra_Box_Q18745a</name>
+    <body>Beritra's Stolen Goods;A chest that holds the Danuar valuables the Beritra stole from various places. It has been moved to the Nasto Resurrection Experiment Area of Limentu.</body>
+  </string>
+  <string>
+    <id>1052714</id>
+    <name>STR_DIC_OBJ_IDLDF5_Under_01_FOBJ_Vritra_Box_Q16977a</name>
+    <body>Beritra's Looted Goods;A chest that holds the Danuar artifacts the Beritra robbed from various places. It has been moved to the Control Post of Ophidan Bridge.</body>
+  </string>
+  <string>
+    <id>1052715</id>
+    <name>STR_DIC_OBJ_IDLDF5_Under_02_FOBJ_Vritra_Box_Q16989a</name>
+    <body>Beritra's War Supplies;A chest that holds Danuar artifacts the Beritra took from various places. It has been moved to the Abode of Eternity in the Danuar Center.</body>
+  </string>
+  <string>
+    <id>1052716</id>
+    <name>STR_DIC_N_LF3_Traming_E</name>
+    <body>Tramine;The delegate of the Black Cloud Traders in Heiron. He hates Shulacks.</body>
+  </string>
+  <string>
+    <id>1052717</id>
+    <name>STR_DIC_N_LF3_Pacuroongroong_E</name>
+    <body>Pakurune;The Shugo delegate of the Black Cloud Traders in Heiron. He hates Shulacks.</body>
+  </string>
+  <string>
+    <id>1052718</id>
+    <name>STR_DIC_N_LF3_Peepeerinrin_E</name>
+    <body>Pipirinerk;The Shugo delegate of the Black Cloud Traders in Heiron. He is such a good looking Shugo and everyone loves him.</body>
+  </string>
+  <string>
+    <id>1052719</id>
+    <name>STR_DIC_N_LF3_Konaching_E</name>
+    <body>Konachinerk;The delegate of the Black Cloud Traders in Heiron. His nerves are on edge because of his heavy responsibilities.</body>
+  </string>
+  <string>
+    <id>1052720</id>
+    <name>STR_DIC_N_LF3_Nakaching_E</name>
+    <body>Nakarinerk;The Shugo delegate of the Black Cloud Traders in Heiron. He is reliable and has a strong sense of responsibility.</body>
+  </string>
+  <string>
+    <id>1052721</id>
+    <name>STR_DIC_N_LF3_Retroa_E</name>
+    <body>Retroa;An honest supply manager in Heiron.</body>
+  </string>
+  <string>
+    <id>1052722</id>
+    <name>STR_DIC_N_LF3_Hyorung_E</name>
+    <body>Horyn; A cube factory craftsman in Heiron.</body>
+  </string>
+  <string>
+    <id>1052723</id>
+    <name>STR_DIC_N_LF3_ShulackShip_Entrance</name>
+    <body>Hitarung;A navigator of the Black Cloud Traders in Heiron who can send you to the Steel Rake.</body>
+  </string>
+  <string>
+    <id>1052724</id>
+    <name>STR_DIC_N_LF3_ShulackShip_Solo_Entrance</name>
+    <body>Anirinerk;An apprentice mate to the Black Cloud Traders in Heiron who can send you to [%dic:STR_DIC_W_ShulackShip_L_2F].</body>
+  </string>
+  <string>
+    <id>1052725</id>
+    <name>STR_DIC_N_LF3_ShulackShip_Merchant</name>
+    <body>Chaukinerk;A Shulack merchant found in Heiron. He fled Balaurea and joined the Black Cloud Traders as an exile.</body>
+  </string>
+  <string>
+    <id>1052726</id>
+    <name>STR_DIC_N_DF3_Fairringring_E</name>
+    <body>Fairrinerk;The Shugo delegate of the Black Cloud Traders in Beluslan. He is the easy-going leader of the delegation with lots of information.</body>
+  </string>
+  <string>
+    <id>1052727</id>
+    <name>STR_DIC_N_DF3_Halfringring_E</name>
+    <body>Halfrinerk;The Shugo delegate of the Black Cloud Traders in Beluslan. He is the youngest in the delegation and takes care of  miscellaneous work.</body>
+  </string>
+  <string>
+    <id>1052728</id>
+    <name>STR_DIC_N_DF3_Muguring_E</name>
+    <body>Mugurinerk;The Shugo delegate of the Black Cloud Traders in Beluslan. He is an opportunist and often leaves his group to join one that can be more beneficial to him.</body>
+  </string>
+  <string>
+    <id>1052729</id>
+    <name>STR_DIC_N_DF3_Terryroong_E</name>
+    <body>Terrinerk;The Shugo delegate of the Black Cloud Traders in Beluslan. He is highly skilled and experienced.</body>
+  </string>
+  <string>
+    <id>1052730</id>
+    <name>STR_DIC_N_DF3_Hasiroong_E</name>
+    <body>Hashirinerk;The Shugo delegate of the Black Cloud Traders in Beluslan. He is a promising and competent Shugo who has a sense of rivalry against Terryroong.</body>
+  </string>
+  <string>
+    <id>1052731</id>
+    <name>STR_DIC_N_DF3_Recaro_E</name>
+    <body>Recaro;A supply manager in Beluslan.</body>
+  </string>
+  <string>
+    <id>1052732</id>
+    <name>STR_DIC_N_DF3_Kaorun_E</name>
+    <body>Kaorun;A supervisor working in Beluslan. He tends to brag about his position as a supervisor.</body>
+  </string>
+  <string>
+    <id>1052733</id>
+    <name>STR_DIC_N_DF3_Onnaring_E</name>
+    <body>Onnaring;A cube factory craftsman in Beluslan.</body>
+  </string>
+  <string>
+    <id>1052734</id>
+    <name>STR_DIC_N_DF3_ShulackShip_Entrance</name>
+    <body>Minarinerk;A navigator of the Black Cloud Traders in Beluslan who can send you to the Steel Rake.</body>
+  </string>
+  <string>
+    <id>1052735</id>
+    <name>STR_DIC_N_DF3_ShulackShip_Solo_Entrance</name>
+    <body>Sagorinerk;An apprentice mate to the Black Cloud Traders in Beluslan who can send you to [%dic:STR_DIC_W_ShulackShip_D_2F].</body>
+  </string>
+  <string>
+    <id>1052736</id>
+    <name>STR_DIC_N_DF3_ShulackShip_Merchant</name>
+    <body>Chaukiki;A Shulack merchant found in Beluslan. He fled Balaurea and joined the Black Cloud Traders as an exile.</body>
+  </string>
+  <string>
+    <id>1052737</id>
+    <name>STR_DIC_N_LF1a_Ganix_e</name>
+    <body>Ganix;A Growth Support Officer dispatched to Verteron, who is in charge of beginner growth support.</body>
+  </string>
+  <string>
+    <id>1052738</id>
+    <name>STR_DIC_N_LF2_Nephele_e</name>
+    <body>Nephele;A Growth Support Officer dispatched to Eltnen, who is in charge of basic growth support.</body>
+  </string>
+  <string>
+    <id>1052739</id>
+    <name>STR_DIC_N_LF2_Diogo_e</name>
+    <body>Diogo;A Growth Support Officer dispatched to Eltnen, who is in charge of intermediate growth support.</body>
+  </string>
+  <string>
+    <id>1052740</id>
+    <name>STR_DIC_N_LF3_Rae_e</name>
+    <body>Rae;A Growth Support Officer dispatched to Heiron, who is in charge of intermediate growth support.</body>
+  </string>
+  <string>
+    <id>1052741</id>
+    <name>STR_DIC_N_LF3_Makena_e</name>
+    <body>Makena;A Growth Support Officer dispatched to Heiron, who is in charge of advanced growth support.</body>
+  </string>
+  <string>
+    <id>1052742</id>
+    <name>STR_DIC_N_LF2a_Beatrice_e</name>
+    <body>Beatrice;A Growth Support Officer dispatched to Theobomos, who is in charge of special growth support.</body>
+  </string>
+  <string>
+    <id>1052743</id>
+    <name>STR_DIC_N_AB1_L_Scipio_e</name>
+    <body>Scipio;A Growth Support Officer dispatched to Ereshuranta, who is in charge of special growth support.</body>
+  </string>
+  <string>
+    <id>1052744</id>
+    <name>STR_DIC_N_DF1a_Amund_e</name>
+    <body>Amund;A Growth Support Officer dispatched to Altgard, who is in charge of beginner growth support.</body>
+  </string>
+  <string>
+    <id>1052745</id>
+    <name>STR_DIC_N_DF2_Birte_e</name>
+    <body>Birte;A Growth Support Officer dispatched to Morheim, who is in charge of basic growth support.</body>
+  </string>
+  <string>
+    <id>1052746</id>
+    <name>STR_DIC_N_DF2_Carolus_e</name>
+    <body>Carolus;A Growth Support Officer dispatched to Morheim, who is in charge of intermediate growth support.</body>
+  </string>
+  <string>
+    <id>1052747</id>
+    <name>STR_DIC_N_DF3_Dorothea_e</name>
+    <body>Dorothea;A Growth Support Officer dispatched to Beluslan, who is in charge of intermediate growth support.</body>
+  </string>
+  <string>
+    <id>1052748</id>
+    <name>STR_DIC_N_DF3_Einther_e</name>
+    <body>Einther;A Growth Support Officer dispatched to Beluslan, who is in charge of advanced growth support.</body>
+  </string>
+  <string>
+    <id>1052749</id>
+    <name>STR_DIC_N_DF2a_Frode_e</name>
+    <body>Frode;A Growth Support Officer dispatched to Brusthonin, who is in charge of special growth support.</body>
+  </string>
+  <string>
+    <id>1052750</id>
+    <name>STR_DIC_N_AB1_D_Gerhard_e</name>
+    <body>Gerhard;A Growth Support Officer dispatched to Ereshuranta, who is in charge of special growth support.</body>
+  </string>
+  <string>
+    <id>1052751</id>
+    <name>STR_DIC_N_Shugo_AB1_24</name>
+    <body>Veryuning;A Shugo weapon-crafting master in [%dic:STR_DIC_W_AB1_3].</body>
+  </string>
+  <string>
+    <id>1052752</id>
+    <name>STR_DIC_N_Shugo_AB1_21</name>
+    <body>Muirunerk;A Shugo merchant of the Tigraki Studio at [%dic:STR_DIC_W_AB1_1] in Ereshuranta.</body>
+  </string>
+  <string>
+    <id>1052753</id>
+    <name>STR_DIC_N_LF3_Meio_E</name>
+    <body>Meio;A staff operation officer dispatched from the Heiron Fortress to rescue generals in danger.</body>
+  </string>
+  <string>
+    <id>1052754</id>
+    <name>STR_DIC_N_DF3_Estado_E</name>
+    <body>Estado;A staff operation officer dispatched from the Heiron Fortress. He plans assassinations of key figures to interfere with the Asmodians.</body>
+  </string>
+  <string>
+    <id>1052755</id>
+    <name>STR_DIC_N_DF3_Desant_E</name>
+    <body>Desant;A staff operation officer dispatched from the Verteron Fortress to rescue generals in danger.</body>
+  </string>
+  <string>
+    <id>1052756</id>
+    <name>STR_DIC_N_LF3_Radak_E</name>
+    <body>Radak;A staff operation officer dispatched from the Verteron Fortress. He plans assassinations of key figures to interfere with the Asmodians.</body>
+  </string>
+  <string>
+    <id>1052757</id>
+    <name>STR_DIC_N_DF3_invisible_Teleport_1</name>
+    <body>Wailing Woods Island;A floating island in the Wailing Woods where fog often sets in and ghosts can appear.</body>
+  </string>
+  <string>
+    <id>1052758</id>
+    <name>STR_DIC_N_DF3_invisible_Teleport_2</name>
+    <body>Ashensand Island;A floating island on the dry and barren black sand plain.</body>
+  </string>
+  <string>
+    <id>1052759</id>
+    <name>STR_DIC_N_DF3_invisible_Teleport_3</name>
+    <body>Fangdrop Island;A floating island located in an area that Garkions and Spriggs inhabit.</body>
+  </string>
+  <string>
+    <id>1052760</id>
+    <name>STR_DIC_N_LF3_invisible_Teleport_1</name>
+    <body>Tauric Island;A floating island in the area inhabited by the Flaming Mane.</body>
+  </string>
+  <string>
+    <id>1052761</id>
+    <name>STR_DIC_N_LF3_invisible_Teleport_2</name>
+    <body>West Poya Jungle;A floating island in the west of the Poya Jungle.</body>
+  </string>
+  <string>
+    <id>1052762</id>
+    <name>STR_DIC_N_LF3_invisible_Teleport_3</name>
+    <body>Cacoon Island;A floating island in the area where a Huge Frillneck nests.</body>
   </string>
 </strings>
