@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/10/13 15:24:23">
+<strings generated_time="2015/12/03 14:51:12">
   <string>
     <id>1100000</id>
     <name>STR_QUEST_SHARE_NOBODY_ERROR</name>
@@ -8858,7 +8858,7 @@
   <string>
     <id>1103027</id>
     <name>STR_QUEST_NAME_Q3204</name>
-    <body>Shameless Peperinrinerk</body>
+    <body>Shameless Pipirinrin</body>
   </string>
   <string>
     <id>1103028</id>
@@ -8878,7 +8878,7 @@
   <string>
     <id>1103031</id>
     <name>STR_QUEST_NAME_Q3208</name>
-    <body>The Puzzling Blueprint</body>
+    <body>[Instanced Dungeon] Mysterious Blueprint</body>
   </string>
   <string>
     <id>1103032</id>
@@ -8893,7 +8893,7 @@
   <string>
     <id>1103034</id>
     <name>STR_QUEST_NAME_Q3211</name>
-    <body>[Group] Against the Steel Rake</body>
+    <body>[Instanced Dungeon/Group] Captain on the ship Steel Rake</body>
   </string>
   <string>
     <id>1103035</id>
@@ -8903,7 +8903,7 @@
   <string>
     <id>1103036</id>
     <name>STR_QUEST_NAME_Q3213</name>
-    <body>[Group] Revenge of Himusus</body>
+    <body>[Instanced Dungeon/Group] Revenge of Maximus</body>
   </string>
   <string>
     <id>1103037</id>
@@ -8923,7 +8923,7 @@
   <string>
     <id>1103040</id>
     <name>STR_QUEST_NAME_Q3217</name>
-    <body>[Group] Imprisoned Guardian</body>
+    <body>[Instanced Dungeon/Group] Imprisoned Guardian</body>
   </string>
   <string>
     <id>1103041</id>
@@ -13408,7 +13408,7 @@
   <string>
     <id>1104240</id>
     <name>STR_QUEST_NAME_Q4213</name>
-    <body>[Group] Unlucky Nekai</body>
+    <body>[Instanced Dungeon/Group] Unfortunate Baba Hun</body>
   </string>
   <string>
     <id>1104241</id>
@@ -14608,7 +14608,7 @@
   <string>
     <id>1104651</id>
     <name>STR_QUEST_NAME_Q1851</name>
-    <body>Uncharted Islands</body>
+    <body>Dispatched Shugo Craftsmen</body>
   </string>
   <string>
     <id>1104652</id>
@@ -50122,7 +50122,7 @@
   <string>
     <id>1131005</id>
     <name>STR_QUEST_11454a_DESC</name>
-    <body>Clean liquid extracted from the Nature's Defender.</body>
+    <body>Clear fluid extracted from Rotron Thick with Leaves in Caspa's Forest.</body>
   </string>
   <string>
     <id>1131006</id>
@@ -50232,7 +50232,7 @@
   <string>
     <id>1131027</id>
     <name>STR_QUEST_21454a_DESC</name>
-    <body>Clean liquid extracted from the Nature's Defender.</body>
+    <body>Clear fluid extracted from Sticky Scolime that eats the essence of tree in the Krug Basin.</body>
   </string>
   <string>
     <id>1131028</id>
@@ -71722,7 +71722,7 @@
   <string>
     <id>1180159</id>
     <name>STR_QUEST_NAME_Q80159</name>
-    <body>[Event] Warming Hearts and Hands</body>
+    <body>[Event/Weekly] A Busy Mother's Request</body>
   </string>
   <string>
     <id>1180160</id>
@@ -71732,7 +71732,7 @@
   <string>
     <id>1180161</id>
     <name>STR_QUEST_NAME_Q80161</name>
-    <body>[Event] Fashion Advice</body>
+    <body>[Event/Weekly] A Busy Mother's Request</body>
   </string>
   <string>
     <id>1180162</id>
@@ -71828,6 +71828,36 @@
     <id>1180212</id>
     <name>STR_QUEST_NAME_Q80643</name>
     <body>[Event/Weekly] A Busy Mother's Request</body>
+  </string>
+  <string>
+    <id>1180213</id>
+    <name>STR_QUEST_NAME_Q80617</name>
+    <body>[Event] A Young Girl's Request</body>
+  </string>
+  <string>
+    <id>1180214</id>
+    <name>STR_QUEST_NAME_Q80618</name>
+    <body>[Event] Warmhearted Gift</body>
+  </string>
+  <string>
+    <id>1180215</id>
+    <name>STR_QUEST_NAME_Q80619</name>
+    <body>[Event] A Young Girl's Request</body>
+  </string>
+  <string>
+    <id>1180216</id>
+    <name>STR_QUEST_NAME_Q80620</name>
+    <body>[Event] Warmhearted Gift</body>
+  </string>
+  <string>
+    <id>1180217</id>
+    <name>STR_QUEST_NAME_Q80621</name>
+    <body>[Event] A Young Girl's Request</body>
+  </string>
+  <string>
+    <id>1180218</id>
+    <name>STR_QUEST_NAME_Q80622</name>
+    <body>[Event] A Young Girl's Request</body>
   </string>
   <string>
     <id>1185000</id>
@@ -73872,7 +73902,7 @@
   <string>
     <id>1185408</id>
     <name>STR_QUEST_NAME_Q80279</name>
-    <body>[Event] Spirited Thanks</body>
+    <body>[Event/Daily] Spirited Thanks</body>
   </string>
   <string>
     <id>1185409</id>
@@ -75877,7 +75907,7 @@
   <string>
     <id>1185809</id>
     <name>STR_QUEST_126982A_DESC</name>
-    <body>Balaur Lords distribute these cards to the Balaur. Double-click to receive the quest.</body>
+    <body>Dragon Lords distribute these cards to the Balaur. Double-click to receive the quest.</body>
   </string>
   <string>
     <id>1185810</id>
@@ -76277,7 +76307,7 @@
   <string>
     <id>1185889</id>
     <name>STR_QUEST_NAME_Q80772</name>
-    <body>[Event/Daily] Godmother Koko's Request</body>
+    <body>[Event/Daily] Cluckers Bigington's Request</body>
   </string>
   <string>
     <id>1185890</id>
@@ -76332,27 +76362,27 @@
   <string>
     <id>1185900</id>
     <name>STR_QUEST_NAME_Q80783</name>
-    <body>[Event/Daily] Festive Assembly Line</body>
+    <body>[Event] Put Tonirunerk's Toy Together for a Prize!</body>
   </string>
   <string>
     <id>1185901</id>
     <name>STR_QUEST_NAME_Q80784</name>
-    <body>[Event/Daily] Festive Production Line</body>
+    <body>[Event] Put Tonirunerk's Toy Together for a Prize!</body>
   </string>
   <string>
     <id>1185902</id>
     <name>STR_QUEST_NAME_Q80785</name>
-    <body>[Event] Long Lasting Power</body>
+    <body>[Event] Find Robot Energy!</body>
   </string>
   <string>
     <id>1185903</id>
     <name>STR_QUEST_NAME_Q80786</name>
-    <body>[Event] Cellular Collection Reception</body>
+    <body>[Event] Find Robot Energy!</body>
   </string>
   <string>
     <id>1185904</id>
     <name>STR_COMMON_SAY_14</name>
-    <body>I seem to need a Solorius Pass for this machine.</body>
+    <body>It seems I need 1 bonus card.</body>
   </string>
   <string>
     <id>1185905</id>
@@ -76468,6 +76498,71 @@
     <id>1185937</id>
     <name>STR_QUEST_NAME_Q80805</name>
     <body>[Prestige] Prestigious Heart</body>
+  </string>
+  <string>
+    <id>1185962</id>
+    <name>STR_QUEST_NAME_Q80846</name>
+    <body>[Event/Daily] Black Star Special Honor</body>
+  </string>
+  <string>
+    <id>1185963</id>
+    <name>STR_QUEST_NAME_Q80847</name>
+    <body>[Event/Daily] Black Star Special Honor</body>
+  </string>
+  <string>
+    <id>1185964</id>
+    <name>STR_QUEST_NAME_Q80848</name>
+    <body>[Event/Weekly] Black Star Special Honor</body>
+  </string>
+  <string>
+    <id>1185965</id>
+    <name>STR_QUEST_NAME_Q80849</name>
+    <body>[Event/Daily] An assistant's special reward</body>
+  </string>
+  <string>
+    <id>1185966</id>
+    <name>STR_QUEST_NAME_Q80850</name>
+    <body>[Event/Daily] A special schedule from an assistant</body>
+  </string>
+  <string>
+    <id>1185967</id>
+    <name>STR_QUEST_80849</name>
+    <body>[Event] Special clothing</body>
+  </string>
+  <string>
+    <id>1185968</id>
+    <name>STR_QUEST_80850</name>
+    <body>[Event] Speical Document </body>
+  </string>
+  <string>
+    <id>1185969</id>
+    <name>STR_QUEST_80849_DESC</name>
+    <body>A clothing that can be exchanged to an assistant's special reward.</body>
+  </string>
+  <string>
+    <id>1185970</id>
+    <name>STR_QUEST_80850_DESC</name>
+    <body>A Special document that can complete a special schedule given by assistant. </body>
+  </string>
+  <string>
+    <id>1185971</id>
+    <name>STR_QUEST_NAME_Q80838</name>
+    <body>Dangerous Efforts for Honor 5</body>
+  </string>
+  <string>
+    <id>1185972</id>
+    <name>STR_QUEST_NAME_Q80839</name>
+    <body>Dangerous Challenge for Honor 5</body>
+  </string>
+  <string>
+    <id>1185973</id>
+    <name>STR_QUEST_NAME_Q80840</name>
+    <body>Dangerous Efforts for Honor 6</body>
+  </string>
+  <string>
+    <id>1185974</id>
+    <name>STR_QUEST_NAME_Q80841</name>
+    <body>Dangerous Challenge for Honor 6</body>
   </string>
   <string>
     <id>1190000</id>
@@ -97847,7 +97942,7 @@
   <string>
     <id>1800464</id>
     <name>STR_QUEST_10504b_DESC</name>
-    <body>A slate that has the oath of the 5th Balaur Lord on it. But the slate is badly cracked and the writing is wiped off in places, making it difficult to read.</body>
+    <body>A slate that has the oath of the 5th Dragon Lord on it. But the slate is badly cracked and the writing is wiped off in places, making it difficult to read.</body>
   </string>
   <string>
     <id>1800465</id>
@@ -98242,7 +98337,7 @@
   <string>
     <id>1800543</id>
     <name>STR_QUEST_NAME_Q80683</name>
-    <body>[Event] Blessings of the Prismatic Serpent</body>
+    <body>[Event/Weekly] Blessings of the Prismatic Serpent</body>
   </string>
   <string>
     <id>1800544</id>
@@ -98297,7 +98392,7 @@
   <string>
     <id>1800554</id>
     <name>STR_QUEST_NAME_Q80686</name>
-    <body>[Event] Blessings of the Prismatic Serpent</body>
+    <body>[Event/Weekly] Blessings of the Prismatic Serpent</body>
   </string>
   <string>
     <id>1800555</id>
@@ -100023,7 +100118,7 @@
   <string>
     <id>1800897</id>
     <name>STR_QUEST_15042a_DESC</name>
-    <body>A flute that is rumored to have the power to summon an Empyrean Lord's butterfly. It can only be used at the Balaur Lord's Outer Garden in Cygnea.</body>
+    <body>A flute that is rumored to have the power to summon an Empyrean Lord's butterfly. It can only be used at the Dragon Lord's Outer Garden in Cygnea.</body>
     <message_type>4.8 LF5 필드 퀘스트 아이템</message_type>
   </string>
   <string>
@@ -100059,7 +100154,7 @@
   <string>
     <id>1800903</id>
     <name>STR_QUEST_15052a_DESC</name>
-    <body>The treasures retrieved from the Jotun Treasure Box in the Balaur Lord's Central Garden. None of the items look very valuable.</body>
+    <body>The treasures retrieved from the Jotun Treasure Box in the Dragon Lord's Central Garden. None of the items look very valuable.</body>
     <message_type>4.8 LF5 필드 퀘스트 아이템</message_type>
   </string>
   <string>
@@ -100229,7 +100324,7 @@
   <string>
     <id>1800934</id>
     <name>STR_QUEST_30723A_DESC</name>
-    <body>A music box once cherished by Balaur Lord Tiamat. The words 'A song by Sabat dedicated to the Balaur Lord' are inscribed on the box.\nA player of Level 65 or higher can double-click it to receive a quest.</body>
+    <body>A music box once cherished by Dragon Lord Tiamat. The words 'A song by Sabat dedicated to the Dragon Lord' are inscribed on the box.\nA player of Level 65 or higher can double-click it to receive a quest.</body>
   </string>
   <string>
     <id>1800935</id>
@@ -100809,7 +100904,7 @@
   <string>
     <id>1801050</id>
     <name>STR_QUEST_36530a_DESC</name>
-    <body>A black rose that is said to be found only in the Garden of the Balaur Lord.</body>
+    <body>A black rose that is said to be found only in the Garden of the Dragon Lord.</body>
   </string>
   <string>
     <id>1801051</id>
@@ -101009,7 +101104,7 @@
   <string>
     <id>1801090</id>
     <name>STR_QUEST_18954a_DESC</name>
-    <body>A part of 4th Balaur Lord Beritra's body. It is a symbol of valor and honor that you obtained from a fierce battle against the Balaur Lord.</body>
+    <body>A part of 4th Dragon Lord Beritra's body. It is a symbol of valor and honor that you obtained from a fierce battle against the Dragon Lord.</body>
   </string>
   <string>
     <id>1801091</id>
@@ -101019,7 +101114,7 @@
   <string>
     <id>1801092</id>
     <name>STR_QUEST_28954a_DESC</name>
-    <body>A part of 4th Balaur Lord Beritra's body. It is a symbol of valor and honor that you obtained from a fierce battle against the Balaur Lord.</body>
+    <body>A part of 4th Dragon Lord Beritra's body. It is a symbol of valor and honor that you obtained from a fierce battle against the Dragon Lord.</body>
   </string>
   <string>
     <id>1801093</id>
@@ -101914,7 +102009,7 @@
   <string>
     <id>1801271</id>
     <name>STR_QUEST_NAME_Q50049</name>
-    <body>[Event] Greater Katalium Snowball</body>
+    <body>[Event] High Grade Katalium Snowball</body>
   </string>
   <string>
     <id>1801272</id>
@@ -102574,7 +102669,7 @@
   <string>
     <id>1801403</id>
     <name>STR_ALL_TITLE_298</name>
-    <body>Season 3 Champion</body>
+    <body>Unbound</body>
   </string>
   <string>
     <id>1801404</id>
@@ -102599,7 +102694,7 @@
   <string>
     <id>1801408</id>
     <name>STR_ALL_TITLE_298_DESC</name>
-    <body>Season 3's Champion.</body>
+    <body>Surpassed the limitations of enchantment.</body>
   </string>
   <string>
     <id>1801409</id>
@@ -103014,12 +103109,12 @@
   <string>
     <id>1801491</id>
     <name>STR_QUEST_NAME_Q25313</name>
-    <body>Marchutan's Daevonian Spaulders</body>
+    <body>Marchutan's Daevanion Spaulders</body>
   </string>
   <string>
     <id>1801492</id>
     <name>STR_QUEST_NAME_Q25314</name>
-    <body>Marchutan's Daevonian Leggings</body>
+    <body>Marchutan's Daevanion Leggings</body>
   </string>
   <string>
     <id>1801493</id>
@@ -104329,22 +104424,22 @@
   <string>
     <id>1801780</id>
     <name>STR_QUEST_NAME_Q15463</name>
-    <body>[Urgent Order] Will of Recapturing KysisFortress</body>
+    <body>[Urgent Order] Will of Recapturing Kysis Fortress</body>
   </string>
   <string>
     <id>1801781</id>
     <name>STR_QUEST_NAME_Q15464</name>
-    <body>[Urgent Order] Protect the Magos Bind Point</body>
+    <body>[Urgent Order/Daily] Protect Redemption Landing</body>
   </string>
   <string>
     <id>1801782</id>
     <name>STR_QUEST_NAME_Q15465</name>
-    <body>[Urgent Order] Attack the Toskanum Bind Point</body>
+    <body>[Urgent Order/Daily] Attack on Harbinger's Landing</body>
   </string>
   <string>
     <id>1801783</id>
     <name>STR_QUEST_NAME_Q15466</name>
-    <body>[Urgent Order] Protect the Abyss Upper Layer</body>
+    <body>[Urgent Order] Protect the Upper Abyss</body>
   </string>
   <string>
     <id>1801784</id>
@@ -104389,12 +104484,12 @@
   <string>
     <id>1801792</id>
     <name>STR_QUEST_NAME_Q25409</name>
-    <body>[League] Handle Frozen Armor Magical Weapon Deplonax</body>
+    <body>[League] Defeat Terracrusher</body>
   </string>
   <string>
     <id>1801793</id>
     <name>STR_QUEST_NAME_Q25410</name>
-    <body>[League] Handle Frozen Armor Magical Weapon Deplodox</body>
+    <body>[League] Defeat Wurg the Glacier</body>
   </string>
   <string>
     <id>1801794</id>
@@ -104664,7 +104759,7 @@
   <string>
     <id>1801847</id>
     <name>STR_QUEST_NAME_Q25464</name>
-    <body>[Urgent Orders] Protect Harbinger's Landing</body>
+    <body>[Urgent Orders/Daily] Protect Harbinger's Landing</body>
   </string>
   <string>
     <id>1801848</id>
@@ -105032,6 +105127,306 @@
     <body>The heart of Triroan is still warm.</body>
   </string>
   <string>
+    <id>1801931</id>
+    <name>STR_QUEST_NAME_Q15471</name>
+    <body>[Landing Level 2/Weekly] Setting up the Outposts</body>
+  </string>
+  <string>
+    <id>1801932</id>
+    <name>STR_QUEST_NAME_Q15472</name>
+    <body>[Landing Level 2/Weekly] Scaling up for the Outposts</body>
+  </string>
+  <string>
+    <id>1801933</id>
+    <name>STR_QUEST_NAME_Q15473</name>
+    <body>[Landing Level 2/Weekly] Artifact Base Foundations</body>
+  </string>
+  <string>
+    <id>1801934</id>
+    <name>STR_QUEST_NAME_Q15474</name>
+    <body>[Landing Level 2/Weekly] Ruins of Roah Occupation</body>
+  </string>
+  <string>
+    <id>1801935</id>
+    <name>STR_QUEST_NAME_Q15475</name>
+    <body>[Landing Level 2/Weekly] Occupiers Groundwork</body>
+  </string>
+  <string>
+    <id>1801936</id>
+    <name>STR_QUEST_NAME_Q15476</name>
+    <body>[Landing Level 4/Weekly] Enhance Base Accessibility</body>
+  </string>
+  <string>
+    <id>1801937</id>
+    <name>STR_QUEST_NAME_Q15477</name>
+    <body>[Landing Level 4/Weekly] Improve Base Accessibility</body>
+  </string>
+  <string>
+    <id>1801938</id>
+    <name>STR_QUEST_NAME_Q15478</name>
+    <body>[Landing Level 6/Weekly] Halting the Cold</body>
+  </string>
+  <string>
+    <id>1801939</id>
+    <name>STR_QUEST_NAME_Q15479</name>
+    <body>[Landing Level 6/Weekly] Crystalline Hunt</body>
+  </string>
+  <string>
+    <id>1801940</id>
+    <name>STR_QUEST_NAME_Q15480</name>
+    <body>[Landing Level 8/Weekly] Clearing a Path</body>
+  </string>
+  <string>
+    <id>1801941</id>
+    <name>STR_QUEST_NAME_Q25471</name>
+    <body>[Landing Level 2/Weekly] Outpost Footholds</body>
+  </string>
+  <string>
+    <id>1801942</id>
+    <name>STR_QUEST_NAME_Q25472</name>
+    <body>[Landing Level 2/Weekly] Taking the Outposts</body>
+  </string>
+  <string>
+    <id>1801943</id>
+    <name>STR_QUEST_NAME_Q25473</name>
+    <body>[Landing Level 2/Weekly] Artifact Occupation</body>
+  </string>
+  <string>
+    <id>1801944</id>
+    <name>STR_QUEST_NAME_Q25474</name>
+    <body>[Landing Level 2/Weekly] Ruins of Roah Occupation</body>
+  </string>
+  <string>
+    <id>1801945</id>
+    <name>STR_QUEST_NAME_Q25475</name>
+    <body>[Landing Level 2/Weekly] Gearing Up For Occupation</body>
+  </string>
+  <string>
+    <id>1801946</id>
+    <name>STR_QUEST_NAME_Q25476</name>
+    <body>[Landing Level 4/Weekly] Boost Base Accessibility</body>
+  </string>
+  <string>
+    <id>1801947</id>
+    <name>STR_QUEST_NAME_Q25477</name>
+    <body>[Landing Level 4/Weekly] Expand Base Accessibility</body>
+  </string>
+  <string>
+    <id>1801948</id>
+    <name>STR_QUEST_NAME_Q25478</name>
+    <body>[Landing Level 6/Weekly] Thawing the Abyss</body>
+  </string>
+  <string>
+    <id>1801949</id>
+    <name>STR_QUEST_NAME_Q25479</name>
+    <body>[Landing Level 6/Weekly] Shattering the Cold</body>
+  </string>
+  <string>
+    <id>1801950</id>
+    <name>STR_QUEST_NAME_Q25480</name>
+    <body>[Landing Level 8/Weekly] Clearing the Way</body>
+  </string>
+  <string>
+    <id>1801951</id>
+    <name>STR_QUEST_quest_15478A</name>
+    <body>Aether Heatometer</body>
+  </string>
+  <string>
+    <id>1801952</id>
+    <name>STR_QUEST_quest_15478A_DESC</name>
+    <body>A lamp with a soft magical glow. It emits warm heat that prevents you from freezing to death. Nifty!</body>
+  </string>
+  <string>
+    <id>1801953</id>
+    <name>STR_QUEST_quest_15478B</name>
+    <body>Solid Frost Core</body>
+  </string>
+  <string>
+    <id>1801954</id>
+    <name>STR_QUEST_quest_15478B_DESC</name>
+    <body>A crystal core collected in [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q15478]. Be careful not to receive cold damage.</body>
+  </string>
+  <string>
+    <id>1801955</id>
+    <name>STR_QUEST_quest_15479A</name>
+    <body>Wizard's Extractor</body>
+  </string>
+  <string>
+    <id>1801956</id>
+    <name>STR_QUEST_quest_15479A_DESC</name>
+    <body>An axe that is used to destroy ice that has been formed by magic. It also helps you break ice crystal cores condensed with magic.</body>
+  </string>
+  <string>
+    <id>1801957</id>
+    <name>STR_QUEST_quest_15479B</name>
+    <body>Solid Ice Core</body>
+  </string>
+  <string>
+    <id>1801958</id>
+    <name>STR_QUEST_quest_15479B_DESC</name>
+    <body>A crystal core collected in [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q15479]. Be careful not to receive cold damage.</body>
+  </string>
+  <string>
+    <id>1801959</id>
+    <name>STR_QUEST_quest_25478A</name>
+    <body>Chemical Heatometer</body>
+  </string>
+  <string>
+    <id>1801960</id>
+    <name>STR_QUEST_quest_25478A_DESC</name>
+    <body>A lamp with a soft chemical glow. It emits warm heat that prevents you from freezing to death. Nifty!</body>
+  </string>
+  <string>
+    <id>1801961</id>
+    <name>STR_QUEST_quest_25478B</name>
+    <body>Hard Frost Core</body>
+  </string>
+  <string>
+    <id>1801962</id>
+    <name>STR_QUEST_quest_25478B_DESC</name>
+    <body>A crystal core collected in [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q25478]. Be careful not to receive cold damage.</body>
+  </string>
+  <string>
+    <id>1801963</id>
+    <name>STR_QUEST_quest_25479A</name>
+    <body>Alchemist's Extractor</body>
+  </string>
+  <string>
+    <id>1801964</id>
+    <name>STR_QUEST_quest_25479A_DESC</name>
+    <body>An axe that is used to destroy ice that has been formed by magic. It also helps you break ice crystal cores condensed with magic.</body>
+  </string>
+  <string>
+    <id>1801965</id>
+    <name>STR_QUEST_quest_25479B</name>
+    <body>Hard Ice Core</body>
+  </string>
+  <string>
+    <id>1801966</id>
+    <name>STR_QUEST_quest_25479B_DESC</name>
+    <body>A crystal core collected in [%dic:STR_DIC_OBJ_Ab1_FOBJ_IceSprout_Q25479]. Be careful not to receive cold damage.</body>
+  </string>
+  <string>
+    <id>1801968</id>
+    <name>STR_QUEST_18745a</name>
+    <body>Stolen Danuar Valuables</body>
+  </string>
+  <string>
+    <id>1801969</id>
+    <name>STR_QUEST_28745a</name>
+    <body>Stolen Danuar Artifact</body>
+  </string>
+  <string>
+    <id>1801970</id>
+    <name>STR_QUEST_16977a</name>
+    <body>Seized Danuar Valuables</body>
+  </string>
+  <string>
+    <id>1801971</id>
+    <name>STR_QUEST_26977a</name>
+    <body>Seized Danuar Artifact</body>
+  </string>
+  <string>
+    <id>1801972</id>
+    <name>STR_QUEST_16994a</name>
+    <body>Robbed Danuar Valuables</body>
+  </string>
+  <string>
+    <id>1801973</id>
+    <name>STR_QUEST_26994a</name>
+    <body>Robbed Danuar Artifact</body>
+  </string>
+  <string>
+    <id>1801974</id>
+    <name>STR_QUEST_18745a_DESC</name>
+    <body>Danuar Valuables stolen by the Beritra's forces.</body>
+  </string>
+  <string>
+    <id>1801975</id>
+    <name>STR_QUEST_28745a_DESC</name>
+    <body>A Danuar Artifact stolen by the Beritra's forces.</body>
+  </string>
+  <string>
+    <id>1801976</id>
+    <name>STR_QUEST_16977a_DESC</name>
+    <body>Danuar Valuables seized by the Beritra's forces.</body>
+  </string>
+  <string>
+    <id>1801977</id>
+    <name>STR_QUEST_26977a_DESC</name>
+    <body>A Danuar Artifact seized by the Beritra's forces.</body>
+  </string>
+  <string>
+    <id>1801978</id>
+    <name>STR_QUEST_16994a_DESC</name>
+    <body>Danuar Valuables robbed by the Beritra's forces.</body>
+  </string>
+  <string>
+    <id>1801979</id>
+    <name>STR_QUEST_26994a_DESC</name>
+    <body>A Danuar Artifact robbed by the Beritra's forces.</body>
+  </string>
+  <string>
+    <id>1801980</id>
+    <name>STR_QUEST_NAME_Q18745</name>
+    <body>[Instanced Dungeon] Steal from the Stealers</body>
+  </string>
+  <string>
+    <id>1801981</id>
+    <name>STR_QUEST_NAME_Q28745</name>
+    <body>[Instanced Dungeon] Temporarily Stolen</body>
+  </string>
+  <string>
+    <id>1801982</id>
+    <name>STR_QUEST_NAME_Q16977</name>
+    <body>[Instanced Dungeon] Seized Goods</body>
+  </string>
+  <string>
+    <id>1801983</id>
+    <name>STR_QUEST_NAME_Q26977</name>
+    <body>[Instanced Dungeon] Seize and Seize Again</body>
+  </string>
+  <string>
+    <id>1801984</id>
+    <name>STR_QUEST_NAME_Q16994</name>
+    <body>[Instanced Dungeon] Robbers and Hoods</body>
+  </string>
+  <string>
+    <id>1801985</id>
+    <name>STR_QUEST_NAME_Q26994</name>
+    <body>[Instanced Dungeon] Robbing Riches</body>
+  </string>
+  <string>
+    <id>1802001</id>
+    <name>STR_QUEST_15481A</name>
+    <body>Redeemer's Commendation</body>
+  </string>
+  <string>
+    <id>1802002</id>
+    <name>STR_QUEST_15481A_DESC</name>
+    <body>This is a commendation of service from the Redeemer's Wing Legion. Collect 10 letters and visit [%dic:STR_DIC_N_Ab1_Marqudalen_E] through [%dic:STR_DIC_N_Ab1_Lagrangia_E] located in Redemption Landing for a reward.</body>
+  </string>
+  <string>
+    <id>1802003</id>
+    <name>STR_QUEST_25481A</name>
+    <body>Herald's Commendation</body>
+  </string>
+  <string>
+    <id>1802004</id>
+    <name>STR_QUEST_25481A_DESC</name>
+    <body>This is a commendation of service from the Omen's Herald Legion. Collect 10 letters and visit [%dic:STR_DIC_N_Ab1_Kroaze_E] through [%dic:STR_DIC_N_Ab1_Labori_E] located in Harbinger's Landing for a reward.</body>
+  </string>
+  <string>
+    <id>1802005</id>
+    <name>STR_QUEST_NAME_Q15481</name>
+    <body>Redeemer's Wing Legion Gift</body>
+  </string>
+  <string>
+    <id>1802006</id>
+    <name>STR_QUEST_NAME_Q25481</name>
+    <body>Omen's Herald Legion Gift</body>
+  </string>
+  <string>
     <id>1802007</id>
     <name>STR_ALL_TITLE_303</name>
     <body>New Rotund Friend</body>
@@ -105052,19 +105447,94 @@
     <body>Returning user receiving Rotund Ayas' support.</body>
   </string>
   <string>
+    <id>1802012</id>
+    <name>STR_QUEST_NAME_Q18980</name>
+    <body>[Urgent Order] General Miltar Rescue Operation</body>
+  </string>
+  <string>
+    <id>1802013</id>
+    <name>STR_QUEST_NAME_Q18981</name>
+    <body>[Urgent Order] General Kupiaro Rescue Operation</body>
+  </string>
+  <string>
+    <id>1802014</id>
+    <name>STR_QUEST_NAME_Q18982</name>
+    <body>[Urgent Order] General Lanstri Rescue Operation</body>
+  </string>
+  <string>
+    <id>1802015</id>
+    <name>STR_QUEST_NAME_Q18983</name>
+    <body>[Urgent Order] General Magken Assassination Order</body>
+  </string>
+  <string>
+    <id>1802016</id>
+    <name>STR_QUEST_NAME_Q18984</name>
+    <body>[Urgent Order] General Hark Assassination Order</body>
+  </string>
+  <string>
+    <id>1802017</id>
+    <name>STR_QUEST_NAME_Q18985</name>
+    <body>[Urgent Order] General Tombolk Assassination Order</body>
+  </string>
+  <string>
+    <id>1802018</id>
+    <name>STR_QUEST_NAME_Q28980</name>
+    <body>[Urgent Order] General Magken Rescue Operation</body>
+  </string>
+  <string>
+    <id>1802019</id>
+    <name>STR_QUEST_NAME_Q28981</name>
+    <body>[Urgent Order] General Hark Rescue Operation</body>
+  </string>
+  <string>
+    <id>1802020</id>
+    <name>STR_QUEST_NAME_Q28982</name>
+    <body>[Urgent Order] General Tombolk Rescue Operation</body>
+  </string>
+  <string>
+    <id>1802021</id>
+    <name>STR_QUEST_NAME_Q28983</name>
+    <body>[Urgent Order] General Miltar Assassination Order</body>
+  </string>
+  <string>
+    <id>1802022</id>
+    <name>STR_QUEST_NAME_Q28984</name>
+    <body>[Urgent Order] General Kupiaro Assassination Order</body>
+  </string>
+  <string>
+    <id>1802023</id>
+    <name>STR_QUEST_NAME_Q28985</name>
+    <body>[Urgent Order] General Lanstri Assassination Order</body>
+  </string>
+  <string>
+    <id>1802068</id>
+    <name>STR_QUEST_NAME_Q80833</name>
+    <body>Playing Your Hand</body>
+  </string>
+  <string>
+    <id>1802069</id>
+    <name>STR_EVENTS_ALL_TITLE_305</name>
+    <body>The Master of Masters in Aion</body>
+  </string>
+  <string>
+    <id>1802070</id>
+    <name>STR_EVENTS_ALL_TITLE_305_DESC</name>
+    <body>It refers to the Daeva who proved to be the master of all masters in Aion.</body>
+  </string>
+  <string>
     <id>1802342</id>
     <name>STR_QUEST_NAME_Q80834</name>
-    <body>[Prestige] Prestige Badge</body>
+    <body>[Event] Prestige Badge</body>
   </string>
   <string>
     <id>1802343</id>
     <name>STR_QUEST_NAME_Q80835</name>
-    <body>[Event] Badge of Prestige</body>
+    <body>[Event] Prestige Badge</body>
   </string>
   <string>
     <id>1802344</id>
     <name>STR_QUEST_NAME_Q80836</name>
-    <body>[Prestige] New Face</body>
+    <body>[Event] New Look</body>
   </string>
   <string>
     <id>1802345</id>

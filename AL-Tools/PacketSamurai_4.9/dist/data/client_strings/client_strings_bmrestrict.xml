@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/07/13 10:38:45">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1700000</id>
     <name>STR_BM_MSG_TEST</name>
@@ -283,14 +283,14 @@
   <string>
     <id>1700040</id>
     <name>STR_F2P_MSG_NOTICE_PACK_EXPIRE_TIME</name>
-    <body>The %1 effect will end in %DURATIONTIME0.</body>
+    <body>The %1 effect will be over in %DURATIONDAY0.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1700041</id>
     <name>STR_F2P_MSG_WARNING_PACK_EXPIRE_TIME</name>
-    <body>The %1 effect will be over in %DURATIONTIME0. You may be unable to use some buffs or game functions. To remove this restriction, please visit the [%shoplink].</body>
+    <body>The %1 effect will be over in %DURATIONDAY0. You may not be unable to use boosting effects or certain game functions anymore. To enjoy the game without limitations, please buy the required goods at the web shop. [%shoplink]</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>

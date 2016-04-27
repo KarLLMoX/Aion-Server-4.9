@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/09/09 11:55:09">
+<strings generated_time="2016/01/11 16:55:14">
   <string>
     <id>40000</id>
     <name>STR_SERVER_STRING_START____</name>
@@ -10539,32 +10539,38 @@ You can contact us any time on our toll-free customer service line, (866) 367-95
   <string>
     <id>901695</id>
     <name>STR_ACCUSE_UPGRADE_1_LEVEL</name>
-    <body>You have been placed under Lv. 1 Probation due to reports regarding your automated hunting. Continued reports against you will result in restrictions in your in-game items and XP.&lt;br&gt;Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.&lt;br&gt;Enter '%0' into the chat window after checking the status.</body>
+    <body>You entered a Phase 1 Restriction state because the auto hunting reports have accumulated. The Phase 1 Restriction does not harm your gameplay, but more reports will increase the level of restriction, which will affect your EXP and item acquisition rate.&lt;br&gt;
+You can use the '/Restriction' command to see your restriction phase.&lt;br&gt;
+Enter '&lt;font color="ff0000"&gt;%0&lt;/font&gt;' in the input window after you check the message.</body>
     <display_type>8</display_type>
   </string>
   <string>
     <id>901696</id>
     <name>STR_ACCUSE_UPGRADE_2_LEVEL</name>
-    <body>You have been placed under Lv. 2 Probation due to reports regarding your automated hunting. You now have limited XP, Kinah, AP, gatherable, and extracted item acquisition.&lt;br&gt;Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.&lt;br&gt;Enter '%0' into the chat window after checking the status.</body>
+    <body>You entered a Phase 2 Restriction state because the auto hunting reports have accumulated. The Phase 2 Restriction lowers your EXP, Kinah, and Abyss Point acquisition rates, and gathering and extraction success rates. If the restriction phase levels up with more reports, your gameplay will become increasingly limited.&lt;br&gt;
+You can use the '/Restriction' command to see the restriction phase. &lt;br&gt;
+Enter '&lt;font color="ff0000"&gt;%0&lt;/font&gt;' in the input window after you check the message.</body>
     <display_type>8</display_type>
   </string>
   <string>
     <id>901697</id>
     <name>STR_ACCUSE_UPGRADE_3_LEVEL</name>
-    <body>You have been placed under Lv. 3 Probation due to reports regarding your automated hunting. You now have severely limited XP, Kinah, AP, gatherable, and extracted item acquisition, and can no longer acquire loot.  You can no longer join groups or alliances.&lt;br&gt;Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.&lt;br&gt;Enter '%0' into the chat window after checking the status.</body>
+    <body>You entered a Phase 3 Restriction state due to the accumulation of auto hunting reports. While you are in the Phase 3 Restriction state, you cannot acquire any loot and your EXP, Kinah, and Abyss Point acquisition rates, along with your gathering and success rates, are lowered even further. You are also banned from joining a Group or Force. You will face even greater restrictions should the reports continue to accumulate, increasing your Restriction Phase state even higher.&lt;br&gt;You can use the '/Restriction' command to see your current Restriction Phase.&lt;br&gt;Enter '&lt;font color="ff0000"&gt;%0&lt;/font&gt;' in the input window after you have checked the message.</body>
     <display_type>8</display_type>
   </string>
   <string>
     <id>901698</id>
     <name>STR_ACCUSE_UPGRADE_4_LEVEL</name>
-    <body>You have been placed under Lv. 4 Probation due to reports regarding your automated hunting. You can no longer acquire XP, Kinah, AP, gatherables, or extracted items, and can no longer join groups or alliance.&lt;br&gt;Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.&lt;br&gt;
-Enter '%0' into the chat window after checking the status.</body>
+    <body>You entered a Phase 4 Restriction state due to the accumulation of auto hunting reports. While you are in the Phase 4 Restriction state, you cannot acquire any loot, EXP, Kinah, or Abyss Points, and are unable to gather or extract items. You are also banned from joining a Group or Force.&lt;br&gt;
+You can use the '/Restriction' command to see your current Restriction Phase.&lt;br&gt;
+Enter '&lt;font color="ff0000"&gt;%0&lt;/font&gt;' in the input window after you have checked the message.</body>
     <display_type>8</display_type>
   </string>
   <string>
     <id>901699</id>
     <name>STR_ACCUSE_DEGRADE_LEVEL</name>
-    <body>Your probation level has dropped to Phase %num0 due to recorded hours of fair play.&lt;br&gt;Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.</body>
+    <body>Your restriction phase has been lowered to %num0 as you played fair for a certain period of time. Please continue to play fair in the future.&lt;br&gt;
+You can use the '/Restriction' command to see your restriction phase.</body>
     <display_type>4</display_type>
   </string>
   <string>
@@ -10580,7 +10586,8 @@ Enter '%0' into the chat window after checking the status.</body>
   <string>
     <id>901702</id>
     <name>STR_ACCUSE_DEGRADE_NORMAL_LEVEL</name>
-    <body>Your probation has been dropped due to recorded hours of fair play.&lt;br&gt;Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.</body>
+    <body>You returned to a normal state because you played fair for a certain period of time. Please continue to play fair in the future.&lt;br&gt;
+You can use the '/Restriction' command to see your restriction phase.</body>
     <display_type>4</display_type>
   </string>
   <string>
@@ -17979,7 +17986,7 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>903626</id>
     <name>STR_F2P_ABYSS_REWARD_MAIL_SHOP_BODY_ALL</name>
-    <body />
+    <body>0</body>
   </string>
   <string>
     <id>903627</id>
@@ -19826,7 +19833,7 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>903939</id>
     <name>STR_F2P_ABYSS_REWARD_MAIL_OCCUPY_BODY_ALL</name>
-    <body />
+    <body>0</body>
   </string>
   <string>
     <id>903940</id>
@@ -19851,7 +19858,7 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>903944</id>
     <name>STR_F2P_FIELDBOSS_REWARD_MAIL_OCCUPY_BODY_LIGHT</name>
-    <body />
+    <body>0</body>
   </string>
   <string>
     <id>903945</id>
@@ -19876,7 +19883,7 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>903949</id>
     <name>STR_F2P_FIELDBOSS_REWARD_MAIL_OCCUPY_BODY_DARK</name>
-    <body />
+    <body>0</body>
   </string>
   <string>
     <id>903950</id>
@@ -19901,7 +19908,7 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>903954</id>
     <name>STR_F2P_ABYSS_REWARD_MAIL_DEFENSE_BODY_ALL</name>
-    <body />
+    <body>0</body>
   </string>
   <string>
     <id>903955</id>
@@ -22285,9 +22292,9 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>904404</id>
     <name>STR_INVADE_DIRECT_POTAL_RESURRECT</name>
-    <body>&lt;p align="left"&gt;Press OK to resurrect immediately at the battlefield starting point.&lt;/p&gt;
-&lt;p align="left"&gt;You may be resurrected here within %0 minutes.&lt;/p&gt;
-&lt;p align="left"&gt;If the Dimensional Vortex closes, you will resurrect at your last bind point.&lt;/p&gt;
+    <body>&lt;p align="left"&gt;Press the OK button and you will resurrect immediately at the Time and Space Battle Starting Point.&lt;/p&gt;
+&lt;p align="left"&gt;You can resurrect someone else on the spot within %0 minutes.&lt;/p&gt;
+&lt;p align="left"&gt;If the Time Space is closed, you can resurrect in the resurrection bind point.&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
 &lt;p align="left"&gt;Resurrection Wait Time: 10 sec (%1 sec remaining)&lt;/p&gt;</body>
   </string>
@@ -26661,62 +26668,62 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>905289</id>
     <name>STR_2015_ATTEND_MONTH_01_TITLE_01</name>
-    <body>January 2015</body>
+    <body>42005</body>
   </string>
   <string>
     <id>905290</id>
     <name>STR_2015_ATTEND_MONTH_02_TITLE_01</name>
-    <body>February 2015</body>
+    <body>42036</body>
   </string>
   <string>
     <id>905291</id>
     <name>STR_2015_ATTEND_MONTH_03_TITLE_01</name>
-    <body>March 2015</body>
+    <body>42064</body>
   </string>
   <string>
     <id>905292</id>
     <name>STR_2015_ATTEND_MONTH_04_TITLE_01</name>
-    <body>April 2015</body>
+    <body>42095</body>
   </string>
   <string>
     <id>905293</id>
     <name>STR_2015_ATTEND_MONTH_05_TITLE_01</name>
-    <body>May 2015</body>
+    <body>42125</body>
   </string>
   <string>
     <id>905294</id>
     <name>STR_2015_ATTEND_MONTH_06_TITLE_01</name>
-    <body>June 2015</body>
+    <body>42156</body>
   </string>
   <string>
     <id>905295</id>
     <name>STR_2015_ATTEND_MONTH_07_TITLE_01</name>
-    <body>July 2015</body>
+    <body>42186</body>
   </string>
   <string>
     <id>905296</id>
     <name>STR_2015_ATTEND_MONTH_08_TITLE_01</name>
-    <body>August 2015</body>
+    <body>42217</body>
   </string>
   <string>
     <id>905297</id>
     <name>STR_2015_ATTEND_MONTH_09_TITLE_01</name>
-    <body>September 2015</body>
+    <body>42248</body>
   </string>
   <string>
     <id>905298</id>
     <name>STR_2015_ATTEND_MONTH_10_TITLE_01</name>
-    <body>October 2015</body>
+    <body>42278</body>
   </string>
   <string>
     <id>905299</id>
     <name>STR_2015_ATTEND_MONTH_11_TITLE_01</name>
-    <body>November 2015</body>
+    <body>42309</body>
   </string>
   <string>
     <id>905300</id>
     <name>STR_2015_ATTEND_MONTH_12_TITLE_01</name>
-    <body>December 2015</body>
+    <body>42339</body>
   </string>
   <string>
     <id>905301</id>
@@ -27788,62 +27795,62 @@ You can use the '/RestRecommendation' command to check your Rest Recommendation 
   <string>
     <id>905514</id>
     <name>STR_2017_ATTEND_MONTH_01_TITLE_01</name>
-    <body>January</body>
+    <body>January 2017</body>
   </string>
   <string>
     <id>905515</id>
     <name>STR_2017_ATTEND_MONTH_02_TITLE_01</name>
-    <body>February</body>
+    <body>February 2017</body>
   </string>
   <string>
     <id>905516</id>
     <name>STR_2017_ATTEND_MONTH_03_TITLE_01</name>
-    <body>42795</body>
+    <body>March 2017</body>
   </string>
   <string>
     <id>905517</id>
     <name>STR_2017_ATTEND_MONTH_04_TITLE_01</name>
-    <body>42826</body>
+    <body>April 2017</body>
   </string>
   <string>
     <id>905518</id>
     <name>STR_2017_ATTEND_MONTH_05_TITLE_01</name>
-    <body>42856</body>
+    <body>May 2017</body>
   </string>
   <string>
     <id>905519</id>
     <name>STR_2017_ATTEND_MONTH_06_TITLE_01</name>
-    <body>42887</body>
+    <body>June 2017</body>
   </string>
   <string>
     <id>905520</id>
     <name>STR_2017_ATTEND_MONTH_07_TITLE_01</name>
-    <body>42917</body>
+    <body>July 2017</body>
   </string>
   <string>
     <id>905521</id>
     <name>STR_2017_ATTEND_MONTH_08_TITLE_01</name>
-    <body>42948</body>
+    <body>August 2017</body>
   </string>
   <string>
     <id>905522</id>
     <name>STR_2017_ATTEND_MONTH_09_TITLE_01</name>
-    <body>42979</body>
+    <body>September 2017</body>
   </string>
   <string>
     <id>905523</id>
     <name>STR_2017_ATTEND_MONTH_10_TITLE_01</name>
-    <body>43009</body>
+    <body>October 2017</body>
   </string>
   <string>
     <id>905524</id>
     <name>STR_2017_ATTEND_MONTH_11_TITLE_01</name>
-    <body>43040</body>
+    <body>November 2017</body>
   </string>
   <string>
     <id>905525</id>
     <name>STR_2017_ATTEND_MONTH_12_TITLE_01</name>
-    <body>43070</body>
+    <body>December 2017</body>
   </string>
   <string>
     <id>905526</id>
@@ -31067,9 +31074,8 @@ Consume %qina0 to increase the number of entries for %1?
   <string>
     <id>906153</id>
     <name>STR_INDUN_COOLTIME_RESET_CONFIRM_ITEM</name>
-    <body>Entry limit exceeded.
-Consume %1 %0 to increase bonus entries available for %2?
-(Increased Bonus Entries by %num3 times/%num4 times)</body>
+    <body>You've exceeded the number of times you can enter.
+Do you want to consume %1 %0 to increase the number of times %2 can enter?</body>
   </string>
   <string>
     <id>906154</id>
@@ -31566,6 +31572,97 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
     <body>Increases flight speed and movement speed by 3% and 2%, respectively.</body>
   </string>
   <string>
+    <id>906251</id>
+    <name>STR_ABYSS_OP_LEVEL</name>
+    <body>Lv. %0</body>
+  </string>
+  <string>
+    <id>906252</id>
+    <name>STR_ABYSS_OP_LIGHT</name>
+    <body>Elyos</body>
+  </string>
+  <string>
+    <id>906253</id>
+    <name>STR_ABYSS_OP_DARK</name>
+    <body>Asmodians</body>
+  </string>
+  <string>
+    <id>906254</id>
+    <name>STR_ABYSS_OP_BENEFIT</name>
+    <body>Landing Reinforcement [Level %0]</body>
+  </string>
+  <string>
+    <id>906255</id>
+    <name>STR_ABYSS_OP_BENEFIT_1</name>
+    <body>&lt;p&gt;Kysis Fortress Infiltration Corridor&lt;/p&gt;
+&lt;p&gt;[Elyos] Cygnea Corridor&lt;/p&gt;
+&lt;p&gt;[Asmodian] Enshar Corridor&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906256</id>
+    <name>STR_ABYSS_OP_BENEFIT_2</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 1 Benefits&lt;/font&gt;
+&lt;p&gt;Additional Quest NPCs Available&lt;/p&gt;
+&lt;p&gt;Consumable Items Contributor NPCs available&lt;/p&gt;
+&lt;p&gt;Krotan Fortress Infiltration Corridor&lt;/p&gt;
+&lt;p&gt;Miren Fortress Infiltration Corridor&lt;/p&gt;
+&lt;p&gt;[Elyos] Sanctum Corridor&lt;/p&gt;
+&lt;p&gt;[Asmodian] Pandaemonium Corridor&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906257</id>
+    <name>STR_ABYSS_OP_BENEFIT_3</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 2 Benefits&lt;/font&gt;
+&lt;p&gt;Well of Winds Available&lt;/p&gt;
+&lt;p&gt;Crafting, Consumable Items, and Coin Merchants&lt;/p&gt;
+&lt;p&gt;[Elyos] Inggison Corridor&lt;/p&gt;
+&lt;p&gt;[Asmodian] Gelkmaros Corridor&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906258</id>
+    <name>STR_ABYSS_OP_BENEFIT_4</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 3 Benefits&lt;/font&gt;
+&lt;p&gt;Well of Renewal Available&lt;/p&gt;
+&lt;p&gt;Additional Base Defenses&lt;/p&gt;
+&lt;p&gt;Ancient Relics Supervisor&lt;/p&gt;
+&lt;p&gt;Levinshor Corridor&lt;/p&gt;
+&lt;p&gt;Kaldor Corridor&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906259</id>
+    <name>STR_ABYSS_OP_BENEFIT_5</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 4 Benefits&lt;/font&gt;
+&lt;p&gt;Blood Medal Consumables Officer&lt;/p&gt;
+&lt;p&gt;Well of Strength Available&lt;/p&gt;
+&lt;p&gt;Illuminary Obelisk Entrance Officer&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906260</id>
+    <name>STR_ABYSS_OP_BENEFIT_6</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 5 Benefits&lt;/font&gt;
+&lt;p&gt;Additional Base Defenses&lt;/p&gt;
+&lt;p&gt;Hidden Barracks Entrances&lt;/p&gt;
+&lt;p&gt;Danuar Reliquary Entrance Officer&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906261</id>
+    <name>STR_ABYSS_OP_BENEFIT_7</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 6 Benefits&lt;/font&gt;
+&lt;p&gt;Conditioning Officer&lt;/p&gt;
+&lt;p&gt;Infinity Shard Entrance Officer&lt;/p&gt;
+&lt;p&gt;4 Additional Entries to Illuminary Obelisk and Infernal Illuminary Obelisk&lt;/p&gt;
+&lt;p&gt;4 Additional Entries to Danuar Reliquary and Infernal Danuar Reliquary&lt;/p&gt;</body>
+  </string>
+  <string>
+    <id>906262</id>
+    <name>STR_ABYSS_OP_BENEFIT_8</name>
+    <body>&lt;font color="ff0000"&gt;All Landing Level 7 Benefits&lt;/font&gt;
+&lt;p&gt;Additional Base Defenses&lt;/p&gt;
+&lt;p&gt;Augmenting Officer&lt;/p&gt;
+&lt;p&gt;The Eternal Bastion Entrance Officer appears&lt;/p&gt;2 Additional Entries to Infinity Shard&lt;/p&gt;
+&lt;p&gt;2 Additional Entries to The Eternal Bastion&lt;/p&gt;</body>
+  </string>
+  <string>
     <id>906263</id>
     <name>STR_EVENT_MSGBOX_TITLE100</name>
     <body>Expired item.</body>
@@ -31608,7 +31705,7 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
   <string>
     <id>906271</id>
     <name>STR_EVENT_MSGBOX_TITLE108</name>
-    <body>Shugo Luck Game Notice</body>
+    <body>Upgrade Arcade</body>
   </string>
   <string>
     <id>906272</id>
@@ -31674,6 +31771,16 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
     <id>906284</id>
     <name>STR_RINGMENU_REGISTRATION</name>
     <body>Register</body>
+  </string>
+  <string>
+    <id>906285</id>
+    <name>STR_TOOLTIP_ABYSS_BUILDUP_OP_LIGHT</name>
+    <body>Redemption Landing Reinforcement Level</body>
+  </string>
+  <string>
+    <id>906286</id>
+    <name>STR_TOOLTIP_ABYSS_BUILDUP_OP_DARK</name>
+    <body>Harbinger's Landing Reinforcement Level</body>
   </string>
   <string>
     <id>906287</id>
@@ -31748,7 +31855,7 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
   <string>
     <id>906300</id>
     <name>STR_GACHA_EXPLANATION_GUAGE</name>
-    <body>&lt;p&gt;&lt;font color="FFCC00"&gt;8. Lucky Shugo Present&lt;/font&gt;&lt;/p&gt;&lt;p&gt;This is the present given by Lucky Shugo for playing the Shugo Luck Game. If you accumulate Fever Time 4 times, you can randomly obtain one of the items inside the highest-grade box.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;</body>
+    <body>&lt;p&gt;&lt;font color="FFCC00"&gt;Frenzy's Gift&lt;/font&gt;&lt;/p&gt;&lt;p&gt;Whenever you go into Frenzy mode, you'll fill up one of the four stars at the top of the Arcade. When you fill up all four, you'll automatically receive a random item from the highest possible reward box!&lt;/p&gt;&lt;p&gt; &lt;/p&gt;</body>
   </string>
   <string>
     <id>906301</id>
@@ -31758,8 +31865,8 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
   <string>
     <id>906302</id>
     <name>STR_POPUP_GACHA_USER_WEBSHOPGO</name>
-    <body>&lt;p&gt;You need more Lucky Coins. &lt;/p&gt;
-&lt;p&gt;Charge Lucky Coins and be the lucky one!&lt;/p&gt;</body>
+    <body>&lt;p&gt;You need more Arcade Tokens.&lt;/p&gt;
+&lt;p&gt;Upgrade the weapon with Arcade Tokens!&lt;/p&gt;</body>
   </string>
   <string>
     <id>906303</id>
@@ -31797,10 +31904,15 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
     <body>Currently, there is no Gold Pack in use.\n Use the Gold Pack for more power and greater convenience.\n You may find the Gold Pack in the In-game Web Shop.</body>
   </string>
   <string>
+    <id>906310</id>
+    <name>STR_TOOLTIP_COOLTIME_EXTRA_COUNT</name>
+    <body>You can enter %0 more times due to your Landing Reinforcement level.</body>
+  </string>
+  <string>
     <id>906311</id>
     <name>STR_L2AUTH_MORMANT_USER</name>
-    <body>&lt;p&gt;This account is dormant.&lt;/p&gt;
-&lt;p&gt;Submit a request to reactivate your dormant account to plaync (www.plaync.co.kr) and enjoy all the benefits of plaync again.&lt;/p&gt;</body>
+    <body>&lt;p&gt;This account has been inactive for a while.&lt;/p&gt;
+&lt;p&gt;Submit a request to reactivate your inactive account to plaync (www.plaync.co.kr) and enjoy all the benefits of plaync again.&lt;/p&gt;</body>
   </string>
   <string>
     <id>906314</id>
@@ -31913,6 +32025,39 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
     <body>PvE Magical Defense</body>
   </string>
   <string>
+    <id>906336</id>
+    <name>STR_ALPHA_MAP_LOCK_DESC</name>
+    <body>&lt;html&gt;
+&lt;font font_xml = "tooltip_guide_title"&gt;Transparent Map is fixed.&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;font font_xml = "tooltip_guide_body"&gt;Click the UI Position Swap / Fix Status Padlock on the left side of the Quickbar to change the Transparent Map's position.&lt;/font&gt;
+&lt;/html&gt;
+</body>
+  </string>
+  <string>
+    <id>906337</id>
+    <name>STR_INDUN_COOLTIME_RESET_SELECT3</name>
+    <body>You spent all %0 entries.
+Select a way to add additional entries.</body>
+  </string>
+  <string>
+    <id>906338</id>
+    <name>STR_INDUN_COOLTIME_RESET_SELECT4</name>
+    <body>Add more entries by spending %qina0?
+(Increased number of entries: %num1/%num2 times)</body>
+  </string>
+  <string>
+    <id>906339</id>
+    <name>STR_INDUN_COOLTIME_RESET_SELECT5</name>
+    <body>Add more entries by spending %qina0?
+(Increased number of entries: %num1 times)</body>
+  </string>
+  <string>
+    <id>906340</id>
+    <name>STR_INDUN_COOLTIME_RESET_SELECT6</name>
+    <body>Add more entries by using %1 %0?</body>
+  </string>
+  <string>
     <id>906455</id>
     <name>STR_WINDOW_WEBSERVICE_WEB_NP_AUTH</name>
     <body>https://login.aiononline.com/game/sso</body>
@@ -31926,6 +32071,16 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
     <id>906457</id>
     <name>STR_WINDOW_WEBSERVICE_DEV_WEB_NP_AUTH</name>
     <body>http://mlogin.plaync.com/login/sso</body>
+  </string>
+  <string>
+    <id>906458</id>
+    <name>STR_ASK_PASS_BY_RVR_DIRECT_PORTAL</name>
+    <body>Do you want to travel through the Legion Rift?</body>
+  </string>
+  <string>
+    <id>906459</id>
+    <name>STR_TOOLTIP_PORTAL_NAME_RVR_DIRECT_PORTAL</name>
+    <body>Legion Infiltration Rift</body>
   </string>
   <string>
     <id>906484</id>
@@ -31956,5 +32111,75 @@ You can increase the number of times %3 can enter by consuming %qina0 or using %
     <id>906489</id>
     <name>STR_STEAM_PAYMENT_RC_WEB</name>
     <body>https://purchase.ncsoft.com/steam/buyNCoin</body>
+  </string>
+  <string>
+    <id>906490</id>
+    <name>STR_RETRY_COST_TITLE</name>
+    <body>Disassembly Cost</body>
+  </string>
+  <string>
+    <id>906491</id>
+    <name>STR_RETRY_COST_BUTTON_RETRY</name>
+    <body>Disassemble [%num0/%num1]</body>
+  </string>
+  <string>
+    <id>906492</id>
+    <name>STR_RETRY_COST_BUTTON_TAKE</name>
+    <body>Gain</body>
+  </string>
+  <string>
+    <id>906493</id>
+    <name>STR_RETRY_COST_BUTTON_CLOSE</name>
+    <body>Close</body>
+  </string>
+  <string>
+    <id>906494</id>
+    <name>STR_RETRY_COST_SELECT</name>
+    <body>Select Payment Method.</body>
+  </string>
+  <string>
+    <id>906495</id>
+    <name>STR_RETRY_COST_SELECT_QINA</name>
+    <body>Spend %qina0 to disassemble it?</body>
+  </string>
+  <string>
+    <id>906496</id>
+    <name>STR_RETRY_COST_SELECT_AP</name>
+    <body>Spend %ap0 to disassemble it?</body>
+  </string>
+  <string>
+    <id>906497</id>
+    <name>STR_RETRY_COST_SELECT_ITEM</name>
+    <body>Spend %num1 %0 to disassemble it?</body>
+  </string>
+  <string>
+    <id>906498</id>
+    <name>STR_RETRY_PROGRESS</name>
+    <body>Disassembling</body>
+  </string>
+  <string>
+    <id>906508</id>
+    <name>STR_TOOLTIP_PORTAL_NAME_RVR_DEFENCE_DIRECT_PORTAL</name>
+    <body>Legion Advance Corridor</body>
+  </string>
+  <string>
+    <id>906510</id>
+    <name>STR_RVR_DIRECT_POTAL_OBJ_LEVEL</name>
+    <body>Used by: Level %num0 - %num1</body>
+  </string>
+  <string>
+    <id>906511</id>
+    <name>STR_RVR_DIRECT_POTAL_OBJ_COUNT</name>
+    <body>Remaining Usage: %num0 times</body>
+  </string>
+  <string>
+    <id>906512</id>
+    <name>STR_RVR_DIRECT_POTAL_OBJ_TIMER</name>
+    <body>Remaining time: %0</body>
+  </string>
+  <string>
+    <id>906513</id>
+    <name>STR_2016_ATTEND_MONTH_01_7DAY_TITLE_01</name>
+    <body>[Stamp] Gift of Diligence (Jan)</body>
   </string>
 </strings>

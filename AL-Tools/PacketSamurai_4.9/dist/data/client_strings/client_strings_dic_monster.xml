@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/07/13 10:38:45">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1000000</id>
     <name>STR_DIC_TEST01</name>
@@ -8623,7 +8623,7 @@
   <string>
     <id>1003577</id>
     <name>STR_DIC_M_Ab1_PerfectWa_40_Ae</name>
-    <body>RM-114c;Little is known about these Lepharist creations, however the last time one was seen it was near [%dic:STR_DIC_W_AB1_42].</body>
+    <body>RM-114c; Nothing is known about this being, other than that it's a completed test subject of the Lehpar Revolutionaries. It was last seen near the [%dic:STR_DIC_W_AB1_25].</body>
   </string>
   <string>
     <id>1003578</id>
@@ -21168,17 +21168,17 @@
   <string>
     <id>1007310</id>
     <name>STR_DIC_M_Crotan_DrakanBossNamed_65_Ah</name>
-    <body>Enraged Krotan Lord;A Balaur Guardian General defending [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02_N] and [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02].</body>
+    <body>Enraged Krotan Lord;A Dragon Lord defending [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02_N] and [%dic:STR_DIC_W_IDAbRe_Up3_Crotan_02].</body>
   </string>
   <string>
     <id>1007311</id>
     <name>STR_DIC_M_Dkisas_DrakanBossNamed_65_Ah</name>
-    <body>Enraged Kysis Guardian General;A Balaur Guardian General defending [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02_N] and [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02].</body>
+    <body>Enraged Kysis Duke;A Balaur Duke defending [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02_N] and [%dic:STR_DIC_W_IDAbRe_Up3_Dkisas_02].</body>
   </string>
   <string>
     <id>1007312</id>
     <name>STR_DIC_M_Lamiren_DrakanBossNamed_65_Ah</name>
-    <body>Enraged Miren Guardian General;A Balaur Guardian General defending [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02_N] and [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02].</body>
+    <body>Enraged Miren Prince;A Balaur Prince defending [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02_N] and [%dic:STR_DIC_W_IDAbRe_Up3_Lamiren_02].</body>
   </string>
   <string>
     <id>1007313</id>
@@ -25918,7 +25918,7 @@
   <string>
     <id>1008268</id>
     <name>STR_DIC_M_IDSeal_Boss_Vritra_Human_Lv1_N_65_Ah</name>
-    <body>Balaur Lord Beritra;Located at Agony's Well in [%dic:STR_DIC_W_IDSeal].</body>
+    <body>Dragon Lord Beritra;Located at Agony's Well in [%dic:STR_DIC_W_IDSeal].</body>
   </string>
   <string>
     <id>1008269</id>
@@ -26278,12 +26278,12 @@
   <string>
     <id>1008340</id>
     <name>STR_DIC_M_Ab1_WorldRaid_Boss_tank_Hard_65_Al</name>
-    <body>Wurg the Glacier; Ereshkigal legion's magical weapon armored with powerful ice. It can be seen in [%dic:STR_DIC_W_AB1_28], [%dic:STR_DIC_W_AB1_35], or [%dic:STR_DIC_W_AB1_51] from time to time.</body>
+    <body>Wurg the Glacier;Ereshkigal legion's magical weapon armored with powerful ice. It can be seen in [%dic:STR_DIC_W_AB1_28], [%dic:STR_DIC_W_AB1_35], or [%dic:STR_DIC_W_AB1_51] from time to time.</body>
   </string>
   <string>
     <id>1008341</id>
     <name>STR_DIC_M_Ab1_WorldRaid_Boss_tank_Hard_65_2_Al</name>
-    <body>Wurg the Glacier; Ereshkigal legion's magical weapon armored with powerful ice. It can be seen in [%dic:STR_DIC_W_AB1_28], [%dic:STR_DIC_W_AB1_34], or [%dic:STR_DIC_W_AB1_Sub_add17] from time to time.</body>
+    <body>Terracrusher;Ereshkigal legion's magical weapon armored with powerful ice. It can be seen in [%dic:STR_DIC_W_AB1_28], [%dic:STR_DIC_W_AB1_34], or [%dic:STR_DIC_W_AB1_Sub_add17] from time to time.</body>
   </string>
   <string>
     <id>1008342</id>
@@ -27543,7 +27543,7 @@
   <string>
     <id>1008593</id>
     <name>STR_DIC_M_quest_Sacrifice_of_Conquer_all</name>
-    <body>Conquest Offering; This monster was created in the aftermath of the confrontation between the Balaur Lord and Tiamat. Seen in Inggison and Gelkmaros.</body>
+    <body>Conquest Offering; This monster was created in the aftermath of the confrontation between the Dragon Lord and Tiamat. Seen in Inggison and Gelkmaros.</body>
   </string>
   <string>
     <id>1008594</id>
@@ -27593,7 +27593,7 @@
   <string>
     <id>1008603</id>
     <name>STR_DIC_M_quest_25322_lf5_d_all</name>
-    <body>Creature of Garden of the Balaur Lord; A monster from the Garden of the Balaur Lord in Cygnea.</body>
+    <body>Creature of Garden of the Dragon Lord; A monster from the Garden of the Dragon Lord in Cygnea.</body>
   </string>
   <string>
     <id>1008604</id>
@@ -27628,32 +27628,32 @@
   <string>
     <id>1008610</id>
     <name>STR_DIC_M_Ab1_BossNamed_65_Al</name>
-    <body>Krotan Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_crotan_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_crotan_Named_Spawn_FOBJ_L]. They are like patron saints of the fortress, appearing when called upon.</body>
+    <body>Krotan Berserk Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_crotan_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_crotan_Named_Spawn_FOBJ_L]. They are like patron saints of the fortress, appearing when called upon.</body>
   </string>
   <string>
     <id>1008611</id>
     <name>STR_DIC_M_Ab1_BossNamed_65_2_Al</name>
-    <body>Miren Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_lamiren_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_lamiren_Named_Spawn_FOBJ_L]. They are like patron saints of the fortress, appearing when called up.</body>
+    <body>Miren Berserk Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_lamiren_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_lamiren_Named_Spawn_FOBJ_L]. They are like patron saints of the fortress, appearing when called upon.</body>
   </string>
   <string>
     <id>1008612</id>
     <name>STR_DIC_M_Ab1_BossNamed_65_3_Al</name>
-    <body>Kysis Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_dkisas_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_dkisas_Named_Spawn_FOBJ_L]. They are like patron saints of the fortress, appearing when called upon.</body>
+    <body>Kysis Berserk Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_dkisas_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_dkisas_Named_Spawn_FOBJ_L]. They are like patron saints of the fortress, appearing when called upon.</body>
   </string>
   <string>
     <id>1008613</id>
     <name>STR_DIC_M_Ab1_BossNamed_65_Da_Al</name>
-    <body>Enraged Krotan Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_crotan_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_crotan_Named_Spawn_FOBJ_D]. They are like patron saints of the fortress, appearing when called upon.</body>
+    <body>Krotan Enraged Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_crotan_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_crotan_Named_Spawn_FOBJ_D]. They are like patron saints of the fortress, appearing when called upon.</body>
   </string>
   <string>
     <id>1008614</id>
     <name>STR_DIC_M_Ab1_BossNamed_65_2_Da_Al</name>
-    <body>Enraged Miren Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_lamiren_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_lamiren_Named_Spawn_FOBJ_D]. They are like patron saints of the fortress, appearing when called upon.</body>
+    <body>Miren Enraged Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_lamiren_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_lamiren_Named_Spawn_FOBJ_D]. They are like patron saints of the fortress, appearing when called upon.</body>
   </string>
   <string>
     <id>1008615</id>
     <name>STR_DIC_M_Ab1_BossNamed_65_3_Da_Al</name>
-    <body>Enraged Kysis Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_dkisas_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_dkisas_Named_Spawn_FOBJ_D]. They are like patron saints of the fortress, appearing when called upon.</body>
+    <body>Kysis Enraged Guardian;Can be summoned when the Legion Brigade General who occupies the fortress uses [%dic:STR_DIC_I_key_ab1_dkisas_raid_01a] on [%dic:STR_DIC_OBJ_Ab1_dkisas_Named_Spawn_FOBJ_D]. They are like patron saints of the fortress, appearing when called upon.</body>
   </string>
   <string>
     <id>1008616</id>
@@ -27676,8 +27676,638 @@
     <body>Akhal; A messenger from [%dic:STR_DIC_MLA51].</body>
   </string>
   <string>
+    <id>1008620</id>
+    <name>STR_DIC_M_Ab1_v01_Li_Fi_Boss_65_Ae</name>
+    <body>Rattlefrost Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village50] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008621</id>
+    <name>STR_DIC_M_Ab1_v02_Li_Fi_Boss_65_Ae</name>
+    <body>Sliversleet Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village51] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008622</id>
+    <name>STR_DIC_M_Ab1_v03_Li_Fi_Boss_65_Ae</name>
+    <body>Coldforge Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village52] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008623</id>
+    <name>STR_DIC_M_Ab1_v04_Li_Fi_Boss_65_Ae</name>
+    <body>Shimmerfrost Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village53] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008624</id>
+    <name>STR_DIC_M_Ab1_v05_Li_Fi_Boss_65_Ae</name>
+    <body>Icehowl Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village54] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008625</id>
+    <name>STR_DIC_M_Ab1_v06_Li_Fi_Boss_65_Ae</name>
+    <body>Chillhaunt Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village55] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008626</id>
+    <name>STR_DIC_M_Ab1_v07_Li_Fi_Boss_65_Ae</name>
+    <body>Sootguzzle Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village60] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008627</id>
+    <name>STR_DIC_M_Ab1_v08_Li_Fi_Boss_65_Ae</name>
+    <body>Flameruin Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village61] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008628</id>
+    <name>STR_DIC_M_Ab1_v09_Li_Fi_Boss_65_Ae</name>
+    <body>Stokebellow Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village62] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008629</id>
+    <name>STR_DIC_M_Ab1_v10_Li_Fi_Boss_65_Ae</name>
+    <body>Blazerack Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village63] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008630</id>
+    <name>STR_DIC_M_Ab1_v11_Li_Fi_Boss_65_Ae</name>
+    <body>Smoldergeist Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village64] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008631</id>
+    <name>STR_DIC_M_Ab1_v12_Li_Fi_Boss_65_Ae</name>
+    <body>Moltenspike Outpost Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village65] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008632</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Li_1</name>
+    <body>Wildersage Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008633</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Li_3</name>
+    <body>Wildersage Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008634</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Li_5</name>
+    <body>Wildersage Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008635</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Li_1</name>
+    <body>Dauntless Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008636</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Li_3</name>
+    <body>Dauntless Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008637</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Li_5</name>
+    <body>Dauntless Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008638</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Li_1</name>
+    <body>Anchorbrak Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008639</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Li_3</name>
+    <body>Anchorbrak Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008640</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Li_5</name>
+    <body>Anchorbrak Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008641</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Li_1</name>
+    <body>Brokenblade Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008642</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Li_3</name>
+    <body>Brokenblade Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008643</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Li_5</name>
+    <body>Brokenblade Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008644</id>
+    <name>STR_DIC_M_Ab1_v01_Da_Fi_Boss_65_Ae</name>
+    <body>Rattlefrost Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village50] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008645</id>
+    <name>STR_DIC_M_Ab1_v02_Da_Fi_Boss_65_Ae</name>
+    <body>Sliversleet Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village51] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008646</id>
+    <name>STR_DIC_M_Ab1_v03_Da_Fi_Boss_65_Ae</name>
+    <body>Coldforge Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village52] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008647</id>
+    <name>STR_DIC_M_Ab1_v04_Da_Fi_Boss_65_Ae</name>
+    <body>Shimmerfrost Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village53] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008648</id>
+    <name>STR_DIC_M_Ab1_v05_Da_Fi_Boss_65_Ae</name>
+    <body>Icehowl Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village54] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008649</id>
+    <name>STR_DIC_M_Ab1_v06_Da_Fi_Boss_65_Ae</name>
+    <body>Chillhaunt Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village55] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008650</id>
+    <name>STR_DIC_M_Ab1_v07_Da_Fi_Boss_65_Ae</name>
+    <body>Sootguzzle Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village60] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008651</id>
+    <name>STR_DIC_M_Ab1_v08_Da_Fi_Boss_65_Ae</name>
+    <body>Flameruin Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village61] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008652</id>
+    <name>STR_DIC_M_Ab1_v09_Da_Fi_Boss_65_Ae</name>
+    <body>Stokebellow Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village62] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008653</id>
+    <name>STR_DIC_M_Ab1_v10_Da_Fi_Boss_65_Ae</name>
+    <body>Blazerack Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village63] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008654</id>
+    <name>STR_DIC_M_Ab1_v11_Da_Fi_Boss_65_Ae</name>
+    <body>Smoldergeist Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village64] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008655</id>
+    <name>STR_DIC_M_Ab1_v12_Da_Fi_Boss_65_Ae</name>
+    <body>Moltenspike Defense Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village65] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008656</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Da_1</name>
+    <body>Wildersage Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008657</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Da_3</name>
+    <body>Wildersage Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008658</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Da_5</name>
+    <body>Wildersage Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008659</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Da_1</name>
+    <body>Dauntless Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008660</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Da_3</name>
+    <body>Dauntless Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008661</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Da_5</name>
+    <body>Dauntless Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008662</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Da_1</name>
+    <body>Anchorbrak Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008663</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Da_3</name>
+    <body>Anchorbrak Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008664</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Da_5</name>
+    <body>Anchorbrak Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008665</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Da_1</name>
+    <body>Brokenblade Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008666</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Da_3</name>
+    <body>Brokenblade Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008667</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Da_5</name>
+    <body>Brokenblade Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008668</id>
+    <name>STR_DIC_M_Ab1_v01_Eresh_Fi_Boss_65_Ae</name>
+    <body>Rattlefrost Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village50] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008669</id>
+    <name>STR_DIC_M_Ab1_v02_Eresh_Fi_Boss_65_Ae</name>
+    <body>Sliversleet Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village51] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008670</id>
+    <name>STR_DIC_M_Ab1_v03_Eresh_Fi_Boss_65_Ae</name>
+    <body>Coldforge Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village52] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008671</id>
+    <name>STR_DIC_M_Ab1_v04_Eresh_Fi_Boss_65_Ae</name>
+    <body>Shimmerfrost Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village53] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008672</id>
+    <name>STR_DIC_M_Ab1_v05_Eresh_Fi_Boss_65_Ae</name>
+    <body>Icehowl Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village54] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008673</id>
+    <name>STR_DIC_M_Ab1_v06_Eresh_Fi_Boss_65_Ae</name>
+    <body>Chillhaunt Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village55] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008674</id>
+    <name>STR_DIC_M_Ab1_v07_Vritra_Fi_Boss_65_Ae</name>
+    <body>Sootguzzle Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village60] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008675</id>
+    <name>STR_DIC_M_Ab1_v08_Vritra_Fi_Boss_65_Ae</name>
+    <body>Flameruin Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village61] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008676</id>
+    <name>STR_DIC_M_Ab1_v09_Vritra_Fi_Boss_65_Ae</name>
+    <body>Stokebellow Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village62] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008677</id>
+    <name>STR_DIC_M_Ab1_v10_Vritra_Fi_Boss_65_Ae</name>
+    <body>Blazerack Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village63] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008678</id>
+    <name>STR_DIC_M_Ab1_v11_Vritra_Fi_Boss_65_Ae</name>
+    <body>Smoldergeist Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village64] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008679</id>
+    <name>STR_DIC_M_Ab1_v12_Vritra_Fi_Boss_65_Ae</name>
+    <body>Moltenspike Occupation Commander;A Commander that appears in base when [%dic:STR_DIC_W_Ab1_Village65] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008680</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Dr_1</name>
+    <body>Wildersage Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008681</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Dr_3</name>
+    <body>Wildersage Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008682</id>
+    <name>STR_DIC_M_Ab1_1224_Boss_Dr_5</name>
+    <body>Wildersage Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008683</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Dr_1</name>
+    <body>Dauntless Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008684</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Dr_3</name>
+    <body>Dauntless Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008685</id>
+    <name>STR_DIC_M_Ab1_1401_Boss_Dr_5</name>
+    <body>Dauntless Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008686</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Dr_1</name>
+    <body>Anchorbrak Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008687</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Dr_3</name>
+    <body>Anchorbrak Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008688</id>
+    <name>STR_DIC_M_Ab1_1402_Boss_Dr_5</name>
+    <body>Anchorbrak Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008689</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Dr_1</name>
+    <body>Brokenblade Novice Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008690</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Dr_3</name>
+    <body>Brokenblade Experienced Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008691</id>
+    <name>STR_DIC_M_Ab1_1403_Boss_Dr_5</name>
+    <body>Brokenblade Veteran Artifact Protector;An artifact protector that appears when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Balaurs.</body>
+  </string>
+  <string>
     <id>1008692</id>
     <name>STR_DIC_M_KeB_KrallKnightK_New_29_Ae</name>
     <body>Kaidan Veteran Bodyguard; A Kaidan Krall in [%dic:STR_DIC_W_LF2_SZ_H].</body>
+  </string>
+  <string>
+    <id>1008693</id>
+    <name>STR_DIC_M_Ab1_v01_Li_Pr_65_Ae</name>
+    <body>Rattlefrost Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village50] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008694</id>
+    <name>STR_DIC_M_Ab1_v02_Li_Pr_65_Ae</name>
+    <body>Sliversleet Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village51] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008695</id>
+    <name>STR_DIC_M_Ab1_v03_Li_Pr_65_Ae</name>
+    <body>Coldforge Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village52] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008696</id>
+    <name>STR_DIC_M_Ab1_v04_Li_Pr_65_Ae</name>
+    <body>Shimmerfrost Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village53] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008697</id>
+    <name>STR_DIC_M_Ab1_v05_Li_Pr_65_Ae</name>
+    <body>Icehowl Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village54] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008698</id>
+    <name>STR_DIC_M_Ab1_v06_Li_Pr_65_Ae</name>
+    <body>Chillhaunt Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village55] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008699</id>
+    <name>STR_DIC_M_Ab1_v07_Li_Pr_65_Ae</name>
+    <body>Sootguzzle Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village60] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008700</id>
+    <name>STR_DIC_M_Ab1_v08_Li_Pr_65_Ae</name>
+    <body>Flameruin Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village61] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008701</id>
+    <name>STR_DIC_M_Ab1_v09_Li_Pr_65_Ae</name>
+    <body>Stokebellow Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village62] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008702</id>
+    <name>STR_DIC_M_Ab1_v10_Li_Pr_65_Ae</name>
+    <body>Blazerack Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village63] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008703</id>
+    <name>STR_DIC_M_Ab1_v11_Li_Pr_65_Ae</name>
+    <body>Smoldergeist Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village64] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008704</id>
+    <name>STR_DIC_M_Ab1_v12_Li_Pr_65_Ae</name>
+    <body>Moltenspike Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village65] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008705</id>
+    <name>STR_DIC_M_Ab1_v13_Li_Pr_65_Ae</name>
+    <body>Wildersage Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008706</id>
+    <name>STR_DIC_M_Ab1_v14_Li_Pr_65_Ae</name>
+    <body>Dauntless Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008707</id>
+    <name>STR_DIC_M_Ab1_v15_Li_Pr_65_Ae</name>
+    <body>Anchorbrak Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008708</id>
+    <name>STR_DIC_M_Ab1_v16_Li_Pr_65_Ae</name>
+    <body>Brokenblade Outpost Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Elyos.</body>
+  </string>
+  <string>
+    <id>1008709</id>
+    <name>STR_DIC_M_Ab1_v01_Da_Pr_65_Ae</name>
+    <body>Rattlefrost Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village50] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008710</id>
+    <name>STR_DIC_M_Ab1_v02_Da_Pr_65_Ae</name>
+    <body>Sliversleet Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village51] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008711</id>
+    <name>STR_DIC_M_Ab1_v03_Da_Pr_65_Ae</name>
+    <body>Coldforge Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village52] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008712</id>
+    <name>STR_DIC_M_Ab1_v04_Da_Pr_65_Ae</name>
+    <body>Shimmerfrost Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village53] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008713</id>
+    <name>STR_DIC_M_Ab1_v05_Da_Pr_65_Ae</name>
+    <body>Icehowl Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village54] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008714</id>
+    <name>STR_DIC_M_Ab1_v06_Da_Pr_65_Ae</name>
+    <body>Chillhaunt Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village55] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008715</id>
+    <name>STR_DIC_M_Ab1_v07_Da_Pr_65_Ae</name>
+    <body>Sootguzzle Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village60] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008716</id>
+    <name>STR_DIC_M_Ab1_v08_Da_Pr_65_Ae</name>
+    <body>Flameruin Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village61] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008717</id>
+    <name>STR_DIC_M_Ab1_v09_Da_Pr_65_Ae</name>
+    <body>Stokebellow Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village62] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008718</id>
+    <name>STR_DIC_M_Ab1_v10_Da_Pr_65_Ae</name>
+    <body>Blazerack Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village63] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008719</id>
+    <name>STR_DIC_M_Ab1_v11_Da_Pr_65_Ae</name>
+    <body>Smoldergeist Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village64] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008720</id>
+    <name>STR_DIC_M_Ab1_v12_Da_Pr_65_Ae</name>
+    <body>Moltenspike Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village65] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008721</id>
+    <name>STR_DIC_M_Ab1_v13_Da_Pr_65_Ae</name>
+    <body>Wildersage Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village56] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008722</id>
+    <name>STR_DIC_M_Ab1_v14_Da_Pr_65_Ae</name>
+    <body>Dauntless Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village57] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008723</id>
+    <name>STR_DIC_M_Ab1_v15_Da_Pr_65_Ae</name>
+    <body>Anchorbrak Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village58] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008724</id>
+    <name>STR_DIC_M_Ab1_v16_Da_Pr_65_Ae</name>
+    <body>Brokenblade Defense Medical Officer;A Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village59] is occupied by the enemy faction.</body>
+  </string>
+  <string>
+    <id>1008725</id>
+    <name>STR_DIC_M_Ab1_v01_Eresh_Pr_65_Ae</name>
+    <body>Rattlefrost Occupation Medical Officer;An Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village50] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008726</id>
+    <name>STR_DIC_M_Ab1_v02_Eresh_Pr_65_Ae</name>
+    <body>Sliversleet Occupation Medical Officer;An Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village51] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008727</id>
+    <name>STR_DIC_M_Ab1_v03_Eresh_Pr_65_Ae</name>
+    <body>Coldforge Occupation Medical Officer;An Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village52] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008728</id>
+    <name>STR_DIC_M_Ab1_v04_Eresh_Pr_65_Ae</name>
+    <body>Shimmerfrost Occupation Medical Officer;An Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village53] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008729</id>
+    <name>STR_DIC_M_Ab1_v05_Eresh_Pr_65_Ae</name>
+    <body>Icehowl Occupation Medical Officer;An Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village54] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008730</id>
+    <name>STR_DIC_M_Ab1_v06_Eresh_Pr_65_Ae</name>
+    <body>Chillhaunt Occupation Medical Officer;An Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village55] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008731</id>
+    <name>STR_DIC_M_Ab1_v07_Vritra_Pr_65_Ae</name>
+    <body>Sootguzzle Occupation Medical Officer;A Scattered Baranath Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village60] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008732</id>
+    <name>STR_DIC_M_Ab1_v08_Vritra_Pr_65_Ae</name>
+    <body>Flameruin Occupation Medical Officer;A Scattered Baranath Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village61] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008733</id>
+    <name>STR_DIC_M_Ab1_v09_Vritra_Pr_65_Ae</name>
+    <body>Stokebellow Occupation Medical Officer;A Scattered Baranath Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village62] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008734</id>
+    <name>STR_DIC_M_Ab1_v10_Vritra_Pr_65_Ae</name>
+    <body>Blazerack Occupation Medical Officer;A Scattered Baranath Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village63] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008735</id>
+    <name>STR_DIC_M_Ab1_v11_Vritra_Pr_65_Ae</name>
+    <body>Smoldergeist Occupation Medical Officer;A Scattered Baranath Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village64] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008736</id>
+    <name>STR_DIC_M_Ab1_v12_Vritra_Pr_65_Ae</name>
+    <body>Moltenspike Occupation Medical Officer;A Scattered Baranath Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village65] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008737</id>
+    <name>STR_DIC_M_Ab1_v13_Eresh_Pr_65_Ae</name>
+    <body>Wildersage Occupation Medical Officer;A Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village56] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008738</id>
+    <name>STR_DIC_M_Ab1_v14_Eresh_Pr_65_Ae</name>
+    <body>Dauntless Occupation Medical Officer;A Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village57] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008739</id>
+    <name>STR_DIC_M_Ab1_v15_Eresh_Pr_65_Ae</name>
+    <body>Anchorbrak Occupation Medical Officer;A Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village58] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008740</id>
+    <name>STR_DIC_M_Ab1_v16_Eresh_Pr_65_Ae</name>
+    <body>Brokenblade Occupation Medical Officer;A Ereshkigal Legion Medical Officer that appears in base when [%dic:STR_DIC_W_Ab1_Village59] is occupied by Balaurs.</body>
+  </string>
+  <string>
+    <id>1008741</id>
+    <name>STR_DIC_M_BDF3_Guard_DefBossA_Fi_Da_50_Ah</name>
+    <body>General Magken;A general dispatched from Beluslan Fortress. He was attacked by Elyos on his way to defeat Balaurs that invaded Besfer Refugee Village.</body>
+  </string>
+  <string>
+    <id>1008742</id>
+    <name>STR_DIC_M_BDF3_Guard_DefBossB_Fi_Da_50_Ah</name>
+    <body>General Hawk;A general dispatched from Beluslan Fortress. He was attacked by Elyos on his way to defeat Balaurs that invaded Besfer Refugee Village.</body>
+  </string>
+  <string>
+    <id>1008743</id>
+    <name>STR_DIC_M_BDF3_Guard_DefBossC_Fi_Da_50_Ah</name>
+    <body>General Tombolk;A general dispatched from Red Mane Cave Village. He was attacked by Elyos on his way to defeat Balaurs that invaded Besfer Refugee Village.</body>
+  </string>
+  <string>
+    <id>1008744</id>
+    <name>STR_DIC_M_BLF3_Guard_DefBossA_Fi_Li_50_Ah</name>
+    <body>General Miltar;A general dispatched from Juprosine Village. He was attacked by Asmodians on his way to defeat Balaurs that invaded Interdikah Aetheric Field Observatory.</body>
+  </string>
+  <string>
+    <id>1008745</id>
+    <name>STR_DIC_M_BLF3_Guard_DefBossB_Fi_Li_50_Ah</name>
+    <body>General Kupiaro;A general dispatched from Paserta Village. He was attacked by Asmodians on his way to defeat Balaurs that invaded Besfer Refugee Village.</body>
+  </string>
+  <string>
+    <id>1008746</id>
+    <name>STR_DIC_M_BLF3_Guard_DefBossC_Fi_Li_50_Ah</name>
+    <body>General Lanstri;A general dispatched from Interdikah Fortress. He was attacked by Asmodians on his way to defeat Balaurs that invaded Besfer Refugee Village.</body>
   </string>
 </strings>

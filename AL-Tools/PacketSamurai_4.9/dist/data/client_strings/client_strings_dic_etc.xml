@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/07/13 10:38:45">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1070000</id>
     <name>STR_DIC_TEST04</name>
@@ -1743,12 +1743,12 @@
   <string>
     <id>1074126</id>
     <name>STR_DIC_E_Ship_Li</name>
-    <body>Steel Rake;A Shulack ship run by the Steel Rake Pirates. The Steel Rake is anchored at one of the floating islands between Elysea and Asmodae. [%dic:STR_DIC_N_Shugo_LC1_29], a Shugo at the Outer Dock can send you to it.</body>
+    <body>Steel Rake; One of the ships of the Steel Beard Pirate Shulacks. It is anchored somewhere near a floating island between Elysea and Asmodae. You can get there through [%dic:STR_DIC_N_LF3_ShulackShip_Entrance] in Interdikah.</body>
   </string>
   <string>
     <id>1074127</id>
     <name>STR_DIC_E_Ship_Da</name>
-    <body>Steel Rake;A Shulack ship run by the Steel Rake Pirates. The Steel Rake is anchored at one of the floating islands between Elysea and Asmodae. [%dic:STR_DIC_N_Shugo_DC1_24], a Shugo at the Airship Dock in Pandaemonium can send you to it.</body>
+    <body>Steel Rake; One of the ships of the Steel Beard Pirate Shulacks. It is anchored somewhere near a floating island between Elysea and Asmodae. You can get there through [%dic:STR_DIC_N_DF3_ShulackShip_Entrance] in Beluslan.</body>
   </string>
   <string>
     <id>1074128</id>
@@ -3348,12 +3348,12 @@
   <string>
     <id>1075109</id>
     <name>STR_DIC_W_ShulackShip_L_2F</name>
-    <body>Steel Rake Cabin;The middle decks of the Steel Rake where Sea Song Tavern, Grogget's Safe, and Mercenary Quarters are found. It can be entered by speaking to [%dic:STR_DIC_N_LC1_Shulackship_solo].</body>
+    <body>Steel Rake Cabin; The middle deck of the Steel Rake where Song of Sea Pub, Hutkin's Safe, and Mercenary Quarters can be found. It can be entered via the [%dic:STR_DIC_N_LF3_ShulackShip_Solo_Entrance].</body>
   </string>
   <string>
     <id>1075110</id>
     <name>STR_DIC_W_ShulackShip_D_2F</name>
-    <body>Steel Rake Cabin;The middle decks of the Steel Rake where Sea Song Tavern, Grogget's Safe, and Mercenary Quarters are found. It can be entered by speaking to [%dic:STR_DIC_N_DC1_Shulackship_solo].</body>
+    <body>Steel Rake Cabin; The middle deck of the Steel Rake where Song of Sea Pub, Hutkin's Safe, and Mercenary Quarters can be found. It can be entered via the [%dic:STR_DIC_N_DF3_ShulackShip_Solo_Entrance].</body>
   </string>
   <string>
     <id>1075111</id>
@@ -5383,22 +5383,22 @@
   <string>
     <id>1076335</id>
     <name>STR_DIC_E_Ship_Li2</name>
-    <body>Steel Rake;A Shulack pirate ship anchored at a floating island somewhere between Elysea and Asmodae. [%dic:STR_DIC_N_DF3_Jabarung_F] can send Daevas there.</body>
+    <body>Steel Rake; One of the ships of the Steel Beard Pirate Shulacks. It is anchored somewhere near a floating island between Elysea and Asmodae. You can get there through [%dic:STR_DIC_N_LF3_ShulackShip_Entrance].</body>
   </string>
   <string>
     <id>1076336</id>
     <name>STR_DIC_E_Ship_Da2</name>
-    <body>Steel Rake;A Shulack pirate ship anchored at a floating island somewhere between Elysea and Asmodae. [%dic:STR_DIC_N_DF3_Jabarung_F] can send Daevas there.</body>
+    <body>Steel Rake; One of the ships of the Steel Beard Pirate Shulacks. It is anchored somewhere near a floating island between Elysea and Asmodae. You can get there through [%dic:STR_DIC_N_DF3_ShulackShip_Entrance].</body>
   </string>
   <string>
     <id>1076337</id>
     <name>STR_DIC_W_ShulackShip_L2_2F</name>
-    <body>Steel Rake Cabin;The middle deck of the Steel Rake where the Sea Song Tavern, Grogget's Safe, and the Mercenary Quarters are located. [%dic:STR_DIC_N_LF3_Amerinrin_F] can send people there.</body>
+    <body>Steel Rake Cabin; The middle deck of the Steel Rake where Song of Sea Pub, Hutkin's Safe, and Mercenary Quarters can be found. It can be entered via the [%dic:STR_DIC_N_LF3_ShulackShip_Solo_Entrance].</body>
   </string>
   <string>
     <id>1076338</id>
     <name>STR_DIC_W_ShulackShip_D2_2F</name>
-    <body>Steel Rake Cabin;The middle deck of the Steel Rake where the Sea Song Tavern, Grogget's Safe, and the Mercenary Quarters are located. [%dic:STR_DIC_N_DF3_Dayrinrin_F] can send people there.</body>
+    <body>Steel Rake Cabin; The middle deck of the Steel Rake where Song of Sea Pub, Hutkin's Safe, and Mercenary Quarters can be found. It can be entered via the [%dic:STR_DIC_N_DF3_ShulackShip_Solo_Entrance].</body>
   </string>
   <string>
     <id>1076339</id>
@@ -8148,7 +8148,7 @@
   <string>
     <id>1076889</id>
     <name>STR_DIC_M_Deva_Q3940_All</name>
-    <body>Mission to Kill the Makarah Legion;A mission to kill [%dic:STR_DIC_M_Ab1_LizardmanFighter_50_Ae], [%dic:STR_DIC_M_Ab1_LizardmanRanger_50_Ae], [%dic:STR_DIC_M_Ab1_LizardmanAssassin_50_Ae], [%dic:STR_DIC_M_Ab1_LizardmanPriest_50_Ae], [%dic:STR_DIC_M_Ab1_NagaKnight_50_Ae], [%dic:STR_DIC_M_Ab1_NagaFighter_50_Ae], [%dic:STR_DIC_M_Ab1_NagaWizard_50_Ae], and [%dic:STR_DIC_M_Ab1_NagaPriest_50_Ae] on Sullenscale Rive.</body>
+    <body>Mission to Kill the Makarah Legion; A mission to kill [%dic:STR_DIC_M_Ab1_LizardmanFighter_50_Ae], [%dic:STR_DIC_M_Ab1_LizardmanRanger_50_Ae], [%dic:STR_DIC_M_Ab1_LizardmanAssassin_50_Ae], [%dic:STR_DIC_M_Ab1_LizardmanPriest_50_Ae], [%dic:STR_DIC_M_Ab1_NagaKnight_50_Ae], [%dic:STR_DIC_M_Ab1_NagaFighter_50_Ae], [%dic:STR_DIC_M_Ab1_NagaWizard_50_Ae], and [%dic:STR_DIC_M_Ab1_NagaPriest_50_Ae] on the Tempest Islands.</body>
   </string>
   <string>
     <id>1076890</id>
@@ -8653,21 +8653,251 @@
   <string>
     <id>1076990</id>
     <name>STR_DIC_M_Growth_30_all</name>
-    <body>Growth Support Qualification;To qualify for growth support, 200 [%dic:STR_DIC_I_coin_grow_seed_sp_01] are needed. With 1 [%dic:STR_DIC_I_cash_item_absoluteexp_recovery_350], you can receive additional growth support.</body>
+    <body>Middle Grade Growth Support Qualification; To prove one's qualification for middle grade growth support, 200 [%dic:STR_DIC_I_coin_grow_seed_sp_01] are necessary. With 1 [%dic:STR_DIC_I_cash_item_absoluteexp_recovery_350], you can receive additional growth support.</body>
   </string>
   <string>
     <id>1076991</id>
     <name>STR_DIC_M_Growth_40_all</name>
-    <body>Greater Growth Support Qualification;To qualify for growth support, 600 [%dic:STR_DIC_I_coin_grow_seed_sp_01] are needed. With 3 [%dic:STR_DIC_I_cash_item_absoluteexp_recovery_350], you can receive additional growth support.</body>
+    <body>High Grade Growth Support Qualification; To prove one's qualification for high grade growth support, 600 [%dic:STR_DIC_I_coin_grow_seed_sp_01] are necessary. With 3 [%dic:STR_DIC_I_cash_item_absoluteexp_recovery_350], you can receive additional growth support.</body>
   </string>
   <string>
     <id>1076992</id>
     <name>STR_DIC_M_Growth_45_all</name>
-    <body>Major Growth Support Qualification;To qualify for growth support, 1,600 [%dic:STR_DIC_I_coin_grow_seed_sp_01] are needed. With 8 [%dic:STR_DIC_I_cash_item_absoluteexp_recovery_350], you can receive additional growth support.</body>
+    <body>Special Growth Support Qualification; To prove one's qualification for special growth support, 1600 [%dic:STR_DIC_I_coin_grow_seed_sp_01] are necessary. With 8 [%dic:STR_DIC_I_cash_item_absoluteexp_recovery_350], you can receive additional growth support.</body>
   </string>
   <string>
     <id>1076993</id>
     <name>STR_DIC_M_14242all</name>
     <body>Kaidan Veteran Forces;[%dic:STR_DIC_M_KeC_KrallKnightK_New_29_Ae], [%dic:STR_DIC_M_AeC_KrallAssassinK_New_29_Ae], [%dic:STR_DIC_M_KeB_KrallKnightK_New_29_Ae], [%dic:STR_DIC_M_KrallPriestHK_New_30_An], and [%dic:STR_DIC_M_AeB_KrallAssassinK_New_29_Ae].</body>
+  </string>
+  <string>
+    <id>1076994</id>
+    <name>STR_DIC_M_Ab1_Q15471</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v01_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v05_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v01_Eresh_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Eresh_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v05_Eresh_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1076995</id>
+    <name>STR_DIC_M_Ab1_Q15472</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v02_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v06_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v02_Eresh_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Eresh_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v06_Eresh_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1076996</id>
+    <name>STR_DIC_M_Ab1_Q15473</name>
+    <body>Artifact Protector;Artifact protectors that appear when the Asmodians or Balaurs occupy the Wildersage, Dauntless, Anchorbrak, and Brokenblade Outposts.</body>
+  </string>
+  <string>
+    <id>1076997</id>
+    <name>STR_DIC_M_Ab1_Q15474</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v07_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v09_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v07_Vritra_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Vritra_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v09_Vritra_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1076998</id>
+    <name>STR_DIC_M_Ab1_Q15475</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v10_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v12_Da_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v10_Vritra_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Vritra_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v12_Vritra_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1076999</id>
+    <name>STR_DIC_M_Ab1_Q15476</name>
+    <body>Base Threat;[%dic:STR_DIC_M_Ab1_New_Gargoyle_65_An], [%dic:STR_DIC_M_Ab1_New_GargoyleB_65_An], [%dic:STR_DIC_M_Ab1_New_Drake_Horn_65_An], [%dic:STR_DIC_M_Ab1_New_Lich_Equip_65_An], or [%dic:STR_DIC_M_Ab1_New_Graveknight_Equip_65_An] pose a threat while lurking around the Sootguzzle, Flameruin, and Stokebellow Outposts.</body>
+  </string>
+  <string>
+    <id>1077000</id>
+    <name>STR_DIC_M_Ab1_Q15477</name>
+    <body>Base Threat;[%dic:STR_DIC_M_Ab1_New_Brohum_M_Sea_65_An], [%dic:STR_DIC_M_Ab1_New_Brohum_M_Young_Sea_65_An], [%dic:STR_DIC_M_Ab1_New_Lobster_Sea_65_An], [%dic:STR_DIC_M_Ab1_New_MillipedeRe_65_An], or [%dic:STR_DIC_M_Ab1_New_Cyclops_Sea_65_An] pose a threat while lurking around the Blazerack, Smoldergeist, and Moltenspike Outposts.</body>
+  </string>
+  <string>
+    <id>1077001</id>
+    <name>STR_DIC_N_Ab1_BLv6_L01</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear at the Rattlefrost, Coldforge, and Icehowl Outposts when the level of the Redemption Landing is 6. [%dic:STR_DIC_N_Ab1_Buildup_Guard50_L], [%dic:STR_DIC_N_Ab1_Buildup_Guard52_L], and [%dic:STR_DIC_N_Ab1_Buildup_Guard54_L].</body>
+  </string>
+  <string>
+    <id>1077002</id>
+    <name>STR_DIC_N_Ab1_BLv6_L02</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Sliversleet, Shimmerfrost, and Chillhaunt Outposts when the level of the Redemption Landing is 6. [%dic:STR_DIC_N_Ab1_Buildup_Guard51_L], [%dic:STR_DIC_N_Ab1_Buildup_Guard53_L], and [%dic:STR_DIC_N_Ab1_Buildup_Guard55_L].</body>
+  </string>
+  <string>
+    <id>1077003</id>
+    <name>STR_DIC_N_Ab1_BLv8_L</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Wildersage, Dauntless, Anchorbrak, and Brokenblade Outposts when the level of the Redemption Landing is 8. [%dic:STR_DIC_N_Ab1_Buildup_Guard56_L], [%dic:STR_DIC_N_Ab1_Buildup_Guard57_L], [%dic:STR_DIC_N_Ab1_Buildup_Guard58_L], and [%dic:STR_DIC_N_Ab1_Buildup_Guard59_L].</body>
+  </string>
+  <string>
+    <id>1077004</id>
+    <name>STR_DIC_N_Ab1_BLv4_L01</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Sootguzzle, Flameruin, and Flameruin Outposts when the level of the Redemption Landing is 4. [%dic:STR_DIC_N_Ab1_Buildup_Guard60_L], [%dic:STR_DIC_N_Ab1_Buildup_Guard61_L], and [%dic:STR_DIC_N_Ab1_Buildup_Guard62_L].</body>
+  </string>
+  <string>
+    <id>1077005</id>
+    <name>STR_DIC_N_Ab1_BLv4_L02</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Blazerack, Smoldergeist, and Moltenspike Outposts when the level of the Redemption Landing is 4. [%dic:STR_DIC_N_Ab1_Buildup_Guard63_L], [%dic:STR_DIC_N_Ab1_Buildup_Guard64_L], and [%dic:STR_DIC_N_Ab1_Buildup_Guard65_L].</body>
+  </string>
+  <string>
+    <id>1077006</id>
+    <name>STR_DIC_M_Ab1_Q25471</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v01_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v05_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v01_Eresh_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Eresh_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v05_Eresh_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077007</id>
+    <name>STR_DIC_M_Ab1_Q25472</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v02_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v06_Li_Fi_Boss_65_Ae],[%dic:STR_DIC_M_Ab1_v02_Eresh_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Eresh_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v06_Eresh_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077008</id>
+    <name>STR_DIC_M_Ab1_Q25473</name>
+    <body>Artifact Protector;Artifact protectors that appear when the Elyos or Balaurs occupy the Wildersage, Dauntless, Anchorbrak, and Brokenblade Outposts.</body>
+  </string>
+  <string>
+    <id>1077009</id>
+    <name>STR_DIC_M_Ab1_Q25474</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v07_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v09_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v07_Vritra_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Vritra_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v09_Vritra_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077010</id>
+    <name>STR_DIC_M_Ab1_Q25475</name>
+    <body>Outpost Commander;[%dic:STR_DIC_M_Ab1_v10_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v12_Li_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v10_Vritra_Fi_Boss_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Vritra_Fi_Boss_65_Ae], and [%dic:STR_DIC_M_Ab1_v12_Vritra_Fi_Boss_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077011</id>
+    <name>STR_DIC_M_Ab1_Q25476</name>
+    <body>Base Protection Interference;[%dic:STR_DIC_M_Ab1_New_Gargoyle_65_An], [%dic:STR_DIC_M_Ab1_New_GargoyleB_65_An], [%dic:STR_DIC_M_Ab1_New_Drake_Horn_65_An], [%dic:STR_DIC_M_Ab1_New_Lich_Equip_65_An], or [%dic:STR_DIC_M_Ab1_New_Graveknight_Equip_65_An] pose a threat while lurking around the Sootguzzle, Flameruin, and Flameruin Outposts.</body>
+  </string>
+  <string>
+    <id>1077012</id>
+    <name>STR_DIC_M_Ab1_Q25477</name>
+    <body>Base Protection Interference;[%dic:STR_DIC_M_Ab1_New_Brohum_M_Sea_65_An], [%dic:STR_DIC_M_Ab1_New_Brohum_M_Young_Sea_65_An], [%dic:STR_DIC_M_Ab1_New_Lobster_Sea_65_An], [%dic:STR_DIC_M_Ab1_New_MillipedeRe_65_An], or [%dic:STR_DIC_M_Ab1_New_Cyclops_Sea_65_An] pose a threat while lurking around the Blazerack, Smoldergeist, and Moltenspike Outposts.</body>
+  </string>
+  <string>
+    <id>1077013</id>
+    <name>STR_DIC_N_Ab1_BLv6_D01</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Rattlefrost, Coldforge, and Icehowl Outposts when the level of the Harbinger's Landing is 6. [%dic:STR_DIC_N_Ab1_Buildup_Guard50_D], [%dic:STR_DIC_N_Ab1_Buildup_Guard52_D], and [%dic:STR_DIC_N_Ab1_Buildup_Guard54_D].</body>
+  </string>
+  <string>
+    <id>1077014</id>
+    <name>STR_DIC_N_Ab1_BLv6_D02</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Sliversleet, Shimmerfrost, and Chillhaunt Outposts when the level of the Harbinger's Landing is 6. [%dic:STR_DIC_N_Ab1_Buildup_Guard51_D], [%dic:STR_DIC_N_Ab1_Buildup_Guard53_D], and [%dic:STR_DIC_N_Ab1_Buildup_Guard55_D].</body>
+  </string>
+  <string>
+    <id>1077015</id>
+    <name>STR_DIC_N_Ab1_BLv8_D</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Wildersage, Dauntless, Anchorbrak, and Brokenblade Artifact Outposts when the level of the Harbinger's Landing is 8. [%dic:STR_DIC_N_Ab1_Buildup_Guard56_D], [%dic:STR_DIC_N_Ab1_Buildup_Guard57_D], [%dic:STR_DIC_N_Ab1_Buildup_Guard58_D], and [%dic:STR_DIC_N_Ab1_Buildup_Guard59_D].</body>
+  </string>
+  <string>
+    <id>1077016</id>
+    <name>STR_DIC_N_Ab1_BLv4_D01</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Sootguzzle, Flameruin, and Stokebellow Outposts when the level of the Harbinger's Landing is 4. [%dic:STR_DIC_N_Ab1_Buildup_Guard60_D], [%dic:STR_DIC_N_Ab1_Buildup_Guard61_D], and [%dic:STR_DIC_N_Ab1_Buildup_Guard62_D].</body>
+  </string>
+  <string>
+    <id>1077017</id>
+    <name>STR_DIC_N_Ab1_BLv4_D02</name>
+    <body>Landing Officer;Landing reinforcement soldiers that appear in the Sootguzzle, Flameruin, and Stokebellow Outposts when the level of the Harbinger's Landing is 4. [%dic:STR_DIC_N_Ab1_Buildup_Guard60_D], [%dic:STR_DIC_N_Ab1_Buildup_Guard61_D], and [%dic:STR_DIC_N_Ab1_Buildup_Guard62_D].</body>
+  </string>
+  <string>
+    <id>1077018</id>
+    <name>STR_DIC_M_Ab1_Named_L_all</name>
+    <body>Upper Layer Heckler;[%dic:STR_DIC_M_Ab1_Named_L_01], [%dic:STR_DIC_M_Ab1_Named_L_02], and [%dic:STR_DIC_M_Ab1_Named_L_03] are interfering with the protection of the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1077019</id>
+    <name>STR_DIC_M_Ab1_Named_D_all</name>
+    <body>Upper Layer Agitator;[%dic:STR_DIC_M_Ab1_Named_D_01], [%dic:STR_DIC_M_Ab1_Named_D_02], and [%dic:STR_DIC_M_Ab1_Named_D_03] are interfering with the protection of the Upper Abyss.</body>
+  </string>
+  <string>
+    <id>1077020</id>
+    <name>STR_DIC_M_Ab1_Q15471_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Asmodians or Balaurs occupy the Rattlefrost, Coldforge, and Icehowl Outposts. [%dic:STR_DIC_M_Ab1_v01_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v05_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v01_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Eresh_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v05_Eresh_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077021</id>
+    <name>STR_DIC_M_Ab1_Q15472_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Asmodians or Balaurs occupy the Sliversleet, Shimmerfrost, and Chillhaunt Outposts. [%dic:STR_DIC_M_Ab1_v02_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v06_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v02_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Eresh_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v06_Eresh_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077022</id>
+    <name>STR_DIC_M_Ab1_Q15473_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Asmodians or Balaurs occupy the Wildersage, Dauntless, Anchorbrak, and Brokenblade Artifact Outposts. [%dic:STR_DIC_M_Ab1_v13_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v14_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v15_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v16_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v13_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v14_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v15_Eresh_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v16_Eresh_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077023</id>
+    <name>STR_DIC_M_Ab1_Q15474_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Asmodians or Balaurs occupy the Sootguzzle, Flameruin, and Flameruin Outposts. [%dic:STR_DIC_M_Ab1_v07_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v09_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v07_Vritra_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Vritra_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v09_Vritra_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077024</id>
+    <name>STR_DIC_M_Ab1_Q15475_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Asmodians or Balaurs occupy the Blazerack, Smoldergeist, and Moltenspike Outposts. [%dic:STR_DIC_M_Ab1_v10_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v12_Da_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v10_Vritra_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Vritra_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v12_Vritra_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077025</id>
+    <name>STR_DIC_M_Ab1_Q25471_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Elyos or Balaurs occupy the Rattlefrost, Coldforge, and Icehowl Outposts. [%dic:STR_DIC_M_Ab1_v01_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v05_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v01_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v03_Eresh_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v05_Eresh_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077026</id>
+    <name>STR_DIC_M_Ab1_Q25472_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Elyos or Balaurs occupy the Sliversleet, Shimmerfrost, and Chillhaunt Outposts. [%dic:STR_DIC_M_Ab1_v02_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v06_Li_Pr_65_Ae],[%dic:STR_DIC_M_Ab1_v02_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v04_Eresh_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v06_Eresh_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077027</id>
+    <name>STR_DIC_M_Ab1_Q25473_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Elyos or Balaurs occupy the Wildersage, Dauntless, Anchorbrak, and Brokenblade Artifact Outposts. [%dic:STR_DIC_M_Ab1_v13_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v14_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v15_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v16_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v13_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v14_Eresh_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v15_Eresh_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v16_Eresh_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077028</id>
+    <name>STR_DIC_M_Ab1_Q25474_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Elyos or Balaurs occupy the Sootguzzle, Flameruin, and Flameruin Outposts. [%dic:STR_DIC_M_Ab1_v07_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v09_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v07_Vritra_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v08_Vritra_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v09_Vritra_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077029</id>
+    <name>STR_DIC_M_Ab1_Q25475_Pr</name>
+    <body>Medical Officer;Medical Officers that appear when the Elyos or Balaurs occupy the Blazerack, Smoldergeist, and Moltenspike Outposts. [%dic:STR_DIC_M_Ab1_v10_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v11_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v12_Li_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v10_Vritra_Pr_65_Ae], and [%dic:STR_DIC_M_Ab1_v11_Vritra_Pr_65_Ae], [%dic:STR_DIC_M_Ab1_v12_Vritra_Pr_65_Ae].</body>
+  </string>
+  <string>
+    <id>1077030</id>
+    <name>STR_DIC_M_Temple_Helper_Li_1</name>
+    <body>Crucible Beginner Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_LF1a_Ganix_e].</body>
+  </string>
+  <string>
+    <id>1077031</id>
+    <name>STR_DIC_M_Temple_Helper_Li_2</name>
+    <body>Crucible Basic Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_LF2_Nephele_e].</body>
+  </string>
+  <string>
+    <id>1077032</id>
+    <name>STR_DIC_M_Temple_Helper_Li_3</name>
+    <body>Crucible Intermediate Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_LF2_Diogo_e] and [%dic:STR_DIC_N_LF3_Rae_e].</body>
+  </string>
+  <string>
+    <id>1077033</id>
+    <name>STR_DIC_M_Temple_Helper_Li_4</name>
+    <body>Crucible Advanced Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_LF3_Makena_e].</body>
+  </string>
+  <string>
+    <id>1077034</id>
+    <name>STR_DIC_M_Temple_Helper_Li_5</name>
+    <body>Crucible Special Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_LF2a_Beatrice_e] and [%dic:STR_DIC_N_AB1_L_Scipio_e].</body>
+  </string>
+  <string>
+    <id>1077035</id>
+    <name>STR_DIC_M_Temple_Helper_Da_1</name>
+    <body>Crucible Beginner Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_DF1a_Amund_e].</body>
+  </string>
+  <string>
+    <id>1077036</id>
+    <name>STR_DIC_M_Temple_Helper_Da_2</name>
+    <body>Crucible Basic Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_DF2_Birte_e].</body>
+  </string>
+  <string>
+    <id>1077037</id>
+    <name>STR_DIC_M_Temple_Helper_Da_3</name>
+    <body>Crucible Intermediate Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_DF2_Carolus_e] and [%dic:STR_DIC_N_DF3_Dorothea_e].</body>
+  </string>
+  <string>
+    <id>1077038</id>
+    <name>STR_DIC_M_Temple_Helper_Da_4</name>
+    <body>Crucible Advanced Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_DF3_Einther_e].</body>
+  </string>
+  <string>
+    <id>1077039</id>
+    <name>STR_DIC_M_Temple_Helper_Da_5</name>
+    <body>Crucible Special Growth Support Officer;Growth Support Officers dispatched from Crucible. [%dic:STR_DIC_N_DF2a_Frode_e] and [%dic:STR_DIC_N_AB1_D_Gerhard_e].</body>
   </string>
 </strings>

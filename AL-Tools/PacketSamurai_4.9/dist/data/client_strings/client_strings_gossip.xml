@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/08/07 16:04:34">
+<strings generated_time="2015/09/17 14:23:13">
   <string>
     <id>1500000</id>
     <name>STR_CHAT_TEST_FA_KR_GOSSIP</name>
@@ -9307,7 +9307,7 @@
   <string>
     <id>1501232</id>
     <name>STR_CHAT_DF5_Quest_Goossip_10</name>
-    <body>Submit to Balaur Lord Tiamat.</body>
+    <body>Submit to Dragon Lord Tiamat.</body>
     <message_type>0</message_type>
     <display_type>1</display_type>
   </string>
@@ -9356,7 +9356,7 @@
   <string>
     <id>1501239</id>
     <name>STR_CHAT_DF5_Quest_Goossip_17</name>
-    <body>All praise Balaur Lord Beritra!</body>
+    <body>All praise Dragon Lord Beritra!</body>
     <message_type>0</message_type>
     <display_type>1</display_type>
   </string>
@@ -10119,7 +10119,7 @@
   <string>
     <id>1501345</id>
     <name>STR_CHAT_IDSeal_Vritra_Dragon_Gossip_06</name>
-    <body>Behold! The power of the Balaur Lord of Darkness!</body>
+    <body>Behold! The power of the Dragon Lord of Darkness!</body>
     <message_type>2</message_type>
     <display_type>1</display_type>
     <ment>STR_CHAT_IDSeal_Vritra_Dragon_Gossip_06</ment>
@@ -10574,29 +10574,659 @@
   <string>
     <id>1501408</id>
     <name>STR_CHAT_event_toy_bear_Gossip</name>
-    <body>COME RECEIVE A HUG FROM THE SNUGGLE CRUSHER 9000 AND BE FILLED WITH SOLORIUS JOY!</body>
+    <body>Hey, you! Come here and press the button on my belly!</body>
     <message_type>0</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1501409</id>
+    <name>STR_CHAT_event_toy_01_Gossip</name>
+    <body>Hairung...</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501410</id>
+    <name>STR_CHAT_event_toy_02_Gossip</name>
+    <body>Hairing...</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501411</id>
+    <name>STR_CHAT_event_toy_03_Gossip</name>
+    <body>Give me your bonus cards or I'll eat you alive!</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501412</id>
     <name>STR_CHAT_event_lucky_01_Gossip</name>
     <body>I've gotta get away quickly, nyerk! Let's make some deals before I go!</body>
     <message_type>0</message_type>
     <display_type>3</display_type>
   </string>
   <string>
-    <id>1501410</id>
+    <id>1501413</id>
     <name>STR_CHAT_event_lucky_02_Gossip</name>
     <body>I don't have much time left, nyerk! I'll be gone soon, nyerk!</body>
     <message_type>0</message_type>
     <display_type>3</display_type>
   </string>
   <string>
-    <id>1501411</id>
+    <id>1501414</id>
     <name>STR_CHAT_event_lucky_03_Gossip</name>
     <body>Candies… Candies… I could use them now!</body>
     <message_type>0</message_type>
     <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501417</id>
+    <name>STR_CHAT_LDF3_GrandRVR_DefBoss_01</name>
+    <body>I'll take the Balaur down no matter what!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501418</id>
+    <name>STR_CHAT_LDF3_GrandRVR_AtkBoss_01</name>
+    <body>Victory is ours! Onto the next strike! </body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501419</id>
+    <name>STR_CHAT_LDF3_GrandRVR_DefBoss_02</name>
+    <body>That didn't work out. Retreat!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501420</id>
+    <name>STR_CHAT_LDF3_GrandRVR_AtkBoss_02</name>
+    <body>We're getting overwhelmed. Retreat!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501421</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_01</name>
+    <body>It seems like Atreia is full of weird weather these days. Earthquakes, typhoons… Be careful out there!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501422</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_02</name>
+    <body>I hear the Library of the Sage of Sanctum just got new books! Expanding the mind is as vital as improving the body, you know. You should go!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501423</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_03</name>
+    <body>Strange cracks have been showing up all across Atreia. No one knows what's going on yet, so take caution out there! Return to the Sanctum as much as possible!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501424</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_04</name>
+    <body>Elyos is becoming less and less of a safe haven as the Asmodians turn up their ferocity with us. The Sanctum will not tolerate it! We will respond without mercy! </body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501425</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_05</name>
+    <body>Some rebellious propoganda has been going around. Don't believe everything you read. And destroy any if you find it.</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501426</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_06</name>
+    <body>Lord Azariel's Agent is about to recruit some elite legion members. I hope they get plenty of capable Daevas as applicants!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501427</id>
+    <name>STR_CHAT_HighDeva_LC1_Officer_07</name>
+    <body>'Our King is Still a Slumber There' is a book interpreting the history of Aion with a new perspective. It's been labeled as rebellious material though, due to false and seditious content. I wouldn't be caught carrying it around if I were you. </body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501428</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_01</name>
+    <body>And I... will always love you.</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501429</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_02</name>
+    <body>Ugh, that song is ancient!</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501430</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_03</name>
+    <body>Look, kid. You're not old enough to appreciate all the sorrowful nuance of this song, all right? </body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501431</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_04</name>
+    <body>Another song! Another song!</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501432</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_05</name>
+    <body>Hmm. What about the Ballad of the Lost Hero? Sound interesting?</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501433</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_06</name>
+    <body>Wow! Yeah, I like it!</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501434</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_07</name>
+    <body>I'll sing that one, then. Long ago, Aion chose a great hero, whose name was…</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501435</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_08</name>
+    <body>Yawn! What a boring opening!</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501436</id>
+    <name>STR_CHAT_HighDeva_LC1_Conversation_09</name>
+    <body>I see. </body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501437</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_01</name>
+    <body>Soon enough, fate will wash over you like one great wave. It can neither be avoided nor defeated--all you can do is face your destiny with your chin held high.</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501438</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_02</name>
+    <body>I see an ominous star looming over you, casting a great shadow. Your decisions will determine if you destroy the star, or if it destroys you. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501439</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_03</name>
+    <body>When gazing in the mirror early in the morning, don't become too captivated by yourself. You may overlook what else is lurking there...</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501440</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_04</name>
+    <body>No matter where you step now, you are surrounded by crossroads. Don't get lost in the labyrinth. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501441</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_05</name>
+    <body>Atreia stands on the brink of change. The course of history will never be the same. Trust nothing. The truth will ever be lurking behind you. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501442</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_06</name>
+    <body>Past and future are fated to meet soon enough, throwing the world into chaos. Keep your eyes on the present. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501443</id>
+    <name>STR_CHAT_HighDeva_LC1_Prophet_07</name>
+    <body>Time will move soon enough, shaking the whole of the world. But do not worry, Daeva. Your wings will stretch to freedoms you have never known before. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501444</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_01</name>
+    <body>It seems like Atreia is full of weird weather these days. Earthquakes, typhoons… Be careful out there!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501445</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_02</name>
+    <body>New books have arrived in the Temple of Knowledge in Pandaemonium! Training your mind is just as important as training your body!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501446</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_03</name>
+    <body>Mysterious cracks and noises have been reported all across Atreia. I'd recommend staying in Pandaemonium until we figure out what's causing it.</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501447</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_04</name>
+    <body>Asmodae is becoming less and less of a safe haven as the Elyos continue to attack us. Pandaemonium will not tolerate it! We will respond without mercy! </body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501448</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_05</name>
+    <body>Some rebellious propoganda has been going around. Don't believe everything you read.... and destroy any, if you find it.</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501449</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_06</name>
+    <body>Lord Azphel's Agent is about to recruit some elite legion members. I hope a lot of capable Daevas apply!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501450</id>
+    <name>STR_CHAT_HighDeva_DC1_Officer_07</name>
+    <body>'Our King is Still a Slumber There' is a book interpreting the history of Aion with a new perspective. It's been labeled as rebellious material though, due to false and seditious content. I wouldn't be caught carrying it around, if I were you. </body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501451</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_01</name>
+    <body>Country roads, take me home....</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501452</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_02</name>
+    <body>Isn't that song a little old? Sing something else!</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501453</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_03</name>
+    <body>It may be old, but it's a classic for a reason. It's about...</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501454</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_04</name>
+    <body>Another song! Another song!</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501455</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_05</name>
+    <body>All right, fine. What about the Ballad of the Forgotten Hero? Would you like that?</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501456</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_06</name>
+    <body>Let's hear it.</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501457</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_07</name>
+    <body>There once was a hero of fate.... Chosen by Aion to be great... </body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501458</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_08</name>
+    <body>No. Please stop.</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501459</id>
+    <name>STR_CHAT_HighDeva_DC1_Conversation_09</name>
+    <body>Sorry...</body>
+    <message_type>0</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501460</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_01</name>
+    <body>Soon enough, fate will wash over you like one great wave. It can neither be avoided nor defeated--all you can do is face your destiny with your chin held high.</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501461</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_02</name>
+    <body>I see an ominous star looming over you, casting a great shadow. Your decisions will determine if you destroy the star, or if it destroys you. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501462</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_03</name>
+    <body>When gazing in the mirror early in the morning, don't become too captivated by yourself. You may overlook what else is lurking there...</body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501463</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_04</name>
+    <body>No matter where you step now, you are surrounded by crossroads. Don't get lost in the labyrinth. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501464</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_05</name>
+    <body>Atreia stands on the brink of change. The course of history will never be the same. Trust nothing. The truth will ever be lurking behind you. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501465</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_06</name>
+    <body>Past and future are fated to meet soon enough, throwing the world into chaos. Keep your eyes on the present. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501466</id>
+    <name>STR_CHAT_HighDeva_DC1_Prophet_07</name>
+    <body>Time will move soon enough, shaking the whole of the world. But do not worry, Daeva. Your wings will stretch to freedoms you have never known before. </body>
+    <message_type>0</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1501467</id>
+    <name>STR_CHAT_LDF3_GrandRVR_DefBoss_03</name>
+    <body>You look better....</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501477</id>
+    <name>STR_RVR_Guard_direction_01</name>
+    <body>The Balaur are here!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501478</id>
+    <name>STR_RVR_Guard_direction_02</name>
+    <body>No one leaves here alive!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501479</id>
+    <name>STR_RVR_Guard_direction_03</name>
+    <body>Keep fighting! Reinforcements are on the way!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501480</id>
+    <name>STR_RVR_Guard_direction_04</name>
+    <body>Shards! Where did they come from?</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501481</id>
+    <name>STR_RVR_Guard_direction_05</name>
+    <body>Kill the intruders!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501482</id>
+    <name>STR_RVR_Guard_direction_06</name>
+    <body>Where are our reinforcements?</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501483</id>
+    <name>STR_RVR_Guard_direction_07</name>
+    <body>The Indratu Legion is attacking!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501484</id>
+    <name>STR_RVR_Guard_direction_08</name>
+    <body>Die, you cowards!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501485</id>
+    <name>STR_RVR_Guard_direction_09</name>
+    <body>New Heiron needs reinforcements! Now!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501486</id>
+    <name>STR_RVR_Guard_direction_10</name>
+    <body>The Balaur are here!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501487</id>
+    <name>STR_RVR_Guard_direction_11</name>
+    <body>Kill them all!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501488</id>
+    <name>STR_RVR_Guard_direction_12</name>
+    <body>Reinforcements are coming!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501489</id>
+    <name>STR_RVR_Guard_direction_13</name>
+    <body>Shards! Where did they come from?</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501490</id>
+    <name>STR_RVR_Guard_direction_14</name>
+    <body>Kill them! Now!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501491</id>
+    <name>STR_RVR_Guard_direction_15</name>
+    <body>Where are our reinforcements?</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501492</id>
+    <name>STR_RVR_Guard_direction_16</name>
+    <body>The Bakarma Legion has us surrounded!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501493</id>
+    <name>STR_RVR_Guard_direction_17</name>
+    <body>Die, you blasted cowards!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501494</id>
+    <name>STR_RVR_Guard_direction_18</name>
+    <body>Beluslan shall fall without reinforcements!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501495</id>
+    <name>STR_RVR_Guard_direction_19</name>
+    <body>Kneel before the Indratu Legion!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501496</id>
+    <name>STR_RVR_Guard_direction_20</name>
+    <body>Charge!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501497</id>
+    <name>STR_RVR_Guard_direction_21</name>
+    <body>Leave none behind! Spill their blood!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501498</id>
+    <name>STR_RVR_Guard_direction_22</name>
+    <body>I shall show you the might of Indratu!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501499</id>
+    <name>STR_RVR_Guard_direction_23</name>
+    <body>I shall trample you into dust!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501500</id>
+    <name>STR_RVR_Guard_direction_24</name>
+    <body>Haha!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501501</id>
+    <name>STR_RVR_Guard_direction_25</name>
+    <body>Resist and die, you fools!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501502</id>
+    <name>STR_RVR_Guard_direction_26</name>
+    <body>Not bad...</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501503</id>
+    <name>STR_RVR_Guard_direction_27</name>
+    <body>You'll never escape!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501504</id>
+    <name>STR_RVR_Guard_direction_28</name>
+    <body>For Victory! For Bakarma!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501505</id>
+    <name>STR_RVR_Guard_direction_29</name>
+    <body>Attack!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501506</id>
+    <name>STR_RVR_Guard_direction_30</name>
+    <body>Take them out! All of them!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501507</id>
+    <name>STR_RVR_Guard_direction_31</name>
+    <body>Hold nothing back!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501508</id>
+    <name>STR_RVR_Guard_direction_32</name>
+    <body>You will all die here!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501509</id>
+    <name>STR_RVR_Guard_direction_33</name>
+    <body>Haha!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501510</id>
+    <name>STR_RVR_Guard_direction_34</name>
+    <body>Your time is up.</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501511</id>
+    <name>STR_RVR_Guard_direction_35</name>
+    <body>Impressive...</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1501512</id>
+    <name>STR_RVR_Guard_direction_36</name>
+    <body>There's no escape!</body>
+    <message_type>2</message_type>
+    <display_type>1</display_type>
   </string>
 </strings>

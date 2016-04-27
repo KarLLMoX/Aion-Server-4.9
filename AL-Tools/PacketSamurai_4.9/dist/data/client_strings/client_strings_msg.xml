@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-16"?>
-<strings generated_time="2015/11/12 15:03:33">
+<strings generated_time="2016/01/14 14:51:16">
   <string>
     <id>1200000</id>
     <name>STR_MSG_COMBAT_MY_ATTACK</name>
@@ -17316,7 +17316,7 @@
   <string>
     <id>1400069</id>
     <name>STR_MSG_ACCUSE_UPGRADE_LEVEL</name>
-    <body>You have been placed under Lv. %num0 Probation due to reports regarding your automated hunting. Use the '/probationstatus' command to check your probation status and time remaining until probation is dropped.</body>
+    <body>You entered a Phase %num0 Restriction state because the auto hunting reports have accumulated. You can check your Restriction Phase by entering the '/Restriction' command.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
   </string>
@@ -18554,7 +18554,7 @@
   <string>
     <id>1400244</id>
     <name>STR_MSG_TREASUREBOX_DESPAWN_ALL</name>
-    <body>All Balaur treasure chests have disappeared.</body>
+    <body>All the Ancient Treasure Boxes are missing.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>alert_timer_despawn_box_all_fix</ment>
@@ -18562,7 +18562,7 @@
   <string>
     <id>1400245</id>
     <name>STR_MSG_TREASUREBOX_DESPAWN_ONE</name>
-    <body>One Balaur treasure chest has disappeared.</body>
+    <body>One of the Ancient Treasure Boxes is missing.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>alert_timer_despawn_box_one_fix</ment>
@@ -30513,7 +30513,7 @@ Continue?&lt;/p&gt;</body>
   <string>
     <id>1401922</id>
     <name>STR_MSG_IDVritra_Base_DoorOpen_09</name>
-    <body>The passage to the Danuar Omphanium will be open for five minutes.</body>
+    <body>A secret passage leading to the Hidden Runish Stone Room is open now.</body>
     <message_type>53</message_type>
     <display_type>19</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -35514,14 +35514,14 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402620</id>
     <name>STR_MSG_LDF5_Gab1_End01</name>
-    <body>The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 10 minutes.</body>
+    <body>The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 5 minutes.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1402621</id>
     <name>STR_MSG_LDF5_Gab1_End02</name>
-    <body>The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 5 minutes.</body>
+    <body>The Advance Corridor leading to the Panesterra Fortress Battle will be closed in 3 minutes.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -35802,7 +35802,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <name>STR_MSG_ENCHANT_ITEM_SUCCEEDED_EXCEED</name>
     <body>%0 has successfully enchanted %1 to level %2.</body>
     <message_type>53</message_type>
-    <display_type>3</display_type>
+    <display_type>1</display_type>
   </string>
   <string>
     <id>1402660</id>
@@ -36265,7 +36265,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402719</id>
     <name>STR_MSG_IDSeal_Vritra_Human_04</name>
-    <body>The extraction of the Balaur Lord's Relic will soon be complete. Beritra will disappear when the relic is completely extracted.</body>
+    <body>The extraction of the Dragon Lord's Relic will soon be complete. Beritra will disappear when the relic is completely extracted.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -36273,7 +36273,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402720</id>
     <name>STR_MSG_IDSeal_Vritra_Human_05</name>
-    <body>The extraction of the Balaur Lord's Relic is complete and Beritra has disappeared.</body>
+    <body>The extraction of the Dragon Lord's Relic is complete and Beritra has disappeared.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -36296,7 +36296,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402723</id>
     <name>STR_MSG_IDSeal_Vritra_Dragon_03</name>
-    <body>Beritra used  Balaur Lord's Authority and became invincible. The Power must be deactivated.</body>
+    <body>Beritra used  Dragon Lord's Authority and became invincible. The Power must be deactivated.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -36328,7 +36328,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402727</id>
     <name>STR_MSG_IDSeal_Vritra_PCGuard</name>
-    <body>Due to the desperate interference by the Detachment's Rush Squad, the extraction of the Balaur Lord's Relic has been delayed by 30 seconds.</body>
+    <body>Due to the desperate interference by the Detachment's Rush Squad, the extraction of the Dragon Lord's Relic has been delayed by 30 seconds.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>alert_timer_game_start_fix</ment>
@@ -36336,7 +36336,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402728</id>
     <name>STR_MSG_IDSeal_Guardian_01</name>
-    <body>The Seal Protector who watches over the Balaur Lord's Seal has appeared.</body>
+    <body>The Seal Protector who watches over the Dragon Lord's Seal has appeared.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>alert_timer_game_start_fix</ment>
@@ -36352,7 +36352,7 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402730</id>
     <name>STR_MSG_IDSeal_Guardian_03</name>
-    <body>When the Stigma explodes, the Balaur Lord's Power is deactivated.</body>
+    <body>When the Stigma explodes, the Dragon Lord's Power is deactivated.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
     <ment>ab_danger_alert_fix</ment>
@@ -36491,14 +36491,14 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1402748</id>
     <name>STR_MSG_TOPPING_NOTICE_EXPIRE_TIME</name>
-    <body>The %1 effect will be over in %DURATIONTIME0.</body>
-    <message_type>103</message_type>
+    <body>The %1 effect will be over in %DURATIONDAY0.</body>
+    <message_type>100</message_type>
     <display_type>2051</display_type>
   </string>
   <string>
     <id>1402749</id>
     <name>STR_MSG_TOPPING_WARNING_EXPIRE_TIME</name>
-    <body>The %1 effect will be over in %DURATIONTIME0. Before the buff effect disappears, visit the web shop and buy the associated items to continue enjoying a smooth gaming experience. [%shoplink]</body>
+    <body>The %1 effect will be over in %DURATIONDAY0. Before the buff effect disappears, visit the web shop and buy the associated items to continue enjoying a smooth gaming experience. [%shoplink]</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -38808,6 +38808,22 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <display_type>3</display_type>
   </string>
   <string>
+    <id>1403077</id>
+    <name>STR_MSG_ABYSS_OP_LEVEL_UP_LIGHT</name>
+    <body>Landing Level Up</body>
+    <message_type>4</message_type>
+    <display_type>1024</display_type>
+    <ment>buildup_levelup_fix</ment>
+  </string>
+  <string>
+    <id>1403078</id>
+    <name>STR_MSG_ABYSS_OP_LEVEL_DOWN</name>
+    <body>Landing Weakened</body>
+    <message_type>0</message_type>
+    <display_type>1024</display_type>
+    <ment>buildup_leveldown_fix</ment>
+  </string>
+  <string>
     <id>1403081</id>
     <name>STR_MSG_IDDF3_dragon_T_Start_06</name>
     <body>The Balaur's Abyss Gate Enhancer is active. The enhancer protection device will activate in 3 minutes, preventing it from being destroyed.</body>
@@ -38845,14 +38861,14 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1403086</id>
     <name>STR_VIP_NOTICE_EXPIRE_TIME_MSG</name>
-    <body>The %1 effect will be over in %DURATIONTIME0.</body>
+    <body>The %1 effect will be over in %DURATIONDAY0.</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1403087</id>
     <name>STR_VIP_WARNING_EXPIRE_TIME_MSG</name>
-    <body>The %1 effect will be over in %DURATIONTIME0. Before the buff effect disappears, visit the web shop to extend your time! [%shoplink]</body>
+    <body>The %1 effect will be over in %DURATIONDAY0. Before the buff effect disappears, visit the web shop and buy the associated items to continue enjoying a smooth gaming experience. [%shoplink]</body>
     <message_type>103</message_type>
     <display_type>2051</display_type>
   </string>
@@ -38957,7 +38973,6 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <body>%0 skill has been unlocked from your successful enchantment over 20 levels.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
-    <ment>풀셋 착용 스킬</ment>
   </string>
   <string>
     <id>1403101</id>
@@ -38965,7 +38980,6 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <body>The requirements for your skill obtained from surpassing 20 levels of enchantment are no longer fulfilled and the skill has been removed.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
-    <ment>풀셋 착용 스킬</ment>
   </string>
   <string>
     <id>1403102</id>
@@ -38973,6 +38987,14 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <body>The objects are under attack.</body>
     <message_type>53</message_type>
     <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403107</id>
+    <name>STR_MSG_ABYSS_OP_LEVEL_UP_DARK</name>
+    <body>Landing Level Up</body>
+    <message_type>5</message_type>
+    <display_type>1024</display_type>
+    <ment>buildup_levelup_fix</ment>
   </string>
   <string>
     <id>1403108</id>
@@ -39179,14 +39201,14 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
   <string>
     <id>1403137</id>
     <name>STR_MSG_GACHA_FEVER_ITEM_REWARD</name>
-    <body>Lucky Shugo took out %0% from the highest-grade box to gift to you.</body>
+    <body>You've reached Frenzy four times and received %0%!</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
   <string>
     <id>1403138</id>
     <name>STR_MSG_GACHA_FEVER_ITEM_REWARD_MULTI</name>
-    <body>Lucky Shugo took out %1 %0 from the highest-grade box to gift to you.</body>
+    <body>You've reached Frenzy four times and received %1 %0!</body>
     <message_type>53</message_type>
     <display_type>3</display_type>
   </string>
@@ -39198,6 +39220,13 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
 &lt;P&gt;Enter /Legion or /L in the chat window to type in Legion Chat.&lt;/P&gt;</body>
     <message_type>53</message_type>
     <display_type>4</display_type>
+  </string>
+  <string>
+    <id>1403141</id>
+    <name>STR_MSG_INSTANCE_DUNGEON_EXTRA_COUNT_USE</name>
+    <body>Entry successful. Token consumed.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
   </string>
   <string>
     <id>1403142</id>
@@ -39221,6 +39250,27 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <display_type>1024</display_type>
   </string>
   <string>
+    <id>1403145</id>
+    <name>STR_MSG_IDLDF5_Under_Rune_Boss_Reset_Nor</name>
+    <body>Modor has finished the battle.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403146</id>
+    <name>STR_MSG_IDF5_U3_Boss_Reset_MSG</name>
+    <body>Shield Chamber Teleport Device appeared.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403147</id>
+    <name>STR_AUTHORIZE_ENCHANT_CAN_PACK_COUNT_UP</name>
+    <body>%0 has ascended by %1 and may be packed once.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
     <id>1403148</id>
     <name>STR_MSG_BMMSG_GACHA</name>
     <body>[%file:notice_ingame_gatha.html]</body>
@@ -39235,32 +39285,340 @@ Reinstallation of the personal kisk summoning stone is allowed only when it is i
     <display_type>2048</display_type>
   </string>
   <string>
+    <id>1403172</id>
+    <name>STR_MSG_BUILDUP_POINT_QUEST_GAIN</name>
+    <body>Completed quest has contributed %0 points to the Landing.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403173</id>
+    <name>STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_QUEST</name>
+    <body>%0's completed quest has enhanced the Landing.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403174</id>
+    <name>STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY</name>
+    <body>%0 has occupied %0 and the Landing is now enhanced.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403175</id>
+    <name>STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_KILL_NPC</name>
+    <body>%0 has defeated %0 and the Landing is now enhanced.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403176</id>
+    <name>STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_DESTROY</name>
+    <body>%0 has destroyed %0 and the Landing is now enhanced.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
+    <id>1403177</id>
+    <name>STR_MSG_BUILDUP_OP_UNDER_ATTACK</name>
+    <body>%0 is under attack.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403186</id>
+    <name>STR_MSG_BUILDUP_NOTICE_CONTRIBUTE_USER_OCCUPY_BASECAMP</name>
+    <body>%0 has occupied %1 Base and the Landing is now enhanced.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+  </string>
+  <string>
     <id>1403206</id>
     <name>STR_MSG_ACCUSE_INFO_1_LEVEL_BOT</name>
-    <body>Your Probation is currently at Lv. 1. It does not affect regular play but if the number of reports increase along with level restrictions, you will have a limited XP and item acquisition.</body>
+    <body>You are in a Phase 1 Restriction State. While not affecting your gameplay in any way, a continued accumulation of reports will however raise the Restriction Phase and will limit your gaining of EXP and items.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
   </string>
   <string>
     <id>1403207</id>
     <name>STR_MSG_ACCUSE_INFO_2_LEVEL_BOT</name>
-    <body>Your Probation is currently at Lv. 2. You now have severely limited XP, Kinah, AP, gatherables, and extracted items.  If the number of reports increase along with level restrictions, you will receive a larger penalty.</body>
+    <body>You are in a Phase 2 Restriction State. You now receive less EXP, Kinah, and Abyss Points, and the chance of successful gathering and extraction has also been lowered. You will face even greater restrictions should you receive more reports, raising your Restriction Phase.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
   </string>
   <string>
     <id>1403208</id>
     <name>STR_MSG_ACCUSE_INFO_3_LEVEL_BOT</name>
-    <body>Your Probation is currently at Lv. 3.  You now have severely limited XP, Kinah, AP, gatherables, extracted items, and can no longer acquire loot. You can no longer join groups or alliances. If the number of reports increases along with level restrictions, you will receive a larger penalty.</body>
+    <body>You are in a Phase 3 Restriction State. You cannot acquire any loot, and your EXP, Kinah, and Abyss Point acquisition rates as well as gathering and extraction success rates are decreased significantly. You are also banned from joining a group or force. You will face even greater restrictions should you receive more reports, raising your Restriction Phase.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
   </string>
   <string>
     <id>1403209</id>
     <name>STR_MSG_ACCUSE_INFO_4_LEVEL_BOT</name>
-    <body>Your Probation is currently at Lv. 4.  You cannot acquire loot, XP, Kinah, AP, gatherables, extracted items, and can no longer join groups or alliances.</body>
+    <body>You are in a Phase 4 Restriction State. You cannot acquire any loot, EXP, Kinah, and Abyss Points, and are unable to gather or extract any items. You are also banned from joining a group or force.</body>
     <message_type>53</message_type>
     <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403215</id>
+    <name>STR_MSG_RVR_DIRECT_PORTAL_OPEN</name>
+    <body>The Legion's Corridor has opened.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1403222</id>
+    <name>STR_MSG_RVR_DIRECT_PORTAL_OPEN_NOTICE</name>
+    <body>&lt;p&gt;The battle has begun.&lt;/p&gt;
+&lt;p&gt;If you leave the battlefield,&lt;/p&gt;
+&lt;p&gt;you will automatically return to your camp and be removed from the Alliance.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;You will also be removed from the Alliance if you return by using a skill or an item.&lt;/p&gt;</body>
+    <display_type>4</display_type>
+  </string>
+  <string>
+    <id>1403223</id>
+    <name>STR_MSG_RVR_DIRECT_PORTAL</name>
+    <body>Brigade General's Urgent Order</body>
+    <message_type>8</message_type>
+    <display_type>1024</display_type>
+  </string>
+  <string>
+    <id>1403228</id>
+    <name>STR_MSG_RVR_DIRECT_PORTAL_OUT_NOTICE</name>
+    <body>You have been away from the battlefield for too long and were removed from the Alliance.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+  </string>
+  <string>
+    <id>1403229</id>
+    <name>STR_CONFIRM_RVR_DIRECT_PORTAL_OUT</name>
+    <body>&lt;p&gt;You have left the battlefield. &lt;/p&gt;&lt;p&gt;Unless you return within a certain period, you will automatically be withdrawn from the Alliance&lt;/p&gt;&lt;p&gt;and be forced to return to your base. &lt;/p&gt;</body>
+    <display_type>4</display_type>
+  </string>
+  <string>
+    <id>1403248</id>
+    <name>STR_MSG_RVR_LF3_BOSS_HEAL_NOTICE_01</name>
+    <body>The Elyos Protectors have successfully rescued General Miltar.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403249</id>
+    <name>STR_MSG_RVR_LF3_BOSS_HEAL_NOTICE_02</name>
+    <body>The Elyos Protectors have successfully rescued General Kupiaro.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403250</id>
+    <name>STR_MSG_RVR_LF3_BOSS_HEAL_NOTICE_03</name>
+    <body>The Elyos Protectors have successfully rescued General Kupiaro.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403251</id>
+    <name>STR_MSG_RVR_LF3_BOSS_KILL_NOTICE_01</name>
+    <body>The Asmodian Raiders have successfully eliminated General Miltar.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403252</id>
+    <name>STR_MSG_RVR_LF3_BOSS_KILL_NOTICE_02</name>
+    <body>The Asmodian Raiders have successfully eliminated General Kupiaro.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403253</id>
+    <name>STR_MSG_RVR_LF3_BOSS_KILL_NOTICE_03</name>
+    <body>The Asmodian Raiders have successfully eliminated General Lanstri.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403254</id>
+    <name>STR_MSG_RVR_DF3_BOSS_HEAL_NOTICE_01</name>
+    <body>The Asmodian Protectors have successfully rescued General Magken.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403255</id>
+    <name>STR_MSG_RVR_DF3_BOSS_HEAL_NOTICE_02</name>
+    <body>The Asmodian Protectors have successfully rescued General Hark.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403256</id>
+    <name>STR_MSG_RVR_DF3_BOSS_HEAL_NOTICE_03</name>
+    <body>The Asmodian Protectors have successfully rescued General Tombolk.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403257</id>
+    <name>STR_MSG_RVR_DF3_BOSS_KILL_NOTICE_01</name>
+    <body>The Elyos Raiders have successfully eliminated General Magken.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403258</id>
+    <name>STR_MSG_RVR_DF3_BOSS_KILL_NOTICE_02</name>
+    <body>The Elyos Raiders have successfully eliminated General Hark.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403259</id>
+    <name>STR_MSG_RVR_DF3_BOSS_KILL_NOTICE_03</name>
+    <body>The Elyos Raiders have successfully eliminated General Tombolk.</body>
+    <message_type>53</message_type>
+    <display_type>19</display_type>
+    <ment>fieldabyss_boss_despawn_fix</ment>
+  </string>
+  <string>
+    <id>1403260</id>
+    <name>STR_MSG_RETRY_DISABLE_COUNT</name>
+    <body>You have used all of your disassembly tokens.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403261</id>
+    <name>STR_MSG_RETRY_DISABLE_QINA</name>
+    <body>You do not have enough Kinah to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403262</id>
+    <name>STR_MSG_RETRY_DISABLE_AP</name>
+    <body>You do not have enough AP to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403263</id>
+    <name>STR_MSG_RETRY_DISABLE_ITEM</name>
+    <body>You do not have enough items to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403264</id>
+    <name>STR_MSG_RETRY_DISABLE_ETC</name>
+    <body>You cannot disassemble due to a system error.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403265</id>
+    <name>STR_MSG_RETRY_SUCCEEDED_QINA</name>
+    <body>You spent %0 Kinah to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403266</id>
+    <name>STR_MSG_RETRY_SUCCEEDED_AP</name>
+    <body>You spent %0 AP to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403267</id>
+    <name>STR_MSG_RETRY_SUCCEEDED_TEM</name>
+    <body>You spent %0 %1 to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403268</id>
+    <name>STR_MSG_RETRY_SUCCEEDED_ITEM</name>
+    <body>You spent %0 %1 to disassemble.</body>
+    <message_type>53</message_type>
+    <display_type>1</display_type>
+  </string>
+  <string>
+    <id>1403275</id>
+    <name>STR_MSG_RVR_TIMER_NOTICE_01</name>
+    <body>The Legion's Corridor will close in 45 minutes. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_60s_fix</ment>
+  </string>
+  <string>
+    <id>1403276</id>
+    <name>STR_MSG_RVR_TIMER_NOTICE_02</name>
+    <body>The Legion's Corridor will close in 30 minutes. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_60s_fix</ment>
+  </string>
+  <string>
+    <id>1403277</id>
+    <name>STR_MSG_RVR_TIMER_NOTICE_03</name>
+    <body>The Legion's Corridor will close in 15 minutes. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_60s_fix</ment>
+  </string>
+  <string>
+    <id>1403278</id>
+    <name>STR_MSG_RVR_TIMER_NOTICE_04</name>
+    <body>The Legion's Corridor will close in 10 minutes. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_60s_fix</ment>
+  </string>
+  <string>
+    <id>1403279</id>
+    <name>STR_MSG_RVR_TIMER_NOTICE_05</name>
+    <body>The Legion's Corridor will close in 5 minutes. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_60s_fix</ment>
+  </string>
+  <string>
+    <id>1403280</id>
+    <name>STR_MSG_RVR_TIMER_NOTICE_06</name>
+    <body>The Legion's Corridor will close in 1 minute. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_60s_fix</ment>
+  </string>
+  <string>
+    <id>1403281</id>
+    <name>STR_MSG_RVR_CLOSING_NOTICE_01</name>
+    <body>The Legion's Corridor will close in 30 seconds. Once the corridor is closed, the Alliance is automatically disbanded and members are automatically returned.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
+    <ment>timer_alert_30s_fix</ment>
+  </string>
+  <string>
+    <id>1403282</id>
+    <name>STR_MSG_RVR_DIRECT_PORTAL_CLOSE_COMPULSION_TELEPORT</name>
+    <body>When the Legion's Corridor closes, you will automatically return to the entrance where you came from.</body>
+    <message_type>53</message_type>
+    <display_type>3</display_type>
   </string>
   <string>
     <id>1403353</id>

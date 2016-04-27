@@ -7270,7 +7270,7 @@
 		<packet id="0x30" name="_________SM_BODYGARD_END"> <!-- Bodygard on Groupmember ended -->
             <part name="unk" type="c"/>
 		</packet>
-		<packet id="0x12F" name="________________SM_0x12F"> <!-- NEW/TODO 4.9 -->
+		<packet id="0x12F" name="________________SM_TERRETORY_LIST"> <!-- NEW/TODO 4.9 -->
 			<part name="size" type="h" id="0"/>
 			<for id="0">
 				<part name="Rank?" type="d"/>
