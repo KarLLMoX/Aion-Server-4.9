@@ -1384,7 +1384,7 @@ function getActionLines($key)
         
         if ($petid != "")
         {
-            $ret .= '            <adoptpet petId="'.$petid).'"';
+            $ret .= '            <adoptpet petId="'.$petid.'"';
             
             if (strtoupper($confir) == "TRUE")
                 $ret .= ' sidekick="true"';
