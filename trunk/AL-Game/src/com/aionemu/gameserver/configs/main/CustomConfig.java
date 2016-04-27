@@ -279,24 +279,6 @@ public class CustomConfig {
     public static String VORTEX_BRUSTHONIN_SCHEDULE;
     @Property(key = "gameserver.vortex.duration", defaultValue = "1")
     public static int VORTEX_DURATION;
-
-    /**
-     * Serial Killer System
-     */
-    @Property(key = "gameserver.serialkiller.enable", defaultValue = "true")
-    public static boolean SERIALKILLER_ENABLED;
-    @Property(key = "gameserver.serialkiller.handledworlds", defaultValue = "")
-    public static String SERIALKILLER_WORLDS = "";
-    @Property(key = "gameserver.serialkiller.kills.refresh", defaultValue = "5")
-    public static int SERIALKILLER_REFRESH;
-    @Property(key = "gameserver.serialkiller.kills.decrease", defaultValue = "1")
-    public static int SERIALKILLER_DECREASE;
-    @Property(key = "gameserver.serialkiller.level.diff", defaultValue = "10")
-    public static int SERIALKILLER_LEVEL_DIFF;
-    @Property(key = "gameserver.serialkiller.1st.rank.kills", defaultValue = "25")
-    public static int KILLER_1ST_RANK_KILLS;
-    @Property(key = "gameserver.serialkiller.2nd.rank.kills", defaultValue = "50")
-    public static int KILLER_2ND_RANK_KILLS;
     @Property(key = "gameserver.reward.service.enable", defaultValue = "false")
     public static boolean ENABLE_REWARD_SERVICE;
     /**

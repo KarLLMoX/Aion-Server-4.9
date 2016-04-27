@@ -35,6 +35,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.TreeMap;
 
@@ -55,7 +56,7 @@ public class MySQL5LegionDAO extends LegionDAO {
     private static final String SELECT_LEGION_QUERY1 = "SELECT * FROM legions WHERE id=?";
     private static final String SELECT_LEGION_QUERY2 = "SELECT * FROM legions WHERE name=?";
     private static final String DELETE_LEGION_QUERY = "DELETE FROM legions WHERE id = ?";
-    private static final String UPDATE_LEGION_QUERY = "UPDATE legions SET name=?, level=?, contribution_points=?, deputy_permission=?, centurion_permission=?, legionary_permission=?, volunteer_permission=?, disband_time=?, description=?, joinType=?, minJoinLevel=? WHERE id=?";
+    private static final String UPDATE_LEGION_QUERY = "UPDATE legions SET name=?, level=?, contribution_points=?, deputy_permission=?, centurion_permission=?, legionary_permission=?, volunteer_permission=?, disband_time=?, description=?, joinType=?, minJoinLevel=?, territory=? WHERE id=?";
     /**
      * Legion Description Query *
      */
@@ -108,6 +109,27 @@ public class MySQL5LegionDAO extends LegionDAO {
         }
     }
 
+    @Override
+    public Collection<Integer> getLegionIdswithTerritories() {
+    	Collection<Integer> legionIds = new ArrayList<Integer>();
+    	PreparedStatement s = DB.prepareStatement("SELECT id FROM legions WHERE territory > 0");
+        try 
+        {
+
+            ResultSet rs = s.executeQuery();
+            while (rs.next()) 
+            {
+                legionIds.add(rs.getInt("id"));
+            }            
+        } catch (SQLException e) {
+            log.error("Error on getting legions with territoryId... Error: ", e);
+        } finally {
+            DB.close(s);
+        }
+        
+        return legionIds;
+    }
+    
     /**
      * {@inheritDoc}
      */
@@ -146,8 +168,9 @@ public class MySQL5LegionDAO extends LegionDAO {
                 stmt.setInt(8, legion.getDisbandTime());
                 stmt.setString(9, legion.getLegionDiscription());
                 stmt.setInt(10, legion.getLegionJoinType());
-                stmt.setInt(11, legion.getMinLevel());
-                stmt.setInt(12, legion.getLegionId());
+                stmt.setInt(11, legion.getMinLevel());                
+                stmt.setInt(12, (legion.getTerritory() != null && legion.getTerritory().getId() > 0) ? legion.getTerritory().getId() : 0);
+                stmt.setInt(13, legion.getLegionId());
                 
                 if (!legion.getJoinRequestMap().isEmpty())
                 {
@@ -206,12 +229,22 @@ public class MySQL5LegionDAO extends LegionDAO {
                     legion.setDescription(resultSet.getString("description"));
                     legion.setJoinType(resultSet.getInt("joinType"));
                     legion.setMinJoinLevel(resultSet.getInt("minJoinLevel"));
-                    legion.setDisbandTime(resultSet.getInt("disband_time"));
+                                                            
+                    int terrId = resultSet.getInt("territory");
+                    LegionTerritory t = new LegionTerritory(terrId);
+                    if (terrId > 0)
+                    {
+                    	t.setLegionId(legion.getLegionId());
+                    	t.setLegionName(legion.getLegionName());
+                    }
+                    legion.setTerritory(t);
                     
                     for (LegionJoinRequest ljr : loadLegionJoinRequests(legion.getLegionId()))
                     {
                     	legion.addJoinRequest(ljr);
-                    }                    
+                    } 
+                    
+                    legion.setDisbandTime(resultSet.getInt("disband_time"));
                 }
             }
         });
@@ -251,6 +284,15 @@ public class MySQL5LegionDAO extends LegionDAO {
                     legion.setJoinType(resultSet.getInt("joinType"));
                     legion.setMinJoinLevel(resultSet.getInt("minJoinLevel"));
 
+                    int terrId = resultSet.getInt("territory");
+                    LegionTerritory t = new LegionTerritory(terrId);
+                    if (terrId > 0)
+                    {
+                    	t.setLegionId(legion.getLegionId());
+                    	t.setLegionName(legion.getLegionName());
+                    }
+                    legion.setTerritory(t);
+                    
                     for (LegionJoinRequest ljr : loadLegionJoinRequests(legionId))
                     {
                     	legion.addJoinRequest(ljr);

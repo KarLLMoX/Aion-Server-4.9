@@ -52,10 +52,12 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.*;
 import com.aionemu.gameserver.services.PunishmentService.PunishmentType;
 import com.aionemu.gameserver.services.abyss.AbyssSkillService;
+import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
 import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.services.territory.TerritoryService;
 import com.aionemu.gameserver.services.toypet.PetService;
 import com.aionemu.gameserver.services.transfers.PlayerTransferService;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
@@ -370,12 +372,10 @@ public final class PlayerEnterWorldService {
             // SM_WEATHER miss on login (but he 'live' in CM_LEVEL_READY.. need invistigate)
             client.sendPacket(new SM_GAME_TIME());
             LegionService.getInstance().sendLegionJoinRequestPacketonEnterWorld(player);
-            SerialKillerService.getInstance().onLogin(player);
 
             if (player.isLegionMember()) 
             {
                 LegionService.getInstance().onLogin(player);
-                
                 if (player.getLegionMember().isBrigadeGeneral() && !player.getLegion().getJoinRequestMap().isEmpty())
                 	client.sendPacket(new SM_LEGION_JOIN_REQUEST_LIST(player.getLegion().getJoinRequestMap().values()));
             }
@@ -385,6 +385,7 @@ public final class PlayerEnterWorldService {
             	LegionService.getInstance().handleJoinRequestGetAnswer(player);
             }
 
+            TerritoryService.getInstance().onEnterWorld(player);
             client.sendPacket(new SM_TITLE_INFO(player));
             client.sendPacket(new SM_EMOTION_LIST((byte) 0, player.getEmotions().getEmotions()));
             client.sendPacket(new SM_BD_UNK());//TODO

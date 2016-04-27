@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.team.legion.LegionWarehouse;
 import javolution.util.FastList;
 
 import java.sql.Timestamp;
+import java.util.Collection;
 import java.util.TreeMap;
 
 /**
@@ -165,4 +166,6 @@ public abstract class LegionDAO implements IDFactoryAwareDAO {
 	public abstract void deleteLegionJoinRequest(int legionId, int playerId);
 	
 	public abstract void deleteLegionJoinRequest(LegionJoinRequest legionJoinRequest);
+
+	public abstract Collection<Integer> getLegionIdswithTerritories(); 
 }

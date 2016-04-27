@@ -7,7 +7,7 @@ package com.aionemu.gameserver.model.gameobjects.player;
  * @author CoolyT
  *
  */
-public class PlayerConquererDefenderData 
+public class PlayerConquererProtectorData 
 {
     private boolean isProtector = false;
     private int ProtectorBuffId = 0;

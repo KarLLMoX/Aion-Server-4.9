@@ -95,7 +95,6 @@ import com.aionemu.gameserver.services.HTMLService;
 import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.PvpService;
 import com.aionemu.gameserver.services.QuestService;
-import com.aionemu.gameserver.services.SerialKillerService;
 import com.aionemu.gameserver.services.SkillLearnService;
 import com.aionemu.gameserver.services.abyss.AbyssService;
 import com.aionemu.gameserver.services.craft.CraftSkillUpdateService;
@@ -259,7 +258,6 @@ public class PlayerController extends CreatureController<Player> {
 
     // TODO [AT] move
     public void onLeaveWorld() {
-        SerialKillerService.getInstance().onLeaveMap(getOwner());
         InstanceService.onLeaveInstance(getOwner());
     }
 

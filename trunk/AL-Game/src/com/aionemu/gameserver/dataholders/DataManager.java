@@ -110,8 +110,6 @@ public final class DataManager {
     public static ChallengeData CHALLENGE_DATA;
     public static TownSpawnsData TOWN_SPAWNS_DATA;
     public static AbyssRaceBonusData ABYSS_RACE_BONUS_DATA;
-    public static SerialKillerData SERIAL_KILLER_DATA;
-    public static SerialGuardData SERIAL_GUARD_DATA;
     public static SkillChargeData SKILL_CHARGE_DATA;
     public static ItemPurificationData ITEM_PURIFICATION_DATA;
     public static DecomposableSelectItemsData DECOMPOSABLE_SELECT_ITEM_DATA;
@@ -233,8 +231,6 @@ public final class DataManager {
         MULTI_RETURN_ITEM_DATA = data.multiReturnItemData;
         HOTSPOT_TELEPORTER_DATA = data.hotspotTeleporterData;
         ATREIAN_PASSPORT_DATA = data.atreianPassportData;
-        SERIAL_KILLER_DATA = data.serialKillerData;
-        SERIAL_GUARD_DATA = data.serialGuardData;
         BASE_DATA = data.baseData;
     	BERITRA_DATA = data.beritraData;
         ABSOLUTE_STATS_DATA = data.absoluteStatsData;

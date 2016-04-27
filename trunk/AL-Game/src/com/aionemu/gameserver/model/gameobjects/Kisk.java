@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.stats.KiskStatsTemplate;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_KISK_UPDATE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.SerialKillerService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.knownlist.Visitor;
@@ -198,11 +197,6 @@ public class Kisk extends SummonedObject<Player> {
                 default:
                     return false;
             }
-        }
-
-        if (SerialKillerService.getInstance().isRestrictDynamicBindstone(player)) {
-            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_CANNOT_REGISTER_BINDSTONE_NOT_BINDSTONE);
-            return false;
         }
 
         if (this.getCurrentMemberCount() >= getMaxMembers()) {

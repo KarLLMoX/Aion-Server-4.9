@@ -92,9 +92,8 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.services.ConquerorsService;
 import com.aionemu.gameserver.services.HousingService;
-import com.aionemu.gameserver.services.serialkillers.SerialKiller;
+import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.skillengine.condition.ChainCondition;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.skillengine.effect.EffectTemplate;
@@ -257,7 +256,6 @@ public class Player extends Creature {
     private int portAnimation;
     private boolean isInSprintMode;
     private List<ActionObserver> rideObservers;
-    private SerialKiller skList;
     byte housingStatus = HousingFlags.BUY_STUDIO_ALLOWED.getId();
     private int battleReturnMap;
     private float[] battleReturnCoords;
@@ -283,7 +281,7 @@ public class Player extends Creature {
     private boolean isOnFastTrack = false;
     private boolean isInLiveParty = false;
 	//private int linkedSkill;
-    private PlayerConquererDefenderData conquerorDefenderData;
+    private PlayerConquererProtectorData conquerorProtectorData;
     /**
      * Used for JUnit tests
      */
@@ -316,7 +314,6 @@ public class Player extends Creature {
         setGameStats(new PlayerGameStats(this));
         setLifeStats(new PlayerLifeStats(this));
         inGameShop = new InGameShop();
-        skList = new SerialKiller(this);
         absStatsHolder = new AbsoluteStatOwner(this, 0);
     }
 
@@ -1558,14 +1555,6 @@ public class Player extends Creature {
         return houseObjectCooldownList;
     }
 
-    public SerialKiller getSKInfo() {
-        return skList;
-    }
-
-    public void setSKInfo(SerialKiller serialKiller) {
-        skList = serialKiller;
-    }
-
     /**
      * @author IlBuono
      */
@@ -2653,14 +2642,14 @@ public class Player extends Creature {
 		return playerCommonData.getUpgradeArcade();
 	}
 
-	public PlayerConquererDefenderData getConquerorDefenderData() {
-		if (conquerorDefenderData == null)
-			this.conquerorDefenderData = new PlayerConquererDefenderData();
+	public PlayerConquererProtectorData getConquerorProtectorData() {
+		if (conquerorProtectorData == null)
+			this.conquerorProtectorData = new PlayerConquererProtectorData();
 		
-		return conquerorDefenderData;
+		return conquerorProtectorData;
 	}
 
-	public void setConquerorDefenderData(PlayerConquererDefenderData conquerorDefenderData) {
-		this.conquerorDefenderData = conquerorDefenderData;
+	public void setConquerorDefenderData(PlayerConquererProtectorData conquerorDefenderData) {
+		this.conquerorProtectorData = conquerorDefenderData;
 	}
 }

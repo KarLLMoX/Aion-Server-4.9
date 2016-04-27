@@ -22,12 +22,15 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.model.team.legion.Legion;
 import com.aionemu.gameserver.model.team.legion.LegionRank;
+import com.aionemu.gameserver.model.team.legion.LegionTerritory;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_LEGION_UPDATE_MEMBER;
 import com.aionemu.gameserver.services.LegionService;
+import com.aionemu.gameserver.services.territory.TerritoryService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.Util;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 import com.aionemu.gameserver.world.World;
+
 import javolution.util.FastList;
 
 import java.util.List;
@@ -312,6 +315,37 @@ public class LegionCommand extends AdminCommand {
                 PacketSendUtility.sendMessage(player, "rank " + params[2] + " is not supported.");
             }
         }
+        else if (params[0].equalsIgnoreCase("territory")) 
+        {
+        	if (player.getLegion() == null)
+        	{
+        		PacketSendUtility.sendMessage(player, "You are not in a Legion !");
+        		return;
+        	}
+        	
+        	if (params[1].equalsIgnoreCase("list"))
+        	{
+        		for (LegionTerritory territory : TerritoryService.getInstance().getTerritories())
+        		{
+        			PacketSendUtility.sendMessage(player, "Id: "+territory.getId()+" owned by Legion: "+territory.getLegionName());
+        		}
+        	}
+        	else if (params[1].equalsIgnoreCase("cancel"))
+        	{
+        		if (player.getLegion().getTerritory().getId() > 0)
+        			TerritoryService.getInstance().onLooseTerritory(player.getLegion());
+        		else PacketSendUtility.sendMessage(player, "Your Legion didn't owns an territory..");
+        	}
+        	else if (params[1].equalsIgnoreCase("capture"))
+        	{
+            	if (params[2] == null || params[2].isEmpty())
+        		{
+        			onFail(player,"Missing territoryId parameter !");
+        			return;
+        		}
+        		TerritoryService.getInstance().onConquerTerritory(player.getLegion(), Integer.parseInt(params[2]));        		
+        	}
+        }
     }
 
     private Legion verifyLegionExists(Player player, String name) {
@@ -343,11 +377,12 @@ public class LegionCommand extends AdminCommand {
 
         PacketSendUtility.sendMessage(player, "//legion info <legion name> : get list of legion members");
         PacketSendUtility.sendMessage(player, "//legion bg <legion name> <new bg name> : set a new brigade general to the legion");
-        PacketSendUtility.sendMessage(player, "//legion kick <player name> : kick player to this legion");
+        PacketSendUtility.sendMessage(player, "//legion kick <player name> : kick player from this legion");
         PacketSendUtility.sendMessage(player, "//legion invite <legion name> <player name> : add player to legion");
         PacketSendUtility.sendMessage(player, "//legion disband <legion name> : disbands legion");
         PacketSendUtility.sendMessage(player, "//legion setlevel <legion name> <level> : sets legion level");
         PacketSendUtility.sendMessage(player, "//legion setpoints <legion name> <points> : set contributing points");
         PacketSendUtility.sendMessage(player, "//legion setname <legion name> <new name> : change legion name");
+        PacketSendUtility.sendMessage(player, "//legion territory <capture | cancel | list> <territoryId> : capture, cancel or list territories");
     }
 }

@@ -108,7 +108,7 @@ public class ServerPacketsOpcodes {
         addPacketOpcode(SM_TARGET_UPDATE.class, 0x51, idSet);
         addPacketOpcode(SM_HOUSE_EDIT.class, 0x52, idSet);
         addPacketOpcode(SM_PLASTIC_SURGERY.class, 0x53, idSet);
-        addPacketOpcode(SM_SERIAL_KILLER.class, 0x54, idSet);
+        addPacketOpcode(SM_CONQUEROR_PROTECTOR.class, 0x54, idSet);
         addPacketOpcode(SM_INFLUENCE_RATIO.class, 0x55, idSet);
         addPacketOpcode(SM_FORTRESS_STATUS.class, 0x56, idSet);
         addPacketOpcode(SM_CAPTCHA.class, 0x57, idSet);
@@ -214,6 +214,7 @@ public class ServerPacketsOpcodes {
         addPacketOpcode(SM_LEGION_SEND_EMBLEM.class, 0xD5, idSet);
         addPacketOpcode(SM_LEGION_SEND_EMBLEM_DATA.class, 0xD6, idSet);
         addPacketOpcode(SM_LEGION_UPDATE_EMBLEM.class, 0xD7, idSet);
+        addPacketOpcode(SM_TERRITORY_LIST.class, 0x12F, idSet);
 		addPacketOpcode(SM_REGION_INFO.class, 0xD8, idSet);
 		addPacketOpcode(SM_PLAYER_REGION.class, 0xD9, idSet);
         addPacketOpcode(SM_SHIELD_EFFECT.class, 0xDA, idSet);

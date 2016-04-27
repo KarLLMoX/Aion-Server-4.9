@@ -37,7 +37,6 @@ import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.FastTrackService;
-import com.aionemu.gameserver.services.SerialKillerService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.WeatherService;
@@ -107,9 +106,6 @@ public class CM_LEVEL_READY extends AionClientPacket {
 
 		 //SM_NPC_INFO Bases
 		 BaseService.getInstance().onEnterBaseWorld(activePlayer);
-
-		 // SM_SERIAL_KILLER
-		 SerialKillerService.getInstance().onEnterMap(activePlayer);
 
 		 // because fortress buff should only be avaible in fortress locations
 		 //SiegeService.getInstance().fortressBuffRemove(activePlayer);
