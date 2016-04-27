@@ -2,7 +2,6 @@
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
 	<!--
 		[BEGIN] SUMMARY
-			11321 [SCRIPT] Soar from Levinshor
 			13700 [XML] The Unknown Balaurea
 			13701 [XML] A New Land, A New War
 			13702 [XML] Tomul Tap
@@ -10,32 +9,13 @@
 			13704 [XML] Fona's Quick Fix
 			13705 [XML] Coastal Bypass Operation
 			13706 [XML] North Relay Relay
-			13707 [TODO] Unused Quest //REMOVED (LVL99)
 			13708 [SCRIPT] Proximity Protect
-			13709 [TODO] Unused Quest //REMOVED (LVL99)
-			13711 [TODO] Unused Quest//REMOVED (LVL99)
 			13712 [XML] Mettling with Medals
-			13713 [TODO] Unused Quest //REMOVED (LVL99)
 			13714 [XML] Itea's Enticing Offer
-			13715 [TODO] Unused Quest //REMOVED (LVL99)
-			13717 [TODO] Unused Quest //REMOVED (LVL99)
-			13720 [TODO] Unused Quest //REMOVED (LVL99)
-			13722 [TODO] Unused Quest //REMOVED (LVL99)
-			13730 [SCRIPT] [Urgent Order] Fona's Request //REMOVED (LVL99)
-			13731 [SCRIPT] [Urgent Order] Feleus' Request //REMOVED (LVL99)
-			13732 [SCRIPT] [Urgent Order] Titanos' Request //REMOVED (LVL99)
-			13733 [SCRIPT] [Urgent Order] Tipaon's Request //REMOVED (LVL99)
-			13734 [SCRIPT] [Urgent Order] Rovicos' Request //REMOVED (LVL99)
-			13735 [SCRIPT] [Urgent Order] Faris' Request //REMOVED (LVL99)
-			13736 [SCRIPT] [Urgent Order] Pasi' Request //REMOVED (LVL99)
-			13737 [SCRIPT] [Urgent Order] Penteus' Request //REMOVED (LVL99)
-			13738 [SCRIPT] [Urgent Order] Povit's Request //REMOVED (LVL99)
-			13739 [SCRIPT] [Urgent Order] Olympon's Request //REMOVED (LVL99)
-			13740 [SCRIPT] [Urgent Order] Pompeius' Request //REMOVED (LVL99)
 			13741 [XML] [Daily] Subjugate the Fissured Aetheric Field
 			13742 [XML] [Daily] Bringing Law to the Cut
 			13743 [XML] [Daily] Bringing the Old Road up to Code
-			13744 [XML] [Urgent Order] Agent in Need
+			13744 [SCRIPT] [Urgent Order] Agent in Need
 			13745 [SCRIPT] [Urgent Order] Eljer's Request
 			13758 [SCRIPT] [Weekly] Cut Throat Tactics
 			13759 [SCRIPT] [Weekly] Oust the Aquamancers
@@ -58,45 +38,26 @@
 			23704 [XML] Loud Noises
 			23705 [XML] We Don't Need No Stinking Road
 			23706 [XML] Don't Eat the Messenger
-			23707 [TODO] Unused Quest //REMOVED (LVL99)
 			23708 [SCRIPT] Sound the Alarm
-			23709 [TODO] Unused Quest//REMOVED (LVL99)
-			23711 [TODO] Unused Quest //REMOVED (LVL99)
 			23712 [XML] Abeorn Makes Medals
-			23713 [TODO] Deleted Quest //REMOVED (LVL99)
 			23714 [XML] Legen-dary Medals
-			23715 [TODO] Deleted Quest //REMOVED (LVL99)
-			23717 [TODO] Deleted Quest //REMOVED (LVL99)
-			23720 [TODO] Deleted Quest //REMOVED (LVL99)
-			23722 [TODO] Deleted Quest //REMOVED (LVL99)
-			23730 [SCRIPT] [Urgent Order] Apetit's Request //REMOVED (LVL99)
-			23731 [SCRIPT] [Urgent Order] Reheln's Request //REMOVED (LVL99)
-			23732 [SCRIPT] [Urgent Order] Shri's Request //REMOVED (LVL99)
-			23733 [SCRIPT] [Urgent Order] Vanst's Request //REMOVED (LVL99)
-			23734 [SCRIPT] [Urgent Order] Rink's Request //REMOVED (LVL99)
-			23735 [SCRIPT] [Urgent Order] Kestum's Request //REMOVED (LVL99)
-			23736 [SCRIPT] [Urgent Order] Gemuit's Request //REMOVED (LVL99)
-			23737 [SCRIPT] [Urgent Order] Kaymen's Request //REMOVED (LVL99)
-			23738 [SCRIPT] [Urgent Order] Ziln's Request //REMOVED (LVL99)
-			23739 [SCRIPT] [Urgent Order] Kenoen's Request //REMOVED (LVL99)
-			23740 [SCRIPT] [Urgent Order] Mete's Request //REMOVED (LVL99)
 			23741 [XML] [Daily] Stonepike Strike
 			23742 [XML] [Daily] Vicious Half-Breeds
 			23743 [XML] [Daily] Underwood Under Spell
-			23744 [XML] [Urgent Order] Effect Elyos Elimination
+			23744 [SCRIPT] [Urgent Order] Effect Elyos Elimination
 			23745 [SCRIPT] [Urgent Order] No More in Levinshor
-			23758 [XML] [Weekly] Oust the South
-			23759 [XML] [Weekly] Business in the South
-			23760 [XML] [Weekly] Southern Hospitality
-			23761 [XML] [Weekly] Decrease the East
-			23762 [XML] [Weekly] A Spirited Attack
-			23763 [XML] [Weekly] Cries of Spies
-			23764 [XML] [Weekly] Give Your Best to the West
-			23765 [XML] [Weekly] Feralmage Rage
-			23766 [XML] [Weekly] Destroy the Restorers
-			23767 [XML] [Weekly] Excitement in the North
-			23768 [XML] [Weekly] Northern Fights
-			23769 [XML] [Weekly] Nip the North
+			23758 [SCRIPT] [Weekly] Oust the South
+			23759 [SCRIPT] [Weekly] Business in the South
+			23760 [SCRIPT] [Weekly] Southern Hospitality
+			23761 [SCRIPT] [Weekly] Decrease the East
+			23762 [SCRIPT] [Weekly] A Spirited Attack
+			23763 [SCRIPT] [Weekly] Cries of Spies
+			23764 [SCRIPT] [Weekly] Give Your Best to the West
+			23765 [SCRIPT] [Weekly] Feralmage Rage
+			23766 [SCRIPT] [Weekly] Destroy the Restorers
+			23767 [SCRIPT] [Weekly] Excitement in the North
+			23768 [SCRIPT] [Weekly] Northern Fights
+			23769 [SCRIPT] [Weekly] Nip the North
 			26931 [XML] The Hyperion Awaits
 		[END] SUMMARY
 	-->

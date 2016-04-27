@@ -62,16 +62,6 @@
                     3061 [XML] Obstacle to Cultivation
                     3062 [XML] Calydon Eradication
                     3063 [XML] Excavation Safety
-                    3064 [UNUSED] Platinum (Warrior 46)
-                    3065 [UNUSED] Platinum (Mage 46)
-                    3066 [UNUSED] Platinum (Scout 46)
-                    3067 [UNUSED] Platinum (Priest 46)
-                    3068 [UNUSED] Platinum (Warrior 48)
-                    3069 [UNUSED] Platinum (Mage 48)
-                    3070 [UNUSED] Platinum (Scout 48)
-                    3071 [UNUSED] Platinum (Priest 48)
-                    3072 [XML] Practicing Removal
-                    3073 [XML] Supporting Our Training
                     3074 [SCRIPT] Dangerous Probability
                     3075 [XML] Clearing the Barrens
                     3076 [SCRIPT] Bolstering the Aetheric Field
@@ -109,8 +99,6 @@
                     3111 [XML] Clearing the Route
                     3112 [XML] Bricks for Fun and Profit
                     3113 [XML] Triroan in the Lab
-                    3114 [XML] Dania's Dilemma
-                    3115 [XML] The M.R.A. Way
                     3121 [XML] Archaeologist Pyrrha
                     14200 [SCRIPT] Eternal Flames
                     14201 [SCRIPT] Weapons of Past Destruction
@@ -163,8 +151,6 @@
     <item_collecting id="3061" start_npc_ids="798172"/>
     <item_collecting id="3062" start_npc_ids="798196"/>
     <item_collecting id="3063" start_npc_ids="205304"/>
-    <item_collecting id="3072" start_npc_ids="798170"/>
-    <item_collecting id="3073" start_npc_ids="798170"/>
     <item_collecting id="3077" start_npc_ids="798164"/>
     <item_collecting id="3078" start_npc_ids="798164"/>
     <item_collecting id="3084" start_npc_ids="798199"/>
@@ -174,8 +160,6 @@
     <item_collecting id="3104" start_npc_ids="798206"/>
     <item_collecting id="3106" start_npc_ids="798168"/>
     <item_collecting id="3112" start_npc_ids="798168"/>
-    <item_collecting id="3114" start_npc_ids="798170"/>
-    <item_collecting id="3115" start_npc_ids="798170"/>
     <!-- HUNTING QUESTS -->
     <monster_hunt id="3002" start_npc_ids="798132">
         <monster var="0" npc_ids="213814 213815" end_var="3"/>
