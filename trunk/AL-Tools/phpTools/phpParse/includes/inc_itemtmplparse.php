@@ -1891,7 +1891,7 @@ function getTradeInLines($key)
         for ($t=1;$t<=$domax;$t++)
         {
             $ret .= '            <tradein_item id="'.getClientItemId($tabTpls[$key]['trade_in_item'.$t]).'"'.
-                    ' price="'.$tabTpls[$key]['trade_in_item_count'.$t].'"/>'."\n";
+                    ' count="'.$tabTpls[$key]['trade_in_item_count'.$t].'"/>'."\n";
         }
         
         $ret  .= '        </tradein_list>';
