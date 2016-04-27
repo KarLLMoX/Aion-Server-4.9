@@ -746,6 +746,38 @@
 			<xs:enumeration value="PROTECTGUARD_LIGHT_HERO"/>
 			<xs:enumeration value="PROTECTGUARD_DARK_F2A"/>
 			<xs:enumeration value="PROTECTGUARD_DARK_HERO"/>
+			<!-- New 4.9.1 -->
+			<xs:enumeration value="GRANDRVR"/>
+			<xs:enumeration value="GRANDRVR_DARK"/>
+			<xs:enumeration value="RVR_DGUARD_01"/>
+			<xs:enumeration value="RVR_DGUARD_02"/>
+			<xs:enumeration value="RVR_DGUARD_03"/>
+			<xs:enumeration value="RVR_DGUARD_04"/>
+			<xs:enumeration value="RVR_DGUARD_05"/>
+			<xs:enumeration value="RVR_DGUARD_06"/>
+			<xs:enumeration value="RVR_DGUARD_07"/>
+			<xs:enumeration value="RVR_DGUARD_08"/>
+			<xs:enumeration value="RVR_DGUARD_09"/>
+			<xs:enumeration value="RVR_LGUARD_01"/>
+			<xs:enumeration value="RVR_LGUARD_02"/>
+			<xs:enumeration value="RVR_LGUARD_03"/>
+			<xs:enumeration value="RVR_LGUARD_04"/>
+			<xs:enumeration value="RVR_LGUARD_05"/>
+			<xs:enumeration value="RVR_LGUARD_06"/>
+			<xs:enumeration value="RVR_LGUARD_07"/>
+			<xs:enumeration value="RVR_LGUARD_08"/>
+			<xs:enumeration value="RVR_LGUARD_09"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_01"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_02"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_03"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_04"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_05"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_06"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_07"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_08"/>
+			<xs:enumeration value="RVR_LIZARD_GUARD_09"/>
+			<xs:enumeration value="WORLDRAID_EVENT"/>
+			<xs:enumeration value="WORLDRAID_EVENT_AGGRESSIVE"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- Base types -->
