@@ -40,14 +40,23 @@ h3. Low Priority:
 * create new Dropfiles for all old Maps
 
 
-h3. Completed parser tasks:
-* gather_templates.xml
-* player_titles.xml
-* ride.xml
-* flypath_template.xml
-* goodslists.xml
-* npc_trade_list.xml
-* item_templates.xml (THX Killer & Voidstar)
-* npc_teleporter.xml  
-* tribe_relations.xml
-* TribeClass.java
+h3. Updatet Static Data:
+* abyss_race_bonus.xml -> 4.9.1 (by Mariella/PhpParser)
+* cosmetic_items.xml -> 4.9.1 (by Mariella/PhpParser)
+* login_events.xml -> 4.9.1 (by Mariella/PhpParser)
+* gather_templates.xml -> 4.9.1 (by Mariella/PhpParser)
+* goodslists.xml -> 4.9.1 (by Mariella/PhpParser)
+* item_sets.xml -> 4.9.1 (by Mariella/PhpParser)
+* challenge_tasks.xml - 4.9.1 (by Mariella/PhpParser)
+* quest_data.xml -> 4.9.1 (by Mariella/PhpParser)
+* ride.xml -> 4.9.1 (by Mariella/PhpParser)
+* tribe_relations.xml + TribeClass.java + global_types.xsd -> 4.9.1 (by Mariella/PhpParser/Manually)
+* flypath_template.xml -> 4.9.1 (by Mariella/PhpParser)
+* npc_teleporter.xml -> 4.9.1 (by Mariella/PhpParser)
+* npc_trade_list.xml -> 4.9.1 (by Mariella/PhpParser)
+* player_titles.xml -> 4.9.1 (by Mariella/PhpParser)
+* weather_table.xml -> 4.9.1 (by Mariella/PhpParser)
+
+* item_templates.xml -> TODO
+* npc_template.xml -> TODO
+ 

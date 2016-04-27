@@ -2027,7 +2027,7 @@
             <rate name="SPEED" value="1" bonus="true"/>
         </modifiers>
     </title>
-    <title id="298" nameId="3602807" desc="Season 3 Champion" race="PC_ALL">
+    <title id="298" nameId="3602807" desc="Unbound" race="PC_ALL">
         <modifiers>
             <add name="MAXHP" value="100" bonus="true"/>
             <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
@@ -2077,6 +2077,14 @@
             <add name="MAXHP" value="100" bonus="true"/>
             <add name="MAXMP" value="100" bonus="true"/>
             <rate name="SPEED" value="3" bonus="true"/>
+        </modifiers>
+    </title>
+    <title id="305" nameId="3604139" desc="The Master of Masters in Aion" race="PC_ALL">
+        <modifiers>
+            <rate name="ATTACK_SPEED" value="-2" bonus="true"/>
+            <rate name="BOOST_CASTING_TIME" value="2" bonus="true"/>
+            <rate name="SPEED" value="4" bonus="true"/>
+            <add name="MAXHP" value="100" bonus="true"/>
         </modifiers>
     </title>
     <title id="307" nameId="3604693" desc="Prestigious Initiate" race="PC_ALL">

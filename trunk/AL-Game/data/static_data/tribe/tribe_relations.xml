@@ -1395,8 +1395,8 @@
   </tribe>
   <tribe name="VRITRA" base="GUARD_DRAGON">
     <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT IDLDF5RE_SOLO_Q</aggro>
-    <friend>VRITRA VRITRASUPPORT NONAGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2 IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE IDRUNEWP_VRITRA IDRUNEWP_ANCIENTARM</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>VRITRA VRITRASUPPORT NONAGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2 IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE IDRUNEWP_VRITRA IDRUNEWP_ANCIENTARM</friend>
   </tribe>
   <tribe name="IDEVENT01_SUMMON" base="MONSTER">
     <aggro>IDEVENT01_TOWER</aggro>
@@ -1813,26 +1813,26 @@
   </tribe>
   <tribe name="VRITRASUPPORT" base="GUARD_DRAGON">
     <aggro>PC GUARD PC_DARK GUARD_DARK</aggro>
-    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2</friend>
     <support>VRITRASUPPORT</support>
   </tribe>
   <tribe name="AGRRESSIVEFRIENDLYVRITRA" base="MONSTER">
     <aggro>PC GUARD PC_DARK GUARD_DARK</aggro>
-    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE VRITRASUPPORT AGRRESSIVEFRIENDLYVRITRA2</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE VRITRASUPPORT AGRRESSIVEFRIENDLYVRITRA2</friend>
     <support>AGRRESSIVEFRIENDLYVRITRA</support>
   </tribe>
   <tribe name="AGRRESSIVEFRIENDLYVRITRA2" base="MONSTER">
     <aggro>PC GUARD PC_DARK GUARD_DARK</aggro>
-    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE AGRRESSIVEFRIENDLYVRITRA VRITRASUPPORT</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE AGRRESSIVEFRIENDLYVRITRA VRITRASUPPORT</friend>
     <support>AGRRESSIVEFRIENDLYVRITRA2</support>
   </tribe>
   <tribe name="VRITRATANK" base="MONSTER">
     <aggro>PC GUARD PC_DARK GUARD_DARK</aggro>
-    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>VRITRA NONAGRRESSIVEFRIENDLYVRITRA IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2</friend>
     <support>VRITRASUPPORT</support>
   </tribe>
   <tribe name="AGRRESSIVEVRITRAANDPC" base="MONSTER">
@@ -1849,13 +1849,13 @@
   </tribe>
   <tribe name="IDF5U1_VRITRAWEAPON" base="MONSTER">
     <hostile>PC GUARD PC_DARK GUARD_DARK ESCORT IDF5U1_TANK IDF5U1_PCFLAG</hostile>
-    <friend>IDF5U1_VRITRA</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>IDF5U1_VRITRA</friend>
   </tribe>
   <tribe name="IDF5U1_VRITRATRAP" base="GUARD_DRAGON">
     <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT IDF5U1_TANK IDF5U1_PCFLAG</aggro>
-    <friend>IDF5U1_VRITRA</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>IDF5U1_VRITRA</friend>
     <support>IDF5U1_VRITRAFLAG IDF5U1_VRITRAWEAPON</support>
   </tribe>
   <tribe name="IDF5U1_TANK" base="USEALL">
@@ -1882,35 +1882,35 @@
   </tribe>
   <tribe name="IDF5U2_VRITRA" base="GUARD_DRAGON">
     <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT</aggro>
-    <friend>IDF5U2_ARROWTRAP</friend>
     <neutral>MONSTER IDF5U2_GUARD IDF5U2_GUARD_DARK IDF5U2_SHULACK IDF5U2_SHULACK_SLAVE</neutral>
+    <friend>IDF5U2_ARROWTRAP</friend>
     <support>IDF5U2_VRITRA</support>
   </tribe>
   <tribe name="IDF5U2_VRITRATRAP" base="GUARD_DRAGON">
     <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT</aggro>
-    <friend>IDF5U2_VRITRA IDF5U2_ARROWTRAP</friend>
     <neutral>MONSTER IDF5U2_GUARD IDF5U2_GUARD_DARK IDF5U2_SHULACK IDF5U2_SHULACK_SLAVE</neutral>
+    <friend>IDF5U2_VRITRA IDF5U2_ARROWTRAP</friend>
   </tribe>
   <tribe name="IDF5U2_GUARD" base="GUARD">
-    <friend>IDF5U2_ARROWTRAP</friend>
     <neutral>MONSTER IDF5U2_VRITRA IDF5U2_VRITRATRAP IDF5U2_SHULACK IDF5U2_SHULACK_SLAVE</neutral>
+    <friend>IDF5U2_ARROWTRAP</friend>
     <support>IDF5U2_GUARD</support>
   </tribe>
   <tribe name="IDF5U2_GUARD_DARK" base="GUARD_DARK">
-    <friend>IDF5U2_ARROWTRAP</friend>
     <neutral>MONSTER IDF5U2_VRITRA IDF5U2_VRITRATRAP IDF5U2_SHULACK IDF5U2_SHULACK_SLAVE</neutral>
+    <friend>IDF5U2_ARROWTRAP</friend>
     <support>IDF5U2_GUARD_DARK</support>
   </tribe>
   <tribe name="IDF5U2_SHULACK" base="MONSTER">
     <aggro>PC PC_DARK</aggro>
-    <friend>IDF5U2_ARROWTRAP</friend>
     <neutral>MONSTER IDF5U2_GUARD IDF5U2_GUARD_DARK IDF5U2_VRITRA IDF5U2_VRITRATRAP</neutral>
+    <friend>IDF5U2_ARROWTRAP</friend>
     <support>IDF5U2_SHULACK IDF5U2_SHULACK_ESCORT</support>
   </tribe>
   <tribe name="IDF5U2_SHULACK_SLAVE" base="MONSTER">
     <aggro>PC PC_DARK</aggro>
-    <friend>IDF5U2_ARROWTRAP</friend>
     <neutral>MONSTER IDF5U2_GUARD IDF5U2_GUARD_DARK IDF5U2_VRITRA IDF5U2_VRITRATRAP</neutral>
+    <friend>IDF5U2_ARROWTRAP</friend>
     <support>IDF5U2_SHULACK IDF5U2_SHULACK_SLAVE IDF5U2_SHULACK_ESCORT</support>
   </tribe>
   <tribe name="IDF5U2_SHULACK_ESCORT" base="MONSTER">
@@ -1918,8 +1918,8 @@
   </tribe>
   <tribe name="IDF5U1_VRITRAFLAG" base="MONSTER">
     <hostile>PC GUARD PC_DARK GUARD_DARK ESCORT IDF5U1_TANK IDF5U1_PCFLAG</hostile>
-    <friend>IDF5U1_VRITRA</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>IDF5U1_VRITRA</friend>
   </tribe>
   <tribe name="IDF5U1_PCFLAG" base="NONE">
     <hostile>IDF5U1_VRITRA IDF5U1_VRITRAWEAPON IDF5U1_VRITRATRAP IDF5U1_AGGRESSIVETANK</hostile>
@@ -1960,8 +1960,8 @@
     <none>IDASTERIA_IU_WORLD_NPC</none>
   </tribe>
   <tribe name="IDF5U2_FOBJ" base="MONSTER">
-    <friend>IDF5U2_FOBJ</friend>
     <neutral>PC PC_DARK PET PET_DARK</neutral>
+    <friend>IDF5U2_FOBJ</friend>
   </tribe>
   <tribe name="IDF5_TELEPORT_MONSTER" base="MONSTER">
     <aggro>PC PC_DARK PET PET_DARK IDF5_TELEPORT_NPC</aggro>
@@ -1974,8 +1974,8 @@
   </tribe>
   <tribe name="UNDER_01_WAR_VRITRA" base="GUARD_DRAGON">
     <aggro>PC GUARD PC_DARK GUARD_DARK ESCORT IDLDF5RE_SOLO_Q</aggro>
-    <friend>VRITRA VRITRASUPPORT NONAGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2 IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE IDRUNEWP_VRITRA IDRUNEWP_ANCIENTARM</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>VRITRA VRITRASUPPORT NONAGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA AGRRESSIVEFRIENDLYVRITRA2 IDVRITRA_BASE_REBIRTH IDF5_TD_ASSULT IDF5_TD_SIEGE IDRUNEWP_VRITRA IDRUNEWP_ANCIENTARM</friend>
     <support>UNDER_01_WAR_VRITRA</support>
   </tribe>
   <tribe name="IDF5_U3_OBJ" base="USEALL">
@@ -1985,22 +1985,22 @@
   <tribe name="IDF5_U3_VRITRA_01" base="MONSTER">
     <aggro>IDF5_U3_OBJ</aggro>
     <hostile>PC PC_DARK</hostile>
-    <friend>IDF5_U3_VRITRA_HIDE IDF5_U3_VRITRA_02 IDF5_U3_CANNON IDF5_U3_VRITRA_SUM IDF5_U3_VRITRA_BOSS_SUM</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>IDF5_U3_VRITRA_HIDE IDF5_U3_VRITRA_02 IDF5_U3_CANNON IDF5_U3_VRITRA_SUM IDF5_U3_VRITRA_BOSS_SUM</friend>
     <support>VRITRA VRITRASUPPORT IDF5_U3_VRITRA_01 IDF5_U3_VRITRA</support>
   </tribe>
   <tribe name="IDF5_U3_VRITRA_02" base="MONSTER">
     <aggro>IDF5_U3_OBJ</aggro>
     <hostile>PC PC_DARK</hostile>
-    <friend>IDF5_U3_VRITRA_HIDE IDF5_U3_VRITRA_01 IDF5_U3_CANNON IDF5_U3_VRITRA_SUM IDF5_U3_VRITRA_BOSS_SUM</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>IDF5_U3_VRITRA_HIDE IDF5_U3_VRITRA_01 IDF5_U3_CANNON IDF5_U3_VRITRA_SUM IDF5_U3_VRITRA_BOSS_SUM</friend>
     <support>VRITRA VRITRASUPPORT IDF5_U3_VRITRA_02 IDF5_U3_VRITRA</support>
   </tribe>
   <tribe name="IDF5_U3_VRITRA_HIDE" base="MONSTER">
     <aggro>IDF5_U3_OBJ</aggro>
     <hostile>PC PC_DARK</hostile>
-    <friend>IDF5_U3_VRITRA_01 IDF5_U3_VRITRA_02 IDF5_U3_CANNON IDF5_U3_VRITRA_SUM</friend>
     <neutral>XDRAKAN</neutral>
+    <friend>IDF5_U3_VRITRA_01 IDF5_U3_VRITRA_02 IDF5_U3_CANNON IDF5_U3_VRITRA_SUM</friend>
     <support>VRITRA VRITRASUPPORT IDF5_U3_VRITRA_HIDE IDF5_U3_VRITRA</support>
   </tribe>
   <tribe name="IDF5_TD_WAR_LIGHT" base="GUARD">
@@ -2181,8 +2181,8 @@
     <support>IDLDF4_RE_01 AGGRESSIVESINGLEMONSTER IDLDF4_RE_01_FRIEND</support>
   </tribe>
   <tribe name="IDLDF4_RE_01_DOOR" base="USEALL">
-    <friend>PC PC_DARK IDLDF4_RE_01_GUARD</friend>
     <neutral>IDLDF4_RE_01 AGGRESSIVESINGLEMONSTER IDLDF4_RE_01_FRIEND</neutral>
+    <friend>PC PC_DARK IDLDF4_RE_01_GUARD</friend>
   </tribe>
   <tribe name="IDLDF4_RE_01_GUARD" base="GUARD">
     <aggro>IDLDF4_RE_01 AGGRESSIVESINGLEMONSTER</aggro>
@@ -2860,5 +2860,130 @@
     <aggro>PC PC_DARK PET PET_DARK GENERAL GENERAL_DARK GUARD GUARD_DARK IDSEAL_BOSS_OBEY</aggro>
     <friend>IDDF3_DRAGON_T_BOSS</friend>
     <support>IDDF3_DRAGON_T_BOSS</support>
-  </tribe>  
+  </tribe>
+  <!-- new 4.9.1 -->
+  <tribe name="WORLDRAID_EVENT_AGGRESSIVE" base="MONSTER">
+    <aggro>PC PC_DARK</aggro>
+    <friend>GUARD GUARD_DARK GUARD_DRAGON NEUTRAL_GUARD MONSTER AGGRESSIVESINGLEMONSTER AGGRESSIVESUPPORTMONSTER XDRAKAN WORLDRAID_MONSTER</friend>
+  </tribe>
+  <tribe name="WORLDRAID_EVENT" base="MONSTER">
+    <hostile>PC PC_DARK</hostile>
+    <friend>GUARD GUARD_DARK GUARD_DRAGON NEUTRAL_GUARD MONSTER AGGRESSIVESINGLEMONSTER AGGRESSIVESUPPORTMONSTER XDRAKAN WORLDRAID_MONSTER</friend>
+  </tribe>
+  <tribe name="GRANDRVR" base="GUARD">
+    <aggro>GRANDRVR_DARK</aggro>
+    <neutral>MONSTER PC_DARK</neutral>
+  </tribe>
+  <tribe name="GRANDRVR_DARK" base="GUARD_DARK">
+    <aggro>GRANDRVR</aggro>
+    <neutral>MONSTER PC</neutral>
+  </tribe>
+  <tribe name="RVR_LGUARD_01" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_01</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_02" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_02</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_03" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_03</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_04" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_04</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_05" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_05</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_06" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_06</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_07" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_07</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_08" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_08</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LGUARD_09" base="GENERAL">
+    <aggro>RVR_LIZARD_GUARD_09</aggro>
+    <hostile>GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_01" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_01</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_02" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_02</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_03" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_03</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_04" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_04</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_05" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_05</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_06" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_06</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_07" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_07</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_08" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_08</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_DGUARD_09" base="GENERAL_DARK">
+    <aggro>RVR_LIZARD_GUARD_09</aggro>
+    <hostile>GUARD PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_01" base="MONSTER">
+    <aggro>RVR_LGUARD_01 RVR_DGUARD_01</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_02" base="MONSTER">
+    <aggro>RVR_LGUARD_02 RVR_DGUARD_02</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_03" base="MONSTER">
+    <aggro>RVR_LGUARD_03 RVR_DGUARD_03</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_04" base="MONSTER">
+    <aggro>RVR_LGUARD_04 RVR_DGUARD_04</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_05" base="MONSTER">
+    <aggro>RVR_LGUARD_05 RVR_DGUARD_05</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_06" base="MONSTER">
+    <aggro>RVR_LGUARD_06 RVR_DGUARD_06</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_07" base="MONSTER">
+    <aggro>RVR_LGUARD_07 RVR_DGUARD_07</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_08" base="MONSTER">
+    <aggro>RVR_LGUARD_08 RVR_DGUARD_08</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
+  <tribe name="RVR_LIZARD_GUARD_09" base="MONSTER">
+    <aggro>RVR_LGUARD_09 RVR_DGUARD_09</aggro>
+    <hostile>GUARD GUARD_DARK PC PC_DARK</hostile>
+  </tribe>
 </tribe_relations>

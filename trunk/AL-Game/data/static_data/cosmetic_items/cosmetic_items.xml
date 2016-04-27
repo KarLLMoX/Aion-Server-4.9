@@ -438,12 +438,92 @@
     <cosmetic_item type="face_color" cosmetic_name="test_face_type_face_color_da_m_02a" id="16711680" race="ASMODIANS" gender_permitted="MALE"/>
     <cosmetic_item type="face_color" cosmetic_name="test_face_type_face_color_da_w_01a" id="255" race="ASMODIANS" gender_permitted="FEMALE"/>
     <cosmetic_item type="face_color" cosmetic_name="test_face_type_face_color_da_w_02a" id="16711680" race="ASMODIANS" gender_permitted="FEMALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_li_m_01a" id="1" race="ELYOS" gender_permitted="MALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_li_m_02a" id="2" race="ELYOS" gender_permitted="MALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_li_w_01a" id="1" race="ELYOS" gender_permitted="FEMALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_li_w_02a" id="2" race="ELYOS" gender_permitted="FEMALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_da_m_01a" id="1" race="ASMODIANS" gender_permitted="MALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_da_m_02a" id="2" race="ASMODIANS" gender_permitted="MALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_da_w_01a" id="1" race="ASMODIANS" gender_permitted="FEMALE"/>
-    <cosmetic_item type="face_type" cosmetic_name="test_face_type_preset_type_da_w_02a" id="2" race="ASMODIANS" gender_permitted="FEMALE"/>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_li_m_01a" race="ELYOS" gender_permitted="MALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>1</hair_type>
+            <face_type>0</face_type>
+            <hair_color>1515812</hair_color>
+            <lip_color>10660564</lip_color>
+            <eye_color>5402006</eye_color>
+            <skin_color>13228789</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_li_m_02a" race="ELYOS" gender_permitted="MALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>4</hair_type>
+            <face_type>4</face_type>
+            <hair_color>3095631</hair_color>
+            <lip_color>13028582</lip_color>
+            <eye_color>16777215</eye_color>
+            <skin_color>13161461</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_li_w_01a" race="ELYOS" gender_permitted="FEMALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>4</hair_type>
+            <face_type>0</face_type>
+            <hair_color>16777215</hair_color>
+            <lip_color>13819903</lip_color>
+            <eye_color>15781834</eye_color>
+            <skin_color>13488870</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_li_w_02a" race="ELYOS" gender_permitted="FEMALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>1</hair_type>
+            <face_type>9</face_type>
+            <hair_color>6844591</hair_color>
+            <lip_color>13159398</lip_color>
+            <eye_color>15781834</eye_color>
+            <skin_color>12898035</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_da_m_01a" race="ASMODIANS" gender_permitted="MALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>0</hair_type>
+            <face_type>0</face_type>
+            <hair_color>7361119</hair_color>
+            <lip_color>16770533</lip_color>
+            <eye_color>15198207</eye_color>
+            <skin_color>16046034</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_da_m_02a" race="ASMODIANS" gender_permitted="MALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>4</hair_type>
+            <face_type>4</face_type>
+            <hair_color>2103310</hair_color>
+            <lip_color>14673111</lip_color>
+            <eye_color>13757930</eye_color>
+            <skin_color>14012079</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_da_w_01a" race="ASMODIANS" gender_permitted="FEMALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>0</hair_type>
+            <face_type>0</face_type>
+            <hair_color>7361119</hair_color>
+            <lip_color>12097694</lip_color>
+            <eye_color>12616358</eye_color>
+            <skin_color>15391695</skin_color>
+        </preset>
+    </cosmetic_item>
+    <cosmetic_item type="preset_name" cosmetic_name="test_face_type_preset_type_da_w_02a" race="ASMODIANS" gender_permitted="FEMALE">
+        <preset>
+            <scale>1.000000</scale>
+            <hair_type>2</hair_type>
+            <face_type>2</face_type>
+            <hair_color>13606557</hair_color>
+            <lip_color>12097694</lip_color>
+            <eye_color>9613472</eye_color>
+            <skin_color>16178146</skin_color>
+        </preset>
+    </cosmetic_item>
 </cosmetic_items>

@@ -24,28 +24,28 @@
     <abyss_race_bonus id="12" name="Ariel's Blessing 6" race="ELYOS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="20"/>
     </abyss_race_bonus>
-    <abyss_race_bonus id="13" name="Ishalgen's Protector 1" race="ASMODIANS"/>
-    <abyss_race_bonus id="14" name="Ishalgen's Protector 2" race="ASMODIANS"/>
-    <abyss_race_bonus id="15" name="Ishalgen's Protector 3" race="ASMODIANS"/>
-    <abyss_race_bonus id="16" name="Ishalgen's Protector 4" race="ASMODIANS"/>
-    <abyss_race_bonus id="17" name="Ishalgen's Protector 5" race="ASMODIANS"/>
-    <abyss_race_bonus id="18" name="Ishalgen's Protector 6" race="ASMODIANS"/>
+    <abyss_race_bonus id="13" name="Raider Hero 1" race="ASMODIANS"/>
+    <abyss_race_bonus id="14" name="Raider Hero 2" race="ASMODIANS"/>
+    <abyss_race_bonus id="15" name="Raider Hero 3" race="ASMODIANS"/>
+    <abyss_race_bonus id="16" name="Raider Hero 4" race="ASMODIANS"/>
+    <abyss_race_bonus id="17" name="Raider Hero 5" race="ASMODIANS"/>
+    <abyss_race_bonus id="18" name="Raider Hero 6" race="ASMODIANS"/>
     <abyss_race_bonus id="19" name="Blessing of Azphel 1" race="ASMODIANS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="10"/>
     </abyss_race_bonus>
-    <abyss_race_bonus id="20" name="Blessing Of Azphel 2" race="ASMODIANS">
+    <abyss_race_bonus id="20" name="Blessing of Azphel 2" race="ASMODIANS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="10"/>
     </abyss_race_bonus>
-    <abyss_race_bonus id="21" name="Blessing Of Azphel 3" race="ASMODIANS">
+    <abyss_race_bonus id="21" name="Blessing of Azphel 3" race="ASMODIANS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="15"/>
     </abyss_race_bonus>
-    <abyss_race_bonus id="22" name="Blessing Of Azphel 4" race="ASMODIANS">
+    <abyss_race_bonus id="22" name="Blessing of Azphel 4" race="ASMODIANS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="15"/>
     </abyss_race_bonus>
-    <abyss_race_bonus id="23" name="Blessing Of Azphel 5" race="ASMODIANS">
+    <abyss_race_bonus id="23" name="Blessing of Azphel 5" race="ASMODIANS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="20"/>
     </abyss_race_bonus>
-    <abyss_race_bonus id="24" name="Blessing Of Azphel 6" race="ASMODIANS">
+    <abyss_race_bonus id="24" name="Blessing of Azphel 6" race="ASMODIANS">
         <bonus stat="PVP_ATTACK_RATIO" func="PERCENT" value="20"/>
     </abyss_race_bonus>
 </abyss_race_bonuses>

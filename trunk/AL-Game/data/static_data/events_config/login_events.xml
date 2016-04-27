@@ -138,7 +138,7 @@
     <login_event id="46" name="2014_attend_reward_daily_season_03" active="1" period_start="2014-09-01T09:00:00"
                  period_end="2014-12-01T08:59:59" attend_type="DAILY" attend_num="1" reward_item="188053411"
                  reward_item_num="1" reward_item_expire="0"/>
-    <login_event id="47" name="2014_attend_reward_daily_season_04" active="1" period_start="2014-12-21T09:00:00"
+    <login_event id="47" name="2014_attend_reward_daily_season_04" active="1" period_start="2014-12-01T09:00:00"
                  period_end="2015-03-01T08:59:59" attend_type="DAILY" attend_num="1" reward_item="188053412"
                  reward_item_num="1" reward_item_expire="0"/>
     <login_event id="48" name="2014_attend_reward_month_05_21day" active="1" period_start="2014-05-01T09:00:00"
