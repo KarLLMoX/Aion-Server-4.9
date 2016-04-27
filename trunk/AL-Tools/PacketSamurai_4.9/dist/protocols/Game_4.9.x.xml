@@ -8741,6 +8741,9 @@
 		<packet id="0xEF" name="________________CM_0xEF"/> <!-- TODO -->
 		<packet id="0x1A3" name="CM_1A3_UNK"/>
 		<packet id="0x16C" name="________________CM_0x16C"/> <!-- TODO -->
+		<packet id="0xDC" name="________________CM_0xDC"> <!-- TODO -->
+			<part name="unk" type="c"/>
+		</packet>
 
 		<packet id="0x2FA" name="________________CM_LANDING_REINFORCEMENT"/> <!-- New/TODO AionNA 4.9 -->
 		<!-- MISSED OPCODES
