@@ -56,7 +56,7 @@ h3. Updatet Static Data:
 * npc_trade_list.xml -> 4.9.1 (by Mariella/PhpParser)
 * player_titles.xml -> 4.9.1 (by Mariella/PhpParser)
 * weather_table.xml -> 4.9.1 (by Mariella/PhpParser)
+* npc_template.xml -> 4.9.1 (by Mariella/PhpParser)
 
 * item_templates.xml -> TODO
-* npc_template.xml -> TODO
- 
+* teleport_location.xml -> TODO
