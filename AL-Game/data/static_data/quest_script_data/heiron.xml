@@ -242,11 +242,11 @@
                     14053 [SCRIPT] Danger Cubed
                     14054 [SCRIPT] Krall-ing to Kralltumagna ->reward no work
                     14150 [SCRIPT] Secrets of the Superus
-                    14151 [TODO] Target Practice with a Queen
-                    14152 [TODO] Spoiler Alert
+                    14151 [XML] Target Practice with a Queen
+                    14152 [SCRIPT] Spoiler Alert
                     14153 [SCRIPT] A Storm of Vengeance
-                    14250 [TODO] Start with the Strongest
-                    14251 [TODO] Because Caves are Easy
+                    14250 [XML] Start with the Strongest TODO MISSING NPC's
+                    14251 [XML] Because Caves are Easy
                     16902 [XML] Cultist Capture
                     16903 [XML] Observation Overlord
                     16904 [XML] Lepharist's Mark
@@ -297,6 +297,7 @@
     <report_to id="1686" start_npc_ids="204500" end_npc_ids="278501" item_id="182201808"/>
     <report_to id="3221" start_npc_ids="204530" end_npc_ids="204658"/>
     <report_to id="3528" start_npc_ids="204536" end_npc_ids="798165" item_id="182201836"/>
+    <report_to id="14251" start_npc_ids="204602" end_npc_ids="832824"/>
     <!-- COLLECTING QUESTS -->
     <item_collecting id="1502" start_npc_ids="204525"/>
     <item_collecting id="1503" start_npc_ids="204505" action_item_ids="700189"/>
@@ -357,7 +358,7 @@
     <item_collecting id="1646" start_npc_ids="204546"/>
     <item_collecting id="1653" start_npc_ids="204602"/>
     <item_collecting id="1663" start_npc_ids="204600"/>
-    <item_collecting id="1664" start_npc_ids="204618"/>
+    <item_collecting id="1664" start_npc_ids="204602"/>
     <item_collecting id="1669" start_npc_ids="800413"/>
     <item_collecting id="1672" start_npc_ids="203784"/>
     <item_collecting id="1673" start_npc_ids="204508"/>
@@ -644,7 +645,7 @@
     <monster_hunt id="3531" start_npc_ids="204530">
         <monster var="0" npc_ids="214159" end_var="1"/>
     </monster_hunt>
-    <monster_hunt id="3532" start_npc_ids="204550">
+    <monster_hunt id="3532" start_npc_ids="832824">
         <monster var="0" npc_ids="213780" end_var="1"/>
     </monster_hunt>
     <monster_hunt id="3533" start_npc_ids="204573">
@@ -663,6 +664,12 @@
     </monster_hunt>
     <monster_hunt id="3543" start_npc_ids="204552">
         <monster var="0" npc_ids="211926" end_var="10"/>
+    </monster_hunt>
+	<monster_hunt id="14151" start_npc_ids="204583" end_npc_ids="204502">
+        <monster var="0" npc_ids="212120" end_var="1"/>
+    </monster_hunt>
+	<monster_hunt id="14250" start_npc_ids="800413">
+        <monster var="0" npc_ids="235504 235505 235506 235507 235508 235509" end_var="10"/>
     </monster_hunt>
     <monster_hunt id="18605" start_npc_ids="205230">
         <monster var="0" npc_ids="217026 216971 217027" end_var="8"/>

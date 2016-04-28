@@ -9301,5 +9301,9 @@
         <spawn npc_id="805372" respawn_time="295">
             <spot x="2452.8472" y="400.47513" z="412.43533" h="10"/>
         </spawn>
+		<!-- Anaxa -->
+		<spawn npc_id="832824" respawn_time="295">
+            <spot x="2536.2341" y="2673.9565" z="158.00815" h="39"/>
+        </spawn>
 	</spawn_map>
 </spawns>
