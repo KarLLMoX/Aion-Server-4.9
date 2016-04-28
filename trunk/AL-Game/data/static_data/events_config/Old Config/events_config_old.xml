@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>Atreian City Festival;Event Empyrean Crucible;Daeva Day Inventory;Daeva Day Event;October Fest;Brax Cafe Inventory;Brax Cafe;Fluffy Snow Crystal Inventory;Fluffy Snow Event;Pumpkin Cookie Inventory;Pumpkin Cookie Event;Pink Petal Inventory;Pink Petal Event;The Fortune Fayre;Doppelgangers;Ascension Energy;Spring Event;Spring Event Inventory;Crab Fest;Celebrate Solorius;New Year Event;Trick or treat! The witch and the king;Daru Days;Ardent heat;Ascension Energy Inventory;Ardent heat Inventory;Valentine's Day;Valentine's Day Inventory;Love is in the Air;World Blessers;Transform and battle as a Guardian General;This Belong In A Museum Inventory;This Belong In A Museum;Battle Of Siel;Shugo Kingdom Adventure;Blood Mark Drops;Rapturous Golden Feather Inventory;Rapturous Golden Feather Event;Thecla Royan Event;Guardian General Showdown;GGS Event 1;GGS Event 2;GGS Event 3;GGS Event 4;GGS Event 5;GGS Event 6;GGS Event 6;GGS Event 7;GGS Event 8;Captain Harlock Inventory;Captain Harlock Event;Dafarunerk Inventory;Dafarunerk Event;Summer Block Party Inventory;Summer Block Party Event;Legendary Raid Spawn;Rukibuki Circus Troup;Snowy Freezy;Welcome to Atreia Inventory;Welcome to Atreia;Durable Daevanion</active>
+    <active>Atreian City Festival;Event Empyrean Crucible;Daeva Day Inventory;Daeva Day Event;October Fest;Brax Cafe Inventory;Brax Cafe;Fluffy Snow Crystal Inventory;Fluffy Snow Event;Pumpkin Cookie Inventory;Pumpkin Cookie Event;Pink Petal Inventory;Pink Petal Event;The Fortune Fayre;Doppelgangers;Ascension Energy;Spring Event;Spring Event Inventory;Crab Fest;Celebrate Solorius;New Year Event;Trick or treat! The witch and the king;Daru Days;Ardent heat;Ascension Energy Inventory;Ardent heat Inventory;Valentine's Day;Valentine's Day Inventory;Love is in the Air;World Blessers;Transform and battle as a Guardian General;This Belong In A Museum Inventory;This Belong In A Museum;Battle Of Siel;Shugo Kingdom Adventure;Blood Mark Drops;Rapturous Golden Feather Inventory;Rapturous Golden Feather Event;Thecla Royan Event;Guardian General Showdown;GGS Event 1;GGS Event 2;GGS Event 3;GGS Event 4;GGS Event 5;GGS Event 6;GGS Event 6;GGS Event 7;GGS Event 8;Captain Harlock Inventory;Captain Harlock Event;Summer Block Party Inventory;Summer Block Party Event;Legendary Raid Spawn;Rukibuki Circus Troup;Snowy Freezy;Welcome to Atreia Inventory;Welcome to Atreia;Durable Daevanion</active>
     <events>
         <event name="Atreian City Festival" start="2015-02-06T00:00:00+00:00" end="2015-02-13T00:00:00+00:00">
             <quests>
@@ -2732,27 +2732,6 @@
                     <!-- Toshirin -->
                     <spawn npc_id="831992">
                         <spot x="1228.1963" y="1422.0422" z="208.125" h="90"/>
-                    </spawn>
-                </spawn_map>
-            </spawns>
-        </event>
-        <event name="Dafarunerk Inventory" start="2015-12-28T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">
-            <inventory_drop startlevel="20" interval="60">186000317</inventory_drop>
-        </event>
-        <event name="Dafarunerk Event" start="2015-12-28T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">
-            <spawns>
-                <!-- Sanctum -->
-                <spawn_map map_id="110010000">
-                    <!-- Dafarunerk (NPC Normal lvl:65) -->
-                    <spawn npc_id="802020">
-                        <spot x="1440.2305" y="1531.418" z="573.0719" h="119"/>
-                    </spawn>
-                </spawn_map>
-                <!-- Pandaemonium -->
-                <spawn_map map_id="120010000">
-                    <!-- Dafarunerk (NPC Normal lvl:65) -->
-                    <spawn npc_id="802020">
-                        <spot x="1221.75" y="1422.7583" z="208.125" h="88"/>
                     </spawn>
                 </spawn_map>
             </spawns>
