@@ -278,7 +278,8 @@ function getCategory($key)
                                   array( "icon_item_enchant","ENCHANTMENT"),
                                   array( "icon_item_holystone_","GODSTONE"),
                                   array( "icon_item_magicstone_","MANASTONE"),
-                                  array( "icon_item_ancientstone","ANCIENT_MANASTONE"),
+                                  array( "icon_item_type_magicstone","MANASTONE"),        // 4.9.1
+                                  array( "icon_item_ancientstone","ANCIENT_MANASTONE"),  // 4.9.1
                                   array( "icon_item_battery","SHARD")
                                    )
                      );    
@@ -309,7 +310,18 @@ function getCategory($key)
             if (stripos($desc,"_quest_")             !== false) return "QUEST";            
         }        
     }  
+    // 4.9.1 - die Zuordnung zur Category ANCIENT_MANASTONE kann über das Icon nicht
+    //         zuverlässig durchgeführt werden, es wird daher an dieser Stelle schon 
+    //         vorab über den Namen des Items abgeprüft!
+    if (isset($tabTpls[$key]['outname']))
+    {
+        $name = strtolower($tabTpls[$key]['outname']);
+        
+        if (stripos($name,"ancient manastone:") !== false)
+            return "ANCIENT_MANASTONE";
+    }
     
+    // Prüfen auf GATHERABLE
     if (isset($tabTpls[$key]['category']))
     {
         if (strtolower($tabTpls[$key]['category']) == "harvest")
