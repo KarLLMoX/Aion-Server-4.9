@@ -123,19 +123,18 @@ public class TerritoryService
 	public void onLooseTerritory(Legion legion)
 	{				
 		int oldTerritoryId = legion.getTerritory().getId();
-		legion.setTerritory(new LegionTerritory());
+		legion.clearTerritory();
 						
 		if (oldTerritoryId == 0)
-			GameServer.log.info("TerritoryId is 0 !!!");
+			GameServer.log.info("[TerritoryService] Error TerritoryId is 0 !!! - Legion : "+legion.getLegionName());
 		
-		LegionTerritory territory = new LegionTerritory(oldTerritoryId);
+		LegionTerritory fakeTerritory = new LegionTerritory(oldTerritoryId);
 		territories.remove(oldTerritoryId);
-		territories.put(oldTerritoryId, territory);		
+		territories.put(oldTerritoryId, fakeTerritory);		
 
 		TreeMap<Integer,LegionTerritory> lostTerr = new TreeMap<Integer,LegionTerritory>();
-		lostTerr.put(oldTerritoryId, territory);
+		lostTerr.put(oldTerritoryId, fakeTerritory);
 		broadcastTerritoryList(lostTerr);
-		legion.getTerritory().setTerritoryId(0);
 		PacketSendUtility.broadcastPacketToLegion(legion ,new SM_LEGION_INFO(legion));
 	}
 	

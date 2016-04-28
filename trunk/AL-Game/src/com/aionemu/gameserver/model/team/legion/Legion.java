@@ -634,6 +634,11 @@ public class Legion {
 			this.joinRequestMap.put(joinRequest.getPlayerId(), joinRequest);
 	}
 
+	public void clearTerritory()
+	{
+		setTerritory(new LegionTerritory(0));
+	}
+	
 	public boolean ownsTerretory() {
 		return getTerritory().getId() > 0;
 	}
