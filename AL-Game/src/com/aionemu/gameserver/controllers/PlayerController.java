@@ -162,8 +162,8 @@ public class PlayerController extends CreatureController<Player> {
             Npc npc = ((Npc) object);
             LookManager.corrigateHeading(npc, this.getOwner());
             PacketSendUtility.sendPacket(getOwner(), new SM_NPC_INFO(npc, getOwner()));
-            PacketSendUtility.sendPacket(getOwner(), new SM_EMOTION_SWITCH(npc, npc.getState(), EmotionType.SELECT_TARGET));
-            PacketSendUtility.sendPacket(getOwner(), new SM_HEADING_UPDATE(object.getObjectId(), (byte) object.getHeading()));
+            //PacketSendUtility.sendPacket(getOwner(), new SM_EMOTION_SWITCH(npc, npc.getState(), EmotionType.SELECT_TARGET));
+            //PacketSendUtility.sendPacket(getOwner(), new SM_HEADING_UPDATE(object.getObjectId(), (byte) object.getHeading()));
             if (!npc.getEffectController().isEmpty()) {
                 npc.getEffectController().sendEffectIconsTo(getOwner());
             }

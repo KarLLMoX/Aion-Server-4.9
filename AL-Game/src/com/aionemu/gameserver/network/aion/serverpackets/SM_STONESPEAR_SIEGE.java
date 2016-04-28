@@ -16,23 +16,29 @@
  */
 package com.aionemu.gameserver.network.aion.serverpackets;
 
+import com.aionemu.gameserver.model.team.legion.Legion;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author
+ * @author CoolyT / Falke34
  */
 public class SM_STONESPEAR_SIEGE extends AionServerPacket {
 	
-	public SM_STONESPEAR_SIEGE()
+	Legion legion;
+	int type = 0;
+	
+	public SM_STONESPEAR_SIEGE(Legion legion, int type)
 	{
-		
+		this.legion = legion;
+		this.type = type;
 	}
 
     @Override
-    protected void writeImpl(AionConnection con) {
-    	writeC(4); //todo
-    	writeD(0); //todo
-    	writeH(0); //todo
+    protected void writeImpl(AionConnection con) 
+    {
+    	writeD(legion.getTerritory().getId()); //TerritoryId
+    	writeC(type); //type
+    	writeH(0); //unk
     }
 }

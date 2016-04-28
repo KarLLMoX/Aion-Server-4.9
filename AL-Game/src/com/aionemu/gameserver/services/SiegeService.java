@@ -59,6 +59,7 @@ import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
 import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.spawns.siegespawns.SiegeSpawnTemplate;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_125_UNK;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ABYSS_ARTIFACT_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FORTRESS_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_FORTRESS_STATUS;
@@ -711,6 +712,7 @@ public class SiegeService {
         if (SiegeConfig.SIEGE_ENABLED) {
             PacketSendUtility.sendPacket(player, new SM_INFLUENCE_RATIO());
             PacketSendUtility.sendPacket(player, new SM_SIEGE_LOCATION_INFO());
+            PacketSendUtility.sendPacket(player, new SM_125_UNK());
             PacketSendUtility.sendPacket(player, new SM_RIFT_ANNOUNCE(getOutpost(3111).isSilenteraAllowed(), getOutpost(2111).isSilenteraAllowed()));
         }
     }

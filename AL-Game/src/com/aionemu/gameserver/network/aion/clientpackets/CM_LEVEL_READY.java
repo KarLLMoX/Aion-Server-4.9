@@ -153,7 +153,7 @@ public class CM_LEVEL_READY extends AionClientPacket {
 		 }
 		 activePlayer.setPortAnimation(0);
 
-		 TownService.getInstance().onEnterWorld(activePlayer);
+		 
 
 		 // Live Party Concert Hall
 		 if (activePlayer.getWorldId() == 600080000) {

@@ -33,11 +33,14 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_TOWNS_LIST;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.MapRegion;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
+
+import javolution.util.FastMap;
 
 /**
  * @author ViAl
@@ -125,7 +128,14 @@ public class TownService {
     }
 
     public void onEnterWorld(Player player) {
-        switch (player.getRace()) {
+        
+    	if (player.getWorldId() != 700010000 && player.getWorldId() != 710010000)
+    	{
+    		//offi 4.9.1 send empty packet
+    		PacketSendUtility.sendPacket(player, new SM_TOWNS_LIST(new FastMap<Integer, Town>()));
+    		return;
+    	}
+    	switch (player.getRace()) {
             case ELYOS:
                 if (player.getWorldId() == 700010000) {
                     PacketSendUtility.sendPacket(player, new SM_TOWNS_LIST(elyosTowns));

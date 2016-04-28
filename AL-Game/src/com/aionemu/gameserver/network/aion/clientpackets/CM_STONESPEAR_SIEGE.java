@@ -18,6 +18,7 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.services.territory.TerritoryService;
 
 /**
  * @author
@@ -30,13 +31,12 @@ public class CM_STONESPEAR_SIEGE extends AionClientPacket {
 
     @Override
     protected void readImpl() {
-        readC(); //todo
-        readC(); //todo
-        readC(); //todo
-        readC(); //todo
+        readD(); //territoryId
     }
 
     @Override
-    protected void runImpl() {
+    protected void runImpl() 
+    {
+    	TerritoryService.getInstance().sendStoneSpearPacket(getConnection().getActivePlayer());
     }
 }

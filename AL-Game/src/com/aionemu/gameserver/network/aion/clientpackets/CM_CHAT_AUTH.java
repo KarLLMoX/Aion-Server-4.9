@@ -20,7 +20,9 @@ import com.aionemu.gameserver.configs.main.GSConfig;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_CHAT_INIT;
 import com.aionemu.gameserver.network.chatserver.ChatServer;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * Client sends this only once.
@@ -48,12 +50,13 @@ public class CM_CHAT_AUTH extends AionClientPacket {
 
     @Override
     protected void runImpl() {
-        if (GSConfig.ENABLE_CHAT_SERVER) {
-            // this packet is sent sometimes after logout from world
-            Player player = getConnection().getActivePlayer();
+    	Player player = getConnection().getActivePlayer();
+    	if (GSConfig.ENABLE_CHAT_SERVER) {
+            // this packet is sent sometimes after logout from world            
             if (!player.isInPrison()) {
                 ChatServer.getInstance().sendPlayerLoginRequst(player);
             }
         }
+        else PacketSendUtility.sendPacket(player, new SM_CHAT_INIT(new byte[0]));
     }
 }
