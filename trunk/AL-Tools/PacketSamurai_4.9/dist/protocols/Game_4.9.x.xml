@@ -7170,6 +7170,9 @@
 					<part name="unk" type="d"/>
 					<part name="LegionName" type="S"/> 
 				</case>
+				<case id="0">
+					<part name="unk" type="h"/>
+				</case>
 			</switch>
 		</packet>
 		<packet id="0x112" name="SM_SECURITY_TOKEN"> <!-- TODO -->
@@ -8746,10 +8749,10 @@
         <packet id="0x182" name="CM_INTRUDER_SCAN"> <!-- New -->
 			<part name="unk" type="c"/>
 		</packet>
-
-		<packet id="0x11A" name="CM_11A_UNK"/>
+		<packet id="0x1A3" name="CM_SECURITY_TOKEN"/>
+		<packet id="0x11A" name="CM_11A_UNK"/> <!-- calls SM_98UNK direct after sm_character_list-->
 		<packet id="0xEF" name="________________CM_0xEF"/> <!-- TODO -->
-		<packet id="0x1A3" name="CM_1A3_UNK"/>
+		
 		<packet id="0x16C" name="________________CM_0x16C"/> <!-- TODO -->
 		<packet id="0xDC" name="________________CM_0xDC"> <!-- TODO -->
 			<part name="unk" type="c"/>
