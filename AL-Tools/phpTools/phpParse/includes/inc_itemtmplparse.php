@@ -278,6 +278,7 @@ function getCategory($key)
                                   array( "icon_item_enchant","ENCHANTMENT"),
                                   array( "icon_item_holystone_","GODSTONE"),
                                   array( "icon_item_magicstone_","MANASTONE"),
+                                  array( "icon_item_ancientstone","ANCIENT_MANASTONE"),
                                   array( "icon_item_battery","SHARD")
                                    )
                      );    

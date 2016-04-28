@@ -1293,7 +1293,16 @@ function makeMissingItemTemplateData()
             $tabTpls[$key]['exceed_enchant']= strtolower($tabTpls[$key]['exceed_enchant']);
         
         // funktionale Ermittlungen
-        $tabTpls[$key]['outname']           = getName($key);
+        if ($key == "182400004" || $key == "150000001")
+        {
+            if     ($key == "150000001")
+                $tabTpls[$key]['outname']   = "Convert"; 
+            elseif ($key == "182400004")
+                $tabTpls[$key]['outname']   = "Noweapon";
+        }
+        else
+            $tabTpls[$key]['outname']       = getName($key);
+            
         $tabTpls[$key]['outdesc']           = getDesc($key);
         $tabTpls[$key]['name_desc']         = getNameDesc($key);
         $tabTpls[$key]['mask']              = getItemMask($key);

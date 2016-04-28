@@ -108,7 +108,7 @@ function getAiText($n)
     
     // ai aus tribe
     if (stripos($tabnpcs[$n]['tribe'],"AGGRESSIVE") !== false)
-        return "agressive";
+        return "aggressive";
     
     // ai aus function_type    
     if ($tabnpcs[$n]['npc_function_type'] != "?" 
@@ -143,7 +143,7 @@ function getAiText($n)
             return "general";
         elseif (substr($ai_name,0,3) == "d2_"
         ||      substr($ai_name,0,4) == "nd2_")
-            return "agressive";
+            return "aggressive";
         elseif ($ai_name == "summonhoming")
             return "homing";
         elseif ($ai_name == "summontotem")
