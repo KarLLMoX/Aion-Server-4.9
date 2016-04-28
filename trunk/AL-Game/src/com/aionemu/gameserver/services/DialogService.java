@@ -59,6 +59,7 @@ import com.aionemu.gameserver.services.instance.OphidanBridgeService;
 import com.aionemu.gameserver.services.item.ItemChargeService;
 import com.aionemu.gameserver.services.teleport.PortalService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.services.territory.TerritoryService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.services.QuestService; // FOR TEMP FIX SHOULD BE DELETET LATER
 import com.aionemu.gameserver.skillengine.model.SkillTargetSlot;
@@ -546,33 +547,21 @@ public class DialogService {
                                 TeleportService2.teleportTo(player, 110070000, 503.60794F, 410.61899F, 126.78963F, (byte) 90);
 								break;
 							//Kenoa
-							case 805164: // TODO LEGION CHECK
-								if (!player.isGM()) {
-                                    PacketSendUtility.sendMessage(player, "You cant enter this location");
-                                    return;
-                                }
-								TeleportService2.teleportTo(player, 210070000, 1375.895F, 647.5174F, 581.81555F, (byte) 29);
-								break;
-							case 805165: // TODO LEGION CHECK
-								if (!player.isGM()) {
-                                    PacketSendUtility.sendMessage(player, "You cant enter this location");
-                                    return;
-                                }
-								TeleportService2.teleportTo(player, 210070000, 1376.3457F, 643.75977F, 581.61F, (byte) 88);
-								break;
-							case 805162: // TODO LEGION CHECK
-								if (!player.isGM()) {
-                                    PacketSendUtility.sendMessage(player, "You cant enter this location");
-                                    return;
-                                }
-								TeleportService2.teleportTo(player, 210070000, 1330.3495F, 634.5133F, 582.0176F, (byte) 45);
-								break;
-							case 805163: // TODO LEGION CHECK
-								if (!player.isGM()) {
-                                    PacketSendUtility.sendMessage(player, "You cant enter this location");
-                                    return;
-                                }
-								TeleportService2.teleportTo(player, 210070000, 1333.2931F, 631.8545F, 581.4909F, (byte) 110);
+							case 805164:
+							case 805165:
+							case 805162:
+							case 805163:
+							//Deluan
+							case 805166:
+							case 805167:
+							case 805168:
+							case 805169:
+							//Attika	
+							case 805170:
+							case 805171:
+							case 805172:
+							case 805173:
+								TerritoryService.getInstance().onTeleport(player, npc.getNpcId());
 								break;
                         }
                     } else {

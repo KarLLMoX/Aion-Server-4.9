@@ -293,6 +293,7 @@ public class ServerPacketsOpcodes {
         addPacketOpcode(SM_125_UNK.class, 0x125, idSet);
         addPacketOpcode(SM_EVENT_BUFF.class, 0x11A, idSet); // TODO
         addPacketOpcode(SM_95.class, 0x95, idSet); // TODO
+        addPacketOpcode(SM_98_UNK.class, 0x98, idSet); // TODO
         addPacketOpcode(SM_FE_UNK.class, 0xFE, idSet); // TODO
         addPacketOpcode(SM_134_UNK.class, 0x134, idSet); // TODO
         addPacketOpcode(SM_STONESPEAR_SIEGE.class, 0x12E, idSet); // TODO

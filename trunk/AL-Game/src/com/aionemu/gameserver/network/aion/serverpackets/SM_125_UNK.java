@@ -20,19 +20,17 @@ import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
- * @author
+ * @author Dummy
  */
 public class SM_125_UNK extends AionServerPacket {
 
-    private int value;
+    public SM_125_UNK() {
 
-    public SM_125_UNK(int value) {
-        this.value = value;
     }
 
     @Override
     protected void writeImpl(AionConnection con) {
-    	writeC(value);
-        writeH(0);
+    	writeH(0);
+        writeC(0);
     }
 }

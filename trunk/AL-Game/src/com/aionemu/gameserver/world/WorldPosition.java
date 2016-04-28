@@ -29,6 +29,14 @@ public class WorldPosition {
     public WorldPosition(int mapId) {
         this.mapId = mapId;
     }
+    
+    public WorldPosition(int mapId, float x, float y, float z, byte h) {
+        this.mapId = mapId;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        this.heading = h;
+    }
 
     /**
      * Logger

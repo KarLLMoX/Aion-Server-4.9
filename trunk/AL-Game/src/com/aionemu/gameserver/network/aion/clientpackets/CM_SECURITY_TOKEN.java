@@ -16,17 +16,19 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.gameserver.model.account.Account;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_98_UNK;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SECURITY_TOKEN;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
- * @author Falke_34
+ * @author Falke_34, CoolyT
  */
-public class CM_11A_UNK extends AionClientPacket {
+public class CM_SECURITY_TOKEN extends AionClientPacket {
 
-    public CM_11A_UNK(int opcode, State state, State... restStates) {
+    public CM_SECURITY_TOKEN(int opcode, State state, State... restStates) {
         super(opcode, state, restStates);
     }
 
@@ -37,8 +39,10 @@ public class CM_11A_UNK extends AionClientPacket {
 
     @Override
     protected void runImpl() {
-        // Dummy
-    	if (getConnection().getActivePlayer() != null)
-    		PacketSendUtility.sendPacket(getConnection().getActivePlayer(), new SM_98_UNK());
+    	Player player = getConnection().getActivePlayer();
+    	Account acc = getConnection().getAccount();
+    	if (acc.getSecurityToken() == null || acc.getSecurityToken().isEmpty())
+    		return;
+        PacketSendUtility.sendPacket(player, new SM_SECURITY_TOKEN(acc.getSecurityToken()));
     }
 }
