@@ -6,6 +6,11 @@ h3. Forum Dev Account:
 h1. AionNA 4.9 TODO Liste
 
 h2. High Priority:
+* add "occupy_count" to Siege System
+* add new Pet Functions - Buff and Merchant
+* for Aion 4.9.1:
+  - CM_Landing_Reinforcement
+  - SM_Landing_Reinforcement
 * write new or update Packets:
   - Stonespear Siege (CM+SM)
   - Challenge_List (SM)
@@ -14,19 +19,10 @@ h2. High Priority:
   - 0x12F (SM)
   - 0x2F (SM) (Templer Bodygard Skill)
   - 0x30 (SM) (Templer Bodygard Skill End)
-* add "occupy_count" to Siege System
-* add new Pet Functions - Buff and Merchant
 
 * rework/update Reshanta Siege Spawns
 * rework/update Reshanta Siege Bosses
 * rework Reshanta Spawnfiles
-
-
-h2. High Priority (Preview):
-* for Aion 4.9.1 (27.04.2016)
-- CM_Landing_Reinforcement
-- SM_Landing_Reinforcement
-- parse new npc_template.xml
 
 
 h3. Middle Priority:
