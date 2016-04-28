@@ -548,6 +548,7 @@ public class LegionService {
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             storeNewAnnouncement(legion.getLegionId(), currentTime, "");
             legion.addAnnouncementToList(currentTime, "");
+            legion.setTerritory(new LegionTerritory());
             addLegionMember(legion, activePlayer, LegionRank.BRIGADE_GENERAL);
             PacketSendUtility.broadcastPacketToLegion(legion, new SM_LEGION_EDIT(0x05, (int) (System.currentTimeMillis() / 1000), ""));
             /**
