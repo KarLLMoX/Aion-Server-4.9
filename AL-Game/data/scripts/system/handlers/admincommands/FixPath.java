@@ -19,6 +19,7 @@ package admincommands;
 import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.WalkerData;
+import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.templates.walker.RouteStep;
@@ -26,6 +27,7 @@ import com.aionemu.gameserver.model.templates.walker.WalkerTemplate;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
+import com.aionemu.gameserver.world.WorldPosition;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,10 +52,19 @@ public class FixPath extends AdminCommand {
             return;
         }
 
-        String routeId = "";
+        //String routeId = "";
         final float z = admin.getZ();
         float jumpHeight = 0;
 
+        if (admin.getTarget() == null || !(admin.getTarget() instanceof Npc))
+        {
+        	PacketSendUtility.sendMessage(admin, "You need to target an Npc ..");
+        	return;
+        }
+        
+        final Npc npc = (Npc) admin.getTarget();
+        final String routeId = npc.getSpawn().getWalkerId();
+        WorldPosition walkerSpawnPos = new WorldPosition(npc.getSpawn().getWorldId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading());
         try {
             if (isRunning && runner != null && !admin.equals(runner)) {
                 PacketSendUtility.sendMessage(admin, "Someone is already running this command!");
@@ -65,12 +76,12 @@ public class FixPath extends AdminCommand {
                     canceled = true;
                 }
                 return;
-            } else if (params.length < 2) {
-                PacketSendUtility.sendMessage(admin, "Syntax : //fixpath <route id> <jump height> | <cancel>");
+            } else if (params.length < 1) {
+                PacketSendUtility.sendMessage(admin, "Syntax : //fixpath <jump height> | <cancel>");
                 return;
             } else {
-                routeId = params[0];
-                jumpHeight = Float.parseFloat(params[1]);
+                //routeId = params[0];
+                jumpHeight = Float.parseFloat(params[0]);
             }
         } catch (NumberFormatException e) {
             PacketSendUtility.sendMessage(admin, "Only numbers please!!!");
@@ -82,7 +93,8 @@ public class FixPath extends AdminCommand {
             return;
         }
 
-        PacketSendUtility.sendMessage(admin, "Make sure you are at NPC spawn position. If not use cancel!");
+        TeleportService2.teleportTo(admin, walkerSpawnPos);
+        PacketSendUtility.sendMessage(admin, "You were teleported to "+npc.getName()+"'s Spawnposition and you will be teleported to each step of this route to fix their z coordinates. ");
 
         isRunning = true;
         runner = admin;
@@ -112,11 +124,11 @@ public class FixPath extends AdminCommand {
                         if (zDelta == 0) {
                             zDelta = z - step.getZ() + height;
                         }
-                        PacketSendUtility.sendMessage(admin, "Teleporting to step " + i + "...");
+                        PacketSendUtility.sendMessage(admin, "Teleporting to step [" + i + " / "+template.getRouteSteps().size()+"] ...");
                         TeleportService2.teleportTo(admin, admin.getWorldId(), step.getX(), step.getY(), step.getZ() + zDelta);
                         admin.getController().stopProtectionActiveTask();
-                        PacketSendUtility.sendMessage(admin, "Waiting to get Z...");
-                        Thread.sleep(5000);
+                        PacketSendUtility.sendMessage(admin, "Waiting 3 sec to get Z...");
+                        Thread.sleep(3000);
                         step.setZ(admin.getZ());
                         corrections.put(i++, admin.getZ());
                     }
@@ -144,9 +156,9 @@ public class FixPath extends AdminCommand {
                     }
                     newTemplate.setPool(template.getPool());
                     data.AddTemplate(newTemplate);
-                    data.saveData(template.getRouteId());
+                    data.saveData(npc.getSpawn().getWorldId()+"_"+template.getRouteId());
 
-                    PacketSendUtility.sendMessage(admin, "Done.");
+                    PacketSendUtility.sendMessage(admin, "Done with routeid: "+routeId);
                 } catch (Exception e) {
                 } finally {
                     runner = null;
@@ -157,7 +169,7 @@ public class FixPath extends AdminCommand {
                     }
                 }
             }
-        }, 5000);
+        }, 2000);
     }
 
     @Override
