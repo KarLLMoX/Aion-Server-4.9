@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 03.04.2016 07:34 aus PS-Drop-Datei: Poeta_4.9_loot_live453997929.xml -->
+<!-- generiert am/um 30.04.2016 12:03 aus PS-Drop-Datei: Poeta_4.9_loot_live408626911.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="210065">
         <drop_group name="WEAPON_COMMON_LVL2" use_category="true" race="PC_ALL">
@@ -58,8 +58,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -136,11 +136,11 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Small Manastone Ore" />
+            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -180,8 +180,8 @@
             <drop item_id="115000560" chance="0.295" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shield" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -247,8 +247,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -578,20 +578,23 @@
             <drop item_id="114500579" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
             <drop item_id="114500588" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
         </drop_group>
+        <drop_group name="ACCESSORY_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
+        </drop_group>
         <drop_group name="OTHER_RARE_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="162000087" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Minor Panacea of Life" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="23" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="32" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
-        </drop_group>
-        <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210097">
@@ -670,7 +673,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="32" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="53" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -714,7 +717,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="50" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="51" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -838,8 +841,11 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -876,8 +882,8 @@
             <drop item_id="115000560" chance="0.295" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shield" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -1008,8 +1014,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -1141,8 +1147,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -1154,6 +1160,7 @@
             <drop item_id="182004794" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tattered Sparkie Carapace" />
         </drop_group>
         <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182200209" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Oz's Prayer Bead" />
             <drop item_id="182200214" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Namus's Diary" />
         </drop_group>
     </npc_drop>
@@ -1198,7 +1205,7 @@
             <drop item_id="182003943" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerub Scale Fragment" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="200" max_amount="900" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="900" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210134">
@@ -1342,7 +1349,7 @@
             <drop item_id="182003943" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerub Scale Fragment" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="4" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="6" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210136">
@@ -1544,8 +1551,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -1622,8 +1629,11 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -1712,7 +1722,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="37" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="41" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -1824,7 +1834,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="30" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="39" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -1943,6 +1953,9 @@
             <drop item_id="114500579" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
             <drop item_id="114500588" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
         </drop_group>
+        <drop_group name="ACCESSORY_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
+        </drop_group>
         <drop_group name="OTHER_RARE_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="162000087" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Minor Panacea of Life" />
         </drop_group>
@@ -1950,7 +1963,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="35" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="71" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003754" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusted Krall Armor" />
@@ -2202,7 +2215,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="45" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="56" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003754" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusted Krall Armor" />
@@ -2316,8 +2329,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -2444,8 +2457,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -2580,8 +2593,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -2718,7 +2731,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -2790,7 +2804,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -2806,9 +2821,38 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210259">
+        <drop_group name="ARMOR_COMMON_LVL2" use_category="true" race="PC_ALL">
+            <drop item_id="110100355" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Tunic" />
+            <drop item_id="110100616" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Tunic" />
+            <drop item_id="110100626" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Tunic" />
+            <drop item_id="110300316" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Jerkin" />
+            <drop item_id="110300577" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Jerkin" />
+            <drop item_id="110300587" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Jerkin" />
+            <drop item_id="110500345" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Hauberk" />
+            <drop item_id="110500555" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Hauberk" />
+            <drop item_id="110500565" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Hauberk" />
+            <drop item_id="113100293" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Leggings" />
+            <drop item_id="113100542" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Leggings" />
+            <drop item_id="113100552" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Leggings" />
+            <drop item_id="113300303" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Breeches" />
+            <drop item_id="113300558" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Breeches" />
+            <drop item_id="113300568" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Breeches" />
+            <drop item_id="113500328" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Chausses" />
+            <drop item_id="113500531" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Chausses" />
+            <drop item_id="113500541" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Chausses" />
+            <drop item_id="114100311" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shoes" />
+            <drop item_id="114100560" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shoes" />
+            <drop item_id="114100570" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shoes" />
+            <drop item_id="114300317" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Boots" />
+            <drop item_id="114300573" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Boots" />
+            <drop item_id="114300583" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Boots" />
+            <drop item_id="114500340" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
+            <drop item_id="114500539" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
+            <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
+        </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -2851,8 +2895,8 @@
             <drop item_id="115000560" chance="0.295" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shield" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -2986,8 +3030,8 @@
             <drop item_id="114500588" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -3092,8 +3136,8 @@
             <drop item_id="114500588" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -3115,7 +3159,8 @@
             <drop item_id="114500478" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tirratirra's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="OTHER_JUNK" use_category="true" race="PC_ALL">
             <drop item_id="182004353" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Airon Claw Fragment" />
@@ -3161,6 +3206,9 @@
             <drop item_id="114500360" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
             <drop item_id="114500579" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
             <drop item_id="114500588" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182005074" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Broken Worg Claw" />
@@ -3232,8 +3280,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -3302,8 +3350,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -3375,8 +3423,8 @@
             <drop item_id="115000560" chance="0.295" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Shield" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -3446,7 +3494,7 @@
             <drop item_id="182003943" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerub Scale Fragment" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="3" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="6" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210671">
@@ -3542,6 +3590,9 @@
         <drop_group name="OTHER_RARE_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="162000093" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Minor Panacea of Mana" />
         </drop_group>
+        <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
+        </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
@@ -3550,6 +3601,9 @@
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
             <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="8" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182200001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerubar Fang" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210672">
@@ -3583,7 +3637,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="OTHER_JUNK" use_category="true" race="PC_ALL">
             <drop item_id="182003913" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tattered Braxie Leather" />
@@ -3634,7 +3689,8 @@
             <drop item_id="123000379" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Green Belt" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003557" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -3765,7 +3821,8 @@
             <drop item_id="114500588" chance="0.356" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cliona Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON" use_category="true" race="PC_ALL">
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
@@ -3865,7 +3922,8 @@
             <drop item_id="114500549" chance="0.59" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plainsman's Brogans" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL10" use_category="true" race="PC_ALL">
-            <drop item_id="160003551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003551" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Rally Serum" />
+            <drop item_id="160003557" chance="2.90" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Focus Agent" />
         </drop_group>
         <drop_group name="MANASTONES_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="188054199" chance="0.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Manastone Ore" />
@@ -3977,7 +4035,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="20" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="21" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -4331,7 +4389,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="31" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="36" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210686">
@@ -4502,7 +4560,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="67" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="70" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -4636,7 +4694,7 @@
             <drop item_id="169000003" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Minor Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="13" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="18" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
@@ -4743,6 +4801,16 @@
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="700105">
+        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182200201" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerub Grain Sack" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="700107">
+        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="182200211" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Suspicious Ore" />
         </drop_group>
     </npc_drop>
 </npc_drops>
