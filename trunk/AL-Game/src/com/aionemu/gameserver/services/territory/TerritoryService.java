@@ -36,6 +36,7 @@ public class TerritoryService
     private FastMap<Integer, TerritoryBuff> buffs = new FastMap<Integer,TerritoryBuff>();
     private TreeMap<Integer,LegionTerritory> territories = new TreeMap<Integer,LegionTerritory>(); 
     private TreeMap<Integer, TreeMap<Integer,WorldPosition>> teleporters = new TreeMap<Integer, TreeMap<Integer,WorldPosition>>();
+    
     public void init()
     {
     	LegionService ls = LegionService.getInstance();
@@ -63,8 +64,34 @@ public class TerritoryService
     	}
     	GameServer.log.info("[TerritoryService] "+counter +" Legions owns a Territory..");
     	
-    	//Teleporters Elyos
+    	/*
+    	 * Teleporters Asmos
+    	 */    	
+    	//Mura
+    	TreeMap<Integer,WorldPosition> mura = new TreeMap<Integer,WorldPosition>();
+    	mura.put(805174, new WorldPosition(220080000, 1767.4069F, 2589.9512F, 299.21448F, (byte) 25));
+    	mura.put(805175, new WorldPosition(220080000, 1767.9563F, 2586.478F, 298.71466F, (byte) 86)); 
+    	mura.put(805176, new WorldPosition(220080000, 1803.5879F, 2557.8096F, 299.47995F, (byte) 6));
+    	mura.put(805177, new WorldPosition(220080000, 1800.6494F, 2554.5647F, 298.75F, (byte) 72));   	
+    	teleporters.put(1, mura);    	
+    	//Satyr
+    	TreeMap<Integer,WorldPosition> satyr = new TreeMap<Integer,WorldPosition>();
+    	satyr.put(805178, new WorldPosition(220080000, 1442.7272F, 1739.9116F, 329.77304F, (byte) 60));
+    	satyr.put(805179, new WorldPosition(220080000, 1446.1732F, 1741.3677F, 328.875F, (byte) 116));
+    	satyr.put(805180, new WorldPosition(220080000, 1469.9454F, 1781.2479F, 330.02618F, (byte) 45));
+    	satyr.put(805181, new WorldPosition(220080000, 1472.8165F, 1777.6108F, 328.82397F, (byte) 101));
+    	teleporters.put(2, satyr);    	
+    	//Velias
+    	TreeMap<Integer,WorldPosition> velias = new TreeMap<Integer,WorldPosition>();
+    	velias.put(805182, new WorldPosition(220080000, 764.80646F, 1310.1145F, 252.27219F, (byte) 26));
+    	velias.put(805183, new WorldPosition(220080000, 765.20404F, 1304.71F, 251.5F, (byte) 86));
+    	velias.put(805184, new WorldPosition(220080000, 796.8811F, 1272.6748F, 252.29373F, (byte) 3));
+    	velias.put(805185, new WorldPosition(220080000, 792.2996F, 1270.9819F, 251.5F, (byte) 63));    	
+    	teleporters.put(3, velias);    
     	
+    	/*
+    	 * Teleporters Elyos
+    	 */    	
     	//Kenoa
     	TreeMap<Integer,WorldPosition> kenoa = new TreeMap<Integer,WorldPosition>();
     	kenoa.put(805164, new WorldPosition(210070000, 1375.895F, 647.5174F, 581.81555F, (byte) 29));
@@ -85,30 +112,7 @@ public class TerritoryService
     	attika.put(805173, new WorldPosition(210070000, 2378.4214F, 1538.7888F, 437.67432F, (byte) 79));
     	attika.put(805171, new WorldPosition(210070000, 2334.0369F, 1525.9147F, 438.49768F, (byte) 112));
     	attika.put(805170, new WorldPosition(210070000, 2332.486F, 1529.6007F, 438.5F, (byte) 45));
-    	teleporters.put(6, attika);
- 
-    	
-    	
-    	/*    	 	
-    	TreeMap<Integer,WorldPosition> attika = new TreeMap<Integer,WorldPosition>();
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	teleporters.put(6, attika);    	
-    	TreeMap<Integer,WorldPosition> attika = new TreeMap<Integer,WorldPosition>();
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	teleporters.put(6, attika);    	
-    	TreeMap<Integer,WorldPosition> attika = new TreeMap<Integer,WorldPosition>();
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	attika.put(8051, new WorldPosition());
-    	teleporters.put(6, attika);
-*/    	
+    	teleporters.put(6, attika);   	
     }
     
     public void onTeleport(Player player, int npcid)
@@ -133,7 +137,7 @@ public class TerritoryService
 
     public void sendStoneSpearPacket(Player player)
     {
-    	PacketSendUtility.sendPacket(player, new SM_STONESPEAR_SIEGE(player.getLegion(),0));
+    	//PacketSendUtility.sendPacket(player, new SM_STONESPEAR_SIEGE(player.getLegion(),0));
     }
     
     public void onEnterTerritory(Player player)

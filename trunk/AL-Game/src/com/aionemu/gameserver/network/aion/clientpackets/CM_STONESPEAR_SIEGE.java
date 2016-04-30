@@ -16,12 +16,13 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.services.territory.TerritoryService;
 
 /**
- * @author
+ * @author CoolyT, ...
  */
 public class CM_STONESPEAR_SIEGE extends AionClientPacket {
 
@@ -37,6 +38,9 @@ public class CM_STONESPEAR_SIEGE extends AionClientPacket {
     @Override
     protected void runImpl() 
     {
-    	TerritoryService.getInstance().sendStoneSpearPacket(getConnection().getActivePlayer());
+    	Player player = getConnection().getActivePlayer();
+    	
+    	if (player.getLegion() != null && player.getLegion().getTerritory().getId() > 0)
+    		TerritoryService.getInstance().sendStoneSpearPacket(getConnection().getActivePlayer());
     }
 }

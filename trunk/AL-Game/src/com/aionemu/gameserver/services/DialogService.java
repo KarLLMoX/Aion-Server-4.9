@@ -535,7 +535,8 @@ public class DialogService {
                     break;
                 case TELEPORT_SIMPLE:
                     if (player.getRace() == Race.ELYOS) {
-                        switch (npc.getNpcId()) {
+                        switch (npc.getNpcId()) 
+                        {
                             case 802437:
                                 if (player.getAbyssRank().getRank().getId() < AbyssRankEnum.GENERAL.getId() && !player.isGM()) {
                                     PacketSendUtility.sendMessage(player, "You cant enter this location");
@@ -561,8 +562,23 @@ public class DialogService {
 							case 805171:
 							case 805172:
 							case 805173:
+							//Mura
+							case 805174:
+							case 805175:
+							case 805176:
+							case 805177:
+							//Satyr
+							case 805178:
+							case 805179:
+							case 805180:
+							case 805181:
+							//Velias	
+							case 805182:
+							case 805183:
+							case 805184:
+							case 805185:	
 								TerritoryService.getInstance().onTeleport(player, npc.getNpcId());
-								break;
+							break;
                         }
                     } else {
                         switch (npc.getNpcId()) {
