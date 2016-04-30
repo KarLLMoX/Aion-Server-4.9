@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 30.04.2016 10:32 aus PS-Drop-Datei: Disillon_4.9_loot_live387294600.xml -->
+<!-- generiert am/um 30.04.2016 12:36 aus PS-Drop-Datei: Disillon_4.9_loot_live387294600.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="881296">
         <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
@@ -939,13 +939,56 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881434">
-        <drop_group name="WEAPON_EPIC_LVL65" use_category="true" race="PC_ALL">
-            <drop item_id="102001212" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Harp" />
-        </drop_group>
         <drop_group name="ARMOR_EPIC_LVL65" use_category="true" race="PC_ALL">
-            <drop item_id="110301780" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Jerkin" />
-            <drop item_id="110551116" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Hauberk" />
+            <drop item_id="110101870" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Jacket" />
+            <drop item_id="110301862" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Jerkin" />
+            <drop item_id="110551189" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Hauberk" />
+            <drop item_id="110601657" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Breastplate" />
+            <drop item_id="111101685" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Gloves" />
+            <drop item_id="111301800" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Vambraces" />
+            <drop item_id="111501748" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Handguards" />
+            <drop item_id="111601620" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Gauntlets" />
+            <drop item_id="112101634" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Pauldrons" />
+            <drop item_id="112301739" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Shoulderguards" />
+            <drop item_id="112501687" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Spaulders" />
+            <drop item_id="112601602" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Shoulderplates" />
+            <drop item_id="113101696" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Leggings" />
+            <drop item_id="113301831" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Legguards" />
+            <drop item_id="113501766" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Chausses" />
+            <drop item_id="113601603" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Greaves" />
+            <drop item_id="114101730" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Shoes" />
+            <drop item_id="114301868" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Boots" />
+            <drop item_id="114501776" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Brogans" />
+            <drop item_id="114601610" chance="0.005" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wave Song Plate Boots" />
         </drop_group>
+        <drop_group name="ARMOR_EPIC_LVL65_2" use_category="true" race="PC_ALL">
+            <drop item_id="110101795" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Tunic" />
+            <drop item_id="110301780" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Jerkin" />
+            <drop item_id="110551116" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Hauberk" />
+            <drop item_id="110601583" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Breastplate" />
+            <drop item_id="111101615" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Gloves" />
+            <drop item_id="111301718" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Vambrace" />
+            <drop item_id="111501675" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Handguards" />
+            <drop item_id="111601546" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Gauntlets" />
+            <drop item_id="112101565" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Pauldrons" />
+            <drop item_id="112301657" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Shoulderguards" />
+            <drop item_id="112501614" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Spaulders" />
+            <drop item_id="112601528" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Shoulderplates" />
+            <drop item_id="113101627" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Leggings" />
+            <drop item_id="113301749" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Breeches" />
+            <drop item_id="113501693" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Chausses" />
+            <drop item_id="113601529" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Greaves" />
+            <drop item_id="114101661" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Shoes" />
+            <drop item_id="114301786" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Boots" />
+            <drop item_id="114501703" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Brogans" />
+            <drop item_id="114601536" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Sabatons" />
+        </drop_group>
+        <drop_group name="ACCESSORY_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="125004056" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Helm" />
+            <drop item_id="125004057" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Chain Helm" />
+            <drop item_id="125004058" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Hat" />
+            <drop item_id="125004059" chance="0.45" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Headband" />
+        </drop_group>	
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
