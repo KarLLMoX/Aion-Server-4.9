@@ -144,6 +144,8 @@
 	<teleloc_template loc_id="131" mapid="220040000" name="Hoarfrost Shelter" name_id="401660"/>
 	<!-- Housing Elyos -->
 	<!-- teleport -->
+	<teleloc_template loc_id="132" mapid="110010000" name="The Exalted Path" name_id="404675" posX="1363.0677" posY="1483.4675" posZ="569.0385" heading="29"/>
+	<teleloc_template loc_id="133" mapid="120010000" name="Pandaemonium Plaza" name_id="404676" posX="1314.4427" posY="1426.4529" posZ="209.09084" heading="77"/>	
 	<teleloc_template loc_id="139" mapid="700010000" name="Oriel Plaza" name_id="402109" posX="1260" posY="1837" posZ="97.625" heading="6"/>
 	<teleloc_template loc_id="140" mapid="700010000" name="Prosperity's Light Village" name_id="402110" posX="684.3219" posY="2273.341" posZ="162.247" heading="91"/>
 	<teleloc_template loc_id="141" mapid="700010000" name="Goldendell Village" name_id="402111" posX="231.9311" posY="2023.0917" posZ="121.73419" heading="17"/>
