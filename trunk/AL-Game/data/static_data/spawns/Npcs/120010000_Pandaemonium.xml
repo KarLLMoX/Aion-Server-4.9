@@ -523,11 +523,11 @@
         </spawn>
         <!-- Gwendag / SPDC1_NPC1 -->
         <spawn npc_id="204178" respawn_time="295">
-			<spot x="1587.9429" y="1411.3473" z="197.79581" h="30"/>
+			<spot x="1587.9429" y="1411.3473" z="192.35626" h="30"/>
         </spawn>
         <!-- Hebennjot / SPDC1_NPC5 -->
         <spawn npc_id="204179" respawn_time="295">
-			<spot x="1540.9148" y="1403.0751" z="212.79581" h="3"/>
+			<spot x="1540.9148" y="1403.0751" z="201.68068" h="3"/>
         </spawn>
         <!-- Hiyask / hiyask -->
         <spawn npc_id="204180" respawn_time="295">
@@ -1396,11 +1396,11 @@
         </spawn>
         <!-- Hulvar / SP_DC1_Hooshuun_E -->
         <spawn npc_id="806145" respawn_time="295">
-			<spot x="1313.11" y="1401.2158" z="210.4548" h="105"/>
+			<spot x="1313.11" y="1401.2158" z="208.125" h="105"/>
         </spawn>
         <!-- Bomiyan / SP_DC1_Hyobomiyan_E -->
         <spawn npc_id="806146" respawn_time="295">
-			<spot x="1314.9087" y="1399.6995" z="210.4548" h="44"/>
+			<spot x="1314.9087" y="1399.6995" z="208.125" h="44"/>
         </spawn>
         <!-- Kirr / dc1_kirr_e -->
         <spawn npc_id="806147" respawn_time="295">
