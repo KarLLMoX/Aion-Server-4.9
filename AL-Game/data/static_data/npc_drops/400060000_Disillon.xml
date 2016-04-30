@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 28.04.2016 13:33 aus PS-Drop-Datei: Disillon_4.9_loot_live404372892.xml -->
+<!-- generiert am/um 30.04.2016 10:32 aus PS-Drop-Datei: Disillon_4.9_loot_live387294600.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="881296">
         <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
@@ -23,6 +23,9 @@
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881298">
@@ -164,9 +167,11 @@
             <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
         </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012604" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Valiance Breath" />
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
@@ -198,6 +203,15 @@
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
             <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
         </drop_group>
+        <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152015016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prime Abex Cut" />
+        </drop_group>
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
     </npc_drop>
     <npc_drop npc_id="881314">
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
@@ -220,12 +234,19 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881328">
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
             <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
         </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
@@ -234,7 +255,11 @@
     </npc_drop>
     <npc_drop npc_id="881330">
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
@@ -252,14 +277,19 @@
             <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
         </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="MANASTONES_LVL70" use_category="true" race="PC_ALL">
             <drop item_id="188054205" chance="0.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Superior Manastone Ore" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881336">
@@ -271,10 +301,17 @@
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
+        </drop_group>
     </npc_drop>
     <npc_drop npc_id="881337">
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881338">
@@ -342,6 +379,15 @@
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="881343">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="881344">
         <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
             <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
@@ -356,6 +402,9 @@
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881346">
@@ -481,11 +530,28 @@
         <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
     </npc_drop>
     <npc_drop npc_id="881363">
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
@@ -527,6 +593,7 @@
             <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012604" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Valiance Breath" />
+            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
@@ -579,15 +646,6 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881382">
-        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
-            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
-            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
-        </drop_group>
-        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
-            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
-        </drop_group>
-    </npc_drop>
-    <npc_drop npc_id="881385">
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
@@ -596,6 +654,33 @@
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="881385">
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012604" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Valiance Breath" />
+            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
@@ -622,6 +707,12 @@
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
+        <drop_group name="MANASTONES_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="188054205" chance="0.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Superior Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="172" no_reduce="false" eachmember="false" name="Superior Power Shard" />
+        </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
@@ -632,10 +723,18 @@
             <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
             <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
         </drop_group>
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="188054205" chance="0.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Superior Manastone Ore" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
@@ -650,19 +749,38 @@
             <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
             <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
         </drop_group>
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012604" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Valiance Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
         <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881396">
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
         </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012604" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Valiance Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
@@ -671,6 +789,9 @@
     <npc_drop npc_id="881398">
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152015016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prime Abex Cut" />
+        </drop_group>
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
@@ -701,19 +822,65 @@
             <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
         </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="OTHER_UNIQUE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="166050033" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Esoteric Idian: Physical Defense" />
+        </drop_group>
+        <drop_group name="MANASTONE_ANCIENT_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="167000358" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Attack +3" />
+            <drop item_id="167000518" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Attack +5" />
+            <drop item_id="167000758" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: HP +80" />
+            <drop item_id="167000759" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: MP +80" />
+            <drop item_id="167000760" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Accuracy +24" />
+            <drop item_id="167000761" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Evasion +16" />
+            <drop item_id="167000762" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magic Boost +24" />
+            <drop item_id="167000763" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Parry +24" />
+            <drop item_id="167000764" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Block +24" />
+            <drop item_id="167000765" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Crit Strike +16" />
+            <drop item_id="167000766" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: HP +100" />
+            <drop item_id="167000767" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: MP +105" />
+            <drop item_id="167000768" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Accuracy +29" />
+            <drop item_id="167000769" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Evasion +19" />
+            <drop item_id="167000770" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magic Boost +28" />
+            <drop item_id="167000771" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Parry +29" />
+            <drop item_id="167000772" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Block +29" />
+            <drop item_id="167000773" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Crit Strike +19" />
+            <drop item_id="167000775" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magical Accuracy +16" />
+            <drop item_id="167000776" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Resist Magic +16" />
+            <drop item_id="167000777" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Crit Spell +5" />
+            <drop item_id="167000778" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magical Critical Resistance +5" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881429">
+        <drop_group name="ARMOR_LEGEND_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="114101448" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Destiny Shoes" />
+        </drop_group>
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="5" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="5" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="5" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="234" no_reduce="false" eachmember="false" name="Superior Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
         <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
@@ -721,28 +888,81 @@
     </npc_drop>
     <npc_drop npc_id="881430">
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
+        </drop_group>
+        <drop_group name="OTHER_UNIQUE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="166050036" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Esoteric Idian: Resistance" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881431">
+        <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="5" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
+        </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
+            <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="MANASTONE_ANCIENT_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="167000358" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Attack +3" />
+            <drop item_id="167000518" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Attack +5" />
+            <drop item_id="167000758" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: HP +80" />
+            <drop item_id="167000759" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: MP +80" />
+            <drop item_id="167000760" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Accuracy +24" />
+            <drop item_id="167000761" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Evasion +16" />
+            <drop item_id="167000762" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magic Boost +24" />
+            <drop item_id="167000763" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Parry +24" />
+            <drop item_id="167000764" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Block +24" />
+            <drop item_id="167000765" chance="2.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Crit Strike +16" />
+            <drop item_id="167000766" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: HP +100" />
+            <drop item_id="167000767" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: MP +105" />
+            <drop item_id="167000768" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Accuracy +29" />
+            <drop item_id="167000769" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Evasion +19" />
+            <drop item_id="167000770" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magic Boost +28" />
+            <drop item_id="167000771" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Parry +29" />
+            <drop item_id="167000772" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Block +29" />
+            <drop item_id="167000773" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Crit Strike +19" />
+            <drop item_id="167000775" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magical Accuracy +16" />
+            <drop item_id="167000776" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Resist Magic +16" />
+            <drop item_id="167000777" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Crit Spell +5" />
+            <drop item_id="167000778" chance="1.52" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Manastone: Magical Critical Resistance +5" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881434">
         <drop_group name="WEAPON_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="102001212" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Harp" />
         </drop_group>
+        <drop_group name="ARMOR_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="110301780" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Jerkin" />
+            <drop item_id="110551116" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Taipaum's Hauberk" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
             <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Disillon Fragment" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="881435">
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000376" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Disillon Fragment" />
