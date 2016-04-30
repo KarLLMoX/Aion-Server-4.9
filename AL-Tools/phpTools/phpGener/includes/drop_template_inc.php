@@ -432,26 +432,6 @@ $tabDropTemplates = array (
                             array("102101103","0.001","Wave Song Cipher-Blade")
                           )
                         ),
-                        // generiert aus weapon_epic_lvl65.xml
-                        array("100","WEAPON_EPIC_LVL65","WEAPON_EPIC_LVL65",
-                          array (
-                            array("100001698","0.45","Taipaum's Sword"),
-                            array("100101297","0.45","Taipaum's Mace"),
-                            array("100201469","0.45","Taipaum's Dagger"),
-                            array("100501283","0.45","Taipaum's Orb"),
-                            array("100601393","0.45","Taipaum's Spellbook"),
-                            array("100901324","0.45","Taipaum's Greatsword"),
-                            array("101301229","0.45","Taipaum's Polearm"),
-                            array("101501320","0.45","Taipaum's Staff"),
-                            array("101701334","0.45","Taipaum's Bow"),
-                            array("101801184","0.45","Taipaum's Pistol"),
-                            array("101901095","0.45","Taipaum's Aethercannon"),
-                            array("102001212","0.45","Taipaum's Harp"),
-                            array("102101018","0.45","Taipaum's Cipher-Blade"),
-                            array("115001718","0.45","Taipaum's Battle Shield"),
-                            array("115001719","0.45","Taipaum's Protective Shield")
-                          )
-                        ),
                         //
                         //         1  1  0
                         //
@@ -867,31 +847,6 @@ $tabDropTemplates = array (
                             array("114601610","0.005","Wave Song Plate Boots")
                           )
                         ),
-                        // generiert aus armor_epic_lvl65.xml
-                        array("110","ARMOR_EPIC_2_LVL65","ARMOR_EPIC_2_LVL65",
-                          array (
-                            array("110101795","0.45","Taipaum's Tunic"),
-                            array("110301780","0.45","Taipaum's Jerkin"),
-                            array("110551116","0.45","Taipaum's Hauberk"),
-                            array("110601583","0.45","Taipaum's Breastplate"),
-                            array("111101615","0.45","Taipaum's Gloves"),
-                            array("111301718","0.45","Taipaum's Vambrace"),
-                            array("111501675","0.45","Taipaum's Handguards"),
-                            array("111601546","0.45","Taipaum's Gauntlets"),
-                            array("112101565","0.45","Taipaum's Pauldrons"),
-                            array("112301657","0.45","Taipaum's Shoulderguards"),
-                            array("112501614","0.45","Taipaum's Spaulders"),
-                            array("112601528","0.45","Taipaum's Shoulderplates"),
-                            array("113101627","0.45","Taipaum's Leggings"),
-                            array("113301749","0.45","Taipaum's Breeches"),
-                            array("113501693","0.45","Taipaum's Chausses"),
-                            array("113601529","0.45","Taipaum's Greaves"),
-                            array("114101661","0.45","Taipaum's Shoes"),
-                            array("114301786","0.45","Taipaum's Boots"),
-                            array("114501703","0.45","Taipaum's Brogans"),
-                            array("114601536","0.45","Taipaum's Sabatons")
-                          )
-                        ),
                         //
                         //         1  2  0
                         //
@@ -926,15 +881,6 @@ $tabDropTemplates = array (
                             array("125004239","0.001","Wave Song Leather Hat"),
                             array("125004240","0.001","Wave Song Cloth Bandana"),
                             array("125004301","0.001","Wave Song Hairpin")
-                          )
-                        ),
-                        // generiert aus accessory_epic_lvl65.xml
-                        array("125","ACCESSORY_EPIC_LVL65","ACCESSORY_EPIC_LVL65",
-                          array (
-                            array("125004056","0.45","Taipaum's Helm"),
-                            array("125004057","0.45","Taipaum's Chain Helm"),
-                            array("125004058","0.45","Taipaum's Hat"),
-                            array("125004059","0.45","Taipaum's Headband")
                           )
                         ),
                         //
