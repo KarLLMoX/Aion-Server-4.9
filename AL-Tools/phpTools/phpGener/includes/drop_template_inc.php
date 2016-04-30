@@ -868,7 +868,7 @@ $tabDropTemplates = array (
                           )
                         ),
                         // generiert aus armor_epic_lvl65.xml
-                        array("110","ARMOR_EPIC_LVL65","ARMOR_EPIC_LVL65_2",
+                        array("110","ARMOR_EPIC_2_LVL65","ARMOR_EPIC_2_LVL65",
                           array (
                             array("110101795","0.45","Taipaum's Tunic"),
                             array("110301780","0.45","Taipaum's Jerkin"),
