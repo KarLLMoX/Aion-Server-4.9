@@ -588,6 +588,9 @@
 		<enum val="18" display="SUPREME COMMANDER"/>
 	</multivalue>
 	<multivalue name="Stonespear_SiegeId">
+		<enum val="1" display="Mura"/>
+		<enum val="2" display="Satyr"/>
+		<enum val="3" display="Velias"/>
 		<enum val="4" display="Kenoa"/>
 		<enum val="5" display="Deluan"/>
 		<enum val="6" display="Attika"/>

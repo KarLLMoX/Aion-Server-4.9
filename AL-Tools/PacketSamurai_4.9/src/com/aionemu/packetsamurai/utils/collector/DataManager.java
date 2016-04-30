@@ -30,6 +30,7 @@ import com.aionemu.packetsamurai.utils.collector.data.npcData.CollectedNpcDataLo
 import com.aionemu.packetsamurai.utils.collector.data.npcMoves.NpcMoveDataSaver;
 import com.aionemu.packetsamurai.utils.collector.data.npcTemplates.NpcsTool;
 import com.aionemu.packetsamurai.utils.collector.data.npcskills.NpcSkillsTool;
+import com.aionemu.packetsamurai.utils.collector.data.quest.QuestItemsTool;
 import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnsTool;
 import com.aionemu.packetsamurai.utils.collector.data.towns.TownSpawnsTool;
 import com.aionemu.packetsamurai.utils.collector.objects.player.PlayerTool;
@@ -42,6 +43,7 @@ public class DataManager {
 	public static String pathConquestPortals = directToServer ? "../../../../AL-Game/data/static_data/portals/" : "./data/conquest_portals/";
 	public static String pathGatherSpawns = directToServer ? "../../../../AL-Game/data/static_data/spawns/gather/" : "./data/spawns/gather/";
 	public static String pathSpawns = directToServer ? "../../../../AL-Game/data/static_data/spawns/" : "./data/spawns/";
+	public static String pathQuests = directToServer ? "../../../../AL-Game/data/static_data/quest_data/" : "./data/quest/";
 	public static String pathPlayerAppearances = directToServer ? "../../../../AL-Game/data/static_data/" : "./data/appearances/";
 	public static String pathWorldMaps = directToServer ? "../../../../AL-Game/data/static_data/" : "./data/";
 	
@@ -59,6 +61,7 @@ public class DataManager {
 		TownSpawnsTool.load();
 		CollectedHouseDataLoader.load();
 		PlayerTool.load();
+		QuestItemsTool.load();
 						
 		//Create output directories, if they don't exists
 		File x;
@@ -122,6 +125,9 @@ public class DataManager {
 
 	public static String getPathWorldMaps() {
 		return pathWorldMaps = directToServer ? "../../../../AL-Game/data/static_data/" : "./data/";
+	}
+	public static String getPathQuests() {
+		return pathQuests = directToServer ? "../../../../AL-Game/data/static_data/quest_data/" : "./data/quest/";
 	}
 
 	public static void save() {

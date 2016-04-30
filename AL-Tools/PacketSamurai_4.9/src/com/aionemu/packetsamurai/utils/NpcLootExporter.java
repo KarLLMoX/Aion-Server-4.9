@@ -32,6 +32,8 @@ import javolution.util.FastMap;
 import com.aionemu.packetsamurai.PacketSamurai;
 import com.aionemu.packetsamurai.parser.datatree.ValuePart;
 import com.aionemu.packetsamurai.session.DataPacket;
+import com.aionemu.packetsamurai.utils.collector.data.quest.QuestItemsTool;
+import com.aionemu.packetsamurai.utils.collector.data.spawns.SpawnsTool;
 
 /**
  * @author Magenik
@@ -42,6 +44,7 @@ public class NpcLootExporter {
 	private String sessionName;
 	private SortedMap<String, String> npcIdMap = new TreeMap<String, String>();
    	private FastMap<String, FastMap<Integer, Integer>> loots = new FastMap<String, FastMap<Integer, Integer>>();
+   	private int worldId = -1;
 
 	public NpcLootExporter(List<DataPacket> packets, String sessionName) {
       	this.packets = new FastList<DataPacket>(packets);
@@ -49,14 +52,17 @@ public class NpcLootExporter {
 	}
 
 	public void parse() {
-		String fileName = "npc_loot_" + sessionName + ".xml";
+		String fileName = "4.9_loot_" + sessionName + ".xml";
 
 		try {
 			//Get NpcIDs
 			for(DataPacket packet : packets)
 			{
 				String name = packet.getName();
-				if("SM_NPC_INFO".equals(name))
+				
+				if ("SM_PLAYER_SPAWN".equals(name))
+					this.worldId = Integer.parseInt(packet.getValuePartList().get(1).readValue());
+				else if("SM_NPC_INFO".equals(name))
 				{
 					String objectId = "";
 					String npcId = "";
@@ -106,13 +112,17 @@ public class NpcLootExporter {
 						}
                		}
                
-               		if(!loots.containsKey(objectId) && !objectId.equals("")){
+               		if(!loots.containsKey(objectId) && !objectId.equals("") && !QuestItemsTool.isQuestItem(itemId)){
                    		loots.put(objectId, tempData);
 					}
 				}
          	}
-
-			String file = "output/Npc_Loot/"+fileName;
+			String mapString;
+			if (worldId > 0)
+				mapString = (SpawnsTool.mapNameById.containsKey(worldId) ? SpawnsTool.mapNameById.get(worldId) : worldId+"")+"_";
+			else mapString = "npc_";
+			
+			String file = "output/Npc_Loot/"+mapString+fileName;
 			BufferedWriter out = new BufferedWriter(new FileWriter(file));
 
          	for (FastMap.Entry<String, FastMap<Integer, Integer>> e = loots.head(), end = loots.tail(); (e = e.getNext()) != end;)
