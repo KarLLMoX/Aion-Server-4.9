@@ -40,9 +40,7 @@ import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.SiegeService;
 import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.WeatherService;
-import com.aionemu.gameserver.services.instance.LivePartyConcertHall;
 import com.aionemu.gameserver.services.rift.RiftInformer;
-import com.aionemu.gameserver.spawnengine.InstanceRiftSpawnManager;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldMapType;
 
@@ -112,7 +110,6 @@ public class CM_LEVEL_READY extends AionClientPacket {
 
 		 // SM_RIFT_ANNOUNCE
 		 RiftInformer.sendRiftsInfo(activePlayer);
-		 InstanceRiftSpawnManager.sendInstanceRiftStatus(activePlayer);
 
 		 //SM_UPGRADE_ARCADE
 		 if (EventsConfig.ENABLE_EVENT_ARCADE && activePlayer.getLevel() >= 50) {
@@ -152,14 +149,5 @@ public class CM_LEVEL_READY extends AionClientPacket {
 			 World.getInstance().spawn(pet);
 		 }
 		 activePlayer.setPortAnimation(0);
-
-		 
-
-		 // Live Party Concert Hall
-		 if (activePlayer.getWorldId() == 600080000) {
-			 LivePartyConcertHall.getInstance().onEnterMap(activePlayer);
-		 } else if (activePlayer.isInLiveParty()) {
-			 LivePartyConcertHall.getInstance().onLeaveMap(activePlayer);
-		 }
 	}
 }

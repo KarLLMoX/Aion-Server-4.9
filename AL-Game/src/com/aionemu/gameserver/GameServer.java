@@ -57,7 +57,6 @@ import com.aionemu.gameserver.services.reward.OnlineBonus;
 import com.aionemu.gameserver.services.reward.RewardService;
 import com.aionemu.gameserver.services.territory.TerritoryService;
 import com.aionemu.gameserver.services.transfers.PlayerTransferService;
-import com.aionemu.gameserver.spawnengine.InstanceRiftSpawnManager;
 import com.aionemu.gameserver.spawnengine.SpawnEngine;
 import com.aionemu.gameserver.spawnengine.TemporarySpawnEngine;
 import com.aionemu.gameserver.taskmanager.fromdb.TaskFromDBManager;
@@ -215,7 +214,6 @@ public class GameServer {
            
         }
         RiftService.getInstance().initRifts();
-        InstanceRiftSpawnManager.spawnAll();
         TemporarySpawnEngine.spawnAll();
 
         Util.printSection(" ### Sieges ### ");
@@ -294,7 +292,6 @@ public class GameServer {
         LanguageHandler.getInstance();
         CuringZoneService.getInstance();
         RoadService.getInstance();
-        LivePartyConcertHall.getInstance().init();
         AdminService.getInstance();
         PlayerTransferService.getInstance();        
         Util.printSection(" ### Housing ### ");

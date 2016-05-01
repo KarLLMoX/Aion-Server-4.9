@@ -56,7 +56,7 @@ public class FixPath extends AdminCommand {
         final float z = admin.getZ();
         float jumpHeight = 0;
 
-        if (admin.getTarget() == null || !(admin.getTarget() instanceof Npc))
+        if ((admin.getTarget() == null || !(admin.getTarget() instanceof Npc)) && !("cancel".equals(params[0])))
         {
         	PacketSendUtility.sendMessage(admin, "You need to target an Npc ..");
         	return;
