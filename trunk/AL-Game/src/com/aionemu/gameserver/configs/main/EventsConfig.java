@@ -64,17 +64,6 @@ public class EventsConfig {
     @Property(key = "gameserver.event.service.enable", defaultValue = "false")
     public static boolean ENABLE_EVENT_SERVICE;
     /**
-     * Live Party Concert Hall
-     */
-    @Property(key = "gameserver.liveparty.enabled", defaultValue = "false")
-    public static boolean LIVE_PARTY_ENABLE;
-    @Property(key = "gameserver.liveparty.schedule", defaultValue = "0 0 20 ? * TUE")
-    public static String LIVE_PARTY_SPAWN_SCHEDULE;
-    @Property(key = "gameserver.liveparty.allrace", defaultValue = "ALL")
-    public static String LIVE_PARTY_RACE_ALL;
-    @Property(key = "gameserver.liveparty.max", defaultValue = "100")
-    public static int LIVE_PARTY_MAX_PLAYERS;
-    /**
      * Arcade Event
      */    
 	@Property(key="gameserver.event.arcade.enable", defaultValue="false")
