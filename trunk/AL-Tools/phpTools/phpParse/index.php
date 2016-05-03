@@ -49,7 +49,8 @@
        <a href="genQuest.php"    target="_self"><input type="button" value="Generieren Quest-Dateien ..."  style="width:220px"></a><br><br>
        <a href="genTribes.php"   target="_self"><input type="button" value="Generieren Tribe-Dateien ..."  style="width:220px"></a><br><br>
        <a href="genGoodlist.php" target="_self"><input type="button" value="Generieren Trade-Dateien ..."  style="width:220px"></a><br><br>
-       <a href="genHousing.php"  target="_self"><input type="button" value="Generieren Housing-Dateien ..." style="width:220px"></a>
+       <a href="genHousing.php"  target="_self"><input type="button" value="Generieren Housing-Dateien ..." style="width:220px"></a><br><br>
+       <a href="genInstance.php" target="_self"><input type="button" value="Generieren Instance-Dateien ..." style="width:220px"></a>
        </center>
      </td>
      <td valign="top">
