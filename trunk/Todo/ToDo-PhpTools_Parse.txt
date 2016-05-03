@@ -19,6 +19,11 @@ Status  : offen         = noch nicht analysiert / geprüft
 Die Zeile "***  stop check *** ..." zeigt nur an, bis zu welcher Datei ich aktuell die Prüfung / Analyse
 durchgeführt habe. Hinweis: aktuell gehe ich in der Liste der Reihe nach alle noch mit Status "offen"
 markierten Einträge durch (nach dieser Zeile sind aber durchaus schon Generierungen/Analysen erledigt).
+
+neue Wunsch-Prioritäten (Generierungen, die vorgezogen werden sollten):
+
+- 14.04.2016 : zones-Dateien, skill-Dateien
+
 =========================================================================================================================================================
 Dateiname                                          | Status         | SVN-Unterverzeichnis           | Hinweise
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
@@ -33,7 +38,7 @@ player_experience_table.xml                        | MANUELL        | ...       
 player_initial_data.xml                            | NO_CDATA       | ...                            |
 player_titles.xml                                  | - DONE_SVN -   | ...                            |
 static_data.xml                                    | EMUSYSTEM      | ...                            |
-teleport_location.xml                              | NO_CDATA       | ...                            |
+teleport_location.xml                              | - DONE_SVN -   | ...                            | 
 walker_versions.xml                                | EMUSYSTEM ?    | ...                            |
 weather_table.xml                                  | - DONE_SVN -   | ...                            |
 world_maps.xml                                     | UNCOMPLETE     | ...                            | 
@@ -73,25 +78,24 @@ gatherable_templates.xml                           | - DONE_SVN -   | ...\gather
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 goodslists.xml                                     | - DONE_SVN -   | ...\goodslists                 |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*************************************************   stop check   ***   stop check   ***   stop check   **************************************************
-guide.xml                                          | offen          | ...\guides                     |
-guide_asmodians_initiative.xml                     | offen          | ...\guides                     |
-guide_custom.xml                                   | offen          | ...\guides                     |
+guide.xml                                          | NO_CDATA       | ...\guides                     |
+guide_asmodians_initiative.xml                     | NO_CDATA       | ...\guides                     |
+guide_custom.xml                                   | NO_CDATA       | ...\guides                     |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-hidden_stigma_tree.xml                             | offen          | ...\hidden_stigma_tree         |
+hidden_stigma_tree.xml                             | NO_CDATA       | ...\hidden_stigma_tree         |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-house_buildings.xml                                | offen          | ...\housing                    |
-house_npcs.xml                                     | offen          | ...\housing                    |
-house_parts.xml                                    | offen          | ...\housing                    |
-houses.xml                                         | offen          | ...\housing                    |
-housing_objects.xml                                | offen          | ...\housing                    |
-scripts.xml                                        | offen          | ...\housing                    |
+house_buildings.xml                                | - DONE_SVN -   | ...\housing                    |
+house_npcs.xml                                     | UNCOMPLETE     | ...\housing                    | MANAGER.../Positionen
+house_parts.xml                                    | - DONE_SVN -   | ...\housing                    |
+houses.xml                                         | UNCOMPLETE     | ...\housing                    | adresses....
+housing_objects.xml                                | - DONE_SVN -   | ...\housing                    |
+scripts.xml                                        | MANUELL        | ...\housing                    | quasi Kopie von ...it10n...lbox_sample.xml
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-instance_bonusattr.xml                             | offen          | ...\instance_bonusattr         |
+instance_bonusattr.xml                             | - DONE_SVN -   | ...\instance_bonusattr         |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-instance_cooltimes.xml                             | offen          | ...\instance_cooltimes         |
+instance_cooltimes.xml                             | - DONE_SVN -   | ...\instance_cooltimes         |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-instance_exit.xml                                  | offen          | ...\instance_exit              |
+instance_exit.xml                                  | NO_CDATA       | ...\instance_exit              | Entry-Position xyz etc.
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 item_sets.xml                                      | - DONE_SVN -   | ...\item_sets                  |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
@@ -104,12 +108,13 @@ item_purifications.xml                             | - DONE_SVN -   | ...\items 
 item_random_bonuses.xml                            | - DONE_SVN -   | ...\items                      |
 item_restriction_cleanups.xml                      | NO_CDATA       | ...\items                      |
 item_templates.xml                                 | - DONE_SVN -   | ...\items                      |
+*************************************************   stop check   ***   stop check   ***   stop check   **************************************************
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 material_templates.xml                             | offen          | ...\mesh_materials             |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 raid_locations.xml                                 | offen          | ...\monster_raid               |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*** world_zones.xml ***                            | offen          | ...\npc_drops                  |
+*** world_zones.xml ***                            | NO_CDATA       | ...\npc_drops                  |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 npc_factions.xml                                   | offen          | ...\npc_factions               |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
@@ -119,7 +124,7 @@ npc_skills.xml                                     | offen          | ...\npc_sk
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | - DONE_SVN -   | ...\npc_walker                 |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-npc_templates.xml                                  | offen          | ...\npcs                       |
+npc_templates.xml                                  | - DONE_SVN -   | ...\npcs                       |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 pet_skills.xml                                     | offen          | ...\pet_skills                 |
 transformed_summon_skills.xml                      | offen          | ...\pet_skills                 |
@@ -183,11 +188,11 @@ world_buffs.xml                                    | offen          | ...\world_
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | offen          | ...\zones                      |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*** world_zones.xml ***                            | offen          | ...\spawns\Bases               |
+*** world_zones.xml ***                            | NO_CDATA       | ...\spawns\Bases               |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | - DONE_SVN -   | ...\spawns\Beritra             |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*** world_zones.xml ***                            | offen          | ...\spawns\Conquest            |
+*** world_zones.xml ***                            | NO_CDATA       | ...\spawns\Conquest            |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | - DONE_SVN -   | ...\spawns\Gather              |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
@@ -195,11 +200,11 @@ world_buffs.xml                                    | offen          | ...\world_
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | - DONE_SVN -   | ...\spawns\Npcs                |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*** world_zones.xml ***                            | offen          | ...\spawns\Rifts               |
+*** world_zones.xml ***                            | NO_CDATA       | ...\spawns\Rifts               |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*** world_zones.xml ***                            | offen          | ...\spawns\Sieges              |
+*** world_zones.xml ***                            | NO_CDATA       | ...\spawns\Sieges              |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-*** world_zones.xml ***                            | offen          | ...\spawns\Statics             |
+*** world_zones.xml ***                            | - DONE_SVN -   | ...\spawns\Statics             |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 artist-templates.xml                               | offen          | ...\stats\player               |
 assassin-templates.xml                             | offen          | ...\stats\player               |
