@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
+    <active>Wishing Fountain Inventory;Wishing Fountain</active>
+    <events>
+        <event name="Wishing Fountain Inventory" start="2016-05-01T00:00:00+00:00" end="2016-05-31T00:00:00+00:00">
+            <inventory_drop startlevel="30" interval="30" endlevel="65" maxCountOfDay="4" cleanTime="9">186000406</inventory_drop>
+        </event> 
+        <event name="Wishing Fountain" start="2016-05-01T00:00:00+00:00" end="2016-05-31T00:00:00+00:00">
+            <quests>
+                <maintainable>80708;80709;80710;80711;80712;80713;80714</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+                    <!-- Shimmering Fountain -->
+                    <spawn npc_id="833501" respawn_time="295">
+                        <spot x="1535.0" y="1503.3" z="565.90314" h="67"/>
+                    </spawn>
+                    <!-- Fountess Lolly -->
+                    <spawn npc_id="833502" respawn_time="295">
+                        <spot x="1517.7" y="1509.8" z="565.9189" h="59"/>
+                    </spawn>
+                    <!-- Fountess Lilly -->
+                    <spawn npc_id="833503" respawn_time="295">
+                        <spot x="1517.7" y="1513.6" z="565.91864" h="69"/>
+                    </spawn>
+                    <!-- Fountess Lulu -->
+                    <spawn npc_id="833504" respawn_time="295">
+                        <spot x="1539.7" y="1507.2" z="565.9029" h="62"/>
+                    </spawn>
+                    <!-- Fountess Lollo -->
+                    <spawn npc_id="833505" respawn_time="295">
+                        <spot x="1537.9" y="1521.2" z="565.909" h="77"/>
+                    </spawn>
+                    <!-- Fountess Polly -->
+                    <spawn npc_id="833506" respawn_time="295">
+                        <spot x="1533.3" y="1523.2" z="565.91077" h="79"/>
+                    </spawn>
+                    <!-- Fountess Suri -->
+                    <spawn npc_id="833507" respawn_time="295">
+                        <spot x="1532.7" y="1514.5" z="565.88947" h="85"/>
+                    </spawn>
+                    <!-- Fountess Solly -->
+                    <spawn npc_id="833508" respawn_time="295">
+                        <spot x="1533.4" y="1512.6" z="565.8855" h="66"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+                    <!-- Shimmering Fountain -->
+                    <spawn npc_id="833501" respawn_time="295">
+                        <spot x="1194.8" y="1405.7" z="208.125" h="118"/>
+                    </spawn>
+                    <!-- Fountess Lolly -->
+                    <spawn npc_id="833502" respawn_time="295">
+                        <spot x="1215.4" y="1399.1" z="208.125" h="13"/>
+                    </spawn>
+                    <!-- Fountess Lilly -->
+                    <spawn npc_id="833503" respawn_time="295">
+                        <spot x="1214.8" y="1402.1" z="208.125" h="9"/>
+                    </spawn>
+                    <!-- Fountess Lulu -->
+                    <spawn npc_id="833504" respawn_time="295">
+                        <spot x="1201.7" y="1388.2" z="208.125" h="12"/>
+                    </spawn>
+                    <!-- Fountess Lollo -->
+                    <spawn npc_id="833505" respawn_time="295">
+                        <spot x="1194.4" y="1389.6" z="208.125" h="22"/>
+                    </spawn>
+                    <!-- Fountess Polly -->
+                    <spawn npc_id="833506" respawn_time="295">
+                        <spot x="1194.1" y="1411.4" z="208.125" h="118"/>
+                    </spawn>
+                    <!-- Fountess Suri -->
+                    <spawn npc_id="833507" respawn_time="295">
+                        <spot x="1198.5" y="1397.7" z="208.125" h="3"/>
+                    </spawn>
+                    <!-- Fountess Solly -->
+                    <spawn npc_id="833508" respawn_time="295">
+                        <spot x="1198.8" y="1395.6" z="208.125" h="10"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Cygnea -->
+                <spawn_map map_id="210070000">
+                    <!-- Yellow Aether Blossom -->
+                    <spawn npc_id="702786" respawn_time="295">
+                        <spot x="2764.6274" y="1792.293" z="381.20602" h="96"/>
+                        <spot x="2452.7952" y="2019.9261" z="350.15747" h="115"/>
+                        <spot x="2335.3071" y="2335.7935" z="313.33203" h="49"/>
+                        <spot x="451.54016" y="1832.2802" z="457.52472" h="58"/>
+                    </spawn>
+                    <!-- Ruby Aether Blossom -->
+                    <spawn npc_id="702787" respawn_time="295">
+                        <spot x="501.13354" y="1845.7947" z="467.78525" h="37"/>
+                        <spot x="800.73285" y="1664.0483" z="454.2613" h="110"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Enshar -->
+                <spawn_map map_id="220080000">
+                    <!-- Yellow Aether Blossom -->
+                    <spawn npc_id="702786" respawn_time="295">
+                        <spot x="689.8966" y="2701.7314" z="212.01907" h="15"/>
+                        <spot x="1678.7611" y="2523.5388" z="282.18317" h="63"/>
+                        <spot x="1855.8523" y="2432.1848" z="301.29874" h="100"/>
+                        <spot x="1848.9" y="2286.4736" z="287.0191" h="44"/>
+                        <spot x="2240.9766" y="2039.746" z="322.93604" h="65"/>
+                        <spot x="549.08154" y="382.6174" z="206.88362" h="70"/>
+                        <spot x="463.6865" y="69.60072" z="196.44104" h="12"/>
+                        <spot x="1283.055" y="1855.5994" z="306.74295" h="67"/>
+                        <spot x="1307.5298" y="1839.1161" z="318.5" h="50"/>
+                    </spawn>
+                    <!-- Ruby Aether Blossom -->
+                    <spawn npc_id="702787" respawn_time="295">
+                        <spot x="2122.564" y="2064.3203" z="322.93506" h="50"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Levinshor -->
+                <spawn_map map_id="600100000">
+                    <!-- Pure Aether Blossom -->
+                    <spawn npc_id="702788" respawn_time="295">
+                        <spot x="609.667" y="1707.6208" z="226.5" h="13"/>
+                        <spot x="875.8021" y="1516.0626" z="258.54517" h="18"/>
+                        <spot x="798.90314" y="1433.534" z="271.97656" h="116"/>
+                        <spot x="702.5017" y="1361.7848" z="287.7071" h="56"/>
+                        <spot x="1615.3033" y="378.669" z="250.1823" h="11"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+    </events>
+</events_config>
