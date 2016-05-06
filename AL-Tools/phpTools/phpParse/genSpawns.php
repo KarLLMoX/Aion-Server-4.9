@@ -17,7 +17,7 @@
 //        - TODO erzeugen Include worldMaps (zurückgestellt!)
 //        - ERL. erzeugen Include Npc_infos
 //
-// Hint:  - eventuell die Z-Angabe aus den bestehenden Spawn-Files übernehmen
+// 05/16: Z-Pos-Korrektur über SVN-Spawn-File selektiv per Vorgabe
 // ----------------------------------------------------------------------------    
 include("../includes/inc_globals.php");
 include("includes/inc_worldmaps.php");
@@ -73,6 +73,7 @@ else
 
 $welt     = isset($_GET['welt'])     ? $_GET['welt']     : "";
 $scan     = isset($_GET['scan'])     ? $_GET['scan']     : "*";
+$zsvn     = isset($_GET['zsvn'])     ? "J"               : "N";
 $submit   = isset($_GET['submit'])   ? "J"               : "N";
 
 ?>
@@ -83,7 +84,9 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
   <div class="aktion">Erzeugen Npc-Spawn-Dateien</div>
   <div class="hinweis" id="hinw">
     Erzeugen Npc-Spawn- / Walker-Dateien f&uuml;r das unten ausgew&auml;hlte Gebiet.<br><br>
-    ACHTUNG: die Pfade werden der aktuellen Konfigurations-Datei entnommen.
+    ACHTUNG: die Pfade werden der aktuellen Konfigurations-Datei entnommen.<br><br>
+    Bei <font color="orange">Z-Pos aus SVN</font> wird versucht, durch Ann&auml;herung an die X-/Y-Positionen eine<br>
+             Korrektur der Z-Pos-Vorgabe aus der aktuellen SVN-Spawn-Datei zu ermitteln!
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte notwendige Informationen einf&uuml;gen</h1>
@@ -91,15 +94,16 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
  <br>
  <table width="700px">
    <colgroup>
-     <col style="width:200px">
+     <col style="width:250px">
      <col style="width:500px">
    </colgroup>
    <tr><td colspan=2>&nbsp;</td></tr>
    <tr>
-     <td colspan="2">
-       <center>
-       <span style="font-size:14px;color:cyan;padding-right:49px;">Gebietsauswahl</span>
-       <select name="welt" id="idwelt" style="width:385;"> 
+     <td>
+       <span style="font-size:14px;color:cyan;padding-right:49px;padding-left:80px;">Gebietsauswahl</span>
+     </td>
+     <td>     
+       <select name="welt" id="idwelt" style="width:385;margin-left:4px;"> 
 <?PHP
 
 while (list($key,$val) = each($tabWorldmaps))
@@ -121,10 +125,11 @@ echo '
    </tr>';
 ?>
    <tr>
-     <td colspan="2">
-       <center>
-       <span style="font-size:14px;color:cyan;padding-right:15px;">zu scannende Dateien</span>
-       <select name="scan" id="idscan" style="width:385;"> 
+     <td>
+       <span style="font-size:14px;color:cyan;padding-right:15px;padding-left:80px;">zu scannende Dateien</span>
+     </td>
+     <td>
+       <select name="scan" id="idscan" style="width:385;margin-left:4px;"> 
        
 <?PHP
 $tabscan  = array( 
@@ -148,6 +153,14 @@ for ($s=0;$s<$max;$s++)
 }
 echo '
        </select>
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <span style="font-size:14px;color:cyan;padding-right:15px;padding-left:80px;">Z-Pos aus SVN?</span>
+    </td>
+    <td>
+       <input type="checkbox" name="zsvn" value="J" '.(($zsvn == "J") ? " checked " : "").'" style="padding:0px;"> &nbsp; (markiert = JA, Korrektur-Versuch der Z-Pos aus dem SVN-Spawn-File)
      </td>
    </tr>';    
   
@@ -624,11 +637,14 @@ function isPosZInRange($znow,$zold)
 // ----------------------------------------------------------------------------
 function getNpcInfosFromOldFile()
 {
-    global $pathsvn, $tabSpawn, $welt, $tabWorldmaps;
+    global $pathsvn, $tabSpawn, $welt, $tabWorldmaps, $zsvn;
     
     $tabolds = array();
     $tabname = array();
     
+    if ($zsvn != "J")
+        return;
+        
     $oldfile = formFileName($pathsvn."\\trunk\\AL-Game\\data\static_data\\spawns\\Npcs\\".$welt."_".$tabWorldmaps[$welt]['name'].".xml");
     
     if (!file_exists($oldfile))
@@ -794,7 +810,10 @@ function getNpcInfosFromOldFile()
 // ----------------------------------------------------------------------------
 function getOldZForSpawns()
 {
-    global $pathsvn, $tabSpawn, $welt, $tabWorldmaps;
+    global $pathsvn, $tabSpawn, $welt, $tabWorldmaps, $zsvn;
+    
+    if ($zsvn != "J")
+        return;
         
     $oldfile = formFileName($pathsvn."\\trunk\\AL-Game\\data\static_data\\spawns\\Npcs\\".$welt."_".$tabWorldmaps[$welt]['name'].".xml");
     $dolog = false;
@@ -1100,7 +1119,7 @@ function checkDuplicateSpawns()
                         }
                         else
                         {
-                            // NPCs sind mmeistens nicht doppelt bzw. an einer ähnlichen Stelle
+                            // NPCs sind meistens nicht doppelt bzw. an einer ähnlichen Stelle
                             $difposx = 40;
                             $difposy = 40;
                         }
@@ -1117,7 +1136,8 @@ function checkDuplicateSpawns()
                         $bisposy = intval($tabtemp[$s]['ypos']) + $difposy;
                          
                         if ($oldposx >= $vonposx && $oldposx <= $bisposx
-                        &&  $oldposy >= $vonposy && $oldposy <= $bisposy)
+                        &&  $oldposy >= $vonposy && $oldposy <= $bisposy
+                        &&  $oldsrc  != $tabtemp[$s]['src'])
                         {
                             $anzdopp++;
                         }
