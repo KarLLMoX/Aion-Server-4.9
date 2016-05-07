@@ -9,27 +9,27 @@
             <spawns>
                 <!-- Sanctum -->
                 <spawn_map map_id="110010000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="1465.5" y="1591.3" z="572.87274" h="98"/>
                         <spot x="1478.7" y="1444.9" z="572.8736" h="72"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="1462.4" y="1591.3" z="572.87274" h="98"/>
                         <spot x="1475.9" y="1448.3" z="572.8746" h="72"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="1464.0" y="1591.3" z="572.87274" h="98"/>
                         <spot x="1477.3" y="1446.8" z="572.87415" h="72"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="1467.06" y="1591.3" z="572.87274" h="98"/>
                         <spot x="1480.1" y="1443.3" z="572.87317" h="72"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="1460.8" y="1591.3" z="572.87274" h="98"/>
                         <spot x="1474.5" y="1449.8" z="572.8748" h="72"/>
@@ -37,192 +37,404 @@
                 </spawn_map>
                 <!-- Poeta -->
                 <spawn_map map_id="210010000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="809.5" y="1231.6" z="118.75" h="6"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="810.4" y="1228.8" z="118.75" h="6"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="810.0" y="1230.0" z="118.75" h="6"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="809.1" y="1233.4" z="118.75" h="6"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="810.8" y="1227.6" z="118.75" h="6"/>
                     </spawn>
                 </spawn_map>
                 <!-- Eltnen -->
                 <spawn_map map_id="210020000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="336.0" y="2739.0" z="263.4721" h="86"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="332.0" y="2739.0" z="263.4721" h="95"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="334.0" y="2739.0" z="263.4721" h="90"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="339.7" y="2735.4" z="263.4721" h="67"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="339.5" y="2731.4" z="263.4721" h="67"/>
                     </spawn>
                 </spawn_map>
                 <!-- Verteron -->
                 <spawn_map map_id="210030000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="1643.0" y="1490.0" z="119.71357" h="14"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="1645.0" y="1488.0" z="119.71651" h="16"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="1641.0" y="1493.0" z="119.71055" h="5"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="1640.79" y="1490.35" z="119.710335" h="5"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="1640.8" y="1495.4" z="119.71019" h="16"/>
                     </spawn>
                 </spawn_map>
                 <!-- Heiron -->
                 <spawn_map map_id="210040000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="2487.9" y="297.1" z="415.7604" h="23"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="2492.0" y="295.5" z="415.92773" h="23"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="2490.6" y="296.3" z="415.92773" h="23"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="2485.3" y="297.4" z="415.18744" h="23"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="2493.7" y="295.2" z="415.92773" h="23"/>
                     </spawn>
                 </spawn_map>
                 <!-- Inggison -->
                 <spawn_map map_id="210050000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="1335.2" y="268.1" z="589.4213" h="32"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="1339.7" y="269.7" z="589.4212" h="43"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="1337.6" y="268.5" z="589.4213" h="36"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="1341.4" y="271.1" z="589.4213" h="48"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="1342.9" y="273.1" z="589.4215" h="48"/>
                     </spawn>
                 </spawn_map>
                 <!-- Theobomos -->
                 <spawn_map map_id="210060000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="1392.2" y="1550.2" z="30.875" h="20"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="1398.0" y="1549.5" z="30.875" h="30"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="1395.1" y="1549.1" z="30.875" h="25"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="1389.9" y="1549.7" z="30.966251" h="20"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="1400.9" y="1549.9" z="30.875" h="30"/>
                     </spawn>
                 </spawn_map>
                 <!-- Cygnea -->
                 <spawn_map map_id="210070000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="2898.2" y="821.2" z="569.594" h="108"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="2896.9" y="819.7" z="569.59314" h="106"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="2899.1" y="823.0" z="569.59814" h="112"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="2891.7" y="815.8" z="569.60876" h="115"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="2894.7" y="816.4" z="569.60046" h="106"/>
                     </spawn>
                 </spawn_map>
                 <!-- Reshanta -->
                 <spawn_map map_id="400010000">
-                    <!-- Shugorobo ||| world_blackstar_l_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833543" respawn_time="295">
                         <spot x="2956.2" y="928.2" z="1538.9121" h="103"/>
                     </spawn>
-                    <!-- Shugorobo ||| world_blackstar_d_shugobutler_01 -->
+                    <!-- Shugorobo -->
                     <spawn npc_id="833544" respawn_time="295">
                         <spot x="2954.0" y="926.2" z="1538.9121" h="103"/>
                     </spawn>
-                    <!-- Prestige Society Vending Machine ||| world_blackstar_l_Li_shop_ncw_01 -->
+                    <!-- Prestige Society Vending Machine -->
                     <spawn npc_id="833565" respawn_time="295">
                         <spot x="2955.1" y="927.2" z="1538.9121" h="103"/>
                     </spawn>
-                    <!-- Shugodroid ||| world_blackstar_L_matryoshka_01 -->
+                    <!-- Shugodroid -->
                     <spawn npc_id="833742" respawn_time="295">
                         <spot x="2952.8" y="924.9" z="1538.9121" h="103"/>
                     </spawn>
-                    <!-- Buffotron 9000 ||| world_event_buff_shugo -->
+                    <!-- Buffotron 9000 -->
                     <spawn npc_id="833764" respawn_time="295">
                         <spot x="2951.3" y="923.6" z="1538.9526" h="103"/>
                     </spawn>
                 </spawn_map>
-                
-                <!--  -->
-                <spawn_map map_id="">
-
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="1656.0" y="1406.0" z="194.66542" h="89"/>
+                        <spot x="1297.0" y="1437.0" z="209.0" h="92"/>
+                        <spot x="1225.1" y="1499.7" z="213.96336" h="66"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="1660.0" y="1406.0" z="194.66542" h="89"/>
+                        <spot x="1291.0" y="1438.0" z="209.0" h="83"/>
+                        <spot x="1228.2" y="1490.8" z="213.96336" h="66"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="1658.0" y="1406.0" z="194.66542" h="89"/>
+                        <spot x="1294.0" y="1437.0" z="209.0" h="86"/>
+                        <spot x="1224.5" y="1501.4" z="213.96336" h="66"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="1654.0" y="1406.0" z="194.66542" h="89"/>
+                        <spot x="1288.9" y="1439.9" z="209.0" h="79"/>
+                        <spot x="1227.6" y="1493.2" z="213.96336" h="66"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="1662.0" y="1406.0" z="194.66542" h="89"/>
+                        <spot x="1286.7" y="1441.8" z="209.0" h="83"/>
+                        <spot x="1223.5" y="1504.6" z="213.96336" h="66"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Ishalgen -->
+                <spawn_map map_id="220010000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="541.0" y="2416.0" z="278.375" h="19"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="546.0" y="2414.0" z="278.375" h="29"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="543.3" y="2414.8" z="278.375" h="23"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="540.0" y="2417.2" z="278.225" h="19"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="548.7" y="2413.2" z="278.41876" h="29"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Morheim -->
+                <spawn_map map_id="220020000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="356.0" y="2389.9" z="451.29572" h="66"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="355.0" y="2393.3" z="451.2958" h="66"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="355.5" y="2391.5" z="451.2958" h="66"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="356.5" y="2388.3" z="451.2957" h="66"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="354.7" y="2394.5" z="451.29587" h="66"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Altgard -->
+                <spawn_map map_id="220030000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="1720.0" y="1838.0" z="255.25" h="56"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="1720.0" y="1842.0" z="255.125" h="65"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="1720.0" y="1840.0" z="255.125" h="59"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="1720.0" y="1836.0" z="255.125" h="56"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="1720.0" y="1844.0" z="255.0" h="65"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Beluslan -->
+                <spawn_map map_id="220040000">
+                    <!-- Shugorobo  -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="387.0" y="342.0" z="229.18408" h="53"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="389.0" y="348.0" z="229.18472" h="57"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="388.0" y="345.0" z="229.1844" h="55"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="386.0" y="339.0" z="229.18408" h="53"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="390.0" y="351.0" z="229.18504" h="57"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Brusthonin -->
+                <spawn_map map_id="220050000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="1361.0" y="1979.0" z="42.625" h="76"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="1357.0" y="1983.0" z="42.65625" h="76"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="1359.0" y="1981.0" z="42.625" h="76"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="1355.1" y="1984.6" z="42.625" h="76"/>
+                    </spawn>
+                    <!-- Buffotron 9000  -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="1353.6" y="1986.9" z="42.625" h="76"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Gelkmaros -->
+                <spawn_map map_id="220070000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="1871.0" y="2871.0" z="555.0891" h="9"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="1873.0" y="2867.0" z="555.0891" h="9"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="1872.0" y="2869.0" z="555.0891" h="9"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="1870.0" y="2873.0" z="555.08325" h="9"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="1874.0" y="2865.0" z="555.0892" h="9"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Enshar -->
+                <spawn_map map_id="220080000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="463.7" y="2248.0" z="220.04858" h="55"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="464.0" y="2254.0" z="219.96588" h="65"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="464.4" y="2251.1" z="219.96588" h="59"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="463.0" y="2256.5" z="220.04858" h="71"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="462.4" y="2258.5" z="219.96588" h="65"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Reshanta -->
+                <spawn_map map_id="400010000">
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833543" respawn_time="295">
+                        <spot x="957.1" y="2979.0" z="1646.3984" h="44"/>
+                    </spawn>
+                    <!-- Shugorobo -->
+                    <spawn npc_id="833544" respawn_time="295">
+                        <spot x="959.3" y="2981.0" z="1646.3984" h="44"/>
+                    </spawn>
+                    <!-- Prestige Society Vending Machine -->
+                    <spawn npc_id="833566" respawn_time="295">
+                        <spot x="958.2" y="2980.0" z="1646.3984" h="44"/>
+                    </spawn>
+                    <!-- Shugodroid -->
+                    <spawn npc_id="833742" respawn_time="295">
+                        <spot x="960.31" y="2982.2" z="1646.3984" h="44"/>
+                    </spawn>
+                    <!-- Buffotron 9000 -->
+                    <spawn npc_id="833764" respawn_time="295">
+                        <spot x="962.1" y="2983.5" z="1646.3984" h="44"/>
+                    </spawn>
                 </spawn_map>
             </spawns>
         </event>
