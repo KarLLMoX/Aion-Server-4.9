@@ -634,8 +634,7 @@
 			<part name="unk" type="h"/>
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
-			<part name="unk(0x00) [4.3]" type="d"/>
-			<part name="unk(0x00) [4.5]" type="d"/>
+			<part name="spacing(0x00)" type="b" size="8"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
@@ -644,7 +643,7 @@
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 			<part name="unk" type="h"/>
-			<part name="Spacer" type="b" size="16"/>
+			<part name="Spacer" type="b" size="17"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
@@ -657,9 +656,9 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
-			<part name="Spacer" type="d"/>
+			<part name="unk" type="h"/>
+			<part name="unk" type="h"/>
 			<part name="unk" type="d"/>
-			<part name="unk" type="c"/>
 			<part name="chatServerIp" type="d">
 				<reader type="IPv4"/>
 			</part>

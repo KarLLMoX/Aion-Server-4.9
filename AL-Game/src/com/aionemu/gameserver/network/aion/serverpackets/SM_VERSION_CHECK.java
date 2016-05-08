@@ -99,10 +99,10 @@ public class SM_VERSION_CHECK extends AionServerPacket {
         writeC(0x00);
         writeC(NetworkConfig.GAMESERVER_ID);
 		// need to check this, cause if you check date in Aion World, we havent the good one :/
-        writeD(160217);// start year month day
-        writeD(151027);// start year month day
+        writeD(160303);// start year month day
+        writeD(151026);// start year month day
         writeD(0x00);// spacing
-        writeD(151027);// year month day
+        writeD(151026);// year month day
         writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000)); // Start Server Time in Seconds Unit (Need to Implements in Config Files)
         writeC(0x00);// unk
         writeC(GSConfig.SERVER_COUNTRY_CODE);// country code;
@@ -130,8 +130,7 @@ public class SM_VERSION_CHECK extends AionServerPacket {
         writeH(25233);//4.8
         writeC(2);// 4.8
         writeC(1);//4.8
-        writeD(0);// 4.8
-        writeD(0);// 4.8
+		writeB(new byte[8]);
         writeD(68536);// 4.8
         writeC(0);//4.8
         writeC(1);//4.8
@@ -140,15 +139,15 @@ public class SM_VERSION_CHECK extends AionServerPacket {
         writeC(0);//4.8
         writeC(0);//4.8
         writeH(257);//4.8
-        writeB(new byte[16]);
+        writeB(new byte[17]);
         for(int i = 0; i < 11; i++)
         {
-            writeD(256000);
+            writeD(1000);
         }
-		writeD(5242880);//4.9
-        writeD(0);
-		writeD(81984);
-		writeC(0);
+		writeD(20480);//4.9
+        writeH(0);
+        writeH(16384);
+		writeD(320);
         //for... chat servers?
         {
 			
