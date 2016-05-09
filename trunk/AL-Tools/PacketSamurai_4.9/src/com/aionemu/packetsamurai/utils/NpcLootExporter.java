@@ -45,6 +45,7 @@ public class NpcLootExporter {
 	private SortedMap<String, String> npcIdMap = new TreeMap<String, String>();
    	private FastMap<String, FastMap<Integer, Integer>> loots = new FastMap<String, FastMap<Integer, Integer>>();
    	private int worldId = -1;
+   	private int questItemCounter = 0;
 
 	public NpcLootExporter(List<DataPacket> packets, String sessionName) {
       	this.packets = new FastList<DataPacket>(packets);
@@ -111,8 +112,14 @@ public class NpcLootExporter {
                       		tempData.put(itemId, itemCount);
 						}
                		}
+					
+					if (!QuestItemsTool.isQuestItem(itemId))
+					{
+						questItemCounter++;
+						continue;
+					}
                
-               		if(!loots.containsKey(objectId) && !objectId.equals("") && !QuestItemsTool.isQuestItem(itemId)){
+               		if(!loots.containsKey(objectId) && !objectId.equals("")){
                    		loots.put(objectId, tempData);
 					}
 				}
@@ -166,7 +173,7 @@ public class NpcLootExporter {
 			e.printStackTrace();
 		}
 		if (!loots.isEmpty())
-			PacketSamurai.getUserInterface().log("Export [NpcLoot] - NPC Loot Has Been Written Successful");
+			PacketSamurai.getUserInterface().log("Export [NpcLoot] - NPC Loot Has Been Written Successful. Filtered "+questItemCounter+" QuestItems.");
 	}
 
 	class Loot {
