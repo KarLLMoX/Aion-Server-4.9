@@ -73,7 +73,7 @@ public class SpawnsData2 {
     @XmlElement(name = "spawn_map", type = SpawnMap.class)
     protected List<SpawnMap> templates;
     private TIntObjectHashMap<FastMap<Integer, SimpleEntry<SpawnGroup2, Spawn>>> allSpawnMaps = new TIntObjectHashMap<FastMap<Integer, SimpleEntry<SpawnGroup2, Spawn>>>();
-    private TIntObjectHashMap<List<SpawnGroup2>> baseSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
+	private TIntObjectHashMap<List<SpawnGroup2>> baseSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
     private TIntObjectHashMap<List<SpawnGroup2>> riftSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
     private TIntObjectHashMap<List<SpawnGroup2>> siegeSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
     private TIntObjectHashMap<List<SpawnGroup2>> vortexSpawnMaps = new TIntObjectHashMap<List<SpawnGroup2>>();
@@ -477,4 +477,12 @@ public class SpawnsData2 {
     public List<SpawnMap> getTemplates() {
         return templates;
     }
+    
+    public SpawnsData2 clone()
+    {
+    	SpawnsData2 sd = new SpawnsData2();
+    	sd.allSpawnMaps.putAll(allSpawnMaps);
+    	return sd;
+    }
+    
 }

@@ -44,6 +44,9 @@ public class AntiHackService {
         AionServerPacket forcedMove = new SM_FORCED_MOVE(player, player.getObjectId(), x, y, z);
         AionServerPacket normalMove = new SM_MOVE(player);
 
+        if (player.getAccessLevel() > 3)
+        	return true;
+        
         if (SecurityConfig.ABNORMAL) {
             if (!player.canPerformMove() && !player.getEffectController().isAbnormalSet(AbnormalState.CANNOT_MOVE) && (type & MovementMask.GLIDE) != MovementMask.GLIDE) {
                 if (player.abnormalHackCounter > SecurityConfig.ABNORMAL_COUNTER) {
@@ -164,7 +167,10 @@ public class AntiHackService {
     }
 
     protected static boolean punish(Player player, float x, float y, byte type, AionServerPacket pkt, String message) {
-        switch (SecurityConfig.PUNISH) {
+    	if (player.getAccessLevel() > 3)
+    		return true;
+    	
+    	switch (SecurityConfig.PUNISH) {
             case 1:
                 AuditLogger.info(player, message);
                 moveBack(player, x, y, type, pkt);

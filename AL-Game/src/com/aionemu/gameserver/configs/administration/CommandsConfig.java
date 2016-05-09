@@ -205,6 +205,8 @@ public class CommandsConfig {
     public static int SIEGE;
     @Property(key = "spawn", defaultValue = "1")
     public static int SPAWN;
+    @Property(key = "spawnfix", defaultValue = "4")
+    public static int SPAWNFIX;
     @Property(key = "spawnu", defaultValue = "1")
     public static int SPAWNU;
     @Property(key = "speed", defaultValue = "1")

@@ -56,6 +56,19 @@ public class WalkManager {
         }
         return true;
     }
+    
+    public static boolean startRouteWalking(NpcAI2 npcAI, WalkerTemplate template) {
+        npcAI.setStateIfNot(AIState.WALKING);
+        Npc owner = npcAI.getOwner();
+        
+        if (template != null) {
+            npcAI.setSubStateIfNot(AISubState.WALK_PATH);
+            startRouteWalking(npcAI, owner, template);
+        } else {
+            return startRandomWalking(npcAI, owner);
+        }
+        return true;
+    }
 
     /**
      * @param npcAI

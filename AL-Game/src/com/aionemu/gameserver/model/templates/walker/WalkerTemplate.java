@@ -154,4 +154,14 @@ public class WalkerTemplate {
     public int[] getRows() {
         return rows;
     }
+    
+    public void clear()
+    {
+    	routeStepList.clear();
+    }
+    
+    public void addRouteStep(RouteStep step)
+    {
+    	routeStepList.add(step);
+    }
 }
