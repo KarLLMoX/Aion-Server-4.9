@@ -54,7 +54,9 @@ public class SpawnSpotTemplate {
     @XmlElement(name = "model")
     private SpawnModel model;
     private static final Integer ZERO = new Integer(0);
-
+    @XmlTransient
+    private boolean fixed = false;
+    
   	public SpawnSpotTemplate() {}
   
     void beforeMarshal(Marshaller marshaller) {
@@ -178,4 +180,14 @@ public class SpawnSpotTemplate {
     public TemporarySpawn getTemporarySpawn() {
         return temporaySpawn;
     }
+
+	public void setZ(float z) {
+		if (this.z > z && (this.z - z) > 0.5)
+			this.fixed = true;
+		this.z = z;
+	}
+
+	public boolean isFixed() {		
+		return fixed;
+	}
 }

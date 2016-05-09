@@ -90,6 +90,9 @@ public class RiftService {
 
     public void closeRift(RiftLocation location) {
         location.setOpened(false);
+        
+        if (location.getSpawned() == null)
+        	return;
 
         // Despawn NPC
         for (VisibleObject obj : location.getSpawned()) {

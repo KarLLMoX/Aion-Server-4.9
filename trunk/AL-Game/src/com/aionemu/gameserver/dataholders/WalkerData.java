@@ -16,7 +16,14 @@
  */
 package com.aionemu.gameserver.dataholders;
 
+import com.aionemu.gameserver.GameServer;
+import com.aionemu.gameserver.model.templates.item.ItemTemplate;
+import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
+import com.aionemu.gameserver.model.templates.spawns.SpawnGroup2;
+import com.aionemu.gameserver.model.templates.spawns.SpawnTemplate;
 import com.aionemu.gameserver.model.templates.walker.WalkerTemplate;
+import com.aionemu.gameserver.world.World;
+
 import javolution.util.FastMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,9 +37,14 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
+
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -48,7 +60,7 @@ public class WalkerData {
     @XmlTransient
     private FastMap<String, WalkerTemplate> walkerlistData = new FastMap<String, WalkerTemplate>();
 
-    void afterUnmarshal(Unmarshaller u, Object parent) {
+	void afterUnmarshal(Unmarshaller u, Object parent) {
         for (WalkerTemplate route : walkerlist) {
             if (walkerlistData.containsKey(route.getRouteId())) {
                 log.warn("Duplicate route ID: " + route.getRouteId());
@@ -62,6 +74,13 @@ public class WalkerData {
 
     public int size() {
         return walkerlistData.size();
+    }
+    
+    public WalkerData clone()
+    {
+    	WalkerData wd = new WalkerData();
+    	wd.setWalkerlistData(getWalkerlistData());
+    	return (WalkerData) wd;
     }
 
     public WalkerTemplate getWalkerTemplate(String routeId) {
@@ -112,4 +131,47 @@ public class WalkerData {
     public Collection<WalkerTemplate> getTemplates() {
         return walkerlistData.values();
     }
+    
+    private FastMap<String, WalkerTemplate> getWalkerlistData() {
+		return walkerlistData;
+	}
+
+	private void setWalkerlistData(FastMap<String, WalkerTemplate> walkerlistData) {
+		this.walkerlistData = walkerlistData;
+	}
+	
+	public void replaceTemplate(WalkerTemplate template)
+	{
+		if (walkerlistData.containsKey(template.getRouteId()))
+			walkerlistData.remove(template.getRouteId());
+		
+		walkerlistData.put(template.getRouteId(), template);
+	}
+
+	public void writeXml(int worldId) 
+	{
+        Schema schema = null;
+        SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+        try {
+            schema = sf.newSchema(new File("./data/static_data/npc_walker/npc_walker.xsd"));
+        } catch (SAXException e1) {
+            log.error("Error while saving data: " + e1.getMessage(), e1.getCause());
+            return;
+        }
+
+        File xml = new File("./data/static_data/npc_walker/walker_" + worldId + "_" + World.getInstance().getWorldMap(worldId).getName() + ".xml");
+        JAXBContext jc;
+        Marshaller marshaller;
+        try {
+            jc = JAXBContext.newInstance(WalkerData.class);
+            marshaller = jc.createMarshaller();
+            marshaller.setSchema(schema);
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.marshal(this, xml);
+        } catch (JAXBException e) {
+            log.error("Error while saving data: " + e.getMessage(), e.getCause());
+            return;
+        }
+	}
 }
