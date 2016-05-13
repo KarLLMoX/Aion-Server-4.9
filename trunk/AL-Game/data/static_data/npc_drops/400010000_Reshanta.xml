@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 25.04.2016 13:07 aus PS-Drop-Datei: Reshanta_4.9_loot_live457272046.xml -->
+<!-- generiert am/um 13.05.2016 09:47 aus PS-Drop-Datei: Reshanta_4.9_loot_live417687116.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="220258">
         <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
@@ -2155,12 +2155,41 @@
             <drop item_id="182007016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Ancient Used Manastone" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="883277">
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="188054205" chance="0.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Superior Manastone Ore" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007002" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Ore" />
+            <drop item_id="182007011" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Inactive Metal Powder" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="883278">
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152015016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prime Abex Cut" />
+        </drop_group>
+        <drop_group name="OTHER_RARE_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152015017" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Processed Abex Meat" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
@@ -2180,6 +2209,9 @@
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="234" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="JUNK_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Marrowbone" />
@@ -2235,6 +2267,11 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="883283">
+        <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
+            <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
+            <drop item_id="152010326" chance="21.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Sublime Wispy Elemental Stone" />
+            <drop item_id="152010327" chance="2.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Resplendent Wispy Elemental Stone" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
@@ -2243,6 +2280,9 @@
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="188054205" chance="0.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Superior Manastone Ore" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
@@ -2349,8 +2389,12 @@
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152015016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prime Abex Cut" />
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="234" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="JUNK_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Marrowbone" />
@@ -2443,6 +2487,9 @@
             <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
             <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
         </drop_group>
+        <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
+        </drop_group>
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
@@ -2465,6 +2512,10 @@
         </drop_group>
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
+            <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="JUNK_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Marrowbone" />
@@ -2579,6 +2630,9 @@
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
         </drop_group>
+        <drop_group name="OTHER_RARE_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152015017" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Processed Abex Meat" />
+        </drop_group>
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
@@ -2599,6 +2653,14 @@
     <npc_drop npc_id="884022">
         <drop_group name="POTION_COMMON_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="162000006" chance="10.00" min_amount="1" max_amount="3" no_reduce="false" eachmember="false" name="Major Life Potion" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="884023">
+        <drop_group name="POTION_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="162000006" chance="10.00" min_amount="1" max_amount="3" no_reduce="false" eachmember="false" name="Major Life Potion" />
+        </drop_group>
+        <drop_group name="OTHER_LEGEND_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="166050062" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sparkling Idian: Magical Defense" />
         </drop_group>
     </npc_drop>
 </npc_drops>
