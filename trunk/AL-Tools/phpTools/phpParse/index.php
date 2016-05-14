@@ -68,6 +68,7 @@
                 array("genHotspotTeleporter.php","Hotspot-Teleporter"),
                 array("genLoginEvents.php","Login-Events"),
                 array("genMaterialTemplates.php","Material-Templates"),
+                array("genNpcFactions.php","Npc-Factions"),
                 array("genPlayerTitles.php","Player-Titles"),
                 array("genRide.php","Ride"),
                 array("genRobot.php","Robot"),
