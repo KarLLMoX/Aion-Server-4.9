@@ -43,6 +43,8 @@ h3. Updatet Static Data:
 * gather_templates.xml -> 4.9.1 (by Mariella/PhpParser)
 * goodslists.xml -> 4.9.1 (by Mariella/PhpParser)
 * item_sets.xml -> 4.9.1 (by Mariella/PhpParser)
+* material_templates -> 4.9.1 (by Mariella/PhpParser)
+* npc_factions.xml -> 4.9.1 (by Mariella/PhpParser)
 * challenge_tasks.xml - 4.9.1 (by Mariella/PhpParser)
 * quest_data.xml -> 4.9.1 (by Mariella/PhpParser)
 * ride.xml -> 4.9.1 (by Mariella/PhpParser)
