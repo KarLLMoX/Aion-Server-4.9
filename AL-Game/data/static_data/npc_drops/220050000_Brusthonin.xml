@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 14.05.2016 07:58 aus PS-Drop-Datei: Brusthonin_4.9_loot_live388414488.xml -->
+<!-- generiert am/um 14.05.2016 11:54 aus PS-Drop-Datei: Brusthonin_4.9_loot_live396689216.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="213843">
         <drop_group name="FLUX_COMMON_LVL10" use_category="true" race="PC_ALL">
@@ -331,6 +331,14 @@
             <drop item_id="182005197" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Frightcorn Root" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="214363">
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182004791" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Strong Sparkle Leg" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="214365">
         <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
             <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
@@ -343,6 +351,25 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="214366">
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004042" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Kurin Leather" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214367">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004042" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Kurin Leather" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214368">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182004042" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Kurin Leather" />
         </drop_group>
@@ -377,6 +404,29 @@
             <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
             <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
         </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004382" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Karnif Claw" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214371">
+        <drop_group name="WEAPON_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="102100224" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blizzard Cipher-Blade" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004382" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Karnif Claw" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214372">
         <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
             <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
         </drop_group>
@@ -663,6 +713,457 @@
     <npc_drop npc_id="214405">
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182003892" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Huge Bonedrake Bone" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214406">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182004571" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Sylphen Wing" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214407">
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004572" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sylphen Golden Wing" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214408">
+        <drop_group name="ARMOR_LEGEND_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="111500627" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Nachal's Handguards" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004572" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sylphen Golden Wing" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214409">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182005265" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Hazy Moskie Carapace" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214410">
+        <drop_group name="ACCESSORY_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="123000412" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Offering Leather Belt" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214411">
+        <drop_group name="WEAPON_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="100000468" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusky Sword" />
+        </drop_group>
+        <drop_group name="ARMOR_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="112300532" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blizzard Shoulderguards" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005266" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Moskie Carapace" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214413">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182005235" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Solid Alitaur Tooth" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214414">
+        <drop_group name="ARMOR_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="113500346" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glacier Chausses" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
+            <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
+            <drop item_id="152011028" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Armor Flux" />
+            <drop item_id="152011048" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Accessory Flux" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005236" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Alitaur Tooth" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214415">
+        <drop_group name="ARMOR_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="114100330" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blizzard Shoes" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
+            <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
+            <drop item_id="152011028" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Armor Flux" />
+            <drop item_id="152011048" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Accessory Flux" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005236" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Alitaur Tooth" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214416">
+        <drop_group name="ACCESSORY_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="122000419" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Offering Ruby Ring" />
+        </drop_group>
+        <drop_group name="ACCESSORY_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="123000446" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Oblivion Leather Belt" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182005245" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Solid Orfaimam Claw" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214417">
+        <drop_group name="WEAPON_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="101700363" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Otherworldly Longbow" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005246" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Orfaimam Claw" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214418">
+        <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
+            <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
+            <drop item_id="152011028" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Armor Flux" />
+            <drop item_id="152011048" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Accessory Flux" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005246" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Orfaimam Claw" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214419">
+        <drop_group name="ARMOR_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="114500358" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glacier Brogans" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182003831" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Agrint Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214420">
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182003832" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fragrant Agrint Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214421">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182003832" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fragrant Agrint Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214422">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182004681" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mottled Rotron Thorn" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214423">
+        <drop_group name="WEAPON_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="115000618" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Otherworldly Shield" />
+        </drop_group>
+        <drop_group name="BALIC_MATERIAL_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010317" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Elemental Stone" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
+            <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
+            <drop item_id="152011028" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Armor Flux" />
+            <drop item_id="152011048" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Accessory Flux" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004682" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blood Red Rotron Thorn" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214424">
+        <drop_group name="BALIC_MATERIAL_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010317" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Elemental Stone" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004682" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blood Red Rotron Thorn" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214425">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005366" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blood Red Plant Thorn" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214426">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005366" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blood Red Plant Thorn" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214427">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182005315" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Solid Dionae Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214428">
+        <drop_group name="BALIC_MATERIAL_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010317" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Elemental Stone" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005316" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fragrant Dionae Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214429">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005316" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fragrant Dionae Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214430">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015512" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Wild Ginseng" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005316" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fragrant Dionae Root" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214431">
+        <drop_group name="WEAPON_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="101800358" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blizzard Pistol" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015511" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Raw Cellatu Meat" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="FOOD_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005336" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Cellatu Scale" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="1730" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214432">
+        <drop_group name="ARMOR_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="112100568" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Torment Pauldrons" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
+            <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
+            <drop item_id="152011028" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Armor Flux" />
+            <drop item_id="152011048" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Accessory Flux" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="152015511" chance="10.00" min_amount="1" max_amount="2" no_reduce="false" eachmember="false" name="Raw Cellatu Meat" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="2082" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214433">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="FOOD_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005256" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Glugga Scale" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214434">
+        <drop_group name="FOOD_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005256" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Glugga Scale" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214435">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005002" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blessed Vampire Cloak" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214436">
+        <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
+            <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
+            <drop item_id="152011028" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Armor Flux" />
+            <drop item_id="152011048" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Accessory Flux" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005002" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blessed Vampire Cloak" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214437">
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005002" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blessed Vampire Cloak" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214438">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005002" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blessed Vampire Cloak" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214439">
+        <drop_group name="WEAPON_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="100200166" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blizzard Dagger" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004412" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Cursed Lich Bone" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214440">
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004182" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Water Essence" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214441">
+        <drop_group name="ARMOR_RARE_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="114300354" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Torment Boots" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004182" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Water Essence" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="214442">
@@ -1006,6 +1507,64 @@
             <drop item_id="182004182" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Water Essence" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="214479">
+        <drop_group name="ACCESSORY_RARE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="122000467" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tyrant's Ruby Ring" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="1499" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214481">
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="1916" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005226" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Kranuum Tooth" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214482">
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004872" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Shell" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214483">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004872" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Shell" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214485">
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214487">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004132" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Huge Skyray Bone" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214488">
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="FOOD_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182004632" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Huge Potcrab Leg" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="214489">
         <drop_group name="FLUX_COMMON_LVL48" use_category="true" race="PC_ALL">
             <drop item_id="152011008" chance="3.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Premium Weapon Flux" />
@@ -1129,6 +1688,35 @@
             <drop item_id="182004052" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Petrahulk Fragment" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="214499">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
+            <drop item_id="160003561" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Focus Agent" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="182005325" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dark Red Hornskull Fluid" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214500">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="JUNK_LEGEND_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152012544" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Hornskull Back Scale" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="188054203" chance="0.1" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Manastone Ore" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="169000008" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Power Shard" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005326" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Hornskull Fluid" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="214501">
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
             <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="1042" no_reduce="false" eachmember="false" name="Kinah" />
@@ -1193,6 +1781,22 @@
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182004972" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blessed Undead Rags" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214541">
+        <drop_group name="FOOD_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182005336" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Cellatu Scale" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="280" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214542">
+        <drop_group name="FLUX_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="152010313" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Tough Rawhide" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="1538" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="214581">
@@ -1313,6 +1917,14 @@
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182005326" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Noble Hornskull Fluid" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="214604">
+        <drop_group name="ARMOR_COMMON_LVL40" use_category="true" race="PC_ALL">
+            <drop item_id="110500594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Blizzard Hauberk" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="3743" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
 </npc_drops>
