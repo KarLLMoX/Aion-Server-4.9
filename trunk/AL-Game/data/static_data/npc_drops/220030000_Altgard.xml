@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 13.05.2016 18:54 aus PS-Drop-Datei: Altgard_4.9_loot_live469388612.xml -->
+<!-- generiert am/um 15.05.2016 15:54 aus PS-Drop-Datei: Altgard_4.9_loot_live393687294.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="210411">
         <drop_group name="BALIC_MATERIAL_COMMON_LVL10" use_category="true" race="PC_ALL">
@@ -1092,6 +1092,9 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210534">
+        <drop_group name="WEAPON_COMMON_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="101800218" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plateau Pistol" />
+        </drop_group>
         <drop_group name="ARMOR_RARE_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="112600551" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Restless Shoulderplates" />
         </drop_group>
@@ -1174,9 +1177,19 @@
     <npc_drop npc_id="210538">
         <drop_group name="ARMOR_COMMON_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="110600357" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plateau Breastplate" />
+            <drop item_id="110600570" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plateau Breastplate" />
+            <drop item_id="111500345" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plateau Handguards" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="696" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="757" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL20" use_category="true" race="PC_ALL">
+            <drop item_id="182003766" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Old Mau Armor" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="210539">
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="819" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL20" use_category="true" race="PC_ALL">
             <drop item_id="182003766" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Old Mau Armor" />
@@ -1260,7 +1273,11 @@
     </npc_drop>
     <npc_drop npc_id="210548">
         <drop_group name="ACCESSORY_LEGEND_LVL20" use_category="true" race="PC_ALL">
+            <drop item_id="122000599" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Black Claw Seal" />
             <drop item_id="123000890" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Belt of the Black Claw Tribe" />
+        </drop_group>
+        <drop_group name="NO_ARMOR_RARE_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="125001194" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mau Warrior's Helm" />
         </drop_group>
         <drop_group name="MANASTONES_LVL20" use_category="true" race="PC_ALL">
             <drop item_id="188054200" chance="0.4" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Manastone Ore" />
@@ -1300,6 +1317,9 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210559">
+        <drop_group name="ARMOR_COMMON_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="114100324" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plateau Shoes" />
+        </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
             <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="588" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
@@ -1317,11 +1337,17 @@
         <drop_group name="ACCESSORY_COMMON_LVL10" use_category="true" race="PC_ALL">
             <drop item_id="122000403" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dwarf's Crystal Ring" />
         </drop_group>
+        <drop_group name="ACCESSORY_RARE_LVL20" use_category="true" race="PC_ALL">
+            <drop item_id="123000437" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Ghost Belt" />
+        </drop_group>
         <drop_group name="MANASTONES_LVL20" use_category="true" race="PC_ALL">
             <drop item_id="188054200" chance="0.4" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Manastone Ore" />
         </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="169000004" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Power Shard" />
+        </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="682" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="716" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL20" use_category="true" race="PC_ALL">
             <drop item_id="182003766" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Old Mau Armor" />
@@ -1643,6 +1669,7 @@
     </npc_drop>
     <npc_drop npc_id="210603">
         <drop_group name="ARMOR_RARE_LVL10" use_category="true" race="PC_ALL">
+            <drop item_id="114500446" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mau Healer's Brogans" />
             <drop item_id="114600415" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mau Warrior's Sabatons" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
@@ -1675,8 +1702,11 @@
             <drop item_id="152011022" chance="2.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Armor Flux" />
             <drop item_id="152011042" chance="2.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Accessory Flux" />
         </drop_group>
+        <drop_group name="MANASTONES_LVL20" use_category="true" race="PC_ALL">
+            <drop item_id="188054200" chance="0.4" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Manastone Ore" />
+        </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="499" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="774" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="210616">
@@ -1887,7 +1917,7 @@
             <drop item_id="114600526" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Plateau Sabatons" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="701" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="845" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL20" use_category="true" race="PC_ALL">
             <drop item_id="182003766" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Old Mau Armor" />
