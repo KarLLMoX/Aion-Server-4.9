@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 02.05.2016 09:18 aus PS-Drop-Datei: Cygnea_4.9_loot_live387908983.xml -->
+<!-- generiert am/um 18.05.2016 08:34 aus PS-Drop-Datei: Cygnea_4.9_loot_live404015150.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="220061">
         <drop_group name="BALIC_MATERIAL_COMMON_LVL50" use_category="true" race="PC_ALL">
@@ -80,13 +80,14 @@
         </drop_group>
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152013040" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Envy" />
+            <drop item_id="152013043" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Pride" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="10996" max_amount="10996" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="15698" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
@@ -99,7 +100,7 @@
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="14087" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="14113" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
@@ -2370,6 +2371,9 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="235953">
+        <drop_group name="ARMOR_RARE_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="120001159" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Elatrite Earrings of the Forgotten" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="152010318" chance="10.00" min_amount="1" max_amount="3" no_reduce="false" eachmember="false" name="Firm Rawhide" />
         </drop_group>
@@ -2401,8 +2405,13 @@
         <drop_group name="NO_ARMOR_RARE_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="125002669" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Helm of the Forgotten" />
         </drop_group>
+        <drop_group name="FLUX_COMMON_LVL58" use_category="true" race="PC_ALL">
+            <drop item_id="152011080" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Finest Weapon Flux" />
+            <drop item_id="152011084" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Finest Armor Flux" />
+            <drop item_id="152011088" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Finest Accessory Flux" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL50" use_category="true" race="PC_ALL">
-            <drop item_id="152010318" chance="10.00" min_amount="3" max_amount="3" no_reduce="false" eachmember="false" name="Firm Rawhide" />
+            <drop item_id="152010318" chance="10.00" min_amount="1" max_amount="3" no_reduce="false" eachmember="false" name="Firm Rawhide" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
@@ -2628,7 +2637,7 @@
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
-            <drop item_id="169000010" chance="10.00" min_amount="500" max_amount="500" no_reduce="false" eachmember="false" name="Superior Power Shard" />
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="500" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="JUNK_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Marrowbone" />
@@ -2709,6 +2718,14 @@
             <drop item_id="188053744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Elegant Middle Grade Composite Manastone Bundle" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="236250">
+        <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152013043" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Pride" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="10471" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="236251">
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
             <drop item_id="182400001" chance="10.00" min_amount="6978" max_amount="6978" no_reduce="false" eachmember="false" name="Kinah" />
@@ -2726,7 +2743,7 @@
             <drop item_id="169000010" chance="10.00" min_amount="92" max_amount="92" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="8481" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="14706" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
@@ -2742,7 +2759,7 @@
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="15303" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="16722" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
@@ -2761,14 +2778,30 @@
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="6328" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="16588" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
             <drop item_id="182007014" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Relic Bits" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="236255">
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="7621" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="236256">
+        <drop_group name="BALAUR_MATS_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152014021" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Horn" />
+            <drop item_id="152014022" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Scale" />
+            <drop item_id="152014023" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Skin" />
+            <drop item_id="152014024" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Blood" />
+            <drop item_id="152014025" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Meat" />
+            <drop item_id="186000235" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Divine Balaur Heart" />
+        </drop_group>
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152013040" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Envy" />
         </drop_group>
@@ -2780,7 +2813,7 @@
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="14418" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="14601" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
@@ -2815,6 +2848,59 @@
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="236259">
+        <drop_group name="BALAUR_MATS_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152014021" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Horn" />
+            <drop item_id="152014022" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Scale" />
+            <drop item_id="152014023" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Skin" />
+            <drop item_id="152014024" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Blood" />
+            <drop item_id="152014025" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Meat" />
+            <drop item_id="186000235" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Divine Balaur Heart" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152013037" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Wrath" />
+        </drop_group>
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="16062" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
+            <drop item_id="182007014" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Relic Bits" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="236260">
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="13384" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="236261">
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="11570" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="236262">
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="12566" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
+            <drop item_id="182007014" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Relic Bits" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="236263">
+        <drop_group name="KINAH" use_category="true" race="PC_ALL">
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="14523" no_reduce="false" eachmember="false" name="Kinah" />
+        </drop_group>
+        <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="236264">
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152013037" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Wrath" />
@@ -2836,11 +2922,18 @@
             <drop item_id="152014025" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Gleaming Balaur Meat" />
             <drop item_id="186000235" chance="9.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Divine Balaur Heart" />
         </drop_group>
+        <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152013040" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Mortal Envy" />
+        </drop_group>
         <drop_group name="FLUX_RARE_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152013041" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="[Static] Deadly Envy" />
         </drop_group>
+        <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
+            <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
+        </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="13563" max_amount="13563" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="13563" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
