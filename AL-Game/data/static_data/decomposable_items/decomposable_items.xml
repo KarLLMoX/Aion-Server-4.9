@@ -36391,4 +36391,51 @@
             <random_item type="MANASTONE_RARE_GRADE_70"/>
         </items>
     </decomposable>
+    <decomposable item_id="188054298" decomposable_name="+1 Matryoshka">
+        <items chance="50.0">
+            <item id="188054299" name="+2 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054299" decomposable_name="+2 Matryoshka">
+        <items chance="50.0">
+            <item id="188054300" name="+3 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054300" decomposable_name="+3 Matryoshka">
+        <items chance="50.0">
+            <item id="188054301" name="+4 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054301" decomposable_name="+4 Matryoshka">
+        <items chance="50.0">
+            <item id="188054302" name="+5 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054302" decomposable_name="+5 Matryoshka">
+        <items chance="40.0">
+            <item id="188054303" name="+6 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054303" decomposable_name="+6 Matryoshka">
+        <items chance="40.0">
+            <item id="188054304" name="+7 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054304" decomposable_name="+7 Matryoshka">
+        <items chance="40.0">
+            <item id="188054305" name="+8 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054305" decomposable_name="+8 Matryoshka">
+        <items chance="30.0">
+            <item id="188054306" name="+9 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054306" decomposable_name="+9 Matryoshka">
+        <items chance="20.0">
+            <item id="188054307" name="+10 Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054307" decomposable_name="+10 Snowflake">
+    </decomposable>
 </decomposable_items>
