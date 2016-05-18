@@ -4808,9 +4808,4 @@
             <drop item_id="182200201" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerub Grain Sack" />
         </drop_group>
     </npc_drop>
-    <npc_drop npc_id="700107">
-        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
-            <drop item_id="182200211" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Suspicious Ore" />
-        </drop_group>
-    </npc_drop>
 </npc_drops>
