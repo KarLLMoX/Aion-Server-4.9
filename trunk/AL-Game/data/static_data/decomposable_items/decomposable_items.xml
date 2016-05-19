@@ -36392,50 +36392,145 @@
         </items>
     </decomposable>
     <decomposable item_id="188054298" decomposable_name="+1 Matryoshka">
-        <items chance="50.0">
+        <items>
             <item id="188054299" name="+2 Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054300" name="+3 Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054301" name="+4 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
     </decomposable>
     <decomposable item_id="188054299" decomposable_name="+2 Matryoshka">
-        <items chance="50.0">
+        <items>
             <item id="188054300" name="+3 Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054301" name="+4 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
     </decomposable>
     <decomposable item_id="188054300" decomposable_name="+3 Matryoshka">
-        <items chance="50.0">
+        <items>
             <item id="188054301" name="+4 Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054302" name="+5 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
     </decomposable>
     <decomposable item_id="188054301" decomposable_name="+4 Matryoshka">
-        <items chance="50.0">
+        <items>
             <item id="188054302" name="+5 Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054303" name="+6 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
     </decomposable>
     <decomposable item_id="188054302" decomposable_name="+5 Matryoshka">
-        <items chance="40.0">
+        <items>
             <item id="188054303" name="+6 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
     </decomposable>
     <decomposable item_id="188054303" decomposable_name="+6 Matryoshka">
-        <items chance="40.0">
+        <items>
             <item id="188054304" name="+7 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054308" name="[Event] Matryoshka's Gratitude"/>
         </items>
     </decomposable>
     <decomposable item_id="188054304" decomposable_name="+7 Matryoshka">
-        <items chance="40.0">
+        <items>
             <item id="188054305" name="+8 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054308" name="[Event] Matryoshka's Gratitude"/>
         </items>
     </decomposable>
     <decomposable item_id="188054305" decomposable_name="+8 Matryoshka">
-        <items chance="30.0">
+        <items>
             <item id="188054306" name="+9 Matryoshka"/>
+        </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054309" name="[Event] Matryoshka's Boon"/>
         </items>
     </decomposable>
     <decomposable item_id="188054306" decomposable_name="+9 Matryoshka">
-        <items chance="20.0">
+        <items>
             <item id="188054307" name="+10 Matryoshka"/>
         </items>
+        <items>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
+        <items>
+            <item id="188054310" name="[Event] Matryoshka's Luck"/>
+        </items>
     </decomposable>
-    <decomposable item_id="188054307" decomposable_name="+10 Snowflake">
+    <decomposable item_id="188054307" decomposable_name="+10 Matryoshka">
+        <items>
+            <item id="188100274" name="[Event] Magic Color"/>
+            <item id="188100275" name="[Event] White Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054308" decomposable_name="[Event] Matryoshka's Gratitude">
+        <items>
+            <item id="186000414" name="Blood Medal" count="3"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
+    </decomposable>
+    <decomposable item_id="188054309" decomposable_name="[Event] Matryoshka's Boon">
+    <!--
+    Blood Medal(s)
+    Blood Mark Box
+    -->
+    </decomposable>
+    <decomposable item_id="188054310" decomposable_name="[Event] Matryoshka's Luck">
+    <!--
+    Blood Mark(s)
+    [Event] Fabled Godstone Bundle
+    [Event] Assured Greater Felicitous Socketing Box
+    Stigma Sack
+    Tempering Solution
+    Omega Enchantment Stone
+    -->
+    </decomposable>
+    <decomposable item_id="188054311" decomposable_name="[Event] Magic Matryoshka">
+    <!--
+    Elite Composite Manastone Chest
+    [Event] Fabled Godstone Bundle
+    Tempering Solution
+    Omega Enchantment Stone
+    [Event] Assured Greater Felicitous Socketing Box
+    Stigma Sack
+    [Event] Beritra's Equipment Box
+    [Event] Beritra's Phantom Wings Case
+    Dark Lord's Weapon Box
+    Darken Lord's Weapon Box
+    Irridescent Omega Enchantment Stone
+    -->
     </decomposable>
 </decomposable_items>

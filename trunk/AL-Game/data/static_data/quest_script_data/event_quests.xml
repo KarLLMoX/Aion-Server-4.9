@@ -134,6 +134,12 @@
                     80685 [XML] [Event] For the Glory of Rainbow Snake (Elyos)
                     80686 [XML] [Event] Blessings of the Prismatic Serpent (Asmodians)
                     80688 [XML] [Event] For the Glory of Rainbow Snake (Asmodians)
+                    80744 [XML] [Event] Draw Matryoshka (Elyos)
+                    80745 [XML] [Event] Once More! (Elyos)
+                    80746 [XML] [Event] Gift from Last Matryoshka (Elyos)
+                    80747 [XML] [Event] Draw Matryoshka (Asmodians)
+                    80748 [XML] [Event] Once More! (Asmodians)
+                    80749 [XML] [Event] Gift from Last Matryoshka (Asmodians)
             [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
@@ -313,10 +319,17 @@
     <item_collecting start_npc_ids="832886" id="80617"/>
     <item_collecting start_npc_ids="832888" id="80618"/>
     <item_collecting start_npc_ids="832887" id="80619"/>
-    <item_collecting start_npc_ids="832889" id="80620"/>       
+    <item_collecting start_npc_ids="832889" id="80620"/>
     <item_collecting start_npc_ids="832895" id="80643"/>
     <item_collecting start_npc_ids="832896" id="80644"/>
-        
+    <!-- All Dolled Up Event -->
+    <item_collecting start_npc_ids="833622" id="80744"/>
+    <item_collecting start_npc_ids="833623" id="80745"/>
+    <item_collecting start_npc_ids="833625" id="80746"/>
+    <item_collecting start_npc_ids="833622" id="80747"/>
+    <item_collecting start_npc_ids="833623" id="80748"/>
+    <item_collecting start_npc_ids="833625" id="80749"/>
+
     <!-- HUNTING QUESTS -->
     <monster_hunt start_npc_ids="202549" id="50021">
         <monster var="0" npc_ids="217161" end_var="15"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up</active>
     <events>
         <event name="World Blessers" start="2015-01-01T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">
             <quests>
@@ -1276,6 +1276,59 @@
                 <spawn_map map_id="120010000"><!-- Pandaemonium -->
                     <spawn npc_id="802020">
                         <spot x="1602.4436" y="1415.4807" z="193.10" h="119"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="All Dolled Up" start="2016-05-19T00:00:00+00:00" end="2016-05-31T00:00:00+00:00">
+            <quests>
+                <maintainable>80744;80745;80746;80747;80748;80749</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+                    <!-- First Matryoshka ||| event_matryoshka_01 -->
+                    <spawn npc_id="833622" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1519.56" y="1515.02" z="565.9147" h="63"/>
+                    </spawn>
+                    <!-- Second Matryoshka ||| event_matryoshka_02 -->
+                    <spawn npc_id="833623" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1519.7" y="1512.61" z="565.9143" h="76"/>
+                    </spawn>
+                    <!-- Third Matryoshka ||| event_matryoshka_03 -->
+                    <spawn npc_id="833624" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1520.05" y="1509.9" z="565.91284" h="63"/>
+                    </spawn>
+                    <!-- Last Matryoshka ||| event_matryoshka_04 -->
+                    <spawn npc_id="833625" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1520.5" y="1507.4" z="565.913" h="63"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+                    <!-- First Matryoshka ||| event_matryoshka_01 -->
+                    <spawn npc_id="833622" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1212.45" y="1400.75" z="208.125" h="27"/>
+                    </spawn>
+                    <!-- Second Matryoshka ||| event_matryoshka_02 -->
+                    <spawn npc_id="833623" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1211.77" y="1402.44" z="208.125" h="10"/>
+                    </spawn>
+                    <!-- Third Matryoshka ||| event_matryoshka_03 -->
+                    <spawn npc_id="833624" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1210.98" y="1404.49" z="208.125" h="6"/>
+                    </spawn>
+                    <!-- Last Matryoshka ||| event_matryoshka_04 -->
+                    <spawn npc_id="833625" respawn_time="295">
+                        <!-- 1 Spots -->
+                        <spot x="1209.97" y="1406.89" z="208.125" h="6"/>
                     </spawn>
                 </spawn_map>
             </spawns>
