@@ -207,12 +207,11 @@ public final class PlayerSkillList implements SkillList<Player> {
 				isNew = true;
 				}
 		}
-		if (player.isSpawned())
-            if (!isStigma || isGMSkill)
+		if (player.isSpawned()) {
+            if (!isStigma || isGMSkill) {
 			    sendMessage(player, skillId, isNew);
-            else
-                PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1300401, false));
-
+			}
+		}
 		return true;
 	}
 
