@@ -53,7 +53,6 @@ import com.aionemu.gameserver.services.LegionService;
 import com.aionemu.gameserver.services.PunishmentService;
 import com.aionemu.gameserver.services.RepurchaseService;
 import com.aionemu.gameserver.services.SkillLearnService;
-import com.aionemu.gameserver.services.StigmaService;
 import com.aionemu.gameserver.services.WorldBuffService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.drop.DropService;
@@ -223,8 +222,6 @@ public class PlayerLeaveWorldService {
 		
         PlayerAccountData pad = player.getPlayerAccount().getPlayerAccountData(player.getObjectId());
         pad.setEquipment(player.getEquipment().getEquippedItems());
-        
-        StigmaService.onPlayerLogout(player);
     }
 
     /**

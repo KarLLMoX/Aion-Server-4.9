@@ -210,7 +210,7 @@ public final class PlayerSkillList implements SkillList<Player> {
 		if (player.isSpawned()) {
             if (!isStigma || isGMSkill) {
 			    sendMessage(player, skillId, isNew);
-			}
+            }
 		}
 		return true;
 	}
