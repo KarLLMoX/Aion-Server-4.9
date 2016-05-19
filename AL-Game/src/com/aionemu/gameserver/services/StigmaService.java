@@ -35,6 +35,7 @@ import com.aionemu.gameserver.model.templates.item.RequireSkill;
 import com.aionemu.gameserver.model.templates.item.Stigma;
 import com.aionemu.gameserver.model.templates.item.Stigma.StigmaSkill;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_CUBE_UPDATE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -125,6 +126,10 @@ public class StigmaService {
             }
             //Item Equip Message with + Lvl
             PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300401, new DescriptionId(resultItem.getNameId()), resultItem.getEnchantLevel() + 1));
+            //Temp fix to Display Stigma Skills in StigmaSkillList (Skill Window)
+            for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills()) {
+				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, stigmaSkill));
+            }
  		}
 		return true;
 	}
@@ -165,13 +170,11 @@ public class StigmaService {
 
                 for (PlayerSkillEntry psSkill : player.getSkillList().getStigmaSkills()){
                     if (psSkill.getSkillTemplate().getStack().equals(sSkillStack)) {
-                        int nameId = DataManager.SKILL_DATA.getSkillTemplate(psSkill.getSkillId()).getNameId();
-                        PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300403, new DescriptionId(nameId)));
-                        SkillLearnService.removeSkill(player, psSkill.getSkillId());
+                        PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300403, new DescriptionId(resultItem.getNameId())));
+                        SkillLearnService.removeSkill(player, psSkill.getSkillId()); // Remove Basic Skill
+                        SkillLearnService.removeSkill(player, psSkill.getSkillId() + resultItem.getEnchantLevel()); // Remove Enchanted Skill
                         player.getEffectController().removeEffect(psSkill.getSkillId());
-                        player.getSkillList().deleteHiddenStigma(player);
-						recheckHiddenStigma(player);
-						player.getSkillList().deleteHiddenStigmaSilent(player);
+                		player.getSkillList().deleteHiddenStigma(player);
                     }
                 }
             }
@@ -187,10 +190,11 @@ public class StigmaService {
             }
             int hiddenStigmaSkillId = DataManager.HIDDEN_STIGMA_DATA.getHiddenStigmaSkill(player);
 
-            if (hiddenStigmaSkillId != 0)
+            if (hiddenStigmaSkillId != 0) {
                 if (!player.getSkillList().isHaveHiddenStigma(player) || (player.getSkillList().isHaveHiddenStigma(player) && player.getSkillList().getStigmaSkillEntry(hiddenStigmaSkillId) == null)) {
                     player.getSkillList().addHiddenStigmaSkill(player, hiddenStigmaSkillId, 1);
                 }
+            }
         }
     }
 
@@ -202,17 +206,10 @@ public class StigmaService {
 		for (Item item : equippedItems) {
 			if (item.getItemTemplate().isStigma()) {
 				Stigma stigmaInfo = item.getItemTemplate().getStigma();
-
-				if (stigmaInfo == null) {
-                    //4.8 Fix unequip stigma
-					AuditLogger.info(player,"Stigma: " + item.getItemTemplate().getTemplateId() + " moved in inventory");//4.8
-					player.getEquipment().unEquipItem(item.getObjectId(), 0);//4.8
-					continue;//4.8
-				}
 				player.getSkillList().addStigmaSkill(player, stigmaInfo.getSkills(), false);
 			}
 		}
-        player.getSkillList().deleteHiddenStigmaSilent(player);
+		player.getSkillList().deleteHiddenStigmaSilent(player);
         recheckHiddenStigma(player);
 
 		for (Item item : equippedItems) {
@@ -254,10 +251,6 @@ public class StigmaService {
 		}
 	}
 	
-	public static void onPlayerLogout(Player player) {
-		//player.getSkillList().deleteHiddenStigmaSilent(player);
-	}
-
 	/**
 	 * Get the number of available Stigma
 	 *
