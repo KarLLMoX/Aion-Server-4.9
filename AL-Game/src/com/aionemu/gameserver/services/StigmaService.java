@@ -249,6 +249,7 @@ public class StigmaService {
 				}
 			}
 		}
+	SkillLearnService.addMissingSkills(player); // TEMP Fix for Displaying Enchanted Stigma Skills after Relog
 	}
 	
 	/**
