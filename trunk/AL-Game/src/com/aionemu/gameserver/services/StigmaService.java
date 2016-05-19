@@ -123,7 +123,9 @@ public class StigmaService {
             else {
 				log.error("No have Stigma skill for enchanted stigma item.");
             }
-		}
+            //Item Equip Message with + Lvl
+            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300401, new DescriptionId(resultItem.getNameId()), resultItem.getEnchantLevel() + 1));
+ 		}
 		return true;
 	}
 
@@ -202,9 +204,7 @@ public class StigmaService {
 				Stigma stigmaInfo = item.getItemTemplate().getStigma();
 
 				if (stigmaInfo == null) {
-					//log.warn("Stigma info missing for item: " + item.getItemTemplate().getTemplateId());
-					//return;
-                                    //4.8 Fix unequip stigma
+                    //4.8 Fix unequip stigma
 					AuditLogger.info(player,"Stigma: " + item.getItemTemplate().getTemplateId() + " moved in inventory");//4.8
 					player.getEquipment().unEquipItem(item.getObjectId(), 0);//4.8
 					continue;//4.8

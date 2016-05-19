@@ -127,7 +127,7 @@ public class EnchantItemAction extends AbstractItemAction {
 				sId == 140001287 && sLvl == 5 || sId == 140001288 && sLvl == 7 || sId == 140001289 && sLvl == 7 || sId == 140001290 && sLvl == 0 || sId == 140001291 && sLvl == 1 || sId == 140001292 && sLvl == 0 ||
 				sId == 140001293 && sLvl == 5 || sId == 140001294 && sLvl == 7 || sId == 140001295 && sLvl == 7 || sId == 140001296 && sLvl == 2 || sId == 140001297 && sLvl == 2) {
 				//Bard
-				PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ENCHANT_ITEM_IT_CAN_NOT_BE_ENCHANTED_MORE_TIME(targetItem.getName()));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300454, new DescriptionId(targetItem.getNameId())));
 				return false;
 			} else {
 				return true;
