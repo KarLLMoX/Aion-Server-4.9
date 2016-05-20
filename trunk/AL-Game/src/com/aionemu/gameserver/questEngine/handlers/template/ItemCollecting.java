@@ -143,6 +143,10 @@ public class ItemCollecting extends QuestHandler {
                 switch (dialog) {
                     case QUEST_SELECT: {
 						if (startDialogId2 != 0) {
+							if(startDialogId2 == 5) {
+								qs.setStatus(QuestStatus.REWARD);
+								updateQuestStatus(env);
+							}
 							return sendQuestDialog(env, startDialogId2);
 						} else {
 							return sendQuestDialog(env, 2375);
