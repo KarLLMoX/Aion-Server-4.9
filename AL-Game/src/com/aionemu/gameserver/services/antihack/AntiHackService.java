@@ -207,12 +207,14 @@ public class AntiHackService {
     }
 
     public static void checkAionBin(int size, Player player) {
-        int legitSize = 212; // Aion 4.9 EU
+        int legitSize = 212; // TODO NEW SIZE
         
-        if (size != legitSize) {
-            AuditLogger.info(player, "Detected modified aion.bin");
-//            player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
-        }
+		if (SecurityConfig.INTEGRITY_CHECK) {
+			if (size != legitSize) {
+				AuditLogger.info(player, "Detected modified aion.bin");
+				player.getClientConnection().close(new SM_QUIT_RESPONSE(), false);
+			}
+		}
         
         PacketSendUtility.sendPacket(player, new SM_GAMEGUARD(size));
     }
