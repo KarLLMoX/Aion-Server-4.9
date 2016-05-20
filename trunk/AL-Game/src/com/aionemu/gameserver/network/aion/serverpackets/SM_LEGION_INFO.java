@@ -60,6 +60,7 @@ public class SM_LEGION_INFO extends AionServerPacket {
         writeS(legion.getLegionDiscription());
         writeC(legion.getLegionJoinType());
         writeH(legion.getMinLevel());
+		writeH(0);//Unk
         
         /**
          * Get Announcements List From DB By Legion *

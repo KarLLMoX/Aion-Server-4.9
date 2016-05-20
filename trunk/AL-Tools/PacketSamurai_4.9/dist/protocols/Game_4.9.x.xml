@@ -3526,7 +3526,8 @@
 			<part name="LegionDescription" type="S"/>
 			<part name="joinType" type="c"/>
 			<part name="minJoinLevel" type="h"/>
-			<!--<for id="-1" size="7">
+			<part name="unk" type="h"/>			
+			<!-- <for id="-1" size="7">
 				<part name="announcement" type="S"/>
 				<part name="date" type="d">
 					<reader type="UnixDate"/>
