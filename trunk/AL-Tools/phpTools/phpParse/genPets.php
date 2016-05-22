@@ -11,7 +11,8 @@ include("../includes/inc_globals.php");
 
 getConfData();
 
-$submit   = isset($_GET['submit'])   ? "J"               : "N";
+$submit   = isset($_GET['submit'])   ? "J" : "N";
+$docomm   = isset($_GET['docomm'])   ? "J" : "N";
 
 if (!file_exists("../outputs/parse_output/pets"))
     mkdir("../outputs/parse_output/pets");
@@ -27,6 +28,8 @@ if (!file_exists("../outputs/parse_output/pets"))
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
 <form name="edit" method="GET" action="genPets.php" target="_self">
+ <br>
+ <input type="checkbox" name="docomm" value="COMM" <?php echo ($docomm == "J") ? " checked" : ""; ?>"> MERCHANT-/BUFF-Pets <font color=orange>ohne</font> XML-Kommentar
  <br>
  <table width="700px">
    <colgroup>
@@ -46,13 +49,9 @@ function getFunctionType($type)
 {    
     switch(strtoupper($type))
     {
-        case "DOPING"   : return "DOPING";
         case "LOOTING"  : return "LOOT";
         case "FEEDING"  : return "FOOD";
-        case "WAREHOUSE": return "WAREHOUSE";
-        case "BAG"      : return "BAG";
-        case "WING"     : return "WING";
-        default:          return "??? ".$type;
+        default:          return strtoupper($type);
     }
 }
 // ----------------------------------------------------------------------------
@@ -126,14 +125,18 @@ function getFunctionSlots($name)
 // ----------------------------------------------------------------------------
 function getPetFunctionLine($type,$func)
 {
+    global $docomm;
+    
     $ret = "";
     
     if ($type == "" || $func == "") return "";
+
+    $type = strtoupper($type);
     
     // MERCHANT und BUFF sind nicht in der EMU realisiert!
-    if (strtoupper($type) == "MERCHANT" || strtoupper($type) == "BUFF") return "";
+    // if (strtoupper($type) == "MERCHANT" || strtoupper($type) == "BUFF") return "";
     
-    $ret  = '        <petfunction id="'.getFunctionId($func).'"';
+    $ret  = '<petfunction id="'.getFunctionId($func).'"';
     $ret .= ' type="'.getFunctionType($type).'"';
     
     if (strtoupper($type) == "WAREHOUSE")
@@ -144,7 +147,12 @@ function getPetFunctionLine($type,$func)
     }
     $ret .= '/>';
     
-    return $ret;
+    if ($type == "MERCHANT"  ||  $type == "BUFF")
+    {
+        if ($docomm == "J")
+            $ret = '<!-- '.$ret.' -->';
+    }
+    return '        '.$ret;
 }
 // ----------------------------------------------------------------------------
 //
@@ -201,7 +209,9 @@ function scanClientToypetFiles()
                        "toypet_doping.xml",
                        "toypet_warehouse.xml",
                        "toypet_feed.xml",
-                       "toypet_item.xml"
+                       "toypet_item.xml",
+                       "toypet_buff.xml",
+                       "toypet_merchant.xml"
                      );
     $maxFiles = count($tabFiles);
     
