@@ -467,8 +467,8 @@ function generGoodlistFile()
         
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,"<goodslists>\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,"<goodslists>\n");
     $gesout += 3;
     
     for ($c=0;$c<$domax;$c++)
@@ -670,8 +670,8 @@ function generTradeListFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">'."\n");
     $cntout += 3;
     
     for ($n=0;$n<$domax;$n++)

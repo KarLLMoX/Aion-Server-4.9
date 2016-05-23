@@ -76,8 +76,8 @@ function generRideFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,"<rides>\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,"<rides>\n");
     $cntout += 3;
     
     $lines = file($fileext);

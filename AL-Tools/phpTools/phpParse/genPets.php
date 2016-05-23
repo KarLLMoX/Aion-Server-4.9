@@ -295,8 +295,8 @@ function generPetDopingFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<dopings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_doping.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<dopings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_doping.xsd">'."\n");
     $cntout += 3;    
             
     flush();
@@ -379,8 +379,8 @@ function generPetsFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<pets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pets.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<pets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pets.xsd">'."\n");
     $cntout += 3;  
         
     $id   = $desc = $type1 = $func1 = $type2 = $func2 = $reward = 

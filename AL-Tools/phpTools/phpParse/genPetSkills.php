@@ -114,8 +114,8 @@ function generPetSkillsFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
-    fwrite($hdlout,'<pet_skill_templates>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<pet_skill_templates>'."\n");
     $cntout += 3;
     
     $domax = count($tabUltra);

@@ -1217,8 +1217,8 @@ function generSpawnFile()
     $domax   = count($tabSpawn);
     
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<spawns>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<spawns>'."\n");
 	fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
         
     for ($s=0;$s<$domax;$s++)
@@ -1383,8 +1383,8 @@ function generBeritraFile()
     $domax   = count($tabBeritra);
     
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<spawns>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<spawns>'."\n");
 	fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
     
     for ($s=0;$s<$domax;$s++)
@@ -1533,8 +1533,8 @@ function generWalkerFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
-    fwrite($hdlout,'<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">'."\n");
     
     $line = fgets($hdlin);   // 1. Zeile überlesen, da Spaltennamen
     
@@ -1679,8 +1679,8 @@ function generStaticFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<spawns>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<spawns>'."\n");
     fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
     
     for ($s=0;$s<$domax;$s++)

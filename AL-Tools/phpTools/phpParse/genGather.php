@@ -575,8 +575,8 @@ function generSpawnFile()
     $domax   = count($tabSpawn);
     
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<spawns>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<spawns>'."\n");
 	fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
     
     for ($s=0;$s<$domax;$s++)

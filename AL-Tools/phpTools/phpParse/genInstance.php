@@ -318,8 +318,8 @@ function generInstBonusattrFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<instance_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_bonusattr.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<instance_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_bonusattr.xsd">'."\n");
     $cntout += 3;
     
     $lines = file($fileext);
@@ -435,8 +435,8 @@ function generInstCooltimesFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<instance_cooltimes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_cooltimes.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");    
+    fwrite($hdlout,'<instance_cooltimes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_cooltimes.xsd">'."\n");
     $cntout += 3;
     
     while (list($tkey,$tval) = each($tabCTime))

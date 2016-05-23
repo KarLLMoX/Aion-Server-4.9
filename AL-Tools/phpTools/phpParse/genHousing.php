@@ -343,8 +343,8 @@ function generHouseBuildings()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<buildings>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<buildings>'."\n");
     $cntout += 3;
     
     $lines = file($fileext);
@@ -458,8 +458,8 @@ function generHouseParts()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<house_parts>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<house_parts>'."\n");
     $cntout += 3;
     
     $lines = file($fileext);
@@ -554,8 +554,8 @@ function generHousingObjects()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<housing_objects>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<housing_objects>'."\n");
     $cntout += 3;
     
     $lines = file($fileext);

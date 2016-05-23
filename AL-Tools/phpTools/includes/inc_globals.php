@@ -233,7 +233,7 @@ function cleanPathUtf8Files()
 // ----------------------------------------------------------------------------
 function getCopyrightLine()
 {
-    $ret = '    <!-- parsed by phpTools from Aion Germany Group (Mariella) at '.
+    $ret = '<!-- parsed by phpTools from Aion Germany Group (Mariella) at '.
            date("Y-m-d H:i").' -->';
     
     return $ret;
