@@ -891,8 +891,8 @@ function putNpcTemplates()
     {    
         // Vorspann ausgeben
         fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-        fwrite($hdlout,'<npc_templates>'."\n");
         fwrite($hdlout,getCopyrightLine()."\n");
+        fwrite($hdlout,'<npc_templates>'."\n");
         
         $anznpc   = 0;
         $maxcnt   = count($tabnpcs);

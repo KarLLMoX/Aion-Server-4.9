@@ -1248,8 +1248,8 @@ function makeQuestDataFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
-    fwrite($hdlout,'<quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'."\n");
     $cntout += 3;
     
     logLine("Ausgabedatei",$fileout);
@@ -1458,8 +1458,8 @@ function makeChallengeDataFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<challenge_tasks>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<challenge_tasks>'."\n");
     $cntout += 3;
     
     logLine("Ausgabedatei",$fileout);
@@ -1653,9 +1653,9 @@ function generQuestData()
         
         // Vorspann ausgeben
         fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
+        fwrite($hdlout,getCopyrightLine()."\n");
         fwrite($hdlout,'<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'."\n");
         fwrite($hdlout,'               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">'."\n");
-        fwrite($hdlout,getCopyrightLine()."\n");
         fwrite($hdlout,'    <!-- '.$maxQIds.' Quests listed -->'."\n");
         fwrite($hdlout,'    <!--'."\n");
         fwrite($hdlout,'        [BEGIN] SUMMARY'."\n");

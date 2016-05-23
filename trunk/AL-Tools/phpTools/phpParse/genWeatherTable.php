@@ -180,8 +180,8 @@ function generWeatherTableFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<weather>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<weather>'."\n");
     $cntout += 3;
     
     // für alle Welten

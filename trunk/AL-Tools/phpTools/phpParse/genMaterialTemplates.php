@@ -76,8 +76,8 @@ function generMaterialTemplatesFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<material_templates>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<material_templates>'."\n");
     $cntout += 3;
     
     $lines = file($fileext);

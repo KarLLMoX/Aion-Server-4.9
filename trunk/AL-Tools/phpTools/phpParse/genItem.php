@@ -106,8 +106,8 @@ function generAssemblyItems()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<assembly_items>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<assembly_items>'."\n");
     $cntout += 3;
     
     $parts = "";
@@ -258,8 +258,8 @@ function generEnchantTables()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<enchant_tables>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<enchant_tables>'."\n");
     $cntout += 3;
     
     /* Aufbau der Ausgabedatei
@@ -391,8 +391,8 @@ function generEnchantTemplates()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
-    fwrite($hdlout,'<enchant_templates>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<enchant_templates>'."\n");
     $cntout += 3;
     
     /* Aufbau der Ausgabedatei
@@ -498,8 +498,8 @@ function generMultiReturns()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
-    fwrite($hdlout,'<item_multi_returns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_multi_returns.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<item_multi_returns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_multi_returns.xsd">'."\n");
     $cntout += 3;
     $parts = "";
     $trenn = "";
@@ -706,9 +706,9 @@ function generPurifications()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
     fwrite($hdlout,'<item_purifications xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'."\n");
     fwrite($hdlout,'                    xsi:noNamespaceSchemaLocation="item_purifications.xsd">'."\n");
-    fwrite($hdlout,getCopyrightLine()."\n");
     $cntout += 4;
     
     // Tabelle abarbeiten und ausgeben
@@ -862,8 +862,8 @@ function generRandomBonuses()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<random_bonuses>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<random_bonuses>'."\n");
     $cntout += 3;
     $type    = "";
 
@@ -1038,8 +1038,8 @@ function generItemSets()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<item_sets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_sets.xsd">'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<item_sets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_sets.xsd">'."\n");
     $cntout += 3;
     
     flush();
@@ -1498,8 +1498,8 @@ function generItemTemplates()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,'<item_templates>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<item_templates>'."\n");
     $cntout += 3;
    
     flush();

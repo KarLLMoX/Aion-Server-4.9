@@ -101,8 +101,8 @@ function generTribeFile()
     
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
-    fwrite($hdlout,"<tribe_relations>\n");
     fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,"<tribe_relations>\n");
     $cntout += 3;
     
     $lines = file($fileext);
