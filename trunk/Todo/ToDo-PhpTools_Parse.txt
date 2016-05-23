@@ -3,7 +3,7 @@ Liste aller XML-Dateien im aktuellen SVN-Verzeichnis vom 04.04.2016 12:35
 
 SVN-Pfad: M:\AionGerEmu49\AionGerEmuSvn\trunk\AL-Game\data\static_data
 Pfade   : 73
-Dateien : 136 ( teilweise abgekürzte Ausgabe mit '*** world_zones.xml ***', daher reduziert )
+Dateien : 135 ( teilweise abgekürzte Ausgabe mit '*** world_zones.xml ***', daher reduziert )
 
 =========================================================================================================
 Status  : offen         = noch nicht analysiert / geprüft
@@ -20,10 +20,18 @@ Die Zeile "***  stop check *** ..." zeigt nur an, bis zu welcher Datei ich aktue
 durchgeführt habe. Hinweis: aktuell gehe ich in der Liste der Reihe nach alle noch mit Status "offen"
 markierten Einträge durch (nach dieser Zeile sind aber durchaus schon Generierungen/Analysen erledigt).
 
-neue Wunsch-Prioritäten (Generierungen, die vorgezogen werden sollten):
+Anzahl gem. Status aktuell (21.05.2016):
 
-- 14.04.2016 : zones-Dateien, skill-Dateien
+offen               50
+- DONE_SVN -        43
 
+entfällt             1
+NO_CDATA            27
+UNCOMPLETE          10
+MANUELL              2
+EMUSYSTEM            2
+------------------ ---
+Summe              135
 =========================================================================================================================================================
 Dateiname                                          | Status         | SVN-Unterverzeichnis           | Hinweise
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
@@ -95,7 +103,7 @@ instance_bonusattr.xml                             | - DONE_SVN -   | ...\instan
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 instance_cooltimes.xml                             | - DONE_SVN -   | ...\instance_cooltimes         |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-instance_exit.xml                                  | NO_CDATA       | ...\instance_exit              | Entry-Position xyz etc.
+instance_exit.xml                                  | UNCOMPLETE     | ...\instance_exit              | Entry-Position xyz etc.
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 item_sets.xml                                      | - DONE_SVN -   | ...\item_sets                  |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
@@ -108,30 +116,30 @@ item_purifications.xml                             | - DONE_SVN -   | ...\items 
 item_random_bonuses.xml                            | - DONE_SVN -   | ...\items                      |
 item_restriction_cleanups.xml                      | NO_CDATA       | ...\items                      |
 item_templates.xml                                 | - DONE_SVN -   | ...\items                      |
-*************************************************   stop check   ***   stop check   ***   stop check   **************************************************
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-material_templates.xml                             | offen          | ...\mesh_materials             |
+material_templates.xml                             | - DONE_SVN -   | ...\mesh_materials             |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-raid_locations.xml                                 | offen          | ...\monster_raid               |
+raid_locations.xml                                 | NO_CDATA       | ...\monster_raid               |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | NO_CDATA       | ...\npc_drops                  |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-npc_factions.xml                                   | offen          | ...\npc_factions               |
+npc_factions.xml                                   | - DONE_SVN -   | ...\npc_factions               |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-npc_shouts.xml                                     | offen          | ...\npc_shouts                 |
+npc_shouts.xml                                     | UNCOMPLETE     | ...\npc_shouts                 | z.B.: 2Skill_Ev15s_UseSk1T_HP35_UseSk2S     2 / 21
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-npc_skills.xml                                     | offen          | ...\npc_skills                 |
+npc_skills.xml                                     | NO_CDATA       | ...\npc_skills                 |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 *** world_zones.xml ***                            | - DONE_SVN -   | ...\npc_walker                 |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 npc_templates.xml                                  | - DONE_SVN -   | ...\npcs                       |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-pet_skills.xml                                     | offen          | ...\pet_skills                 |
-transformed_summon_skills.xml                      | offen          | ...\pet_skills                 |
+pet_skills.xml                                     | - DONE_SVN -   | ...\pet_skills                 |
+transformed_summon_skills.xml                      | NO_CDATA       | ...\pet_skills                 |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
-pet_doping.xml                                     | offen          | ...\pets                       |
-pet_feed.xml                                       | offen          | ...\pets                       |
-pets.xml                                           | offen          | ...\pets                       |
+pet_doping.xml                                     | - DONE_SVN -   | ...\pets                       |
+pet_feed.xml                                       | UNCOMPLETE     | ...\pets                       | ?group, ?items etc.
+pets.xml                                           | - DONE_SVN -   | ...\pets                       |
+*************************************************   stop check   ***   stop check   ***   stop check   **************************************************
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------
 polymorph_panels.xml                               | offen          | ...\polymorph_panels           |
 ---------------------------------------------------+----------------+--------------------------------+---------------------------------------------------

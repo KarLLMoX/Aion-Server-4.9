@@ -21,7 +21,7 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen LoginEvents-Datei</div>
+  <div class="aktion">Erzeugen Login-Events-Datei</div>
   <div class="hinweis" id="hinw">
     Erzeugen der login_events.xml-Datei.
   </div>
@@ -56,7 +56,7 @@ function generLoginEventsFile()
     $fileout = "../outputs/parse_output/events_config/login_events.xml";
     
     $fileext = convFileToUtf8($fileu16);
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Eingabedatei UTF16",$fileu16);
     logLine("Eingabedatei UTF8",$fileext);
     logLine("Ausgabedatei",$fileout);
@@ -69,7 +69,8 @@ function generLoginEventsFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<login_events xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="login_events.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);

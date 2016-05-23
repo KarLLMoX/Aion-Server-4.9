@@ -24,7 +24,8 @@ if (!file_exists("../outputs/parse_output/instance_cooltimes"))
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
   <div class="aktion">Erzeugen Instance-Dateien</div>
   <div class="hinweis" id="hinw">
-  Erzeugen der flypath_template.xml-Datei.
+  Erzeugen der Instance-xml-Dateien.<br><br>
+  ( instance_bonusattr.xml, instance_cooltimes.xml und <font color=gray>instance_exit.xml</font> )
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -304,7 +305,7 @@ function generInstBonusattrFile()
     $fileout = "../outputs/parse_output/instance_bonusattr/instance_bonusattr.xml";    
     $fileext = convFileToUtf8($fileu16);
     
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Eingabedatei UTF16",$fileu16);
     logLine("Eingabedatei UTF8",$fileext);
     logLine("Ausgabedatei",$fileout);
@@ -318,7 +319,8 @@ function generInstBonusattrFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<instance_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_bonusattr.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);
@@ -422,7 +424,7 @@ function generInstCooltimesFile()
     
     $fileout = "../outputs/parse_output/instance_cooltimes/instance_cooltimes.xml";
     
-    logHead("Erzeugen Datei: instance_cooltimes.xml");
+    logHead("Generierung der Datei: instance_cooltimes.xml");
     logLine("Ausgabedatei",$fileout);
     
     reset($tabCTime);
@@ -434,9 +436,8 @@ function generInstCooltimesFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<instance_cooltimes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance_cooltimes.xsd">'."\n");
-    // fwrite($hdlout,'    <!-- generated for AION 4.9.x at '.date("d.m.Y H:i").' -->'."\n");
-    
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");    
+    $cntout += 3;
     
     while (list($tkey,$tval) = each($tabCTime))
     {
@@ -503,9 +504,9 @@ function generInstCooltimesFile()
 // ---------------------------------------------------------------------------
 function generInstanceExitsFile()
 {
-    logHead("Erzeugen Datei: instance_exit.xml");
+    logHead("Generierung der Datei: instance_exit.xml");
     
-    logLine("HINWEIS","*** KEINE Informationen zum Generieren gefunden / erhalten ***");
+    logLine("<font color=red>keine Generierung</font>","*** KEINE Informationen zum Generieren gefunden / erhalten ***");
 }
 // ----------------------------------------------------------------------------
 //                             M  A  I  N

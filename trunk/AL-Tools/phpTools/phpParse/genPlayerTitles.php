@@ -144,7 +144,7 @@ function generPlayerTitlesFile()
     $fileext = convFileToUtf8($fileu16);
     $fileout = "../outputs/parse_output/player_titles.xml";  
     
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Eingabedatei UTF16",$fileu16);
     logLine("Eingabedatei UTF8",$fileext);
     logLine("Ausgabedatei",$fileout);
@@ -157,7 +157,8 @@ function generPlayerTitlesFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<player_titles>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);

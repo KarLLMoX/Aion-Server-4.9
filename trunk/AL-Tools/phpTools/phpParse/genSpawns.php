@@ -81,7 +81,7 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen Npc-Spawn-Dateien</div>
+  <div class="aktion">Erzeugen Npc-Spawn-/Walker-Dateien</div>
   <div class="hinweis" id="hinw">
     Erzeugen Npc-Spawn- / Walker-Dateien f&uuml;r das unten ausgew&auml;hlte Gebiet.<br><br>
     ACHTUNG: die Pfade werden der aktuellen Konfigurations-Datei entnommen.<br><br>
@@ -1206,7 +1206,7 @@ function generSpawnFile()
     $anznull = 0;
     $anzpos  = 0;
     
-    logHead("Erzeuge Spawn-Datei");
+    logHead("Generierung der Spawn-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
     flush();
@@ -1218,6 +1218,7 @@ function generSpawnFile()
     
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<spawns>'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
 	fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
         
     for ($s=0;$s<$domax;$s++)
@@ -1364,7 +1365,7 @@ function generBeritraFile()
     $anznull = 0;
     $anzpos  = 0;
     
-    logHead("Erzeuge Beritra-Datei");
+    logHead("Generierung der Beritra-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
     flush();
@@ -1383,6 +1384,7 @@ function generBeritraFile()
     
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<spawns>'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
 	fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
     
     for ($s=0;$s<$domax;$s++)
@@ -1524,7 +1526,7 @@ function generWalkerFile()
     $hdlin   = openInputFile($csvfile);
     $hdlout  = openOutputFile($outfile);
     
-    logHead("Erzeuge Walker-Datei");
+    logHead("Generierung der Walker-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
     $anzwalk = 0;
@@ -1532,6 +1534,7 @@ function generWalkerFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
     fwrite($hdlout,'<npc_walker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_walker.xsd">'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
     
     $line = fgets($hdlin);   // 1. Zeile überlesen, da Spaltennamen
     
@@ -1667,7 +1670,7 @@ function generStaticFile()
     $outfile = formFileName("../outputs/spawn_output/Statics/".$welt."_".$tabWorldmaps[$welt]['name'].".xml");    
     $hdlout = openOutputFile($outfile);
     
-    logHead("Erzeuge Statics-Datei");
+    logHead("Generierung der  Statics-Datei ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
     $domax  = count($tabstats);
@@ -1677,6 +1680,7 @@ function generStaticFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<spawns>'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
     fwrite($hdlout,'    <spawn_map map_id="'.$welt.'">'."\n");
     
     for ($s=0;$s<$domax;$s++)

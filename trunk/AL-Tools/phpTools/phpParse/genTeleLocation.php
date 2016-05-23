@@ -24,7 +24,7 @@ $withcom  = isset($_GET['withcom'])  ? "J" : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen Teleport-Location-xml-Datei</div>
+  <div class="aktion">Erzeugen Teleport-Location-Datei</div>
   <div class="hinweis" id="hinw">
     Erzeugen der teleport_location.xml-Datei.
   </div>
@@ -648,7 +648,7 @@ function generTeleLocationFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<teleport_location xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="teleport_location.xsd">'."\n");
-    //fwrite($hdlout,'    <!-- generated for AION 4.9.x at '.date("d.m.Y H:i").' -->'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
     $cntout += 3;
     
     flush();
@@ -763,7 +763,7 @@ if ($submit == "J")
     }
     else
     {        
-        logHead("Erzeugen der Datei teleport_location.xml");;
+        logHead("Generierung der Datei: teleport_location.xml");;
         
         scanClientStrings();
         scanClientAirports();

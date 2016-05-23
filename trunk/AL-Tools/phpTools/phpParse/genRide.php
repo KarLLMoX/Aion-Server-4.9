@@ -64,7 +64,7 @@ function generRideFile()
     $fileext = convFileToUtf8($fileu16);
     $fileout = "../outputs/parse_output/ride/ride.xml";  
     
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Eingabedatei UTF16",$fileu16);
     logLine("Eingabedatei UTF8",$fileext);
     logLine("Ausgabedatei",$fileout);
@@ -77,7 +77,8 @@ function generRideFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,"<rides>\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);

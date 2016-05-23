@@ -18,7 +18,7 @@ include("includes/auto_inc_title_names.php");
 include("includes/inc_getautonameids.php");
  
 $selfname = basename(__FILE__);
-$infoname = "Erstellung der npc_templates.xml";
+$infoname = "Erzeugen Npc-Templates-xml-Datei";
 
 // durch Optimierungen zur 4.9-er Version fallen einige Dateien/Schritte weg
 if (file_exists("parse_temp/inc_tabnames.php"))
@@ -882,7 +882,7 @@ function putNpcTemplates()
     $lev3 = "            ";
     $out  = "";
     
-    logHead("Ausgabe der npc_templates.xml");
+    logHead("Generierung der Datei: npc_templates.xml");
     
     $filename = "../outputs/parse_output/npcs/npc_templates.xml";
     $outstart = microtime(true);
@@ -892,6 +892,7 @@ function putNpcTemplates()
         // Vorspann ausgeben
         fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
         fwrite($hdlout,'<npc_templates>'."\n");
+        fwrite($hdlout,getCopyrightLine()."\n");
         
         $anznpc   = 0;
         $maxcnt   = count($tabnpcs);
@@ -1008,7 +1009,7 @@ function clearOutParserFiles($step)
 //                                  M A I N
 //
 // ----------------------------------------------------------------------------
-putHtmlHead("$selfname - $infoname","Client parsen zur Erstellung der npc_templates.xml");
+putHtmlHead("$selfname - $infoname","Erzeugen der Npc-Templates-Datei");
 
 $schritt = isset($_GET['schritt']) ? $_GET['schritt'] : 0;
 

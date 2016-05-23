@@ -21,7 +21,7 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen GatherableTemplates-Datei</div>
+  <div class="aktion">Erzeugen Gatherable-Templates-Datei</div>
   <div class="hinweis" id="hinw">
     Erzeugen der gatherable_templates.xml-Datei.
   </div>
@@ -295,7 +295,7 @@ function generGatherablesFile()
         
     $fileout = "../outputs/parse_output/gatherables/gatherable_templates.xml";
     
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Ausgabedatei",$fileout);
     
     $cntout = 0; 
@@ -305,7 +305,8 @@ function generGatherablesFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<gatherable_templates xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gatherable_templates.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
         
     while (list($skey,$sval) = each($tabsrc))
     {        
