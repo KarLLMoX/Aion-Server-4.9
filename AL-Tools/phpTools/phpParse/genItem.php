@@ -49,9 +49,11 @@ if ($allesneu == "J")
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen Item-xml-Dateien</div>
+  <div class="aktion">Erzeugen Item-Dateien</div>
   <div class="hinweis" id="hinw">
-    Erzeugen der Item-xml-Dateien.
+    Erzeugen der Item-xml-Dateien.<br><br>
+    ( assembly_items.xml, enchant_tables.xml, enchant_templates.xml, <font color=gray>item_groups.xml</font>, item_multi_returns.xml,<br>
+    item_purification.xml, random_bonuses.xml, <font color=gray>item_restriction_cleanup.xml</font>, item_sets.xml und item_templates.xml )
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -79,7 +81,7 @@ function generAssemblyItems()
 {
     global $pathdata;
     
-    logHead("Generiere Datei: assembly_items.xml");
+    logHead("Generierung der Datei: assembly_items.xml");
     
     $fileext = formFileName($pathdata."\\Items\\client_assembly_items.xml");
     $fileout = "../outputs/parse_output/Items/assembly_items.xml";
@@ -101,10 +103,13 @@ function generAssemblyItems()
     $hdlout = openOutputFile($fileout);
     logLine("Eingabedatei",$fileext);
     logLine("Ausgabedatei",$fileout);
+    
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<assembly_items>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
+    
     $parts = "";
     $trenn = "";
     
@@ -158,7 +163,7 @@ function generEnchantTables()
     
     $tabItems = array();
     
-    logHead("Generiere Datei: enchant_tables.xml");       
+    logHead("Generierung der Datei: enchant_tables.xml");       
     
     $fileext = formFileName($pathdata."\\Items\\client_item_enchanttable.xml");
     $fileout = "../outputs/parse_output/Items/enchant_tables.xml";
@@ -254,7 +259,8 @@ function generEnchantTables()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<enchant_tables>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     /* Aufbau der Ausgabedatei
     <?xml version="1.0" encoding="UTF-8"?>
@@ -320,7 +326,7 @@ function generEnchantTemplates()
     
     $tabItems = array();
     
-    logHead("Generiere Datei: enchant_templates.xml");    
+    logHead("Generierung der Datei: enchant_templates.xml");    
     
     $fileext = formFileName($pathdata."\\Items\\client_item_authorizetable.xml");
     $fileout = "../outputs/parse_output/Items/enchant_templates.xml";
@@ -386,7 +392,8 @@ function generEnchantTemplates()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<enchant_templates>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     /* Aufbau der Ausgabedatei
     <?xml version="1.0" encoding="UTF-8"?>
@@ -453,7 +460,7 @@ function generEnchantTemplates()
 // ----------------------------------------------------------------------------
 function generGroups()
 {
-    logHead("Generiere Datei: item_groups.xml");
+    logHead("Generierung der Datei: item_groups.xml");
     
     logLine("HINWEIS","*** KEINE Informationen zum Generieren gefunden / erhalten ***");
 }
@@ -466,7 +473,7 @@ function generMultiReturns()
     
     include("includes/inc_worldmaps.php");
     
-    logHead("Generiere Datei: item_multi_returns.xml");
+    logHead("Generierung der Datei: item_multi_returns.xml");
     
     $fileext = formFileName($pathdata."\\Items\\client_item_multi_return.xml");
     $fileout = "../outputs/parse_output/Items/item_multi_returns.xml";
@@ -492,7 +499,8 @@ function generMultiReturns()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
     fwrite($hdlout,'<item_multi_returns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_multi_returns.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     $parts = "";
     $trenn = "";
     
@@ -606,7 +614,7 @@ function generPurifications()
     
     $tabItems = array();
     
-    logHead("Generiere Datei: item_purification.xml");  
+    logHead("Generierung der Datei: item_purification.xml");  
     
     $fileext = formFileName($pathdata."\\Items\\client_item_upgrade.xml");
     $fileout = "../outputs/parse_output/Items/item_purifications.xml";
@@ -700,7 +708,8 @@ function generPurifications()
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<item_purifications xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'."\n");
     fwrite($hdlout,'                    xsi:noNamespaceSchemaLocation="item_purifications.xsd">'."\n");
-    $cntout += 3;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 4;
     
     // Tabelle abarbeiten und ausgeben
     while (list($ikey,$ival) = each($tabItems))
@@ -786,7 +795,7 @@ function generRandomBonuses()
                      );
     $maxFiles = count($tabFiles);
     
-    logHead("Generiere Datei: item_random_bonuses.xml");    
+    logHead("Generierung der Datei: item_random_bonuses.xml");    
     
     for ($f=0;$f<$maxFiles;$f++)
     {      
@@ -854,7 +863,8 @@ function generRandomBonuses()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<random_bonuses>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     $type    = "";
 
     /* Aufbau der  Ausgabedatei
@@ -938,7 +948,7 @@ function generRandomBonuses()
 // ----------------------------------------------------------------------------
 function generRestrictionCleanups()
 {
-    logHead("Generiere Datei: item_restriction_cleanups.xml");
+    logHead("Generierung der Datei: item_restriction_cleanups.xml");
     
     logLine("HINWEIS","*** KEINE Informationen zum Generieren gefunden / erhalten ***");
 }
@@ -950,7 +960,7 @@ function generItemSets()
     // wegen wichtiger 4.9-er Anpassungen erst einmal fürs SVN wieder entfernt!
     global $pathdata;
     
-    logHead("Generiere Datei: item_sets.xml");
+    logHead("Generierung der Datei: item_sets.xml");
     
     $tabsets = array();
     $cntles  = 0;
@@ -1029,6 +1039,8 @@ function generItemSets()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<item_sets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="item_sets.xsd">'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     flush();
     
@@ -1407,7 +1419,7 @@ function generItemTemplates()
     $txsort  = $doSortItemsSvn == true ? "Reihenfolge wie im SVN" : "numerisch aufsteigend";
     $txcomp  = $doCompareFiles == true ? "werden erstellt" : "werden NICHT erstellt";
     
-    logHead("Generiere Datei: item_templates.xml");
+    logHead("Generierung der Datei: item_templates.xml");
     logSubHead("Anforderungen");
     logLine("- Sortierung",$txsort);
     logLine("- Abgleichdateien",$txcomp);
@@ -1487,7 +1499,8 @@ function generItemTemplates()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<item_templates>'."\n");
-    $cntout++;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
    
     flush();
     

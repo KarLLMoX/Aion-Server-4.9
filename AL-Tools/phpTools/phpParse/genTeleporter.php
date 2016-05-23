@@ -23,7 +23,7 @@ $withcom  = isset($_GET['withcom'])  ? "J" : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen Npc-Teleporter-xml-Datei</div>
+  <div class="aktion">Erzeugen Npc-Teleporter-Datei</div>
   <div class="hinweis" id="hinw">
     Erzeugen der npc_teleporter.xml-Datei.
   </div>
@@ -241,7 +241,7 @@ function generTeleporterFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
     fwrite($hdlout,'<npc_teleporter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'."\n");
-    fwrite($hdlout,'<!-- generated for AION 4.9 at '.date("d.m.Y H:i").' -->'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
     $cntout += 3;
     
     flush();
@@ -378,7 +378,7 @@ if ($submit == "J")
     }
     else
     {        
-        logHead("Erzeugen der Datei npc_teleporter.xml");;
+        logHead("Generierung der Datei: npc_teleporter.xml");;
         
         makeTabNpcs();
         makeTabAirs();

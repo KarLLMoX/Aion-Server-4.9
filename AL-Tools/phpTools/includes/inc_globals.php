@@ -225,6 +225,20 @@ function cleanPathUtf8Files()
     }
 }    
 // ----------------------------------------------------------------------------
+// 
+//                    O U T P U T - F U N K T I O N E N
+//
+// ----------------------------------------------------------------------------
+// CopyRight-Zeile (zentral) aufbereiten und zurückgeben
+// ----------------------------------------------------------------------------
+function getCopyrightLine()
+{
+    $ret = '    <!-- parsed by phpTools from Aion Germany Group (Mariella) at '.
+           date("Y-m-d H:i").' -->';
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
 //
 //                    F I L T E R - F U N K T I O N E N
 //
@@ -300,7 +314,7 @@ function getSortNumValue($wert)
 //                       L O G - F U N K T I O N E N
 //
 // ----------------------------------------------------------------------------
-// Logging sttarten
+// Logging starten
 // ----------------------------------------------------------------------------
 function logStart()
 {

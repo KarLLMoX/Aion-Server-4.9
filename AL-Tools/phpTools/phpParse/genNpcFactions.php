@@ -84,7 +84,7 @@ function scanPsStringFiles()
                 );
     $maxFiles = count($tabFiles);
     
-    logHead("Scannen der PS-String-Datien");
+    logHead("Scannen der PS-String-Dateien");
     
     for ($f=0;$f<$maxFiles;$f++)
     {
@@ -185,7 +185,7 @@ function generNpcFactionsFile()
     $fileout = "../outputs/parse_output/npc_factions/npc_factions.xml";
     
     $fileext = convFileToUtf8($fileu16);
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Eingabedatei UTF16",$fileu16);
     logLine("Eingabedatei UTF8",$fileext);
     logLine("Ausgabedatei",$fileout);
@@ -199,7 +199,8 @@ function generNpcFactionsFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<npc_factions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_factions.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);

@@ -23,7 +23,8 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
   <div class="aktion">Erzeugen Goodslists/TradeList-Dateien</div>
   <div class="hinweis" id="hinw">
-    Erzeugen der Dateien goodslists.xml und npc_trade_list.xml.
+    Erzeugen der Goodlists-/Trade-Dateien.<br><br>
+    ( goodslists.xml und npc_trade_list.xml )
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -61,7 +62,7 @@ function generGoodsItemTab()
         
         flush();
         
-        logSubHead("Verarbeite Datei: ".$fileu16);
+        logSubHead("Scanne Datei: ".$fileu16);
         logLine("- Eingabedatei UTF8",$fileext);
         logFileSize("- ",$fileext);
         
@@ -467,7 +468,8 @@ function generGoodlistFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,"<goodslists>\n");
-    $gesout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $gesout += 3;
     
     for ($c=0;$c<$domax;$c++)
     {
@@ -646,7 +648,7 @@ function generTradeListFile()
 {    
     global $npctrades;
     
-    logHead("Erzeugen der Datei: npc_trade_list.xml");
+    logHead("Generierung der Datei: npc_trade_list.xml");
     
     generTradeListTab();
     generTradeInfoTab();
@@ -669,7 +671,8 @@ function generTradeListFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<npc_trade_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_trade_list.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     for ($n=0;$n<$domax;$n++)
     {

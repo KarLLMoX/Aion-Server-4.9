@@ -168,7 +168,7 @@ function generWeatherTableFile()
     
     $fileout = "../outputs/parse_output/weather_table.xml";  
     
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Ausgabedatei",$fileout);
         
     flush();
@@ -181,7 +181,8 @@ function generWeatherTableFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<weather>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     // für alle Welten
     while (list($wkey,$wval) = each($tabweather))

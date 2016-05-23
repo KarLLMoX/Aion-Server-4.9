@@ -29,9 +29,10 @@ $submit   = isset($_GET['submit'])   ? "J" : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen Quest-xml-Dateien</div>
+  <div class="aktion">Erzeugen Quest-Dateien</div>
   <div class="hinweis" id="hinw">
-    Erzeugen der Quest-xml-Dateien.
+    Erzeugen der Quest-xml-Dateien.<br><br>
+    ( quest_data.xml, quest_script_data.xml und challenge_tasks.xml )
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -1248,7 +1249,8 @@ function makeQuestDataFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
     fwrite($hdlout,'<quests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     logLine("Ausgabedatei",$fileout);
     
@@ -1457,7 +1459,8 @@ function makeChallengeDataFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<challenge_tasks>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     logLine("Ausgabedatei",$fileout);
     
@@ -1513,7 +1516,7 @@ function makeChallengeDataFile()
 // ----------------------------------------------------------------------------
 function generQuest()
 {
-    logHead("Generiere Datei: quest_data.xml");
+    logHead("Generierung der Datei: quest_data.xml");
     
     scanClientQuestData();
     scanClientQuestNames();
@@ -1652,7 +1655,8 @@ function generQuestData()
         fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
         fwrite($hdlout,'<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'."\n");
         fwrite($hdlout,'               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">'."\n");
-        fwrite($hdlout,'    <!-- '.$maxQIds.' Quests listed - generated '.date("Y-m-d H:i").' -->'."\n");
+        fwrite($hdlout,getCopyrightLine()."\n");
+        fwrite($hdlout,'    <!-- '.$maxQIds.' Quests listed -->'."\n");
         fwrite($hdlout,'    <!--'."\n");
         fwrite($hdlout,'        [BEGIN] SUMMARY'."\n");
         
@@ -1714,7 +1718,7 @@ function generQuestData()
 // ----------------------------------------------------------------------------
 function generChallenge()
 {
-    logHead("Generiere Datei: challenge_tasks.xml");
+    logHead("Generierung der Datei: challenge_tasks.xml");
     
     scanClientMsgNames();
     scanClientChallengeData();

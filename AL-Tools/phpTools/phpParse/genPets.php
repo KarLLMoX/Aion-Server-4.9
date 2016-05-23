@@ -23,7 +23,10 @@ if (!file_exists("../outputs/parse_output/pets"))
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
   <div class="aktion">Erzeugen Pets-Dateien</div>
   <div class="hinweis" id="hinw">
-  Erzeugen der pet_....xml-Dateien (pet_doping.xml, pets.xml).
+  Erzeugen der Pets-xml-Dateien.<br><br>
+  ( pet_doping.xml, <font color=gray>pet_feed.xml</font> und pets.xml )<br><br>
+  HINWEIS: aktuell unterst&uuml;tzt die EMU keine BUFF-/MERCHANT-Pets, weshalb sie als XML-Kommentar
+  ausgegeben werden sollten!<br>Wenn dies nicht gew&uuml;nscht ist, dann bitte unten die Checkbox markieren (= Ausgabe Pets OHNE Kommentar).
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -267,7 +270,7 @@ function generPetDopingFile()
 {
     global $pathdata;
     
-    logHead("Generierung der Datei pet_doping.xml");
+    logHead("Generierung der Datei: pet_doping.xml");
     
     $fileu16 = formFileName($pathdata."\\func_pet\\toypet_doping.xml");
     $fileext = convFileToUtf8($fileu16);
@@ -293,7 +296,8 @@ function generPetDopingFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<dopings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_doping.xsd">'."\n");
-    $cntout += 2;    
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;    
             
     flush();
     
@@ -339,9 +343,9 @@ function generPetDopingFile()
 // ----------------------------------------------------------------------------
 function generPetFeedFile()
 {
-    logHead("Generierung der Datei pet_feed.xml");
+    logHead("Generierung der Datei: pet_feed.xml");
     
-    logLine("HINWEIS","*** KEINE Informationen zum Generieren gefunden / erhalten ***");
+    logLine("<font color=red>keine Generierung</font>","*** KEINE Informationen zum Generieren gefunden / erhalten ***");
 }
 // ----------------------------------------------------------------------------
 // Pets-Datei erzeugen
@@ -350,7 +354,7 @@ function generPetsFile()
 {
     global $pathdata;
     
-    logHead("Generierung der Datei pets.xml");
+    logHead("Generierung der Datei: pets.xml");
     
     $fileu16 = formFileName($pathdata."\\func_pet\\toypets.xml");
     $fileext = convFileToUtf8($fileu16);
@@ -376,7 +380,8 @@ function generPetsFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<pets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pets.xsd">'."\n");
-    $cntout += 2;  
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;  
         
     $id   = $desc = $type1 = $func1 = $type2 = $func2 = $reward = 
     $wing = $bag  = $react = $scale = $alti  = $walk  = $run    = ""; 

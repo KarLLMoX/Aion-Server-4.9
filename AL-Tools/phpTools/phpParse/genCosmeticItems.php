@@ -21,7 +21,7 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen CosmeticItems-Datei</div>
+  <div class="aktion">Erzeugen Cosmetic-Items-Datei</div>
   <div class="hinweis" id="hinw">
     Erzeugen der cosmetic_items.xml-Datei.
   </div>
@@ -138,7 +138,7 @@ function generCosmeticItemsFile()
     $fileout = "../outputs/parse_output/cosmetic_items/cosmetic_items.xml";
     
     $fileext = convFileToUtf8($fileu16);
-    logHead("Generierung der Datei");
+    logHead("Generierung der Datei: ".basename($fileout));
     logLine("Eingabedatei UTF16",$fileu16);
     logLine("Eingabedatei UTF8",$fileext);
     logLine("Ausgabedatei",$fileout);
@@ -152,7 +152,8 @@ function generCosmeticItemsFile()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
     fwrite($hdlout,'<cosmetic_items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cosmetic_items.xsd">'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);

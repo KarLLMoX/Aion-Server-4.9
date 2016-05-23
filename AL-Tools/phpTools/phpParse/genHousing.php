@@ -21,9 +21,11 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 <center>
 <div id="body" style='width:800px;padding:0px;'>
   <div width="100%"><img src="../includes/aioneulogo.png" width="100%"></div>
-  <div class="aktion">Erzeugen House-Xml-Dateien</div>
+  <div class="aktion">Erzeugen House-Dateien</div>
   <div class="hinweis" id="hinw">
-    Erzeugen der House-xml-Dateien.
+    Erzeugen der House-xml-Dateien.<br><br>
+    ( house_buildings.xml, <font color=gray>house_npcs.xml</font>, house_parts.xml, <font color=gray>houses.xml</font>, 
+    housing_objects.xml und <font color=gray>scripts.xml</font>)
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -272,7 +274,7 @@ function scanClientNameIds()
 {
     global $pathstring,$tabNamid;
     
-    logHead("Scannen der PS-String-Dateien für die NameIds");
+    logHead("Scannen der PS-String-Dateien f&uuml;r die NameIds");
     
     $tabString = array( "client_strings_npc.xml",
                         "client_strings_item.xml",
@@ -324,7 +326,7 @@ function generHouseBuildings()
 {
     global $pathdata;
     
-    logHead("Erzeugen Datei: house_buildings.xml");
+    logHead("Generierung der Datei: house_buildings.xml");
     
     $fileu16 = formFileName($pathdata."\\Housing\\client_housing_building.xml");  
     $fileext = convFileToUtf8($fileu16);
@@ -342,7 +344,8 @@ function generHouseBuildings()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<buildings>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);
@@ -428,7 +431,7 @@ function generHouseBuildings()
 // ----------------------------------------------------------------------------
 function generHouseNpcs()
 {
-    logHead("Erzeugen Datei: house_npcs.xml");
+    logHead("Generierung der Datei: house_npcs.xml");
     logLine("<font color=red>keine Generierung</font>","nicht alle Daten im Client vorhanden/gefunden");
 }
 // ----------------------------------------------------------------------------
@@ -438,7 +441,7 @@ function generHouseParts()
 {
     global $pathdata;
     
-    logHead("Erzeugen Datei: house_parts.xml");
+    logHead("Generierung der Datei: house_parts.xml");
     
     $fileu16 = formFileName($pathdata."\\Housing\\client_housing_custom_part.xml");  
     $fileext = convFileToUtf8($fileu16);
@@ -456,7 +459,8 @@ function generHouseParts()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<house_parts>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);
@@ -521,7 +525,7 @@ function generHouseParts()
 // ----------------------------------------------------------------------------
 function generHouses()
 {
-    logHead("Erzeugen Datei: houses.xml");
+    logHead("Generierung der Datei: houses.xml");
     logLine("<font color=red>keine Generierung</font>","nicht alle Daten im Client vorhanden/gefunden");
     
     flush();
@@ -533,7 +537,7 @@ function generHousingObjects()
 {
     global $pathdata;
     
-    logHead("Erzeugen Datei: housing_objects.xml");
+    logHead("Generierung der Datei: housing_objects.xml");
     
     $fileu16 = formFileName($pathdata."\\Housing\\client_housing_object.xml");  
     $fileext = convFileToUtf8($fileu16);
@@ -551,7 +555,8 @@ function generHousingObjects()
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,'<housing_objects>'."\n");
-    $cntout += 2;
+    fwrite($hdlout,getCopyrightLine()."\n");
+    $cntout += 3;
     
     $lines = file($fileext);
     $domax = count($lines);
@@ -722,7 +727,7 @@ function generHousingObjects()
 // ----------------------------------------------------------------------------
 function generScripts()
 {
-    logHead("Erzeugen Datei: scripts.xml");
+    logHead("Generierung der Datei: scripts.xml");
     logLine("<font color=red>keine Generierung</font>","Datei ...lbox_sample.xml manuell kopieren");
     
     flush();
