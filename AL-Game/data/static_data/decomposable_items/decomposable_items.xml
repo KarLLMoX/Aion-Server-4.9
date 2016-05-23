@@ -36258,6 +36258,50 @@
             <item id="152000918" name="Mächtiger uralter Äther" count="10"/>
         </items>
     </decomposable>
+    <decomposable item_id="188052719" decomposable_name="[Event] Dye Bundle">
+        <items>
+            <item id="169220028" name="Dye: True White"/>
+        </items>
+        <items>
+            <item id="169220029" name="Dye: True Black"/>
+        </items>
+        <items>
+            <item id="169231016" name="ye: Punky Pink"/>
+        </items>
+        <items>
+            <item id="169231017" name="Dye: Indian Pink"/>
+        </items>
+        <items>
+            <item id="169231018" name="Dye: Romantic Pink"/>
+        </items>
+        <items>
+            <item id="169231019" name="Dye: Baby Yellow"/>
+        </items>
+        <items>
+            <item id="169231020" name="Dye: Pastel Orange"/>
+        </items>
+        <items>
+            <item id="169231021" name="Dye: Pastel Green Tea"/>
+        </items>
+        <items>
+            <item id="169231022" name="Dye: Indian Green"/>
+        </items>
+        <items>
+            <item id="169231023" name="Dye: Indian Blue"/>
+        </items>
+        <items>
+            <item id="169231024" name="Dye: Sky Blue"/>
+        </items>
+        <items>
+            <item id="169231025" name="Dye: Pastel Violet"/>
+        </items>
+        <items>
+            <item id="169231026" name="Dye: Light Cobalt"/>
+        </items>
+        <items>
+            <item id="169231027" name="Dye: Gray Violet"/>
+        </items>
+    </decomposable>
     <decomposable item_id="188053806" decomposable_name="Alabastor Order Mark Bundle">
         <items>
             <item id="186000100" name="Progress Token" count="1"/>
@@ -36498,17 +36542,31 @@
     </decomposable>
     <decomposable item_id="188054308" decomposable_name="[Event] Matryoshka's Gratitude">
         <items>
-            <item id="186000414" name="Blood Medal" count="3"/>
+            <item id="186000414" name="Blood Medal" rnd_min="1" rnd_max="3"/>
             <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
     </decomposable>
     <decomposable item_id="188054309" decomposable_name="[Event] Matryoshka's Boon">
+        <items>
+            <item id="186000414" name="Blood Medal" count="3"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
     <!--
-    Blood Medal(s)
-    Blood Mark Box
+        <items>
+            <item id="" name="Blood Mark Box"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
     -->
     </decomposable>
     <decomposable item_id="188054310" decomposable_name="[Event] Matryoshka's Luck">
+        <items>
+            <item id="186000414" name="Blood Medal" count="5"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
+        <items>
+            <item id="188053001" name="[Event] Fabled Godstone Bundle"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+        </items>
     <!--
     Blood Mark(s)
     [Event] Fabled Godstone Bundle
@@ -36532,5 +36590,31 @@
     Darken Lord's Weapon Box
     Irridescent Omega Enchantment Stone
     -->
+    </decomposable>
+    <decomposable item_id="188054312" decomposable_name="[Event] Youngest Matryoshka's Bundle">
+        <items>
+            <item id="164002304" name="[Event] Youngest Matryoshka's Privilege"/>
+            <item id="188052719" name="[Event] Dye Bundle"/>
+        </items>
+        <items>
+            <item id="169620181" name="Youngest Matryoshka's Amulet - 50%"/>
+            <item id="188052719" name="[Event] Dye Bundle"/>
+        </items>
+        <items>
+            <item id="169620182" name="Gathering Skill Increase Scroll - 200%"/>
+            <item id="188052719" name="[Event] Dye Bundle"/>
+        </items>
+        <items>
+            <item id="169620183" name="AP Boost Scroll - 30%"/>
+            <item id="188052719" name="[Event] Dye Bundle"/>
+        </items>
+        <items>
+            <item id="169620184" name="Crafting Skill Increase Scroll - 200%"/>
+            <item id="188052719" name="[Event] Dye Bundle"/>
+        </items>
+        <items>
+            <item id="169620185" name="Youngest Matryoshka's Special Amulet - 20%"/>
+            <item id="188052719" name="[Event] Dye Bundle"/>
+        </items>
     </decomposable>
 </decomposable_items>
