@@ -162,7 +162,9 @@
 		<enum val="0" display="Warehouse"/>
 		<enum val="1" display="Appearance"/>
 		<enum val="4" display="Absent"/>
-		<enum val="259" display="Alert"/>
+		<enum val="5" display="StatBoost"/>
+		<enum val="6" display="Alert"/>
+		<enum val="259" display="Loot"/>
 		<enum val="2049" display="Feed"/>
 		<enum val="8194" display="Buff"/>
 	</multivalue>
