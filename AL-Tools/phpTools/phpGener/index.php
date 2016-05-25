@@ -19,7 +19,8 @@
 <form name="edit" method="GET" action="index.php">
  <br><br>
  <a href="index_dropgen.php"  target="_self"><input type="button" value="Drop-Generator"  style="width:220px;"></a><br><br><br>
- <a href="index_dropcheck.php"  target="_self"><input type="button" value="Check Drops/nicht gespawnte NPC"  style="width:220px;"></a>
+ <a href="index_dropcheck.php"  target="_self"><input type="button" value="Check Drops/nicht gespawnte NPC"  style="width:220px;"></a><br><br><br>
+ <a href="index_apb.php"   target="_self"><input type="button" value="Decomposable Items scannen" style="width:220px;"></a>
  <br><br>
 </form>
 

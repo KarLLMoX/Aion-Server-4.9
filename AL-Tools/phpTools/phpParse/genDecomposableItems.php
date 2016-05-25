@@ -8,6 +8,7 @@
 </head>
 <?PHP
 include("../includes/inc_globals.php");
+include("../includes/inc_parseurlitems.php");
 
 getConfData();
 
@@ -451,15 +452,34 @@ function generDecomposableSelectItemsFile()
     flush();
     
     $domax = count($tabSort);
+    // $test  = 10;
     
     for ($i=0;$i<$domax;$i++)
     {   
         if ($tabDecompose[$tabSort[$i]]['deco'] == "S")
         {
-            fwrite($hdlout,'    <!-- '.$tabDecompose[$tabSort[$i]]['name'].' -->'."\n");
-            fwrite($hdlout,'    <decomposable_selectitem item_id="'.$tabSort[$i].'">'."\n");
+            // lt. XSD darf der Name auch als Attribut angegeben werden
+            // fwrite($hdlout,'    <!-- '.$tabDecompose[$tabSort[$i]]['name'].' -->'."\n");
+            fwrite($hdlout,'    <decomposable_selectitem item_id="'.$tabSort[$i].'"'.
+                           ' name="'.$tabDecompose[$tabSort[$i]]['name'].'">'."\n");
             $cntout += 2;
             $cntitm++;
+            
+            /* Vorab-Test für die Nutzung der neuen URL-Parser-Routinen
+               aktuell nicht aktiv !!!!!!!!!!
+            if (substr($tabSort[$i],0,3) == "188" && $test > 0)
+            {
+                $tabtext = explode("\n",getDecomposableLines($tabSort[$i],true,false));
+                $maxtext = count($tabtext);
+
+                for ($t=0;$t<$maxtext;$t++)
+                {                
+                    fwrite($hdlout,rtrim($tabtext[$t])."\n");
+                    $cntout++;
+                }
+                $test--;
+            }
+            */
         }
     }
     
