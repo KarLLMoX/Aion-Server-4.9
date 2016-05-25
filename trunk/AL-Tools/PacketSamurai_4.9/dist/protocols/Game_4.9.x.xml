@@ -7315,6 +7315,11 @@
             <part name="unk" type="c"/>
             <part name="unk" type="c"/>
 		</packet>
+		<packet id="0x13A" name="________________0x13A">
+            <part name="unk" type="c"/>
+            <part name="unk" type="c"/>
+            <part name="unk" type="c"/>
+		</packet>
 		<!-- =============== -->
 		<!-- Not coded in AL -->
 		<!-- =============== -->

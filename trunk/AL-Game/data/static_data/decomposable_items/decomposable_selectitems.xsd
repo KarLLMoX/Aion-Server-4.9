@@ -14,7 +14,7 @@
             <xs:element name="items" type="SelectItems" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="item_id" type="xs:int"/>
-        <xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
     </xs:complexType>
     <xs:complexType name="SelectItems">
         <xs:sequence>
@@ -24,7 +24,8 @@
     </xs:complexType>
     <xs:complexType name="SelectItem">
         <xs:attribute name="id" type="xs:int"/>
-        <xs:attribute name="count" type="xs:int" default="1"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
+        <xs:attribute name="count" type="xs:int" use="optional" default="1"/>
         <xs:attribute name="race" type="Race" use="optional" default="PC_ALL"/>
     </xs:complexType>
     <xs:simpleType name="itemRaces">

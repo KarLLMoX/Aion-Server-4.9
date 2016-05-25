@@ -2440,5 +2440,130 @@
             <item id="140001475" count="1"/> <!-- Kinetic Bulwark (Inert) -->
             <item id="140001474" count="1"/> <!-- Meteor Strike (Inert) -->
         </items>
-    </decomposable_selectitem>		  	    	    
+    </decomposable_selectitem>
+
+    <decomposable_selectitem item_id="188054825" name="Purified Daevanion Protector's Shoe Box">
+        <items>
+            <item id="114101780" name="Purified Kaisinel Protector's Shoes" race="ELYOS"/>
+            <item id="114301920" name="Purified Kaisinel Protector's Boots" race="ELYOS"/>
+            <item id="114301921" name="Purified Kaisinel Protector's Magic Boots" race="ELYOS"/>
+            <item id="114501839" name="Purified Kaisinel Protector's Brogans" race="ELYOS"/>
+            <item id="114501840" name="Purified Kaisinel Protector's Heavy Brogans" race="ELYOS"/>
+            <item id="114501854" name="Purified Kaisinel Protector's Brogans" race="ELYOS"/>
+            <item id="114601662" name="Purified Kaisinel Protector's Sabatons" race="ELYOS"/>
+            <item id="114101782" name="Purified Marchutan Protector's Shoes" race="ASMODIANS"/>
+            <item id="114301924" name="Purified Marchutan Protector's Boots" race="ASMODIANS"/>
+            <item id="114301925" name="Purified Marchutan Protector's Magic Boots" race="ASMODIANS"/>
+            <item id="114501843" name="Purified Marchutan Protector's Brogans" race="ASMODIANS"/>
+            <item id="114501844" name="Purified Marchutan Protector's Heavy Brogans" race="ASMODIANS"/>
+            <item id="114501856" name="Purified Marchutan Protector's Brogans" race="ASMODIANS"/>
+            <item id="114601664" name="Purified Marchutan Protector's Sabatons" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+    <decomposable_selectitem item_id="188054826" name="Purified Daevanion Protector's Glove Box">
+        <items>
+            <item id="111101735" name="Purified Kaisinel Protector's Gloves" race="ELYOS"/>
+            <item id="111301852" name="Purified Kaisinel Protector's Vambrace" race="ELYOS"/>
+            <item id="111301853" name="Purified Kaisinel Protector's Magic Vambrace" race="ELYOS"/>
+            <item id="111501812" name="Purified Kaisinel Protector's Handguards" race="ELYOS"/>
+            <item id="111501813" name="Purified Kaisinel Protector's Heavy Handguards" race="ELYOS"/>
+            <item id="111501827" name="Purified Kaisinel Protector's Handguards" race="ELYOS"/>
+            <item id="111601673" name="Purified Kaisinel Protector's Gauntlets" race="ELYOS"/>
+            <item id="111101737" name="Purified Marchutan Protector's Gloves" race="ASMODIANS"/>
+            <item id="111301856" name="Purified Marchutan Protector's Vambrace" race="ASMODIANS"/>
+            <item id="111301857" name="Purified Marchutan Protector's Magic Vambrace" race="ASMODIANS"/>
+            <item id="111501816" name="Purified Marchutan Protector's Handguards" race="ASMODIANS"/>
+            <item id="111501817" name="Purified Marchutan Protector's Heavy Handguards" race="ASMODIANS"/>
+            <item id="111501829" name="Purified Marchutan Protector's Handguards" race="ASMODIANS"/>
+            <item id="111601675" name="Purified Marchutan Protector's Gauntlets" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+    <decomposable_selectitem item_id="188054827" name="Purified Daevanion Protector's Shoulderplates Box">
+        <items>
+            <item id="112101681" name="Purified Kaisinel Protector's Pauldrons" race="ELYOS"/>
+            <item id="112301790" name="Purified Kaisinel Protector's Shoulderguards" race="ELYOS"/>
+            <item id="112301791" name="Purified Kaisinel Protector's Magic Shoulderguards" race="ELYOS"/>
+            <item id="112501748" name="Purified Kaisinel Protector's Spaulders" race="ELYOS"/>
+            <item id="112501749" name="Purified Kaisinel Protector's Heavy Spaulders" race="ELYOS"/>
+            <item id="112501763" name="Purified Kaisinel Protector's Spaulders" race="ELYOS"/>
+            <item id="112601654" name="Purified Kaisinel Protector's Shoulderplates" race="ELYOS"/>
+            <item id="112101683" name="Purified Marchutan Protector's Pauldrons" race="ASMODIANS"/>
+            <item id="112301794" name="Purified Marchutan Protector's Shoulderguards" race="ASMODIANS"/>
+            <item id="112301795" name="Purified Marchutan Protector's Magic Shoulderguards" race="ASMODIANS"/>
+            <item id="112501752" name="Purified Marchutan Protector's Spaulders" race="ASMODIANS"/>
+            <item id="112501753" name="Purified Marchutan Protector's Heavy Spaulders" race="ASMODIANS"/>
+            <item id="112501765" name="Purified Marchutan Protector's Spaulders" race="ASMODIANS"/>
+            <item id="112601656" name="Purified Marchutan Protector's Shoulderplates" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+    <decomposable_selectitem item_id="188054828" name="Purified Daevanion Protector's Pants Box">
+        <items>
+            <item id="113101746" name="Purified Kaisinel Protector's Leggings" race="ELYOS"/>
+            <item id="113301883" name="Purified Kaisinel Protector's Breeches" race="ELYOS"/>
+            <item id="113301884" name="Purified Kaisinel Protector's Magic Breeches" race="ELYOS"/>
+            <item id="113501831" name="Purified Kaisinel Protector's Chausses" race="ELYOS"/>
+            <item id="113501832" name="Purified Kaisinel Protector's Heavy Chausses" race="ELYOS"/>
+            <item id="113501846" name="Purified Kaisinel Protector's Chausses" race="ELYOS"/>
+            <item id="113601656" name="Purified Kaisinel Protector's Greaves" race="ELYOS"/>
+            <item id="113101748" name="Purified Marchutan Protector's Leggings" race="ASMODIANS"/>
+            <item id="113301887" name="Purified Marchutan Protector's Breeches" race="ASMODIANS"/>
+            <item id="113301888" name="Purified Marchutan Protector's Magic Breeches" race="ASMODIANS"/>
+            <item id="113501835" name="Purified Marchutan Protector's Chausses" race="ASMODIANS"/>
+            <item id="113501836" name="Purified Marchutan Protector's Heavy Chausses" race="ASMODIANS"/>
+            <item id="113501848" name="Purified Marchutan Protector's Chausses" race="ASMODIANS"/>
+            <item id="113601658" name="Purified Marchutan Protector's Greaves" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+    <decomposable_selectitem item_id="188054829" name="Purified Daevanion Protector's Jacket Box">
+        <items>
+            <item id="110101919" name="Purified Kaisinel Protector's Tunic" race="ELYOS"/>
+            <item id="110301913" name="Purified Kaisinel Protector's Jerkin" race="ELYOS"/>
+            <item id="110301914" name="Purified Kaisinel Protector's Magic Jerkin" race="ELYOS"/>
+            <item id="110551252" name="Purified Kaisinel Protector's Hauberk" race="ELYOS"/>
+            <item id="110551253" name="Purified Kaisinel Protector's Heavy Hauberk" race="ELYOS"/>
+            <item id="110551267" name="Purified Kaisinel Protector's Hauberk" race="ELYOS"/>
+            <item id="110601709" name="Purified Kaisinel Protector's Breastplate" race="ELYOS"/>
+            <item id="110101921" name="Purified Marchutan Protector's Tunic" race="ASMODIANS"/>
+            <item id="110301917" name="Purified Marchutan Protector's Jerkin" race="ASMODIANS"/>
+            <item id="110301918" name="Purified Marchutan Protector's Magic Jerkin" race="ASMODIANS"/>
+            <item id="110551256" name="Purified Marchutan Protector's Hauberk" race="ASMODIANS"/>
+            <item id="110551257" name="Purified Marchutan Protector's Heavy Hauberk" race="ASMODIANS"/>
+            <item id="110551269" name="Purified Marchutan Protector's Hauberk" race="ASMODIANS"/>
+            <item id="110601711" name="Purified Marchutan Protector's Breastplate" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+    <decomposable_selectitem item_id="188054830" name="Purified Daevanion Protector's Weapon Box">
+        <items>
+            <item id="100201602" name="Illumishinel's Dagger" race="ELYOS"/>
+            <item id="100001895" name="Illumishinel's Sword" race="ELYOS"/>
+            <item id="100101422" name="Illumishinel's Mace" race="ELYOS"/>
+            <item id="100901457" name="Illumishinel's Greatsword" race="ELYOS"/>
+            <item id="101301345" name="Illumishinel's Polearm" race="ELYOS"/>
+            <item id="101501440" name="Illumishinel's Staff" race="ELYOS"/>
+            <item id="101701438" name="Illumishinel's Bow" race="ELYOS"/>
+            <item id="100601501" name="Illumishinel's Spellbook" race="ELYOS"/>
+            <item id="100501382" name="Illumishinel's Orb" race="ELYOS"/>
+            <item id="102001318" name="Illumishinel's Harp" race="ELYOS"/>
+            <item id="101801290" name="Illumishinel's Pistol" race="ELYOS"/>
+            <item id="101901196" name="Illumishinel's Aethercannon" race="ELYOS"/>
+            <item id="102101134" name="Illumishinel's Cipher-Blade" race="ELYOS"/>
+            <item id="115001878" name="Illumishinel's Battle Shield" race="ELYOS"/>
+            <item id="115001879" name="Illumishinel's Scale Shield" race="ELYOS"/>
+            <item id="100201603" name="Peitan's Dagger" race="ASMODIANS"/>
+            <item id="100001896" name="Peitan's Sword" race="ASMODIANS"/>
+            <item id="100101423" name="Peitan's Mace" race="ASMODIANS"/>
+            <item id="100901458" name="Peitan's Greatsword" race="ASMODIANS"/>
+            <item id="101301346" name="Peitan's Polearm" race="ASMODIANS"/>
+            <item id="101501441" name="Peitan's Staff" race="ASMODIANS"/>
+            <item id="101701439" name="Peitan's Bow" race="ASMODIANS"/>
+            <item id="100601502" name="Peitan's Spellbook" race="ASMODIANS"/>
+            <item id="100501383" name="Peitan's Orb" race="ASMODIANS"/>
+            <item id="102001319" name="Peitan's Harp" race="ASMODIANS"/>
+            <item id="101801291" name="Peitan's Pistol" race="ASMODIANS"/>
+            <item id="101901197" name="Peitan's Aethercannon" race="ASMODIANS"/>
+            <item id="102101135" name="Peitan's Cipher-Blade" race="ASMODIANS"/>
+            <item id="115001882" name="Peitan's Battle Shield" race="ASMODIANS"/>
+            <item id="115001883" name="Peitan's Scale Shield" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 </decomposable_selectitems>
