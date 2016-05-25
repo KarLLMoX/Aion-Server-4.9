@@ -13,6 +13,7 @@ include("../includes/inc_parseurlitems.php");
 getConfData();
 
 $submit   = isset($_GET['submit'])   ? "J" : "N";
+$domix    = isset($_GET['domix'])    ? "J" : "N";
 
 if (!file_exists("../outputs/parse_output/decomposable_items"))
     mkdir("../outputs/parse_output/decomposable_items");
@@ -32,6 +33,8 @@ if (!file_exists("../outputs/parse_output/decomposable_items"))
 <h1 style="color:orange">Bitte Generierung starten</h1>
 <form name="edit" method="GET" action="genDecomposableItems.php" target="_self">
  <br>
+ <input type="checkbox" name="domix" value="MIX" <?php echo ($domix == "J") ? " checked" : ""; ?>"> neue Items in die sortierten SVN-Decompose-Dateien einbeziehen
+ <br>
  <table width="700px">
    <colgroup>
      <col style="width:200px">
@@ -44,6 +47,36 @@ if (!file_exists("../outputs/parse_output/decomposable_items"))
 //                       H I L F S F U N K T I O N E N
 //
 // ----------------------------------------------------------------------------
+// neue Items der aktuellen SVN-Tabelle hinzufügen
+// ----------------------------------------------------------------------------
+function addNewDecomposeItems(&$tabSvn,$deco)
+{
+    global $tabDecompose;
+    
+    reset($tabDecompose);
+    
+    $cntnew = 0;
+    
+    while (list($key,$val) = each($tabDecompose))
+    {
+        if ($tabDecompose[$key]['deco'] == $deco
+        &&  !isset($tabSvn[$key]))
+        {
+            if ($deco == "S")
+                $nline = '    <decomposable_selectitem item_id="'.$key.'"'.
+                           ' name="'.$tabDecompose[$key]['name'].'"/>     <!--  NEW  -->';
+            else
+                $nline = '    <decomposable item_id="'.$key.'" decomposable_name="'.
+                           $tabDecompose[$key]['name'].'"/>     <!--  NEW -->';
+                
+            $tabSvn[$key][0] = $nline;
+            $cntnew++;
+        }
+    }
+    reset($tabDecompose);
+    
+    logLine("Anzahl neue Items",$cntnew);
+}
 // ----------------------------------------------------------------------------
 //
 //                         S C A N - F U N K T I O N E N
@@ -121,7 +154,7 @@ function scanSvnItemTemplates()
 // ----------------------------------------------------------------------------
 function sortSvnDecomposableItems()
 {
-    global $pathsvn, $tabDecompose;
+    global $pathsvn, $tabDecompose, $domix;
     global $cERRSELECT, $cTEMPLATE, $cDUPLICATE;
     
     logHead("Scanne und sortiere die SVN-Datei: decomposable_items.xml");
@@ -221,6 +254,13 @@ function sortSvnDecomposableItems()
     logLine("Anzahl Items gefunden",$cntitm);
     logLine("Anzahl doppelte Items",$cntdup);
     
+    if ($domix == "J")
+    {
+        logSubHead("Pr&uuml;fen/Erg&auml;nzen neuer Items");
+        
+        addNewDecomposeItems($tabSvn,"J");
+    }
+    
     logSubHead("Ausgabe der sortierten Items nach ID");
     
     $tabKeys = array_keys($tabSvn);
@@ -267,7 +307,7 @@ function sortSvnDecomposableItems()
 // ----------------------------------------------------------------------------
 function sortSvnDecomposableSelectItems()
 {
-    global $pathsvn, $tabDecompose;
+    global $pathsvn, $tabDecompose, $domix;
     global $cERRSELECT, $cTEMPLATE, $cDUPLICATE;
     
     logHead("Scanne und sortiere die SVN-Datei: decomposable_selectitems.xml");
@@ -304,6 +344,28 @@ function sortSvnDecomposableSelectItems()
             $id  = getkeyValue("item_id",$line);
             $ind = 0;
             
+            // wenn das Attribut Name noch nicht vorhanden ist, dann wird es 
+            // hier ergänzt!
+            if (stripos($line,' name="') === false)
+            {
+                if (isset($tabDecompose[$id]))
+                {
+                    $ntxt = ' name="'.$tabDecompose[$id]['name'].'"';
+                    $line = str_replace(">",$ntxt.">",$line);
+                    
+                    // sofern vorhanden, Kommentarzeile vor dem Item entfernen
+                    if ($wait)
+                    {
+                        if (count($tabWait) == 1  && $wind == 1
+                        &&  stripos($tabWait[0],"<!-- ") !== false)
+                        {
+                            $tabWait = array();
+                            $wait    = false;
+                            $wind    = 0;
+                        }
+                    }
+                }
+            }
             // in der Item-Templates als SELECT markiert?
             if (isset($tabDecompose[$id]))
             {
@@ -363,7 +425,14 @@ function sortSvnDecomposableSelectItems()
     
     logLine("Anzahl Zeilen gelesen",$cntles);
     logLine("Anzahl Items gefunden",$cntitm);  
-    logLine("Anzahl doppelte Items",$cntdup);    
+    logLine("Anzahl doppelte Items",$cntdup);   
+    
+    if ($domix == "J")
+    {
+        logSubHead("Pr&uuml;fen/Erg&auml;nzen neuer Items");
+        
+        addNewDecomposeItems($tabSvn,"S");
+    }
     
     logSubHead("Ausgabe der sortierten Items nach ID");
     $tabKeys = array_keys($tabSvn);
@@ -433,7 +502,7 @@ function generDecomposableItemsFile()
     {   
         if ($tabDecompose[$tabSort[$i]]['deco'] == "J")
         {
-            fwrite($hdlout,'    <decomposable_item item_id="'.$tabSort[$i].'" decomposable_name="'.
+            fwrite($hdlout,'    <decomposable item_id="'.$tabSort[$i].'" decomposable_name="'.
                            $tabDecompose[$tabSort[$i]]['name'].'"/>'."\n");
             $cntout++;
             $cntitm++;
