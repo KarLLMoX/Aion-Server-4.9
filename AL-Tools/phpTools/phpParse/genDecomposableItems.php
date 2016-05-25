@@ -121,7 +121,8 @@ function scanSvnItemTemplates()
 // ----------------------------------------------------------------------------
 function sortSvnDecomposableItems()
 {
-    global $pathsvn;
+    global $pathsvn, $tabDecompose;
+    global $cERRSELECT, $cTEMPLATE, $cDUPLICATE;
     
     logHead("Scanne und sortiere die SVN-Datei: decomposable_items.xml");
     
@@ -159,12 +160,21 @@ function sortSvnDecomposableItems()
             $id  = getkeyValue("item_id",$line);
             $ind = 0;
             
+            // in der Item-Templates als SELECT markiert?
+            if (isset($tabDecompose[$id]))
+            {
+                if ($tabDecompose[$id]['deco'] == "S")
+                    logLine($cERRSELECT,$id." als SELECT markiert, aber in dieser Datei definiert!");
+            }
+            else
+                logLine($cTEMPLATE,$id." = nicht in der item_templates.xml");
+                
             if (isset($tabSvn[$id]))
             {
                 $ind = count($tabSvn[$id]);
                 $cntdup++;
                 
-                logLine("- Doppeleintrag","Item = ".$id);
+                logLine($cDUPLICATE,"Item = ".$id." = Mehrfach vorhanden");
             }
             else
                 $cntitm++;
@@ -257,7 +267,8 @@ function sortSvnDecomposableItems()
 // ----------------------------------------------------------------------------
 function sortSvnDecomposableSelectItems()
 {
-    global $pathsvn;
+    global $pathsvn, $tabDecompose;
+    global $cERRSELECT, $cTEMPLATE, $cDUPLICATE;
     
     logHead("Scanne und sortiere die SVN-Datei: decomposable_selectitems.xml");
     
@@ -293,12 +304,21 @@ function sortSvnDecomposableSelectItems()
             $id  = getkeyValue("item_id",$line);
             $ind = 0;
             
+            // in der Item-Templates als SELECT markiert?
+            if (isset($tabDecompose[$id]))
+            {
+                if ($tabDecompose[$id]['deco'] != "S")
+                    logLine($cERRSELECT,$id." nicht als SELECT markiert, aber in dieser Datei definiert!");
+            }
+            else
+                logLine($cTEMPLATE,$id." = nicht in der item_templates.xml");
+                        
             if (isset($tabSvn[$id])) 
             {
                 $ind = count($tabSvn[$id]);
                 $cntdup++;
                 
-                logLine("- Check Doppeleintrag","Item = ".$id." ( evtl. andere Klasse )");
+                logLine($cDUPLICATE,"Item = ".$id." mehrfach vorhanden ( evtl. andere Klasse? )");
             }
             else
                 $cntitm++;
@@ -414,7 +434,7 @@ function generDecomposableItemsFile()
         if ($tabDecompose[$tabSort[$i]]['deco'] == "J")
         {
             fwrite($hdlout,'    <decomposable_item item_id="'.$tabSort[$i].'" decomposable_name="'.
-                           $tabDecompose[$tabSort[$i]]['name'].'">'."\n");
+                           $tabDecompose[$tabSort[$i]]['name'].'"/>'."\n");
             $cntout++;
             $cntitm++;
         }
@@ -461,7 +481,7 @@ function generDecomposableSelectItemsFile()
             // lt. XSD darf der Name auch als Attribut angegeben werden
             // fwrite($hdlout,'    <!-- '.$tabDecompose[$tabSort[$i]]['name'].' -->'."\n");
             fwrite($hdlout,'    <decomposable_selectitem item_id="'.$tabSort[$i].'"'.
-                           ' name="'.$tabDecompose[$tabSort[$i]]['name'].'">'."\n");
+                           ' name="'.$tabDecompose[$tabSort[$i]]['name'].'"/>'."\n");
             $cntout += 2;
             $cntitm++;
             
@@ -503,6 +523,11 @@ include("includes/auto_inc_npc_infos.php");
 $starttime    = microtime(true);
 $tabDecompose = array();
 $tabSort      = array();
+
+// Fehlertext-Konstanten
+$cERRSELECT   = "<font color=red>Check SELECT</font>";
+$cDUPLICATE   = "<font color=red>Check DUPLIKAT</font>";
+$cTEMPLATE    = "<font color=yellow>Check ITEM-TEMPLATE</font>";
 
 echo '
    <tr>
