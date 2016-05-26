@@ -5,13 +5,6 @@
 // Zweck  : erzeugt zu der ItemId die DecomposableItems-Angaben durch Scannen
 //          der zugehörigen Item-Page bei aionpowerbook.com
 // ----------------------------------------------------------------------------
-/*
-include("../includes/inc_globals.php");          // allgemeine Prozeduren
-include("includes/parseItemUrlAPB.php");         // APB-Parser-Funktionen
-include("../phpParse/includes/auto_inc_item_infos.php");
-
-getConfData();
-*/
 
 include("../includes/inc_parseurlitems.php");       // zentrale Funktionen
 
@@ -32,13 +25,15 @@ if (!file_exists("../outputs/gener_output/decomposable_items"))
 // ----------------------------------------------------------------------------
 function scanDecomposableItems($itmid)
 {
+    global $dfile;
+    
     // Parsen aller Items von der URL (aionpowerbook.com)
     // Parameter 2 = true = Datei zum Item erzeugen!
-    $text = getDecomposableLines($itmid,true);
+    $text = getDecomposableLines($itmid,$dfile);
         
     // Ergebnis anzeigen
     logHead("Ergebnis");
-    logSubHead('<br><textarea rows="20" cols="96">'.$text.'</textarea><br>');
+    logSubHead('<br><textarea rows="20" cols="109" style="font-size:11px">'.$text.'</textarea><br>');
 }
 // ----------------------------------------------------------------------------
 //
@@ -47,7 +42,8 @@ function scanDecomposableItems($itmid)
 // ----------------------------------------------------------------------------
 // Übergabe-Parameter (GET) aufbereiten
 // ----------------------------------------------------------------------------
-$itmid =  isset($_GET['itmid']) ? $_GET['itmid'] : "";
+$itmid = isset($_GET['itmid']) ? $_GET['itmid'] : "";
+$dfile = isset($_GET['dfile']) ? true : false;
 // ----------------------------------------------------------------------------
 // globale Definitionen
 // ----------------------------------------------------------------------------
@@ -67,11 +63,6 @@ if ($itmid == "")
    echo "Ohne die notwendige ItemId-Vorgabe kann nichts generiert werden";
 else
 {  
-    /*
-    makeTabINames();
-    makeTabSelect();
-    scandecomposableItems();
-    */
     scanDecomposableItems($itmid);
 }    
 logSubHead("<center><br><a href='javascript:history.back()'>zur&uuml;ck</a></center>");
