@@ -361,6 +361,7 @@ else
     */
     scanDecomposableItems($itmid);
 }    
+logSubHead("<center><br><a href='javascript:history.back()'>zur&uuml;ck</a></center>");
 
 logStop($starttime,true);
 	
