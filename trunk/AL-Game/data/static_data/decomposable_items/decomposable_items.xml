@@ -38321,17 +38321,65 @@
 	<decomposable item_id="188054677" decomposable_name="Squad Leader's Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054678" decomposable_name="Centurion's Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054679" decomposable_name="Tribunus' Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054680" decomposable_name="[Event] Autumn Harvest Present of the Bratty Rabbit"/> <!-- NEW -->
-	<decomposable item_id="188054687" decomposable_name="[Event] Bright Wing Feather of Allure Box"/> <!-- NEW -->
-	<decomposable item_id="188054688" decomposable_name="[Event] Singer's Seduction Set"/> <!-- NEW -->
-	<decomposable item_id="188054690" decomposable_name="Immortal Knight's War Steed"/> <!-- NEW -->
-	<decomposable item_id="188054691" decomposable_name="Immortal Knight's War Steed"/> <!-- NEW -->
-	<decomposable item_id="188054692" decomposable_name="Shugo Gyrocopter"/> <!-- NEW -->
-	<decomposable item_id="188054693" decomposable_name="Shugo Gyrocopter"/> <!-- NEW -->
-	<decomposable item_id="188054694" decomposable_name="Unicorn"/> <!-- NEW -->
-	<decomposable item_id="188054695" decomposable_name="Unicorn"/> <!-- NEW -->
-	<decomposable item_id="188054696" decomposable_name="Executioner's Steed"/> <!-- NEW -->
-	<decomposable item_id="188054697" decomposable_name="Executioner's Steed"/> <!-- NEW -->
+	<decomposable item_id="188054680" decomposable_name="[Event] Autumn Harvest Present of the Bratty Rabbit">
+        <items>
+            <item id="186000422" name="[Event] Songpyon of the Bratty Rabbit" rnd_min="1" rnd_max="4"/>
+            <item id="186000423" name="[Event] Rice Cake of the Bratty Rabbit"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054687" decomposable_name="[Event] Bright Wing Feather of Allure Box">
+        <items>
+            <item id="187000151" name="Bright Wing Feather of Allure"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054688" decomposable_name="[Event] Singer's Seduction Set">
+        <items>
+            <item id="110900863" name="Dignified Korean Costume"/>
+        </items>
+        <items>
+            <item id="125045518" name="Dignified Korean Costume Hat"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054690" decomposable_name="Immortal Knight's War Steed">
+        <items>
+            <item id="190100146" name="Immortal Knight's War Steed"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054691" decomposable_name="Immortal Knight's War Steed">
+        <items>
+            <item id="190100146" name="Immortal Knight's War Steed"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054692" decomposable_name="Shugo Gyrocopter">
+        <items>
+            <item id="190100150" name="Shugo Gyrocopter"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054693" decomposable_name="Shugo Gyrocopter">
+        <items>
+            <item id="190100150" name="Shugo Gyrocopter"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054694" decomposable_name="Unicorn">
+        <items>
+            <item id="190100178" name="Unicorn"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054695" decomposable_name="Unicorn">
+        <items>
+            <item id="190100178" name="Unicorn"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054696" decomposable_name="Executioner's Steed">
+        <items>
+            <item id="190100182" name="Executioner's Steed"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054697" decomposable_name="Executioner's Steed">
+        <items>
+            <item id="190100182" name="Executioner's Steed"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054698" decomposable_name="Snowfeather Board">
         <items>
             <item id="190100108" name="Snowfeather Board"/>

@@ -2578,9 +2578,218 @@
 			<item id="114101726" name="Nasto Legionnaire's Shoes" count="1"/>
 		</items>
 	</decomposable_selectitem>
-	<decomposable_selectitem item_id="188053703" name="Vasharti Legionnaire's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053704" name="Vasharti Brigade General's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053705" name="Vasharti Brigade General's Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053703" name="Vasharti Legionnaire's Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001795" name="Vasharti Legionnaire's Sword" count="1"/>
+            <item id="100101386" name="Vasharti Legionnaire's War Hammer" count="1"/>
+            <item id="100901422" name="Vasharti Legionnaire's Greatsword" count="1"/>
+            <item id="115001825" name="Vasharti Legionnaire's Shield" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001795" name="Vasharti Legionnaire's Sword" count="1"/>
+            <item id="100101386" name="Vasharti Legionnaire's War Hammer" count="1"/>
+            <item id="100201560" name="Vasharti Legionnaire's Dagger" count="1"/>
+            <item id="100901422" name="Vasharti Legionnaire's Greatsword" count="1"/>
+            <item id="101301311" name="Vasharti Legionnaire's Polearm" count="1"/>
+            <item id="101701406" name="Vasharti Legionnaire's Bow" count="1"/>
+            <item id="115001825" name="Vasharti Legionnaire's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100001795" name="Vasharti Legionnaire's Sword" count="1"/>
+            <item id="100201560" name="Vasharti Legionnaire's Dagger" count="1"/>
+            <item id="101701406" name="Vasharti Legionnaire's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100001795" name="Vasharti Legionnaire's Sword" count="1"/>
+            <item id="100201560" name="Vasharti Legionnaire's Dagger" count="1"/>
+            <item id="101701406" name="Vasharti Legionnaire's Bow" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801264" name="Vasharti Legionnaire's Pistol" count="1"/>
+            <item id="101901171" name="Vasharti Legionnaire's Aethercannon" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101385" name="Vasharti Legionnaire's Mace" count="1"/>
+            <item id="100101386" name="Vasharti Legionnaire's War Hammer" count="1"/>
+            <item id="101501400" name="Vasharti Legionnaire's Staff" count="1"/>
+            <item id="101501401" name="Vasharti Legionnaire's Cane" count="1"/>
+            <item id="115001825" name="Vasharti Legionnaire's Shield" count="1"/>
+            <item id="115001826" name="Vasharti Legionnaire's Scale Shield" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101385" name="Vasharti Legionnaire's Mace" count="1"/>
+            <item id="100101386" name="Vasharti Legionnaire's War Hammer" count="1"/>
+            <item id="101501400" name="Vasharti Legionnaire's Staff" count="1"/>
+            <item id="101501401" name="Vasharti Legionnaire's Cane" count="1"/>
+            <item id="115001825" name="Vasharti Legionnaire's Shield" count="1"/>
+            <item id="115001826" name="Vasharti Legionnaire's Scale Shield" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101107" name="Vasharti Legionnaire's Cipher-Blade" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501353" name="Vasharti Legionnaire's Orb" count="1"/>
+            <item id="100601470" name="Vasharti Legionnaire's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501353" name="Vasharti Legionnaire's Orb" count="1"/>
+            <item id="100601470" name="Vasharti Legionnaire's Spellbook" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001290" name="Vasharti Legionnaire's Harp" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053704" name="Vasharti Brigade General's Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100101388" name="Vasharti Brigade General's War Hammer" count="1"/>
+            <item id="100901423" name="Vasharti Brigade General's Greatsword" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100101388" name="Vasharti Brigade General's War Hammer" count="1"/>
+            <item id="100201561" name="Vasharti Brigade General's Dagger" count="1"/>
+            <item id="100901423" name="Vasharti Brigade General's Greatsword" count="1"/>
+            <item id="101301312" name="Vasharti Brigade General's Polearm" count="1"/>
+            <item id="101701407" name="Vasharti Brigade General's Bow" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100201561" name="Vasharti Brigade General's Dagger" count="1"/>
+            <item id="101701407" name="Vasharti Brigade General's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100201561" name="Vasharti Brigade General's Dagger" count="1"/>
+            <item id="101701407" name="Vasharti Brigade General's Bow" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801265" name="Vasharti Brigade General's Pistol" count="1"/>
+            <item id="101901172" name="Vasharti Brigade General's Aethercannon" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101387" name="Vasharti Brigade General's Mace" count="1"/>
+            <item id="100101388" name="Vasharti Brigade General's War Hammer" count="1"/>
+            <item id="101501402" name="Vasharti Brigade General's Staff" count="1"/>
+            <item id="101501403" name="Vasharti Brigade General's Cane" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+            <item id="115001828" name="Vasharti Brigade General's Scale Shield" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101387" name="Vasharti Brigade General's Mace" count="1"/>
+            <item id="100101388" name="Vasharti Brigade General's War Hammer" count="1"/>
+            <item id="101501402" name="Vasharti Brigade General's Staff" count="1"/>
+            <item id="101501403" name="Vasharti Brigade General's Cane" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+            <item id="115001828" name="Vasharti Brigade General's Scale Shield" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101108" name="Vasharti Brigade General's Cipher-Blade" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501354" name="Vasharti Brigade General's Orb" count="1"/>
+            <item id="100601471" name="Vasharti Brigade General's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501354" name="Vasharti Brigade General's Orb" count="1"/>
+            <item id="100601471" name="Vasharti Brigade General's Spellbook" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001291" name="Vasharti Brigade General's Harp" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053705" name="Vasharti Brigade General's Armor Box">
+        <items player_class="TEMPLAR">
+            <item id="110601665" name="Vasharti Brigade General's Templar Breastplate" count="1"/>
+            <item id="113601611" name="Vasharti Brigade General's Templar Greaves" count="1"/>
+            <item id="111601628" name="Vasharti Brigade General's Templar Gauntlets" count="1"/>
+            <item id="114601618" name="Vasharti Brigade General's Templar Sabatons" count="1"/>
+            <item id="112601610" name="Vasharti Brigade General's Templar Shoulderplates" count="1"/>
+            <item id="125004273" name="Vasharti Brigade General's Templar Plate Helmet" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601666" name="Vasharti Brigade General's Gladiator Breastplate" count="1"/>
+            <item id="113601612" name="Vasharti Brigade General's Gladiator Greaves" count="1"/>
+            <item id="111601629" name="Vasharti Brigade General's Gladiator Gauntlets" count="1"/>
+            <item id="114601619" name="Vasharti Brigade General's Gladiator Sabatons" count="1"/>
+            <item id="112601611" name="Vasharti Brigade General's Gladiator Shoulderplates" count="1"/>
+            <item id="125004274" name="Vasharti Brigade General's Gladiator Plate Helmet" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301871" name="Vasharti Brigade General's Jerkin" count="1"/>
+            <item id="113301840" name="Vasharti Brigade General's Legguards" count="1"/>
+            <item id="111301809" name="Vasharti Brigade General's Vambraces" count="1"/>
+            <item id="114301877" name="Vasharti Brigade General's Boots" count="1"/>
+            <item id="112301748" name="Vasharti Brigade General's Shoulderguards" count="1"/>
+            <item id="125004278" name="Vasharti Brigade General's Hat" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301871" name="Vasharti Brigade General's Jerkin" count="1"/>
+            <item id="113301840" name="Vasharti Brigade General's Legguards" count="1"/>
+            <item id="111301809" name="Vasharti Brigade General's Vambraces" count="1"/>
+            <item id="114301877" name="Vasharti Brigade General's Boots" count="1"/>
+            <item id="112301748" name="Vasharti Brigade General's Shoulderguards" count="1"/>
+            <item id="125004278" name="Vasharti Brigade General's Hat" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301872" name="Vasharti Brigade General's Gunslinger Leather Breastplate" count="1"/>
+            <item id="113301841" name="Vasharti Brigade General's Gunslinger Leather Gaiters" count="1"/>
+            <item id="111301810" name="Vasharti Brigade General's Gunslinger Leather Protective Gloves" count="1"/>
+            <item id="114301878" name="Vasharti Brigade General's Gunslinger Leather Combat Boots" count="1"/>
+            <item id="112301749" name="Vasharti Brigade General's Gunslinger Leather Pauldrons" count="1"/>
+            <item id="125004279" name="Vasharti Brigade General's Gunslinger Leather Helmet" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110551200" name="Vasharti Brigade General's Chanter Hauberk" count="1"/>
+            <item id="113501777" name="Vasharti Brigade General's Chanter Chausses" count="1"/>
+            <item id="111501759" name="Vasharti Brigade General's Chanter Handguards" count="1"/>
+            <item id="114501787" name="Vasharti Brigade General's Chanter Brogans" count="1"/>
+            <item id="112501698" name="Vasharti Brigade General's Chanter Spaulders" count="1"/>
+            <item id="125004275" name="Vasharti Brigade General's Chanter Chain Helm" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551201" name="Vasharti Brigade General's Cleric Hauberk" count="1"/>
+            <item id="113501778" name="Vasharti Brigade General's Cleric Chausses" count="1"/>
+            <item id="111501760" name="Vasharti Brigade General's Cleric Handguards" count="1"/>
+            <item id="114501788" name="Vasharti Brigade General's Cleric Brogans" count="1"/>
+            <item id="112501699" name="Vasharti Brigade General's Cleric Spaulders" count="1"/>
+            <item id="125004276" name="Vasharti Brigade General's Cleric Chain Helm" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551202" name="Vasharti Brigade General's Aethertech Chain Breastplate" count="1"/>
+            <item id="113501779" name="Vasharti Brigade General's Aethertech Chain Gaiters" count="1"/>
+            <item id="111501761" name="Vasharti Brigade General's Aethertech Chain Combat Gloves" count="1"/>
+            <item id="114501789" name="Vasharti Brigade General's Aethertech Chain Combat Boots" count="1"/>
+            <item id="112501700" name="Vasharti Brigade General's Aethertech Chain Spaulders" count="1"/>
+            <item id="125004277" name="Vasharti Brigade General's Aethertech Chain Combat Helmet" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101878" name="Vasharti Brigade General's Jacket" count="1"/>
+            <item id="113101704" name="Vasharti Brigade General's Leggings" count="1"/>
+            <item id="111101693" name="Vasharti Brigade General's Gloves" count="1"/>
+            <item id="114101738" name="Vasharti Brigade General's Shoes" count="1"/>
+            <item id="112101642" name="Vasharti Brigade General's Pauldrons" count="1"/>
+            <item id="125004280" name="Vasharti Brigade General's Cloth Hat" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101878" name="Vasharti Brigade General's Jacket" count="1"/>
+            <item id="113101704" name="Vasharti Brigade General's Leggings" count="1"/>
+            <item id="111101693" name="Vasharti Brigade General's Gloves" count="1"/>
+            <item id="114101738" name="Vasharti Brigade General's Shoes" count="1"/>
+            <item id="112101642" name="Vasharti Brigade General's Pauldrons" count="1"/>
+            <item id="125004280" name="Vasharti Brigade General's Cloth Hat" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101879" name="Vasharti Brigade General's Songweaver Jacket" count="1"/>
+            <item id="113101705" name="Vasharti Brigade General's Songweaver Leggings" count="1"/>
+            <item id="111101694" name="Vasharti Brigade General's Songweaver Gloves" count="1"/>
+            <item id="114101739" name="Vasharti Brigade General's Songweaver Shoes" count="1"/>
+            <item id="112101643" name="Vasharti Brigade General's Songweaver Pauldrons" count="1"/>
+            <item id="125004281" name="Vasharti Brigade General's Songweaver Bandana" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053761" name="Gladiator Greater Stigma Bundle">
 		<items player_class="GLADIATOR">
 			<item id="140001103" name="Sure Strike" count="1"/>
@@ -3244,47 +3453,509 @@
 			<item id="102101124" name="[Event] Bootleg Lunatic Modor's Cipher-Blade" count="1"/>
 		</items>
 	</decomposable_selectitem>
-	<decomposable_selectitem item_id="188053943" name="[Event] Shining Scroll Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053961" name="[Camping] Decorative Wallpaper"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053962" name="[Camping] Decorative Flooring"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053996" name="Emperor Trillirunerk's Feather Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054007" name="Lockbox Key Pouch"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054008" name="Lockbox Key Pouch"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054009" name="Lockbox Key Pouch"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054010" name="Lockbox Key Pouch"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054011" name="Lockbox Key Pouch"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054033" name="[Club] Sealed General Goods Merchant Contract"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054034" name="[Club] Sealed Warehouse Manager Contract"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054037" name="[Event] Engraved Ice Festival Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054038" name="Wave Song Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054039" name="Sea Feast Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054040" name="Jaadis' Fabled Pants Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054041" name="Afrane's Fabled Shoe Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054042" name="Lakshmi's Fabled Gloves Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054043" name="Nimbarka's Fabled Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054045" name="Saraswati's Fabled Shoulder Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054058" name="Anuhart's Fabled Chest Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054059" name="Anuhart's Fabled Shoulders Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054060" name="Marabata's Fabled Ring Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054061" name="Anuhart's Fabled Belt Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054062" name="Fabled Dragon Flame Necklace Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054063" name="Anuhart's Fabled Pants Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054065" name="Anuhart's Fabled Gloves Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054066" name="Anuhart's Fabled Shoes Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054067" name="Dhatra's Fabled Earrings Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053943" name="[Event] Shining Scroll Bundle">
+        <items>
+            <item id="164002011" name="[Event] Greater Running Scroll" count="7"/>
+            <item id="164002010" name="[Event] Greater Courage Scroll" count="7"/>
+            <item id="164002057" name="[Event] Greater Awakening Scroll" count="7"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053961" name="[Camping] Decorative Wallpaper">
+        <items>
+            <item id="171130033" name="Bright Spring Camp Wallpaper" count="1"/>
+            <item id="171130034" name="Fresh Summer Camp Wallpaper" count="1"/>
+            <item id="171130035" name="Breezy Fall Camp Wallpaper" count="1"/>
+            <item id="171130036" name="Cozy Winter Camp Wallpaper" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053962" name="[Camping] Decorative Flooring">
+        <items>
+            <item id="171130037" name="Bright Spring Camp Floor" count="1"/>
+            <item id="171130038" name="Fresh Summer Camp Floor" count="1"/>
+            <item id="171130039" name="Cool Fall Camp Floor" count="1"/>
+            <item id="171130040" name="Cozy Winter Camp Floor" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053996" name="Emperor Trillirunerk's Feather Box">
+        <items>
+            <item id="187060166" name="Trillirunerk's Ice Flame Feather" count="1"/>
+            <item id="187060170" name="Trillirunerk's Blue Flame Feather" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054007" name="Lockbox Key Pouch">
+		<items>
+			<item id="188100210" name="Power Lockbox Key" count="1"/>
+			<item id="188100211" name="Fortune Lockbox Key" count="1"/>
+			<item id="188100212" name="Utility Lockbox Key" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054008" name="Lockbox Key Pouch">
+		<items>
+			<item id="188100216" name="Power Lockbox Key" count="1"/>
+			<item id="188100217" name="Fortune Lockbox Key" count="1"/>
+			<item id="188100218" name="Utility Lockbox Key" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054009" name="Lockbox Key Pouch">
+		<items>
+			<item id="188100222" name="Power Lockbox Key" count="1"/>
+			<item id="188100223" name="Fortune Lockbox Key" count="1"/>
+			<item id="188100224" name="Utility Lockbox Key" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054010" name="Lockbox Key Pouch">
+		<items>
+			<item id="188100228" name="Power Lockbox Key" count="1"/>
+			<item id="188100229" name="Fortune Lockbox Key" count="1"/>
+			<item id="188100230" name="Utility Lockbox Key" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054011" name="Lockbox Key Pouch">
+		<items>
+			<item id="188100234" name="Power Lockbox Key" count="1"/>
+			<item id="188100235" name="Fortune Lockbox Key" count="1"/>
+			<item id="188100236" name="Utility Lockbox Key" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054033" name="[Club] Sealed General Goods Merchant Contract">
+        <items>
+            <item id="170195139" name="[Employment Contract] Dancing General Goods Merchant" count="1" race="ELYOS"/>
+            <item id="170195141" name="[Employment Contract] Friendly General Goods Merchant" count="1" race="ELYOS"/>
+            <item id="170195149" name="[Employment Contract] Dancing General Goods Merchant" count="1" race="ASMODIANS"/>
+            <item id="170195150" name="[Employment Contract] Friendly General Goods Merchant" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054034" name="[Club] Sealed Warehouse Manager Contract">
+        <items>
+            <item id="170195140" name="[Employment Contract] Partying Warehouse Manager" count="1"/>
+            <item id="170195142" name="[Employment Contract] Arrogant Warehouse Manager" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054037" name="[Event] Engraved Ice Festival Box">
+        <items>
+            <item id="188053212" name="[Event] Dragon Lord's Mythic Weapon Chest" count="1"/>
+            <item id="188052319" name="[Event] Dragon Lord's Wing Box" count="1"/>
+            <item id="188052704" name="[Event] Plastic Surgery Ticket Bundle" count="1"/>
+            <item id="166500002" name="Amplification Stone" count="1"/>
+            <item id="188052560" name="Assured Greater Felicitous Socketing Box (Mythic)" count="2"/>
+            <item id="188053786" name="Major Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054038" name="Wave Song Armor Box">
+		<items player_class="GLADIATOR">
+		    <item id="110601700" name="Wave Song Breastplate" count="1"/>
+			<item id="111601663" name="Wave Song Gauntlets" count="1"/>
+			<item id="113601647" name="Wave Song Greaves" count="1"/>
+			<item id="112601645" name="Wave Song Shoulderplates" count="1"/>
+			<item id="114601653" name="Wave Song Sabatons" count="1"/>
+        </items>
+		<items player_class="TEMPLAR">
+			<item id="110601700" name="Wave Song Breastplate" count="1"/>
+			<item id="111601663" name="Wave Song Gauntlets" count="1"/>
+			<item id="113601647" name="Wave Song Greaves" count="1"/>
+			<item id="112601645" name="Wave Song Shoulderplates" count="1"/>
+			<item id="114601653" name="Wave Song Sabatons" count="1"/>
+        </items>
+		<items player_class="RANGER">
+			<item id="110301903" name="Wave Song Jerkin" count="1"/>
+			<item id="113301873" name="Wave Song Breeches" count="1"/>
+			<item id="112301780" name="Wave Song Shoulderguards" count="1"/>
+			<item id="111301841" name="Wave Song Vambraces" count="1"/>
+			<item id="114301909" name="Wave Song Boots" count="1"/>
+        </items>
+		<items player_class="GUNNER">
+			<item id="110301903" name="Wave Song Jerkin" count="1"/>
+			<item id="113301873" name="Wave Song Breeches" count="1"/>
+			<item id="112301780" name="Wave Song Shoulderguards" count="1"/>
+			<item id="111301841" name="Wave Song Vambraces" count="1"/>
+			<item id="114301909" name="Wave Song Boots" count="1"/>
+        </items>
+		<items player_class="ASSASSIN">
+			<item id="110301903" name="Wave Song Jerkin" count="1"/>
+			<item id="113301873" name="Wave Song Breeches" count="1"/>
+			<item id="112301780" name="Wave Song Shoulderguards" count="1"/>
+			<item id="111301841" name="Wave Song Vambraces" count="1"/>
+			<item id="114301909" name="Wave Song Boots" count="1"/>
+        </items>
+		<items player_class="CLERIC">
+			<item id="110551239" name="Wave Song Hauberk" count="1"/>
+			<item id="113501818" name="Wave Song Chausses" count="1"/>
+			<item id="112501735" name="Wave Song Spaulders" count="1"/>
+			<item id="111501798" name="Wave Song Handguards" count="1"/>
+			<item id="114501826" name="Wave Song Brogans" count="1"/>
+        </items>
+		<items player_class="CHANTER">
+			<item id="110551239" name="Wave Song Hauberk" count="1"/>
+			<item id="113501818" name="Wave Song Chausses" count="1"/>
+			<item id="112501735" name="Wave Song Spaulders" count="1"/>
+			<item id="111501798" name="Wave Song Handguards" count="1"/>
+			<item id="114501826" name="Wave Song Brogans" count="1"/>
+        </items>
+		<items player_class="RIDER">
+			<item id="110551239" name="Wave Song Hauberk" count="1"/>
+			<item id="113501818" name="Wave Song Chausses" count="1"/>
+			<item id="112501735" name="Wave Song Spaulders" count="1"/>
+			<item id="111501798" name="Wave Song Handguards" count="1"/>
+			<item id="114501826" name="Wave Song Brogans" count="1"/>
+        </items>
+		<items player_class="SORCERER">
+			<item id="110101909" name="Wave Song Tunic" count="1"/>
+			<item id="113101736" name="Wave Song Leggings" count="1"/>
+			<item id="112101671" name="Wave Song Pauldrons" count="1"/>
+			<item id="111101724" name="Wave Song Gloves" count="1"/>
+			<item id="114101769" name="Wave Song Shoes" count="1"/>
+        </items>
+		<items player_class="SPIRIT_MASTER">
+			<item id="110101909" name="Wave Song Tunic" count="1"/>
+			<item id="113101736" name="Wave Song Leggings" count="1"/>
+			<item id="112101671" name="Wave Song Pauldrons" count="1"/>
+			<item id="111101724" name="Wave Song Gloves" count="1"/>
+			<item id="114101769" name="Wave Song Shoes" count="1"/>
+        </items>
+		<items player_class="BARD">
+			<item id="110101909" name="Wave Song Tunic" count="1"/>
+			<item id="113101736" name="Wave Song Leggings" count="1"/>
+			<item id="112101671" name="Wave Song Pauldrons" count="1"/>
+			<item id="111101724" name="Wave Song Gloves" count="1"/>
+			<item id="114101769" name="Wave Song Shoes" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054039" name="Sea Feast Armor Box">
+		<items player_class="GLADIATOR">
+		    <item id="110601701" name="Sea Feast Breastplate" count="1"/>
+			<item id="111601664" name="Sea Feast Gauntlets" count="1"/>
+			<item id="113601648" name="Sea Feast Greaves" count="1"/>
+			<item id="112601646" name="Sea Feast Shoulderplates" count="1"/>
+			<item id="114601654" name="Sea Feast Sabatons" count="1"/>
+        </items>
+		<items player_class="TEMPLAR">
+			<item id="110601701" name="Sea Feast Breastplate" count="1"/>
+			<item id="111601664" name="Sea Feast Gauntlets" count="1"/>
+			<item id="113601648" name="Sea Feast Greaves" count="1"/>
+			<item id="112601646" name="Sea Feast Shoulderplates" count="1"/>
+			<item id="114601654" name="Sea Feast Sabatons" count="1"/>
+        </items>
+		<items player_class="RANGER">
+			<item id="110301904" name="Sea Feast Jerkin" count="1"/>
+			<item id="113301874" name="Sea Feast Breeches" count="1"/>
+			<item id="112301781" name="Sea Feast Shoulderguards" count="1"/>
+			<item id="111301842" name="Sea Feast Vambraces" count="1"/>
+			<item id="114301910" name="Sea Feast Boots" count="1"/>
+        </items>
+		<items player_class="GUNNER">
+			<item id="110301904" name="Sea Feast Jerkin" count="1"/>
+			<item id="113301874" name="Sea Feast Breeches" count="1"/>
+			<item id="112301781" name="Sea Feast Shoulderguards" count="1"/>
+			<item id="111301842" name="Sea Feast Vambraces" count="1"/>
+			<item id="114301910" name="Sea Feast Boots" count="1"/>
+        </items>
+		<items player_class="ASSASSIN">
+			<item id="110301904" name="Sea Feast Jerkin" count="1"/>
+			<item id="113301874" name="Sea Feast Breeches" count="1"/>
+			<item id="112301781" name="Sea Feast Shoulderguards" count="1"/>
+			<item id="111301842" name="Sea Feast Vambraces" count="1"/>
+			<item id="114301910" name="Sea Feast Boots" count="1"/>
+        </items>
+		<items player_class="CLERIC">
+			<item id="110551240" name="Sea Feast Hauberk" count="1"/>
+			<item id="113501819" name="Sea Feast Chausses" count="1"/>
+			<item id="112501737" name="Shadow Soul's Spaulders (14 days)" count="1"/>
+			<item id="111501799" name="Sea Feast Handguards" count="1"/>
+			<item id="114501827" name="Sea Feast Brogans" count="1"/>
+        </items>
+		<items player_class="CHANTER">
+			<item id="110551240" name="Sea Feast Hauberk" count="1"/>
+			<item id="113501819" name="Sea Feast Chausses" count="1"/>
+			<item id="112501737" name="Shadow Soul's Spaulders (14 days)" count="1"/>
+			<item id="111501799" name="Sea Feast Handguards" count="1"/>
+			<item id="114501827" name="Sea Feast Brogans" count="1"/>
+        </items>
+		<items player_class="RIDER">
+			<item id="110551240" name="Sea Feast Hauberk" count="1"/>
+			<item id="113501819" name="Sea Feast Chausses" count="1"/>
+			<item id="112501737" name="Shadow Soul's Spaulders (14 days)" count="1"/>
+			<item id="111501799" name="Sea Feast Handguards" count="1"/>
+			<item id="114501827" name="Sea Feast Brogans" count="1"/>
+        </items>
+		<items player_class="SORCERER">
+			<item id="110101910" name="Sea Feast Tunic" count="1"/>
+			<item id="113101737" name="Sea Feast Leggings" count="1"/>
+			<item id="112101672" name="Sea Feast Pauldrons" count="1"/>
+			<item id="111101725" name="Sea Feast Gloves" count="1"/>
+			<item id="114101770" name="Sea Feast Shoes" count="1"/>
+        </items>
+		<items player_class="SPIRIT_MASTER">
+			<item id="110101910" name="Sea Feast Tunic" count="1"/>
+			<item id="113101737" name="Sea Feast Leggings" count="1"/>
+			<item id="112101672" name="Sea Feast Pauldrons" count="1"/>
+			<item id="111101725" name="Sea Feast Gloves" count="1"/>
+			<item id="114101770" name="Sea Feast Shoes" count="1"/>
+        </items>
+		<items player_class="BARD">
+			<item id="110101910" name="Sea Feast Tunic" count="1"/>
+			<item id="113101737" name="Sea Feast Leggings" count="1"/>
+			<item id="112101672" name="Sea Feast Pauldrons" count="1"/>
+			<item id="111101725" name="Sea Feast Gloves" count="1"/>
+			<item id="114101770" name="Sea Feast Shoes" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054040" name="Jaadis' Fabled Pants Box">
+        <items>
+            <item id="113100662" name="Sunrise Leggings" count="1"/>
+            <item id="113300678" name="Breeches of Dark Dusk" count="1"/>
+            <item id="113500651" name="Deep Abyss Chausses" count="1"/>
+            <item id="113600626" name="Ice Black Greaves" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054041" name="Afrane's Fabled Shoe Box">
+        <items>
+            <item id="114100680" name="Sunrise Shoes" count="1"/>
+            <item id="114300693" name="Boots of Dark Dusk" count="1"/>
+            <item id="114500659" name="Deep Abyss Brogans" count="1"/>
+            <item id="114600617" name="Ice Black Sabatons" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054042" name="Lakshmi's Fabled Gloves Box">
+        <items>
+            <item id="111100653" name="Sunrise Gloves" count="1"/>
+            <item id="111300655" name="Vambrace of Dark Dusk" count="1"/>
+            <item id="111500642" name="Deep Abyss Handguards" count="1"/>
+            <item id="111600632" name="Ice Black Gauntlets" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054043" name="Nimbarka's Fabled Armor Box">
+        <items>
+            <item id="110100734" name="Sunrise Tunic" count="1"/>
+            <item id="110300696" name="Jerkin of Dark Dusk" count="1"/>
+            <item id="110500673" name="Deep Abyss Hauberk" count="1"/>
+            <item id="110600659" name="Ice Black Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054045" name="Saraswati's Fabled Shoulder Box">
+        <items>
+            <item id="112100614" name="Sunrise Pauldrons" count="1"/>
+            <item id="112300614" name="Shoulderguards of Dark Dusk" count="1"/>
+            <item id="112500602" name="Deep Abyss Spaulders" count="1"/>
+            <item id="112600610" name="Ice Black Shoulderplates" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054058" name="Anuhart's Fabled Chest Box">
+        <items>
+            <item id="110600869" name="Anuhart Gladiator's Breastplate" count="1"/>
+            <item id="110600870" name="Anuhart Templar's Breastplate" count="1"/>
+            <item id="110300917" name="Anuhart Assassin's Jerkin" count="1"/>
+            <item id="110300918" name="Anuhart Ranger's Jerkin" count="1"/>
+            <item id="110500885" name="Anuhart Cleric's Hauberk" count="1"/>
+            <item id="110500886" name="Anuhart Chanter's Hauberk" count="1"/>
+            <item id="110100972" name="Anuhart Sorcerer's Tunic" count="1"/>
+            <item id="110100973" name="Anuhart Spiritmaster's Tunic" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054059" name="Anuhart's Fabled Shoulders Box">
+        <items>
+            <item id="112600819" name="Anuhart Gladiator's Shoulderplates" count="1"/>
+            <item id="112600820" name="Anuhart Templar's Shoulderplates" count="1"/>
+            <item id="112300817" name="Anuhart Assassin's Shoulderguards" count="1"/>
+            <item id="112300818" name="Anuhart Ranger's Shoulderguards" count="1"/>
+            <item id="112500808" name="Anuhart Cleric's Spaulders" count="1"/>
+            <item id="112500809" name="Anuhart Chanter's Spaulders" count="1"/>
+            <item id="112100823" name="Anuhart Sorcerer's Pauldrons" count="1"/>
+            <item id="112100824" name="Anuhart Spiritmaster's Pauldrons" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054060" name="Marabata's Fabled Ring Box">
+        <items>
+            <item id="122001039" name="Noah's Tears" count="1"/>
+            <item id="122001040" name="Elder's Tears" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054061" name="Anuhart's Fabled Belt Box">
+        <items>
+            <item id="123000929" name="Brigade General Anuhart's Leather Belt" count="1"/>
+            <item id="123000930" name="Brigade General Anuhart's Sash" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054062" name="Fabled Dragon Flame Necklace Box">
+        <items>
+            <item id="121000820" name="Dragon Flame Diamond Necklace" count="1"/>
+            <item id="121000821" name="Dragon Flame Sapphire Necklace" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054063" name="Anuhart's Fabled Pants Box">
+        <items>
+            <item id="113600834" name="Anuhart Gladiator's Greaves" count="1"/>
+            <item id="113600835" name="Anuhart Templar's Greaves" count="1"/>
+            <item id="113300893" name="Anuhart Assassin's Breeches" count="1"/>
+            <item id="113300894" name="Anuhart Ranger's Breeches" count="1"/>
+            <item id="113500859" name="Anuhart Cleric's Chausses" count="1"/>
+            <item id="113500860" name="Anuhart Chanter's Chausses" count="1"/>
+            <item id="113100876" name="Anuhart Sorcerer's Leggings" count="1"/>
+            <item id="113100877" name="Anuhart Spiritmaster's Leggings" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054065" name="Anuhart's Fabled Gloves Box">
+        <items>
+            <item id="111600845" name="Anuhart Gladiator's Gauntlets" count="1"/>
+            <item id="111600846" name="Anuhart Templar's Gauntlets" count="1"/>
+            <item id="111300867" name="Anuhart Assassin's Vambrace" count="1"/>
+            <item id="111300868" name="Anuhart Ranger's Vambrace" count="1"/>
+            <item id="111500857" name="Anuhart Cleric's Handguards" count="1"/>
+            <item id="111500858" name="Anuhart Chanter's Handguards" count="1"/>
+            <item id="111100866" name="Anuhart Sorcerer's Gloves" count="1"/>
+            <item id="111100867" name="Anuhart Spiritmaster's Gloves" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054066" name="Anuhart's Fabled Shoes Box">
+        <items>
+            <item id="114600828" name="Anuhart Gladiator's Sabatons" count="1"/>
+            <item id="114600829" name="Anuhart Templar's Sabatons" count="1"/>
+            <item id="114300926" name="Anuhart Assassin's Boots" count="1"/>
+            <item id="114300927" name="Anuhart Ranger's Boots" count="1"/>
+            <item id="114500869" name="Anuhart Cleric's Brogans" count="1"/>
+            <item id="114500870" name="Anuhart Chanter's Brogans" count="1"/>
+            <item id="114100901" name="Anuhart Sorcerer's Shoes" count="1"/>
+            <item id="114100902" name="Anuhart Spiritmaster's Shoes" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054067" name="Dhatra's Fabled Earrings Box">
+        <items>
+            <item id="120000902" name="Earrings of Ascending" count="1"/>
+            <item id="120000903" name="Atmach's Earrings" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054088" name="Specialized server_item replacement_selection type_test02"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054096" name="[Camping] Sealed General Goods Merchant Contract"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054097" name="[Camping] Sealed Warehouse Manager Contract"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054112" name="Wave Song Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054113" name="Sea Feast Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054156" name="Elegant Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054157" name="Greater Elegant Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054158" name="Major Elegant Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054163" name="Specialized Audron Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054164" name="Greater Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054173" name="[Event] Specialized Empyrean Lord's Feather Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054196" name="Enhanced Modor's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054197" name="Enhanced Hyperion's Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054156" name="Elegant Stigma Bundle">
+        <items>
+            <item id="188054123" name="Gladiator Stigma Bundle" count="1"/>
+            <item id="188054124" name="Templar Stigma Bundle" count="1"/>
+            <item id="188054125" name="Assassin Stigma Bundle" count="1"/>
+            <item id="188054126" name="Marksman Stigma Bundle" count="1"/>
+            <item id="188054127" name="Sorcerer Stigma Bundle" count="1"/>
+            <item id="188054128" name="Spiritmaster Stigma Bundle" count="1"/>
+            <item id="188054129" name="Cleric Stigma Bundle" count="1"/>
+            <item id="188054130" name="Chanter Stigma Bundle" count="1"/>
+            <item id="188054131" name="Gunslinger Stigma Bundle" count="1"/>
+            <item id="188054132" name="Aethertech Stigma Bundle" count="1"/>
+            <item id="188054133" name="Songweaver Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054157" name="Greater Elegant Stigma Bundle">
+        <items>
+            <item id="188054134" name="Gladiator Greater Stigma Bundle" count="1"/>
+            <item id="188054135" name="Templar Greater Stigma Bundle" count="1"/>
+            <item id="188054136" name="Assassin Greater Stigma Bundle" count="1"/>
+            <item id="188054137" name="Marksman Greater Stigma Bundle" count="1"/>
+            <item id="188054138" name="Sorcerer Greater Stigma Bundle" count="1"/>
+            <item id="188054139" name="Spiritmaster Greater Stigma Bundle" count="1"/>
+            <item id="188054140" name="Cleric Greater Stigma Bundle" count="1"/>
+            <item id="188054141" name="Chanter Greater Stigma Bundle" count="1"/>
+            <item id="188054142" name="Gunslinger Greater Stigma Bundle" count="1"/>
+            <item id="188054143" name="Aethertech Greater Stigma Bundle" count="1"/>
+            <item id="188054144" name="Songweaver Greater Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054158" name="Major Elegant Stigma Bundle">
+        <items>
+            <item id="188054145" name="Gladiator Major Stigma Bundle" count="1"/>
+            <item id="188054146" name="Templar Major Stigma Bundle" count="1"/>
+            <item id="188054147" name="Assassin Major Stigma Bundle" count="1"/>
+            <item id="188054148" name="Marksman Major Stigma Bundle" count="1"/>
+            <item id="188054149" name="Sorcerer Major Stigma Bundle" count="1"/>
+            <item id="188054150" name="Spiritmaster Major Stigma Bundle" count="1"/>
+            <item id="188054151" name="Cleric Major Stigma Bundle" count="1"/>
+            <item id="188054152" name="Chanter Major Stigma Bundle" count="1"/>
+            <item id="188054153" name="Gunslinger Major Stigma Bundle" count="1"/>
+            <item id="188054154" name="Aethertech Major Stigma Bundle" count="1"/>
+            <item id="188054155" name="Songweaver Major Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054163" name="Specialized Audron Weapon Box">
+        <items>
+            <item id="100001631" name="[Event] Audron Sword" count="1"/>
+            <item id="100101255" name="[Event] Audron Mace" count="1"/>
+            <item id="100201430" name="[Event] Audron Dagger" count="1"/>
+            <item id="100901269" name="[Event] Audron Greatsword" count="1"/>
+            <item id="101301190" name="[Event] Audron Polearm" count="1"/>
+            <item id="101701294" name="[Event] Audron Bow" count="1"/>
+            <item id="115001675" name="[Event] Audron Shield" count="1"/>
+            <item id="101501279" name="[Event] Audron Staff" count="1"/>
+            <item id="100501247" name="[Event] Audron Orb" count="1"/>
+            <item id="100601347" name="[Event] Audron Spellbook" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054164" name="Greater Stigma Bundle">
+        <items>
+            <item id="188054134" name="Gladiator Greater Stigma Bundle" count="1"/>
+            <item id="188054135" name="Templar Greater Stigma Bundle" count="1"/>
+            <item id="188054136" name="Assassin Greater Stigma Bundle" count="1"/>
+            <item id="188054137" name="Marksman Greater Stigma Bundle" count="1"/>
+            <item id="188054138" name="Sorcerer Greater Stigma Bundle" count="1"/>
+            <item id="188054139" name="Spiritmaster Greater Stigma Bundle" count="1"/>
+            <item id="188054140" name="Cleric Greater Stigma Bundle" count="1"/>
+            <item id="188054141" name="Chanter Greater Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054173" name="[Event] Specialized Empyrean Lord's Feather Box">
+        <items>
+            <item id="187100023" name="Specialized Kaisinel's Plume: Attack" count="1" race="ELYOS"/>
+            <item id="187100024" name="Specialized Kaisinel's Plume: Magic Boosting Power" count="1" race="ELYOS"/>
+            <item id="187100027" name="Specialized Kaisinel's Plume: Physical Critical Hit" count="1" race="ELYOS"/>
+            <item id="187100028" name="Specialized Kaisinel's Plume: Magical Accuracy" count="1" race="ELYOS"/>
+            <item id="187100025" name="Specialized Markutan's Plume: Attack" count="1" race="ASMODIANS"/>
+            <item id="187100026" name="Specialized Markutan's Plume: Magic Boosting Power" count="1" race="ASMODIANS"/>
+            <item id="187100029" name="Specialized Markutan's Plume: Physical Critical Hit" count="1" race="ASMODIANS"/>
+            <item id="187100030" name="Specialized Markutan's Plume: Magical Accuracy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054196" name="Enhanced Modor's Weapon Box">
+        <items>
+            <item id="100001685" name="Pure Lunatic Modor's Sword" count="1"/>
+            <item id="100101284" name="Pure Lunatic Modor's Mace" count="1"/>
+            <item id="100101285" name="Pure Lunatic Modor's Warhammer" count="1"/>
+            <item id="100201458" name="Pure Lunatic Modor's Dagger" count="1"/>
+            <item id="100501271" name="Pure Lunatic Modor's Orb" count="1"/>
+            <item id="100601381" name="Pure Lunatic Modor's Spellbook" count="1"/>
+            <item id="100901313" name="Pure Lunatic Modor's Greatsword" count="1"/>
+            <item id="101301218" name="Pure Lunatic Modor's Polearm" count="1"/>
+            <item id="101501307" name="Pure Lunatic Modor's Staff" count="1"/>
+            <item id="101501308" name="Pure Lunatic Modor's Cane" count="1"/>
+            <item id="101701322" name="Pure Lunatic Modor's Bow" count="1"/>
+            <item id="101801173" name="Pure Lunatic Modor's Pistol" count="1"/>
+            <item id="101901084" name="Pure Lunatic Modor's Aethercannon" count="1"/>
+            <item id="102001200" name="Pure Lunatic Modor's Harp" count="1"/>
+            <item id="102101006" name="Pure Lunatic Modor's Cipher-Blade" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054197" name="Enhanced Hyperion's Weapon Box">
+        <items>
+            <item id="100001688" name="Pure Incensed Hyperion's Sword" count="1"/>
+            <item id="100101287" name="Pure Incensed Hyperion's Mace" count="1"/>
+            <item id="100501273" name="Pure Incensed Hyperion's Orb" count="1"/>
+            <item id="100601383" name="Pure Incensed Hyperion's Spellbook" count="1"/>
+            <item id="100901314" name="Pure Incensed Hyperion's Greatsword" count="1"/>
+            <item id="101301219" name="Pure Incensed Hyperion's Polearm" count="1"/>
+            <item id="101501310" name="Pure Incensed Hyperion's Staff" count="1"/>
+            <item id="101701324" name="Pure Incensed Hyperion's Bow" count="1"/>
+            <item id="101901085" name="Pure Incensed Hyperion's Aethercannon" count="1"/>
+            <item id="102001202" name="Pure Incensed Hyperion's Harp" count="1"/>
+            <item id="102101008" name="Pure Incensed Hyperion's Cipher-Blade" count="1"/>
+            <item id="100001686" name="Pure Enraged Hyperion's Sword" count="1"/>
+            <item id="100001687" name="Pure Enraged Hyperion's Sword" count="1"/>
+            <item id="100101286" name="Pure Enraged Hyperion's Mace" count="1"/>
+            <item id="100201459" name="Pure Enraged Hyperion's Dagger" count="1"/>
+            <item id="100501272" name="Pure Enraged Hyperion's Orb" count="1"/>
+            <item id="100601382" name="Pure Enraged Hyperion's Spellbook" count="1"/>
+            <item id="101501309" name="Pure Enraged Hyperion's Staff" count="1"/>
+            <item id="101701323" name="Pure Enraged Hyperion's Bow" count="1"/>
+            <item id="101801174" name="Pure Enraged Hyperion's Pistol" count="1"/>
+            <item id="102001201" name="Pure Enraged Hyperion's Harp" count="1"/>
+            <item id="102101007" name="Pure Enraged Hyperion's Cipher-Blade" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054198" name="Blessing Box">
 		<items>
 			<item id="164002116" name="[Event] Rx: Accelerox" count="10"/>
@@ -3396,12 +4067,43 @@
 	<decomposable_selectitem item_id="188054641" name="[Event] Katalamyze Equipment Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054642" name="[Event] Daevanion Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054643" name="[Event] Daevanion Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054644" name="[Event] Kunax Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054644" name="[Event] Kunax Weapon Box">
+        <items>
+            <item id="100001683" name="Kunax's Sword" count="1"/>
+            <item id="100101282" name="Kunax's Mace" count="1"/>
+            <item id="100201456" name="Kunax's Dagger" count="1"/>
+            <item id="100501269" name="Kunax's Orb" count="1"/>
+            <item id="100601379" name="Kunax's Spellbook" count="1"/>
+            <item id="100901306" name="Kunax's Greatsword" count="1"/>
+            <item id="101301216" name="Kunax's Polearm" count="1"/>
+            <item id="101501305" name="Kunax's Staff" count="1"/>
+            <item id="101701320" name="Kunax's Bow" count="1"/>
+            <item id="101801171" name="Kunax's Pistol" count="1"/>
+            <item id="101901082" name="Kunax's Aethercannon" count="1"/>
+            <item id="102001198" name="Kunax's Harp" count="1"/>
+            <item id="102100970" name="Kunax's Cipher-Blade" count="1"/>
+            <item id="115001703" name="Kunax's Shield" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054645" name="[Event] Kunax Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054646" name="[Event] Katalamyze Soulstone Bundle"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054649" name="Elite Centurion's Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054650" name="[Stamp] Agent Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054651" name="Stigma Set Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054651" name="Stigma Set Box">
+        <items>
+            <item id="188054652" name="Gladiator Stigma Set Box" count="1"/>
+            <item id="188054653" name="Templar Stigma Set Box" count="1"/>
+            <item id="188054654" name="Assassin Stigma Set Box" count="1"/>
+            <item id="188054655" name="Ranger Stigma Set Box" count="1"/>
+            <item id="188054656" name="Sorcerer Stigma Set Box" count="1"/>
+            <item id="188054657" name="Spiritmaster Stigma Set Box" count="1"/>
+            <item id="188054658" name="Cleric Stigma Set Box" count="1"/>
+            <item id="188054659" name="Chanter Stigma Set Box" count="1"/>
+            <item id="188054660" name="Gunslinger Stigma Set Box" count="1"/>
+            <item id="188054661" name="Aethertech Stigma Set Box" count="1"/>
+            <item id="188054662" name="Songweaver Stigma Set Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054665" name="Squad Leader's Leggings Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054666" name="Squad Leader's Pauldrons Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054667" name="Squad Leader's Gloves Armor Box"/> <!-- NEW -->
@@ -3410,10 +4112,54 @@
 	<decomposable_selectitem item_id="188054670" name="Centurion's Pauldrons Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054671" name="Centurion's Gloves Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054672" name="Centurion's Shoes Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054673" name="Tribunus' Leggings Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054674" name="Tribunus' Pauldrons Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054675" name="Tribunus' Gloves Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054676" name="Tribunus' Shoes Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054673" name="Tribunus' Leggings Armor Box">
+        <items>
+            <item id="113100760" name="Guardian Tribunus' Leggings" count="1" race="ELYOS"/>
+            <item id="113300777" name="Guardian Tribunus' Breeches" count="1" race="ELYOS"/>
+            <item id="113500750" name="Guardian Tribunus' Chausses" count="1" race="ELYOS"/>
+            <item id="113600724" name="Guardian Tribunus' Greaves" count="1" race="ELYOS"/>
+            <item id="113100761" name="Archon Tribunus' Leggings" count="1" race="ASMODIANS"/>
+            <item id="113300778" name="Archon Tribunus' Breeches" count="1" race="ASMODIANS"/>
+            <item id="113500751" name="Archon Tribunus' Chausses" count="1" race="ASMODIANS"/>
+            <item id="113600725" name="Archon Tribunus' Greaves" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054674" name="Tribunus' Pauldrons Armor Box">
+        <items>
+            <item id="112100711" name="Guardian Tribunus' Pauldrons" count="1" race="ELYOS"/>
+            <item id="112300711" name="Guardian Tribunus' Shoulderguards" count="1" race="ELYOS"/>
+            <item id="112500699" name="Guardian Tribunus' Spaulders" count="1" race="ELYOS"/>
+            <item id="112600707" name="Guardian Tribunus' Shoulderplates" count="1" race="ELYOS"/>
+            <item id="112100712" name="Archon Tribunus' Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="112300712" name="Archon Tribunus' Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="112500700" name="Archon Tribunus' Spaulders" count="1" race="ASMODIANS"/>
+            <item id="112600708" name="Archon Tribunus' Shoulderplates" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054675" name="Tribunus' Gloves Armor Box">
+        <items>
+            <item id="111100750" name="Guardian Tribunus' Gloves" count="1" race="ELYOS"/>
+            <item id="111300752" name="Guardian Tribunus' Vambrace" count="1" race="ELYOS"/>
+            <item id="111500739" name="Guardian Tribunus' Handguards" count="1" race="ELYOS"/>
+            <item id="111600731" name="Guardian Tribunus' Gauntlets" count="1" race="ELYOS"/>
+            <item id="111100751" name="Archon Tribunus' Gloves" count="1" race="ASMODIANS"/>
+            <item id="111300753" name="Archon Tribunus' Vambrace" count="1" race="ASMODIANS"/>
+            <item id="111500740" name="Archon Tribunus' Handguards" count="1" race="ASMODIANS"/>
+            <item id="111600732" name="Archon Tribunus' Gauntlets" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054676" name="Tribunus' Shoes Armor Box">
+        <items>
+            <item id="114100779" name="Guardian Tribunus' Shoes" count="1" race="ELYOS"/>
+            <item id="114300792" name="Guardian Tribunus' Boots" count="1" race="ELYOS"/>
+            <item id="114500758" name="Guardian Tribunus' Brogans" count="1" race="ELYOS"/>
+            <item id="114600718" name="Guardian Tribunus' Sabatons" count="1" race="ELYOS"/>
+            <item id="114100780" name="Archon Tribunus' Shoes" count="1" race="ASMODIANS"/>
+            <item id="114300793" name="Archon Tribunus' Boots" count="1" race="ASMODIANS"/>
+            <item id="114500759" name="Archon Tribunus' Brogans" count="1" race="ASMODIANS"/>
+            <item id="114600719" name="Archon Tribunus' Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054721" name="Japan Lucky Game Box Option 1"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054722" name="Japan Lucky Game Box Option 2"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054723" name="Japan Lucky Game Box Option 3"/> <!-- NEW -->
