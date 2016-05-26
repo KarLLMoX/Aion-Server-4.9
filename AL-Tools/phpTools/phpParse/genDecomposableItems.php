@@ -78,6 +78,54 @@ function addNewDecomposeItems(&$tabSvn,$deco)
     logLine("Anzahl neue Items",$cntnew);
 }
 // ----------------------------------------------------------------------------
+// sofern ein Name vorhanden ist, wird diser grundsätzlich mit dem aktuellen
+// Namen aus der item_templates.xml-Datei überschrieben
+// ----------------------------------------------------------------------------
+function getNewItemName($line)
+{
+    global $tabDecompose, $cntfndname, $cntupdname, $cntokname;
+    
+    $id = $oname = "";
+    
+    // alte Werte aus der Zeile ermitteln
+    if     (stripos($line,"<decomposable ")           !== false 
+        &&  stripos($line," decomposable_name=")      !== false)
+    {
+        $id     = getKeyValue("item_id",$line);
+        $oname  = getKeyValue("decomposable_name",$line);        
+    }
+    elseif (stripos($line,"<decomposable_selectitem") !== false
+        && stripos($line," name=")                    !== false)
+    {
+        $id     = getKeyValue("item_id",$line);
+        $oname  = getKeyValue("name",$line);        
+    }
+    elseif (stripos($line,"<item ")                    !== false
+        &&  stripos($line," name=")                    !== false)
+    {
+        $id     = getKeyValue("id",$line);
+        $oname  = getKeyValue("name",$line);     
+    }
+    
+    // wenn Angaben gefunden, dann neue Namen einsetzen!
+    if ($id != "" && $oname != "")
+    {
+        if (isset($tabDecompose[$id]))
+        {
+            $cntfndname++;
+            
+            if ($oname != $tabDecompose[$id]['name'])
+            {
+                $line = str_replace($oname,$tabDecompose[$id]['name'],$line);
+                $cntupdname++;
+            }
+            else
+                $cntokname++;
+        }
+    }
+    return $line;
+}
+// ----------------------------------------------------------------------------
 //
 //                         S C A N - F U N K T I O N E N
 //
@@ -131,12 +179,13 @@ function scanSvnItemTemplates()
             $deco = "S";
         elseif (stripos($line,"</item_template>") !== false)
         {
-            if ($deco != "")
-            {
-                $tabDecompose[$id]['name'] = $name;
-                $tabDecompose[$id]['deco'] = $deco;
-                $cntitm++;
-            }
+            // wegen der Namensersetzung für alle Items werden auch alle Items
+            // in der internen Tabelle benötigt!
+            // if ($deco "= "")
+            $tabDecompose[$id]['name'] = $name;
+            $tabDecompose[$id]['deco'] = $deco;
+            $cntitm++;
+            
             $id = $name = $deco = "";
         }
     }
@@ -154,7 +203,7 @@ function scanSvnItemTemplates()
 // ----------------------------------------------------------------------------
 function sortSvnDecomposableItems()
 {
-    global $pathsvn, $tabDecompose, $domix;
+    global $pathsvn, $tabDecompose, $domix, $cntfndname, $cntupdname, $cntokname;
     global $cERRSELECT, $cTEMPLATE, $cDUPLICATE;
     
     logHead("Scanne und sortiere die SVN-Datei: decomposable_items.xml");
@@ -180,6 +229,7 @@ function sortSvnDecomposableItems()
     $ind    = 0;
     $wind   = 0;
     $wait   = false;
+    $cntfndname = $cntupdname = $cntokname = 0;
     
     flush();
     
@@ -188,71 +238,78 @@ function sortSvnDecomposableItems()
         $line = rtrim(fgets($hdlsvn));
         $cntles++;
         
-        if (stripos($line,"<decomposable ") !== false)
-        {
-            $id  = getkeyValue("item_id",$line);
-            $ind = 0;
-            
-            // in der Item-Templates als SELECT markiert?
-            if (isset($tabDecompose[$id]))
+        // START/ENDE XML-Tags ignorieren
+        if (stripos($line,"<?xml ")             === false
+        &&  stripos($line,"decomposable_items") === false)
+        {            
+            if (stripos($line,"<decomposable ") !== false)
             {
-                if ($tabDecompose[$id]['deco'] == "S")
-                    logLine($cERRSELECT,$id." als SELECT markiert, aber in dieser Datei definiert!");
-            }
-            else
-                logLine($cTEMPLATE,$id." = nicht in der item_templates.xml");
+                $id  = getkeyValue("item_id",$line);
+                $ind = 0;
                 
-            if (isset($tabSvn[$id]))
-            {
-                $ind = count($tabSvn[$id]);
-                $cntdup++;
-                
-                logLine($cDUPLICATE,"Item = ".$id." = Mehrfach vorhanden");
-            }
-            else
-                $cntitm++;
-        }
-        
-        if ($id != "")
-        {
-            // sind noch Zeilen in der Warteschlange?
-            if ($wait)
-            {
-                $dowait = count($tabWait);
-                
-                for ($w=0;$w<$dowait;$w++)
+                // in der Item-Templates als SELECT markiert?
+                if (isset($tabDecompose[$id]))
                 {
-                    $tabSvn[$id][$ind] = $tabWait[$w];
-                    $ind++;
+                    if ($tabDecompose[$id]['deco'] == "S")
+                        logLine($cERRSELECT,$id." als SELECT markiert, aber in dieser Datei definiert!");
                 }
-                
-                $wait    = false;
-                $wind    = 0;
-                $tabWait = array();
+                else
+                    logLine($cTEMPLATE,$id." = nicht in der item_templates.xml");
+                    
+                if (isset($tabSvn[$id]))
+                {
+                    $ind = count($tabSvn[$id]);
+                    $cntdup++;
+                    
+                    logLine($cDUPLICATE,"Item = ".$id." = Mehrfach vorhanden");
+                }
+                else
+                    $cntitm++;
             }
-            $tabSvn[$id][$ind] = $line;
-            $ind++;
-        }
-        else
-        {
-            if (stripos($line,"<?xml ")             === false
-            &&  stripos($line,"decomposable_items") === false)  // START und ENDE
+            
+            if ($id != "")
+            {
+                // sind noch Zeilen in der Warteschlange?
+                if ($wait)
+                {
+                    $dowait = count($tabWait);
+                    
+                    for ($w=0;$w<$dowait;$w++)
+                    {
+                        $tabSvn[$id][$ind] = $tabWait[$w];
+                        $ind++;
+                    }
+                    
+                    $wait    = false;
+                    $wind    = 0;
+                    $tabWait = array();
+                }
+                $line = getNewItemName($line);
+                
+                $tabSvn[$id][$ind] = getNewItemName($line);
+                $ind++;
+            }
+            else
             {
                 $tabWait[$wind] = $line;
                 $wind++;
                 
                 $wait = true;
             }
+            
+            if (stripos($line,"</decomposable>") !== false)
+                $id = "";
         }
-        
-        if (stripos($line,"</decomposable>") !== false)
-            $id = "";
     }
     fclose($hdlsvn);
     
     logLine("Anzahl Zeilen gelesen",$cntles);
     logLine("Anzahl Items gefunden",$cntitm);
     logLine("Anzahl doppelte Items",$cntdup);
+    logLine("Item-Namens&auml;nderungen","(werden aus der item_template.xml genommen)");
+    logLine("- Anzahl relevante Items",$cntfndname);
+    logLine("- Anzahl ge&auml;ndert ",$cntupdname);
+    logLine("- Anzahl identisch",$cntokname);
     
     if ($domix == "J")
     {
@@ -307,7 +364,7 @@ function sortSvnDecomposableItems()
 // ----------------------------------------------------------------------------
 function sortSvnDecomposableSelectItems()
 {
-    global $pathsvn, $tabDecompose, $domix;
+    global $pathsvn, $tabDecompose, $domix, $cntfndname, $cntupdname, $cntokname;
     global $cERRSELECT, $cTEMPLATE, $cDUPLICATE;
     
     logHead("Scanne und sortiere die SVN-Datei: decomposable_selectitems.xml");
@@ -333,99 +390,123 @@ function sortSvnDecomposableSelectItems()
     $ind    = 0;
     $wind   = 0;
     $wait   = false;
+    $cntfndname = $cntupdname = $cntokname = 0;
     
     while (!feof($hdlsvn))
     {
         $line = rtrim(fgets($hdlsvn));
         $cntles++;
         
-        if (stripos($line,"<decomposable_selectitem ") !== false)
+        // die START/ENDE XML-Tags ignorieren!
+        if (stripos($line,"<?xml ")                   === false
+        &&  stripos($line,"decomposable_selectitems") === false)  
         {
-            $id  = getkeyValue("item_id",$line);
-            $ind = 0;
-            
-            // wenn das Attribut Name noch nicht vorhanden ist, dann wird es 
-            // hier ergänzt!
-            if (stripos($line,' name="') === false)
+            if (stripos($line,"<decomposable_selectitem ") !== false)
             {
-                if (isset($tabDecompose[$id]))
+                $id  = getkeyValue("item_id",$line);
+                $ind = 0;
+                
+                // wenn das Attribut Name noch nicht vorhanden ist, dann wird es 
+                // hier ergänzt!
+                if (stripos($line,' name="') === false)
                 {
-                    $ntxt = ' name="'.$tabDecompose[$id]['name'].'"';
-                    $line = str_replace(">",$ntxt.">",$line);
-                    
-                    // sofern vorhanden, Kommentarzeile vor dem Item entfernen
-                    if ($wait)
+                    if (isset($tabDecompose[$id]))
                     {
-                        if (count($tabWait) == 1  && $wind == 1
-                        &&  stripos($tabWait[0],"<!-- ") !== false)
+                        $ntxt = ' name="'.$tabDecompose[$id]['name'].'"';
+                        $line = str_replace(">",$ntxt.">",$line);
+                        
+                        // sofern vorhanden, Kommentarzeile vor dem Item entfernen
+                        if ($wait)
                         {
-                            $tabWait = array();
-                            $wait    = false;
-                            $wind    = 0;
+                            if (count($tabWait) == 1  && $wind == 1
+                            &&  stripos($tabWait[0],"<!-- ") !== false)
+                            {
+                                $tabWait = array();
+                                $wait    = false;
+                                $wind    = 0;
+                            }
                         }
                     }
                 }
-            }
-            // in der Item-Templates als SELECT markiert?
-            if (isset($tabDecompose[$id]))
-            {
-                if ($tabDecompose[$id]['deco'] != "S")
-                    logLine($cERRSELECT,$id." nicht als SELECT markiert, aber in dieser Datei definiert!");
-            }
-            else
-                logLine($cTEMPLATE,$id." = nicht in der item_templates.xml");
-                        
-            if (isset($tabSvn[$id])) 
-            {
-                $ind = count($tabSvn[$id]);
-                $cntdup++;
-                
-                logLine($cDUPLICATE,"Item = ".$id." mehrfach vorhanden ( evtl. andere Klasse? )");
-            }
-            else
-                $cntitm++;
-        }
-        
-        if ($id != "")
-        {
-            // sind noch Zeilen in der Warteschlange?
-            if ($wait)
-            {
-                $dowait = count($tabWait);
-                
-                for ($w=0;$w<$dowait;$w++)
+                // in der Item-Templates als SELECT markiert?
+                if (isset($tabDecompose[$id]))
                 {
-                    $tabSvn[$id][$ind] = $tabWait[$w];
-                    $ind++;
+                    if ($tabDecompose[$id]['deco'] != "S")
+                        logLine($cERRSELECT,$id." nicht als SELECT markiert, aber in dieser Datei definiert!");
                 }
-                
-                $wait    = false;
-                $wind    = 0;
-                $tabWait = array();
+                else
+                    logLine($cTEMPLATE,$id." = nicht in der item_templates.xml");
+                            
+                if (isset($tabSvn[$id])) 
+                {
+                    $ind = count($tabSvn[$id]);
+                    $cntdup++;
+                    
+                    logLine($cDUPLICATE,"Item = ".$id." mehrfach vorhanden ( evtl. andere Klasse? )");
+                }
+                else
+                    $cntitm++;
             }
-            $tabSvn[$id][$ind] = $line;
-            $ind++;
-        }
-        else
-        {
-            if (stripos($line,"<?xml ")                   === false
-            &&  stripos($line,"decomposable_selectitems") === false)  // START und ENDE
+            
+            // wenn das Item noch kein name-Attribut besitzt, dann wird es hier ergänzt!
+            // (nur wenn es auch in der item_template vorhanden ist)
+            if (stripos($line,"<item ") !== false
+            &&  stripos($line," id=")   !== false
+            &&  stripos($line," name=") === false)
+            {
+                $xid   = getKeyValue("id",$line);
+                
+                if (isset($tabDecompose[$xid]))
+                {
+                    $ipos = stripos($line," id=") + 15;
+                    $inam = ' name="'.$tabDecompose[$xid]['name'].'"';
+                    $line = substr($line,0,$ipos).$inam.substr($line,$ipos);
+                    // evtl. Kommentar entfernen!
+                    $line = substr($line,0,stripos($line,">") + 1);   
+                }        
+            } 
+            
+            if ($id != "")
+            {
+                // sind noch Zeilen in der Warteschlange?
+                if ($wait)
+                {
+                    $dowait = count($tabWait);
+                    
+                    for ($w=0;$w<$dowait;$w++)
+                    {
+                        $tabSvn[$id][$ind] = $tabWait[$w];
+                        $ind++;
+                    }
+                    
+                    $wait    = false;
+                    $wind    = 0;
+                    $tabWait = array();
+                }
+                $tabSvn[$id][$ind] = getNewItemName($line);
+                $ind++;
+            }
+            else
             {
                 $tabWait[$wind] = $line;
                 $wind++;
                 
                 $wait = true;
             }
+            
+            if (stripos($line,"</decomposable_selectitem>") !== false)
+                $id = "";
         }
-        
-        if (stripos($line,"</decomposable_selectitem>") !== false)
-            $id = "";
     }
     fclose($hdlsvn);
     
     logLine("Anzahl Zeilen gelesen",$cntles);
     logLine("Anzahl Items gefunden",$cntitm);  
-    logLine("Anzahl doppelte Items",$cntdup);   
+    logLine("Anzahl doppelte Items",$cntdup); 
+    logLine("Item-Namens&auml;nderungen","(werden aus der item_template.xml genommen)");
+    logLine("- Anzahl relevante Items",$cntfndname);
+    logLine("- Anzahl ge&auml;ndert ",$cntupdname);
+    logLine("- Anzahl identisch",$cntokname);  
     
     if ($domix == "J")
     {
@@ -592,6 +673,9 @@ include("includes/auto_inc_npc_infos.php");
 $starttime    = microtime(true);
 $tabDecompose = array();
 $tabSort      = array();
+$cntfndname   = 0;
+$cntupdname   = 0;
+$cntokname    = 0;
 
 // Fehlertext-Konstanten
 $cERRSELECT   = "<font color=red>Check SELECT</font>";
