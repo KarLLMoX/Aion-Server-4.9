@@ -5,7 +5,9 @@
   </title>
   <link rel='stylesheet' type='text/css' href='../includes/aioneutools.css'>
 </head>
-
+<?PHP
+$dofile = isset($_GET['dfile']) ? "J" : "N";
+?>
 <body style="background-color:#000055;color:silver;padding:0px;">
 <center>
 <div id="body" style='width:800px;padding:0px;'>
@@ -21,7 +23,9 @@
   <div width=100%>
 <h1 style="color:orange">Bitte notwendige Informationen einf&uuml;gen</h1>
 <form name="edit" method="GET" action="scanitem_apb.php">
- <br><br><br>
+ <br>
+ <input type="checkbox" name="dfile" value="DFIL" <?PHP echo ($dofile == "J") ? "checked" : "";?>"> XML-Datei erzeugen (markiert = JA)
+ <br><br>
  <span style="color:cyan;font-size:16px;padding-right:15px;padding-left:15px;">ItemId</span>
  <input type="text" name="itmid" value="" style="width:70px;">
  <br><br><br><br>
