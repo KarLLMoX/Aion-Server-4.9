@@ -565,7 +565,7 @@ function makeDecomposableSelectItems($itmid,$dofile,$doprot)
     fwrite($hdlout,'    <decomposable_selectitem item_id="'.$itmid.'" name="'.
            getItemName($itmid).'">'."\n");
     
-    $oclass = ""; 
+    $oclass = "?"; 
     $doende = false;    
     
     for ($i=0;$i<$maxitems;$i++)
@@ -573,7 +573,14 @@ function makeDecomposableSelectItems($itmid,$dofile,$doprot)
         if ($tabitems[$i]['class'] != $oclass)    
         {        
             $oclass = $tabitems[$i]['class'];
-            $lout = '        <items player_class="'.$oclass.'">';
+            
+            if ($tabitems[$i]['class'] != "")
+            {
+                $lout = '        <items player_class="'.$oclass.'">';
+            }
+            else
+                $lout = '        <items>'; 
+        
             fwrite($hdlout,$lout."\n");
         }
         
