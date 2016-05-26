@@ -578,13 +578,14 @@ function makeDecomposableSelectItems($itmid,$dofile,$doprot)
         }
         
         // Decomposable Item ausgeben
-        $lout  = '            <item id="'.$tabitems[$i]['item'].'" count="'.$tabitems[$i]['count'].'"';
+        $lout  = '            <item id="'.$tabitems[$i]['item'].'" '.
+                 'name="'.getItemName($tabitems[$i]['item']).'" '.
+                 'count="'.$tabitems[$i]['count'].'"';
         
         if ($tabitems[$i]['race'] != "")
             $lout .= ' race="'.$tabitems[$i]['race'].'"';
-                    
-        $lout .= '/>  <!-- '.getItemName($tabitems[$i]['item']).' -->';
-        fwrite($hdlout,$lout."\n");
+                     
+        fwrite($hdlout,$lout.'/>'."\n");
         
         // Gruppenwechsel prüfen!
         if (($i + 1) == $maxitems)
