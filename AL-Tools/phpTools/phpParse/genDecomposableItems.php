@@ -64,10 +64,10 @@ function addNewDecomposeItems(&$tabSvn,$deco)
         {
             if ($deco == "S")
                 $nline = '    <decomposable_selectitem item_id="'.$key.'"'.
-                           ' name="'.$tabDecompose[$key]['name'].'"/>     <!--  NEW  -->';
+                           ' name="'.$tabDecompose[$key]['name'].'"/> <!-- NEW -->';
             else
                 $nline = '    <decomposable item_id="'.$key.'" decomposable_name="'.
-                           $tabDecompose[$key]['name'].'"/>     <!--  NEW -->';
+                           $tabDecompose[$key]['name'].'"/> <!-- NEW -->';
                 
             $tabSvn[$key][0] = $nline;
             $cntnew++;
