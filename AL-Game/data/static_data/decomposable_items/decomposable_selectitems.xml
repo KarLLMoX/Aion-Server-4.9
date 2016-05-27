@@ -3381,16 +3381,249 @@
 			<item id="114501818" name="Bootleg Lunatic Modor's Aethertech Magic Brogans" count="1"/>
 		</items>
 	</decomposable_selectitem>
-	<decomposable_selectitem item_id="188053882" name="Bootleg Divine Plate Armor Crate"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053883" name="Bootleg Divine Plate Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053884" name="Bootleg Divine Chain Crate"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053882" name="Bootleg Divine Plate Armor Crate">
+        <items player_class="GLADIATOR">
+            <item id="110601683" name="Bootleg Custodian's Divine Breastplate" count="1" race="ELYOS"/>
+            <item id="111601646" name="Bootleg Custodian's Divine Gauntlets" count="1" race="ELYOS"/>
+            <item id="112601628" name="Bootleg Custodian's Divine Shoulderplates" count="1" race="ELYOS"/>
+            <item id="113601629" name="Bootleg Custodian's Divine Greaves" count="1" race="ELYOS"/>
+            <item id="114601636" name="Bootleg Custodian's Divine Sabatons" count="1" race="ELYOS"/>
+            <item id="110601684" name="Bootleg Shepherd's Divine Breastplate" count="1" race="ASMODIANS"/>
+            <item id="111601647" name="Bootleg Shepherd's Divine Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="112601629" name="Bootleg Shepherd's Divine Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="113601630" name="Bootleg Shepherd's Divine Greaves" count="1" race="ASMODIANS"/>
+            <item id="114601637" name="Bootleg Shepherd's Divine Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="110601683" name="Bootleg Custodian's Divine Breastplate" count="1" race="ELYOS"/>
+            <item id="111601646" name="Bootleg Custodian's Divine Gauntlets" count="1" race="ELYOS"/>
+            <item id="112601628" name="Bootleg Custodian's Divine Shoulderplates" count="1" race="ELYOS"/>
+            <item id="113601629" name="Bootleg Custodian's Divine Greaves" count="1" race="ELYOS"/>
+            <item id="114601636" name="Bootleg Custodian's Divine Sabatons" count="1" race="ELYOS"/>
+            <item id="110601684" name="Bootleg Shepherd's Divine Breastplate" count="1" race="ASMODIANS"/>
+            <item id="111601647" name="Bootleg Shepherd's Divine Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="112601629" name="Bootleg Shepherd's Divine Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="113601630" name="Bootleg Shepherd's Divine Greaves" count="1" race="ASMODIANS"/>
+            <item id="114601637" name="Bootleg Shepherd's Divine Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053883" name="Bootleg Divine Plate Armor Box">
+        <items player_class="GLADIATOR">
+            <item id="110601685" name="Bootleg Emissary's Divine Breastplate" count="1" race="ELYOS"/>
+            <item id="111601648" name="Bootleg Emissary's Divine Gauntlets" count="1" race="ELYOS"/>
+            <item id="112601630" name="Bootleg Emissary's Divine Shoulderplates" count="1" race="ELYOS"/>
+            <item id="113601631" name="Bootleg Emissary's Divine Greaves" count="1" race="ELYOS"/>
+            <item id="114601638" name="Bootleg Emissary's Divine Sabatons" count="1" race="ELYOS"/>
+            <item id="110601686" name="Bootleg Ambassador's Divine Breastplate" count="1" race="ASMODIANS"/>
+            <item id="111601649" name="Bootleg Ambassador's Divine Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="112601631" name="Bootleg Ambassador's Divine Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="113601632" name="Bootleg Ambassador's Divine Greaves" count="1" race="ASMODIANS"/>
+            <item id="114601639" name="Bootleg Ambassador's Divine Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="110601685" name="Bootleg Emissary's Divine Breastplate" count="1" race="ELYOS"/>
+            <item id="111601648" name="Bootleg Emissary's Divine Gauntlets" count="1" race="ELYOS"/>
+            <item id="112601630" name="Bootleg Emissary's Divine Shoulderplates" count="1" race="ELYOS"/>
+            <item id="113601631" name="Bootleg Emissary's Divine Greaves" count="1" race="ELYOS"/>
+            <item id="114601638" name="Bootleg Emissary's Divine Sabatons" count="1" race="ELYOS"/>
+            <item id="110601686" name="Bootleg Ambassador's Divine Breastplate" count="1" race="ASMODIANS"/>
+            <item id="111601649" name="Bootleg Ambassador's Divine Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="112601631" name="Bootleg Ambassador's Divine Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="113601632" name="Bootleg Ambassador's Divine Greaves" count="1" race="ASMODIANS"/>
+            <item id="114601639" name="Bootleg Ambassador's Divine Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053884" name="Bootleg Divine Chain Crate">
+        <items player_class="CHANTER">
+            <item id="110551225" name="Bootleg Custodian's Divine Hauberk" count="1" race="ELYOS"/>
+            <item id="111501784" name="Bootleg Custodian's Divine Handguards" count="1" race="ELYOS"/>
+            <item id="112501723" name="Bootleg Custodian's Divine Spaulders" count="1" race="ELYOS"/>
+            <item id="113501802" name="Bootleg Custodian's Divine Chausses" count="1" race="ELYOS"/>
+            <item id="114501812" name="Bootleg Custodian's Divine Brogans" count="1" race="ELYOS"/>
+            <item id="110551226" name="Bootleg Shepherd's Divine Hauberk" count="1" race="ASMODIANS"/>
+            <item id="111501785" name="Bootleg Shepherd's Divine Handguards" count="1" race="ASMODIANS"/>
+            <item id="112501724" name="Bootleg Shepherd's Divine Spaulders" count="1" race="ASMODIANS"/>
+            <item id="113501803" name="Bootleg Shepherd's Divine Chausses" count="1" race="ASMODIANS"/>
+            <item id="114501813" name="Bootleg Shepherd's Divine Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551225" name="Bootleg Custodian's Divine Hauberk" count="1" race="ELYOS"/>
+            <item id="111501784" name="Bootleg Custodian's Divine Handguards" count="1" race="ELYOS"/>
+            <item id="112501723" name="Bootleg Custodian's Divine Spaulders" count="1" race="ELYOS"/>
+            <item id="113501802" name="Bootleg Custodian's Divine Chausses" count="1" race="ELYOS"/>
+            <item id="114501812" name="Bootleg Custodian's Divine Brogans" count="1" race="ELYOS"/>
+            <item id="110551226" name="Bootleg Shepherd's Divine Hauberk" count="1" race="ASMODIANS"/>
+            <item id="111501785" name="Bootleg Shepherd's Divine Handguards" count="1" race="ASMODIANS"/>
+            <item id="112501724" name="Bootleg Shepherd's Divine Spaulders" count="1" race="ASMODIANS"/>
+            <item id="113501803" name="Bootleg Shepherd's Divine Chausses" count="1" race="ASMODIANS"/>
+            <item id="114501813" name="Bootleg Shepherd's Divine Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551225" name="Bootleg Custodian's Divine Hauberk" count="1" race="ELYOS"/>
+            <item id="111501784" name="Bootleg Custodian's Divine Handguards" count="1" race="ELYOS"/>
+            <item id="112501723" name="Bootleg Custodian's Divine Spaulders" count="1" race="ELYOS"/>
+            <item id="113501802" name="Bootleg Custodian's Divine Chausses" count="1" race="ELYOS"/>
+            <item id="114501812" name="Bootleg Custodian's Divine Brogans" count="1" race="ELYOS"/>
+            <item id="110551226" name="Bootleg Shepherd's Divine Hauberk" count="1" race="ASMODIANS"/>
+            <item id="111501785" name="Bootleg Shepherd's Divine Handguards" count="1" race="ASMODIANS"/>
+            <item id="112501724" name="Bootleg Shepherd's Divine Spaulders" count="1" race="ASMODIANS"/>
+            <item id="113501803" name="Bootleg Shepherd's Divine Chausses" count="1" race="ASMODIANS"/>
+            <item id="114501813" name="Bootleg Shepherd's Divine Brogans" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053885" name="Bootleg Divine Chain Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053886" name="Bootleg Divine Leather Armor Crate"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053887" name="Bootleg Divine Leather Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053888" name="Bootleg Divine Cloth Armor Crate"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053889" name="Bootleg Divine Cloth Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053890" name="Dazzling Daevanion Weapon Skin Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053891" name="[Event] Bootleg Commander's Divine Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053890" name="Dazzling Daevanion Weapon Skin Box">
+        <items player_class="SORCERER">
+            <item id="100501364" name="Dazzling Daevanion Orb Skin" count="1"/>
+            <item id="100601481" name="Dazzling Daevanion Spellbook Skin" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501364" name="Dazzling Daevanion Orb Skin" count="1"/>
+            <item id="100601481" name="Dazzling Daevanion Spellbook Skin" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100001814" name="Dazzling Daevanion Sword Skin" count="1"/>
+            <item id="100201574" name="Dazzling Daevanion Dagger Skin" count="1"/>
+            <item id="101701419" name="Dazzling Daevanion Bow Skin" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100001814" name="Dazzling Daevanion Sword Skin" count="1"/>
+            <item id="100201574" name="Dazzling Daevanion Dagger Skin" count="1"/>
+            <item id="101701419" name="Dazzling Daevanion Bow Skin" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101400" name="Dazzling Daevanion Mace Skin" count="1"/>
+            <item id="101501417" name="Dazzling Daevanion Staff Skin" count="1"/>
+            <item id="115001841" name="Dazzling Daevanion Shield Skin" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101400" name="Dazzling Daevanion Mace Skin" count="1"/>
+            <item id="101501417" name="Dazzling Daevanion Staff Skin" count="1"/>
+            <item id="115001841" name="Dazzling Daevanion Shield Skin" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001814" name="Dazzling Daevanion Sword Skin" count="1"/>
+            <item id="100901434" name="Dazzling Daevanion Greatsword Skin" count="1"/>
+            <item id="115001841" name="Dazzling Daevanion Shield Skin" count="1"/>
+            <item id="100101400" name="Dazzling Daevanion Mace Skin" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001814" name="Dazzling Daevanion Sword Skin" count="1"/>
+            <item id="100201574" name="Dazzling Daevanion Dagger Skin" count="1"/>
+            <item id="100901434" name="Dazzling Daevanion Greatsword Skin" count="1"/>
+            <item id="101701419" name="Dazzling Daevanion Bow Skin" count="1"/>
+            <item id="101301324" name="Dazzling Daevanion Polearm Skin" count="1"/>
+            <item id="100101400" name="Dazzling Daevanion Mace Skin" count="1"/>
+            <item id="115001841" name="Dazzling Daevanion Shield Skin" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801274" name="Dazzling Daevanion Pistol Skin" count="1"/>
+            <item id="101901180" name="Dazzling Daevanion Aethercannon Skin" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001301" name="Dazzling Daevanion Harp Skin" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101118" name="Dazzling Daevanion Cipher-Blade Skin" count="1"/>
+            <item id="101801274" name="Dazzling Daevanion Pistol Skin" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053891" name="[Event] Bootleg Commander's Divine Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201578" name="[Event] Bootleg Custodian's Poniard" count="1" race="ELYOS"/>
+            <item id="100001818" name="[Event] Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="100101405" name="[Event] Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="100901440" name="[Event] Bootleg Custodian's Claymore" count="1" race="ELYOS"/>
+            <item id="101301329" name="[Event] Bootleg Custodian's Glaive" count="1" race="ELYOS"/>
+            <item id="101701423" name="[Event] Bootleg Custodian's Flatbow" count="1" race="ELYOS"/>
+            <item id="115001848" name="[Event] Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="100201579" name="[Event] Bootleg Shepherd's Poniard" count="1" race="ASMODIANS"/>
+            <item id="100001819" name="[Event] Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="100101406" name="[Event] Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="100901441" name="[Event] Bootleg Shepherd's Claymore" count="1" race="ASMODIANS"/>
+            <item id="101301330" name="[Event] Bootleg Shepherd's Glaive" count="1" race="ASMODIANS"/>
+            <item id="101701424" name="[Event] Bootleg Shepherd's Flatbow" count="1" race="ASMODIANS"/>
+            <item id="115001850" name="[Event] Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001818" name="[Event] Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="100101405" name="[Event] Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="100901440" name="[Event] Bootleg Custodian's Claymore" count="1" race="ELYOS"/>
+            <item id="115001848" name="[Event] Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="100001819" name="[Event] Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="100101406" name="[Event] Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="100901441" name="[Event] Bootleg Shepherd's Claymore" count="1" race="ASMODIANS"/>
+            <item id="115001850" name="[Event] Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201578" name="[Event] Bootleg Custodian's Poniard" count="1" race="ELYOS"/>
+            <item id="100001818" name="[Event] Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="101701423" name="[Event] Bootleg Custodian's Flatbow" count="1" race="ELYOS"/>
+            <item id="100201579" name="[Event] Bootleg Shepherd's Poniard" count="1" race="ASMODIANS"/>
+            <item id="100001819" name="[Event] Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="101701424" name="[Event] Bootleg Shepherd's Flatbow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201578" name="[Event] Bootleg Custodian's Poniard" count="1" race="ELYOS"/>
+            <item id="100001818" name="[Event] Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="101701423" name="[Event] Bootleg Custodian's Flatbow" count="1" race="ELYOS"/>
+            <item id="100201579" name="[Event] Bootleg Shepherd's Poniard" count="1" race="ASMODIANS"/>
+            <item id="100001819" name="[Event] Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="101701424" name="[Event] Bootleg Shepherd's Flatbow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101405" name="[Event] Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="101501422" name="[Event] Bootleg Custodian's Shakujo" count="1" race="ELYOS"/>
+            <item id="115001848" name="[Event] Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="115001849" name="[Event] Bootleg Custodian's Divine Protective Shield" count="1" race="ELYOS"/>
+            <item id="100101406" name="[Event] Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="101501423" name="[Event] Bootleg Shepherd's Shakujo" count="1" race="ASMODIANS"/>
+            <item id="115001850" name="[Event] Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+            <item id="115001851" name="[Event] Bootleg Shepherd's Divine Protective Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101405" name="[Event] Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="101501422" name="[Event] Bootleg Custodian's Shakujo" count="1" race="ELYOS"/>
+            <item id="115001848" name="[Event] Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="115001849" name="[Event] Bootleg Custodian's Divine Protective Shield" count="1" race="ELYOS"/>
+            <item id="100101406" name="[Event] Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="101501423" name="[Event] Bootleg Shepherd's Shakujo" count="1" race="ASMODIANS"/>
+            <item id="115001850" name="[Event] Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+            <item id="115001851" name="[Event] Bootleg Shepherd's Divine Protective Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501368" name="[Event] Bootleg Custodian's Globe" count="1" race="ELYOS"/>
+            <item id="100601485" name="[Event] Bootleg Custodian's Grimoire" count="1" race="ELYOS"/>
+            <item id="100501369" name="[Event] Bootleg Shepherd's Globe" count="1" race="ASMODIANS"/>
+            <item id="100601486" name="[Event] Bootleg Shepherd's Grimoire" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501368" name="[Event] Bootleg Custodian's Globe" count="1" race="ELYOS"/>
+            <item id="100601485" name="[Event] Bootleg Custodian's Grimoire" count="1" race="ELYOS"/>
+            <item id="100501369" name="[Event] Bootleg Shepherd's Globe" count="1" race="ASMODIANS"/>
+            <item id="100601486" name="[Event] Bootleg Shepherd's Grimoire" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801278" name="[Event] Bootleg Custodian's Peacemaker" count="1" race="ELYOS"/>
+            <item id="101901184" name="[Event] Bootleg Custodian's Aetherpulse" count="1" race="ELYOS"/>
+            <item id="101801279" name="[Event] Bootleg Shepherd's Peacemaker" count="1" race="ASMODIANS"/>
+            <item id="101901185" name="[Event] Bootleg Shepherd's Aetherpulse" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001305" name="[Event] Bootleg Custodian's Lyra" count="1" race="ELYOS"/>
+            <item id="102001306" name="[Event] Bootleg Shepherd's Lyra" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101122" name="[Event] Bootleg Custodian's Axial" count="1" race="ELYOS"/>
+            <item id="101801278" name="[Event] Bootleg Custodian's Peacemaker" count="1" race="ELYOS"/>
+            <item id="102101123" name="[Event] Bootleg Shepherd's Axial" count="1" race="ASMODIANS"/>
+            <item id="101801279" name="[Event] Bootleg Shepherd's Peacemaker" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053892" name="[Event] Bootleg Modor's Weapon Box">
 		<items player_class="GLADIATOR">
 			<item id="100001820" name="[Event] Bootleg Lunatic Modor's Sword" count="1"/>
@@ -3965,11 +4198,64 @@
 			<item id="164002120" name="[Event/Static] Rx: Mojocycline" count="10"/>
 		</items>
 	</decomposable_selectitem>
-	<decomposable_selectitem item_id="188054213" name="Decoded Book Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054214" name="Decoded Book Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054237" name="Iron Wall Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054238" name="Iron Wall Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054239" name="Iron Wall Helm Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054213" name="Decoded Book Box">
+        <items>
+            <item id="188100264" name="First Decoded Chapter" count="1"/>
+            <item id="188100265" name="Second Decoded Chapter" count="1"/>
+            <item id="188100266" name="Third Decoded Chapter" count="1"/>
+            <item id="188100267" name="Fourth Decoded Chapter" count="1"/>
+            <item id="188100268" name="Fifth Decoded Chapter" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054214" name="Decoded Book Box">
+        <items>
+            <item id="188100269" name="First Decoded Chapter" count="1"/>
+            <item id="188100270" name="Second Decoded Chapter" count="1"/>
+            <item id="188100271" name="Third Decoded Chapter" count="1"/>
+            <item id="188100272" name="Fourth Decoded Chapter" count="1"/>
+            <item id="188100273" name="Fifth Decoded Chapter" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054237" name="Iron Wall Weapon Box">
+        <items>
+            <item id="100501213" name="Bastion Aggressor Firm Orb" count="1"/>
+            <item id="100901235" name="Bastion Aggressor Firm Greatsword" count="1"/>
+            <item id="100601305" name="Bastion Aggressor Firm Spellbook" count="1"/>
+            <item id="100001585" name="Bastion Aggressor Firm Sword" count="1"/>
+            <item id="100201393" name="Bastion Aggressor Firm Dagger" count="1"/>
+            <item id="102001095" name="Bastion Aggressor Firm Harp" count="1"/>
+            <item id="101301161" name="Bastion Aggressor Firm Polearm" count="1"/>
+            <item id="101701264" name="Bastion Aggressor Firm Bow" count="1"/>
+            <item id="101801070" name="Bastion Aggressor Firm Pistol" count="1"/>
+            <item id="102100847" name="Bastion Defender Firm Cipher-Blade" count="1"/>
+            <item id="101901021" name="Bastion Aggressor Firm Aethercannon" count="1"/>
+            <item id="100101223" name="Bastion Aggressor Firm Mace" count="1"/>
+            <item id="101501249" name="Bastion Aggressor Firm Staff" count="1"/>
+            <item id="115001631" name="Bastion Aggressor Firm Battle Shield" count="1"/>
+            <item id="115001633" name="Bastion Protector Firm Scale Shield" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054238" name="Iron Wall Armor Box">
+        <items>
+            <item id="188054240" name="Iron Wall Cloth Armor Box" count="1"/>
+            <item id="188054241" name="Iron Wall Leather Armor Box" count="1"/>
+            <item id="188054242" name="Iron Wall Chain Armor Box" count="1"/>
+            <item id="188054243" name="Iron Wall Plate Armor Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054239" name="Iron Wall Helm Box">
+        <items>
+            <item id="125003783" name="Bastion Defender Firm Magic Helm" count="1"/>
+            <item id="125003749" name="Bastion Defender Firm Chain Hood" count="1"/>
+            <item id="125003751" name="Bastion Defender Firm Headband" count="1"/>
+            <item id="125003748" name="Bastion Defender Firm Helm" count="1"/>
+            <item id="125003750" name="Bastion Defender Firm Hat" count="1"/>
+            <item id="125003757" name="Bastion Protector Firm Chain Hood" count="1"/>
+            <item id="125003759" name="Bastion Protector Firm Headband" count="1"/>
+            <item id="125003756" name="Bastion Protector Firm Helm" count="1"/>
+            <item id="125003758" name="Bastion Protector Firm Hat" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054240" name="Iron Wall Cloth Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054241" name="Iron Wall Leather Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054242" name="Iron Wall Chain Armor Box"/> <!-- NEW -->
@@ -3977,9 +4263,38 @@
 	<decomposable_selectitem item_id="188054247" name="[Event] Delegate's Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054254" name="[Event] Nether Lotan's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054256" name="Pure Lunatic Modor's Weapon Crux Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054263" name="Rike's Idian Support Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054264" name="Skuldon's Idian Support Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054327" name="Daru Thief Transformation Candy Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054263" name="Rike's Idian Support Box">
+        <items>
+            <item id="166050090" name="Triumphal Idian: Physical Attack" count="1"/>
+            <item id="166050091" name="Triumphal Idian: Magical Attack" count="1"/>
+            <item id="166050092" name="Triumphal Idian: Physical Defense" count="1"/>
+            <item id="166050093" name="Triumphal Idian: Magical Defense" count="1"/>
+            <item id="166050094" name="Triumphal Idian: Support" count="1"/>
+            <item id="166050095" name="Triumphal Idian: Resist" count="1"/>
+            <item id="166050096" name="Triumphal Idian: Attack" count="1"/>
+            <item id="166050097" name="Triumphal Idian: Defense" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054264" name="Skuldon's Idian Support Box">
+        <items>
+            <item id="166050090" name="Triumphal Idian: Physical Attack" count="1"/>
+            <item id="166050091" name="Triumphal Idian: Magical Attack" count="1"/>
+            <item id="166050092" name="Triumphal Idian: Physical Defense" count="1"/>
+            <item id="166050093" name="Triumphal Idian: Magical Defense" count="1"/>
+            <item id="166050094" name="Triumphal Idian: Support" count="1"/>
+            <item id="166050095" name="Triumphal Idian: Resist" count="1"/>
+            <item id="166050096" name="Triumphal Idian: Attack" count="1"/>
+            <item id="166050097" name="Triumphal Idian: Defense" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054327" name="Daru Thief Transformation Candy Box">
+        <items>
+            <item id="160010423" name="Dignified Daru Thief Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010425" name="Wise Daru Thief Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010424" name="Dignified Daru Thief Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010426" name="Wise Daru Thief Transformation Candy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054329" name="New Recruit's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054338" name="[Event] Empyrean Lord Protector's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054339" name="[Event] Empyrean Lord Protector's Armor Box"/> <!-- NEW -->
@@ -3989,16 +4304,110 @@
 	<decomposable_selectitem item_id="188054370" name="Master Veteran's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054371" name="Remodeled Danuar Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054372" name="[Event] Lannok's Fabled Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054383" name="Divine Belt Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054384" name="Divine Necklace Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054385" name="Divine Accessory Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054386" name="Divine Ring Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054387" name="Special Divine Helm Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054388" name="[Event] Wise Strengthened Robber Rabbit Transformation Candy Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054392" name="Elegant High Grade Idian Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054393" name="Andu's Dye Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054396" name="Box of Balaur Materials I"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054397" name="Box of Balaur Materials II"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054383" name="Divine Belt Box">
+        <items>
+            <item id="123001468" name="Special Elite Emissary's Divine Band" count="1" race="ELYOS"/>
+            <item id="123001467" name="Special Elite Emissary's Divine Leather Belt" count="1" race="ELYOS"/>
+            <item id="123001470" name="Special Elite Ambassador's Divine Band" count="1" race="ASMODIANS"/>
+            <item id="123001469" name="Special Elite Ambassador's Divine Leather Belt" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054384" name="Divine Necklace Box">
+        <items>
+            <item id="121001423" name="Special Elite Emissary's Divine Turquoise Necklace" count="1" race="ELYOS"/>
+            <item id="121001422" name="Special Elite Emissary's Divine Corundum Necklace" count="1" race="ELYOS"/>
+            <item id="121001425" name="Special Elite Ambassador's Divine Turquoise Necklace" count="1" race="ASMODIANS"/>
+            <item id="121001424" name="Special Elite Ambassador's Divine Corundum Necklace" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054385" name="Divine Accessory Box">
+        <items>
+            <item id="120001553" name="Special Elite Emissary's Divine Turquoise Earrings" count="1" race="ELYOS"/>
+            <item id="120001552" name="Special Elite Emissary's Divine Corundum Earrings" count="1" race="ELYOS"/>
+            <item id="120001555" name="Special Elite Ambassador's Divine Turquoise Earrings" count="1" race="ASMODIANS"/>
+            <item id="120001554" name="Special Elite Ambassador's Divine Corundum Earrings" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054386" name="Divine Ring Box">
+        <items>
+            <item id="122001697" name="Special Elite Emissary's Divine Turquoise Ring" count="1" race="ELYOS"/>
+            <item id="122001696" name="Special Elite Emissary's Divine Corundum Ring" count="1" race="ELYOS"/>
+            <item id="122001699" name="Special Elite Ambassador's Divine Turquoise Ring" count="1" race="ASMODIANS"/>
+            <item id="122001698" name="Special Elite Ambassador's Divine Corundum Ring" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054387" name="Special Divine Helm Box">
+        <items>
+            <item id="125004198" name="Special Elite Emissary's Divine Helm" count="1" race="ELYOS"/>
+            <item id="125004199" name="Elite Evangale Divine Helm" count="1" race="ELYOS"/>
+            <item id="125004200" name="Special Elite Emissary's Divine Chain Helm" count="1" race="ELYOS"/>
+            <item id="125004201" name="Elite Evangale Divine Chain Helm" count="1" race="ELYOS"/>
+            <item id="125004202" name="Special Elite Emissary's Divine Leather Hat" count="1" race="ELYOS"/>
+            <item id="125004203" name="Elite Evangale Divine Leather Hat" count="1" race="ELYOS"/>
+            <item id="125004204" name="Special Elite Emissary's Divine Bandana" count="1" race="ELYOS"/>
+            <item id="125004205" name="Elite Evangale Divine Bandana" count="1" race="ELYOS"/>
+            <item id="125004206" name="Special Elite Ambassador's Divine Helm" count="1" race="ASMODIANS"/>
+            <item id="125004207" name="Elite Overlord Divine Helm" count="1" race="ASMODIANS"/>
+            <item id="125004208" name="Special Elite Ambassador's Divine Chain Helm" count="1" race="ASMODIANS"/>
+            <item id="125004209" name="Elite Overlord Divine Chain Helm" count="1" race="ASMODIANS"/>
+            <item id="125004210" name="Special Elite Ambassador's Divine Leather Hat" count="1" race="ASMODIANS"/>
+            <item id="125004211" name="Elite Overlord Divine Leather Hat" count="1" race="ASMODIANS"/>
+            <item id="125004212" name="Special Elite Ambassador's Divine Bandana" count="1" race="ASMODIANS"/>
+            <item id="125004213" name="Elite Overlord Divine Bandana" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054388" name="[Event] Wise Strengthened Robber Rabbit Transformation Candy Box">
+        <items>
+            <item id="160010439" name="[Event] Dignified Strengthened Robber Rabbit Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010441" name="[Event] Wise Strengthened Robber Rabbit Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010443" name="[Event] Fast Strengthened Robber Rabbit Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010440" name="[Event] Dignified Strengthened Robber Rabbit Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010442" name="[Event] Wise Strengthened Robber Rabbit Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010444" name="[Event] Fast Strengthened Robber Rabbit Transformation Candy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054392" name="Elegant High Grade Idian Bundle">
+        <items>
+            <item id="166050044" name="Glossy Esoteric Idian: Resistance" count="1"/>
+            <item id="166050039" name="Glossy Esoteric Idian: Physical Attack" count="1"/>
+            <item id="166050041" name="Glossy Esoteric Idian: Physical Defense" count="1"/>
+            <item id="166050045" name="Glossy Esoteric Idian: Physical/Magical Attack" count="1"/>
+            <item id="166050046" name="Glossy Esoteric Idian: Physical/Magical Defense" count="1"/>
+            <item id="166050043" name="Glossy Esoteric Idian: Assistance" count="1"/>
+            <item id="166050040" name="Glossy Esoteric Idian: Magical Attack" count="1"/>
+            <item id="166050042" name="Glossy Esoteric Idian: Magical Defense" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054393" name="Andu's Dye Box">
+        <items>
+            <item id="169231024" name="Dye: Sky Blue" count="1"/>
+            <item id="169231020" name="Dye: Pastel Orange" count="1"/>
+            <item id="169231021" name="Dye: Pastel Green Tea" count="1"/>
+            <item id="169231025" name="Dye: Pastel Violet" count="1"/>
+            <item id="169231017" name="Dye: Indian Pink" count="1"/>
+            <item id="169231023" name="Dye: Indian Blue" count="1"/>
+            <item id="169231022" name="Dye: Indian Green" count="1"/>
+            <item id="169231018" name="Dye: Romantic Pink" count="1"/>
+            <item id="169231026" name="Dye: Light Cobalt" count="1"/>
+            <item id="169231027" name="Dye: Gray Violet" count="1"/>
+            <item id="169231019" name="Dye: Baby Yellow" count="1"/>
+            <item id="169231016" name="Dye: Punky Pink" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054396" name="Box of Balaur Materials I">
+        <items>
+            <item id="152014001" name="Thick Balaur Horn" count="1"/>
+            <item id="152014003" name="Thick Balaur Skin" count="1"/>
+            <item id="152014002" name="Thick Balaur Scale" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054397" name="Box of Balaur Materials II">
+        <items>
+            <item id="152014006" name="Hard Balaur Horn" count="1"/>
+            <item id="152014008" name="Hard Balaur Skin" count="1"/>
+            <item id="152014007" name="Hard Balaur Scale" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054401" name="[Event] Lunatic Modor's Mythic Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054403" name="[Event] Daily Fuzzball Transformation Candy Box"/> <!-- NEW -->
@@ -4008,8 +4417,28 @@
 	<decomposable_selectitem item_id="188054420" name="[Event] Lunatic Modor's Mythic Weapon Box (21 days)"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054427" name="Sea Feast Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054428" name="Exalted Katalium Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054430" name="Lucky Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054446" name="Special Consumables Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054430" name="Lucky Stigma Bundle">
+        <items>
+            <item id="188054433" name="Gladiator Elite Stigma Bundle" count="1"/>
+            <item id="188054434" name="Templar Elite Stigma Bundle" count="1"/>
+            <item id="188054435" name="Assassin Elite Stigma Bundle" count="1"/>
+            <item id="188054436" name="Ranger Elite Stigma Bundle" count="1"/>
+            <item id="188054437" name="Sorcerer Elite Stigma Bundle" count="1"/>
+            <item id="188054438" name="Spiritmaster Elite Stigma Bundle" count="1"/>
+            <item id="188054439" name="Cleric Elite Stigma Bundle" count="1"/>
+            <item id="188054440" name="Chanter Elite Stigma Bundle" count="1"/>
+            <item id="188054441" name="Gunslinger Elite Stigma Bundle" count="1"/>
+            <item id="188054442" name="Aethertech Elite Stigma Bundle" count="1"/>
+            <item id="188054443" name="Songweaver Elite Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054446" name="Special Consumables Box">
+        <items>
+            <item id="160002460" name="Fresh Pepento Juice" count="250"/>
+            <item id="160002500" name="Fresh Oily Plucar Dragon Omelette" count="500"/>
+            <item id="160002497" name="Fresh Oily Plucar Dragon Salad" count="500"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054449" name="Brilliant Nether Water Dragon King's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054450" name="Daring Nether Water Dragon's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054451" name="Brilliant Nether Fire Dragon King's Weapon Box"/> <!-- NEW -->

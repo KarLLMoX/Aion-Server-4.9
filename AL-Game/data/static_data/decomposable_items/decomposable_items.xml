@@ -436,8 +436,16 @@
 			<item id="152000605" name="Prolix Fiber" count="9"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="152000613" decomposable_name="[Static] Strong Ponica Fiber"/> <!-- NEW -->
-	<decomposable item_id="152000614" decomposable_name="[Static] Fine Ponica Fiber"/> <!-- NEW -->
+	<decomposable item_id="152000613" decomposable_name="[Static] Strong Ponica Fiber">
+        <items>
+            <item id="152000612" name="Ponica Fiber" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="152000614" decomposable_name="[Static] Fine Ponica Fiber">
+        <items>
+            <item id="152000612" name="Ponica Fiber" count="4"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="152000658" decomposable_name="Twisp Fiber Bundle">
 		<items chance="80.0">
 			<item id="152000652" name="Twisp Fiber" count="3"/>
@@ -470,9 +478,21 @@
 			<item id="152000656" name="Hoca Fiber" count="9"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="152000715" decomposable_name="[Static] Succulent Plucar"/> <!-- NEW -->
-	<decomposable item_id="152000717" decomposable_name="[Static] Succulent Rava"/> <!-- NEW -->
-	<decomposable item_id="152000814" decomposable_name="[Static] Savory Kucien"/> <!-- NEW -->
+	<decomposable item_id="152000715" decomposable_name="[Static] Succulent Plucar">
+        <items>
+            <item id="152000714" name="Plucar" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="152000717" decomposable_name="[Static] Succulent Rava">
+        <items>
+            <item id="152000716" name="Rava" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="152000814" decomposable_name="[Static] Savory Kucien">
+        <items>
+            <item id="152000813" name="Kucien" count="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="152000903" decomposable_name="[Static] Greater Aether Crystal">
 		<items>
 			<item id="152000902" name="Aether Crystal" count="3"/>
@@ -528,7 +548,11 @@
 			<item id="152000917" name="[Static] Greater Ancient Aether" count="2"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="152001007" decomposable_name="[Static] Polished Menthcrem"/> <!-- NEW -->
+	<decomposable item_id="152001007" decomposable_name="[Static] Polished Menthcrem">
+        <items>
+            <item id="152001006" name="Menthcrem" count="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="152003014" decomposable_name="[Static] Preserved Ide">
 		<items>
 			<item id="152003013" name="Ide" count="2"/>
@@ -7468,14 +7492,44 @@
 			<item id="186000111" name="Scorching Heat" count="70"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051094" decomposable_name="Scorching Heat Pouch"/> <!-- NEW -->
-	<decomposable item_id="188051095" decomposable_name="Noble Scorching Heat Pouch"/> <!-- NEW -->
-	<decomposable item_id="188051096" decomposable_name="Archive Document Box"/> <!-- NEW -->
-	<decomposable item_id="188051097" decomposable_name="Report Box"/> <!-- NEW -->
-	<decomposable item_id="188051098" decomposable_name="Command Box"/> <!-- NEW -->
+	<decomposable item_id="188051094" decomposable_name="Scorching Heat Pouch">
+        <items>
+            <item id="186000111" name="Scorching Heat" rnd_min="1" rnd_max="20"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051095" decomposable_name="Noble Scorching Heat Pouch">
+        <items>
+            <item id="186000111" name="Scorching Heat" rnd_min="1" rnd_max="50"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051096" decomposable_name="Archive Document Box">
+        <items>
+            <item id="182210039" name="Archive Document" rnd_min="1" rnd_max="4"/>
+		</items>
+    </decomposable>
+	<decomposable item_id="188051097" decomposable_name="Report Box">
+        <items>
+            <item id="182211037" name="Circle Communique" rnd_min="1" rnd_max="4"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051098" decomposable_name="Command Box">
+        <items>
+            <item id="182211040" name="Circle Doctrine" rnd_min="1" rnd_max="4"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051099" decomposable_name="Shugo Enchantment Stone Pouch"/> <!-- NEW -->
-	<decomposable item_id="188051100" decomposable_name="Acute Shugo Set"/> <!-- NEW -->
-	<decomposable item_id="188051101" decomposable_name="Jumpy Shugo Set"/> <!-- NEW -->
+	<decomposable item_id="188051100" decomposable_name="Acute Shugo Set">
+        <items>
+            <item id="190020007" name="Acute Shugo Egg"/>
+            <item id="188051099" name="Shugo Enchantment Stone Pouch"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051101" decomposable_name="Jumpy Shugo Set">
+        <items>
+            <item id="190020006" name="Jumpy Shugo Egg"/>
+            <item id="188051099" name="Shugo Enchantment Stone Pouch"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051102" decomposable_name="Daeva's Icebox">
 		<items>
 			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
@@ -10125,10 +10179,26 @@
 			<random_item type="MANASTONE"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051287" decomposable_name="Demro's Amulet (Bundle of 3)"/> <!-- NEW -->
-	<decomposable item_id="188051288" decomposable_name="Demro's Amulet (Bundle of 5)"/> <!-- NEW -->
-	<decomposable item_id="188051289" decomposable_name="Virdi's Amulet (Bundle of 3)"/> <!-- NEW -->
-	<decomposable item_id="188051290" decomposable_name="Virdi's Amulet (Bundle of 5)"/> <!-- NEW -->
+	<decomposable item_id="188051287" decomposable_name="Demro's Amulet (Bundle of 3)">
+        <items>
+            <item id="169620006" name="Demro's Amulet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051288" decomposable_name="Demro's Amulet (Bundle of 5)">
+        <items>
+            <item id="169620006" name="Demro's Amulet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051289" decomposable_name="Virdi's Amulet (Bundle of 3)">
+        <items>
+            <item id="169620007" name="Virdi's Amulet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051290" decomposable_name="Virdi's Amulet (Bundle of 5)">
+        <items>
+            <item id="169620007" name="Virdi's Amulet"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051291" decomposable_name="[Event] Smootinerk's Happy Gift Box"/>
 	<decomposable item_id="188051292" decomposable_name="[Event] Bloitinerk's Happy Gift Box"/>
 	<decomposable item_id="188051293" decomposable_name="[Event] 12 Solorius Polar Bear Form Candy">
@@ -10794,89 +10864,99 @@
 		</items>
 	</decomposable>
 	<decomposable item_id="188051349" decomposable_name="Superior Manastone Bundle">
-		<items>
-			<item id="167000555" count="1"/><!-- Magic Boost +27 -->
+        <items>
+            <item id="167000518" name="Manastone: Attack +5"/>
 		</items>
 		<items>
-			<item id="167000575" count="1"/><!-- Magical Accuracy +16 -->
+            <item id="167000551" name="Manastone: HP +95"/>
 		</items>
 		<items>
-			<item id="167000574" count="1"/><!-- Resist Magic +16-->
+            <item id="167000552" name="Manastone: MP +95"/>
 		</items>
 		<items>
-			<item id="167000518" count="1"/><!-- Attack +5 -->
+            <item id="167000553" name="Manastone: Accuracy +27"/>
 		</items>
 		<items>
-			<item id="167000563" count="1"/><!-- Healing Boost +3 -->
+            <item id="167000554" name="Manastone: Evasion +17"/>
 		</items>
 		<items>
-			<item id="167000766" count="1"/><!-- HP +100 -->
+            <item id="167000555" name="Manastone: Magic Boost +27"/>
 		</items>
 		<items>
-			<item id="167000571" count="1"/><!-- Crit Strike +19 -->
+            <item id="167000556" name="Manastone: Parry +27"/>
 		</items>
 		<items>
-			<item id="167000769" count="1"/><!-- Evasion +19 -->
+            <item id="167000557" name="Manastone: Block +27"/>
 		</items>
 		<items>
-			<item id="167000771" count="1"/><!-- Parry +29 -->
+            <item id="167000558" name="Manastone: Crit Strike +17"/>
 		</items>
 		<items>
-			<item id="167000767" count="1"/><!-- MP +105 -->
+            <item id="167000559" name="Manastone: Maximum Flight Time +7"/>
 		</items>
 		<items>
-			<item id="167000768" count="1"/><!-- Accuracy +29 -->
+            <item id="167000560" name="Manastone: Magical Accuracy +14"/>
 		</items>
 		<items>
-			<item id="167000570" count="1"/><!-- Block +29 -->
+            <item id="167000561" name="Manastone: Resist Magic +14"/>
 		</items>
 		<items>
-			<item id="167000566" count="1"/><!-- Maximum Flight Time +7 -->
-		</items>
-	</decomposable>
+            <item id="167000563" name="Manastone: Healing Boost +3"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051350" decomposable_name="Superior Manastone Bundle">
-		<items>
-			<item id="167000555" count="1"/><!-- Magic Boost +27 -->
+        <items>
+            <item id="167000518" name="Manastone: Attack +5"/>
 		</items>
 		<items>
-			<item id="167000575" count="1"/><!-- Magical Accuracy +16 -->
+            <item id="167000551" name="Manastone: HP +95"/>
 		</items>
 		<items>
-			<item id="167000574" count="1"/><!-- Resist Magic +16-->
+            <item id="167000552" name="Manastone: MP +95"/>
 		</items>
 		<items>
-			<item id="167000518" count="1"/><!-- Attack +5 -->
+            <item id="167000553" name="Manastone: Accuracy +27"/>
 		</items>
 		<items>
-			<item id="167000563" count="1"/><!-- Healing Boost +3 -->
+            <item id="167000554" name="Manastone: Evasion +17"/>
 		</items>
 		<items>
-			<item id="167000766" count="1"/><!-- HP +100 -->
+            <item id="167000555" name="Manastone: Magic Boost +27"/>
 		</items>
 		<items>
-			<item id="167000571" count="1"/><!-- Crit Strike +19 -->
+            <item id="167000556" name="Manastone: Parry +27"/>
 		</items>
 		<items>
-			<item id="167000769" count="1"/><!-- Evasion +19 -->
+            <item id="167000557" name="Manastone: Block +27"/>
 		</items>
 		<items>
-			<item id="167000771" count="1"/><!-- Parry +29 -->
+            <item id="167000558" name="Manastone: Crit Strike +17"/>
 		</items>
 		<items>
-			<item id="167000767" count="1"/><!-- MP +105 -->
+            <item id="167000559" name="Manastone: Maximum Flight Time +7"/>
 		</items>
 		<items>
-			<item id="167000768" count="1"/><!-- Accuracy +29 -->
+            <item id="167000560" name="Manastone: Magical Accuracy +14"/>
 		</items>
 		<items>
-			<item id="167000570" count="1"/><!-- Block +29 -->
+            <item id="167000561" name="Manastone: Resist Magic +14"/>
 		</items>
 		<items>
-			<item id="167000566" count="1"/><!-- Maximum Flight Time +7 -->
-		</items>
-	</decomposable>
-	<decomposable item_id="188051351" decomposable_name="Sticky Lump"/> <!-- NEW -->
-	<decomposable item_id="188051352" decomposable_name="Sticky Membrane"/> <!-- NEW -->
+            <item id="167000563" name="Manastone: Healing Boost +3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051351" decomposable_name="Sticky Lump">
+        <items>
+            <item id="182215002" name="Kexkra's Memory" race="ELYOS"/>
+            <item id="182215014" name="Kexkra's Memory" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051352" decomposable_name="Sticky Membrane">
+        <items>
+            <item id="182215003" name="Broken Sword Hilt" race="ELYOS"/>
+            <item id="182215015" name="Broken Sword Hilt" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051353" decomposable_name="Small capsule of Fossilized Golden Saam"/> <!-- NEW -->
 	<decomposable item_id="188051354" decomposable_name="Large capsule of Fossilized Golden Saam"/> <!-- NEW -->
 	<decomposable item_id="188051355" decomposable_name="A handful of Fossilized Golden Saam"/> <!-- NEW -->
@@ -11490,7 +11570,20 @@
 			<item id="102100761" name="Kromede's Cipher-Blade" player_class="RIDER" count="1"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051397" decomposable_name="Drop by Class_IDLF1_TORSO_U1_50A"/> <!-- NEW -->
+	<decomposable item_id="188051397" decomposable_name="Drop by Class_IDLF1_TORSO_U1_50A">
+        <items>
+            <item id="110100972" name="Anuhart Sorcerer's Tunic" player_class="SORCERER"/>
+            <item id="110100973" name="Anuhart Spiritmaster's Tunic" player_class="SPIRIT_MASTER"/>
+            <item id="110300917" name="Anuhart Assassin's Jerkin" player_class="ASSASSIN"/>
+            <item id="110300918" name="Anuhart Ranger's Jerkin" player_class="RANGER"/>
+            <item id="110500885" name="Anuhart Cleric's Hauberk" player_class="CLERIC"/>
+            <item id="110500886" name="Anuhart Chanter's Hauberk" player_class="CHANTER"/>
+            <item id="110600870" name="Anuhart Templar's Breastplate" player_class="TEMPLAR"/>
+            <item id="110600869" name="Anuhart Gladiator's Breastplate" player_class="GLADIATOR"/>
+            <item id="110101543" name="Anuhart Songweaver's Tunic" player_class="BARD"/>
+            <item id="110301439" name="Anuhart Gunslinger's Jerkin" player_class="GUNNER"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051398" decomposable_name="[Event] Tahabata Weapon Box">
 		<items chance="50.0">
 			<item id="100901101" name="Tahabata's Greatsword" player_class="GLADIATOR"/>
@@ -11773,7 +11866,11 @@
 	<decomposable item_id="188051436" decomposable_name="Total Makeover Kit"/> <!-- NEW -->
 	<decomposable item_id="188051437" decomposable_name="Bridal Makeup Bundle"/> <!-- NEW -->
 	<decomposable item_id="188051438" decomposable_name="Rainbow Dye Pack II"/> <!-- NEW -->
-	<decomposable item_id="188051439" decomposable_name="Silver Medal Box"/> <!-- NEW -->
+	<decomposable item_id="188051439" decomposable_name="Silver Medal Box">
+        <items>
+            <item id="186000031" name="Silver Medal" rnd_min="1" rnd_max="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051440" decomposable_name="Gold Medal Box">
 		<items>
 			<item id="186000030" name="Gold Medal" count="7"/>
@@ -11784,7 +11881,13 @@
 			<item id="186000096" name="Platinum Medal" count="7"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051442" decomposable_name="Pouch of Scrolls"/> <!-- NEW -->
+	<decomposable item_id="188051442" decomposable_name="Pouch of Scrolls">
+        <items>
+            <item id="164000073" name="Greater Courage Scroll" count="3"/>
+            <item id="164000076" name="Greater Running Scroll" count="3"/>
+            <item id="164000134" name="Greater Awakening Scroll" count="3"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051443" decomposable_name="Box of Stones I">
 		<items>
 			<random_item type="MANASTONE_LEGEND_GRADE_30" count="3"/>
@@ -11971,11 +12074,64 @@
 		</items>
 	</decomposable>
 	<decomposable item_id="188051504" decomposable_name="Shard Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051505" decomposable_name="Seal Removal Scroll Package (50)"/> <!-- NEW -->
-	<decomposable item_id="188051506" decomposable_name="Bundle of Salvation"/> <!-- NEW -->
-	<decomposable item_id="188051507" decomposable_name="Charming Pet Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051508" decomposable_name="Melee Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051509" decomposable_name="Magic Manastone Bundle"/> <!-- NEW -->
+	<decomposable item_id="188051505" decomposable_name="Seal Removal Scroll Package (50)">
+        <items>
+            <item id="168220002" name="Seal Removal Scroll" count="50"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051506" decomposable_name="Bundle of Salvation">
+        <items>
+            <item id="162000043" name="Recovery Potion" count="6"/>
+		</items>
+		<items>
+            <item id="162000045" name="Major Recovery Potion" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051507" decomposable_name="Charming Pet Bundle">
+        <items>
+            <item id="182006416" name="Sweet Healthy Pet Food"/>
+		</items>
+		<items>
+            <item id="182006417" name="Sour Healthy Pet Food"/>
+		</items>
+		<items>
+            <item id="182006418" name="Spicy Healthy Pet Food"/>
+		</items>
+		<items>
+            <item id="190020012" name="Bluehair Steren Egg"/>
+		</items>
+		<items>
+            <item id="190020002" name="Bottlenose Tion Egg"/>
+		</items>
+		<items>
+            <item id="190020001" name="Skullabra Krall Egg"/>
+		</items>
+		<items>
+            <item id="190020020" name="Shugo Lad Egg"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051508" decomposable_name="Melee Manastone Bundle">
+        <items>
+            <item id="167000518" name="Manastone: Attack +5" count="6"/>
+		</items>
+		<items>
+            <item id="167000558" name="Manastone: Crit Strike +17" count="6"/>
+		</items>
+		<items>
+            <item id="167000553" name="Manastone: Accuracy +27" count="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051509" decomposable_name="Magic Manastone Bundle">
+        <items>
+            <item id="167000555" name="Manastone: Magic Boost +27" count="6"/>
+		</items>
+		<items>
+            <item id="167000560" name="Manastone: Magical Accuracy +14" count="6"/>
+		</items>
+		<items>
+            <item id="167000561" name="Manastone: Resist Magic +14" count="6"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051510" decomposable_name="Defense Manastone Bundle">
 		<items>
 			<item id="167000557" name="Manastone: Block +27" count="6"/>
@@ -12219,7 +12375,44 @@
 			<random_item type="MANASTONE"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051541" decomposable_name="Dye Bundle"/> <!-- NEW -->
+	<decomposable item_id="188051541" decomposable_name="Dye Bundle">
+        <items>
+            <item id="169240002" name="Omblic Petal" count="5" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="169240008" name="Vinna Petal" count="5" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="169240010" name="Brommel Petal" count="5" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="169240011" name="Pressa Petal" count="5" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="169240013" name="Kukar Petal" count="5" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="169240014" name="Leopis Petal" count="5" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="169240001" name="Wiki Petal" count="5" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="169240002" name="Omblic Petal" count="5" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="169240004" name="Ormea Petal" count="5" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="169240005" name="Tange Petal" count="5" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="169240006" name="Ervio Petal" count="5" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="169240008" name="Vinna Petal" count="5" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051544" decomposable_name="Crystal and Elixir Bundle"/> <!-- NEW -->
 	<decomposable item_id="188051545" decomposable_name="Ore Bundle">
 		<items>
@@ -13790,7 +13983,26 @@
 			<item id="110900266" name="[Event] Wonderland Waistcoat (Appearance: 7 days)"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051634" decomposable_name="[Event] Wonderland Hat Box"/>
+	<decomposable item_id="188051634" decomposable_name="[Event] Wonderland Hat Box">
+        <items>
+            <item id="125040193" name="[Event] Enchanting Sorcerer Hat (7 days)"/>
+		</items>
+		<items>
+            <item id="125040214" name="[Event] Rabbit Ears Headband (7 days)"/>
+		</items>
+		<items>
+            <item id="125040194" name="[Event] Enchanting Sorcerer Hat (30 days)"/>
+		</items>
+		<items>
+            <item id="125040215" name="[Event] Rabbit Ears Headband (30 days)"/>
+		</items>
+		<items>
+            <item id="125040195" name="[Event] Enchanting Sorcerer Hat"/>
+		</items>
+		<items>
+            <item id="125040216" name="[Event] Rabbit Ears Headband"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051635" decomposable_name="[Event] Wonderland Dye Box">
 		<items>
 			<item id="169231078" name="[Event] Dye: Deep Blue (7 days)"/>
@@ -13927,10 +14139,26 @@
 		</items>
 	</decomposable>
 	<decomposable item_id="188051640" decomposable_name="[Event] Solorius Gift Bag"/>
-	<decomposable item_id="188051641" decomposable_name="Plastic Surgery Ticket Box (1 day)"/>
-	<decomposable item_id="188051642" decomposable_name="Plastic Surgery Ticket Box (3 days)"/>
-	<decomposable item_id="188051643" decomposable_name="Gender Switch Ticket Box (1 day)"/>
-	<decomposable item_id="188051644" decomposable_name="Gender Switch Ticket Box (3 days)"/>
+	<decomposable item_id="188051641" decomposable_name="Plastic Surgery Ticket Box (1 day)">
+        <items>
+            <item id="169650004" name="Plastic Surgery Ticket (60 min)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051642" decomposable_name="Plastic Surgery Ticket Box (3 days)">
+        <items>
+            <item id="169650004" name="Plastic Surgery Ticket (60 min)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051643" decomposable_name="Gender Switch Ticket Box (1 day)">
+        <items>
+            <item id="169660002" name="Gender Switch Ticket (60 min)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051644" decomposable_name="Gender Switch Ticket Box (3 days)">
+        <items>
+            <item id="169660002" name="Gender Switch Ticket (60 min)"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051645" decomposable_name="Mithril Medal Chest">
 		<items>
 			<item id="186000147" name="Mithril Medal" count="1"/>
@@ -14134,7 +14362,11 @@
 			<item id="186000066" name="Lesser Ancient Icon"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051672" decomposable_name="[Event] Firecracker Box"/> <!-- NEW -->
+	<decomposable item_id="188051672" decomposable_name="[Event] Firecracker Box">
+        <items>
+            <item id="164002060" name="[Event] Firecrackers" count="5"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051673" decomposable_name="Enchantment Stone Refill Box (10-day pass)"/> <!-- NEW -->
 	<decomposable item_id="188051674" decomposable_name="Fabled Godstone Bundle">
 		<items chance="30">
