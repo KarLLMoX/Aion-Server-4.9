@@ -1,0 +1,1 @@
+java -Xms128m -Xmx512m -cp ..\..\..\lib\allatori.jar com.allatori.StackTrace log.xml input.txt output.txt

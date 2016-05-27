@@ -1,0 +1,33 @@
+<config>
+    <input>
+        <jar in="AL-Game.jar" out="AL-Game-NEW.jar"/>
+    </input>
+
+    <classpath>
+		<jar name="..\AL-Game\libs/*.jar"/>
+    </classpath>
+
+    <keep-names>
+		<class access="private+">
+			<field access="private+"/>
+			<method access="private+"/>
+		</class>
+    </keep-names>
+
+	<property name="classes-naming" value="keep-$-sign"/>
+	<property name="unique-renaming" value="disable"/>
+	<property name="local-variables-naming" value="single-name"/>
+	<property name="methods-naming" value="keywords"/>
+	<property name="fields-naming" value="keywords"/>
+	<property name="string-encryption" value="maximum"/>
+	<property name="string-encryption-type" value="strong"/>
+	<property name="control-flow-obfuscation" value="enable"/>
+	<property name="extensive-flow-obfuscation" value="maximum"/>
+	<property name="member-reorder" value="enable"/>
+    <property name="synthetize-methods" value="private"/>
+    <property name="synthetize-methods" value="package"/>
+	<property name="synthetize-fields" value="private"/>
+	<property name="synthetize-fields" value="package"/>
+
+    <property name="log-file" value="log.xml"/>
+</config>
