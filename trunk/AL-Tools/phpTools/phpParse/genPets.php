@@ -488,10 +488,181 @@ function generPetsFile()
     logLine("Anzahl Pets gefunden",$cntpet);
 }
 // ----------------------------------------------------------------------------
+// PetBuff-Datei erzeugen
+// ----------------------------------------------------------------------------
+function generPetBuffFile()
+{
+    global $pathdata;
+    
+    logHead("Generierung der Datei: pet_buff.xml");
+    
+    $cntles = 0;
+    $cntpet = 0;
+    $cntout = 0;
+    
+    $fileu16 = formFileName($pathdata."\\func_pet\\toypet_buff.xml");
+    $fileext = convFileToUtf8($fileu16);
+    $fileout = "../outputs/parse_output/pets/pet_buff.xml";
+    $hdlext  = openInputFile($fileext);
+    
+    if (!$hdlext)
+    {
+        logLine("Fehler openInputFile",$fileext);
+        return;
+    }
+    
+    logLine("Eingabedatei UTF16",$fileu16);
+    logLine("Eingabedatei UTF8" ,$fileext);
+    logLine("Ausgabedatei",$fileout);
+    
+    $hdlout  = openOutputFile($fileout);
+    
+    // Vorspann ausgeben
+    fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
+    fwrite($hdlout,'<pet_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_buff.xsd">'."\n");
+    $cntout += 2;    
+    
+    $id = $count = $func = "";
+    $dohead = false;
+    
+    while (!feof($hdlext))
+    {
+        $line = rtrim(fgets($hdlext));
+        $cntles++;
+        
+        if (stripos($line,"<id>")      !== false)
+        {
+            $id     = getXmlValue("id",$line);
+            $dohead = true;
+            $cntpet++;
+        }
+        elseif (stripos($line,"<food_consume_count>") !== false)
+            $count = getXmlValue("food_consume_count",$line);
+        elseif (stripos($line,"<bonus_attr")          !== false)
+        {
+            if ($dohead)
+            {
+                $lout = '    <pet_bonusattr buff_id="'.$id.'"';
+                if ($count != "" && $count!= "0")
+                    $lout .= ' food_count="'.$count.'"';
+                $lout .= '>';
+                fwrite($hdlout,$lout."\n");
+                $cntout++;
+                
+                $dohead = false;
+            }
+            
+            $xmlkey = getXmlKey($line);
+            $xmlval = getXmlValue($xmlkey,$line);
+            $tab    = explode(" ",$xmlval);
+            
+            if (!isset($tab[1])) $tab[1] = "1";
+            
+            if (stripos($tab[1],"%") !== false)
+            {
+                $func = "PERCENT";
+                $tab[1] = trim(str_replace("%","",$tab[1]));
+            }
+            else
+                $func = "ADD";
+            
+            if (strtoupper($tab[0]) == "ATTACKDELAY") $tab[1] = $tab[1] * -1;
+            
+            $lout = '        <penalty_attr stat="'.getBonusAttrName($tab[0]).'" '.
+                    'func="'.$func.'" value="'.$tab[1].'"/>';
+            fwrite($hdlout,$lout."\n");
+            $cntout++;
+        }
+        elseif (stripos($line,"</client_toypet_buff>") !== false)
+        {
+            fwrite($hdlout,'    </pet_bonusattr>'."\n");
+            $cntout++;
+            
+            $id = $count = $func = "";
+            $dohead = false;
+        }
+    }
+    // Nachspann ausgeben
+    fwrite($hdlout,'</pet_bonusattrs>');
+    $cntout++;
+    fclose($hdlext);
+    fclose($hdlout);
+    
+    logLine("Zeilen eingelesen",$cntles);
+    logLine("Zeilen ausgegeben",$cntout);
+    logLine("Anzahl Pets gefunden",$cntpet);
+}
+// ----------------------------------------------------------------------------
+// PetMerchant-Datei erzeugen
+// ----------------------------------------------------------------------------
+function generPetMerchantFile()
+{
+    global $pathdata;
+    
+    logHead("Generierung der Datei: pet_merchant.xml"); 
+    
+    $cntles = 0;
+    $cntpet = 0;
+    $cntout = 0;
+    
+    $fileu16 = formFileName($pathdata."\\func_pet\\toypet_merchant.xml");
+    $fileext = convFileToUtf8($fileu16);
+    $fileout = "../outputs/parse_output/pets/pet_merchant.xml";
+    $hdlext  = openInputFile($fileext);
+    
+    if (!$hdlext)
+    {
+        logLine("Fehler openInputFile",$fileext);
+        return;
+    }
+    
+    logLine("Eingabedatei UTF16",$fileu16);
+    logLine("Eingabedatei UTF8" ,$fileext);
+    logLine("Ausgabedatei",$fileout);
+    
+    $hdlout  = openOutputFile($fileout);
+    
+    // Vorspann ausgeben
+    fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8"?>'."\n");
+    fwrite($hdlout,'<merchants xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_merchant.xsd">'."\n");
+    $cntout += 2;    
+    
+    $id = $price = "";
+    
+    while (!feof($hdlext))
+    {
+        $line = rtrim(fgets($hdlext));
+        $cntles++;
+        
+        if (stripos($line,"<id>")   !== false)
+            $id = getXmlValue("id",$line);
+        elseif (stripos($line,"<rate_price>") !== false)
+            $price = getXmlValue("rate_price",$line);
+        elseif (stripos($line,"</client_toypet_merchant>") !== false)
+        {
+            $cntpet++;
+            fwrite($hdlout,'    <merchant id="'.$id.'" rate_price="'.$price.'"/>'."\n");
+            $cntout++;
+            
+            $id = $price = "";
+        }
+    }
+    // Nachspann ausgeben
+    fwrite($hdlout,'</merchants>');
+    $cntout++;
+    fclose($hdlext);
+    fclose($hdlout);
+    
+    logLine("Zeilen eingelesen",$cntles);
+    logLine("Zeilen ausgegeben",$cntout);
+    logLine("Anzahl Pets gefunden",$cntpet);
+}
+// ----------------------------------------------------------------------------
 //                             M  A  I  N
 // ----------------------------------------------------------------------------
 
 include("includes/inc_getautonameids.php");
+include("includes/inc_bonusattrs.php");
 include("includes/auto_inc_item_infos.php");
 include("includes/auto_inc_npc_infos.php");
 
@@ -528,6 +699,8 @@ if ($submit == "J")
         generPetDopingFile();
         generPetFeedFile();
         generPetsFile();
+        generPetBuffFile();
+        generPetMerchantFile();
         
         cleanPathUtf8Files();
     }
