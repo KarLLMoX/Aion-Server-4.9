@@ -28248,7 +28248,7 @@
 			<item id="166100011" name="Greater Supplements (Mythic)" count="70"/>
 		</items>
 		<items chance="20.0">
-			<item id="188052297" name="Noble Composite Manastone Bundle" count="1"/>
+			<item id="188053013" name="Blood Mark Composite Manastone Bundle"/>
 		</items>
 	</decomposable>
 	<decomposable item_id="188053013" decomposable_name="Blood Mark Composite Manastone Bundle">
@@ -28275,11 +28275,14 @@
 			<item id="185000188" name="Royal Tomb Treasure Box Key" count="1"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053019" decomposable_name="Guardian Scroll Bundle"/>
-	<decomposable item_id="188053020" decomposable_name="Archon Scroll Bundle"/>
-	<decomposable item_id="188053021" decomposable_name="Guardian Summoning Scroll Bundle"/>
-	<decomposable item_id="188053022" decomposable_name="Archon Summoning Scroll Bundle"/>
-	<decomposable item_id="188053023" decomposable_name="Special Medal Chest"/>
+	<decomposable item_id="188053023" decomposable_name="Special Medal Chest">
+        <items>
+            <item id="186000242" name="Ceramium Medal"/>
+		</items>
+		<items>
+            <item id="186000147" name="Mithril Medal"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053024" decomposable_name="Infused Idian Shugo Box: Physical Attack">
 		<items>
 			<item id="166050107" name="Infused Idian: Physical Attack"/>
@@ -28305,7 +28308,59 @@
 			<item id="166050111" name="Infused Idian: Spell Resist"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053029" decomposable_name="Infused Spring Box"/>
+	<decomposable item_id="188053029" decomposable_name="Infused Spring Box">
+        <items>
+            <item id="166050107" name="Infused Idian: Physical Attack"/>
+		</items>
+		<items>
+            <item id="166050108" name="Infused Idian: Magical Attack"/>
+		</items>
+		<items>
+            <item id="166050109" name="Infused Idian: Block"/>
+		</items>
+		<items>
+            <item id="166050110" name="Infused Idian: Strike Resist"/>
+		</items>
+		<items>
+            <item id="166050111" name="Infused Idian: Spell Resist"/>
+		</items>
+		<items>
+            <item id="164002228" name="Administrator's Boon â€“ 1-Time Pass"/>
+		</items>
+		<items>
+            <item id="188052654" name="Noble Ancient Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="188052639" name="[Event] Heroic Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188052638" name="[Event] Fabled Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188051430" name="Felicitous Socketing (Eternal)"/>
+		</items>
+		<items>
+            <item id="188052104" name="Felicitous Socketing Box (Mythic)"/>
+		</items>
+		<items>
+            <item id="188052559" name="Assured Greater Felicitous Socketing Box (Eternal)"/>
+		</items>
+		<items>
+            <item id="188052560" name="Assured Greater Felicitous Socketing Box (Mythic)"/>
+		</items>
+		<items>
+            <item id="166200013" name="Enduring Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="166200014" name="Enduring Mythic Armor Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="165005034" name="Vindachinerk's Abyss Accessory Extraction Tools"/>
+		</items>
+		<items>
+            <item id="165005074" name="Vindachinerk's Noble Abyss Accessory Extraction Tools"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053030" decomposable_name="Idgel Dome Reward Box">
 		<items>
 			<item id="152012599" name="Heart of Protection" count="2"/>
@@ -28314,7 +28369,14 @@
 			<item id="152012598" name="Heart of Destruction" count="2"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053031" decomposable_name="Idgel Dome Consolation Prize"/>
+	<decomposable item_id="188053031" decomposable_name="Idgel Dome Consolation Prize">
+        <items>
+            <item id="152012598" name="Heart of Destruction" count="2"/>
+		</items>
+		<items>
+            <item id="152012599" name="Heart of Protection" count="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053032" decomposable_name="Idgel Dome Tribute Box">
 		<items chance="50">
 			<random_item type="MANASTONE_LEGEND_GRADE_70" count="1"/>
@@ -29231,7 +29293,6 @@
 			<item id="113501372" name="Vili's Chausses" player_class="RIDER"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053055" decomposable_name="Nerita's Accessory Box"/>
 	<decomposable item_id="188053056" decomposable_name="Vidar's Armor Box">
 		<items>
 			<item id="114601086" name="Vidar's Sabatons" player_class="GLADIATOR"/>
@@ -29252,9 +29313,6 @@
 			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="4"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053058" decomposable_name="Mysterious Red Sack"/>
-	<decomposable item_id="188053059" decomposable_name="Mysterious Red Sack"/>
-	<decomposable item_id="188053060" decomposable_name="Mysterious Red Sack"/>
 	<decomposable item_id="188053061" decomposable_name="Old Yellow Sack">
 		<items>
 			<random_item type="MANASTONE_COMMON_GRADE_30" rnd_min="1" rnd_max="3"/>
@@ -29275,8 +29333,22 @@
 			<random_item type="MANASTONE_COMMON_GRADE_50" rnd_min="1" rnd_max="3"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053066" decomposable_name="Daru Cipher-Blade Box"/> <!-- NEW -->
-	<decomposable item_id="188053067" decomposable_name="Ailu Cipher-Blade Box"/> <!-- NEW -->
+	<decomposable item_id="188053066" decomposable_name="Daru Cipher-Blade Box">
+        <items>
+            <item id="102101001" name="Daru Cipher-Blade"/>
+		</items>
+		<items>
+            <item id="102101003" name="Gold Daru Cipher-Blade"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053067" decomposable_name="Ailu Cipher-Blade Box">
+        <items>
+            <item id="102101002" name="Ailu Cipher-Blade"/>
+		</items>
+		<items>
+            <item id="102101004" name="Pink Ailu Cipher-Blade"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053068" decomposable_name="Elite Greater Composite Manastone Chest">
 		<items>
 			<random_item type="MANASTONE_LEGEND_GRADE_70" count="5"/>
@@ -29459,8 +29531,64 @@
 			<item id="166100011" name="Greater Supplements (Mythic)" rnd_min="50" rnd_max="100"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053087" decomposable_name="Abyss of Triniel"/> <!-- NEW -->
-	<decomposable item_id="188053088" decomposable_name="Dark Abyss of Triniel"/> <!-- NEW -->
+	<decomposable item_id="188053087" decomposable_name="Abyss of Triniel">
+        <items>
+            <item id="162002008" name="[Event] Mysterious Lotus Pill"/>
+		</items>
+		<items>
+            <item id="169000010" name="Superior Power Shard" count="200"/>
+		</items>
+		<items>
+            <item id="162000144" name="Pure Life Crystal"/>
+		</items>
+		<items>
+            <item id="162000107" name="Saam King's Herbs"/>
+		</items>
+		<items>
+            <item id="188051855" name="[Event] Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="188052934" name="Greater Scroll Bundle"/>
+		</items>
+		<items>
+            <item id="169231019" name="Dye: Baby Yellow"/>
+		</items>
+		<items>
+            <item id="169231024" name="Dye: Sky Blue"/>
+		</items>
+		<items>
+            <item id="169231018" name="Dye: Romantic Pink"/>
+		</items>
+		<items>
+            <item id="187050020" name="[Event] Dramata's Bone Wing"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053088" decomposable_name="Dark Abyss of Triniel">
+        <items>
+            <item id="188052933" name="Courage Insignia Box"/>
+		</items>
+		<items>
+            <item id="188052728" name="[Event] Dramata Wing Chest"/>
+		</items>
+		<items>
+            <item id="166030005" name="Tempering Solution"/>
+		</items>
+		<items>
+            <item id="190020175" name="Tahabata Egg"/>
+		</items>
+		<items>
+            <item id="188052319" name="[Event] Dragon Lord's Wing Box"/>
+		</items>
+		<items>
+            <item id="188052073" name="[Event] Ancient Spirit's Wing Box"/>
+		</items>
+		<items>
+            <item id="188052639" name="[Event] Heroic Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188052638" name="[Event] Fabled Godstone Bundle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053089" decomposable_name="Idgel Dome Champion's Bundle">
 		<items chance="50.0">
 			<random_item type="IDIAN_EPIC" rnd_min="1" rnd_max="1" player_class="ALL"/>
@@ -29469,80 +29597,64 @@
 			<random_item type="IDIAN_GOLDEN_EPIC" rnd_min="1" rnd_max="1" player_class="ALL"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053090" decomposable_name="Ahserion's Flight Champion's Bundle"/>
+	<decomposable item_id="188053090" decomposable_name="Ahserion's Flight Champion's Bundle">
+        <items>
+            <item id="166050127" name="Blazing Warlord's Idian: Physical Attack"/>
+		</items>
+		<items>
+            <item id="166050128" name="Blazing Warlord's Idian: Magical Attack"/>
+		</items>
+		<items>
+            <item id="166050129" name="Blazing Warlord's Idian: Physical/Magical Attack"/>
+		</items>
+		<items>
+            <item id="166050130" name="Blazing Warlord's Idian: Physical/Magical Defense"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053091" decomposable_name="Modor's Curiosity Box">
-		<items chance="50">
-			<item id="188053155" name="Modor's Equipment Box"/>
+        <items>
+            <item id="188053099" name="Pure Modor's Equipment Crux Box"/>
+            <item id="188054380" name="Pallasite Ingredient Box"/>
 		</items>
-		<items chance="50">
-			<item id="188053099" name="Pure Modor's Equipment Crux Box"/>
-		</items>
-	</decomposable>
+		<items>
+            <item id="125004076" name="Pure Lunatic Modor's Templar Helm" player_class="TEMPLAR"/>
+            <item id="125004077" name="Pure Lunatic Modor's Gladiator Helm" player_class="GLADIATOR"/>
+            <item id="125004081" name="Pure Lunatic Modor's Hat" player_class="ASSASSIN"/>
+            <item id="125004081" name="Pure Lunatic Modor's Hat" player_class="RANGER"/>
+            <item id="125004082" name="Pure Lunatic Modor's Gunslinger Headpiece" player_class="GUNNER"/>
+            <item id="125004078" name="Pure Lunatic Modor's Chanter Chain Helm" player_class="CHANTER"/>
+            <item id="125004079" name="Pure Lunatic Modor's Cleric Chain Helm" player_class="CLERIC"/>
+            <item id="125004080" name="Pure Lunatic Modor's Aethertech Chain Helm" player_class="RIDER"/>
+            <item id="125004083" name="Pure Lunatic Modor's Hat" player_class="SORCERER"/>
+            <item id="125004083" name="Pure Lunatic Modor's Hat" player_class="SPIRIT_MASTER"/>
+            <item id="125004084" name="Pure Lunatic Modor's Songweaver Headband" player_class="BARD"/>
+            <item id="188054380" name="Pallasite Ingredient Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053092" decomposable_name="Danuar Reliquary Expedition's Artifacts"/> <!-- NEW -->
 	<decomposable item_id="188053093" decomposable_name="Dynatoum's Curiosity Box">
-		<items chance="50">
-			<item id="188052829" name="Dynatoum's Armor Box"/>
+        <items>
+            <item id="188053100" name="Pure Dynatoum's Equipment Crux Box"/>
+            <item id="188054380" name="Pallasite Ingredient Box"/>
 		</items>
-		<items chance="30">
-			<item id="188052828" name="Dynatoum's Weapon Box"/>
-		</items>
-		<items chance="10">
-			<item id="188052831" name="Dynatoum's Brazen Armor Box"/>
-		</items>
-		<items chance="10">
-			<item id="188052830" name="Dynatoum's Brazen Weapon Box"/>
-		</items>
-		<items chance="40">
-			<item id="188053100" name="Pure Dynatoum's Equipment Crux Box"/>
-		</items>
-	</decomposable>
+		<items>
+            <item id="125004085" name="Pure Dynatoum's Radiant Helm" player_class="TEMPLAR"/>
+            <item id="125004086" name="Pure Dynatoum's Radiant Helm" player_class="GLADIATOR"/>
+            <item id="125004089" name="Pure Dynatoum's Radiant Hat" player_class="ASSASSIN"/>
+            <item id="125004089" name="Pure Dynatoum's Radiant Hat" player_class="RANGER"/>
+            <item id="125004090" name="Pure Dynatoum's Radiant Hat" player_class="GUNNER"/>
+            <item id="125004087" name="Pure Dynatoum's Radiant Chain Helm" player_class="CHANTER"/>
+            <item id="125004087" name="Pure Dynatoum's Radiant Chain Helm" player_class="CLERIC"/>
+            <item id="125004088" name="Pure Dynatoum's Radiant Chain Helm" player_class="RIDER"/>
+            <item id="125004091" name="Pure Dynatoum's Radiant Headband" player_class="SORCERER"/>
+            <item id="125004091" name="Pure Dynatoum's Radiant Headband" player_class="SPIRIT_MASTER"/>
+            <item id="125004092" name="Pure Dynatoum's Radiant Headband" player_class="BARD"/>
+            <item id="188054380" name="Pallasite Ingredient Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053094" decomposable_name="Illuminary Obelisk Supplies Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053099" decomposable_name="Pure Modor's Equipment Crux Box">
-		<items>
-			<item id="152221755" name="Morph Method: Danuar Reliquary Physical Laurel"/>
-		</items>
-		<items>
-			<item id="152221756" name="Morph Method: Danuar Reliquary Magical Laurel"/>
-		</items>
-		<items>
-			<item id="152221757" name="Morph Method: Danuar Reliquary Chest Laurel"/>
-		</items>
-		<items>
-			<item id="152221758" name="Morph Method: Danuar Reliquary Leg Laurel"/>
-		</items>
-		<items>
-			<item id="152221759" name="Morph Method: Danuar Reliquary Hand Laurel"/>
-		</items>
-		<items>
-			<item id="152221760" name="Morph Method: Danuar Reliquary Shoulder Laurel"/>
-		</items>
-		<items>
-			<item id="152221761" name="Morph Method: Danuar Reliquary Foot Laurel"/>
-		</items>
-	</decomposable>
-	<decomposable item_id="188053100" decomposable_name="Pure Dynatoum's Equipment Crux Box">
-		<items>
-			<item id="152221762" name="Morph Method: Illuminary Obelisk Physical Laurel"/>
-		</items>
-		<items>
-			<item id="152221763" name="Morph Method: Illuminary Obelisk Magical Laurel"/>
-		</items>
-		<items>
-			<item id="152221764" name="Morph Method: Illuminary Obelisk Chest Laurel"/>
-		</items>
-		<items>
-			<item id="152221765" name="Morph Method: Illuminary Obelisk Leg Laurel"/>
-		</items>
-		<items>
-			<item id="152221766" name="Morph Method: Illuminary Obelisk Hand Laurel"/>
-		</items>
-		<items>
-			<item id="152221767" name="Morph Method: Illuminary Obelisk Shoulder Laurel"/>
-		</items>
-		<items>
-			<item id="152221768" name="Morph Method: Illuminary Obelisk Foot Laurel"/>
-		</items>
-	</decomposable>
+	<decomposable item_id="188053099" decomposable_name="Pure Modor's Equipment Crux Box"/> <!-- NEW -->
+	<decomposable item_id="188053100" decomposable_name="Pure Dynatoum's Equipment Crux Box"/> <!-- NEW -->
 	<decomposable item_id="188053101" decomposable_name="Mysterious Reward Box"/> <!-- NEW -->
 	<decomposable item_id="188053102" decomposable_name="Lucky Danuar Reliquary Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053103" decomposable_name="Equipment Purification Material Bundle"/> <!-- NEW -->
@@ -29552,14 +29664,60 @@
 	<decomposable item_id="188053107" decomposable_name="Ahserion's Armor Box"/>
 	<decomposable item_id="188053108" decomposable_name="Ahserion's Accessory Box"/>
 	<decomposable item_id="188053109" decomposable_name="Ahserion's Equipment Box"/>
-	<decomposable item_id="188053110" decomposable_name="Ahserion's Flight Battlefield Material Bundle"/>
+	<decomposable item_id="188053110" decomposable_name="Ahserion's Flight Battlefield Material Bundle">
+        <items>
+            <item id="152012598" name="Heart of Destruction" count="2"/>
+            <item id="152012599" name="Heart of Protection" count="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053111" decomposable_name="Ahserion's Flight Manastone Material Bundle"/>
 	<decomposable item_id="188053112" decomposable_name="Ahserion's Flight Composite Manastone Bundle"/>
 	<decomposable item_id="188053113" decomposable_name="Ahserion's Flight Ancient Manastone Bundle"/>
 	<decomposable item_id="188053114" decomposable_name="Test Ahserion's Flight Manastone Bundle"/>
-	<decomposable item_id="188053115" decomposable_name="Ahserion's Flight Godstone Bundle"/>
-	<decomposable item_id="188053116" decomposable_name="Ahserion's Flight Recharger Bundle"/>
-	<decomposable item_id="188053117" decomposable_name="Ahserion's Glory Reward Box"/>
+	<decomposable item_id="188053115" decomposable_name="Ahserion's Flight Godstone Bundle">
+        <items>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
+		</items>
+		<items>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053116" decomposable_name="Ahserion's Flight Recharger Bundle">
+        <items>
+            <item id="168310016" name="Major Deep Conditioning: Level 2" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="168310018" name="Major Blessed Augment: Level 2" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="168310017" name="Major Deep Conditioning: Level 2" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="168310019" name="Major Blessed Augment: Level 2" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053117" decomposable_name="Ahserion's Glory Reward Box">
+        <items>
+            <item id="188053109" name="Ahserion's Equipment Box"/>
+            <item id="188053112" name="Ahserion's Flight Composite Manastone Bundle"/>
+            <item id="188053113" name="Ahserion's Flight Ancient Manastone Bundle"/>
+            <item id="188053115" name="Ahserion's Flight Godstone Bundle"/>
+            <item id="188053090" name="Ahserion's Flight Champion's Bundle"/>
+            <item id="188053116" name="Ahserion's Flight Recharger Bundle"/>
+            <item id="188053110" name="Ahserion's Flight Battlefield Material Bundle"/>
+            <item id="186000242" name="Ceramium Medal" count="4"/>
+            <item id="169610148" name="[Title] Ahserion Conqueror (3 days)"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053118" decomposable_name="Lesser Betrayer's Equipment Box">
 		<items>
 			<item id="100001700" name="Lesser Betrayer's Sword" player_class="GLADIATOR"/>
