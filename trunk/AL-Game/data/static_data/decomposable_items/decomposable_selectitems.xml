@@ -1954,17 +1954,105 @@
             <item id="188100201" name="Tenth Magic Paint" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053251" name="[Event] Noble Commander Card"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053260" name="Jaadis' Fabled Pants Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053261" name="Afrane's Fabled Shoe Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053262" name="Lakshmi's Fabled Gloves Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053263" name="Nimbarka's Fabled Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053264" name="Saraswati's Fabled Shoulder Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053266" name="Jaadis' Pants Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053267" name="Afrane's Shoe Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053268" name="Lakshmi's Gloves Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053269" name="Nimbarka's Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053270" name="Saraswati's Shoulder Gear Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053251" name="[Event] Noble Commander Card">
+        <items>
+            <item id="152231926" name="[Event] Alchemical Transformation Formula for Ceramium Medal" count="1"/>
+            <item id="152231927" name="[Event] Alchemical Transformation Formula for Mithril Medal" count="1"/>
+            <item id="152231928" name="[Event] Alchemical Transformation Formula for Platinum Medal" count="1"/>
+            <item id="186000236" name="Blood Mark" count="10"/>
+            <item id="162000083" name="Leader's Recovery Scroll" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053260" name="Jaadis' Fabled Pants Box">
+        <items>
+            <item id="113100662" name="Sunrise Leggings" count="1"/>
+            <item id="113300678" name="Breeches of Dark Dusk" count="1"/>
+            <item id="113500651" name="Deep Abyss Chausses" count="1"/>
+            <item id="113600626" name="Ice Black Greaves" count="1"/>
+            <item id="113501587" name="Deep Abyss Magic Chausses" count="1"/>
+            <item id="113301555" name="Magic Breeches of Dark Dusk" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053261" name="Afrane's Fabled Shoe Box">
+        <items>
+            <item id="114100680" name="Sunrise Shoes" count="1"/>
+            <item id="114300693" name="Boots of Dark Dusk" count="1"/>
+            <item id="114500659" name="Deep Abyss Brogans" count="1"/>
+            <item id="114600617" name="Ice Black Sabatons" count="1"/>
+            <item id="114501596" name="Deep Abyss Magic Brogans" count="1"/>
+            <item id="114301593" name="Magic Boots of Dark Dusk" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053262" name="Lakshmi's Fabled Gloves Box">
+        <items>
+            <item id="111100653" name="Sunrise Gloves" count="1"/>
+            <item id="111300655" name="Vambrace of Dark Dusk" count="1"/>
+            <item id="111500642" name="Deep Abyss Handguards" count="1"/>
+            <item id="111600632" name="Ice Black Gauntlets" count="1"/>
+            <item id="111501569" name="Deep Abyss Magic Handguards" count="1"/>
+            <item id="111301527" name="Magic Vambrace of Dark Dusk" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053263" name="Nimbarka's Fabled Armor Box">
+        <items>
+            <item id="110100734" name="Sunrise Tunic" count="1"/>
+            <item id="110300696" name="Jerkin of Dark Dusk" count="1"/>
+            <item id="110500673" name="Deep Abyss Hauberk" count="1"/>
+            <item id="110600659" name="Ice Black Breastplate" count="1"/>
+            <item id="110551011" name="Deep Abyss Magic Hauberk" count="1"/>
+            <item id="110301589" name="Magic Jerkin of Dark Dusk" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053264" name="Saraswati's Fabled Shoulder Box">
+        <items>
+            <item id="112100614" name="Sunrise Pauldrons" count="1"/>
+            <item id="112300614" name="Shoulderguards of Dark Dusk" count="1"/>
+            <item id="112500602" name="Deep Abyss Spaulders" count="1"/>
+            <item id="112600610" name="Ice Black Shoulderplates" count="1"/>
+            <item id="112501511" name="Deep Abyss Magic Spaulders" count="1"/>
+            <item id="112301468" name="Magic Shoulderguards of Dark Dusk" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053266" name="Jaadis' Pants Box">
+        <items>
+            <item id="113100661" name="Bakarma Elite's Leggings" count="1"/>
+            <item id="113300677" name="Bakarma Elite's Breeches" count="1"/>
+            <item id="113500650" name="Bakarma Elite's Chausses" count="1"/>
+            <item id="113600625" name="Bakarma Elite's Greaves" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053267" name="Afrane's Shoe Box">
+        <items>
+            <item id="114100679" name="Bakarma Elite's Shoes" count="1"/>
+            <item id="114300692" name="Bakarma Elite's Boots" count="1"/>
+            <item id="114500658" name="Bakarma Elite's Brogans" count="1"/>
+            <item id="114600616" name="Bakarma Elite's Sabatons" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053268" name="Lakshmi's Gloves Box">
+        <items>
+            <item id="111100652" name="Bakarma Elite's Gloves" count="1"/>
+            <item id="111300654" name="Bakarma Elite's Vambrace" count="1"/>
+            <item id="111500641" name="Bakarma Elite's Handguards" count="1"/>
+            <item id="111600631" name="Bakarma Elite's Gauntlets" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053269" name="Nimbarka's Armor Box">
+        <items>
+            <item id="110100733" name="Bakarma Elite's Tunic" count="1"/>
+            <item id="110300695" name="Bakarma Elite's Jerkin" count="1"/>
+            <item id="110500672" name="Bakarma Elite's Hauberk" count="1"/>
+            <item id="110600658" name="Bakarma Elite's Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053270" name="Saraswati's Shoulder Gear Box">
+        <items>
+            <item id="112100613" name="Bakarma Elite's Pauldrons" count="1"/>
+            <item id="112300613" name="Bakarma Elite's Shoulderguards" count="1"/>
+            <item id="112500601" name="Bakarma Elite's Spaulders" count="1"/>
+            <item id="112600609" name="Bakarma Elite's Shoulderplates" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053276" name="Anuhart's Fabled Pants Box">
 		<items>
 			<item id="113100876" name="Anuhart Sorcerer's Leggings" count="1"/>
@@ -2381,20 +2469,120 @@
             <item id="188100100" name="Utility Lockbox Key" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053650" name="[Event] Timeless Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053651" name="[Event] Timeless Tunic Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053652" name="[Event] Timeless Pants Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053653" name="[Event] Timeless Shoulder Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053654" name="[Event] Timeless Glove Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053655" name="[Event] Timeless Shoe Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053650" name="[Event] Timeless Weapon Box">
+        <items>
+            <item id="100201264" name="Curator's Dagger" count="1" race="ELYOS"/>
+            <item id="100901118" name="Curator's Greatsword" count="1" race="ELYOS"/>
+            <item id="101801159" name="Curator's Pistol" count="1" race="ELYOS"/>
+            <item id="101901070" name="Curator's Aethercannon" count="1" race="ELYOS"/>
+            <item id="100601166" name="Curator's Spellbook" count="1" race="ELYOS"/>
+            <item id="101301055" name="Curator's Polearm" count="1" race="ELYOS"/>
+            <item id="100501110" name="Curator's Orb" count="1" race="ELYOS"/>
+            <item id="100001429" name="Curator's Sword" count="1" race="ELYOS"/>
+            <item id="100101102" name="Curator's Mace" count="1" race="ELYOS"/>
+            <item id="101501136" name="Curator's Staff" count="1" race="ELYOS"/>
+            <item id="102001186" name="Curator's Harp" count="1" race="ELYOS"/>
+            <item id="101701154" name="Curator's Bow" count="1" race="ELYOS"/>
+            <item id="102100951" name="Curator's Cipher-Blade" count="1" race="ELYOS"/>
+            <item id="115001473" name="Curator's Battle Shield" count="1" race="ELYOS"/>
+            <item id="100201265" name="Warden's Dagger" count="1" race="ASMODIANS"/>
+            <item id="100901119" name="Warden's Greatsword" count="1" race="ASMODIANS"/>
+            <item id="101801160" name="Warden's Pistol" count="1" race="ASMODIANS"/>
+            <item id="101901071" name="Warden's Aethercannon" count="1" race="ASMODIANS"/>
+            <item id="100601167" name="Warden's Spellbook" count="1" race="ASMODIANS"/>
+            <item id="101301056" name="Warden's Polearm" count="1" race="ASMODIANS"/>
+            <item id="100501111" name="Warden's Orb" count="1" race="ASMODIANS"/>
+            <item id="100001430" name="Warden's Sword" count="1" race="ASMODIANS"/>
+            <item id="100101103" name="Warden's Mace" count="1" race="ASMODIANS"/>
+            <item id="101501137" name="Warden's Staff" count="1" race="ASMODIANS"/>
+            <item id="102001187" name="Warden's Harp" count="1" race="ASMODIANS"/>
+            <item id="101701155" name="Warden's Bow" count="1" race="ASMODIANS"/>
+            <item id="102100952" name="Warden's Cipher-Blade" count="1" race="ASMODIANS"/>
+            <item id="115001474" name="Warden's Battle Shield" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053651" name="[Event] Timeless Tunic Box">
+        <items>
+            <item id="110301404" name="Curator's Jerkin" count="1" race="ELYOS"/>
+            <item id="110101496" name="Curator's Tunic" count="1" race="ELYOS"/>
+            <item id="110501379" name="Curator's Hauberk" count="1" race="ELYOS"/>
+            <item id="110601353" name="Curator's Breastplate" count="1" race="ELYOS"/>
+            <item id="110301734" name="Consul's Magic Jerkin" count="1" race="ELYOS"/>
+            <item id="110301405" name="Warden's Jerkin" count="1" race="ASMODIANS"/>
+            <item id="110101497" name="Warden's Tunic" count="1" race="ASMODIANS"/>
+            <item id="110501380" name="Warden's Hauberk" count="1" race="ASMODIANS"/>
+            <item id="110601354" name="Warden's Breastplate" count="1" race="ASMODIANS"/>
+            <item id="110301735" name="Envoy's Magic Jerkin" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053652" name="[Event] Timeless Pants Box">
+        <items>
+            <item id="113301369" name="Curator's Breeches" count="1" race="ELYOS"/>
+            <item id="113101367" name="Curator's Leggings" count="1" race="ELYOS"/>
+            <item id="113501352" name="Curator's Chausses" count="1" race="ELYOS"/>
+            <item id="113601305" name="Curator's Greaves" count="1" race="ELYOS"/>
+            <item id="113301703" name="Consul's Magic Breeches" count="1" race="ELYOS"/>
+            <item id="113301370" name="Warden's Breeches" count="1" race="ASMODIANS"/>
+            <item id="113101368" name="Warden's Leggings" count="1" race="ASMODIANS"/>
+            <item id="113501353" name="Warden's Chausses" count="1" race="ASMODIANS"/>
+            <item id="113601306" name="Warden's Greaves" count="1" race="ASMODIANS"/>
+            <item id="113301704" name="Envoy's Magic Breeches" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053653" name="[Event] Timeless Shoulder Box">
+        <items>
+            <item id="112301288" name="Curator's Shoulderguards" count="1" race="ELYOS"/>
+            <item id="112101307" name="Curator's Pauldrons" count="1" race="ELYOS"/>
+            <item id="112501277" name="Curator's Spaulders" count="1" race="ELYOS"/>
+            <item id="112601296" name="Curator's Shoulderplates" count="1" race="ELYOS"/>
+            <item id="112301611" name="Consul's Magic Shoulderguards" count="1" race="ELYOS"/>
+            <item id="112301289" name="Warden's Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="112101308" name="Warden's Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="112501278" name="Warden's Spaulders" count="1" race="ASMODIANS"/>
+            <item id="112601297" name="Warden's Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="112301612" name="Envoy's Magic Shoulderguards" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053654" name="[Event] Timeless Glove Box">
+        <items>
+            <item id="111301345" name="Curator's Vambrace" count="1" race="ELYOS"/>
+            <item id="111101350" name="Curator's Gloves" count="1" race="ELYOS"/>
+            <item id="111501337" name="Curator's Handguards" count="1" race="ELYOS"/>
+            <item id="111601316" name="Curator's Gauntlets" count="1" race="ELYOS"/>
+            <item id="111301672" name="Consul's Magic Vambrace" count="1" race="ELYOS"/>
+            <item id="111301346" name="Warden's Vambrace" count="1" race="ASMODIANS"/>
+            <item id="111101351" name="Warden's Gloves" count="1" race="ASMODIANS"/>
+            <item id="111501338" name="Warden's Handguards" count="1" race="ASMODIANS"/>
+            <item id="111601317" name="Warden's Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="111301673" name="Envoy's Magic Vambrace" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053655" name="[Event] Timeless Shoe Box">
+        <items>
+            <item id="114301404" name="Curator's Boots" count="1" race="ELYOS"/>
+            <item id="114101398" name="Curator's Shoes" count="1" race="ELYOS"/>
+            <item id="114501360" name="Curator's Brogans" count="1" race="ELYOS"/>
+            <item id="114601302" name="Curator's Sabatons" count="1" race="ELYOS"/>
+            <item id="114301740" name="Consul's Magic Boots" count="1" race="ELYOS"/>
+            <item id="114301405" name="Warden's Boots" count="1" race="ASMODIANS"/>
+            <item id="114101399" name="Warden's Shoes" count="1" race="ASMODIANS"/>
+            <item id="114501361" name="Warden's Brogans" count="1" race="ASMODIANS"/>
+            <item id="114601303" name="Warden's Sabatons" count="1" race="ASMODIANS"/>
+            <item id="114301741" name="Envoy's Magic Boots" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053656" name="[Event] Empyrean Plume Chest">
-		<items>
-			<item id="187100015" name="Kaisinel's Plume: Attack" count="1" race="ELYOS"/>
-			<item id="187100016" name="Kaisinel's Plume: Magic Boost" count="1" race="ELYOS"/>
-			<item id="187100017" name="Marchutan's Plume: Attack" count="1" race="ASMODIANS"/>
-			<item id="187100018" name="Marchutan's Plume: Magic Boost" count="1" race="ASMODIANS"/>
-		</items>
-	</decomposable_selectitem>
+        <items>
+            <item id="187100015" name="Kaisinel's Plume: Attack" count="1" race="ELYOS"/>
+            <item id="187100016" name="Kaisinel's Plume: Magic Boost" count="1" race="ELYOS"/>
+            <item id="187100019" name="Kaisinel's Plume: Crit Strike" count="1" race="ELYOS"/>
+            <item id="187100020" name="Kaisinel's Plume: Magical Accuracy" count="1" race="ELYOS"/>
+            <item id="187100017" name="Marchutan's Plume: Attack" count="1" race="ASMODIANS"/>
+            <item id="187100018" name="Marchutan's Plume: Magic Boost" count="1" race="ASMODIANS"/>
+            <item id="187100021" name="Marchutan's Plume: Crit Strike" count="1" race="ASMODIANS"/>
+            <item id="187100022" name="Marchutan's Plume: Magical Accuracy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053658" name="[Event] Honorable Commander's Ring Box">
 		<items>
             <item id="122001659" name="Noble Guardian Commander's Combat Ring" count="1" race="ELYOS"/>
@@ -3471,7 +3659,44 @@
             <item id="114501813" name="Bootleg Shepherd's Divine Brogans" count="1" race="ASMODIANS"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053885" name="Bootleg Divine Chain Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053885" name="Bootleg Divine Chain Box">
+        <items player_class="CHANTER">
+            <item id="110551227" name="Bootleg Emissary's Divine Hauberk" count="1" race="ELYOS"/>
+            <item id="111501786" name="Bootleg Emissary's Divine Handguards" count="1" race="ELYOS"/>
+            <item id="112501725" name="Bootleg Emissary's Divine Spaulders" count="1" race="ELYOS"/>
+            <item id="113501804" name="Bootleg Emissary's Divine Chausses" count="1" race="ELYOS"/>
+            <item id="114501814" name="Bootleg Emissary's Divine Brogans" count="1" race="ELYOS"/>
+            <item id="110551228" name="Bootleg Ambassador's Divine Hauberk" count="1" race="ASMODIANS"/>
+            <item id="111501787" name="Bootleg Ambassador's Divine Handguards" count="1" race="ASMODIANS"/>
+            <item id="112501726" name="Bootleg Ambassador's Divine Spaulders" count="1" race="ASMODIANS"/>
+            <item id="113501805" name="Bootleg Ambassador's Divine Chausses" count="1" race="ASMODIANS"/>
+            <item id="114501815" name="Bootleg Ambassador's Divine Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551227" name="Bootleg Emissary's Divine Hauberk" count="1" race="ELYOS"/>
+            <item id="111501786" name="Bootleg Emissary's Divine Handguards" count="1" race="ELYOS"/>
+            <item id="112501725" name="Bootleg Emissary's Divine Spaulders" count="1" race="ELYOS"/>
+            <item id="113501804" name="Bootleg Emissary's Divine Chausses" count="1" race="ELYOS"/>
+            <item id="114501814" name="Bootleg Emissary's Divine Brogans" count="1" race="ELYOS"/>
+            <item id="110551228" name="Bootleg Ambassador's Divine Hauberk" count="1" race="ASMODIANS"/>
+            <item id="111501787" name="Bootleg Ambassador's Divine Handguards" count="1" race="ASMODIANS"/>
+            <item id="112501726" name="Bootleg Ambassador's Divine Spaulders" count="1" race="ASMODIANS"/>
+            <item id="113501805" name="Bootleg Ambassador's Divine Chausses" count="1" race="ASMODIANS"/>
+            <item id="114501815" name="Bootleg Ambassador's Divine Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551227" name="Bootleg Emissary's Divine Hauberk" count="1" race="ELYOS"/>
+            <item id="111501786" name="Bootleg Emissary's Divine Handguards" count="1" race="ELYOS"/>
+            <item id="112501725" name="Bootleg Emissary's Divine Spaulders" count="1" race="ELYOS"/>
+            <item id="113501804" name="Bootleg Emissary's Divine Chausses" count="1" race="ELYOS"/>
+            <item id="114501814" name="Bootleg Emissary's Divine Brogans" count="1" race="ELYOS"/>
+            <item id="110551228" name="Bootleg Ambassador's Divine Hauberk" count="1" race="ASMODIANS"/>
+            <item id="111501787" name="Bootleg Ambassador's Divine Handguards" count="1" race="ASMODIANS"/>
+            <item id="112501726" name="Bootleg Ambassador's Divine Spaulders" count="1" race="ASMODIANS"/>
+            <item id="113501805" name="Bootleg Ambassador's Divine Chausses" count="1" race="ASMODIANS"/>
+            <item id="114501815" name="Bootleg Ambassador's Divine Brogans" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053886" name="Bootleg Divine Leather Armor Crate"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053887" name="Bootleg Divine Leather Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053888" name="Bootleg Divine Cloth Armor Crate"/> <!-- NEW -->
@@ -4256,11 +4481,75 @@
             <item id="125003758" name="Bastion Protector Firm Hat" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054240" name="Iron Wall Cloth Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054241" name="Iron Wall Leather Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054242" name="Iron Wall Chain Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054243" name="Iron Wall Plate Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054247" name="[Event] Delegate's Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054240" name="Iron Wall Cloth Armor Box">
+        <items>
+            <item id="111101518" name="Bastion Defender Firm Gloves" count="1"/>
+            <item id="111101520" name="Bastion Protector Firm Gloves" count="1"/>
+            <item id="113101533" name="Bastion Defender Firm Leggings" count="1"/>
+            <item id="113101535" name="Bastion Protector Firm Leggings" count="1"/>
+            <item id="114101567" name="Bastion Defender Firm Shoes" count="1"/>
+            <item id="114101569" name="Bastion Protector Firm Shoes" count="1"/>
+            <item id="112101471" name="Bastion Defender Firm Pauldrons" count="1"/>
+            <item id="112101473" name="Bastion Protector Firm Pauldrons" count="1"/>
+            <item id="110101686" name="Bastion Defender Firm Tunic" count="1"/>
+            <item id="110101688" name="Bastion Protector Firm Tunic" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054241" name="Iron Wall Leather Armor Box">
+        <items>
+            <item id="111301632" name="Bastion Defender Firm Vambrace" count="1"/>
+            <item id="111301634" name="Bastion Protector Firm Magic Vambrace" count="1"/>
+            <item id="113301663" name="Bastion Defender Firm Breeches" count="1"/>
+            <item id="113301665" name="Bastion Protector Firm Magic Breeches" count="1"/>
+            <item id="114301700" name="Bastion Defender Firm Boots" count="1"/>
+            <item id="114301702" name="Bastion Protector Firm Magic Boots" count="1"/>
+            <item id="112301571" name="Bastion Defender Firm Shoulderguards" count="1"/>
+            <item id="112301573" name="Bastion Protector Firm Magic Shoulderguards" count="1"/>
+            <item id="110301694" name="Bastion Defender Firm Jerkin" count="1"/>
+            <item id="110301696" name="Bastion Protector Firm Magic Jerkin" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054242" name="Iron Wall Chain Armor Box">
+        <items>
+            <item id="111501478" name="Bastion Defender Firm Handguards" count="1"/>
+            <item id="111501480" name="Bastion Protector Firm Handguards" count="1"/>
+            <item id="111501487" name="Bastion Defender Firm Magic Handguards" count="1"/>
+            <item id="113501496" name="Bastion Defender Firm Chausses" count="1"/>
+            <item id="113501498" name="Bastion Protector Firm Chausses" count="1"/>
+            <item id="113501505" name="Bastion Defender Firm Magic Chausses" count="1"/>
+            <item id="114501505" name="Bastion Defender Firm Brogans" count="1"/>
+            <item id="114501507" name="Bastion Protector Firm Brogans" count="1"/>
+            <item id="114501514" name="Bastion Defender Firm Magic Brogans" count="1"/>
+            <item id="112501420" name="Bastion Defender Firm Spaulders" count="1"/>
+            <item id="112501422" name="Bastion Protector Firm Spaulders" count="1"/>
+            <item id="112501429" name="Bastion Defender Firm Magic Spaulders" count="1"/>
+            <item id="110501523" name="Bastion Defender Firm Hauberk" count="1"/>
+            <item id="110501528" name="Bastion Protector Firm Hauberk" count="1"/>
+            <item id="110550929" name="Bastion Defender Firm Magic Hauberk" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054243" name="Iron Wall Plate Armor Box">
+        <items>
+            <item id="111601460" name="Bastion Defender Firm Gauntlets" count="1"/>
+            <item id="111601462" name="Bastion Protector Firm Gauntlets" count="1"/>
+            <item id="113601443" name="Bastion Defender Firm Greaves" count="1"/>
+            <item id="113601445" name="Bastion Protector Firm Greaves" count="1"/>
+            <item id="114601450" name="Bastion Defender Firm Sabatons" count="1"/>
+            <item id="114601452" name="Bastion Protector Firm Sabatons" count="1"/>
+            <item id="112601441" name="Bastion Defender Firm Shoulderplates" count="1"/>
+            <item id="112601443" name="Bastion Protector Firm Shoulderplates" count="1"/>
+            <item id="110601497" name="Bastion Defender Firm Breastplate" count="1"/>
+            <item id="110601499" name="Bastion Protector Firm Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054247" name="[Event] Delegate's Armor Box">
+        <items>
+            <item id="188054248" name="[Event] Delegate's Plate Armor Box" count="1"/>
+            <item id="188054249" name="[Event] Delegate's Chain Armor Box" count="1"/>
+            <item id="188054250" name="[Event] Delegate's Leather Armor Box" count="1"/>
+            <item id="188054251" name="[Event] Delegate's Cloth Armor Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054254" name="[Event] Nether Lotan's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054256" name="Pure Lunatic Modor's Weapon Crux Bundle"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054263" name="Rike's Idian Support Box">
@@ -4298,7 +4587,14 @@
 	<decomposable_selectitem item_id="188054329" name="New Recruit's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054338" name="[Event] Empyrean Lord Protector's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054339" name="[Event] Empyrean Lord Protector's Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054342" name="[Event] Brilliant Pallasite Material Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054342" name="[Event] Brilliant Pallasite Material Box">
+        <items>
+            <item id="169405338" name="Pallasite Ore" count="5"/>
+            <item id="169405339" name="Pallasite Crystal" count="5"/>
+            <item id="169405340" name="Pallasite Powder" count="5"/>
+            <item id="169405341" name="Pallasite Refined Water" count="5"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054343" name="[Event] Vasharti Brigade General's Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054344" name="[Event] Vasharti Brigade General's Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054370" name="Master Veteran's Weapon Box"/> <!-- NEW -->
@@ -4409,14 +4705,69 @@
         </items>
     </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054401" name="[Event] Lunatic Modor's Mythic Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054403" name="[Event] Daily Fuzzball Transformation Candy Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054404" name="[Event] Bird Hat Box\nDouble-click to open."/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box">
+        <items>
+            <item id="160010445" name="Strong Dignified Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010446" name="Strong Wise Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010447" name="Strong Fast Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010448" name="Strong Dignified Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+            <item id="160010449" name="Strong Wise Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+            <item id="160010450" name="Strong Fast Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054403" name="[Event] Daily Fuzzball Transformation Candy Box">
+        <items>
+            <item id="160010445" name="Strong Dignified Ayas Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010446" name="Strong Wise Ayas Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010447" name="Strong Fast Ayas Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010448" name="Strong Dignified Ayas Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010449" name="Strong Wise Ayas Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010450" name="Strong Fast Ayas Transformation Candy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054404" name="[Event] Bird Hat Box">
+        <items>
+            <item id="125045632" name="[Event] Rooster Hat" count="1"/>
+            <item id="125045633" name="[Event] Crow Hat" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054408" name="[Event] Wholehearted Ayas Manastone Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054409" name="[Event] Wholehearted Ayas Ancient Manastone Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054420" name="[Event] Lunatic Modor's Mythic Weapon Box (21 days)"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054427" name="Sea Feast Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054428" name="Exalted Katalium Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054427" name="Sea Feast Weapon Box">
+        <items>
+            <item id="100001791" name="Wave Song Sword" count="1"/>
+            <item id="100101381" name="Wave Song Mace" count="1"/>
+            <item id="100201556" name="Wave Song Dagger" count="1"/>
+            <item id="100501349" name="Wave Song Orb" count="1"/>
+            <item id="100601466" name="Wave Song Spellbook" count="1"/>
+            <item id="100901418" name="Wave Song Greatsword" count="1"/>
+            <item id="101301307" name="Wave Song Polearm" count="1"/>
+            <item id="101501396" name="Wave Song Staff" count="1"/>
+            <item id="101701402" name="Wave Song Bow" count="1"/>
+            <item id="101801260" name="Wave Song Pistol" count="1"/>
+            <item id="101901167" name="Wave Song Aethercannon" count="1"/>
+            <item id="102001286" name="Wave Song Harp" count="1"/>
+            <item id="102101103" name="Wave Song Cipher-Blade" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054428" name="Exalted Katalium Weapon Box">
+        <items>
+            <item id="100001544" name="Exalted Noble Katalium Sword" count="1"/>
+            <item id="100101179" name="Exalted Noble Katalium Mace" count="1"/>
+            <item id="100201349" name="Exalted Noble Katalium Dagger" count="1"/>
+            <item id="100501183" name="Exalted Noble Katalium Orb" count="1"/>
+            <item id="100601271" name="Exalted Noble Katalium Spellbook" count="1"/>
+            <item id="100901198" name="Exalted Noble Katalium Greatsword" count="1"/>
+            <item id="101301131" name="Exalted Noble Katalium Polearm" count="1"/>
+            <item id="101501212" name="Exalted Noble Katalium Staff" count="1"/>
+            <item id="101701230" name="Exalted Noble Katalium Bow" count="1"/>
+            <item id="101801013" name="Exalted Noble Katalium Pistol" count="1"/>
+            <item id="101900977" name="Exalted Noble Katalium Aethercannon" count="1"/>
+            <item id="102001040" name="Exalted Noble Katalium Harp" count="1"/>
+            <item id="102100816" name="Exalted Noble Katalium Cipher-Blade" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054430" name="Lucky Stigma Bundle">
         <items>
             <item id="188054433" name="Gladiator Elite Stigma Bundle" count="1"/>
@@ -4477,14 +4828,93 @@
 	<decomposable_selectitem item_id="188054603" name="Mysterious Commander's Accessory Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054604" name="Mysterious Sauro Commander's Accessory Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054605" name="Mysterious Centurion's Accessory Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054606" name="Mysterious Centurion's Hat Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054607" name="Mysterious Ancient Spirit's Accessory Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054608" name="Mysterious Accessory Box of the Fallen Spirit"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054609" name="Mysterious Sauro Commander's Hat Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054622" name="[Black Star] Megaring Member Reward Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054623" name="[Black Star] Megaring Member Reward Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054626" name="Dark Lord's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054627" name="Darken Lord's Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054606" name="Mysterious Centurion's Hat Box">
+        <items>
+            <item id="125004450" name="Mysterious Guardian Centurion's Cloth Bandana" count="1" race="ELYOS"/>
+            <item id="125004451" name="Mysterious Guardian Centurion's Leather Hat" count="1" race="ELYOS"/>
+            <item id="125004452" name="Mysterious Guardian Centurion's Chain Helmet" count="1" race="ELYOS"/>
+            <item id="125004453" name="Mysterious Guardian Centurion's Plate Helmet" count="1" race="ELYOS"/>
+            <item id="125004454" name="Mysterious Archon Centurion's Cloth Bandana" count="1" race="ASMODIANS"/>
+            <item id="125004455" name="Mysterious Archon Centurion's Leather Hat" count="1" race="ASMODIANS"/>
+            <item id="125004456" name="Mysterious Archon Centurion's Chain Helmet" count="1" race="ASMODIANS"/>
+            <item id="125004457" name="Mysterious Archon Centurion's Plate Helmet" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054607" name="Mysterious Ancient Spirit's Accessory Box">
+        <items>
+            <item id="120001597" name="Mysterious Ancient Spirit's Ruby Earrings" count="1"/>
+            <item id="120001598" name="Mysterious Ancient Spirit's Sapphire Earrings" count="1"/>
+            <item id="120001599" name="Mysterious Ancient Spirit's Diamond Earrings" count="1"/>
+            <item id="121001476" name="Mysterious Ancient Spirit's Ruby Necklace" count="1"/>
+            <item id="121001477" name="Mysterious Ancient Spirit's Sapphire Necklace" count="1"/>
+            <item id="121001478" name="Mysterious Ancient Spirit's Diamond Necklace" count="1"/>
+            <item id="122001758" name="Mysterious Ancient Spirit's Ruby Ring" count="1"/>
+            <item id="122001759" name="Mysterious Ancient Spirit's Sapphire Ring" count="1"/>
+            <item id="122001760" name="Mysterious Ancient Spirit's Diamond Ring" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054608" name="Mysterious Accessory Box of the Fallen Spirit">
+        <items>
+            <item id="120001600" name="Mysterious Ruby Earrings of Fallen Spirit" count="1"/>
+            <item id="120001601" name="Mysterious Sapphire Earrings of Fallen Spirit" count="1"/>
+            <item id="120001602" name="Mysterious Diamond Earrings of Fallen Spirit" count="1"/>
+            <item id="121001479" name="Mysterious Ruby Necklace of Fallen Spirit" count="1"/>
+            <item id="121001480" name="Mysterious Sapphire Necklace of the Fallen Spirit" count="1"/>
+            <item id="121001481" name="Mysterious Diamond Necklace of the Fallen Spirit" count="1"/>
+            <item id="122001761" name="Mysterious Ruby Ring of the Fallen Spirit" count="1"/>
+            <item id="122001762" name="Mysterious Sapphire Ring of the Fallen Spirit" count="1"/>
+            <item id="122001763" name="Mysterious Diamond Ring of the Fallen Spirit" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054609" name="Mysterious Sauro Commander's Hat Box">
+        <items>
+            <item id="125004458" name="Mysterious Sauro Commander's Cloth Bandana" count="1"/>
+            <item id="125004459" name="Mysterious Sauro Commander's Chain Combat Helmet" count="1"/>
+            <item id="125004460" name="Mysterious Sauro Commander's Chain Helmet" count="1"/>
+            <item id="125004461" name="Mysterious Sauro Commander's Leather Hat" count="1"/>
+            <item id="125004462" name="Mysterious Sauro Commander's Plate Helmet" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054622" name="[Black Star] Megaring Member Reward Box">
+        <items>
+            <item id="187060181" name="[Prestige] Prestigious Feather" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054623" name="[Black Star] Megaring Member Reward Box">
+        <items>
+            <item id="187060182" name="[Prestige] Prestigious Sparkling Feather" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054626" name="Dark Lord's Weapon Box">
+        <items>
+            <item id="100001801" name="Dark Lord's Wrath" count="1"/>
+            <item id="102101111" name="Dark Lord's Craving" count="1"/>
+            <item id="100101393" name="Dark Lord's Delight" count="1"/>
+            <item id="100001802" name="Dark Lord's Lunacy" count="1"/>
+            <item id="100201566" name="Dark Lord's Murderous Intent" count="1"/>
+            <item id="101701410" name="Dark Lord's Jealousy" count="1"/>
+            <item id="102001294" name="Dark Lord's Shudder" count="1"/>
+            <item id="101801268" name="Dark Lord's Fighting Spirit" count="1"/>
+            <item id="100601474" name="Dark Lord's Distrust" count="1"/>
+            <item id="100501357" name="Dark Lord's Arrogance" count="1"/>
+            <item id="101501408" name="Dark Lord's Pride" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054627" name="Darken Lord's Weapon Box">
+        <items>
+            <item id="100001803" name="Darken Lord's Wrath" count="1"/>
+            <item id="102101112" name="Darken Lord's Craving" count="1"/>
+            <item id="100101394" name="Darken Lord's Delight" count="1"/>
+            <item id="101701411" name="Darken Lord's Jealousy" count="1"/>
+            <item id="102001295" name="Darken Lord's Shudder" count="1"/>
+            <item id="100901427" name="Darken Lord's Hatred" count="1"/>
+            <item id="100601475" name="Darken Lord's Distrust" count="1"/>
+            <item id="100501358" name="Darken Lord's Arrogance" count="1"/>
+            <item id="101901174" name="Darken Lord's Courage" count="1"/>
+            <item id="101501409" name="Darken Lord's Pride" count="1"/>
+            <item id="101301317" name="Darken Lord's Greed" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054633" name="[Event] Special Head Executor Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054634" name="[Event] Special Head Executor Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054635" name="[Event] Special Executor Weapon Box"/> <!-- NEW -->
@@ -4765,13 +5195,74 @@
 	</decomposable_selectitem>
 	<decomposable_selectitem item_id="188054869" name="Japan Lucky Game Box Race Option 49"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054987" name="Prestige Coin Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054991" name="Elegant High Grade Idian Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054993" name="Andu's Dye Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054999" name="Prestige Pack Month 1 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055000" name="Prestige Pack Month 1 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055001" name="Prestige Pack Month 2 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055002" name="Prestige Pack Month 2 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055003" name="Prestige Pack Month 3 Bonus A"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054991" name="Elegant High Grade Idian Bundle">
+        <items>
+            <item id="166050044" name="Glossy Esoteric Idian: Resistance" count="1"/>
+            <item id="166050039" name="Glossy Esoteric Idian: Physical Attack" count="1"/>
+            <item id="166050041" name="Glossy Esoteric Idian: Physical Defense" count="1"/>
+            <item id="166050045" name="Glossy Esoteric Idian: Physical/Magical Attack" count="1"/>
+            <item id="166050046" name="Glossy Esoteric Idian: Physical/Magical Defense" count="1"/>
+            <item id="166050043" name="Glossy Esoteric Idian: Assistance" count="1"/>
+            <item id="166050040" name="Glossy Esoteric Idian: Magical Attack" count="1"/>
+            <item id="166050042" name="Glossy Esoteric Idian: Magical Defense" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054993" name="Andu's Dye Box">
+        <items>
+            <item id="169231024" name="Dye: Sky Blue" count="1"/>
+            <item id="169231020" name="Dye: Pastel Orange" count="1"/>
+            <item id="169231021" name="Dye: Pastel Green Tea" count="1"/>
+            <item id="169231025" name="Dye: Pastel Violet" count="1"/>
+            <item id="169231017" name="Dye: Indian Pink" count="1"/>
+            <item id="169231023" name="Dye: Indian Blue" count="1"/>
+            <item id="169231022" name="Dye: Indian Green" count="1"/>
+            <item id="169231018" name="Dye: Romantic Pink" count="1"/>
+            <item id="169231026" name="Dye: Light Cobalt" count="1"/>
+            <item id="169231027" name="Dye: Gray Violet" count="1"/>
+            <item id="169231019" name="Dye: Baby Yellow" count="1"/>
+            <item id="169231016" name="Dye: Punky Pink" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054999" name="Prestige Pack Month 1 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="3"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="150"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="150"/>
+            <item id="169620137" name="Crafting Boost Charm I - 300%" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055000" name="Prestige Pack Month 1 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="3"/>
+            <item id="166030005" name="Tempering Solution" count="1"/>
+            <item id="166020000" name="Omega Enchantment Stone" count="1"/>
+            <item id="186000238" name="Conqueror's Mark" count="3"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055001" name="Prestige Pack Month 2 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="3"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="150"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="150"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055002" name="Prestige Pack Month 2 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="3"/>
+            <item id="169620063" name="AP Boost Charm I - 40%" count="3"/>
+            <item id="186000201" name="Protectorate Coin" count="30"/>
+            <item id="186000238" name="Conqueror's Mark" count="3"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055003" name="Prestige Pack Month 3 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="188053975" name="Stigma Box" count="1"/>
+            <item id="186000199" name="Legion Coin" count="6"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188055004" name="Prestige Pack Month 3 Bonus B"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055005" name="Prestige Pack Month 4 Bonus A"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055006" name="Prestige Pack Month 4 Bonus B"/> <!-- NEW -->
