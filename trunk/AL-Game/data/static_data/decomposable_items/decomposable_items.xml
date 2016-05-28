@@ -37884,11 +37884,35 @@
 	<decomposable item_id="188054099" decomposable_name="Respite Benefit Package"/> <!-- NEW -->
 	<decomposable item_id="188054100" decomposable_name="Bronze Coin Box"/> <!-- NEW -->
 	<decomposable item_id="188054101" decomposable_name="Silver Coin Box"/> <!-- NEW -->
-	<decomposable item_id="188054102" decomposable_name="Gold Coin Box"/> <!-- NEW -->
-	<decomposable item_id="188054103" decomposable_name="Platinum Coin Box"/> <!-- NEW -->
-	<decomposable item_id="188054104" decomposable_name="Mithril Coin Box"/> <!-- NEW -->
-	<decomposable item_id="188054105" decomposable_name="Nabaru's Golden Box"/> <!-- NEW -->
-	<decomposable item_id="188054106" decomposable_name="Large Lid"/> <!-- NEW -->
+	<decomposable item_id="188054102" decomposable_name="Gold Coin Box">
+        <items>
+            <item id="186000004" name="Gold Coin" count="40" race="ELYOS"/>
+            <item id="186000009" name="Gold Coin" count="40" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054103" decomposable_name="Platinum Coin Box">
+        <items>
+            <item id="186000005" name="Platinum Coin" count="50" race="ELYOS"/>
+            <item id="186000010" name="Platinum Coin" count="50" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054104" decomposable_name="Mithril Coin Box">
+        <items>
+            <item id="186000018" name="Mithril Coin" count="60" race="ELYOS"/>
+            <item id="186000019" name="Mithril Coin" count="60" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054105" decomposable_name="Nabaru's Golden Box">
+        <items>
+            <item id="162001044" name="Nabaru's Golden Apple" rnd_min="1" rnd_max="5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054106" decomposable_name="Large Lid">
+        <items>
+            <item id="160010354" name="Greater Seed of Transformation" race="ELYOS"/>
+            <item id="160010355" name="Greater Seed of Transformation" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054107" decomposable_name="Magnificent Clucklich Box">
 		<items chance="15.0">
 			<item id="190100164" name="Magnificent Clucklich"/>
@@ -37911,20 +37935,115 @@
 			<item id="190100162" name="The Afterburner (30 days)"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188054109" decomposable_name="Aether Cherry Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054110" decomposable_name="Prestige Coin Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054109" decomposable_name="Aether Cherry Bundle">
+        <items>
+            <item id="182007162" name="Aether Cherry"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054110" decomposable_name="Prestige Coin Bundle">
+        <items>
+            <item id="186000344" name="Prestige Coin"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054111" decomposable_name="[Event] Ice Queen's Goods Box"/> <!-- NEW -->
 	<decomposable item_id="188054114" decomposable_name="Greater Argent Manor Box"/> <!-- NEW -->
 	<decomposable item_id="188054115" decomposable_name="Argent Manor Box"/> <!-- NEW -->
-	<decomposable item_id="188054116" decomposable_name="Lesser Argent Manor Box"/> <!-- NEW -->
+	<decomposable item_id="188054116" decomposable_name="Lesser Argent Manor Box">
+        <items>
+            <item id="188054117" name="Argent Manor Composite Manastone Bundle"/>
+            <item id="169405397" name="Ancient Spirit's Ore"/>
+		</items>
+		<items>
+            <item id="188054118" name="Argent Manor Ancient Coin Bundle"/>
+            <item id="169405397" name="Ancient Spirit's Ore"/>
+		</items>
+		<items>
+            <item id="166100008" name="Greater Supplements (Eternal)"/>
+            <item id="169405397" name="Ancient Spirit's Ore"/>
+		</items>
+		<items>
+            <item id="166100011" name="Greater Supplements (Mythic)"/>
+            <item id="169405397" name="Ancient Spirit's Ore"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054117" decomposable_name="Argent Manor Composite Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054118" decomposable_name="Argent Manor Ancient Coin Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054119" decomposable_name="Argent Manor Stigma Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054118" decomposable_name="Argent Manor Ancient Coin Bundle">
+        <items>
+            <item id="186000237" name="Ancient Coin" rnd_min="1" rnd_max="4"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054119" decomposable_name="Argent Manor Stigma Bundle">
+        <items>
+            <item id="188054120" name="Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188054121" name="Greater Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188054122" name="Major Stigma Bundle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054120" decomposable_name="Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054121" decomposable_name="Greater Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054122" decomposable_name="Major Stigma Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054123" decomposable_name="Gladiator Stigma Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054124" decomposable_name="Templar Stigma Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054123" decomposable_name="Gladiator Stigma Bundle">
+        <items>
+            <item id="140001109" name="Crippling Cut"/>
+		</items>
+		<items>
+            <item id="140001110" name="Draining Blow"/>
+		</items>
+		<items>
+            <item id="140001111" name="Earthquake Wave"/>
+		</items>
+		<items>
+            <item id="140001112" name="Magical Defense"/>
+		</items>
+		<items>
+            <item id="140001113" name="Ankle Snare"/>
+		</items>
+		<items>
+            <item id="140001114" name="Siegebreaker"/>
+		</items>
+		<items>
+            <item id="140001115" name="Lockdown"/>
+		</items>
+		<items>
+            <item id="140001116" name="Dauntless Spirit"/>
+		</items>
+		<items>
+            <item id="140001117" name="Howl"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054124" decomposable_name="Templar Stigma Bundle">
+        <items>
+            <item id="140001126" name="Barricade of Steel"/>
+		</items>
+		<items>
+            <item id="140001127" name="Incite Rage"/>
+		</items>
+		<items>
+            <item id="140001128" name="Divine Fury"/>
+		</items>
+		<items>
+            <item id="140001131" name="Punishment"/>
+		</items>
+		<items>
+            <item id="140001114" name="Siegebreaker"/>
+		</items>
+		<items>
+            <item id="140001133" name="Inquisitor's Blow"/>
+		</items>
+		<items>
+            <item id="140001130" name="Punishing Thrust"/>
+		</items>
+		<items>
+            <item id="140001132" name="Aether Armor"/>
+		</items>
+		<items>
+            <item id="140001129" name="Holy Shield"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054125" decomposable_name="Assassin Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054126" decomposable_name="Marksman Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054127" decomposable_name="Sorcerer Stigma Bundle"/> <!-- NEW -->
@@ -38050,12 +38169,50 @@
 	<decomposable item_id="188054212" decomposable_name="Perento's Book"/> <!-- NEW -->
 	<decomposable item_id="188054215" decomposable_name="Perento's Shining Book"/> <!-- NEW -->
 	<decomposable item_id="188054216" decomposable_name="Perento's Shining Book"/> <!-- NEW -->
-	<decomposable item_id="188054217" decomposable_name="Refined Dignified Ayas Transformation Candy Box"/> <!-- NEW -->
-	<decomposable item_id="188054218" decomposable_name="Refined Wise Ayas Transformation Candy Box"/> <!-- NEW -->
-	<decomposable item_id="188054219" decomposable_name="Refined Fast Ayas Transformation Candy Box"/> <!-- NEW -->
-	<decomposable item_id="188054220" decomposable_name="Dignified Ayas Transformation Candy Box"/> <!-- NEW -->
-	<decomposable item_id="188054221" decomposable_name="Wise Ayas Transformation Candy Box"/> <!-- NEW -->
-	<decomposable item_id="188054222" decomposable_name="Sea and Wave Hairpin Box"/> <!-- NEW -->
+	<decomposable item_id="188054217" decomposable_name="Refined Dignified Ayas Transformation Candy Box">
+        <items>
+            <item id="160010427" name="Refined Dignified Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010428" name="Refined Dignified Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054218" decomposable_name="Refined Wise Ayas Transformation Candy Box">
+        <items>
+            <item id="160010429" name="Refined Wise Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010430" name="Refined Wise Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054219" decomposable_name="Refined Fast Ayas Transformation Candy Box">
+        <items>
+            <item id="160010431" name="Swift Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010432" name="Swift Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054220" decomposable_name="Dignified Ayas Transformation Candy Box">
+        <items>
+            <item id="160010433" name="Dignified Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010434" name="Dignified Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054221" decomposable_name="Wise Ayas Transformation Candy Box">
+        <items>
+            <item id="160010435" name="Wise Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010436" name="Wise Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054222" decomposable_name="Sea and Wave Hairpin Box">
+        <items>
+            <item id="125004300" name="Deep Sea Feast Hairpin" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="125004301" name="Wave Song Hairpin" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="125004300" name="Deep Sea Feast Hairpin" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="125004301" name="Wave Song Hairpin" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054223" decomposable_name="Shining Ornate Ruby Glasses Box"/> <!-- NEW -->
 	<decomposable item_id="188054224" decomposable_name="Abyss Brigade General's Unique Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054225" decomposable_name="Abyss Brigade General's Unique Armor Box"/> <!-- NEW -->
@@ -38068,37 +38225,150 @@
 	<decomposable item_id="188054232" decomposable_name="Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054233" decomposable_name="Greater Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054234" decomposable_name="Irridescent Omega Enchantment Stone Box"/> <!-- NEW -->
-	<decomposable item_id="188054235" decomposable_name="Theobomo's Gift Box"/> <!-- NEW -->
-	<decomposable item_id="188054236" decomposable_name="Adma Stronghold Treasure Chest"/> <!-- NEW -->
-	<decomposable item_id="188054246" decomposable_name="Conquerer's Mark Box"/> <!-- NEW -->
+	<decomposable item_id="188054235" decomposable_name="Theobomo's Gift Box">
+        <items>
+            <item id="110900993" name="Galateia's Formal Wear"/>
+		</items>
+		<items>
+            <item id="125045591" name="Galateia's Hairpin"/>
+		</items>
+		<items>
+            <item id="182007391" name="Rusty Earrings"/>
+		</items>
+		<items>
+            <item id="182007392" name="Broken Necklace"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054236" decomposable_name="Adma Stronghold Treasure Chest">
+        <items>
+            <item id="110900995" name="Karemiwen's Dress"/>
+		</items>
+		<items>
+            <item id="125045593" name="Karemiwen's Hairpin"/>
+		</items>
+		<items>
+            <item id="182007393" name="Rusty Earrings"/>
+		</items>
+		<items>
+            <item id="182007394" name="Broken Necklace"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054246" decomposable_name="Conquerer's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="100"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054248" decomposable_name="[Event] Delegate's Plate Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054249" decomposable_name="[Event] Delegate's Chain Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054250" decomposable_name="[Event] Delegate's Leather Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054251" decomposable_name="[Event] Delegate's Cloth Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054252" decomposable_name="Legendary Noble Accessory Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054253" decomposable_name="Ceramium Medal Box"/> <!-- NEW -->
+	<decomposable item_id="188054253" decomposable_name="Ceramium Medal Box">
+        <items>
+            <item id="186000242" name="Ceramium Medal"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054255" decomposable_name="Heroic Illusion Godstone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054257" decomposable_name="Shugo Wanderer Pouch"/> <!-- NEW -->
 	<decomposable item_id="188054258" decomposable_name="Shugo Wanderer Enchantment Stone Pouch"/> <!-- NEW -->
 	<decomposable item_id="188054259" decomposable_name="Shugo Wanderer Treasure Pouch"/> <!-- NEW -->
-	<decomposable item_id="188054260" decomposable_name="Ride Box of Conquest"/> <!-- NEW -->
-	<decomposable item_id="188054261" decomposable_name="Alluring Wing Feather Box"/> <!-- NEW -->
+	<decomposable item_id="188054260" decomposable_name="Ride Box of Conquest">
+        <items>
+            <item id="190100154" name="Quick Crestlich"/>
+		</items>
+		<items>
+            <item id="190100155" name="Fast Flight Bykion"/>
+		</items>
+		<items>
+            <item id="190100156" name="Quick Frillneck"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054261" decomposable_name="Alluring Wing Feather Box">
+        <items>
+            <item id="187000149" name="Wing Feather of Allure"/>
+		</items>
+		<items>
+            <item id="187000150" name="Golden Wing Feather of Allure"/>
+		</items>
+		<items>
+            <item id="187000151" name="Bright Wing Feather of Allure"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054262" decomposable_name="Honorable Equipment of Conquest Box"/> <!-- NEW -->
 	<decomposable item_id="188054265" decomposable_name="Master Relic Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054266" decomposable_name="Master Gold Medal"/> <!-- NEW -->
+	<decomposable item_id="188054266" decomposable_name="Master Gold Medal">
+        <items>
+            <item id="186000030" name="Gold Medal" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054267" decomposable_name="Fortress Chief's Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054268" decomposable_name="Fortress Advocate's Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054269" decomposable_name="Fortress Recouperator's Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054270" decomposable_name="Bright Ice Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054271" decomposable_name="Bright Ancient Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054272" decomposable_name="Bright Stigma Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054272" decomposable_name="Bright Stigma Bundle">
+        <items>
+            <item id="188053979" name="Gladiator Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053982" name="Ranger Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053988" name="Aethertech Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053983" name="Sorcerer Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053987" name="Gunslinger Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053981" name="Assassin Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053980" name="Templar Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053989" name="Songweaver Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053984" name="Spiritmaster Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053985" name="Cleric Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053986" name="Chanter Stigma Bundle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054273" decomposable_name="Bright Chill Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054274" decomposable_name="Bright Barracks Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054275" decomposable_name="Barracks Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188054276" decomposable_name="Barracks Composite Ancient Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054277" decomposable_name="Major Blood Mark Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054278" decomposable_name="Greater Blood Token Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054279" decomposable_name="Middle Grade Blood Mark Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054277" decomposable_name="Major Blood Mark Bundle">
+        <items>
+            <item id="186000414" name="Blood Medal" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" rnd_min="1" rnd_max="4"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054278" decomposable_name="Greater Blood Token Bundle">
+        <items>
+            <item id="186000236" name="Blood Mark" rnd_min="1" rnd_max="8"/>
+		</items>
+		<items>
+            <item id="186000414" name="Blood Medal" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054279" decomposable_name="Middle Grade Blood Mark Bundle">
+        <items>
+            <item id="186000236" name="Blood Mark" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="186000414" name="Blood Medal" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054280" decomposable_name="Barracks Supply Box"/> <!-- NEW -->
 	<decomposable item_id="188054281" decomposable_name="Barracks Relic Box"/> <!-- NEW -->
 	<decomposable item_id="188054282" decomposable_name="Barracks Consumables Box"/> <!-- NEW -->
@@ -38112,7 +38382,14 @@
 			<item id="186000236" name="Blood Mark" count="1"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188054285" decomposable_name="Master Stigma Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054285" decomposable_name="Master Stigma Bundle">
+        <items>
+            <item id="188054286" name="Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188054287" name="Greater Stigma Bundle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054286" decomposable_name="Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054287" decomposable_name="Greater Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054288" decomposable_name="Lucky Artisan Box"/> <!-- NEW -->
@@ -38242,12 +38519,10 @@
 			<item id="186000414" name="Blood Medal" count="3"/>
 			<item id="182007395" name="[Event] Broken Matryoshka"/>
 		</items>
-		<!--
         <items>
-        <item id="" name="[Event] Blood Mark Box"/>
-        <item id="182007395" name="[Event] Broken Matryoshka"/>
+            <item id="188051443" name="Box of Stones I"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
         </items>
-        -->
 	</decomposable>
 	<decomposable item_id="188054310" decomposable_name="[Event] Matryoshka's Luck">
 		<items>
@@ -38258,30 +38533,50 @@
 			<item id="188053001" name="[Event] Fabled Godstone Bundle"/>
 			<item id="182007395" name="[Event] Broken Matryoshka"/>
 		</items>
-		<!--
-        Blood Mark(s)
-        [Event] Fabled Godstone Bundle
-        [Event] Assured Greater Felicitous Socketing Box
-        Stigma Sack
-        Tempering Solution
-        Omega Enchantment Stone
-        -->
-	</decomposable>
+        <items>
+            <item id="188051444" name="Box of Stones II"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+		</items>
+        <items>
+            <item id="166200009" name="Mythic Weapon Tuning Scroll"/>
+            <item id="182007395" name="[Event] Broken Matryoshka"/>
+		</items>
+    </decomposable>
 	<decomposable item_id="188054311" decomposable_name="[Event] Magic Matryoshka">
-		<!--
-        Elite Composite Manastone Chest
-        [Event] Fabled Godstone Bundle
-        Tempering Solution
-        Omega Enchantment Stone
-        [Event] Assured Greater Felicitous Socketing Box
-        Stigma Sack
-        [Event] Beritra's Equipment Box
-        [Event] Beritra's Phantom Wings Case
-        Dark Lord's Weapon Box
-        Darken Lord's Weapon Box
-        Irridescent Omega Enchantment Stone
-        -->
-	</decomposable>
+        <items>
+            <item id="188053002" name="[Event] Noble Composite Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="188053001" name="[Event] Fabled Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="166200009" name="Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="188053000" name="[Event] Assured Greater Felicitous Socketing Box"/>
+		</items>
+		<items>
+            <item id="188053004" name="[Event] Dragon Lord's Weapon Chest"/>
+		</items>
+		<items>
+            <item id="188053005" name="[Event] Hyperion's Wing Chest"/>
+		</items>
+		<items>
+            <item id="188053006" name="[Event] Hyperion's Mythic Armor Chest"/>
+		</items>
+		<items>
+            <item id="188053007" name="[Event] Hyperion's Mythic Weapon Chest"/>
+		</items>
+		<items>
+            <item id="188051444" name="Box of Stones II"/>
+		</items>
+		<items>
+            <item id="188054038" name="Wave Song Armor Box"/>
+		</items>
+		<items>
+            <item id="188054039" name="Sea Feast Armor Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054312" decomposable_name="[Event] Youngest Matryoshka's Bundle">
 		<items>
 			<item id="164002304" name="[Event] Youngest Matryoshka's Privilege"/>
@@ -38324,22 +38619,120 @@
 	<decomposable item_id="188054326" decomposable_name="Specialized Vindachinerk's Gift (Opened by Level 1 or higher)"/> <!-- NEW -->
 	<decomposable item_id="188054328" decomposable_name="Elite Soldier's Shoe Box Level 6"/> <!-- NEW -->
 	<decomposable item_id="188054330" decomposable_name="[Event] Present of the Estranged Prince"/> <!-- NEW -->
-	<decomposable item_id="188054331" decomposable_name="[Event] Red Phoenix Box"/> <!-- NEW -->
-	<decomposable item_id="188054332" decomposable_name="Lovely Illusion Godstone Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054331" decomposable_name="[Event] Red Phoenix Box">
+        <items>
+            <item id="186000416" name="[Event] Phoenix Feather" count="12"/>
+		</items>
+		<items>
+            <item id="188053023" name="Special Medal Chest"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054332" decomposable_name="Lovely Illusion Godstone Bundle">
+        <items>
+            <item id="168050023" name="Illusion Godstone: Lovely Meslamtaeda's Greed"/>
+		</items>
+		<items>
+            <item id="168050024" name="Illusion Godstone: Lovely Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="168050025" name="Illusion Godstone: Lovely Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="168050026" name="Illusion Godstone: Lovely Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="168050027" name="Illusion Godstone: Lovely Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="168050028" name="Illusion Godstone: Lovely Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="168050029" name="Illusion Godstone: Lovely Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="168050030" name="Illusion Godstone: Lovely Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="168050031" name="Illusion Godstone: Lovely Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="168050032" name="Illusion Godstone: Lovely Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="168050033" name="Illusion Godstone: Lovely Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="168050034" name="Illusion Godstone: Lovely Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="168050035" name="Illusion Godstone: Lovely Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="168050036" name="Illusion Godstone: Lovely Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="168050037" name="Illusion Godstone: Lovely Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="168050038" name="Illusion Godstone: Lovely Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="168050039" name="Illusion Godstone: Lovely Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054333" decomposable_name="Sparkling Illusion Godstone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054334" decomposable_name="[Event] Elite Composite Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054335" decomposable_name="[Event] Brilliant Ancient Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054336" decomposable_name="[Event] Divine Sauro Commander's Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054337" decomposable_name="[Event] Divine Sauro Commander's Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054340" decomposable_name="[Event] Shining Scroll of Immortality Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054341" decomposable_name="[Event] Upgraded Distorted Fierce Battle Weapon Prototype"/> <!-- NEW -->
+	<decomposable item_id="188054341" decomposable_name="[Event] Upgraded Distorted Fierce Battle Weapon Prototype">
+        <items>
+            <item id="169405391" name="Upgraded Distorted Sword of the Fierce Battle Prototype"/>
+		</items>
+		<items>
+            <item id="169405392" name="Upgraded Distorted Mace of the Fierce Battle Prototype"/>
+		</items>
+		<items>
+            <item id="169405393" name="Upgraded Distorted Dagger of the Fierce Battle Prototype"/>
+		</items>
+		<items>
+            <item id="169405394" name="Upgraded Distorted Greatsword of the Fierce Battle Prototype"/>
+		</items>
+		<items>
+            <item id="169405395" name="Upgraded Distorted Polearm of the Fierce Battle Prototype"/>
+		</items>
+		<items>
+            <item id="169405396" name="Upgraded Distorted Staff of the Fierce Battle Prototype"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054345" decomposable_name="[Event] Beritra's Equipment Box"/> <!-- NEW -->
 	<decomposable item_id="188054346" decomposable_name="[Event] The Empyrean Lord's Shining Enchantment Stone Box"/> <!-- NEW -->
-	<decomposable item_id="188054347" decomposable_name="[Event] Blood Medal Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054348" decomposable_name="[Event] Beritra's Phantom Wing Pack"/> <!-- NEW -->
-	<decomposable item_id="188054349" decomposable_name="Lesser Growth Seed Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054350" decomposable_name="Growth Seed Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054351" decomposable_name="Greater Growth Seed Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054347" decomposable_name="[Event] Blood Medal Bundle">
+        <items>
+            <item id="186000414" name="Blood Medal" rnd_min="1" rnd_max="5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054348" decomposable_name="[Event] Beritra's Phantom Wing Pack">
+        <items>
+            <item id="187000157" name="Beritra's Phantom Wings"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054349" decomposable_name="Lesser Growth Seed Bundle">
+        <items>
+            <item id="186000417" name="Growth Seed" count="700"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054350" decomposable_name="Growth Seed Bundle">
+        <items>
+            <item id="186000417" name="Growth Seed" count="875"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054351" decomposable_name="Greater Growth Seed Bundle">
+        <items>
+            <item id="186000417" name="Growth Seed" count="1050"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054352" decomposable_name="Greater Dorgel Composite Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054353" decomposable_name="[Event] Lukewarm Egg"/> <!-- NEW -->
 	<decomposable item_id="188054354" decomposable_name="[Event] Warm Egg"/> <!-- NEW -->
