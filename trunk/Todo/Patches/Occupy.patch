@@ -1,0 +1,143 @@
+Index: data/scripts/system/database/mysql5/MySQL5SiegeDAO.java
+===================================================================
+--- data/scripts/system/database/mysql5/MySQL5SiegeDAO.java	(revision 169)
++++ data/scripts/system/database/mysql5/MySQL5SiegeDAO.java	(working copy)
+@@ -37,9 +37,9 @@
+ public class MySQL5SiegeDAO extends SiegeDAO {
+ 
+     private static final Logger log = LoggerFactory.getLogger(MySQL5SiegeDAO.class);
+-    public static final String SELECT_QUERY = "SELECT `id`, `race`, `legion_id` FROM `siege_locations`";
+-    public static final String INSERT_QUERY = "INSERT INTO `siege_locations` (`id`, `race`, `legion_id`) VALUES(?, ?, ?)";
+-    public static final String UPDATE_QUERY = "UPDATE `siege_locations` SET  `race` = ?, `legion_id` = ? WHERE `id` = ?";
++    public static final String SELECT_QUERY = "SELECT `id`, `race`, `legion_id`, `occupy_count` FROM `siege_locations`";
++    public static final String INSERT_QUERY = "INSERT INTO `siege_locations` (`id`, `race`, `legion_id`, `occupy_count`) VALUES(?, ?, ?, ?)";
++    public static final String UPDATE_QUERY = "UPDATE `siege_locations` SET  `race` = ?, `legion_id` = ?, `occupy_count` = ? WHERE `id` = ?";
+ 
+     @Override
+     public boolean loadSiegeLocations(final Map<Integer, SiegeLocation> locations) {
+@@ -56,6 +56,7 @@
+                 SiegeLocation loc = locations.get(resultSet.getInt("id"));
+                 loc.setRace(SiegeRace.valueOf(resultSet.getString("race")));
+                 loc.setLegionId(resultSet.getInt("legion_id"));
++                loc.setOccupyCount(resultSet.getInt("occupy_count"));
+                 loaded.add(loc.getLocationId());
+             }
+             resultSet.close();
+@@ -86,10 +87,11 @@
+             stmt.setString(1, siegeLocation.getRace().toString());
+             stmt.setInt(2, siegeLocation.getLegionId());
+             stmt.setInt(3, siegeLocation.getLocationId());
++            stmt.setInt(4, siegeLocation.getOccupyCount());
+             stmt.execute();
+         } catch (Exception e) {
+             log.error("Error update Siege Location: " + siegeLocation.getLocationId() + " to race: "
+-                    + siegeLocation.getRace().toString(), e);
++                    + siegeLocation.getRace().toString(), e + "Occupy_Count: " + siegeLocation.getOccupyCount() );
+             return false;
+         } finally {
+             DatabaseFactory.close(stmt, con);
+@@ -110,6 +112,7 @@
+             stmt.setInt(1, siegeLocation.getLocationId());
+             stmt.setString(2, siegeLocation.getRace().toString());
+             stmt.setInt(3, siegeLocation.getLegionId());
++            stmt.setInt(4, siegeLocation.getOccupyCount());
+             stmt.execute();
+         } catch (Exception e) {
+             log.error("Error insert Siege Location: " + siegeLocation.getLocationId(), e);
+Index: src/com/aionemu/gameserver/model/siege/SiegeLocation.java
+===================================================================
+--- src/com/aionemu/gameserver/model/siege/SiegeLocation.java	(revision 169)
++++ src/com/aionemu/gameserver/model/siege/SiegeLocation.java	(working copy)
+@@ -43,6 +43,7 @@
+      */
+     protected SiegeLocationTemplate template;
+     protected int locationId;
++    protected int occupyCount;
+     protected SiegeType type;
+     protected int worldId;
+     protected SiegeRace siegeRace = SiegeRace.BALAUR;
+@@ -112,6 +113,14 @@
+     public void setLegionId(int legionId) {
+         this.legionId = legionId;
+     }
++    
++    public int getOccupyCount() {
++    	return this.occupyCount;
++    }
++    
++    public void setOccupyCount(int occupyCount) {
++    	this.occupyCount = occupyCount;
++    }
+ 
+     /**
+      * Next State: 0 invulnerable 1 vulnerable
+Index: src/com/aionemu/gameserver/services/siegeservice/FortressSiege.java
+===================================================================
+--- src/com/aionemu/gameserver/services/siegeservice/FortressSiege.java	(revision 169)
++++ src/com/aionemu/gameserver/services/siegeservice/FortressSiege.java	(working copy)
+@@ -75,9 +75,14 @@
+ 
+     @Override
+     public void onSiegeStart() {
+-        if (LoggingConfig.LOG_SIEGE) {
+-            log.info("[FortressSiege] Siege started. [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LegionId:" + getSiegeLocation().getLegionId() + "]");
++        if (getSiegeLocation().getOccupyCount() == 2) {
++        	log.info("Max Occupy reached(" + getSiegeLocation().getOccupyCount() +") , Fortress reset to default (Balaur)");
++        	OccupyCount();
++        } else if (LoggingConfig.LOG_SIEGE) {
++            log.info("[FortressSiege] Siege started. [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "]"
++            		+ " [LegionId:" + getSiegeLocation().getLegionId() + "]" + " [OccupyCount: " + getSiegeLocation().getOccupyCount() + "]");
+         }
++        
+         // Mark fortress as vulnerable
+         getSiegeLocation().setVulnerable(true);
+ 
+@@ -101,8 +106,18 @@
+ 			captureBasePosts();
+         }
+     }
++    
++    private void OccupyCount() {
++    	//unregisterSiegeBossListeners();
++    	getSiegeLocation().setRace(SiegeRace.BALAUR);
++    	getSiegeLocation().setLegionId(0);
++    	getSiegeLocation().setOccupyCount(0);
++    	DAOManager.getDAO(SiegeDAO.class).updateLocation(getSiegeLocation());
++    	broadcastUpdate(getSiegeLocation());
++    	onSiegeStart();
++    }
+ 
+-	private void captureBasePosts() {
++    private void captureBasePosts() {
+ 		BaseService.getInstance().capture(90, Race.ASMODIANS);
+ 		BaseService.getInstance().capture(91, Race.ELYOS);
+ 		BaseService.getInstance().capture(113, Race.getRaceByString(getSiegeLocation().getRace().toString()));
+@@ -141,6 +156,7 @@
+             onCapture();
+             broadcastUpdate(getSiegeLocation());
+         } else {
++        	getSiegeLocation().setOccupyCount(getSiegeLocation().getOccupyCount() +1);
+             broadcastState(getSiegeLocation());
+         }
+ 
+@@ -192,6 +208,7 @@
+ 
+         // Set new fortress and artifact owner race
+         getSiegeLocation().setRace(winner.getSiegeRace());
++        getSiegeLocation().setOccupyCount(0);
+         getArtifact().setRace(winner.getSiegeRace());
+ 
+         log.info("[FortressSiege] Global Elyos Influence = " + Influence.getInstance().getGlobalElyosInfluence() + ".");
+Index: src/com/aionemu/gameserver/services/siegeservice/Siege.java
+===================================================================
+--- src/com/aionemu/gameserver/services/siegeservice/Siege.java	(revision 169)
++++ src/com/aionemu/gameserver/services/siegeservice/Siege.java	(working copy)
+@@ -206,7 +206,7 @@
+         Collection<SiegeNpc> npcs = World.getInstance().getLocalSiegeNpcs(getSiegeLocationId());
+         for (SiegeNpc npc : npcs) {
+             if (npc.getObjectTemplate().getAbyssNpcType().equals(AbyssNpcType.BOSS) 
+-				|| npc.getObjectTemplate().getAi().equals("artifact_protector")) { //TODO: AbyssNpcType for artifacts
++				|| npc.getObjectTemplate().getAi().equals("artifact_protector") || npc.getObjectTemplate().getAi().equals("siege_protector")) { //TODO: AbyssNpcType for artifacts
+ 
+                 if (boss != null) {
+                     throw new SiegeException("[SiegeService] Found 2 siege bosses for outpost " + getSiegeLocationId() + " NPC " + npc.getNpcId());
