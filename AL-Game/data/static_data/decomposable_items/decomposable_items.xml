@@ -38235,7 +38235,11 @@
 	<decomposable item_id="188054155" decomposable_name="Songweaver Major Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054159" decomposable_name="Elegant Box (91 days)"/> <!-- NEW -->
 	<decomposable item_id="188054160" decomposable_name="Specialized Elegant Box (91 days)"/> <!-- NEW -->
-	<decomposable item_id="188054161" decomposable_name="Sleek Hovercycle Chest"/> <!-- NEW -->
+	<decomposable item_id="188054161" decomposable_name="Sleek Hovercycle Chest">
+        <items>
+            <item id="190100175" name="Glowing Hovercycle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054162" decomposable_name="Transcendence Box"/> <!-- NEW -->
 	<decomposable item_id="188054165" decomposable_name="Summoning Stone: General Goods Merchant Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054166" decomposable_name="PC Cafe Present Bundle"/> <!-- NEW -->
@@ -38244,8 +38248,29 @@
 	<decomposable item_id="188054169" decomposable_name="Lucky Gift Box"/> <!-- NEW -->
 	<decomposable item_id="188054170" decomposable_name="Lucky Happiness Box"/> <!-- NEW -->
 	<decomposable item_id="188054171" decomposable_name="Lucky Mysterious Box"/> <!-- NEW -->
-	<decomposable item_id="188054172" decomposable_name="Master Tempering Solution Chest"/> <!-- NEW -->
-	<decomposable item_id="188054174" decomposable_name="Empyrean Plume Box"/> <!-- NEW -->
+	<decomposable item_id="188054172" decomposable_name="Master Tempering Solution Chest">
+        <items>
+            <item id="166030005" name="Tempering Solution"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054174" decomposable_name="Empyrean Plume Box">
+        <items>
+            <item id="187100023" name="Specialized Kaisinel's Plume: Attack" race="ELYOS"/>
+            <item id="187100025" name="Specialized Markutan's Plume: Attack" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="187100024" name="Specialized Kaisinel's Plume: Magic Boosting Power" race="ELYOS"/>
+            <item id="187100026" name="Specialized Markutan's Plume: Magic Boosting Power" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="187100027" name="Specialized Kaisinel's Plume: Physical Critical Hit" race="ELYOS"/>
+            <item id="187100029" name="Specialized Markutan's Plume: Physical Critical Hit" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="187100028" name="Specialized Kaisinel's Plume: Magical Accuracy" race="ELYOS"/>
+            <item id="187100030" name="Specialized Markutan's Plume: Magical Accuracy" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054175" decomposable_name="Master Bakarma's Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054176" decomposable_name="Master Triroan's Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054177" decomposable_name="Master Lanmark's Weapon Box"/> <!-- NEW -->
@@ -38261,10 +38286,116 @@
 	<decomposable item_id="188054189" decomposable_name="Honorable Conqueror's Mark Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054190" decomposable_name="Valor Composite Mansatone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054191" decomposable_name="Valor Ancient Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054192" decomposable_name="Valor Chest"/> <!-- NEW -->
-	<decomposable item_id="188054193" decomposable_name="Valor Illusion Godstone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054194" decomposable_name="Valor Idian Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054195" decomposable_name="Valor Stigma Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054192" decomposable_name="Valor Chest">
+        <items>
+            <item id="186000242" name="Ceramium Medal"/>
+		</items>
+		<items>
+            <item id="186000243" name="Fragmented Ceramium"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054193" decomposable_name="Valor Illusion Godstone Bundle">
+        <items>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
+		</items>
+		<items>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+		</items>
+		<items>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054194" decomposable_name="Valor Idian Bundle">
+        <items>
+            <item id="166050149" name="Valor Idian:  Physical Attack"/>
+		</items>
+		<items>
+            <item id="166050150" name="Valor Idian: Magical Attack"/>
+		</items>
+		<items>
+            <item id="166050151" name="Valor Idian: Physical Defense"/>
+		</items>
+		<items>
+            <item id="166050152" name="Valor Idian: Magical Defense"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054195" decomposable_name="Valor Stigma Bundle">
+        <items>
+            <item id="188053979" name="Gladiator Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053982" name="Ranger Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053988" name="Aethertech Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053983" name="Sorcerer Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053987" name="Gunslinger Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053981" name="Assassin Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053980" name="Templar Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053989" name="Songweaver Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053984" name="Spiritmaster Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053985" name="Cleric Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053986" name="Chanter Stigma Bundle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054199" decomposable_name="Minor Manastone Ore">
 		<items>
 			<random_item type="MANASTONE_COMMON_GRADE_10"/>
@@ -38371,18 +38502,62 @@
             <item id="125004301" name="Wave Song Hairpin" race="ASMODIANS"/>
         </items>
     </decomposable>
-	<decomposable item_id="188054223" decomposable_name="Shining Ornate Ruby Glasses Box"/> <!-- NEW -->
+	<decomposable item_id="188054223" decomposable_name="Shining Ornate Ruby Glasses Box">
+        <items>
+            <item id="125001279" name="Noble Fancy Ruby Glasses" race="ELYOS"/>
+            <item id="125001341" name="Noble Fancy Ruby Glasses" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054224" decomposable_name="Abyss Brigade General's Unique Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054225" decomposable_name="Abyss Brigade General's Unique Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054226" decomposable_name="Abyss Brigade General's Unique Accessory Box"/> <!-- NEW -->
-	<decomposable item_id="188054227" decomposable_name="[Stamp] Blazing Blue Ayas Box (30 days)"/> <!-- NEW -->
-	<decomposable item_id="188054228" decomposable_name="Abyss Contribution Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054227" decomposable_name="[Stamp] Blazing Blue Ayas Box (30 days)">
+        <items>
+            <item id="190100177" name="Blazing Blue Ayas (30 days)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054228" decomposable_name="Abyss Contribution Bundle">
+        <items>
+            <item id="188054229" name="Abyss Brigade General's Fabled Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054230" name="Abyss Brigade General's Fabled Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054231" name="Abyss Brigade General's Fabled Accessory Box"/>
+		</items>
+		<items>
+            <item id="161000004" name="Tombstone of Revival"/>
+		</items>
+		<items>
+            <item id="162000050" name="Major Recovery Serum"/>
+		</items>
+		<items>
+            <item id="162000027" name="Major Wind Serum"/>
+		</items>
+		<items>
+            <item id="164000073" name="Greater Courage Scroll" count="2"/>
+		</items>
+		<items>
+            <item id="164000076" name="Greater Running Scroll" count="2"/>
+		</items>
+		<items>
+            <item id="164000079" name="Greater Raging Wind Scroll" count="2"/>
+		</items>
+		<items>
+            <item id="164000134" name="Greater Awakening Scroll" count="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054229" decomposable_name="Abyss Brigade General's Fabled Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054230" decomposable_name="Abyss Brigade General's Fabled Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188054231" decomposable_name="Abyss Brigade General's Fabled Accessory Box"/> <!-- NEW -->
 	<decomposable item_id="188054232" decomposable_name="Stigma Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054233" decomposable_name="Greater Stigma Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054234" decomposable_name="Irridescent Omega Enchantment Stone Box"/> <!-- NEW -->
+	<decomposable item_id="188054234" decomposable_name="Irridescent Omega Enchantment Stone Box">
+        <items>
+            <item id="166022000" name="Irridescent Omega Enchantment Stone"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054235" decomposable_name="Theobomo's Gift Box">
         <items>
             <item id="110900993" name="Galateia's Formal Wear"/>
@@ -39361,16 +39536,88 @@
             <item id="188053786" name="Major Stigma Bundle"/>
         </items>
     </decomposable>
-	<decomposable item_id="188055071" decomposable_name="Prestige Pack Loyalty Reward – 6 Months"/> <!-- NEW -->
-	<decomposable item_id="188055072" decomposable_name="Prestige Pack Loyalty Reward – 12 Months"/> <!-- NEW -->
-	<decomposable item_id="188055073" decomposable_name="Prestige Pack Loyalty Reward – 18 Months"/> <!-- NEW -->
-	<decomposable item_id="188055075" decomposable_name="Prestige Pack Loyalty Reward – 30 Months"/> <!-- NEW -->
-	<decomposable item_id="188055076" decomposable_name="Prestige Pack Loyalty Reward – 36 Months"/> <!-- NEW -->
-	<decomposable item_id="188055119" decomposable_name="Big Boy Shugo Bundle"/> <!-- NEW -->
+	<decomposable item_id="188055071" decomposable_name="Prestige Pack Loyalty Reward – 6 Months">
+        <items>
+            <item id="187060103" name="Prestige Wings"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055072" decomposable_name="Prestige Pack Loyalty Reward – 12 Months">
+        <items>
+            <item id="190100107" name="Emerald Crestlich"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055073" decomposable_name="Prestige Pack Loyalty Reward – 18 Months">
+        <items>
+            <item id="190020237" name="Cloudmaster Egg"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055075" decomposable_name="Prestige Pack Loyalty Reward – 30 Months">
+        <items>
+            <item id="169610158" name="[Title Card] Prestigious Adept"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055076" decomposable_name="Prestige Pack Loyalty Reward – 36 Months">
+        <items>
+            <item id="186000242" name="Ceramium Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055119" decomposable_name="Big Boy Shugo Bundle">
+        <items>
+            <item id="190020105" name="Big Boy Shugo Egg (30 Days)"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188055143" decomposable_name="Treasure Chest"/> <!-- NEW -->
 	<decomposable item_id="188055144" decomposable_name="Treasure Chest"/> <!-- NEW -->
-	<decomposable item_id="188055145" decomposable_name="[Event] Latest Appearance Box "/> <!-- NEW -->
-	<decomposable item_id="188055146" decomposable_name="[Event] Growth Bundle"/> <!-- NEW -->
+	<decomposable item_id="188055145" decomposable_name="[Event] Latest Appearance Box ">
+        <items>
+            <item id="110901014" name="Executioner's Outfit"/>
+        </items>
+        <items>
+            <item id="110901032" name="Sublime Sequin Outift"/>
+        </items>
+        <items>
+            <item id="110901041" name="All Business Outfit"/>
+        </items>
+        <items>
+            <item id="188051150" name="Porgus Costume Set"/>
+        </items>
+        <items>
+            <item id="188051151" name="Ribbit Costume Set"/>
+        </items>
+        <items>
+            <item id="125045632" name="[Event] Rooster Hat" race="ELYOS"/>
+            <item id="125045633" name="[Event] Crow Hat" race="ASMODIANS"/>
+        </items>
+        <items>
+            <item id="125040229" name="Daru Fur Hat"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055146" decomposable_name="[Event] Growth Bundle">
+        <items>
+            <item id="164002010" name="[Event] Greater Courage Scroll" count="20"/>
+        </items>
+        <items>
+            <item id="164002011" name="[Event] Greater Running Scroll" count="20"/>
+        </items>
+        <items>
+            <item id="164002012" name="[Event] Greater Raging Wind Scroll" count="20"/>
+        </items>
+        <items>
+            <item id="164002057" name="[Event] Greater Awakening Scroll" count="20"/>
+        </items>
+        <items>
+            <item id="162002059" name="[Event] Major Life Potion" count="15"/>
+        </items>
+        <items>
+            <item id="162002062" name="[Event] Major Mana Potion" count="15"/>
+        </items>
+        <items>
+            <item id="186000237" name="Ancient Coin" count="20"/>
+        </items>
+        <items>
+            <item id="186000236" name="Blood Mark" count="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188055273" decomposable_name="Stigma Box">
         <items>
             <item id="188053750" name="Gladiator Stigma Bundle" player_class="GLADIATOR"/>
@@ -39426,9 +39673,151 @@
             <item id="186000030" name="Gold Medal"/>
         </items>
     </decomposable>
-	<decomposable item_id="188055319" decomposable_name="Ahserion's Equipment Box"/> <!-- NEW -->
-	<decomposable item_id="188055320" decomposable_name="Ahserion's Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188055321" decomposable_name="Ahserion's Accessory Box"/> <!-- NEW -->
+	<decomposable item_id="188055319" decomposable_name="Ahserion's Equipment Box">
+        <items>
+            <item id="188053106" name="Ahserion's Weapon Box"/>
+        </items>
+        <items>
+            <item id="188053107" name="Ahserion's Armor Box"/>
+        </items>
+        <items>
+            <item id="188053108" name="Ahserion's Accessory Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188055320" decomposable_name="Ahserion's Armor Box">
+        <items>
+            <item id="110601562" name="Awakened Ahserion's Breastplate" player_class="GLADIATOR"/>
+            <item id="110601562" name="Awakened Ahserion's Breastplate" player_class="TEMPLAR"/>
+            <item id="110301757" name="Awakened Ahserion's Jerkin" player_class="ASSASSIN"/>
+            <item id="110301757" name="Awakened Ahserion's Jerkin" player_class="RANGER"/>
+            <item id="110551090" name="Awakened Ahserion's Hauberk" player_class="CLERIC"/>
+            <item id="110551090" name="Awakened Ahserion's Hauberk" player_class="CHANTER"/>
+            <item id="110101772" name="Awakened Ahserion's Tunic" player_class="SORCERER"/>
+            <item id="110101772" name="Awakened Ahserion's Tunic" player_class="SPIRIT_MASTER"/>
+            <item id="110301757" name="Awakened Ahserion's Jerkin" player_class="GUNNER"/>
+            <item id="110101772" name="Awakened Ahserion's Tunic" player_class="BARD"/>
+            <item id="110551090" name="Awakened Ahserion's Hauberk" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="113601508" name="Awakened Ahserion's Greaves" player_class="GLADIATOR"/>
+            <item id="113601508" name="Awakened Ahserion's Greaves" player_class="TEMPLAR"/>
+            <item id="113301726" name="Awakened Ahserion's Breeches" player_class="ASSASSIN"/>
+            <item id="113301726" name="Awakened Ahserion's Breeches" player_class="RANGER"/>
+            <item id="113501667" name="Awakened Ahserion's Chausses" player_class="CLERIC"/>
+            <item id="113501667" name="Awakened Ahserion's Chausses" player_class="CHANTER"/>
+            <item id="113101604" name="Awakened Ahserion's Leggings" player_class="SORCERER"/>
+            <item id="113101604" name="Awakened Ahserion's Leggings" player_class="SPIRIT_MASTER"/>
+            <item id="113301726" name="Awakened Ahserion's Breeches" player_class="GUNNER"/>
+            <item id="113101604" name="Awakened Ahserion's Leggings" player_class="BARD"/>
+            <item id="113501667" name="Awakened Ahserion's Chausses" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="111601525" name="Awakened Ahserion's Gauntlets" player_class="GLADIATOR"/>
+            <item id="111601525" name="Awakened Ahserion's Gauntlets" player_class="TEMPLAR"/>
+            <item id="111301695" name="Awakened Ahserion's Vambrace" player_class="ASSASSIN"/>
+            <item id="111301695" name="Awakened Ahserion's Vambrace" player_class="RANGER"/>
+            <item id="111501649" name="Awakened Ahserion's Handguards" player_class="CLERIC"/>
+            <item id="111501649" name="Awakened Ahserion's Handguards" player_class="CHANTER"/>
+            <item id="111101592" name="Awakened Ahserion's Gloves" player_class="SORCERER"/>
+            <item id="111101592" name="Awakened Ahserion's Gloves" player_class="SPIRIT_MASTER"/>
+            <item id="111301695" name="Awakened Ahserion's Vambrace" player_class="GUNNER"/>
+            <item id="111101592" name="Awakened Ahserion's Gloves" player_class="BARD"/>
+            <item id="111501649" name="Awakened Ahserion's Handguards" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="114601515" name="Awakened Ahserion's Sabatons" player_class="GLADIATOR"/>
+            <item id="114601515" name="Awakened Ahserion's Sabatons" player_class="TEMPLAR"/>
+            <item id="114301763" name="Awakened Ahserion's Boots" player_class="ASSASSIN"/>
+            <item id="114301763" name="Awakened Ahserion's Boots" player_class="RANGER"/>
+            <item id="114501677" name="Awakened Ahserion's Brogans" player_class="CLERIC"/>
+            <item id="114501677" name="Awakened Ahserion's Brogans" player_class="CHANTER"/>
+            <item id="114101638" name="Awakened Ahserion's Shoes" player_class="SORCERER"/>
+            <item id="114101638" name="Awakened Ahserion's Shoes" player_class="SPIRIT_MASTER"/>
+            <item id="114301763" name="Awakened Ahserion's Boots" player_class="GUNNER"/>
+            <item id="114101638" name="Awakened Ahserion's Shoes" player_class="BARD"/>
+            <item id="114501677" name="Awakened Ahserion's Brogans" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="112601507" name="Awakened Ahserion's Shoulderplates" player_class="GLADIATOR"/>
+            <item id="112601507" name="Awakened Ahserion's Shoulderplates" player_class="TEMPLAR"/>
+            <item id="112301634" name="Awakened Ahserion's Shoulderguards" player_class="ASSASSIN"/>
+            <item id="112301634" name="Awakened Ahserion's Shoulderguards" player_class="RANGER"/>
+            <item id="112501588" name="Awakened Ahserion's Spaulders" player_class="CLERIC"/>
+            <item id="112501588" name="Awakened Ahserion's Spaulders" player_class="CHANTER"/>
+            <item id="112101542" name="Awakened Ahserion's Pauldrons" player_class="SORCERER"/>
+            <item id="112101542" name="Awakened Ahserion's Pauldrons" player_class="SPIRIT_MASTER"/>
+            <item id="112301634" name="Awakened Ahserion's Shoulderguards" player_class="GUNNER"/>
+            <item id="112101542" name="Awakened Ahserion's Pauldrons" player_class="BARD"/>
+            <item id="112501588" name="Awakened Ahserion's Spaulders" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="125004009" name="Awakened Ahserion's Helm" player_class="GLADIATOR"/>
+            <item id="125004009" name="Awakened Ahserion's Helm" player_class="TEMPLAR"/>
+            <item id="125004011" name="Awakened Ahserion's Hat" player_class="ASSASSIN"/>
+            <item id="125004011" name="Awakened Ahserion's Hat" player_class="RANGER"/>
+            <item id="125004010" name="Awakened Ahserion's Chain Helm" player_class="CLERIC"/>
+            <item id="125004010" name="Awakened Ahserion's Chain Helm" player_class="CHANTER"/>
+            <item id="125004012" name="Awakened Ahserion's Headband" player_class="SORCERER"/>
+            <item id="125004012" name="Awakened Ahserion's Headband" player_class="SPIRIT_MASTER"/>
+            <item id="125004011" name="Awakened Ahserion's Hat" player_class="GUNNER"/>
+            <item id="125004012" name="Awakened Ahserion's Headband" player_class="BARD"/>
+            <item id="125004010" name="Awakened Ahserion's Chain Helm" player_class="RIDER"/>
+        </items>
+	</decomposable>
+	<decomposable item_id="188055321" decomposable_name="Ahserion's Accessory Box">
+        <items>
+            <item id="121001375" name="Awakened Ahserion's Opal Necklace" player_class="GLADIATOR"/>
+            <item id="121001375" name="Awakened Ahserion's Opal Necklace" player_class="TEMPLAR"/>
+            <item id="121001375" name="Awakened Ahserion's Opal Necklace" player_class="ASSASSIN"/>
+            <item id="121001375" name="Awakened Ahserion's Opal Necklace" player_class="RANGER"/>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace" player_class="CLERIC"/>
+            <item id="121001375" name="Awakened Ahserion's Opal Necklace" player_class="CHANTER"/>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace" player_class="SORCERER"/>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace" player_class="SPIRIT_MASTER"/>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace" player_class="GUNNER"/>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace" player_class="BARD"/>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="120001503" name="Awakened Ahserion's Opal Earrings" player_class="GLADIATOR"/>
+            <item id="120001503" name="Awakened Ahserion's Opal Earrings" player_class="TEMPLAR"/>
+            <item id="120001503" name="Awakened Ahserion's Opal Earrings" player_class="ASSASSIN"/>
+            <item id="120001503" name="Awakened Ahserion's Opal Earrings" player_class="RANGER"/>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings" player_class="CLERIC"/>
+            <item id="120001503" name="Awakened Ahserion's Opal Earrings" player_class="CHANTER"/>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings" player_class="SORCERER"/>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings" player_class="SPIRIT_MASTER"/>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings" player_class="GUNNER"/>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings" player_class="BARD"/>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="122001644" name="Awakened Ahserion's Opal Ring" player_class="GLADIATOR"/>
+            <item id="122001644" name="Awakened Ahserion's Opal Ring" player_class="TEMPLAR"/>
+            <item id="122001644" name="Awakened Ahserion's Opal Ring" player_class="ASSASSIN"/>
+            <item id="122001644" name="Awakened Ahserion's Opal Ring" player_class="RANGER"/>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring" player_class="CLERIC"/>
+            <item id="122001644" name="Awakened Ahserion's Opal Ring" player_class="CHANTER"/>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring" player_class="SORCERER"/>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring" player_class="SPIRIT_MASTER"/>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring" player_class="GUNNER"/>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring" player_class="BARD"/>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring" player_class="RIDER"/>
+        </items>
+        <items>
+            <item id="123001421" name="Awakened Ahserion's Leather Belt" player_class="GLADIATOR"/>
+            <item id="123001421" name="Awakened Ahserion's Leather Belt" player_class="TEMPLAR"/>
+            <item id="123001421" name="Awakened Ahserion's Leather Belt" player_class="ASSASSIN"/>
+            <item id="123001421" name="Awakened Ahserion's Leather Belt" player_class="RANGER"/>
+            <item id="123001422" name="Awakened Ahserion's Sash" player_class="CLERIC"/>
+            <item id="123001421" name="Awakened Ahserion's Leather Belt" player_class="CHANTER"/>
+            <item id="123001422" name="Awakened Ahserion's Sash" player_class="SORCERER"/>
+            <item id="123001422" name="Awakened Ahserion's Sash" player_class="SPIRIT_MASTER"/>
+            <item id="123001422" name="Awakened Ahserion's Sash" player_class="GUNNER"/>
+            <item id="123001422" name="Awakened Ahserion's Sash" player_class="BARD"/>
+            <item id="123001422" name="Awakened Ahserion's Sash" player_class="RIDER"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188055322" decomposable_name="Ahserion's Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188100065" decomposable_name="[Event] Harvest Revel Pumpkin Clothes Set Bundle (6 hours)"/> <!-- NEW -->
 	<decomposable item_id="188100066" decomposable_name="[Event] Enchanting Sorcerer Robe Set Bundle (6 hours)"/> <!-- NEW -->
