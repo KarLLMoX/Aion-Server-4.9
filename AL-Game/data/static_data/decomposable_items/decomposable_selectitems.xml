@@ -1757,9 +1757,246 @@
             <item id="101801017" name="Modor's Pistol" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053096" name="Modor's Eternal Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053097" name="Modor's Mythic Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053098" name="Modor's Mythic Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053096" name="Modor's Eternal Armor Box">
+        <items player_class="TEMPLAR">
+            <item id="110601442" name="Modor's Templar Breastplate" count="1"/>
+            <item id="113601388" name="Modor's Templar Greaves" count="1"/>
+            <item id="111601404" name="Modor's Templar Gauntlets" count="1"/>
+            <item id="114601392" name="Modor's Templar Sabatons" count="1"/>
+            <item id="112601386" name="Modor's Templar Shoulderplates" count="1"/>
+            <item id="125003502" name="Modor's Templar Helm" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601475" name="Modor's Gladiator Breastplate" count="1"/>
+            <item id="113601421" name="Modor's Gladiator Greaves" count="1"/>
+            <item id="111601438" name="Modor's Gladiator Gauntlets" count="1"/>
+            <item id="114601426" name="Modor's Gladiator Sabatons" count="1"/>
+            <item id="112601419" name="Modor's Gladiator Shoulderplates" count="1"/>
+            <item id="125003649" name="Modor's Gladiator Helm" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301506" name="Modor's Jerkin" count="1"/>
+            <item id="113301470" name="Modor's Breeches" count="1"/>
+            <item id="111301446" name="Modor's Vambrace" count="1"/>
+            <item id="114301507" name="Modor's Boots" count="1"/>
+            <item id="112301390" name="Modor's Shoulderguards" count="1"/>
+            <item id="125003508" name="Modor's Hat" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301506" name="Modor's Jerkin" count="1"/>
+            <item id="113301470" name="Modor's Breeches" count="1"/>
+            <item id="111301446" name="Modor's Vambrace" count="1"/>
+            <item id="114301507" name="Modor's Boots" count="1"/>
+            <item id="112301390" name="Modor's Shoulderguards" count="1"/>
+            <item id="125003508" name="Modor's Hat" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110501462" name="Grendal's Chanter Chain Armor" count="1"/>
+            <item id="113501435" name="Grendal's Chanter Chain Leg Armor" count="1"/>
+            <item id="111501419" name="Modor's Chanter Handguards" count="1"/>
+            <item id="114501444" name="Grendal's Chanter Chain Boots" count="1"/>
+            <item id="112501361" name="Modor's Chanter Spaulders" count="1"/>
+            <item id="125003504" name="Modor's Chanter Chain Hood" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110501463" name="Grendal's Cleric Chain Armor" count="1"/>
+            <item id="113501436" name="Grendal's Cleric Chain Leg Armor" count="1"/>
+            <item id="111501420" name="Modor's Cleric Handguards" count="1"/>
+            <item id="114501445" name="Grendal's Cleric Chain Boots" count="1"/>
+            <item id="112501362" name="Modor's Cleric Spaulders" count="1"/>
+            <item id="125003505" name="Modor's Cleric Chain Hood" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101616" name="Modor's Tunic" count="1"/>
+            <item id="113101467" name="Modor's Leggings" count="1"/>
+            <item id="111101457" name="Modor's Gloves" count="1"/>
+            <item id="114101504" name="Modor's Shoes" count="1"/>
+            <item id="112101411" name="Modor's Pauldrons" count="1"/>
+            <item id="125003512" name="Modor's Headband" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101616" name="Modor's Tunic" count="1"/>
+            <item id="113101467" name="Modor's Leggings" count="1"/>
+            <item id="111101457" name="Modor's Gloves" count="1"/>
+            <item id="114101504" name="Modor's Shoes" count="1"/>
+            <item id="112101411" name="Modor's Pauldrons" count="1"/>
+            <item id="125003512" name="Modor's Headband" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301507" name="Modor's Gunslinger Magic Jerkin" count="1"/>
+            <item id="113301471" name="Modor's Gunslinger Magic Breeches" count="1"/>
+            <item id="111301447" name="Modor's Gunslinger Magic Vambrace" count="1"/>
+            <item id="114301508" name="Modor's Gunslinger Magic Boots" count="1"/>
+            <item id="112301391" name="Modor's Gunslinger Magic Shoulderguards" count="1"/>
+            <item id="125003509" name="Modor's Gunslinger Hat" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101617" name="Modor's Songweaver Tunic" count="1"/>
+            <item id="113101468" name="Modor's Songweaver Leggings" count="1"/>
+            <item id="111101458" name="Modor's Songweaver Gloves" count="1"/>
+            <item id="114101505" name="Modor's Songweaver Shoes" count="1"/>
+            <item id="112101412" name="Modor's Songweaver Pauldrons" count="1"/>
+            <item id="125003513" name="Modor's Songweaver Headband" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110550939" name="Modor's Aethertech Magic Hauberk" count="1"/>
+            <item id="113501515" name="Modor's Aethertech Magic Chausses" count="1"/>
+            <item id="111501497" name="Modor's Aethertech Magic Handguards" count="1"/>
+            <item id="112501439" name="Modor's Aethertech Magic Spaulders" count="1"/>
+            <item id="114501524" name="Modor's Aethertech Magic Brogans" count="1"/>
+            <item id="125003790" name="Modor's Aethertech Magic Helm" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053097" name="Modor's Mythic Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001552" name="Lunatic Modor's Sword" count="1"/>
+            <item id="100101188" name="Lunatic Modor's Warhammer" count="1"/>
+            <item id="100901207" name="Lunatic Modor's Greatsword" count="1"/>
+            <item id="115001594" name="Lunatic Modor's Shield" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100201355" name="Lunatic Modor's Dagger" count="1"/>
+            <item id="100001552" name="Lunatic Modor's Sword" count="1"/>
+            <item id="100101188" name="Lunatic Modor's Warhammer" count="1"/>
+            <item id="100901207" name="Lunatic Modor's Greatsword" count="1"/>
+            <item id="101301135" name="Lunatic Modor's Polearm" count="1"/>
+            <item id="101701237" name="Lunatic Modor's Bow" count="1"/>
+            <item id="115001594" name="Lunatic Modor's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201355" name="Lunatic Modor's Dagger" count="1"/>
+            <item id="100001552" name="Lunatic Modor's Sword" count="1"/>
+            <item id="101701237" name="Lunatic Modor's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201355" name="Lunatic Modor's Dagger" count="1"/>
+            <item id="100001552" name="Lunatic Modor's Sword" count="1"/>
+            <item id="101701237" name="Lunatic Modor's Bow" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101187" name="Lunatic Modor's Mace" count="1"/>
+            <item id="100101188" name="Lunatic Modor's Warhammer" count="1"/>
+            <item id="101501217" name="Lunatic Modor's Staff" count="1"/>
+            <item id="101501232" name="Lunatic Modor's Cane" count="1"/>
+            <item id="115001595" name="Lunatic Modor's Scale Shield" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101187" name="Lunatic Modor's Mace" count="1"/>
+            <item id="100101188" name="Lunatic Modor's Warhammer" count="1"/>
+            <item id="101501217" name="Lunatic Modor's Staff" count="1"/>
+            <item id="101501232" name="Lunatic Modor's Cane" count="1"/>
+            <item id="115001595" name="Lunatic Modor's Scale Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501187" name="Lunatic Modor's Orb" count="1"/>
+            <item id="100601276" name="Lunatic Modor's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501187" name="Lunatic Modor's Orb" count="1"/>
+            <item id="100601276" name="Lunatic Modor's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801018" name="Lunatic Modor's Pistol" count="1"/>
+            <item id="101900981" name="Lunatic Modor's Aethercannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001044" name="Lunatic Modor's Harp" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102100820" name="Lunatic Modor's Cipher-Blade" count="1"/>
+            <item id="101801018" name="Lunatic Modor's Pistol" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053098" name="Modor's Mythic Armor Box">
+        <items player_class="TEMPLAR">
+            <item id="110601443" name="Lunatic Modor's Templar Breastplate" count="1"/>
+            <item id="113601389" name="Lunatic Modor's Templar Greaves" count="1"/>
+            <item id="111601405" name="Lunatic Modor's Templar Gauntlets" count="1"/>
+            <item id="114601393" name="Lunatic Modor's Templar Sabatons" count="1"/>
+            <item id="112601387" name="Lunatic Modor's Templar Shoulderplates" count="1"/>
+            <item id="125003503" name="Lunatic Modor's Templar Helm" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601476" name="Lunatic Modor's Gladiator Breastplate" count="1"/>
+            <item id="113601422" name="Lunatic Modor's Gladiator Greaves" count="1"/>
+            <item id="111601439" name="Lunatic Modor's Gladiator Gauntlets" count="1"/>
+            <item id="114601427" name="Lunatic Modor's Gladiator Sabatons" count="1"/>
+            <item id="112601420" name="Lunatic Modor's Gladiator Shoulderplates" count="1"/>
+            <item id="125003650" name="Lunatic Modor's Gladiator Helm" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301508" name="Lunatic Modor's Jerkin" count="1"/>
+            <item id="113301472" name="Lunatic Modor's Breeches" count="1"/>
+            <item id="111301448" name="Lunatic Modor's Vambrace" count="1"/>
+            <item id="114301509" name="Lunatic Modor's Boots" count="1"/>
+            <item id="112301392" name="Lunatic Modor's Shoulderguards" count="1"/>
+            <item id="125003510" name="Lunatic Modor's Hat" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301508" name="Lunatic Modor's Jerkin" count="1"/>
+            <item id="113301472" name="Lunatic Modor's Breeches" count="1"/>
+            <item id="111301448" name="Lunatic Modor's Vambrace" count="1"/>
+            <item id="114301509" name="Lunatic Modor's Boots" count="1"/>
+            <item id="112301392" name="Lunatic Modor's Shoulderguards" count="1"/>
+            <item id="125003510" name="Lunatic Modor's Hat" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110501464" name="Lunatic Modor's Chanter Hauberk" count="1"/>
+            <item id="113501437" name="Lunatic Modor's Chanter Chausses" count="1"/>
+            <item id="111501421" name="Lunatic Modor's Chanter Handguards" count="1"/>
+            <item id="114501446" name="Lunatic Modor's Chanter Brogans" count="1"/>
+            <item id="112501363" name="Lunatic Modor's Chanter Spaulders" count="1"/>
+            <item id="125003506" name="Lunatic Modor's Chanter Chain Hood" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110501465" name="Lunatic Modor's Cleric Hauberk" count="1"/>
+            <item id="113501438" name="Lunatic Modor's Cleric Chausses" count="1"/>
+            <item id="111501422" name="Lunatic Modor's Cleric Handguards" count="1"/>
+            <item id="114501447" name="Lunatic Modor's Cleric Brogans" count="1"/>
+            <item id="112501364" name="Lunatic Modor's Cleric Spaulders" count="1"/>
+            <item id="125003507" name="Lunatic Modor's Cleric Chain Hood" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101618" name="Lunatic Modor's Tunic" count="1"/>
+            <item id="113101469" name="Lunatic Modor's Leggings" count="1"/>
+            <item id="111101459" name="Lunatic Modor's Gloves" count="1"/>
+            <item id="114101506" name="Lunatic Modor's Shoes" count="1"/>
+            <item id="112101413" name="Lunatic Modor's Pauldrons" count="1"/>
+            <item id="125003514" name="Lunatic Modor's Headband" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101618" name="Lunatic Modor's Tunic" count="1"/>
+            <item id="113101469" name="Lunatic Modor's Leggings" count="1"/>
+            <item id="111101459" name="Lunatic Modor's Gloves" count="1"/>
+            <item id="114101506" name="Lunatic Modor's Shoes" count="1"/>
+            <item id="112101413" name="Lunatic Modor's Pauldrons" count="1"/>
+            <item id="125003514" name="Lunatic Modor's Headband" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301509" name="Lunatic Modor's Gunslinger Magic Jerkin" count="1"/>
+            <item id="113301473" name="Lunatic Modor's Gunslinger Magic Breeches" count="1"/>
+            <item id="111301449" name="Lunatic Modor's Gunslinger Magic Vambrace" count="1"/>
+            <item id="114301510" name="Lunatic Modor's Gunslinger Magic Boots" count="1"/>
+            <item id="112301393" name="Lunatic Modor's Gunslinger Magic Shoulderguards" count="1"/>
+            <item id="125003511" name="Lunatic Modor's Gunslinger Hat" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101619" name="Lunatic Modor's Songweaver Tunic" count="1"/>
+            <item id="113101470" name="Lunatic Modor's Songweaver Leggings" count="1"/>
+            <item id="111101460" name="Lunatic Modor's Songweaver Gloves" count="1"/>
+            <item id="114101507" name="Lunatic Modor's Songweaver Shoes" count="1"/>
+            <item id="112101414" name="Lunatic Modor's Songweaver Pauldrons" count="1"/>
+            <item id="125003515" name="Lunatic Modor's Songweaver Headband" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110550940" name="Lunatic Modor's Aethertech Magic Hauberk" count="1"/>
+            <item id="113501516" name="Lunatic Modor's Aethertech Magic Chausses" count="1"/>
+            <item id="111501498" name="Lunatic Modor's Aethertech Magic Handguards" count="1"/>
+            <item id="112501440" name="Lunatic Modor's Aethertech Magic Spaulders" count="1"/>
+            <item id="114501525" name="Lunatic Modor's Aethertech Magic Brogans" count="1"/>
+            <item id="125003791" name="Lunatic Modor's Aethertech Magic Helm" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053118" name="Lesser Betrayer's Equipment Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053119" name="Greater Betrayer's Equipment Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053187" name="[Event] Modor's Mythic Weapon Box">
@@ -1920,13 +2157,145 @@
 	<decomposable_selectitem item_id="188053192" name="[Event] Timeless Shoulder Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053193" name="[Event] Timeless Glove Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053194" name="[Event] Timeless Shoe Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053196" name="Idian Depths Weapon Chest"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053199" name="Tristran's Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053200" name="Mani's Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053196" name="Idian Depths Weapon Chest">
+        <items>
+            <item id="101901002" name="Kamara's Aethercannon" count="1"/>
+            <item id="101301149" name="Kamara's Polearm" count="1"/>
+            <item id="100001570" name="Kamara's Sword" count="1"/>
+            <item id="102001075" name="Kamara's Harp" count="1"/>
+            <item id="100901223" name="Rata's Greatsword" count="1"/>
+            <item id="101501235" name="Rata's Staff" count="1"/>
+            <item id="100501203" name="Rata's Orb" count="1"/>
+            <item id="100201381" name="Grigol's Dagger" count="1"/>
+            <item id="101701254" name="Rata's Bow" count="1"/>
+            <item id="101801052" name="Grigol's Pistol" count="1"/>
+            <item id="100601295" name="Grigol's Spellbook" count="1"/>
+            <item id="100101208" name="Grigol's Mace" count="1"/>
+            <item id="102100838" name="Grigol's Cipher-Blade" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053199" name="Tristran's Armor Box">
+        <items>
+            <item id="110100868" name="Tristran's Tunic" count="1"/>
+            <item id="110300823" name="Tristran's Jerkin" count="1"/>
+            <item id="110500793" name="Tristran's Hauberk" count="1"/>
+            <item id="110600779" name="Tristran's Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053200" name="Mani's Armor Box">
+        <items>
+            <item id="114100800" name="Mani's Shoes" count="1"/>
+            <item id="114300810" name="Mani's Boots" count="1"/>
+            <item id="114500772" name="Mani's Brogans" count="1"/>
+            <item id="114600731" name="Mani's Sabatons" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053219" name="[Event] Sauro Commander's Accessory Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053228" name="[Event] Heartseeker Equipment Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053231" name="[Event] Alukina's Weapon Chest"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053232" name="[Event] Menotios's Weapon Chest"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053231" name="[Event] Alukina's Weapon Chest">
+        <items player_class="SORCERER">
+            <item id="100500390" name="Alukina's Tears" count="1"/>
+            <item id="100600421" name="Alukina's Holy Book" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100500390" name="Alukina's Tears" count="1"/>
+            <item id="100600421" name="Alukina's Holy Book" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100000513" name="Alukina's Sword" count="1"/>
+            <item id="100200502" name="Alukina's Silver-edged Knife" count="1"/>
+            <item id="101700406" name="Alukina's Meteor Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100000513" name="Alukina's Sword" count="1"/>
+            <item id="100200502" name="Alukina's Silver-edged Knife" count="1"/>
+            <item id="101700406" name="Alukina's Meteor Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100100396" name="Alukina's Scepter" count="1"/>
+            <item id="101500394" name="Alukina's Coral Staff" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100100396" name="Alukina's Scepter" count="1"/>
+            <item id="101500394" name="Alukina's Coral Staff" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100000513" name="Alukina's Sword" count="1"/>
+            <item id="100100396" name="Alukina's Scepter" count="1"/>
+            <item id="100900388" name="Alukina's Scimitar" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100000513" name="Alukina's Sword" count="1"/>
+            <item id="100100396" name="Alukina's Scepter" count="1"/>
+            <item id="100200502" name="Alukina's Silver-edged Knife" count="1"/>
+            <item id="100900388" name="Alukina's Scimitar" count="1"/>
+            <item id="101300379" name="Alukina's Spear" count="1"/>
+            <item id="101700406" name="Alukina's Meteor Bow" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101800912" name="Alukina's Pistol" count="1"/>
+            <item id="101900436" name="Alukina's Aethercannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102000465" name="Alukina's Harp" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102100767" name="Alukina's Cipher-Blade" count="1"/>
+            <item id="101800912" name="Alukina's Pistol" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053232" name="[Event] Menotios's Weapon Chest">
+        <items player_class="SORCERER">
+            <item id="100500247" name="Menotios' Jewel" count="1"/>
+            <item id="100600262" name="Menotios' Tome" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100500247" name="Menotios' Jewel" count="1"/>
+            <item id="100600262" name="Menotios' Tome" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100000322" name="Menotios' Sword" count="1"/>
+            <item id="100200343" name="Menotios' Dagger" count="1"/>
+            <item id="101700261" name="Menotios' Longbow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100000322" name="Menotios' Sword" count="1"/>
+            <item id="100200343" name="Menotios' Dagger" count="1"/>
+            <item id="101700261" name="Menotios' Longbow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100100235" name="Menotios' Warhammer" count="1"/>
+            <item id="101500249" name="Menotios' Staff" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100100235" name="Menotios' Warhammer" count="1"/>
+            <item id="101500249" name="Menotios' Staff" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100000322" name="Menotios' Sword" count="1"/>
+            <item id="100100235" name="Menotios' Warhammer" count="1"/>
+            <item id="100900240" name="Menotios' Greatsword" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100000322" name="Menotios' Sword" count="1"/>
+            <item id="100100235" name="Menotios' Warhammer" count="1"/>
+            <item id="100200343" name="Menotios' Dagger" count="1"/>
+            <item id="100900240" name="Menotios' Greatsword" count="1"/>
+            <item id="101300236" name="Menotios' Spear" count="1"/>
+            <item id="101700261" name="Menotios' Longbow" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101800316" name="Menotios' Pistol" count="1"/>
+            <item id="101900318" name="Menotios' Aethercannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102000330" name="Menotios' Harp" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102100299" name="Menotios' Cipher-Blade" count="1"/>
+            <item id="101800316" name="Menotios' Pistol" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053233" name="[Event] Omega and Ragnarok Accessory Chest"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188053238" name="Scroll Bundle (Linkgate Foundry)">
 		<items>
@@ -5263,37 +5632,254 @@
             <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188055004" name="Prestige Pack Month 3 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055005" name="Prestige Pack Month 4 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055006" name="Prestige Pack Month 4 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055007" name="Prestige Pack Month 5 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055008" name="Prestige Pack Month 5 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055009" name="Prestige Pack Month 6 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055010" name="Prestige Pack Month 6 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055011" name="Prestige Pack Month 7 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055012" name="Prestige Pack Month 7 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055013" name="Prestige Pack Month 8 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055014" name="Prestige Pack Month 8 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055015" name="Prestige Pack Month 9 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055016" name="Prestige Pack Month 9 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055017" name="Prestige Pack Month 10 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055018" name="Prestige Pack Month 10 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055019" name="Prestige Pack Month 11 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055020" name="Prestige Pack Month 11 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055021" name="Prestige Pack Month 12 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055022" name="Prestige Pack Month 12 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055023" name="Prestige Pack Month 13 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055024" name="Prestige Pack Month 13 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055025" name="Prestige Pack Month 14 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055026" name="Prestige Pack Month 14 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055027" name="Prestige Pack Month 15 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055028" name="Prestige Pack Month 15 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055029" name="Prestige Pack Month 16 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055030" name="Prestige Pack Month 16 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055031" name="Prestige Pack Month 17 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055032" name="Prestige Pack Month 17 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055033" name="Prestige Pack Month 18 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055034" name="Prestige Pack Month 18 Bonus B"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188055004" name="Prestige Pack Month 3 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055005" name="Prestige Pack Month 4 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="4"/>
+            <item id="186000199" name="Legion Coin" count="4"/>
+            <item id="182007162" name="Aether Cherry" count="60"/>
+            <item id="186000236" name="Blood Mark" count="40"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055006" name="Prestige Pack Month 4 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="4"/>
+            <item id="188052740" name="[Event] Brilliant Ancient Manastone Bundle" count="1"/>
+            <item id="186000237" name="Ancient Coin" count="40"/>
+            <item id="186000238" name="Conqueror's Mark" count="4"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055007" name="Prestige Pack Month 5 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="4"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="200"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="200"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055008" name="Prestige Pack Month 5 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="4"/>
+            <item id="190020105" name="Big Boy Shugo Egg (30 Days)" count="1"/>
+            <item id="169620125" name="Venerable Elim's Amulet I" count="4"/>
+            <item id="188053649" name="Lockbox Key Pouch" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055009" name="Prestige Pack Month 6 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="8"/>
+            <item id="166150018" name="Assured Greater Felicitous Socketing (Eternal)" count="1"/>
+            <item id="166150019" name="Assured Greater Felicitous Socketing (Mythic)" count="1"/>
+            <item id="188053975" name="Stigma Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055010" name="Prestige Pack Month 6 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="8"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055011" name="Prestige Pack Month 7 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="5"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="250"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="250"/>
+            <item id="169620137" name="Crafting Boost Charm I - 300%" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055012" name="Prestige Pack Month 7 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="5"/>
+            <item id="166030005" name="Tempering Solution" count="1"/>
+            <item id="166020000" name="Omega Enchantment Stone" count="1"/>
+            <item id="186000238" name="Conqueror's Mark" count="5"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055013" name="Prestige Pack Month 8 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="5"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="250"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="250"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055014" name="Prestige Pack Month 8 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="5"/>
+            <item id="169620063" name="AP Boost Charm I - 40%" count="5"/>
+            <item id="186000201" name="Protectorate Coin" count="50"/>
+            <item id="186000238" name="Conqueror's Mark" count="5"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055015" name="Prestige Pack Month 9 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="10"/>
+            <item id="188053975" name="Stigma Box" count="1"/>
+            <item id="186000199" name="Legion Coin" count="10"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055016" name="Prestige Pack Month 9 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="10"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055017" name="Prestige Pack Month 10 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="186000199" name="Legion Coin" count="6"/>
+            <item id="182007162" name="Aether Cherry" count="120"/>
+            <item id="186000236" name="Blood Mark" count="60"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055018" name="Prestige Pack Month 10 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="188052740" name="[Event] Brilliant Ancient Manastone Bundle" count="1"/>
+            <item id="186000237" name="Ancient Coin" count="60"/>
+            <item id="186000238" name="Conqueror's Mark" count="6"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055019" name="Prestige Pack Month 11 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="300"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="300"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055020" name="Prestige Pack Month 11 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="190020105" name="Big Boy Shugo Egg (30 Days)" count="1"/>
+            <item id="169620125" name="Venerable Elim's Amulet I" count="6"/>
+            <item id="188053649" name="Lockbox Key Pouch" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055021" name="Prestige Pack Month 12 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="12"/>
+            <item id="188053975" name="Stigma Box" count="1"/>
+            <item id="166150018" name="Assured Greater Felicitous Socketing (Eternal)" count="1"/>
+            <item id="166150019" name="Assured Greater Felicitous Socketing (Mythic)" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055022" name="Prestige Pack Month 12 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="12"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055023" name="Prestige Pack Month 13 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="300"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="300"/>
+            <item id="169620137" name="Crafting Boost Charm I - 300%" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055024" name="Prestige Pack Month 13 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="166030005" name="Tempering Solution" count="1"/>
+            <item id="166020000" name="Omega Enchantment Stone" count="1"/>
+            <item id="186000238" name="Conqueror's Mark" count="6"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055025" name="Prestige Pack Month 14 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="300"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="300"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055026" name="Prestige Pack Month 14 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="169620063" name="AP Boost Charm I - 40%" count="6"/>
+            <item id="186000201" name="Protectorate Coin" count="60"/>
+            <item id="186000238" name="Conqueror's Mark" count="6"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055027" name="Prestige Pack Month 15 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="12"/>
+            <item id="188053975" name="Stigma Box" count="1"/>
+            <item id="186000199" name="Legion Coin" count="12"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055028" name="Prestige Pack Month 15 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="12"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055029" name="Prestige Pack Month 16 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="186000199" name="Legion Coin" count="6"/>
+            <item id="182007162" name="Aether Cherry" count="120"/>
+            <item id="186000236" name="Blood Mark" count="60"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055030" name="Prestige Pack Month 16 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="188052740" name="[Event] Brilliant Ancient Manastone Bundle" count="1"/>
+            <item id="186000237" name="Ancient Coin" count="60"/>
+            <item id="186000238" name="Conqueror's Mark" count="6"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055031" name="Prestige Pack Month 17 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="300"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="300"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055032" name="Prestige Pack Month 17 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="188055119" name="Big Boy Shugo Bundle" count="1"/>
+            <item id="169620125" name="Venerable Elim's Amulet I" count="16"/>
+            <item id="188053649" name="Lockbox Key Pouch" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055033" name="Prestige Pack Month 18 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="12"/>
+            <item id="188053975" name="Stigma Box" count="1"/>
+            <item id="166150018" name="Assured Greater Felicitous Socketing (Eternal)" count="1"/>
+            <item id="166150019" name="Assured Greater Felicitous Socketing (Mythic)" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055034" name="Prestige Pack Month 18 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="12"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188055035" name="Prestige Pack Month 19 Bonus A"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055036" name="Prestige Pack Month 19 Bonus B"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055037" name="Prestige Pack Month 20 Bonus A"/> <!-- NEW -->
@@ -5323,26 +5909,451 @@
 	<decomposable_selectitem item_id="188055061" name="Prestige Pack Month 32 Bonus A"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055062" name="Prestige Pack Month 32 Bonus B"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055063" name="Prestige Pack Month 33 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055064" name="Prestige Pack Month 33 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055065" name="Prestige Pack Month 34 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055066" name="Prestige Pack Month 34 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055067" name="Prestige Pack Month 35 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055068" name="Prestige Pack Month 35 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055069" name="Prestige Pack Month 36 Bonus A"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055070" name="Prestige Pack Month 36 Bonus B"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055074" name="Prestige Pack Loyalty Reward – 24 Months"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188055064" name="Prestige Pack Month 33 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="12"/>
+            <item id="188053976" name="Greater Stigma Box" count="1"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055065" name="Prestige Pack Month 34 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="186000199" name="Legion Coin" count="6"/>
+            <item id="182007162" name="Aether Cherry" count="120"/>
+            <item id="186000236" name="Blood Mark" count="60"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055066" name="Prestige Pack Month 34 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="188052740" name="[Event] Brilliant Ancient Manastone Bundle" count="1"/>
+            <item id="186000237" name="Ancient Coin" count="60"/>
+            <item id="186000238" name="Conqueror's Mark" count="6"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055067" name="Prestige Pack Month 35 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="6"/>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="300"/>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="300"/>
+            <item id="188052761" name="[Event] Bonus Entry Scroll Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055068" name="Prestige Pack Month 35 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="6"/>
+            <item id="188055119" name="Big Boy Shugo Bundle" count="1"/>
+            <item id="169620125" name="Venerable Elim's Amulet I" count="6"/>
+            <item id="188053649" name="Lockbox Key Pouch" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055069" name="Prestige Pack Month 36 Bonus A">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="12"/>
+            <item id="188053975" name="Stigma Box" count="2"/>
+            <item id="166150018" name="Assured Greater Felicitous Socketing (Eternal)" count="1"/>
+            <item id="166150019" name="Assured Greater Felicitous Socketing (Mythic)" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055070" name="Prestige Pack Month 36 Bonus B">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="12"/>
+            <item id="188053976" name="Greater Stigma Box" count="2"/>
+            <item id="188053618" name="Honorable Elim's Idian Bundle" count="1"/>
+            <item id="188052741" name="[Event] Brilliant Composite Manastone Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055074" name="Prestige Pack Loyalty Reward – 24 Months">
+        <items>
+            <item id="186000242" name="Ceramium Medal" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188055153" name="Dreaming Nether Water Dragon King's Weapon Chest"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055212" name="[Event] Wholehearted Fuzzball Transformation Candy Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188055212" name="[Event] Wholehearted Fuzzball Transformation Candy Box">
+        <items>
+            <item id="160010445" name="Strong Dignified Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010446" name="Strong Wise Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010447" name="Strong Fast Ayas Transformation Candy" count="3" race="ELYOS"/>
+            <item id="160010448" name="Strong Dignified Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+            <item id="160010449" name="Strong Wise Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+            <item id="160010450" name="Strong Fast Ayas Transformation Candy" count="3" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188055323" name="[Event] Elite Composite Manastone Bundle"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055324" name="[Event] Elite Composite Manastone Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055325" name="Enchanted Archangel's Wing Box "/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055326" name="Enchanted Archangel's Wing Box "/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055327" name="Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055328" name="Stigma Bundle"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055329" name="Enhanced Hyperion's Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055330" name="[Event] Manakarna Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055331" name="[Event] Manakarna Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188055402" name="Secret Document"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188055325" name="Enchanted Archangel's Wing Box ">
+        <items>
+            <item id="187060185" name="Archangel's Wings" count="1"/>
+            <item id="187060186" name="Archangel's Wings" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055326" name="Enchanted Archangel's Wing Box ">
+        <items>
+            <item id="187060185" name="Archangel's Wings" count="1"/>
+            <item id="187060186" name="Archangel's Wings" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055327" name="Stigma Bundle">
+        <items>
+            <item id="188053985" name="Cleric Stigma Bundle" count="1"/>
+            <item id="188053986" name="Chanter Stigma Bundle" count="1"/>
+            <item id="188053981" name="Assassin Stigma Bundle" count="1"/>
+            <item id="188053982" name="Ranger Stigma Bundle" count="1"/>
+            <item id="188053980" name="Templar Stigma Bundle" count="1"/>
+            <item id="188053987" name="Gunslinger Stigma Bundle" count="1"/>
+            <item id="188053988" name="Aethertech Stigma Bundle" count="1"/>
+            <item id="188053984" name="Spiritmaster Stigma Bundle" count="1"/>
+            <item id="188053979" name="Gladiator Stigma Bundle" count="1"/>
+            <item id="188053983" name="Sorcerer Stigma Bundle" count="1"/>
+            <item id="188053989" name="Songweaver Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055328" name="Stigma Bundle">
+        <items>
+            <item id="188053985" name="Cleric Stigma Bundle" count="1"/>
+            <item id="188053986" name="Chanter Stigma Bundle" count="1"/>
+            <item id="188053981" name="Assassin Stigma Bundle" count="1"/>
+            <item id="188053982" name="Ranger Stigma Bundle" count="1"/>
+            <item id="188053980" name="Templar Stigma Bundle" count="1"/>
+            <item id="188053987" name="Gunslinger Stigma Bundle" count="1"/>
+            <item id="188053988" name="Aethertech Stigma Bundle" count="1"/>
+            <item id="188053984" name="Spiritmaster Stigma Bundle" count="1"/>
+            <item id="188053979" name="Gladiator Stigma Bundle" count="1"/>
+            <item id="188053983" name="Sorcerer Stigma Bundle" count="1"/>
+            <item id="188053989" name="Songweaver Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055329" name="Enhanced Hyperion's Armor Box">
+        <items player_class="GLADIATOR">
+            <item id="110601448" name="Enraged Hyperion's Gladiator Breastplate" count="1"/>
+            <item id="113601394" name="Enraged Hyperion's Gladiator Greaves" count="1"/>
+            <item id="111601410" name="Enraged Hyperion's Gladiator Gauntlets" count="1"/>
+            <item id="114601398" name="Enraged Hyperion's Gladiator Sabatons" count="1"/>
+            <item id="112601392" name="Enraged Hyperion's Gladiator Shoulderplates" count="1"/>
+            <item id="110601449" name="Incensed Hyperion's Gladiator Breastplate" count="1"/>
+            <item id="113601395" name="Incensed Hyperion's Gladiator Greaves" count="1"/>
+            <item id="111601411" name="Incensed Hyperion's Gladiator Gauntlets" count="1"/>
+            <item id="114601399" name="Incensed Hyperion's Gladiator Sabatons" count="1"/>
+            <item id="112601393" name="Incensed Hyperion's Gladiator Shoulderplates" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="110601446" name="Enraged Hyperion's Templar Breastplate" count="1"/>
+            <item id="113601392" name="Enraged Hyperion's Templar Greaves" count="1"/>
+            <item id="111601408" name="Enraged Hyperion's Templar Gauntlets" count="1"/>
+            <item id="114601396" name="Enraged Hyperion's Templar Sabatons" count="1"/>
+            <item id="112601390" name="Enraged Hyperion's Templar Shoulderplates" count="1"/>
+            <item id="110601447" name="Incensed Hyperion's Templar Breastplate" count="1"/>
+            <item id="113601393" name="Incensed Hyperion's Templar Greaves" count="1"/>
+            <item id="111601409" name="Incensed Hyperion's Templar Gauntlets" count="1"/>
+            <item id="114601397" name="Incensed Hyperion's Templar Sabatons" count="1"/>
+            <item id="112601391" name="Incensed Hyperion's Templar Shoulderplates" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301513" name="Enraged Hyperion's Assassin Jerkin" count="1"/>
+            <item id="113301477" name="Enraged Hyperion's Assassin Breeches" count="1"/>
+            <item id="111301453" name="Enraged Hyperion's Assassin Vambrace" count="1"/>
+            <item id="114301514" name="Enraged Hyperion's Assassin Boots" count="1"/>
+            <item id="112301397" name="Enraged Hyperion's Assassin Shoulderguards" count="1"/>
+            <item id="110301514" name="Incensed Hyperion's Assassin Jerkin" count="1"/>
+            <item id="113301478" name="Incensed Hyperion's Assassin Breeches" count="1"/>
+            <item id="111301454" name="Incensed Hyperion's Assassin Vambrace" count="1"/>
+            <item id="114301515" name="Incensed Hyperion's Assassin Boots" count="1"/>
+            <item id="112301398" name="Incensed Hyperion's Assassin Shoulderguards" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301515" name="Enraged Hyperion's Ranger Jerkin" count="1"/>
+            <item id="113301479" name="Enraged Hyperion's Ranger Breeches" count="1"/>
+            <item id="111301455" name="Enraged Hyperion's Ranger Vambrace" count="1"/>
+            <item id="114301516" name="Enraged Hyperion's Ranger Boots" count="1"/>
+            <item id="112301399" name="Enraged Hyperion's Ranger Shoulderguards" count="1"/>
+            <item id="110301516" name="Incensed Hyperion's Ranger Jerkin" count="1"/>
+            <item id="113301480" name="Incensed Hyperion's Ranger Breeches" count="1"/>
+            <item id="111301456" name="Incensed Hyperion's Ranger Vambrace" count="1"/>
+            <item id="114301517" name="Incensed Hyperion's Ranger Boots" count="1"/>
+            <item id="112301400" name="Incensed Hyperion's Ranger Shoulderguards" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110501468" name="Enraged Hyperion's Cleric Chain Armor" count="1"/>
+            <item id="113501441" name="Enraged Hyperion's Cleric Chain Leg Armor" count="1"/>
+            <item id="111501425" name="Enraged Hyperion's Cleric Handguards" count="1"/>
+            <item id="114501450" name="Enraged Hyperion's Cleric Chain Boots" count="1"/>
+            <item id="112501367" name="Enraged Hyperion's Cleric Spaulders" count="1"/>
+            <item id="110501469" name="Incensed Hyperion's Cleric Chain Armor" count="1"/>
+            <item id="113501442" name="Incensed Hyperion's Cleric Chain Leg Armor" count="1"/>
+            <item id="111501426" name="Incensed Hyperion's Cleric Handguards" count="1"/>
+            <item id="114501451" name="Incensed Hyperion's Cleric Chain Boots" count="1"/>
+            <item id="112501368" name="Incensed Hyperion's Cleric Spaulders" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110501470" name="Enraged Hyperion's Chanter Chain Armor" count="1"/>
+            <item id="113501443" name="Enraged Hyperion's Chanter Chain Leg Armor" count="1"/>
+            <item id="111501427" name="Enraged Hyperion's Chanter Handguards" count="1"/>
+            <item id="114501452" name="Enraged Hyperion's Chanter Chain Boots" count="1"/>
+            <item id="112501369" name="Enraged Hyperion's Chanter Spaulders" count="1"/>
+            <item id="110501471" name="Incensed Hyperion's Chanter Chain Armor" count="1"/>
+            <item id="113501444" name="Incensed Hyperion's Chanter Chain Leg Armor" count="1"/>
+            <item id="111501428" name="Incensed Hyperion's Chanter Handguards" count="1"/>
+            <item id="114501453" name="Incensed Hyperion's Chanter Chain Boots" count="1"/>
+            <item id="112501370" name="Incensed Hyperion's Chanter Spaulders" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101623" name="Enraged Hyperion's Sorcerer Tunic" count="1"/>
+            <item id="113101474" name="Enraged Hyperion's Sorcerer Leggings" count="1"/>
+            <item id="111101464" name="Enraged Hyperion's Sorcerer Gloves" count="1"/>
+            <item id="114101511" name="Enraged Hyperion's Sorcerer Shoes" count="1"/>
+            <item id="112101418" name="Enraged Hyperion's Sorcerer Pauldrons" count="1"/>
+            <item id="110101624" name="Incensed Hyperion's Sorcerer Tunic" count="1"/>
+            <item id="113101475" name="Incensed Hyperion's Sorcerer Leggings" count="1"/>
+            <item id="111101465" name="Incensed Hyperion's Sorcerer Gloves" count="1"/>
+            <item id="114101512" name="Incensed Hyperion's Sorcerer Shoes" count="1"/>
+            <item id="112101419" name="Incensed Hyperion's Sorcerer Pauldrons" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101625" name="Enraged Hyperion's Spiritmaster Tunic" count="1"/>
+            <item id="113101476" name="Enraged Hyperion's Spiritmaster Leggings" count="1"/>
+            <item id="111101466" name="Enraged Hyperion's Spiritmaster Gloves" count="1"/>
+            <item id="114101513" name="Enraged Hyperion's Spiritmaster Shoes" count="1"/>
+            <item id="112101420" name="Enraged Hyperion's Spiritmaster Pauldrons" count="1"/>
+            <item id="110101626" name="Incensed Hyperion's Spiritmaster Tunic" count="1"/>
+            <item id="113101477" name="Incensed Hyperion's Spiritmaster Leggings" count="1"/>
+            <item id="111101467" name="Incensed Hyperion's Spiritmaster Gloves" count="1"/>
+            <item id="114101514" name="Incensed Hyperion's Spiritmaster Shoes" count="1"/>
+            <item id="112101421" name="Incensed Hyperion's Spiritmaster Pauldrons" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301517" name="Enraged Hyperion's Gunslinger Magic Jerkin" count="1"/>
+            <item id="113301481" name="Enraged Hyperion's Gunslinger Magic Breeches" count="1"/>
+            <item id="111301457" name="Enraged Hyperion's Gunslinger Magic Vambrace" count="1"/>
+            <item id="114301518" name="Enraged Hyperion's Gunslinger Magic Boots" count="1"/>
+            <item id="112301401" name="Enraged Hyperion's Gunslinger Magic Shoulderguards" count="1"/>
+            <item id="110301518" name="Incensed Hyperion's Gunslinger Magic Jerkin" count="1"/>
+            <item id="113301482" name="Incensed Hyperion's Gunslinger Magic Breeches" count="1"/>
+            <item id="111301458" name="Incensed Hyperion's Gunslinger Magic Vambrace" count="1"/>
+            <item id="114301519" name="Incensed Hyperion's Gunslinger Magic Boots" count="1"/>
+            <item id="112301402" name="Incensed Hyperion's Gunslinger Magic Shoulderguards" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101627" name="Enraged Hyperion's Songweaver Tunic" count="1"/>
+            <item id="113101478" name="Enraged Hyperion's Songweaver Leggings" count="1"/>
+            <item id="111101468" name="Enraged Hyperion's Songweaver Gloves" count="1"/>
+            <item id="114101515" name="Enraged Hyperion's Songweaver Shoes" count="1"/>
+            <item id="112101422" name="Enraged Hyperion's Songweaver Pauldrons" count="1"/>
+            <item id="110101628" name="Incensed Hyperion's Songweaver Tunic" count="1"/>
+            <item id="113101479" name="Incensed Hyperion's Songweaver Leggings" count="1"/>
+            <item id="111101469" name="Incensed Hyperion's Songweaver Gloves" count="1"/>
+            <item id="114101516" name="Incensed Hyperion's Songweaver Shoes" count="1"/>
+            <item id="112101423" name="Incensed Hyperion's Songweaver Pauldrons" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110550936" name="Enraged Hyperion's Magic Hauberk" count="1"/>
+            <item id="113501512" name="Enraged Hyperion's Aethertech Magic Chausses" count="1"/>
+            <item id="111501494" name="Enraged Hyperion's Aethertech Magic Handguards" count="1"/>
+            <item id="114501521" name="Enraged Hyperion's Aethertech Brogans" count="1"/>
+            <item id="112501436" name="Enraged Hyperion's Aethertech Magic Spaulders" count="1"/>
+            <item id="110550937" name="Incensed Hyperion's Magic Hauberk" count="1"/>
+            <item id="113501513" name="Incensed Hyperion's Aethertech Magic Chausses" count="1"/>
+            <item id="111501495" name="Incensed Hyperion's Aethertech Magic Handguards" count="1"/>
+            <item id="114501522" name="Incensed Hyperion's Aethertech Brogans" count="1"/>
+            <item id="112501437" name="Incensed Hyperion's Aethertech Magic Spaulders" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055330" name="[Event] Manakarna Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001801" name="Dark Lord's Wrath" count="1"/>
+            <item id="100901427" name="Darken Lord's Hatred" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001802" name="Dark Lord's Lunacy" count="1"/>
+            <item id="101301317" name="Darken Lord's Greed" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201566" name="Dark Lord's Murderous Intent" count="1"/>
+            <item id="100001803" name="Darken Lord's Wrath" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="101701410" name="Dark Lord's Jealousy" count="1"/>
+            <item id="101701411" name="Darken Lord's Jealousy" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801268" name="Dark Lord's Fighting Spirit" count="1"/>
+            <item id="101901174" name="Darken Lord's Courage" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101393" name="Dark Lord's Delight" count="1"/>
+            <item id="101501409" name="Darken Lord's Pride" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="101501408" name="Dark Lord's Pride" count="1"/>
+            <item id="100101394" name="Darken Lord's Delight" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501357" name="Dark Lord's Arrogance" count="1"/>
+            <item id="100601475" name="Darken Lord's Distrust" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100601474" name="Dark Lord's Distrust" count="1"/>
+            <item id="100501358" name="Darken Lord's Arrogance" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001294" name="Dark Lord's Shudder" count="1"/>
+            <item id="102001295" name="Darken Lord's Shudder" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101111" name="Dark Lord's Craving" count="1"/>
+            <item id="102101112" name="Darken Lord's Craving" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055331" name="[Event] Manakarna Armor Box">
+        <items player_class="TEMPLAR">
+            <item id="110601671" name="Dark Lord's Templar Breastplate" count="1"/>
+            <item id="113601617" name="Dark  Lord's Templar Greaves" count="1"/>
+            <item id="111601634" name="Dark Lord's Templar Gauntlets" count="1"/>
+            <item id="114601624" name="Dark Lord's Templar Sabatons" count="1"/>
+            <item id="112601616" name="Dark Lord's Templar Shoulderplates" count="1"/>
+            <item id="110601672" name="Darken Lord's Templar Breastplate" count="1"/>
+            <item id="113601618" name="Darken Lord's Templar Greaves" count="1"/>
+            <item id="111601635" name="Darken Lord's Templar Gauntlest" count="1"/>
+            <item id="114601625" name="Darken Lord's Templar Sabatons" count="1"/>
+            <item id="112601617" name="Darken Lord's Templar Shoulderplates" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601673" name="Dark Lord's Gladiator Breastplate" count="1"/>
+            <item id="113601619" name="Dark Lord's Gladiator Greaves" count="1"/>
+            <item id="111601636" name="Dark Lord's Gladiator Gauntlets" count="1"/>
+            <item id="114601626" name="Dark Lord's Gladiator Sabatons" count="1"/>
+            <item id="112601618" name="Dark Lord's Gladiator Shoulderplates" count="1"/>
+            <item id="110601674" name="Darken Lord's Gladiator Breastplate" count="1"/>
+            <item id="113601620" name="Darken Lord's Gladiator Greaves" count="1"/>
+            <item id="111601637" name="Darken Lord's Gladiator Gauntlets" count="1"/>
+            <item id="114601627" name="Darken Lord's Gladiator Sabatons" count="1"/>
+            <item id="112601619" name="Darken Lord's Gladiator Shoulderplates" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301878" name="Dark Lord's Assassin Jerkin" count="1"/>
+            <item id="113301847" name="Dark Lord's Assassin Legguards" count="1"/>
+            <item id="111301816" name="Dark Lord's Assassin Vambraces" count="1"/>
+            <item id="114301884" name="Dark Lord's Assassin Boots" count="1"/>
+            <item id="112301755" name="Dark Lord's Assassin Shoulderguards" count="1"/>
+            <item id="110301879" name="Darken Lord's Assassin Jerkin" count="1"/>
+            <item id="113301848" name="Darken Lord's Assassin Legguards" count="1"/>
+            <item id="111301817" name="Darken Lord's Assassin Vambraces" count="1"/>
+            <item id="114301885" name="Darken Lord's Assassin Boots" count="1"/>
+            <item id="112301756" name="Darken Lord's Assassin Shoulderguards" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301880" name="Dark Lord's Ranger Jerkin" count="1"/>
+            <item id="113301849" name="Dark Lord's Ranger Legguards" count="1"/>
+            <item id="111301818" name="Dark Lord's Ranger Vambraces" count="1"/>
+            <item id="114301886" name="Dark Lord's Ranger Boots" count="1"/>
+            <item id="112301757" name="Dark Lord's Ranger Shoulderguards" count="1"/>
+            <item id="110301881" name="Darken Lord's Ranger Jerkin" count="1"/>
+            <item id="113301850" name="Darken Lord's Ranger Legguards" count="1"/>
+            <item id="111301819" name="Darken Lord's Ranger Vambraces" count="1"/>
+            <item id="114301887" name="Darken Lord's Ranger Boots" count="1"/>
+            <item id="112301758" name="Darken Lord's Ranger Shoulderguards" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301882" name="Dark Lord's Gunslinger Magic Jerkin" count="1"/>
+            <item id="113301851" name="Dark Lord's Gunslinger Magic Legguards" count="1"/>
+            <item id="111301820" name="Dark Lord's Gunslinger Magic Vambraces" count="1"/>
+            <item id="114301888" name="Dark Lord's Gunslinger Magic Boots" count="1"/>
+            <item id="112301759" name="Dark Lord's Gunslinger Magic Shoulderguards" count="1"/>
+            <item id="110301883" name="Darken Lord's Gunslinger Magic Jerkin" count="1"/>
+            <item id="113301852" name="Darken Lord's Gunslinger Magic Legguards" count="1"/>
+            <item id="111301821" name="Darken Lord's Gunslinger Magic Vambraces" count="1"/>
+            <item id="114301889" name="Darken Lord's Gunslinger Magic Boots" count="1"/>
+            <item id="112301760" name="Darken Lord's Gunslinger Magic Shoulderguards" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551211" name="Dark  Lord's Cleric Hauberk" count="1"/>
+            <item id="113501788" name="Dark  Lord's Cleric Chausses" count="1"/>
+            <item id="111501770" name="Dark  Lord's Cleric Handguards" count="1"/>
+            <item id="114501798" name="Dark  Lord's Cleric Brogans" count="1"/>
+            <item id="112501709" name="Dark  Lord's Cleric Spaulders" count="1"/>
+            <item id="110551212" name="Darken  Lord's Cleric Hauberk" count="1"/>
+            <item id="113501789" name="Darken  Lord's Cleric Chausses" count="1"/>
+            <item id="111501771" name="Darken  Lord's Cleric Handguards" count="1"/>
+            <item id="114501799" name="Darken  Lord's Cleric Brogans" count="1"/>
+            <item id="112501710" name="Darken  Lord's Cleric Spaulders" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110551209" name="Dark Lord's Chanter Hauberk" count="1"/>
+            <item id="113501786" name="Dark Lord's Chanter Chausses" count="1"/>
+            <item id="111501768" name="Dark Lord's Chanter Handguards" count="1"/>
+            <item id="114501796" name="Dark Lord's Chanter Brogans" count="1"/>
+            <item id="112501707" name="Dark Lord's Chanter Spaulders" count="1"/>
+            <item id="110551210" name="Darken Lord's Chanter Hauberk" count="1"/>
+            <item id="113501787" name="Darken Lord's Chanter Chausses" count="1"/>
+            <item id="111501769" name="Darken Lord's Chanter Handguards" count="1"/>
+            <item id="114501797" name="Darken Lord's Chanter Brogans" count="1"/>
+            <item id="112501708" name="Darken Lord's Chanter Spaulders" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101885" name="Dark Lord's Sorcerer Jacket" count="1"/>
+            <item id="113101711" name="Dark Lord's Sorcerer Leggings" count="1"/>
+            <item id="111101700" name="Dark Lord's Sorcerer Gloves" count="1"/>
+            <item id="114101745" name="Dark Lord's Sorcerer Shoes" count="1"/>
+            <item id="112101649" name="Dark Lord's Sorcerer Pauldrons" count="1"/>
+            <item id="110101886" name="Darken Lord's Sorcerer Jacket" count="1"/>
+            <item id="113101712" name="Darken Lord's Sorcerer Leggings" count="1"/>
+            <item id="111101701" name="Darken Lord's Sorcerer Gloves" count="1"/>
+            <item id="114101746" name="Darken Lord's Sorcerer Shoes" count="1"/>
+            <item id="112101650" name="Darken Lord's Sorcerer Pauldrons" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101887" name="Dark Lord's Spiritmaster Jacket" count="1"/>
+            <item id="113101713" name="Dark Lord's Spiritmaster Leggings" count="1"/>
+            <item id="111101702" name="Dark Lord's Spiritmaster Gloves" count="1"/>
+            <item id="114101747" name="Dark Lord's Spiritmaster Shoes" count="1"/>
+            <item id="112101651" name="Dark Lord's Spiritmaster Pauldrons" count="1"/>
+            <item id="110101888" name="Darken Lord's Spiritmaster Jacket" count="1"/>
+            <item id="113101714" name="Darken Lord's Spiritmaster Leggings" count="1"/>
+            <item id="111101703" name="Darken Lord's Spiritmaster Gloves" count="1"/>
+            <item id="114101748" name="Darken Lord's Spiritmaster Shoes" count="1"/>
+            <item id="112101652" name="Darken Lord's Spiritmaster Pauldrons" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101889" name="Dark Lord's Songweaver Jacket" count="1"/>
+            <item id="113101715" name="Dark Lord's Songweaver Leggings" count="1"/>
+            <item id="111101704" name="Dark Lord's Songweaver Gloves" count="1"/>
+            <item id="114101749" name="Dark Lord's Songweaver Shoes" count="1"/>
+            <item id="112101653" name="Dark Lord's Songweaver Pauldrons" count="1"/>
+            <item id="110101890" name="Darken Lord's Songweaver Jacket" count="1"/>
+            <item id="113101716" name="Darken Lord's Songweaver Leggings" count="1"/>
+            <item id="111101705" name="Darken Lord's Songweaver Gloves" count="1"/>
+            <item id="114101750" name="Darken Lord's Songweaver Shoes" count="1"/>
+            <item id="112101654" name="Darken Lord's Songweaver Pauldrons" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551213" name="Dark Lord's Aethertech Magic Hauberk" count="1"/>
+            <item id="113501790" name="Dark Lord's Aethertech Magic Chausses" count="1"/>
+            <item id="111501772" name="Dark Lord's Aethertech Magic Handguards" count="1"/>
+            <item id="114501800" name="Dark Lord's Aethertech Magic Brogans" count="1"/>
+            <item id="112501711" name="Dark Lord's Aethertech Magic Spaulders" count="1"/>
+            <item id="110551214" name="Darken Lord's Aethertech Magic Hauberk" count="1"/>
+            <item id="113501791" name="Darken Lord's Aethertech Magic Chausses" count="1"/>
+            <item id="111501773" name="Darken Lord's Aethertech Magic Handguards" count="1"/>
+            <item id="114501801" name="Darken Lord's Aethertech Magic Brogans" count="1"/>
+            <item id="112501712" name="Darken Lord's Aethertech Magic Spaulders" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188055402" name="Secret Document">
+        <items>
+            <item id="188055403" name="Gladiator Stigma Bundle" count="1"/>
+            <item id="188055406" name="Ranger Stigma Bundle" count="1"/>
+            <item id="188055412" name="Aethertech Stigma Bundle" count="1"/>
+            <item id="188055407" name="Sorcerer Stigma Bundle" count="1"/>
+            <item id="188055411" name="Gunslinger Stigma Bundle" count="1"/>
+            <item id="188055405" name="Assassin Stigma Bundle" count="1"/>
+            <item id="188055404" name="Templar Stigma Bundle" count="1"/>
+            <item id="188055413" name="Songweaver Stigma Bundle" count="1"/>
+            <item id="188055408" name="Spiritmaster Stigma Bundle" count="1"/>
+            <item id="188055409" name="Cleric Stigma Bundle" count="1"/>
+            <item id="188055410" name="Chanter Stigma Bundle" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188055403" name="Gladiator Stigma Bundle"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055404" name="Templar Stigma Bundle"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188055405" name="Assassin Stigma Bundle"/> <!-- NEW -->
