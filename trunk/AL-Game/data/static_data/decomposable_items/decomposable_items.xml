@@ -644,10 +644,7 @@
             <item id="160010084" count="3" name="Polar Bear Form Candy"/>
         </items>
         <items>
-            <item id="166000065" count="2" name="L65 Enchantment Stone"/>
-        </items>
-        <items>
-            <item id="166000075" count="2" name="L75 Enchantment Stone"/>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
         </items>
         <items>
             <item id="167000518" count="2" name="Manastone: Attack +5"/>
@@ -695,10 +692,7 @@
             <item id="160010085" count="5" name="Polar Bear Form Candy"/>
         </items>
         <items>
-            <item id="166000065" count="2" name="L65 Enchantment Stone"/>
-        </items>
-        <items>
-            <item id="166000075" count="2" name="L75 Enchantment Stone"/>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
         </items>
         <items>
             <item id="167000518" count="2" name="Manastone: Attack +5"/>
@@ -4252,48 +4246,837 @@
 		</items>
 	</decomposable>
 	<decomposable item_id="188050702" decomposable_name="Veille's 1st Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="5"/>
+        <items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050703" decomposable_name="Veille's 2nd Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="4"/>
+        <items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050704" decomposable_name="Veille's 3rd Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="3"/>
+        <items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050705" decomposable_name="Veille's 4th Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="2"/>
+        <items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006281" name="Veille's Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610112" name="[Title] Vanquisher of Mastarius"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050706" decomposable_name="Mastarius' 1st Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="5"/>
+        <items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050707" decomposable_name="Mastarius' 2nd Grade Reward">
-		<items>
-			<item id="182006282" name="Mastarius' Favor"/>
+        <items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
 		<items>
-			<item id="186000096" name="Platinum Medal" count="4"/>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050708" decomposable_name="Mastarius' 3rd Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="3"/>
+        <items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050709" decomposable_name="Mastarius' 4th Grade Reward">
-		<items>
-			<item id="186000096" name="Platinum Medal" count="2"/>
+        <items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000161" name="Illusion Godstone: Meslamtaeda's Greed"/>
 		</items>
-	</decomposable>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000162" name="Illusion Godstone: Ereshkigal's Honor"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000163" name="Illusion Godstone: Nezekan's Advance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000164" name="Illusion Godstone: Beritra's Plot"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000165" name="Illusion Godstone: Fregion's Trick"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000166" name="Illusion Godstone: Lumiel's Intervention"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000167" name="Illusion Godstone: Kaisinel's Fantasy"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000168" name="Illusion Godstone: Zikel's Arrogance"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000169" name="Illusion Godstone: Fregion's Stratagem"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000170" name="Illusion Godstone: Tiamat's Counterattack"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000171" name="Illusion Godstone: Marchutan's Impartiality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000172" name="Illusion Godstone: Yustiel's Generosity"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000173" name="Illusion Godstone: Beritra's Selfishness"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000174" name="Illusion Godstone: Tiamat's Fury"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000175" name="Illusion Godstone: Triniel's Rationality"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000176" name="Illusion Godstone: Vaizel's Vow"/>
+		</items>
+		<items>
+            <item id="182006282" name="Mastarius' Favor"/>
+            <item id="186000242" name="Ceramium Medal"/>
+            <item id="169610312" name="[Title] Vanquisher of Veille"/>
+            <item id="168000177" name="Illusion Godstone: Meslamtaeda's Regret"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050710" decomposable_name="Proposal Candy Box">
 		<items>
 			<item id="160010015" name="Proposal Candy" rnd_min="1" rnd_max="10"/>
@@ -4716,17 +5499,226 @@
 			<item id="162000061" name="[Static] Major Mana Elixir" count="10"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188050739" decomposable_name="Old Mystery Chest"/>
-	<decomposable item_id="188050740" decomposable_name="Small Mystery Chest"/>
-	<decomposable item_id="188050741" decomposable_name="Mystery Chest"/>
-	<decomposable item_id="188050742" decomposable_name="Large Mystery Chest"/>
-	<decomposable item_id="188050743" decomposable_name="Unknown Mystery Chest"/>
-	<decomposable item_id="188050744" decomposable_name="Fabled Trousers Bundle"/>
-	<decomposable item_id="188050745" decomposable_name="Greater Fabled Trousers Bundle"/>
-	<decomposable item_id="188050746" decomposable_name="Major Fabled Trousers Bundle"/>
-	<decomposable item_id="188050747" decomposable_name="Fabled Jacket Bundle"/>
-	<decomposable item_id="188050748" decomposable_name="Greater Fabled Jacket Bundle"/>
-	<decomposable item_id="188050749" decomposable_name="Major Fabled Jacket Bundle"/>
+	<decomposable item_id="188050739" decomposable_name="Old Mystery Chest">
+        <items>
+            <item id="152011002" name="Lesser Weapon Flux" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="152011004" name="Greater Weapon Flux" rnd_min="1" rnd_max="4"/>
+		</items>
+		<items>
+            <item id="152011022" name="Lesser Armor Flux" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="152011024" name="Greater Armor Flux" rnd_min="1" rnd_max="4"/>
+		</items>
+		<items>
+            <item id="152011042" name="Lesser Accessory Flux" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="152011044" name="Greater Accessory Flux" rnd_min="1" rnd_max="4"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050740" decomposable_name="Small Mystery Chest">
+        <items>
+            <item id="152011002" name="Lesser Weapon Flux"/>
+		</items>
+		<items>
+            <item id="152011004" name="Greater Weapon Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011006" name="Fine Weapon Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011022" name="Lesser Armor Flux"/>
+		</items>
+		<items>
+            <item id="152011024" name="Greater Armor Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011026" name="Fine Armor Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011042" name="Lesser Accessory Flux"/>
+		</items>
+		<items>
+            <item id="152011044" name="Greater Accessory Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011046" name="Fine Accessory Flux" rnd_min="1" rnd_max="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050741" decomposable_name="Mystery Chest">
+        <items>
+            <item id="152011004" name="Greater Weapon Flux" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="152011006" name="Fine Weapon Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011024" name="Greater Armor Flux" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="152011026" name="Fine Armor Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011044" name="Greater Accessory Flux" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="152011046" name="Fine Accessory Flux" rnd_min="1" rnd_max="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050742" decomposable_name="Large Mystery Chest">
+        <items>
+            <item id="152011004" name="Greater Weapon Flux"/>
+		</items>
+		<items>
+            <item id="152011006" name="Fine Weapon Flux" rnd_min="1" rnd_max="4"/>
+		</items>
+		<items>
+            <item id="152011008" name="Premium Weapon Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011024" name="Greater Armor Flux"/>
+		</items>
+		<items>
+            <item id="152011026" name="Fine Armor Flux" rnd_min="1" rnd_max="4"/>
+		</items>
+		<items>
+            <item id="152011028" name="Premium Armor Flux" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="152011044" name="Greater Accessory Flux"/>
+		</items>
+		<items>
+            <item id="152011046" name="Fine Accessory Flux" rnd_min="1" rnd_max="4"/>
+		</items>
+		<items>
+            <item id="152011048" name="Premium Accessory Flux" rnd_min="1" rnd_max="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050743" decomposable_name="Unknown Mystery Chest">
+        <items>
+            <item id="152011006" name="Fine Weapon Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011008" name="Premium Weapon Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011026" name="Fine Armor Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011028" name="Premium Armor Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011046" name="Fine Accessory Flux" rnd_min="1" rnd_max="6"/>
+		</items>
+		<items>
+            <item id="152011048" name="Premium Accessory Flux" rnd_min="1" rnd_max="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050744" decomposable_name="Fabled Trousers Bundle">
+        <items>
+            <item id="113101127" name="Spiritbound Leggings"/>
+		</items>
+		<items>
+            <item id="113301130" name="Spiritbound Breeches"/>
+		</items>
+		<items>
+            <item id="113501106" name="Spiritbound Chausses"/>
+		</items>
+		<items>
+            <item id="113601071" name="Spiritbound Greaves"/>
+		</items>
+		<items>
+            <item id="182006387" name="Small Broken Armor"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050745" decomposable_name="Greater Fabled Trousers Bundle">
+        <items>
+            <item id="113101128" name="Soulbound Leggings"/>
+		</items>
+		<items>
+            <item id="113301131" name="Soulbound Breeches"/>
+		</items>
+		<items>
+            <item id="113501107" name="Soulbound Chausses"/>
+		</items>
+		<items>
+            <item id="113601072" name="Soulbound Greaves"/>
+		</items>
+		<items>
+            <item id="182006388" name="Broken Armor"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050746" decomposable_name="Major Fabled Trousers Bundle">
+        <items>
+            <item id="113101129" name="Ghostbound Leggings"/>
+		</items>
+		<items>
+            <item id="113301132" name="Ghostbound Breeches"/>
+		</items>
+		<items>
+            <item id="113501108" name="Ghostbound Chausses"/>
+		</items>
+		<items>
+            <item id="113601073" name="Ghostbound Greaves"/>
+		</items>
+		<items>
+            <item id="182006389" name="Big Broken Armor"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050747" decomposable_name="Fabled Jacket Bundle">
+        <items>
+            <item id="110101228" name="Spiritbound Tunic"/>
+		</items>
+		<items>
+            <item id="110301158" name="Spiritbound Jerkin"/>
+		</items>
+		<items>
+            <item id="110501129" name="Spiritbound Hauberk"/>
+		</items>
+		<items>
+            <item id="110601111" name="Spiritbound Breastplate"/>
+		</items>
+		<items>
+            <item id="182006387" name="Small Broken Armor"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050748" decomposable_name="Greater Fabled Jacket Bundle">
+        <items>
+            <item id="110101229" name="Soulbound Tunic"/>
+		</items>
+		<items>
+            <item id="110301159" name="Soulbound Jerkin"/>
+		</items>
+		<items>
+            <item id="110501130" name="Soulbound Hauberk"/>
+		</items>
+		<items>
+            <item id="110601112" name="Soulbound Breastplate"/>
+		</items>
+		<items>
+            <item id="182006388" name="Broken Armor"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188050749" decomposable_name="Major Fabled Jacket Bundle">
+        <items>
+            <item id="110101230" name="Ghostbound Tunic"/>
+		</items>
+		<items>
+            <item id="110301160" name="Ghostbound Jerkin"/>
+		</items>
+		<items>
+            <item id="110501131" name="Ghostbound Hauberk"/>
+		</items>
+		<items>
+            <item id="110601113" name="Ghostbound Breastplate"/>
+		</items>
+		<items>
+            <item id="182006389" name="Big Broken Armor"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188050750" decomposable_name="Small Pet Gift">
 		<items chance="2.0">
 			<item id="100001077" name="Spiritbound Sword"/>
@@ -7517,7 +8509,11 @@
             <item id="182211040" name="Circle Doctrine" rnd_min="1" rnd_max="4"/>
         </items>
     </decomposable>
-	<decomposable item_id="188051099" decomposable_name="Shugo Enchantment Stone Pouch"/> <!-- NEW -->
+	<decomposable item_id="188051099" decomposable_name="Shugo Enchantment Stone Pouch">
+		<items>
+			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
+		</items>
+	</decomposable>
 	<decomposable item_id="188051100" decomposable_name="Acute Shugo Set">
         <items>
             <item id="190020007" name="Acute Shugo Egg"/>
@@ -7844,8 +8840,28 @@
 			<item id="188051102" name="Daeva's Icebox"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051121" decomposable_name="Infinite Dye Bottle"/>
-	<decomposable item_id="188051122" decomposable_name="Infinite Manastone Box"/>
+	<decomposable item_id="188051121" decomposable_name="Infinite Dye Bottle">
+        <items>
+            <item id="169200001" name="Dye: Turquoise"/>
+		</items>
+		<items>
+            <item id="169200002" name="Dye: Blue"/>
+		</items>
+		<items>
+            <item id="169200003" name="Dye: Brown"/>
+		</items>
+		<items>
+            <item id="169200004" name="Dye: Purple"/>
+		</items>
+		<items>
+            <item id="169200006" name="Dye: True White"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051122" decomposable_name="Infinite Manastone Box">
+        <items>
+            <item id="167000562" name="Infinite Manastone"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051123" decomposable_name="Academy Beginner Supplies">
 		<items chance="7.0">
 			<item id="160001001" name="Roast Inina" count="10"/>
@@ -8443,7 +9459,11 @@
 			<item id="101800575" name="Tahabata's Pistol" player_class="RIDER"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051142" decomposable_name="Box of Dark Chocolates"/>
+	<decomposable item_id="188051142" decomposable_name="Box of Dark Chocolates">
+		<items>
+			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
+		</items>
+	</decomposable>
 	<decomposable item_id="188051143" decomposable_name="Box of White Chocolates">
         <items>
             <item id="152014016" count="15" name="Firm Balaur Horn"/>
@@ -8458,7 +9478,11 @@
             <item id="186000097" count="10" name="Burning Balaur Heart"/>
         </items>
     </decomposable>
-	<decomposable item_id="188051144" decomposable_name="Candy Basket of Luck"/>
+	<decomposable item_id="188051144" decomposable_name="Candy Basket of Luck">
+		<items>
+			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
+		</items>
+	</decomposable>
 	<decomposable item_id="188051145" decomposable_name="Candy Basket of Love">
         <items>
             <item id="152014016" count="15" name="Firm Balaur Horn"/>
@@ -8473,7 +9497,11 @@
             <item id="186000097" count="10" name="Burning Balaur Heart"/>
         </items>
     </decomposable>
-	<decomposable item_id="188051146" decomposable_name="Gift Filled with Sincerity"/>
+	<decomposable item_id="188051146" decomposable_name="Gift Filled with Sincerity">
+		<items>
+			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
+		</items>
+	</decomposable>
 	<decomposable item_id="188051147" decomposable_name="Gift Filled with Heart">
         <items>
             <item id="186000030" count="2" name="Gold Medal"/>
@@ -8607,7 +9635,23 @@
 			<item id="188051155" name="[Event] Jewel Pouch"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051158" decomposable_name="[Event] Full Moon Package"/>
+	<decomposable item_id="188051158" decomposable_name="[Event] Full Moon Package">
+        <items>
+            <item id="187050015" name="[Event] Black Cloud Wings"/>
+		</items>
+		<items>
+            <item id="120010003" name="[Event] Black Cloud Earrings"/>
+		</items>
+		<items>
+            <item id="125040085" name="[Event] Black Cloud Hat"/>
+		</items>
+		<items>
+            <item id="190010004" name="[Event] Silvertail Dorion Egg"/>
+		</items>
+		<items>
+            <item id="160005023" name="[Event] Spicy Rice" count="50"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051159" decomposable_name="[Event] Hanbok Package">
 		<items>
 			<item id="110900130" name="[Event] Antique Silk Hanbok"/>
@@ -8950,13 +9994,76 @@
 	</decomposable>
 	<decomposable item_id="188051168" decomposable_name="Box of Balaur Materials II"/>
 	<decomposable item_id="188051169" decomposable_name="Box of Balaur Materials III"/>
-	<decomposable item_id="188051170" decomposable_name="Box of Fluxes I"/>
-	<decomposable item_id="188051171" decomposable_name="Box of Fluxes II"/>
-	<decomposable item_id="188051172" decomposable_name="Box of Fluxes III"/>
-	<decomposable item_id="188051173" decomposable_name="Box of Fluxes IV"/>
-	<decomposable item_id="188051174" decomposable_name="Enchantment Stone/Manastone Box I"/>
-	<decomposable item_id="188051175" decomposable_name="Enchantment Stone/Manastone Box II"/>
-	<decomposable item_id="188051176" decomposable_name="Enchantment Stone/Manastone Box III"/>
+	<decomposable item_id="188051170" decomposable_name="Box of Fluxes I">
+        <items>
+            <item id="152011006" name="Fine Weapon Flux" rnd_min="1" rnd_max="2"/>
+            <item id="152011026" name="Fine Armor Flux" rnd_min="1" rnd_max="2"/>
+            <item id="152011046" name="Fine Accessory Flux" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051171" decomposable_name="Box of Fluxes II">
+        <items>
+            <item id="152011008" name="Premium Weapon Flux" rnd_min="1" rnd_max="3"/>
+            <item id="152011028" name="Premium Armor Flux" rnd_min="1" rnd_max="3"/>
+            <item id="152011048" name="Premium Accessory Flux" rnd_min="1" rnd_max="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051172" decomposable_name="Box of Fluxes III">
+        <items>
+            <item id="152011008" name="Premium Weapon Flux" rnd_min="1" rnd_max="3"/>
+            <item id="152011028" name="Premium Armor Flux" rnd_min="1" rnd_max="3"/>
+            <item id="152011048" name="Premium Accessory Flux" rnd_min="1" rnd_max="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051173" decomposable_name="Box of Fluxes IV">
+        <items>
+            <item id="152011065" name="Special Greater Weapon Flux" rnd_min="1" rnd_max="3"/>
+            <item id="152011070" name="Special Greater Armor Flux" rnd_min="1" rnd_max="3"/>
+            <item id="152011075" name="Special Greater Accessory Flux" rnd_min="1" rnd_max="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051174" decomposable_name="Enchantment Stone/Manastone Box I">
+        <items>
+            <item id="167000487" name="Manastone: Magic Boost +23" count="10"/>
+		</items>
+		<items>
+            <item id="167000491" name="Manastone: Crit Strike +13" count="10"/>
+		</items>
+		<items>
+            <item id="167000454" name="Manastone: Attack +4" count="10"/>
+        </items>
+		<items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051175" decomposable_name="Enchantment Stone/Manastone Box II">
+        <items>
+            <item id="167000518" name="Manastone: Attack +5" count="5"/>
+		</items>
+		<items>
+            <item id="167000519" name="Manastone: Magic Boost +25" count="5"/>
+		</items>
+		<items>
+            <item id="167000522" name="Manastone: Crit Strike +15" count="5"/>
+		</items>
+		<items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051176" decomposable_name="Enchantment Stone/Manastone Box III">
+        <items>
+            <item id="167000555" name="Manastone: Magic Boost +27" count="5"/>
+		</items>
+		<items>
+            <item id="167000558" name="Manastone: Crit Strike +17" count="5"/>
+		</items>
+		<items>
+            <item id="167000518" name="Manastone: Attack +5" count="5"/>
+		</items>
+		<items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051177" decomposable_name="Box of Molar and Insignia - Elyos">
 		<items>
 			<item id="186000028" name="Krall Molar"/>
@@ -9020,9 +10127,31 @@
 			<item id="169620008" name="Lodas Amulet IV"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051188" decomposable_name="[Event] Harvest Revel Basket"/> <!-- NEW -->
-	<decomposable item_id="188051189" decomposable_name="Sorcerer's Gift"/> <!-- NEW -->
-	<decomposable item_id="188051190" decomposable_name="Sorcerer's Box"/> <!-- NEW -->
+	<decomposable item_id="188051188" decomposable_name="[Event] Harvest Revel Basket">
+        <items>
+            <item id="125040109" name="[Event] Ripe Pumpkin Hat"/>
+            <item id="160010111" name="[Event] Jumpy Monk Form Candy" count="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051189" decomposable_name="Sorcerer's Gift">
+        <items>
+            <item id="166150003" name="Felicitous Socketing (Fabled)"/>
+		</items>
+		<items>
+            <item id="166150004" name="Felicitous Socketing (Eternal)"/>
+		</items>
+		<items>
+            <item id="167000294" name="Manastone: Attack +2" count="50"/>
+		</items>
+		<items>
+            <item id="167000518" name="Manastone: Attack +5" count="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051190" decomposable_name="Sorcerer's Box">
+        <items>
+            <item id="188051189" name="Sorcerer's Gift"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051191" decomposable_name="Strange Old Sack">
 		<items>
 			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
@@ -9059,8 +10188,40 @@
 	<decomposable item_id="188051200" decomposable_name="[Event] Balaur Bundle"/>
 	<decomposable item_id="188051201" decomposable_name="[Event] Greater Balaur Bundle"/>
 	<decomposable item_id="188051202" decomposable_name="[Event] Major Balaur Bundle"/>
-	<decomposable item_id="188051203" decomposable_name="[Event] Big Box"/>
-	<decomposable item_id="188051204" decomposable_name="[Event] Big Box"/>
+	<decomposable item_id="188051203" decomposable_name="[Event] Big Box">
+        <items>
+            <item id="188051199" name="[Event] Lesser Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051200" name="[Event] Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051201" name="[Event] Greater Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051202" name="[Event] Major Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051205" name="[Event] Bundle of Gatherable Items"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051204" decomposable_name="[Event] Big Box">
+        <items>
+            <item id="188051199" name="[Event] Lesser Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051200" name="[Event] Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051201" name="[Event] Greater Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051202" name="[Event] Major Balaur Bundle"/>
+		</items>
+		<items>
+            <item id="188051206" name="[Event] Bundle of Gatherable Items"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051205" decomposable_name="[Event] Bundle of Gatherable Items"/>
 	<decomposable item_id="188051206" decomposable_name="[Event] Bundle of Gatherable Items"/>
 	<decomposable item_id="188051207" decomposable_name="Rainbow Dye Pack">
@@ -10291,10 +11452,27 @@
 			<item id="160010114" name="Harvest Revel Form Candy" count="3"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051311" decomposable_name="Siel's Enchantments"/>
-	<decomposable item_id="188051312" decomposable_name="Bundle of Siel's Enchantments"/>
-	<decomposable item_id="188051313" decomposable_name="Siel's Manastones"/>
-	<decomposable item_id="188051314" decomposable_name="Bundle of Siel's Manastones"/>
+	<decomposable item_id="188051311" decomposable_name="Siel's Enchantments">
+        <items>
+            <random_item type="ENCHANTMENT" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051312" decomposable_name="Bundle of Siel's Enchantments">
+        <items>
+            <item id="188051311" name="Siel's Enchantments" count="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051313" decomposable_name="Siel's Manastones">
+        <items>
+            <item id="167000294" name="Manastone: Attack +2" count="45"/>
+            <item id="167000518" name="Manastone: Attack +5" count="5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051314" decomposable_name="Bundle of Siel's Manastones">
+        <items>
+            <item id="188051313" name="Siel's Manastones" count="6"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051315" decomposable_name="[Event] Streaming Goodies"/> <!-- NEW -->
 	<decomposable item_id="188051316" decomposable_name="[Event] Nostalgia Gift"/> <!-- NEW -->
 	<decomposable item_id="188051317" decomposable_name="[Event] Web Slink Gift"/> <!-- NEW -->
@@ -11820,17 +12998,53 @@
 	</decomposable>
 	<decomposable item_id="188051417" decomposable_name="[Event] Balaur Materials Pouch II"/> <!-- NEW -->
 	<decomposable item_id="188051418" decomposable_name="[Event] Balaur Materials Pouch III"/> <!-- NEW -->
-	<decomposable item_id="188051419" decomposable_name="Cool Enchantment Stone Icebox"/> <!-- NEW -->
-	<decomposable item_id="188051420" decomposable_name="Frozen Manastone Icebox"/> <!-- NEW -->
-	<decomposable item_id="188051421" decomposable_name="Cool Enchantment Stone Icebox Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051422" decomposable_name="Frozen Manastone Icebox Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051423" decomposable_name="Enchantment Stone Box"/> <!-- NEW -->
+	<decomposable item_id="188051419" decomposable_name="Cool Enchantment Stone Icebox">
+        <items>
+            <random_item type="ENCHANTMENT" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051420" decomposable_name="Frozen Manastone Icebox">
+        <items>
+            <item id="167000294" name="Manastone: Attack +2" count="60"/>
+		</items>
+		<items>
+            <item id="167000518" name="Manastone: Attack +5" count="7"/>
+		</items>
+		<items>
+            <item id="167000558" name="Manastone: Crit Strike +17" count="25"/>
+		</items>
+		<items>
+            <item id="167000555" name="Manastone: Magic Boost +27" count="25"/>
+		</items>
+		<items>
+            <item id="167000561" name="Manastone: Resist Magic +14" count="25"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051421" decomposable_name="Cool Enchantment Stone Icebox Bundle">
+        <items>
+            <item id="188051419" name="Cool Enchantment Stone Icebox" count="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051422" decomposable_name="Frozen Manastone Icebox Bundle">
+        <items>
+            <item id="188051420" name="Frozen Manastone Icebox" count="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051423" decomposable_name="Enchantment Stone Box">
+        <items>
+            <random_item type="ENCHANTMENT" count="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051424" decomposable_name="Manastone Box">
 		<items>
 			<random_item type="MANASTONE_RARE_GRADE_70" count="5"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051425" decomposable_name="Enchantment Stone Bundle"/> <!-- NEW -->
+	<decomposable item_id="188051425" decomposable_name="Enchantment Stone Bundle">
+        <items>
+            <item id="188051423" name="Enchantment Stone Box" count="6"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051426" decomposable_name="Manastone Box Bundle">
 		<items>
 			<item id="188051424" name="Manastone Box" count="6"/>
@@ -11858,14 +13072,112 @@
 			<item id="166150004" name="Felicitous Socketing (Eternal)" count="1"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051431" decomposable_name="Refilling Enchantment Stone Box"/> <!-- NEW -->
-	<decomposable item_id="188051432" decomposable_name="Refilling Manastone Box"/> <!-- NEW -->
-	<decomposable item_id="188051433" decomposable_name="Bride's Makeup Box"/> <!-- NEW -->
-	<decomposable item_id="188051434" decomposable_name="Wedding Bliss Package"/> <!-- NEW -->
-	<decomposable item_id="188051435" decomposable_name="Romantically Yours Package"/> <!-- NEW -->
-	<decomposable item_id="188051436" decomposable_name="Total Makeover Kit"/> <!-- NEW -->
-	<decomposable item_id="188051437" decomposable_name="Bridal Makeup Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051438" decomposable_name="Rainbow Dye Pack II"/> <!-- NEW -->
+	<decomposable item_id="188051431" decomposable_name="Refilling Enchantment Stone Box">
+        <items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051432" decomposable_name="Refilling Manastone Box">
+        <items>
+            <item id="167000518" name="Manastone: Attack +5" count="5"/>
+		</items>
+		<items>
+            <item id="167000558" name="Manastone: Crit Strike +17" count="60"/>
+		</items>
+		<items>
+            <item id="167000555" name="Manastone: Magic Boost +27" count="40"/>
+		</items>
+		<items>
+            <item id="167000561" name="Manastone: Resist Magic +14" count="35"/>
+		</items>
+		<items>
+            <item id="166150003" name="Felicitous Socketing (Fabled)"/>
+		</items>
+		<items>
+            <item id="166150004" name="Felicitous Socketing (Eternal)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051433" decomposable_name="Bride's Makeup Box">
+        <items>
+            <item id="188051438" name="Rainbow Dye Pack II"/>
+		</items>
+		<items>
+            <item id="169220031" name="Dye: True White"/>
+		</items>
+		<items>
+            <item id="169220032" name="Dye: True Black"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051434" decomposable_name="Wedding Bliss Package">
+        <items>
+            <item id="110900115" name="Wedding Dress/Tuxedo"/>
+		</items>
+		<items>
+            <item id="110900211" name="Regal Hanbok"/>
+		</items>
+		<items>
+            <item id="188051348" name="Gift-Wrapped Celebrity Line"/>
+		</items>
+		<items>
+            <item id="188051433" name="Bride's Makeup Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051435" decomposable_name="Romantically Yours Package">
+        <items>
+            <item id="110900213" name="Beatific Outfit"/>
+		</items>
+		<items>
+            <item id="110900125" name="Antique Silk Hanbok"/>
+		</items>
+		<items>
+            <item id="188051347" name="Gift-Wrapped Formalwear"/>
+		</items>
+		<items>
+            <item id="188051433" name="Bride's Makeup Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051436" decomposable_name="Total Makeover Kit">
+        <items>
+            <item id="169650000" name="Plastic Surgery Ticket"/>
+		</items>
+		<items>
+            <item id="169650000" name="Plastic Surgery Ticket"/>
+		</items>
+		<items>
+            <item id="188051433" name="Bride's Makeup Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051437" decomposable_name="Bridal Makeup Bundle">
+        <items>
+            <item id="188051433" name="Bride's Makeup Box" count="6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051438" decomposable_name="Rainbow Dye Pack II">
+        <items>
+            <item id="169220033" name="Dye: True Red"/>
+		</items>
+		<items>
+            <item id="169220034" name="Dye: Hot Orange"/>
+		</items>
+		<items>
+            <item id="169220035" name="Dye: Hot Pink"/>
+		</items>
+		<items>
+            <item id="169220036" name="Dye: Rich Purple"/>
+		</items>
+		<items>
+            <item id="169220037" name="Dye: Olive Green"/>
+		</items>
+		<items>
+            <item id="169220038" name="Dye: Green Tea"/>
+		</items>
+		<items>
+            <item id="169220039" name="Dye: Mustard"/>
+		</items>
+		<items>
+            <item id="169220040" name="Dye: True Blue"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051439" decomposable_name="Silver Medal Box">
         <items>
             <item id="186000031" name="Silver Medal" rnd_min="1" rnd_max="10"/>
@@ -13342,9 +14654,39 @@
 			<item id="160010166" name="Super Shugo Form Candy"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051583" decomposable_name="OK Enchantment Stone Box"/> <!-- NEW -->
-	<decomposable item_id="188051584" decomposable_name="OK Manastone Box"/> <!-- NEW -->
-	<decomposable item_id="188051585" decomposable_name="Korean Thanksgiving Dish Box"/> <!-- NEW -->
+	<decomposable item_id="188051583" decomposable_name="OK Enchantment Stone Box">
+        <items>
+            <random_item type="ENCHANTMENT" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051584" decomposable_name="OK Manastone Box">
+        <items>
+            <item id="167000294" name="Manastone: Attack +2" count="70"/>
+		</items>
+		<items>
+            <item id="167000518" name="Manastone: Attack +5" count="10"/>
+		</items>
+		<items>
+            <item id="167000558" name="Manastone: Crit Strike +17" count="40"/>
+		</items>
+		<items>
+            <item id="167000555" name="Manastone: Magic Boost +27" count="50"/>
+		</items>
+		<items>
+            <item id="167000561" name="Manastone: Resist Magic +14" count="40"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051585" decomposable_name="Korean Thanksgiving Dish Box">
+        <items>
+            <item id="160009018" name="[Event] White Lotus Dish"/>
+		</items>
+		<items>
+            <item id="162002019" name="[Event] Dish"/>
+		</items>
+		<items>
+            <item id="162002018" name="[Event] Wormwood Dish"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051586" decomposable_name="Super Transformation OK Box">
 		<items>
 			<item id="160010167" name="Super Shugo Form Candy"/>
@@ -13502,7 +14844,11 @@
 			<item id="186000066" name="Lesser Ancient Icon"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051600" decomposable_name="[Event] Everlasting Enchantment Stone Box"/> <!-- NEW -->
+	<decomposable item_id="188051600" decomposable_name="[Event] Everlasting Enchantment Stone Box">
+        <items>
+            <random_item type="ENCHANTMENT"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051601" decomposable_name="Construction Flux Bundle">
 		<items chance="40.0">
 			<item id="152011092" name="Minor Construction Flux" rnd_min="1" rnd_max="5"/>
@@ -14367,7 +15713,11 @@
             <item id="164002060" name="[Event] Firecrackers" count="5"/>
         </items>
     </decomposable>
-	<decomposable item_id="188051673" decomposable_name="Enchantment Stone Refill Box (10-day pass)"/> <!-- NEW -->
+	<decomposable item_id="188051673" decomposable_name="Enchantment Stone Refill Box (10-day pass)">
+        <items>
+            <random_item type="ENCHANTMENT"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051674" decomposable_name="Fabled Godstone Bundle">
 		<items chance="30">
 			<item id="168000120" name="Godstone: Beritra's Plot" count="1"/>
@@ -14426,13 +15776,56 @@
 	<decomposable item_id="188051684" decomposable_name="[Event] Ripe Fruit Box"/> <!-- NEW -->
 	<decomposable item_id="188051685" decomposable_name="[Event] Ripe Fruit Sacred Chalice Bundle"/> <!-- NEW -->
 	<decomposable item_id="188051686" decomposable_name="[Event] Ripe Crown Fruit Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051687" decomposable_name="[Event] Ripe Enchantment Fruit Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051688" decomposable_name="[Event] Candy Pouch"/> <!-- NEW -->
+	<decomposable item_id="188051687" decomposable_name="[Event] Ripe Enchantment Fruit Bundle">
+        <items>
+            <random_item type="ENCHANTMENT"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051688" decomposable_name="[Event] Candy Pouch">
+        <items>
+            <item id="160010123" name="Solorius Polar Bear Form Candy" race="ELYOS"/>
+            <item id="160010124" name="Solorius Polar Bear Form Candy" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="160010125" name="Solorius Inquin Form Candy" race="ELYOS"/>
+            <item id="160010126" name="Solorius Inquin Form Candy" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051689" decomposable_name="[Event] Gift Box of the First Snow"/> <!-- NEW -->
-	<decomposable item_id="188051690" decomposable_name="[Event] Thank-you Enchantment Stone Box"/> <!-- NEW -->
-	<decomposable item_id="188051691" decomposable_name="Premium Crown Box"/> <!-- NEW -->
-	<decomposable item_id="188051692" decomposable_name="[Event] Red Inquin Candy Bundle"/> <!-- NEW -->
-	<decomposable item_id="188051693" decomposable_name="Refilling Enchantment Stone Box (7-day pass)"/> <!-- NEW -->
+	<decomposable item_id="188051690" decomposable_name="[Event] Thank-you Enchantment Stone Box">
+        <items>
+            <random_item type="ENCHANTMENT" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051691" decomposable_name="Premium Crown Box">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="2"/>
+		</items>
+		<items>
+            <item id="186000052" name="Greater Ancient Crown" count="2"/>
+		</items>
+		<items>
+            <item id="186000053" name="Ancient Crown" count="3"/>
+		</items>
+		<items>
+            <item id="186000054" name="Lesser Ancient Crown" count="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051692" decomposable_name="[Event] Red Inquin Candy Bundle">
+        <items>
+            <item id="160010176" name="Invincible Red Inquin Form Candy" race="ELYOS"/>
+            <item id="160010177" name="Invincible Red Inquin Form Candy" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="160010186" name="Strongest Red Inquin Form Candy" race="ELYOS"/>
+            <item id="160010187" name="Strongest Red Inquin Form Candy" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051693" decomposable_name="Refilling Enchantment Stone Box (7-day pass)">
+        <items>
+            <random_item type="ENCHANTMENT"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051694" decomposable_name="Ancient Icon Bundle">
 		<items>
 			<item id="186000065" name="Ancient Icon"/>
@@ -15131,14 +16524,38 @@
 			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051763" decomposable_name="Chocolate Enchantment Stone Bundle"/>
+	<decomposable item_id="188051763" decomposable_name="Chocolate Enchantment Stone Bundle">
+        <items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="8"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051764" decomposable_name="Superb Chocolate Enchantment Stone Bundle">
 		<items>
 			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051765" decomposable_name="Candy Enchantment Stone Bundle"/>
-	<decomposable item_id="188051766" decomposable_name="Candy Gift Bundle"/>
+	<decomposable item_id="188051765" decomposable_name="Candy Enchantment Stone Bundle">
+        <items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051766" decomposable_name="Candy Gift Bundle">
+        <items>
+            <item id="166150003" name="Felicitous Socketing (Fabled)" count="2"/>
+		</items>
+		<items>
+            <item id="166150004" name="Felicitous Socketing (Eternal)"/>
+		</items>
+		<items>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="100"/>
+		</items>
+		<items>
+            <item id="186000096" name="Platinum Medal" count="3"/>
+		</items>
+		<items>
+            <random_item type="ENCHANTMENT" count="3"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051767" decomposable_name="[Event] Proud Single's Box">
 		<items>
 			<item id="160010210" name="[Event] Cocoa Chocolate"/>
@@ -15152,7 +16569,11 @@
 	<decomposable item_id="188051772" decomposable_name="[Event] United Heart"/>
 	<decomposable item_id="188051773" decomposable_name="[Event] Contribution Bundle"/>
 	<decomposable item_id="188051774" decomposable_name="[Event] Heliotrope Crystal Bundle"/>
-	<decomposable item_id="188051775" decomposable_name="[Event] Enchantment Stone Bundle"/>
+	<decomposable item_id="188051775" decomposable_name="[Event] Enchantment Stone Bundle">
+        <items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051776" decomposable_name="[Event] Power Shard Bundle"/>
 	<decomposable item_id="188051777" decomposable_name="Love Letter"/>
 	<decomposable item_id="188051778" decomposable_name="Sky Dragon Emperor's Ring Bundle">
@@ -15347,21 +16768,94 @@
 			<item id="115001405" name="Kradi's Scale Shield"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051835" decomposable_name="Random Enchantment Level Test Box 1"/>
-	<decomposable item_id="188051836" decomposable_name="Random Enchantment Level Test Box 2"/>
-	<decomposable item_id="188051837" decomposable_name="Random Enchantment Level Test Box 3"/>
-	<decomposable item_id="188051838" decomposable_name="Random Enchantment Level Test Box 4"/>
-	<decomposable item_id="188051839" decomposable_name="Random Enchantment Level Test Box 5"/>
-	<decomposable item_id="188051840" decomposable_name="Snowman Bundle"/>
-	<decomposable item_id="188051841" decomposable_name="Ghost Bundle"/>
-	<decomposable item_id="188051842" decomposable_name="Snowman Gift Box"/>
-	<decomposable item_id="188051843" decomposable_name="Ghost Gift Box"/>
+	<decomposable item_id="188051835" decomposable_name="Random Enchantment Level Test Box 1">
+        <items>
+            <item id="101701080" name="Random Enchantment Level Test Bow: 13_1"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051836" decomposable_name="Random Enchantment Level Test Box 2">
+        <items>
+            <item id="101701081" name="Random Enchantment Level Test Bow: 13_2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051837" decomposable_name="Random Enchantment Level Test Box 3">
+        <items>
+            <item id="101701082" name="Random Enchantment Level Test Bow: 13_3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051838" decomposable_name="Random Enchantment Level Test Box 4">
+        <items>
+            <item id="101701083" name="Random Enchantment Level Test Bow:0_3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051839" decomposable_name="Random Enchantment Level Test Box 5">
+        <items>
+            <item id="101701084" name="Random Enchantment Level Test Bow:15_2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051840" decomposable_name="Snowman Bundle">
+        <items>
+            <item id="167000518" name="Manastone: Attack +5" count="5"/>
+        </items>
+        <items>
+            <item id="167000555" name="Manastone: Magic Boost +27" count="5"/>
+        </items>
+        <items>
+            <item id="167000558" name="Manastone: Crit Strike +17" count="5"/>
+        </items>
+        <items>
+            <item id="167000551" name="Manastone: HP +95" count="5"/>
+        </items>
+        <items>
+            <item id="188051429" name="Felicitous Socketing (Fabled)" count="5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051841" decomposable_name="Ghost Bundle">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" count="2"/>
+        </items>
+        <items>
+            <item id="186000052" name="Greater Ancient Crown" count="2"/>
+        </items>
+        <items>
+            <item id="186000053" name="Ancient Crown" count="2"/>
+        </items>
+        <items>
+            <item id="186000054" name="Lesser Ancient Crown" count="5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051842" decomposable_name="Snowman Gift Box">
+        <items>
+            <item id="188051429" name="Felicitous Socketing (Fabled)" rnd_min="1" rnd_max="10"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188051843" decomposable_name="Ghost Gift Box">
+        <items>
+            <item id="186000051" name="Major Ancient Crown" rnd_min="1" rnd_max="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051844" decomposable_name="Radiant Medal Chest">
 		<items>
 			<item id="186000096" name="Platinum Medal"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188051845" decomposable_name="Radiant Supply Box"/>
+	<decomposable item_id="188051845" decomposable_name="Radiant Supply Box">
+        <items>
+            <item id="162000023" name="Greater Healing Potion" count="3"/>
+        </items>
+        <items>
+            <item id="162000137" name="Sublime Life Serum" count="2"/>
+        </items>
+        <items>
+            <item id="162000139" name="Sublime Mana Serum" count="2"/>
+        </items>
+        <items>
+            <item id="186000096" name="Platinum Medal"/>
+        </items>
+        <items>
+            <item id="186000147" name="Mithril Medal"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188051846" decomposable_name="[Event] Alchemical Transformation Formula Bundle for Guardian's Necklace">
 		<items chance="25.0">
 			<item id="152230351" name="[Event] Alchemical Transformation Formula for Archon Centurion's Garnet Necklace"/>
@@ -17661,13 +19155,26 @@
 			<random_item type="ENCHANTMENT" rnd_min="1" rnd_max="3"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188052081" decomposable_name="Premium Enchantment Stone Bundle"/>
+	<decomposable item_id="188052081" decomposable_name="Premium Enchantment Stone Bundle">
+        <items>
+            <random_item type="ENCHANTMENT"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052082" decomposable_name="Kahrun's Symbol Box">
 		<items>
 			<item id="186000143" name="Kahrun's Symbol" count="30"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188052083" decomposable_name="Small GM Gift Box"/>
+	<decomposable item_id="188052083" decomposable_name="Small GM Gift Box">
+        <items>
+            <item id="164000076" name="Greater Running Scroll" count="20"/>
+            <item id="164000073" name="Greater Courage Scroll" count="20"/>
+            <item id="164000134" name="Greater Awakening Scroll" count="20"/>
+            <item id="162000023" name="Greater Healing Potion" count="10"/>
+            <item id="162000107" name="Saam King's Herbs" count="3"/>
+            <item id="169000010" name="Superior Power Shard" count="500"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052084" decomposable_name="Dragon Lord Tiamat Treasure Chest">
 		<items chance="60.0">
 			<item id="166100011" name="Greater Supplements (Mythic)" rnd_min="20" rnd_max="30"/>
@@ -23509,7 +25016,11 @@
 			<item id="152012603" name="Ore of Conviction" rnd_min="1" rnd_max="2"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188052671" decomposable_name="Test Enchantment Stone Bundle"/>
+	<decomposable item_id="188052671" decomposable_name="Test Enchantment Stone Bundle">
+        <items>
+            <random_item type="ENCHANTMENT"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052672" decomposable_name="[Event] Mega Kinah 100 Ticket">
 		<items chance="0.12">
 			<item id="182007119" name="Event Mega Kinah 100 - 1st Prize Winner!"/>
@@ -33405,7 +34916,11 @@
 	<decomposable item_id="188053454" decomposable_name="[Event] Quality Recovery Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053455" decomposable_name="[Event] High Grade Recovery Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053457" decomposable_name="[Event] Panda Transformation Candy Box"/> <!-- NEW -->
-	<decomposable item_id="188053458" decomposable_name="Prime Elite Enchantment Stone Box"/> <!-- NEW -->
+	<decomposable item_id="188053458" decomposable_name="Prime Elite Enchantment Stone Box">
+        <items>
+            <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053459" decomposable_name="Elite High Grade Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188053460" decomposable_name="Prime Elite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188053461" decomposable_name="Power Lockbox Cache"/> <!-- NEW -->
@@ -35252,12 +36767,20 @@
 	<decomposable item_id="188053719" decomposable_name="Protectors Ancient Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053720" decomposable_name="Operations Medal Box"/> <!-- NEW -->
 	<decomposable item_id="188053721" decomposable_name="Illusion Godstone Bundle of Fortuneers Legion"/> <!-- NEW -->
-	<decomposable item_id="188053722" decomposable_name="Special Enchantment Stone Bundle of Fortuneers Legion"/> <!-- NEW -->
+	<decomposable item_id="188053722" decomposable_name="Special Enchantment Stone Bundle of Fortuneers Legion">
+        <items>
+            <item id="166020000" name="Omega Enchantment Stone"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053723" decomposable_name="Guardian Composite Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053724" decomposable_name="Guardian Ancient Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053725" decomposable_name="Headquarters Medal Box"/> <!-- NEW -->
 	<decomposable item_id="188053726" decomposable_name="Illusion Godstone Bundle of Charlirunerk Inquiry Agency"/> <!-- NEW -->
-	<decomposable item_id="188053727" decomposable_name="Special Enchantment Stone Bundle of Charlirunerk Inquiry Agency"/> <!-- NEW -->
+	<decomposable item_id="188053727" decomposable_name="Special Enchantment Stone Bundle of Charlirunerk Inquiry Agency">
+        <items>
+            <item id="166020000" name="Omega Enchantment Stone"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053728" decomposable_name="Beritra's Equipment Box">
 		<items chance="15.0">
 			<item id="100001802" name="Dark Lord's Lunacy" player_class="GLADIATOR"/>
@@ -37475,7 +38998,6 @@
 	<decomposable item_id="188053911" decomposable_name="Steampunk Wings Box"/> <!-- NEW -->
 	<decomposable item_id="188053912" decomposable_name="Noble Enchantment Stone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053913" decomposable_name="Noble Enchantment Stone Bundle"/> <!-- NEW -->
-
 	<decomposable item_id="188053914" decomposable_name="Bountiful Stigma Bundle">
 		<!-- Songweaver Stigma -->
 		<items>
