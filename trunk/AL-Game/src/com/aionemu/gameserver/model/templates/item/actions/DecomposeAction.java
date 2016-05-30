@@ -328,10 +328,11 @@ public class DecomposeAction extends AbstractItemAction {
 											break;
 	                                    case MANASTONE_RARE_GRADE_40:
 											List<Integer> itemsRare40 = new ArrayList<Integer>();
-											itemsRare40.add(Rnd.get(167000482, 167000491)); //ID 167000492 - 167000496 Unavailable
+											itemsRare40.add(Rnd.get(167000482, 167000489)); //ID 167000490 + 167000492 - 167000496 Unavailable
+											itemsRare40.add(167000491);
 											itemsRare40.add(Rnd.get(167000539, 167000540));
 											itemsRare40.add(167000497);
-											int randomItemOutRare40 = itemsRare40.get(Rnd.get(0, 2));
+											int randomItemOutRare40 = itemsRare40.get(Rnd.get(0, 3));
 											randomId = randomItemOutRare40;
 											break;
 	                                    case MANASTONE_RARE_GRADE_50:
