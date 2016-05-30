@@ -3490,6 +3490,23 @@
 						<case id="default"/>
 					</switch>
 				</case>
+				<case id="13"> <!-- New -->
+                    <part id="0" name="subAction" type="c"/>
+                    <switch id="0">
+						<case id="0">
+							<part name="unk" type="c"/>
+						</case>
+						<case id="2"> <!-- food buffing -->
+							<part name="unk" type="c"/> <!-- Todo -->
+							<part name="unk" type="h"/> <!-- Todo -->
+							<part name="unk" type="h"/> <!-- Todo -->
+						</case>
+						<case id="3"> <!-- looting -->
+							<part name="unk" type="c"/>
+							<part name="acticate/deactivate" type="c"/>
+						</case>
+					</switch>
+				</case>
 				<case id="default"/>
 			</switch>
 		</packet>
