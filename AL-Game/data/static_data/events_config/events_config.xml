@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain</active>
     <events>
         <event name="World Blessers" start="2015-01-01T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">
             <quests>
@@ -1333,5 +1333,210 @@
                 </spawn_map>
             </spawns>
         </event>
+        <event name="Wishing Fountain Inventory" start="2016-06-01T00:00:00+00:00" end="2016-06-30T00:00:00+00:00">
+            <inventory_drop startlevel="30" interval="30" endlevel="65" maxCountOfDay="4" cleanTime="9">186000406</inventory_drop>
+        </event> 
+        <event name="Wishing Fountain" start="2016-06-01T00:00:00+00:00" end="2016-06-30T00:00:00+00:00">
+            <quests>
+                <maintainable>80707;80708;80709;80710;80711;80712;80713;80714</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+					<!-- Picnic Decor -->
+					<spawn npc_id="833500" respawn_time="295">
+					    <spot x="1532.4674" y="1511.5504" z="565.8822" h="0"/>
+					</spawn>
+                    <!-- Shimmering Fountain -->
+                    <spawn npc_id="833501" respawn_time="295">
+                        <spot x="1535.0" y="1503.3" z="565.90314" h="67"/>
+                    </spawn>
+                    <!-- Fountess Lolly -->
+                    <spawn npc_id="833502" respawn_time="295">
+                        <spot x="1517.7" y="1509.8" z="565.9189" h="59"/>
+                    </spawn>
+                    <!-- Fountess Lilly -->
+                    <spawn npc_id="833503" respawn_time="295">
+                        <spot x="1517.7" y="1513.6" z="565.91864" h="69"/>
+                    </spawn>
+                    <!-- Fountess Lulu -->
+                    <spawn npc_id="833504" respawn_time="295">
+                        <spot x="1539.7" y="1507.2" z="565.9029" h="62"/>
+                    </spawn>
+                    <!-- Fountess Lollo -->
+                    <spawn npc_id="833505" respawn_time="295">
+                        <spot x="1537.9" y="1521.2" z="565.909" h="77"/>
+                    </spawn>
+                    <!-- Fountess Polly -->
+                    <spawn npc_id="833506" respawn_time="295">
+                        <spot x="1533.3" y="1523.2" z="565.91077" h="79"/>
+                    </spawn>
+                    <!-- Fountess Suri -->
+                    <spawn npc_id="833507" respawn_time="295">
+                        <spot x="1532.7" y="1514.5" z="565.88947" h="85"/>
+                    </spawn>
+                    <!-- Fountess Solly -->
+                    <spawn npc_id="833508" respawn_time="295">
+                        <spot x="1533.4" y="1512.6" z="565.8855" h="66"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+					<!-- Picnic Decor -->
+					<spawn npc_id="833500" respawn_time="295">
+					    <spot x="1209.54" y="1404.5475" z="208.22072" h="62"/>
+					</spawn>
+                    <!-- Shimmering Fountain -->
+                    <spawn npc_id="833501" respawn_time="295">
+                        <spot x="1194.8" y="1405.7" z="208.125" h="118"/>
+                    </spawn>
+                    <!-- Fountess Lolly -->
+                    <spawn npc_id="833502" respawn_time="295">
+                        <spot x="1215.4" y="1399.1" z="208.125" h="13"/>
+                    </spawn>
+                    <!-- Fountess Lilly -->
+                    <spawn npc_id="833503" respawn_time="295">
+                        <spot x="1214.8" y="1402.1" z="208.125" h="9"/>
+                    </spawn>
+                    <!-- Fountess Lulu -->
+                    <spawn npc_id="833504" respawn_time="295">
+                        <spot x="1201.7" y="1388.2" z="208.125" h="12"/>
+                    </spawn>
+                    <!-- Fountess Lollo -->
+                    <spawn npc_id="833505" respawn_time="295">
+                        <spot x="1194.4" y="1389.6" z="208.125" h="22"/>
+                    </spawn>
+                    <!-- Fountess Polly -->
+                    <spawn npc_id="833506" respawn_time="295">
+                        <spot x="1194.1" y="1411.4" z="208.125" h="118"/>
+                    </spawn>
+                    <!-- Fountess Suri -->
+                    <spawn npc_id="833507" respawn_time="295">
+                        <spot x="1198.5" y="1397.7" z="208.125" h="3"/>
+                    </spawn>
+                    <!-- Fountess Solly -->
+                    <spawn npc_id="833508" respawn_time="295">
+                        <spot x="1198.8" y="1395.6" z="208.125" h="10"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Cygnea -->
+                <spawn_map map_id="210070000">
+                    <!-- Yellow Aether Blossom -->
+                    <spawn npc_id="702786" respawn_time="295">
+                        <spot x="2667.6362" y="582.0556" z="556.71594" h="82"/>
+                        <spot x="2331.5874" y="253.0606" z="577.13257" h="71"/>
+                        <spot x="2139.6538" y="352.63995" z="565.495" h="80"/>
+                        <spot x="2667.6362" y="582.0556" z="556.71594" h="82"/>
+                        <spot x="2331.5874" y="253.0606" z="577.13257" h="71"/>
+                        <spot x="2139.6538" y="352.63995" z="565.495" h="80"/>
+                        <spot x="1675.2468" y="190.27036" z="539.75" h="93"/>
+                        <spot x="1090.3445" y="687.81415" z="552.96686" h="36"/>
+                        <spot x="892.14716" y="1027.3745" z="511.4532" h="64"/>
+                        <spot x="548.1386" y="1382.108" z="459.5154" h="5"/>
+                        <spot x="364.63547" y="1385.2555" z="460.66376" h="14"/>
+                        <spot x="699.2399" y="1662.8951" z="450.0344" h="5"/>
+                        <spot x="1135.3295" y="1494.3357" z="467.43716" h="94"/>
+                        <spot x="1564.6029" y="1078.3802" z="440.1627" h="3"/>
+                        <spot x="1988.3148" y="1212.5034" z="441.86322" h="119"/>
+                        <spot x="2412.0488" y="1435.6615" z="437.8931" h="97"/>
+                        <spot x="2656.6262" y="1810.5948" z="377.00195" h="21"/>
+                        <spot x="2437.418" y="2023.8224" z="352.6914" h="11"/>
+                        <spot x="2322.7996" y="2241.928" z="325.67947" h="44"/>
+                        <spot x="2297.0205" y="2446.3362" z="302.39343" h="43"/>
+                        <spot x="2170.8857" y="2331.1248" z="288.97452" h="83"/>
+                        <spot x="2190.653" y="2630.599" z="293.29337" h="73"/>
+                        <spot x="1761.8556" y="2677.478" z="337.03812" h="90"/>
+                        <spot x="1338.3645" y="2793.1033" z="299.2494" h="66"/>
+                        <spot x="900.3824" y="2646.2488" z="267.32837" h="73"/>
+                        <spot x="321.94025" y="2676.723" z="215.0" h="66"/>
+                        <spot x="2713.6406" y="2888.4192" z="280.47006" h="78"/>
+                        <spot x="2925.7383" y="2755.947" z="267.43457" h="72"/>
+                        <spot x="2756.3494" y="2569.9893" z="232.02116" h="62"/>
+                        <spot x="2892.7786" y="2145.0757" z="233.53009" h="107"/>
+                        <spot x="2880.818" y="1903.3646" z="246.84085" h="118"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Enshar -->
+                <spawn_map map_id="220080000">
+                    <!-- Ruby Aether Blossom -->
+                    <spawn npc_id="702787" respawn_time="295">
+                        <spot x="692.47217" y="2655.039" z="208.41428" h="17"/>
+                        <spot x="1062.5582" y="2823.5627" z="250.93723" h="117"/>
+                        <spot x="1253.808" y="2533.818" z="262.68375" h="9"/>
+                        <spot x="1702.2952" y="2408.8716" z="281.8181" h="5"/>
+                        <spot x="2125.5598" y="2209.9578" z="312.71722" h="119"/>
+                        <spot x="2348.3743" y="1777.2546" z="328.79657" h="101"/>
+                        <spot x="2770.5288" y="1613.073" z="308.02295" h="24"/>
+                        <spot x="2780.7878" y="2091.42" z="202.60822" h="32"/>
+                        <spot x="2789.3054" y="2459.4326" z="178.08954" h="28"/>
+                        <spot x="2461.228" y="1407.8877" z="332.58246" h="55"/>
+                        <spot x="2096.4473" y="1497.2917" z="348.78647" h="53"/>
+                        <spot x="1647.5494" y="1628.9943" z="326.75" h="71"/>
+                        <spot x="1547.3693" y="1873.2959" z="325.62473" h="32"/>
+                        <spot x="1222.1348" y="1826.9056" z="298.15363" h="70"/>
+                        <spot x="801.3467" y="1713.5769" z="294.6322" h="83"/>
+                        <spot x="493.23495" y="1848.1615" z="285.12418" h="63"/>
+                        <spot x="401.4398" y="1563.3352" z="277.15314" h="107"/>
+                        <spot x="732.9151" y="1208.263" z="242.22775" h="105"/>
+                        <spot x="811.22736" y="593.37225" z="209.7017" h="97"/>
+                        <spot x="855.3233" y="338.90036" z="207.0827" h="69"/>
+                        <spot x="525.2626" y="312.92566" z="193.82892" h="57"/>
+                        <spot x="256.06247" y="444.76834" z="194.1211" h="36"/>
+                        <spot x="1034.6394" y="388.98553" z="228.19202" h="61"/>
+                        <spot x="1196.1464" y="295.28885" z="228.00032" h="115"/>
+                        <spot x="1157.073" y="464.57272" z="216.83405" h="57"/>
+                        <spot x="1576.9663" y="363.01108" z="201.4354" h="12"/>
+                        <spot x="2173.714" y="391.1275" z="217.10907" h="114"/>
+                        <spot x="2514.655" y="410.03644" z="240.96133" h="115"/>
+                        <spot x="2696.953" y="479.35052" z="241.24411" h="23"/>
+                        <spot x="2491.5437" y="675.5692" z="250.48428" h="73"/>
+                        <spot x="2425.1594" y="615.9314" z="257.5896" h="3"/>
+                        <spot x="2609.977" y="769.3699" z="239.21205" h="29"/>
+                        <spot x="2736.5266" y="900.0291" z="250.72556" h="102"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Levinshor -->
+                <spawn_map map_id="600100000">
+                    <!-- Pure Aether Blossom -->
+                    <spawn npc_id="702788" respawn_time="295">
+                        <spot x="226.08826" y="407.47693" z="320.9459" h="33"/>
+                        <spot x="127.6212" y="788.2589" z="284.98257" h="82"/>
+                        <spot x="258.5565" y="966.3101" z="238.0154" h="4"/>
+                        <spot x="521.06915" y="954.1788" z="251.13364" h="7"/>
+                        <spot x="472.61673" y="1259.713" z="269.25" h="38"/>
+                        <spot x="700.81445" y="1438.6244" z="277.68723" h="8"/>
+                        <spot x="722.97833" y="1599.3104" z="238.9542" h="49"/>
+                        <spot x="1022.4233" y="1472.4973" z="259.52182" h="105"/>
+                        <spot x="1177.5725" y="1512.19" z="265.07156" h="119"/>
+                        <spot x="1430.9883" y="1477.6147" z="264.5873" h="110"/>
+                        <spot x="1642.6692" y="1221.4727" z="277.0743" h="7"/>
+                        <spot x="1815.3787" y="931.202" z="236.23047" h="85"/>
+                        <spot x="1671.0415" y="447.25034" z="237.67705" h="89"/>
+                        <spot x="1624.9287" y="220.36395" z="249.375" h="90"/>
+                        <spot x="1327.5194" y="268.94873" z="239.31493" h="81"/>
+                        <spot x="1096.4088" y="291.5394" z="246.51309" h="43"/>
+                        <spot x="1207.5553" y="412.11258" z="263.47913" h="60"/>
+                        <spot x="1056.0211" y="595.34924" z="274.79364" h="0"/>
+                        <spot x="880.7457" y="698.2179" z="273.89648" h="27"/>
+                        <spot x="609.06903" y="627.6038" z="255.55072" h="58"/>
+                        <spot x="593.5389" y="386.8138" z="279.2776" h="88"/>
+                        <spot x="913.235" y="869.2558" z="313.70477" h="40"/>
+                        <spot x="999.9474" y="1378.9867" z="273.32977" h="29"/>
+                        <spot x="311.57034" y="572.5779" z="261.43796" h="50"/>
+                        <spot x="409.77386" y="711.7587" z="264.08356" h="21"/>
+                        <spot x="457.5282" y="921.1834" z="254.24207" h="26"/>
+                        <spot x="1701.1033" y="1712.7157" z="285.13632" h="7"/>
+                        <spot x="1810.1667" y="1551.1754" z="287.4583" h="87"/>
+                        <spot x="1748.898" y="1330.4608" z="254.875" h="99"/>
+                        <spot x="1703.2655" y="1191.2021" z="271.0545" h="15"/>
+                        <spot x="356.86496" y="251.48076" z="328.9784" h="55"/>
+                        <spot x="322.21332" y="366.0552" z="317.9462" h="117"/>
+                        <spot x="555.0946" y="298.26917" z="299.09167" h="3"/>
+                        <spot x="271.09418" y="565.48254" z="284.05258" h="12"/>
+                        <spot x="85.578026" y="618.36993" z="324.91403" h="46"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>        
     </events>
 </events_config>

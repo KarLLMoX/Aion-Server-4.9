@@ -39512,8 +39512,166 @@
 	<decomposable item_id="188054025" decomposable_name="[Event] Aetheric Field Fragment Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054026" decomposable_name="[Event] Honorable Armor Box of Conquest"/> <!-- NEW -->
 	<decomposable item_id="188054027" decomposable_name="[Event] Honorable Weapon Box of Conquest"/> <!-- NEW -->
-	<decomposable item_id="188054028" decomposable_name="[Event] Fountain Gift"/> <!-- NEW -->
-	<decomposable item_id="188054029" decomposable_name="[Event] Blooming Gift"/> <!-- NEW -->
+	<decomposable item_id="188054028" decomposable_name="[Event] Fountain Gift">
+        <items>
+            <item id="169000010" name="Superior Power Shard" count="5"/>
+		</items>
+		<items>
+            <item id="160005054" name="[Event] Nutritional Rice"/>
+		</items>
+		<items>
+            <item id="162002024" name="[Event] Nutritional Jelly Paste" count="5"/>
+		</items>
+		<items>
+            <item id="169000011" name="Ancient Power Shard" count="5"/>
+		</items>
+		<items>
+            <item id="162000107" name="Saam King's Herbs" count="5"/>
+		</items>
+		<items>
+            <item id="188051609" name="Unknown Petal"/>
+		</items>
+		<items>
+            <item id="186000238" name="Conqueror's Mark" count="3"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" count="3"/>
+		</items>
+		<items>
+            <item id="188052716" name="[Event] Lucky Scroll Pouch"/>
+		</items>
+		<items>
+            <item id="188052323" name="[Event] Lesser Composite Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="161000004" name="Tombstone of Revival"/>
+		</items>
+		<items>
+            <item id="162000034" name="Greater Divine Life Serum" count="3"/>
+		</items>
+		<items>
+            <item id="162000040" name="Greater Divine Wind Serum" count="3"/>
+		</items>
+		<items>
+            <item id="162000037" name="Greater Divine Mana Serum" count="3"/>
+		</items>
+		<items>
+            <item id="188053295" name="Empyrean Plume Chest"/>
+		</items>
+		<items>
+            <item id="188100260" name="[Event] Split Bloom"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054029" decomposable_name="[Event] Blooming Gift">
+        <items>
+            <item id="188054014" name="[Event] Lunahare Kisk Box"/>
+		</items>
+		<items>
+            <item id="188051450" name="Greater Relic Bundle"/>
+		</items>
+		<items>
+            <item id="162000137" name="Sublime Life Serum" count="10"/>
+		</items>
+		<items>
+            <item id="162000139" name="Sublime Mana Serum" count="10"/>
+		</items>
+		<items>
+            <item id="162000141" name="Sublime Wind Serum" count="10"/>
+		</items>
+		<items>
+            <item id="188054020" name="[Event] Group Hidden Kisk Box"/>
+		</items>
+		<items>
+            <item id="188054021" name="[Event] Alliance Hidden Kisk Box"/>
+		</items>
+		<items>
+            <item id="188051604" name="Unknown Weathered Accessory"/>
+		</items>
+		<items>
+            <item id="188054022" name="[Event] Precious Weapon Bundle"/>
+		</items>
+		<items>
+            <item id="188054023" name="[Event] Superior Weapon Bundle"/>
+		</items>
+		<items>
+            <item id="169200007" name="Dye: True Black"/>
+		</items>
+		<items>
+            <item id="169200006" name="Dye: True White"/>
+		</items>
+		<items>
+            <item id="166100007" name="Supplements (Eternal)" count="15"/>
+		</items>
+		<items>
+            <item id="188052654" name="Noble Ancient Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="166100010" name="Supplements (Mythic)" count="15"/>
+		</items>
+		<items>
+            <item id="188053295" name="Empyrean Plume Chest"/>
+		</items>
+		<items>
+            <item id="160005060" name="[Event] Zeraka Aether Jelly"/>
+		</items>
+		<items>
+            <item id="188052075" name="[Event] Tahabata Weapon Box"/>
+		</items>
+		<items>
+            <item id="188052915" name="[Event] Stormwing Weapon Chest"/>
+		</items>
+		<items>
+            <item id="169231085" name="Dye: Bright Aqua"/>
+		</items>
+		<items>
+            <item id="169231086" name="Dye: Bright Green"/>
+		</items>
+		<items>
+            <item id="169231087" name="Dye: Bright Sky Blue"/>
+		</items>
+		<items>
+            <item id="169231088" name="Dye: Bright Magenta"/>
+		</items>
+		<items>
+            <item id="169231089" name="Dye: Bright Red"/>
+		</items>
+		<items>
+            <item id="169231090" name="Dye: Bright Blue"/>
+		</items>
+		<items>
+            <item id="188054024" name="[Event] Stonespear Key Box"/>
+		</items>
+		<items>
+            <item id="162000131" name="Fine Bracing Water"/>
+		</items>
+		<items>
+            <item id="188053005" name="[Event] Hyperion's Wing Chest"/>
+		</items>
+		<items>
+            <item id="188054026" name="[Event] Honorable Armor Box of Conquest"/>
+		</items>
+		<items>
+            <item id="166020000" name="Omega Enchantment Stone"/>
+		</items>
+		<items>
+            <item id="166030007" name="[Event] Tempering Solution"/>
+		</items>
+		<items>
+            <item id="188053784" name="Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053785" name="Greater Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188054027" name="[Event] Honorable Weapon Box of Conquest"/>
+		</items>
+		<items>
+            <item id="188053786" name="Major Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188100260" name="[Event] Split Bloom"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054030" decomposable_name="[Club] Decorative Furniture Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054031" decomposable_name="[Club] Functional Furniture Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054032" decomposable_name="[Club] Employment Contract Bundle"/> <!-- NEW -->
