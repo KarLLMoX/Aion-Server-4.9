@@ -134,6 +134,14 @@
                     80685 [XML] [Event] For the Glory of Rainbow Snake (Elyos)
                     80686 [XML] [Event] Blessings of the Prismatic Serpent (Asmodians)
                     80688 [XML] [Event] For the Glory of Rainbow Snake (Asmodians)
+                    80707 [XML] [Event] Fountain of Magic
+                    80708 [XML] [Event/Daily] Blooming Aether
+                    80709 [XML] [Event] The Energy of Life
+                    80710 [XML] [Event/Daily] Collecting Cygnea
+                    80711 [XML] [Event/Daily] Collecting Enshar
+                    80712 [XML] [Event] Life Force Blooms
+                    80713 [XML] [Event/Daily] Harvesting Enshar
+                    80714 [XML] [Event/Daily] Harvesting Cygnea
                     80744 [XML] [Event] Draw Matryoshka (Elyos)
                     80745 [XML] [Event] Once More! (Elyos)
                     80746 [XML] [Event] Gift from Last Matryoshka (Elyos)
@@ -147,11 +155,11 @@
     <report_to id="80325" start_npc_ids="831433" end_npc_ids="831447"/>
     <report_to id="80326" start_npc_ids="831440" end_npc_ids="831448"/>
     <report_to id="80327" start_npc_ids="831439" end_npc_ids="831448"/>
-    <report_to id="80575" start_npc_ids="832041" end_npc_ids="832041"/>  
-    <report_to id="80578" start_npc_ids="832041" end_npc_ids="832041"/>    
+    <report_to id="80575" start_npc_ids="832041" end_npc_ids="832041"/>
+    <report_to id="80578" start_npc_ids="832041" end_npc_ids="832041"/>
 	<report_to_many id="80344" start_npc_ids="831787" end_npc_ids="831787">
         <npc_infos var="0" npc_id="831787" quest_dialog="2375" close_dialog="1009"/>
-    </report_to_many> 
+    </report_to_many>
     <report_to_many id="80467" start_npc_ids="831859" end_npc_ids="831859">
         <npc_infos var="0" npc_id="831859" quest_dialog="2375" close_dialog="1009"/>
     </report_to_many>
@@ -163,7 +171,7 @@
     </report_to_many>
     <report_to_many id="80470" start_npc_ids="831862" end_npc_ids="831862">
         <npc_infos var="0" npc_id="831862" quest_dialog="2375" close_dialog="1009"/>
-    </report_to_many>   
+    </report_to_many>
 	<report_to_many id="80545" start_npc_ids="831999" end_npc_ids="831999">
 		<npc_infos var="0" npc_id="831999" quest_dialog="2375" close_dialog="1009"/>
 	</report_to_many>
@@ -183,13 +191,16 @@
 	</report_to_many>
 	<report_to_many id="80552" start_npc_ids="831999" end_npc_ids="831999">
 		<npc_infos var="0" npc_id="831999" quest_dialog="2375" close_dialog="1009"/>
-	</report_to_many>           
+	</report_to_many>
     <report_to_many id="80683" start_npc_ids="832965" end_npc_ids="832965">
         <npc_infos var="0" npc_id="832965" quest_dialog="2375" close_dialog="1009"/>
-    </report_to_many> 
+    </report_to_many>
 	<report_to_many id="80686" start_npc_ids="832976" end_npc_ids="832976">
         <npc_infos var="0" npc_id="832976" quest_dialog="2375" close_dialog="1009"/>
-    </report_to_many> 
+    </report_to_many>
+	<report_to_many id="80708" start_npc_ids="833503" end_npc_ids="833503" start_dialog_id="4762">
+		<npc_infos npc_id="833503" var="0" quest_dialog="10002" close_dialog="1009"/>
+	</report_to_many>
     <!-- COLLECTING QUESTS -->
     <item_collecting start_npc_ids="202549" id="50010"/>
     <item_collecting start_npc_ids="202549" id="50019"/>
@@ -220,7 +231,6 @@
     <item_collecting start_npc_ids="205474" id="80059"/>
     <item_collecting start_npc_ids="205481" id="80074"/>
     <item_collecting start_npc_ids="205481" id="80075"/>
-
     <item_collecting start_npc_ids="799763" id="80256"/>
     <item_collecting start_npc_ids="799763" id="80257"/>
     <item_collecting start_npc_ids="799763" id="80258"/>
@@ -270,7 +280,6 @@
     <item_collecting start_npc_ids="832978" id="80688"/>
     <item_collecting start_npc_ids="832042" id="80576"/>
     <item_collecting start_npc_ids="832042" id="80579"/>
-
     <!-- ely -->
     <item_collecting start_npc_ids="832986" id="80705"/>
     <item_collecting start_npc_ids="832967" id="80677"/> 
@@ -322,6 +331,7 @@
     <item_collecting start_npc_ids="832889" id="80620"/>
     <item_collecting start_npc_ids="832895" id="80643"/>
     <item_collecting start_npc_ids="832896" id="80644"/>
+    <item_collecting id="80707" start_npc_ids="833501"/>
     <!-- All Dolled Up Event -->
     <item_collecting start_npc_ids="833622" id="80744" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="833623" id="80745" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007395"/>
@@ -346,4 +356,10 @@
     <!-- KILL IN WORLD QUESTS -->
     <kill_in_world id="50031" start_npc_ids="831783" end_npc_ids="831783" worlds="0" amount="5"/>
     <kill_in_world id="51031" start_npc_ids="831784" end_npc_ids="831784" worlds="0" amount="5"/>
+    <kill_in_world id="80709" start_npc_ids="833502" end_npc_ids="833502" worlds="600100000" amount="2"/>
+    <kill_in_world id="80710" start_npc_ids="833502" end_npc_ids="833502" worlds="210070000" amount="2"/>
+    <kill_in_world id="80711" start_npc_ids="833502" end_npc_ids="833502" worlds="220080000" amount="2"/>
+	<kill_in_world id="80712" start_npc_ids="833502" end_npc_ids="833502" worlds="600100000" amount="2"/>
+	<kill_in_world id="80713" start_npc_ids="833502" end_npc_ids="833502" worlds="220080000" amount="2"/>
+	<kill_in_world id="80714" start_npc_ids="833502" end_npc_ids="833502" worlds="210070000" amount="2"/>
 </quest_scripts>
