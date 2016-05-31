@@ -40589,24 +40589,357 @@
         </items>
     </decomposable>
 	<decomposable item_id="188054352" decomposable_name="Greater Dorgel Composite Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054353" decomposable_name="[Event] Lukewarm Egg"/> <!-- NEW -->
-	<decomposable item_id="188054354" decomposable_name="[Event] Warm Egg"/> <!-- NEW -->
-	<decomposable item_id="188054355" decomposable_name="[Event] Heated Egg"/> <!-- NEW -->
-	<decomposable item_id="188054356" decomposable_name="[Event] Incubated Egg"/> <!-- NEW -->
-	<decomposable item_id="188054357" decomposable_name="[Event] Hatching Egg"/> <!-- NEW -->
-	<decomposable item_id="188054358" decomposable_name="[Event] Living Warmth"/> <!-- NEW -->
-	<decomposable item_id="188054359" decomposable_name="Daeva's Fruit Sack"/> <!-- NEW -->
-	<decomposable item_id="188054360" decomposable_name="Tempest Fruit Punch"/> <!-- NEW -->
-	<decomposable item_id="188054361" decomposable_name="Daeva's Fruit Sack"/> <!-- NEW -->
-	<decomposable item_id="188054362" decomposable_name="Tempest Fruit Punch"/> <!-- NEW -->
+	<decomposable item_id="188054353" decomposable_name="[Event] Lukewarm Egg">
+        <items>
+            <item id="188100277" name="[Event] Cooling Warm Egg"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054354" decomposable_name="[Event] Warm Egg">
+        <items>
+            <item id="188100278" name="[Event] Cooling Heated Egg"/>
+		</items>
+		<items>
+            <item id="188054358" name="[Event] Living Warmth"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054355" decomposable_name="[Event] Heated Egg">
+        <items>
+            <item id="188100279" name="[Event] Cooling Incubated Egg"/>
+		</items>
+		<items>
+            <item id="188054358" name="[Event] Living Warmth"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054356" decomposable_name="[Event] Incubated Egg">
+        <items>
+            <item id="188054357" name="[Event] Hatching Egg"/>
+		</items>
+		<items>
+            <item id="188054358" name="[Event] Living Warmth"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054357" decomposable_name="[Event] Hatching Egg">
+        <items>
+            <item id="190020250" name="Greenhorn's Egg in the Heroic World"/>
+		</items>
+		<items>
+            <item id="190020251" name="Queen of Cat's Egg"/>
+		</items>
+		<items>
+            <item id="190020252" name="Pinkybell's Egg"/>
+		</items>
+		<items>
+            <item id="190020253" name="Shu-Ghost's Egg"/>
+		</items>
+		<items>
+            <item id="190020254" name="Baby Tiamat's Egg"/>
+		</items>
+		<items>
+            <item id="190020255" name="Minkybell's Egg"/>
+		</items>
+		<items>
+            <item id="188053999" name="[Event] Honorable Kunax's Accessory Box"/>
+		</items>
+		<items>
+            <item id="188054112" name="Wave Song Armor Box"/>
+		</items>
+		<items>
+            <item id="188054113" name="Sea Feast Armor Box"/>
+		</items>
+		<items>
+            <item id="188053975" name="Stigma Box"/>
+		</items>
+		<items>
+            <item id="182007162" name="Aether Cherry" count="20"/>
+		</items>
+		<items>
+            <item id="188053321" name="[Event] Empyrean Plume Chest"/>
+		</items>
+		<items>
+            <item id="169200006" name="Dye: True White"/>
+		</items>
+		<items>
+            <item id="169200007" name="Dye: True Black"/>
+		</items>
+		<items>
+            <item id="188052716" name="[Event] Lucky Scroll Pouch" count="5"/>
+		</items>
+		<items>
+            <item id="188052705" name="[Event] Ancient Coin Bundle" count="5"/>
+		</items>
+		<items>
+            <item id="188052706" name="[Event] Blood Mark Box" count="5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054358" decomposable_name="[Event] Living Warmth">
+        <items>
+            <item id="188100280" name="[Event] Warming Spark"/>
+		</items>
+		<items>
+            <item id="188100281" name="[Event] Warming Ember"/>
+		</items>
+		<items>
+            <item id="188100282" name="[Event] Warming Flame"/>
+		</items>
+		<items>
+            <item id="188100283" name="[Event] Warming Blaze"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054359" decomposable_name="Daeva's Fruit Sack">
+        <items>
+            <item id="188100284" name="[Event] Orange"/>
+		</items>
+		<items>
+            <item id="188100285" name="[Event] Apple"/>
+		</items>
+		<items>
+            <item id="188100286" name="[Event] Pineapple"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054360" decomposable_name="Tempest Fruit Punch">
+        <items>
+            <item id="188054363" name="[Event] Grendal's Mythic Armor Box"/>
+		</items>
+		<items>
+            <item id="188054364" name="[Event] Eternal Trial Accessory Box"/>
+		</items>
+		<items>
+            <item id="188052075" name="[Event] Tahabata Weapon Box"/>
+		</items>
+		<items>
+            <item id="188600264" name="[Event] The Eternal Bastion Bonus Entry Scroll"/>
+		</items>
+		<items>
+            <item id="188600261" name="[Event] Infinity Shard Bonus Entry Scroll"/>
+		</items>
+		<items>
+            <item id="188054365" name="[Event] Forest Popoku's Armor Box"/>
+		</items>
+		<items>
+            <item id="188053254" name="[Event] Ancient Spirit's Hat Box"/>
+		</items>
+		<items>
+            <item id="188053639" name="Buccaneer's Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054366" name="Highest Grade Ancient Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="110901030" name="Lingerie - Sunny Style"/>
+		</items>
+		<items>
+            <item id="110901031" name="Lingerie - Dark Style"/>
+		</items>
+		<items>
+            <item id="169220032" name="Dye: True Black"/>
+		</items>
+		<items>
+            <item id="169220031" name="Dye: True White"/>
+		</items>
+		<items>
+            <item id="169231082" name="[Event] Dye: Romantic Pink"/>
+		</items>
+		<items>
+            <item id="188052749" name="[Event] Superior Recovery Bundle"/>
+		</items>
+		<items>
+            <item id="188054367" name="[Event] Ancient Coin Bundle"/>
+		</items>
+		<items>
+            <item id="188052751" name="[Event] Fine Crit Boost Bundle"/>
+		</items>
+		<items>
+            <item id="188052750" name="[Event] Elemental Defense Bundle"/>
+		</items>
+		<items>
+            <item id="164002307" name="Love Firecracker No.1" count="3"/>
+		</items>
+		<items>
+            <item id="164002308" name="Celebration Firecracker No.1" count="3"/>
+		</items>
+		<items>
+            <item id="169000010" name="Superior Power Shard" count="1000"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054361" decomposable_name="Daeva's Fruit Sack">
+        <items>
+            <item id="188100287" name="[Event] Orange"/>
+		</items>
+		<items>
+            <item id="188100288" name="[Event] Apple"/>
+		</items>
+		<items>
+            <item id="188100289" name="[Event] Pineapple"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054362" decomposable_name="Tempest Fruit Punch">
+        <items>
+            <item id="188508021" name="[Motion Card] Perfect Martial Arts"/>
+		</items>
+		<items>
+            <item id="188054368" name="[Event] Weapon Box of the Centurion"/>
+		</items>
+		<items>
+            <item id="188054369" name="[Event] Armor Box of the Centurion"/>
+		</items>
+		<items>
+            <item id="190020180" name="Golden Pack Saam Egg"/>
+		</items>
+		<items>
+            <item id="188508022" name="[Motion Card] Ninja Set"/>
+		</items>
+		<items>
+            <item id="188508024" name="[Motion Card] Levitating Set"/>
+		</items>
+		<items>
+            <item id="188054003" name="Dignified Daru Thief Transformation Candy Box"/>
+		</items>
+		<items>
+            <item id="188054004" name="Wise Daru Thief Transformation Candy Box"/>
+		</items>
+		<items>
+            <item id="188054220" name="Dignified Ayas Transformation Candy Box"/>
+		</items>
+		<items>
+            <item id="188054221" name="Wise Ayas Transformation Candy Box"/>
+		</items>
+		<items>
+            <item id="110901030" name="Lingerie - Sunny Style"/>
+		</items>
+		<items>
+            <item id="110901031" name="Lingerie - Dark Style"/>
+		</items>
+		<items>
+            <item id="169231082" name="[Event] Dye: Romantic Pink"/>
+		</items>
+		<items>
+            <item id="169220032" name="Dye: True Black"/>
+		</items>
+		<items>
+            <item id="169220031" name="Dye: True White"/>
+		</items>
+		<items>
+            <item id="188054086" name="Abyss Consumables Box"/>
+		</items>
+		<items>
+            <item id="162002053" name="[Event] Major Recovery Serum" count="10"/>
+		</items>
+		<items>
+            <item id="188053943" name="[Event] Shining Scroll Bundle" count="3"/>
+		</items>
+		<items>
+            <item id="164002307" name="Love Firecracker No.1" count="3"/>
+		</items>
+		<items>
+            <item id="164002308" name="Celebration Firecracker No.1" count="3"/>
+		</items>
+		<items>
+            <item id="169000010" name="Superior Power Shard" count="1000"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054363" decomposable_name="[Event] Grendal's Mythic Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054364" decomposable_name="[Event] Eternal Trial Accessory Box"/> <!-- NEW -->
 	<decomposable item_id="188054365" decomposable_name="[Event] Forest Popoku's Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054366" decomposable_name="Highest Grade Ancient Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054367" decomposable_name="[Event] Ancient Coin Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054368" decomposable_name="[Event] Weapon Box of the Centurion"/> <!-- NEW -->
+	<decomposable item_id="188054366" decomposable_name="Highest Grade Ancient Manastone Bundle">
+        <items>
+            <item id="167020072" name="Ancient Manastone: Accuracy +35"/>
+		</items>
+		<items>
+            <item id="167020073" name="Ancient Manastone: Evasion +24"/>
+		</items>
+		<items>
+            <item id="167020074" name="Ancient Manastone: Crit Strike +24"/>
+		</items>
+		<items>
+            <item id="167020075" name="Ancient Manastone: Crit Spell +9"/>
+		</items>
+		<items>
+            <item id="167020076" name="Ancient Manastone: Spell Resist +11"/>
+		</items>
+		<items>
+            <item id="167020077" name="Ancient Manastone: Physical Defense +100"/>
+		</items>
+		<items>
+            <item id="167020078" name="Ancient Manastone: Resist Magic +20"/>
+		</items>
+		<items>
+            <item id="167020079" name="Ancient Manastone: Attack +8"/>
+		</items>
+		<items>
+            <item id="167020080" name="Ancient Manastone: Magical Accuracy +22"/>
+		</items>
+		<items>
+            <item id="167020081" name="Ancient Manastone: Magic Boost +35"/>
+		</items>
+		<items>
+            <item id="167020082" name="Ancient Manastone: Magic Suppression +50"/>
+		</items>
+		<items>
+            <item id="167020083" name="Ancient Manastone: Healing Boost +6"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054367" decomposable_name="[Event] Ancient Coin Bundle">
+        <items>
+            <item id="186000237" name="Ancient Coin" count="10"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054368" decomposable_name="[Event] Weapon Box of the Centurion">
+        <items>
+            <item id="100000703" name="Guardian Centurion's Sword" race="ELYOS"/>
+            <item id="100000705" name="Archon Centurion's Sword" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="100100551" name="Guardian Centurion's Warhammer" race="ELYOS"/>
+            <item id="100100553" name="Archon Centurion's Warhammer" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="100200658" name="Guardian Centurion's Dagger" race="ELYOS"/>
+            <item id="100200660" name="Archon Centurion's Dagger" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="100500552" name="Guardian Centurion's Jewel" race="ELYOS"/>
+            <item id="100500554" name="Archon Centurion's Jewel" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="100600589" name="Guardian Centurion's Tome" race="ELYOS"/>
+            <item id="100600591" name="Archon Centurion's Tome" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="100900533" name="Guardian Centurion's Greatsword" race="ELYOS"/>
+            <item id="100900535" name="Archon Centurion's Greatsword" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="101300525" name="Guardian Centurion's Spear" race="ELYOS"/>
+            <item id="101300527" name="Archon Centurion's Spear" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="101500549" name="Guardian Centurion's Staff" race="ELYOS"/>
+            <item id="101500551" name="Archon Centurion's Staff" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="101700571" name="Guardian Centurion's Longbow" race="ELYOS"/>
+            <item id="101700573" name="Archon Centurion's Longbow" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="115000812" name="Guardian Centurion's Shield" race="ELYOS"/>
+            <item id="115000814" name="Archon Centurion's Shield" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054369" decomposable_name="[Event] Armor Box of the Centurion"/> <!-- NEW -->
-	<decomposable item_id="188054373" decomposable_name="Tonirunerk's Capsule"/> <!-- NEW -->
+	<decomposable item_id="188054373" decomposable_name="Tonirunerk's Capsule">
+        <items>
+            <item id="188100290" name="Tonirunerk's Toy Head"/>
+		</items>
+		<items>
+            <item id="188100291" name="Tonirunerk's Toy Body"/>
+		</items>
+		<items>
+            <item id="182007397" name="Bonus Card"/>
+		</items>
+		<items>
+            <item id="188054376" name="Tonirunerk's General Present Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054374" decomposable_name="Tonirunerk's Toy Robot"/> <!-- NEW -->
 	<decomposable item_id="188054375" decomposable_name="Tonirunerk's Parts Box"/> <!-- NEW -->
 	<decomposable item_id="188054376" decomposable_name="Tonirunerk's General Present Box"/> <!-- NEW -->
@@ -40619,31 +40952,306 @@
 	<decomposable item_id="188054389" decomposable_name="Bundle of Honor and Conquest"/> <!-- NEW -->
 	<decomposable item_id="188054390" decomposable_name="Large Greater Supplements Bag (Mythic)"/> <!-- NEW -->
 	<decomposable item_id="188054391" decomposable_name="Large Greater Supplements Bag (Eternal)"/> <!-- NEW -->
-	<decomposable item_id="188054394" decomposable_name="Silver Medal Chest"/> <!-- NEW -->
-	<decomposable item_id="188054395" decomposable_name="Relic Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054398" decomposable_name="Stigma Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054399" decomposable_name="Ancient Coin Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054394" decomposable_name="Silver Medal Chest">
+        <items>
+            <item id="186000031" name="Silver Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054395" decomposable_name="Relic Bundle">
+        <items>
+            <item id="186000059" name="Major Ancient Seal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054398" decomposable_name="Stigma Bundle">
+        <items>
+            <item id="188053784" name="Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="188053785" name="Greater Stigma Bundle"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054399" decomposable_name="Ancient Coin Bundle">
+        <items>
+            <item id="186000237" name="Ancient Coin" rnd_min="1" rnd_max="20"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054400" decomposable_name="[Event] Lunatic Modor's Mythic Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054405" decomposable_name="[Jakurerk] Vial for Secret Remedy of Miraculous Growth (21-day)"/> <!-- NEW -->
 	<decomposable item_id="188054406" decomposable_name="[Event] Wholehearted Fuzzball New Support Bundle"/> <!-- NEW -->
 	<decomposable item_id="188054407" decomposable_name="[Event] Wholehearted Fuzzball Return Support Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054410" decomposable_name="[Event] Lunatic Modor's Templar Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054411" decomposable_name="[Event] Lunatic Modor's Gladiator Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054412" decomposable_name="[Event] Lunatic Modor's Leather Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054413" decomposable_name="[Event] Lunatic Modor's Cloth Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054414" decomposable_name="[Event] Lunatic Modor's Cleric Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054415" decomposable_name="[Event] Lunatic Modor's Chanter Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054416" decomposable_name="[Event] Lunatic Modor's Gunslinger Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054417" decomposable_name="[Event] Lunatic Modor's Songweaver Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054418" decomposable_name="[Event] Lunatic Modor's Aethertech Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054419" decomposable_name="[Jakurerk] Celebratory Box for Rotund Reaching Level 65 (30-day)"/> <!-- NEW -->
-	<decomposable item_id="188054421" decomposable_name="Ice Cold Capsule"/> <!-- NEW -->
-	<decomposable item_id="188054422" decomposable_name="Ice Apple Capsule"/> <!-- NEW -->
+	<decomposable item_id="188054410" decomposable_name="[Event] Lunatic Modor's Templar Armor Box">
+        <items>
+            <item id="110601726" name="Lunatic Grendal's Templar Breastplate"/>
+		</items>
+		<items>
+            <item id="113601673" name="[Jakurerk] Lunatic Grendal's Templar Plate Gaiters"/>
+		</items>
+		<items>
+            <item id="111601690" name="[Jakurerk] Lunatic Grendal's Templar Plate Gloves"/>
+		</items>
+		<items>
+            <item id="114601679" name="[Jakurerk] Lunatic Grendal's Templar Plate Shoes"/>
+		</items>
+		<items>
+            <item id="112601671" name="[Jakurerk] Lunatic Grendal's Templar Plate Pauldron"/>
+		</items>
+		<items>
+            <item id="125004421" name="[Jakurerk] Lunatic Grendal's Templar Plate Helmet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054411" decomposable_name="[Event] Lunatic Modor's Gladiator Armor Box">
+        <items>
+            <item id="110601727" name="[Jakurerk] Lunatic Grendal's Gladiator Breastplate"/>
+		</items>
+		<items>
+            <item id="113601674" name="[Jakurerk] Lunatic Grendal's Gladiator Plate Gaiters"/>
+		</items>
+		<items>
+            <item id="111601691" name="[Jakurerk] Lunatic Grendal's Gladiator Plate Gloves"/>
+		</items>
+		<items>
+            <item id="114601680" name="[Jakurerk] Lunatic Grendal's Gladiator Plate Shoes"/>
+		</items>
+		<items>
+            <item id="112601672" name="[Jakurerk] Lunatic Grendal's Gladiator Plate Pauldron"/>
+		</items>
+		<items>
+            <item id="125004422" name="[Jakurerk] Lunatic Grendal's Gladiator Plate Helmet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054412" decomposable_name="[Event] Lunatic Modor's Leather Armor Box">
+        <items>
+            <item id="110301933" name="[Jakurerk] Lunatic Grendal's Leather Vest"/>
+		</items>
+		<items>
+            <item id="113301903" name="[Jakurerk] Lunatic Grendal's Leather Leg Protector"/>
+		</items>
+		<items>
+            <item id="111301872" name="[Jakurerk] Lunatic Grendal's Leather Gloves"/>
+		</items>
+		<items>
+            <item id="114301940" name="[Jakurerk] Lunatic Grendal's Leather Shoes"/>
+		</items>
+		<items>
+            <item id="112301810" name="[Jakurerk] Lunatic Grendal's Leather Pauldron"/>
+		</items>
+		<items>
+            <item id="125004423" name="[Jakurerk] Lunatic Grendal's Leather Hat"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054413" decomposable_name="[Event] Lunatic Modor's Cloth Armor Box">
+        <items>
+            <item id="110101954" name="[Jakurerk] Lunatic Grendal's Cloth Jacket"/>
+		</items>
+		<items>
+            <item id="113101766" name="[Jakurerk] Lunatic Grendal's Cloth Pants"/>
+		</items>
+		<items>
+            <item id="111101755" name="[Jakurerk] Lunatic Grendal's Cloth Gloves"/>
+		</items>
+		<items>
+            <item id="114101800" name="[Jakurerk] Lunatic Grendal's Cloth Shoes"/>
+		</items>
+		<items>
+            <item id="112101701" name="[Jakurerk] Lunatic Grendal's Cloth Pauldron"/>
+		</items>
+		<items>
+            <item id="125004424" name="[Jakurerk] Lunatic Grendal's Cloth Bandana"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054414" decomposable_name="[Event] Lunatic Modor's Cleric Armor Box">
+        <items>
+            <item id="110551277" name="[Jakurerk] Lunatic Grendal's Cleric Chain Armor"/>
+		</items>
+		<items>
+            <item id="113501856" name="[Jakurerk] Lunatic Grendal's Cleric Chain Leg Armor"/>
+		</items>
+		<items>
+            <item id="111501837" name="[Jakurerk] Lunatic Grendal's Cleric Chain Gloves"/>
+		</items>
+		<items>
+            <item id="114501864" name="[Jakurerk] Lunatic Grendal's Cleric Chain Boots"/>
+		</items>
+		<items>
+            <item id="112501773" name="[Jakurerk] Lunatic Grendal's Cleric Chain Pauldron"/>
+		</items>
+		<items>
+            <item id="125004425" name="[Jakurerk] Lunatic Grendal's Cleric Chain Helmet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054415" decomposable_name="[Event] Lunatic Modor's Chanter Armor Box">
+        <items>
+            <item id="110551278" name="[Jakurerk] Lunatic Grendal's Chanter Chain Armor"/>
+		</items>
+		<items>
+            <item id="113501857" name="[Jakurerk] Lunatic Grendal's Chanter Chain Leg Armor"/>
+		</items>
+		<items>
+            <item id="111501838" name="[Jakurerk] Lunatic Grendal's Chanter Chain Gloves"/>
+		</items>
+		<items>
+            <item id="114501865" name="[Jakurerk] Lunatic Grendal's Chanter Chain Boots"/>
+		</items>
+		<items>
+            <item id="112501774" name="[Jakurerk] Lunatic Grendal's Chanter Chain Pauldron"/>
+		</items>
+		<items>
+            <item id="125004426" name="[Jakurerk] Lunatic Grendal's Chanter Chain Helmet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054416" decomposable_name="[Event] Lunatic Modor's Gunslinger Armor Box">
+        <items>
+            <item id="110301934" name="[Jakurerk] Lunatic Grendal's Sniper Leather Breastplate"/>
+		</items>
+		<items>
+            <item id="113301904" name="[Jakurerk] Lunatic Grendal's Sniper Leather Gaiters"/>
+		</items>
+		<items>
+            <item id="111301873" name="[Jakurerk] Lunatic Grendal's Sniper Leather Protective Gloves"/>
+		</items>
+		<items>
+            <item id="114301941" name="[Jakurerk] Lunatic Grendal's Sniper Leather Combat Boots"/>
+		</items>
+		<items>
+            <item id="112301811" name="[Jakurerk] Lunatic Grendal's Sniper Leather Pauldron"/>
+		</items>
+		<items>
+            <item id="125004427" name="[Jakurerk] Lunatic Grendal's Sniper Leather Helmet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054417" decomposable_name="[Event] Lunatic Modor's Songweaver Armor Box">
+        <items>
+            <item id="110101955" name="[Jakurerk] Lunatic Grendal's Bardic Master Cloth Jacket"/>
+		</items>
+		<items>
+            <item id="113101767" name="[Jakurerk] Lunatic Grendal's Bardic Master Cloth Pants"/>
+		</items>
+		<items>
+            <item id="111101756" name="[Jakurerk] Lunatic Grendal's Bardic Master Cloth Gloves"/>
+		</items>
+		<items>
+            <item id="114101801" name="[Jakurerk] Lunatic Grendal's Bardic Master Cloth Shoes"/>
+		</items>
+		<items>
+            <item id="112101702" name="[Jakurerk] Lunatic Grendal's Bardic Master Cloth Pauldron"/>
+		</items>
+		<items>
+            <item id="125004428" name="[Jakurerk] Lunatic Grendal's Bardic Master Cloth Bandana"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054418" decomposable_name="[Event] Lunatic Modor's Aethertech Armor Box">
+        <items>
+            <item id="110551279" name="[Jakurerk] Lunatic Grendal's Mechanist Chain Breastplate"/>
+		</items>
+		<items>
+            <item id="113501858" name="[Jakurerk] Lunatic Grendal's Mechanist Chain Gaiters"/>
+		</items>
+		<items>
+            <item id="111501839" name="[Jakurerk] Lunatic Grendal's Mechanist Chain Combat Gloves"/>
+		</items>
+		<items>
+            <item id="112501775" name="[Jakurerk] Lunatic Grendal's Mechanist Chain Spaulders"/>
+		</items>
+		<items>
+            <item id="114501866" name="[Jakurerk] Lunatic Grendal's Mechanist Chain Combat Boots"/>
+		</items>
+		<items>
+            <item id="125004429" name="[Jakurerk] Lunatic Grendal's Mechanist Chain Combat Helmet"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054419" decomposable_name="[Jakurerk] Celebratory Box for Rotund Reaching Level 65 (30-day)">
+        <items>
+            <item id="188054400" name="[Event] Lunatic Modor's Mythic Armor Box"/>
+		</items>
+		<items>
+            <item id="188054401" name="[Event] Lunatic Modor's Mythic Weapon Box"/>
+		</items>
+		<items>
+            <item id="187000121" name="Hyperion Wings"/>
+		</items>
+		<items>
+            <item id="188054486" name="[Jakurerk] Conqueror's Accessory Box of Mirage"/>
+		</items>
+		<items>
+            <item id="166030013" name="[Event] Tempering Solution"/>
+		</items>
+		<items>
+            <item id="188054409" name="[Event] Wholehearted Ayas Ancient Manastone Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054421" decomposable_name="Ice Cold Capsule">
+        <items>
+            <item id="188054427" name="Sea Feast Weapon Box"/>
+		</items>
+		<items>
+            <item id="188053934" name="Greater Magically Charged Box"/>
+		</items>
+		<items>
+            <item id="188054428" name="Exalted Katalium Weapon Box"/>
+		</items>
+		<items>
+            <item id="115001912" name="Mini Crystal Lucid Shield"/>
+		</items>
+		<items>
+            <item id="169405338" name="Pallasite Ore"/>
+		</items>
+		<items>
+            <item id="188054429" name="Hyperion Wings Box"/>
+		</items>
+		<items>
+            <item id="166200013" name="Enduring Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="166200009" name="Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="188054430" name="Lucky Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="165005093" name="Vindachinerk's Noble Abyss Weapon Extraction Tools"/>
+		</items>
+		<items>
+            <item id="165005094" name="Vindachinerk's Noble Abyss Armor Extraction Tools"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" rnd_min="1" rnd_max="2"/>
+		</items>
+		<items>
+            <item id="169231098" name="Dye: Bright Sky Blue"/>
+		</items>
+		<items>
+            <item id="188054431" name=" Strong Ayas Transformation Candy Box"/>
+		</items>
+		<items>
+            <item id="188054432" name="Alliance Lunahare Kisk Box (20)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054422" decomposable_name="Ice Apple Capsule">
+        <items>
+            <item id="162001044" name="Nabaru's Golden Apple" rnd_min="1" rnd_max="5"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054423" decomposable_name="Level 70 Composite Manastone Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054424" decomposable_name="Contains a Ruddytail Heorn."/> <!-- NEW -->
-	<decomposable item_id="188054425" decomposable_name="Ruddytail Heorn Box (90 days)"/> <!-- NEW -->
-	<decomposable item_id="188054426" decomposable_name="Rudra's Egg Box (30 days)"/> <!-- NEW -->
-	<decomposable item_id="188054429" decomposable_name="Hyperion Wings Box"/> <!-- NEW -->
+	<decomposable item_id="188054424" decomposable_name="Contains a Ruddytail Heorn.">
+        <items>
+            <item id="190100190" name="Ruddytail Heorn"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054425" decomposable_name="Ruddytail Heorn Box (90 days)">
+        <items>
+            <item id="190100191" name="Ruddytail Heorn (90 days)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054426" decomposable_name="Rudra's Egg Box (30 days)">
+        <items>
+            <item id="190020245" name="Rudra Egg (30 days)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054429" decomposable_name="Hyperion Wings Box">
+        <items>
+            <item id="187000121" name="Hyperion Wings"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054431" decomposable_name="Strong Ayas Transformation Candy Box"/> <!-- NEW -->
 	<decomposable item_id="188054432" decomposable_name="Alliance Lunahare Kisk Box (20)"/> <!-- NEW -->
 	<decomposable item_id="188054433" decomposable_name="Gladiator Elite Stigma Bundle"/> <!-- NEW -->
@@ -40694,14 +41302,74 @@
 	<decomposable item_id="188054484" decomposable_name="Big Gold Ingot Box"/> <!-- NEW -->
 	<decomposable item_id="188054486" decomposable_name="[Jakurerk] Conqueror's Accessory Box of Mirage"/> <!-- NEW -->
 	<decomposable item_id="188054487" decomposable_name="Key Box for Cube Expansion"/> <!-- NEW -->
-	<decomposable item_id="188054490" decomposable_name="[Jakurerk] Noble Daevanion Plate Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054491" decomposable_name="[Jakurerk] Noble Daevanion Leather Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054492" decomposable_name="[Jakurerk] Noble Daevanion Chain Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054493" decomposable_name="[Jakurerk] Noble Daevanion Cloth Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054494" decomposable_name="[Stamp] Omega Enchantment Stone Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054490" decomposable_name="[Jakurerk] Noble Daevanion Plate Armor Box">
+        <items>
+            <item id="110601724" name="Noble Daevanion Breastplate"/>
+            <item id="111601688" name="Noble Daevanion Plate Gloves"/>
+            <item id="112601669" name="Noble Daevanion Plate Pauldron"/>
+            <item id="113601671" name="Noble Daevanion Plate Gaiters"/>
+            <item id="114601677" name="Noble Daevanion Plate Boots"/>
+            <item id="115001921" name="Noble Daevanion's Shield"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054491" decomposable_name="[Jakurerk] Noble Daevanion Leather Armor Box">
+        <items>
+            <item id="110301930" name="Noble Daevanion Leather Vest"/>
+            <item id="111301869" name="Noble Daevanion Leather Gloves"/>
+            <item id="112301807" name="Noble Daevanion Leather Pauldron"/>
+            <item id="113301900" name="Noble Daevanion Leather Leg Protector"/>
+            <item id="114301937" name="Noble Daevanion Leather Shoes"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054492" decomposable_name="[Jakurerk] Noble Daevanion Chain Armor Box">
+        <items>
+            <item id="110551274" name="Noble Daevanion Chain Armor"/>
+            <item id="111501834" name="Noble Daevanion Chain Gloves"/>
+            <item id="112501770" name="Noble Daevanion Chain Pauldron"/>
+            <item id="113501853" name="Noble Daevanion Chain Leg Armor"/>
+            <item id="114501861" name="Noble Daevanion Chain Boots"/>
+            <item id="115001922" name="Noble Daevanion's Scale Shield"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054493" decomposable_name="[Jakurerk] Noble Daevanion Cloth Armor Box">
+        <items>
+            <item id="110101952" name="Noble Daevanion Cloth Jacket"/>
+            <item id="111101753" name="Noble Daevanion Cloth Gloves"/>
+            <item id="112101699" name="Noble Daevanion Cloth Pauldron"/>
+            <item id="113101764" name="Noble Daevanion Cloth Pants"/>
+            <item id="114101798" name="Noble Daevanion Cloth Shoes"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054494" decomposable_name="[Stamp] Omega Enchantment Stone Bundle">
+        <items>
+            <item id="166030005" name="Tempering Solution"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054495" decomposable_name="Premium Box of Luck II"/> <!-- NEW -->
 	<decomposable item_id="188054496" decomposable_name="Wish Box of Luck"/> <!-- NEW -->
-	<decomposable item_id="188054509" decomposable_name="Aion Ascended Pack"/> <!-- NEW -->
+	<decomposable item_id="188054509" decomposable_name="Aion Ascended Pack">
+        <items>
+            <item id="186000444" name="Cube Expansion Coin" count="10"/>
+		</items>
+		<items>
+            <item id="190020076" name="Red Shell Potcrab Egg"/>
+		</items>
+		<items>
+            <item id="188053856" name="Stealth Group Kisk Bundle"/>
+		</items>
+		<items>
+            <item id="162000050" name="Major Recovery Serum" count="250"/>
+		</items>
+		<items>
+            <item id="188053295" name="Empyrean Plume Chest"/>
+		</items>
+		<items>
+            <item id="161000003" name="Reviving Elemental Stone" count="5"/>
+		</items>
+		<items>
+            <item id="169620120" name="Berdin's 100% XP Amulet IV" count="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054510" decomposable_name="Small Steam Box II"/> <!-- NEW -->
 	<decomposable item_id="188054511" decomposable_name="Small Steam Box III"/> <!-- NEW -->
 	<decomposable item_id="188054512" decomposable_name="Small Steam Box IV"/> <!-- NEW -->
@@ -40711,7 +41379,32 @@
 	<decomposable item_id="188054516" decomposable_name="Small Steam Box VIII"/> <!-- NEW -->
 	<decomposable item_id="188054517" decomposable_name="Small Steam Box IX"/> <!-- NEW -->
 	<decomposable item_id="188054518" decomposable_name="Small Steam Box X"/> <!-- NEW -->
-	<decomposable item_id="188054519" decomposable_name="Aion Daevic Pack"/> <!-- NEW -->
+	<decomposable item_id="188054519" decomposable_name="Aion Daevic Pack">
+        <items>
+            <item id="186000444" name="Cube Expansion Coin" count="15"/>
+		</items>
+		<items>
+            <item id="170100026" name="Eastern Four Seasons Cabinet"/>
+		</items>
+		<items>
+            <item id="125040076" name="Summer Sunglasses"/>
+		</items>
+		<items>
+            <item id="110900104" name="Cool Swimsuit"/>
+		</items>
+		<items>
+            <item id="190020018" name="Mini MuMu Egg"/>
+		</items>
+		<items>
+            <item id="169620128" name="Venerable Elim's Amulet II" count="10"/>
+		</items>
+		<items>
+            <item id="169620084" name="Crafting Boost Charm I - 200%" count="5"/>
+		</items>
+		<items>
+            <item id="169620075" name="Gathering Boost Charm I - 200%" count="5"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054520" decomposable_name="Normal Steam Box II"/> <!-- NEW -->
 	<decomposable item_id="188054521" decomposable_name="Normal Steam Box III"/> <!-- NEW -->
 	<decomposable item_id="188054522" decomposable_name="Normal Steam Box IV"/> <!-- NEW -->
@@ -40773,18 +41466,205 @@
 	<decomposable item_id="188054616" decomposable_name="Golden Saam's Small Box"/> <!-- NEW -->
 	<decomposable item_id="188054617" decomposable_name="Golden Saam's Big Box"/> <!-- NEW -->
 	<decomposable item_id="188054618" decomposable_name="Golden Saam's Small Box"/> <!-- NEW -->
-	<decomposable item_id="188054619" decomposable_name="Force Troublemaker Moon Rabbit Kisk Box (5)"/> <!-- NEW -->
-	<decomposable item_id="188054620" decomposable_name="Specialized Weapon Box of the Black Pearl Skulls"/> <!-- NEW -->
-	<decomposable item_id="188054621" decomposable_name="Specialized Cat Weapon Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054624" decomposable_name="[Jakurerk] Bonus Pouch"/> <!-- NEW -->
-	<decomposable item_id="188054625" decomposable_name="[Jakurerk] Bonus Pouch"/> <!-- NEW -->
+	<decomposable item_id="188054619" decomposable_name="Force Troublemaker Moon Rabbit Kisk Box (5)">
+        <items>
+            <item id="184002108" name=" Alliance Lunahare Kisk Summoning Stone" count="5" race="ELYOS"/>
+            <item id="184002109" name=" Alliance Lunahare Kisk Summoning Stone" count="5" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054620" decomposable_name="Specialized Weapon Box of the Black Pearl Skulls">
+        <items>
+            <item id="100001733" name="Buccaneer's Sword"/>
+		</items>
+		<items>
+            <item id="100201499" name="Buccaneer's Dagger"/>
+		</items>
+		<items>
+            <item id="100101330" name="Buccaneer's Mace"/>
+		</items>
+		<items>
+            <item id="100501310" name="Buccaneer's Orb"/>
+		</items>
+		<items>
+            <item id="100601427" name="Buccaneer's Spellbook"/>
+		</items>
+		<items>
+            <item id="100901371" name="Buccaneer's Greatsword"/>
+		</items>
+		<items>
+            <item id="101301263" name="Buccaneer's Polearm"/>
+		</items>
+		<items>
+            <item id="101501353" name="Buccaneer's Staff"/>
+		</items>
+		<items>
+            <item id="101701364" name="Buccaneer's Bow"/>
+		</items>
+		<items>
+            <item id="115001755" name="Buccaneer's Shield"/>
+		</items>
+		<items>
+            <item id="102101068" name="Buccaneer's Cipher-Blade"/>
+		</items>
+		<items>
+            <item id="102001242" name="Buccaneer's Harp"/>
+		</items>
+		<items>
+            <item id="101901123" name="Buccaneer's Aethercannon"/>
+		</items>
+		<items>
+            <item id="101801214" name="Buccaneer's Pistol"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054621" decomposable_name="Specialized Cat Weapon Bundle">
+        <items>
+            <item id="100601089" name="Wild Kitter's Spellbook"/>
+		</items>
+		<items>
+            <item id="101701061" name="Wild Kitter's Bow"/>
+		</items>
+		<items>
+            <item id="100201186" name="Wild Kitter's Dagger"/>
+		</items>
+		<items>
+            <item id="100101024" name="Wild Kitter's Mace"/>
+		</items>
+		<items>
+            <item id="100501240" name="Wild Kitter's Orb"/>
+		</items>
+		<items>
+            <item id="101300980" name="Wild Kitter's Polearm"/>
+		</items>
+		<items>
+            <item id="101501052" name="Wild Kitter's Staff"/>
+		</items>
+		<items>
+            <item id="100001345" name="Wild Kitter's Sword"/>
+		</items>
+		<items>
+            <item id="100901037" name="Wild Kitter's Greatsword"/>
+		</items>
+		<items>
+            <item id="115001383" name="Wild Kitter's Shield"/>
+        </items>
+		<items>
+            <item id="102100825" name="Wild Kitter's Cipher-Blade"/>
+        </items>
+		<items>
+            <item id="102001050" name="Wild Kitter's Harp"/>
+        </items>
+		<items>
+            <item id="101900985" name="Wild Kitter's Aethercannon"/>
+        </items>
+		<items>
+            <item id="101801023" name="Wild Kitter's Pistol"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054624" decomposable_name="[Jakurerk] Bonus Pouch">
+        <items>
+            <item id="188100290" name="Tonirunerk's Toy Head"/>
+		</items>
+		<items>
+            <item id="188054376" name="Tonirunerk's General Present Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054625" decomposable_name="[Jakurerk] Bonus Pouch">
+        <items>
+            <item id="188100291" name="Tonirunerk's Toy Body"/>
+		</items>
+		<items>
+            <item id="188054376" name="Tonirunerk's General Present Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054628" decomposable_name="Kunax's Equipment Box"/> <!-- NEW -->
-	<decomposable item_id="188054629" decomposable_name="Highest Grade Reward Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054630" decomposable_name="High Grade Reward Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054631" decomposable_name="Middle Grade Reward Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054632" decomposable_name="Low Grade Reward Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054647" decomposable_name="Empyrean Lord's Enchantment Stone Box"/> <!-- NEW -->
-	<decomposable item_id="188054648" decomposable_name="Shining Empyrean Lord's Enchantment Stone Box"/> <!-- NEW -->
+	<decomposable item_id="188054629" decomposable_name="Highest Grade Reward Bundle">
+        <items>
+            <item id="188054633" name="[Event] Special Head Executor Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054634" name="[Event] Special Head Executor Armor Box"/>
+		</items>
+		<items>
+            <item id="188054639" name="[Event] Manakarna Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054640" name="[Event] Manakarna Armor Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054630" decomposable_name="High Grade Reward Bundle">
+        <items>
+            <item id="188054635" name="[Event] Special Executor Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054636" name="[Event] Special Executor Armor Box"/>
+		</items>
+		<items>
+            <item id="188054641" name="[Event] Katalamyze Equipment Box"/>
+		</items>
+		<items>
+            <item id="188054642" name="[Event] Daevanion Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054643" name="[Event] Daevanion Armor Box"/>
+		</items>
+		<items>
+            <item id="188054637" name="[Event] Commander Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054638" name="[Event] Commander Armor Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054631" decomposable_name="Middle Grade Reward Bundle">
+        <items>
+            <item id="188054644" name="[Event] Kunax Weapon Box"/>
+		</items>
+		<items>
+            <item id="188054645" name="[Event] Kunax Armor Box"/>
+		</items>
+		<items>
+            <item id="188054646" name="[Event] Katalamyze Soulstone Bundle"/>
+		</items>
+		<items>
+            <item id="186000414" name="Blood Medal" count="3"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" count="10"/>
+		</items>
+		<items>
+            <item id="186000242" name="Ceramium Medal" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054632" decomposable_name="Low Grade Reward Bundle">
+        <items>
+            <item id="168300016" name="High Grade Augment: Level 2" race="ELYOS"/>
+            <item id="168300017" name="High Grade Augment: Level 2" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="164002167" name="[Event] Drana Coffee" count="5"/>
+		</items>
+		<items>
+            <item id="166100011" name="Greater Supplements (Mythic)" count="10"/>
+		</items>
+		<items>
+            <item id="166100008" name="Greater Supplements (Eternal)" count="10"/>
+		</items>
+		<items>
+            <item id="166100010" name="Supplements (Mythic)" count="10"/>
+		</items>
+		<items>
+            <item id="166100007" name="Supplements (Eternal)" count="10"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054647" decomposable_name="Empyrean Lord's Enchantment Stone Box">
+        <items>
+            <item id="166020000" name="Omega Enchantment Stone" count="10"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054648" decomposable_name="Shining Empyrean Lord's Enchantment Stone Box">
+        <items>
+            <item id="166022000" name="Irridescent Omega Enchantment Stone" count="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054652" decomposable_name="Gladiator Stigma Set Box"/> <!-- NEW -->
 	<decomposable item_id="188054653" decomposable_name="Templar Stigma Set Box"/> <!-- NEW -->
 	<decomposable item_id="188054654" decomposable_name="Assassin Stigma Set Box"/> <!-- NEW -->
@@ -40796,11 +41676,63 @@
 	<decomposable item_id="188054660" decomposable_name="Gunslinger Stigma Set Box"/> <!-- NEW -->
 	<decomposable item_id="188054661" decomposable_name="Aethertech Stigma Set Box"/> <!-- NEW -->
 	<decomposable item_id="188054662" decomposable_name="Songweaver Stigma Set Box"/> <!-- NEW -->
-	<decomposable item_id="188054663" decomposable_name="Rudra's Egg Box (90 days)"/> <!-- NEW -->
+	<decomposable item_id="188054663" decomposable_name="Rudra's Egg Box (90 days)">
+        <items>
+            <item id="190020273" name="Rudra's Egg (90 days)"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054664" decomposable_name="Legion Treasure Chest"/> <!-- NEW -->
-	<decomposable item_id="188054677" decomposable_name="Squad Leader's Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054678" decomposable_name="Centurion's Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054679" decomposable_name="Tribunus' Armor Box"/> <!-- NEW -->
+	<decomposable item_id="188054677" decomposable_name="Squad Leader's Armor Box">
+        <items>
+            <item id="188054560" name="Squad Leader Torso Armor Box"/>
+		</items>
+		<items>
+            <item id="188054665" name="Squad Leader's Leggings Armor Box"/>
+		</items>
+		<items>
+            <item id="188054666" name="Squad Leader's Pauldrons Armor Box"/>
+		</items>
+		<items>
+            <item id="188054667" name="Squad Leader's Gloves Armor Box"/>
+		</items>
+		<items>
+            <item id="188054668" name="Squad Leader's Shoes Armor Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054678" decomposable_name="Centurion's Armor Box">
+        <items>
+            <item id="188054561" name="Centurion Torso Armor Box"/>
+		</items>
+		<items>
+            <item id="188054669" name="Centurion's Leggings Armor Box"/>
+		</items>
+		<items>
+            <item id="188054670" name="Centurion's Pauldrons Armor Box"/>
+		</items>
+		<items>
+            <item id="188054671" name="Centurion's Gloves Armor Box"/>
+		</items>
+		<items>
+            <item id="188054672" name="Centurion's Shoes Armor Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054679" decomposable_name="Tribunus' Armor Box">
+        <items>
+            <item id="188054562" name="Tribunus Torso Armor Box"/>
+		</items>
+		<items>
+            <item id="188054673" name="Tribunus' Leggings Armor Box"/>
+		</items>
+		<items>
+            <item id="188054674" name="Tribunus' Pauldrons Armor Box"/>
+		</items>
+		<items>
+            <item id="188054675" name="Tribunus' Gloves Armor Box"/>
+		</items>
+		<items>
+            <item id="188054676" name="Tribunus' Shoes Armor Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054680" decomposable_name="[Event] Autumn Harvest Present of the Bratty Rabbit">
         <items>
             <item id="186000422" name="[Event] Songpyon of the Bratty Rabbit" rnd_min="1" rnd_max="4"/>
@@ -40915,55 +41847,251 @@
             <item id="152003019" name="Aither Essence" count="5"/>
         </items>
     </decomposable>
-	<decomposable item_id="188054772" decomposable_name="Japan Lucky Game Box Probability Type 2"/> <!-- NEW -->
-	<decomposable item_id="188054773" decomposable_name="Japan Lucky Game Box Probability Type 3"/> <!-- NEW -->
-	<decomposable item_id="188054774" decomposable_name="Japan Lucky Game Box Probability Type 4"/> <!-- NEW -->
-	<decomposable item_id="188054775" decomposable_name="Japan Lucky Game Box Probability Type 5"/> <!-- NEW -->
-	<decomposable item_id="188054776" decomposable_name="Japan Lucky Game Box Probability Type 6"/> <!-- NEW -->
-	<decomposable item_id="188054777" decomposable_name="Japan Lucky Game Box Probability Type 7"/> <!-- NEW -->
-	<decomposable item_id="188054778" decomposable_name="Japan Lucky Game Box Probability Type 8"/> <!-- NEW -->
-	<decomposable item_id="188054779" decomposable_name="Japan Lucky Game Box Probability Type 9"/> <!-- NEW -->
-	<decomposable item_id="188054780" decomposable_name="Japan Lucky Game Box Probability Type 10"/> <!-- NEW -->
-	<decomposable item_id="188054781" decomposable_name="Japan Lucky Game Box Probability Type 11"/> <!-- NEW -->
-	<decomposable item_id="188054782" decomposable_name="Japan Lucky Game Box Probability Type 12"/> <!-- NEW -->
-	<decomposable item_id="188054783" decomposable_name="Japan Lucky Game Box Probability Type 13"/> <!-- NEW -->
-	<decomposable item_id="188054784" decomposable_name="Japan Lucky Game Box Probability Type 14"/> <!-- NEW -->
-	<decomposable item_id="188054785" decomposable_name="Japan Lucky Game Box Probability Type 15"/> <!-- NEW -->
-	<decomposable item_id="188054786" decomposable_name="Japan Lucky Game Box Probability Type 16"/> <!-- NEW -->
-	<decomposable item_id="188054787" decomposable_name="Japan Lucky Game Box Probability Type 17"/> <!-- NEW -->
-	<decomposable item_id="188054788" decomposable_name="Japan Lucky Game Box Probability Type 18"/> <!-- NEW -->
-	<decomposable item_id="188054789" decomposable_name="Japan Lucky Game Box Probability Type 19"/> <!-- NEW -->
-	<decomposable item_id="188054790" decomposable_name="Japan Lucky Game Box Probability Type 20"/> <!-- NEW -->
-	<decomposable item_id="188054791" decomposable_name="Japan Lucky Game Box Probability Type 21"/> <!-- NEW -->
-	<decomposable item_id="188054792" decomposable_name="Japan Lucky Game Box Probability Type 22"/> <!-- NEW -->
-	<decomposable item_id="188054793" decomposable_name="Japan Lucky Game Box Probability Type 23"/> <!-- NEW -->
-	<decomposable item_id="188054794" decomposable_name="Japan Lucky Game Box Probability Type 24"/> <!-- NEW -->
-	<decomposable item_id="188054795" decomposable_name="Japan Lucky Game Box Probability Type 25"/> <!-- NEW -->
-	<decomposable item_id="188054796" decomposable_name="Japan Lucky Game Box Probability Type 26"/> <!-- NEW -->
-	<decomposable item_id="188054797" decomposable_name="Japan Lucky Game Box Probability Type 27"/> <!-- NEW -->
-	<decomposable item_id="188054798" decomposable_name="Japan Lucky Game Box Probability Type 28"/> <!-- NEW -->
-	<decomposable item_id="188054799" decomposable_name="Japan Lucky Game Box Probability Type 29"/> <!-- NEW -->
-	<decomposable item_id="188054800" decomposable_name="Japan Lucky Game Box Probability Type 30"/> <!-- NEW -->
-	<decomposable item_id="188054801" decomposable_name="Japan Lucky Game Box Probability Type 31"/> <!-- NEW -->
-	<decomposable item_id="188054802" decomposable_name="Japan Lucky Game Box Probability Type 32"/> <!-- NEW -->
-	<decomposable item_id="188054803" decomposable_name="Japan Lucky Game Box Probability Type 33"/> <!-- NEW -->
-	<decomposable item_id="188054804" decomposable_name="Japan Lucky Game Box Probability Type 34"/> <!-- NEW -->
-	<decomposable item_id="188054805" decomposable_name="Japan Lucky Game Box Probability Type 35"/> <!-- NEW -->
-	<decomposable item_id="188054806" decomposable_name="Japan Lucky Game Box Probability Type 36"/> <!-- NEW -->
-	<decomposable item_id="188054807" decomposable_name="Japan Lucky Game Box Probability Type 37"/> <!-- NEW -->
-	<decomposable item_id="188054808" decomposable_name="Japan Lucky Game Box Probability Type 38"/> <!-- NEW -->
-	<decomposable item_id="188054809" decomposable_name="Japan Lucky Game Box Probability Type 39"/> <!-- NEW -->
-	<decomposable item_id="188054810" decomposable_name="Japan Lucky Game Box Probability Type 40"/> <!-- NEW -->
-	<decomposable item_id="188054811" decomposable_name="Japan Lucky Game Box Probability Type 41"/> <!-- NEW -->
-	<decomposable item_id="188054812" decomposable_name="Japan Lucky Game Box Probability Type 42"/> <!-- NEW -->
-	<decomposable item_id="188054813" decomposable_name="Japan Lucky Game Box Probability Type 43"/> <!-- NEW -->
-	<decomposable item_id="188054814" decomposable_name="Japan Lucky Game Box Probability Type 44"/> <!-- NEW -->
-	<decomposable item_id="188054815" decomposable_name="Japan Lucky Game Box Probability Type 45"/> <!-- NEW -->
-	<decomposable item_id="188054816" decomposable_name="Japan Lucky Game Box Probability Type 46"/> <!-- NEW -->
-	<decomposable item_id="188054817" decomposable_name="Japan Lucky Game Box Probability Type 47"/> <!-- NEW -->
-	<decomposable item_id="188054818" decomposable_name="Japan Lucky Game Box Probability Type 48"/> <!-- NEW -->
-	<decomposable item_id="188054819" decomposable_name="Japan Lucky Game Box Probability Type 49"/> <!-- NEW -->
-	<decomposable item_id="188054820" decomposable_name="Japan Lucky Game Box Probability Type 50"/> <!-- NEW -->
+	<decomposable item_id="188054772" decomposable_name="Japan Lucky Game Box Probability Type 2">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054773" decomposable_name="Japan Lucky Game Box Probability Type 3">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054774" decomposable_name="Japan Lucky Game Box Probability Type 4">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054775" decomposable_name="Japan Lucky Game Box Probability Type 5">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054776" decomposable_name="Japan Lucky Game Box Probability Type 6">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054777" decomposable_name="Japan Lucky Game Box Probability Type 7">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054778" decomposable_name="Japan Lucky Game Box Probability Type 8">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054779" decomposable_name="Japan Lucky Game Box Probability Type 9">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054780" decomposable_name="Japan Lucky Game Box Probability Type 10">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054781" decomposable_name="Japan Lucky Game Box Probability Type 11">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054782" decomposable_name="Japan Lucky Game Box Probability Type 12">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054783" decomposable_name="Japan Lucky Game Box Probability Type 13">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054784" decomposable_name="Japan Lucky Game Box Probability Type 14">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054785" decomposable_name="Japan Lucky Game Box Probability Type 15">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054786" decomposable_name="Japan Lucky Game Box Probability Type 16">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054787" decomposable_name="Japan Lucky Game Box Probability Type 17">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054788" decomposable_name="Japan Lucky Game Box Probability Type 18">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054789" decomposable_name="Japan Lucky Game Box Probability Type 19">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054790" decomposable_name="Japan Lucky Game Box Probability Type 20">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054791" decomposable_name="Japan Lucky Game Box Probability Type 21">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054792" decomposable_name="Japan Lucky Game Box Probability Type 22">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054793" decomposable_name="Japan Lucky Game Box Probability Type 23">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054794" decomposable_name="Japan Lucky Game Box Probability Type 24">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054795" decomposable_name="Japan Lucky Game Box Probability Type 25">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054796" decomposable_name="Japan Lucky Game Box Probability Type 26">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054797" decomposable_name="Japan Lucky Game Box Probability Type 27">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054798" decomposable_name="Japan Lucky Game Box Probability Type 28">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054799" decomposable_name="Japan Lucky Game Box Probability Type 29">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054800" decomposable_name="Japan Lucky Game Box Probability Type 30">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054801" decomposable_name="Japan Lucky Game Box Probability Type 31">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054802" decomposable_name="Japan Lucky Game Box Probability Type 32">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054803" decomposable_name="Japan Lucky Game Box Probability Type 33">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054804" decomposable_name="Japan Lucky Game Box Probability Type 34">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054805" decomposable_name="Japan Lucky Game Box Probability Type 35">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054806" decomposable_name="Japan Lucky Game Box Probability Type 36">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054807" decomposable_name="Japan Lucky Game Box Probability Type 37">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054808" decomposable_name="Japan Lucky Game Box Probability Type 38">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054809" decomposable_name="Japan Lucky Game Box Probability Type 39">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054810" decomposable_name="Japan Lucky Game Box Probability Type 40">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054811" decomposable_name="Japan Lucky Game Box Probability Type 41">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054812" decomposable_name="Japan Lucky Game Box Probability Type 42">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054813" decomposable_name="Japan Lucky Game Box Probability Type 43">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054814" decomposable_name="Japan Lucky Game Box Probability Type 44">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054815" decomposable_name="Japan Lucky Game Box Probability Type 45">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054816" decomposable_name="Japan Lucky Game Box Probability Type 46">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054817" decomposable_name="Japan Lucky Game Box Probability Type 47">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054818" decomposable_name="Japan Lucky Game Box Probability Type 48">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054819" decomposable_name="Japan Lucky Game Box Probability Type 49">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054820" decomposable_name="Japan Lucky Game Box Probability Type 50">
+        <items>
+            <item id="186000030" name="Gold Medal"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054821" decomposable_name="Daevanion Box of Patience">
         <items>
             <item id="182215831" name="Kaisinel's Pattern of Endurance" race="ELYOS"/>
@@ -40988,45 +42116,240 @@
             <item id="182215850" name="Marchutan's Improved Pattern of Ease" race="ASMODIANS"/>
         </items>
     </decomposable>
-	<decomposable item_id="188054831" decomposable_name="Japan Lucky Game Box Race Option 11"/> <!-- NEW -->
-	<decomposable item_id="188054832" decomposable_name="Japan Lucky Game Box Race Option 12"/> <!-- NEW -->
-	<decomposable item_id="188054833" decomposable_name="Japan Lucky Game Box Race Option 13"/> <!-- NEW -->
-	<decomposable item_id="188054834" decomposable_name="Japan Lucky Game Box Race Option 14"/> <!-- NEW -->
-	<decomposable item_id="188054835" decomposable_name="Japan Lucky Game Box Race Option 15"/> <!-- NEW -->
-	<decomposable item_id="188054836" decomposable_name="Japan Lucky Game Box Race Option 16"/> <!-- NEW -->
-	<decomposable item_id="188054837" decomposable_name="Japan Lucky Game Box Race Option 17"/> <!-- NEW -->
-	<decomposable item_id="188054838" decomposable_name="Japan Lucky Game Box Race Option 18"/> <!-- NEW -->
-	<decomposable item_id="188054839" decomposable_name="Japan Lucky Game Box Race Option 19"/> <!-- NEW -->
-	<decomposable item_id="188054840" decomposable_name="Japan Lucky Game Box Race Option 20"/> <!-- NEW -->
-	<decomposable item_id="188054841" decomposable_name="Japan Lucky Game Box Race Option 21"/> <!-- NEW -->
-	<decomposable item_id="188054842" decomposable_name="Japan Lucky Game Box Race Option 22"/> <!-- NEW -->
-	<decomposable item_id="188054843" decomposable_name="Japan Lucky Game Box Race Option 23"/> <!-- NEW -->
-	<decomposable item_id="188054844" decomposable_name="Japan Lucky Game Box Race Option 24"/> <!-- NEW -->
-	<decomposable item_id="188054845" decomposable_name="Japan Lucky Game Box Race Option 25"/> <!-- NEW -->
-	<decomposable item_id="188054846" decomposable_name="Japan Lucky Game Box Race Option 26"/> <!-- NEW -->
-	<decomposable item_id="188054847" decomposable_name="Japan Lucky Game Box Race Option 27"/> <!-- NEW -->
-	<decomposable item_id="188054848" decomposable_name="Japan Lucky Game Box Race Option 28"/> <!-- NEW -->
-	<decomposable item_id="188054849" decomposable_name="Japan Lucky Game Box Race Option 29"/> <!-- NEW -->
-	<decomposable item_id="188054850" decomposable_name="Japan Lucky Game Box Race Option 30"/> <!-- NEW -->
-	<decomposable item_id="188054851" decomposable_name="Japan Lucky Game Box Race Option 31"/> <!-- NEW -->
-	<decomposable item_id="188054852" decomposable_name="Japan Lucky Game Box Race Option 32"/> <!-- NEW -->
-	<decomposable item_id="188054853" decomposable_name="Japan Lucky Game Box Race Option 33"/> <!-- NEW -->
-	<decomposable item_id="188054854" decomposable_name="Japan Lucky Game Box Race Option 34"/> <!-- NEW -->
-	<decomposable item_id="188054855" decomposable_name="Japan Lucky Game Box Race Option 35"/> <!-- NEW -->
-	<decomposable item_id="188054856" decomposable_name="Japan Lucky Game Box Race Option 36"/> <!-- NEW -->
-	<decomposable item_id="188054857" decomposable_name="Japan Lucky Game Box Race Option 37"/> <!-- NEW -->
-	<decomposable item_id="188054858" decomposable_name="Japan Lucky Game Box Race Option 38"/> <!-- NEW -->
-	<decomposable item_id="188054859" decomposable_name="Japan Lucky Game Box Race Option 39"/> <!-- NEW -->
-	<decomposable item_id="188054860" decomposable_name="Japan Lucky Game Box Race Option 40"/> <!-- NEW -->
-	<decomposable item_id="188054861" decomposable_name="Japan Lucky Game Box Race Option 41"/> <!-- NEW -->
-	<decomposable item_id="188054862" decomposable_name="Japan Lucky Game Box Race Option 42"/> <!-- NEW -->
-	<decomposable item_id="188054863" decomposable_name="Japan Lucky Game Box Race Option 43"/> <!-- NEW -->
-	<decomposable item_id="188054864" decomposable_name="Japan Lucky Game Box Race Option 44"/> <!-- NEW -->
-	<decomposable item_id="188054865" decomposable_name="Japan Lucky Game Box Race Option 45"/> <!-- NEW -->
-	<decomposable item_id="188054866" decomposable_name="Japan Lucky Game Box Race Option 46"/> <!-- NEW -->
-	<decomposable item_id="188054867" decomposable_name="Japan Lucky Game Box Race Option 47"/> <!-- NEW -->
-	<decomposable item_id="188054868" decomposable_name="Japan Lucky Game Box Race Option 48"/> <!-- NEW -->
-	<decomposable item_id="188054870" decomposable_name="Japan Lucky Game Box Race Option 50"/> <!-- NEW -->
+	<decomposable item_id="188054831" decomposable_name="Japan Lucky Game Box Race Option 11">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054832" decomposable_name="Japan Lucky Game Box Race Option 12">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054833" decomposable_name="Japan Lucky Game Box Race Option 13">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054834" decomposable_name="Japan Lucky Game Box Race Option 14">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054835" decomposable_name="Japan Lucky Game Box Race Option 15">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054836" decomposable_name="Japan Lucky Game Box Race Option 16">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054837" decomposable_name="Japan Lucky Game Box Race Option 17">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054838" decomposable_name="Japan Lucky Game Box Race Option 18">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054839" decomposable_name="Japan Lucky Game Box Race Option 19">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054840" decomposable_name="Japan Lucky Game Box Race Option 20">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054841" decomposable_name="Japan Lucky Game Box Race Option 21">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054842" decomposable_name="Japan Lucky Game Box Race Option 22">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054843" decomposable_name="Japan Lucky Game Box Race Option 23">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054844" decomposable_name="Japan Lucky Game Box Race Option 24">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054845" decomposable_name="Japan Lucky Game Box Race Option 25">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054846" decomposable_name="Japan Lucky Game Box Race Option 26">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054847" decomposable_name="Japan Lucky Game Box Race Option 27">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054848" decomposable_name="Japan Lucky Game Box Race Option 28">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054849" decomposable_name="Japan Lucky Game Box Race Option 29">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054850" decomposable_name="Japan Lucky Game Box Race Option 30">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054851" decomposable_name="Japan Lucky Game Box Race Option 31">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054852" decomposable_name="Japan Lucky Game Box Race Option 32">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054853" decomposable_name="Japan Lucky Game Box Race Option 33">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054854" decomposable_name="Japan Lucky Game Box Race Option 34">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054855" decomposable_name="Japan Lucky Game Box Race Option 35">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054856" decomposable_name="Japan Lucky Game Box Race Option 36">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054857" decomposable_name="Japan Lucky Game Box Race Option 37">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054858" decomposable_name="Japan Lucky Game Box Race Option 38">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054859" decomposable_name="Japan Lucky Game Box Race Option 39">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054860" decomposable_name="Japan Lucky Game Box Race Option 40">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054861" decomposable_name="Japan Lucky Game Box Race Option 41">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054862" decomposable_name="Japan Lucky Game Box Race Option 42">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054863" decomposable_name="Japan Lucky Game Box Race Option 43">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054864" decomposable_name="Japan Lucky Game Box Race Option 44">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054865" decomposable_name="Japan Lucky Game Box Race Option 45">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054866" decomposable_name="Japan Lucky Game Box Race Option 46">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054867" decomposable_name="Japan Lucky Game Box Race Option 47">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054868" decomposable_name="Japan Lucky Game Box Race Option 48">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054870" decomposable_name="Japan Lucky Game Box Race Option 50">
+        <items>
+            <item id="186000030" name="Gold Medal" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" race="ASMODIANS"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054988" decomposable_name="Bundle of Honor and Conquest">
         <items>
             <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="100"/>
