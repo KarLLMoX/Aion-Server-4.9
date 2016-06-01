@@ -2207,7 +2207,216 @@
             <item id="123001424" name="Lesser Betrayer's Sash" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053119" name="Greater Betrayer's Equipment Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053119" name="Greater Betrayer's Equipment Box">
+        <items player_class="TEMPLAR">
+            <item id="100001701" name="Greater Betrayer's Sword" count="1"/>
+            <item id="100101300" name="Greater Betrayer's Mace" count="1"/>
+            <item id="100901327" name="Greater Betrayer's Greatsword" count="1"/>
+            <item id="115001723" name="Greater Betrayer's Shield" count="1"/>
+            <item id="110601586" name="Greater Betrayer's Breastplate" count="1"/>
+            <item id="113601532" name="Greater Betrayer's Greaves" count="1"/>
+            <item id="112601531" name="Greater Betrayer's Shoulderplates" count="1"/>
+            <item id="111601549" name="Greater Betrayer's Gauntlets" count="1"/>
+            <item id="114601539" name="Greater Betrayer's Sabatons" count="1"/>
+            <item id="125004073" name="Greater Betrayer's Helm" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001701" name="Greater Betrayer's Sword" count="1"/>
+            <item id="100101300" name="Greater Betrayer's Mace" count="1"/>
+            <item id="100201472" name="Greater Betrayer's Dagger" count="1"/>
+            <item id="100901327" name="Greater Betrayer's Greatsword" count="1"/>
+            <item id="101301232" name="Greater Betrayer's Polearm" count="1"/>
+            <item id="101701337" name="Greater Betrayer's Bow" count="1"/>
+            <item id="115001723" name="Greater Betrayer's Shield" count="1"/>
+            <item id="110601586" name="Greater Betrayer's Breastplate" count="1"/>
+            <item id="113601532" name="Greater Betrayer's Greaves" count="1"/>
+            <item id="112601531" name="Greater Betrayer's Shoulderplates" count="1"/>
+            <item id="111601549" name="Greater Betrayer's Gauntlets" count="1"/>
+            <item id="114601539" name="Greater Betrayer's Sabatons" count="1"/>
+            <item id="125004073" name="Greater Betrayer's Helm" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100001701" name="Greater Betrayer's Sword" count="1"/>
+            <item id="100201472" name="Greater Betrayer's Dagger" count="1"/>
+            <item id="101701337" name="Greater Betrayer's Bow" count="1"/>
+            <item id="110301783" name="Greater Betrayer's Jerkin" count="1"/>
+            <item id="113301752" name="Greater Betrayer's Breeches" count="1"/>
+            <item id="112301660" name="Greater Betrayer's Shoulderguards" count="1"/>
+            <item id="111301721" name="Greater Betrayer's Vambrace" count="1"/>
+            <item id="114301789" name="Greater Betrayer's Boots" count="1"/>
+            <item id="125004071" name="Greater Betrayer's Hat" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100001701" name="Greater Betrayer's Sword" count="1"/>
+            <item id="100201472" name="Greater Betrayer's Dagger" count="1"/>
+            <item id="101701337" name="Greater Betrayer's Bow" count="1"/>
+            <item id="110301783" name="Greater Betrayer's Jerkin" count="1"/>
+            <item id="113301752" name="Greater Betrayer's Breeches" count="1"/>
+            <item id="112301660" name="Greater Betrayer's Shoulderguards" count="1"/>
+            <item id="111301721" name="Greater Betrayer's Vambrace" count="1"/>
+            <item id="114301789" name="Greater Betrayer's Boots" count="1"/>
+            <item id="125004071" name="Greater Betrayer's Hat" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101300" name="Greater Betrayer's Mace" count="1"/>
+            <item id="101501323" name="Greater Betrayer's Staff" count="1"/>
+            <item id="115001723" name="Greater Betrayer's Shield" count="1"/>
+            <item id="110551119" name="Greater Betrayer's Hauberk" count="1"/>
+            <item id="113501696" name="Greater Betrayer's Chausses" count="1"/>
+            <item id="112501617" name="Greater Betrayer's Spaulders" count="1"/>
+            <item id="111501678" name="Greater Betrayer's Handguards" count="1"/>
+            <item id="114501706" name="Greater Betrayer's Brogans" count="1"/>
+            <item id="125004072" name="Greater Betrayer's Chain Helm" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101300" name="Greater Betrayer's Mace" count="1"/>
+            <item id="101501323" name="Greater Betrayer's Staff" count="1"/>
+            <item id="115001723" name="Greater Betrayer's Shield" count="1"/>
+            <item id="110551119" name="Greater Betrayer's Hauberk" count="1"/>
+            <item id="113501696" name="Greater Betrayer's Chausses" count="1"/>
+            <item id="112501617" name="Greater Betrayer's Spaulders" count="1"/>
+            <item id="111501678" name="Greater Betrayer's Handguards" count="1"/>
+            <item id="114501706" name="Greater Betrayer's Brogans" count="1"/>
+            <item id="125004072" name="Greater Betrayer's Chain Helm" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501286" name="Greater Betrayer's Orb" count="1"/>
+            <item id="100601396" name="Greater Betrayer's Spellbook" count="1"/>
+            <item id="110101800" name="Greater Betrayer's Tunic" count="1"/>
+            <item id="113101632" name="Greater Betrayer's Leggings" count="1"/>
+            <item id="112101570" name="Greater Betrayer's Pauldrons" count="1"/>
+            <item id="111101620" name="Greater Betrayer's Gloves" count="1"/>
+            <item id="114101666" name="Greater Betrayer's Shoes" count="1"/>
+            <item id="125004070" name="Greater Betrayer's Bandana" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501286" name="Greater Betrayer's Orb" count="1"/>
+            <item id="100601396" name="Greater Betrayer's Spellbook" count="1"/>
+            <item id="110101800" name="Greater Betrayer's Tunic" count="1"/>
+            <item id="113101632" name="Greater Betrayer's Leggings" count="1"/>
+            <item id="112101570" name="Greater Betrayer's Pauldrons" count="1"/>
+            <item id="111101620" name="Greater Betrayer's Gloves" count="1"/>
+            <item id="114101666" name="Greater Betrayer's Shoes" count="1"/>
+            <item id="125004070" name="Greater Betrayer's Bandana" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801187" name="Greater Betrayer's Pistol" count="1"/>
+            <item id="101901098" name="Greater Betrayer's Aethercannon" count="1"/>
+            <item id="110301783" name="Greater Betrayer's Jerkin" count="1"/>
+            <item id="113301752" name="Greater Betrayer's Breeches" count="1"/>
+            <item id="112301660" name="Greater Betrayer's Shoulderguards" count="1"/>
+            <item id="111301721" name="Greater Betrayer's Vambrace" count="1"/>
+            <item id="114301789" name="Greater Betrayer's Boots" count="1"/>
+            <item id="125004071" name="Greater Betrayer's Hat" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001215" name="Greater Betrayer's Harp" count="1"/>
+            <item id="110101800" name="Greater Betrayer's Tunic" count="1"/>
+            <item id="113101632" name="Greater Betrayer's Leggings" count="1"/>
+            <item id="112101570" name="Greater Betrayer's Pauldrons" count="1"/>
+            <item id="111101620" name="Greater Betrayer's Gloves" count="1"/>
+            <item id="114101666" name="Greater Betrayer's Shoes" count="1"/>
+            <item id="125004070" name="Greater Betrayer's Bandana" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101021" name="Greater Betrayer's Cipher-Blade" count="1"/>
+            <item id="101801187" name="Greater Betrayer's Pistol" count="1"/>
+            <item id="110551119" name="Greater Betrayer's Hauberk" count="1"/>
+            <item id="113501696" name="Greater Betrayer's Chausses" count="1"/>
+            <item id="112501617" name="Greater Betrayer's Spaulders" count="1"/>
+            <item id="111501678" name="Greater Betrayer's Handguards" count="1"/>
+            <item id="114501706" name="Greater Betrayer's Brogans" count="1"/>
+            <item id="125004072" name="Greater Betrayer's Chain Helm" count="1"/>
+            <item id="120001507" name="Greater Betrayer's Ruby Earrings" count="1"/>
+            <item id="120001508" name="Greater Betrayer's Sapphire Earrings" count="1"/>
+            <item id="121001379" name="Greater Betrayer's Ruby Necklace" count="1"/>
+            <item id="121001380" name="Greater Betrayer's Sapphire Necklace" count="1"/>
+            <item id="122001648" name="Greater Betrayer's Ruby Ring" count="1"/>
+            <item id="122001649" name="Greater Betrayer's Sapphire Ring" count="1"/>
+            <item id="123001425" name="Greater Betrayer's Belt" count="1"/>
+            <item id="123001426" name="Greater Betrayer's Sash" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053187" name="[Event] Modor's Mythic Weapon Box">
 		<items player_class="GLADIATOR">
 			<item id="100001552" name="Lunatic Modor's Sword" count="1"/>
@@ -2495,7 +2704,74 @@
             <item id="114600731" name="Mani's Sabatons" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053219" name="[Event] Sauro Commander's Accessory Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053219" name="[Event] Sauro Commander's Accessory Box">
+        <items player_class="GLADIATOR">
+            <item id="121001343" name="Sauro Commander's Corundum Necklace" count="1"/>
+            <item id="120001469" name="Sauro Commander's Corundum Earrings" count="1"/>
+            <item id="122001612" name="Sauro Commander's Corundum Ring" count="1"/>
+            <item id="123001392" name="Sauro Commander's Leather Belt" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="121001343" name="Sauro Commander's Corundum Necklace" count="1"/>
+            <item id="120001469" name="Sauro Commander's Corundum Earrings" count="1"/>
+            <item id="122001612" name="Sauro Commander's Corundum Ring" count="1"/>
+            <item id="123001392" name="Sauro Commander's Leather Belt" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="121001343" name="Sauro Commander's Corundum Necklace" count="1"/>
+            <item id="120001469" name="Sauro Commander's Corundum Earrings" count="1"/>
+            <item id="122001612" name="Sauro Commander's Corundum Ring" count="1"/>
+            <item id="123001392" name="Sauro Commander's Leather Belt" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="121001343" name="Sauro Commander's Corundum Necklace" count="1"/>
+            <item id="120001469" name="Sauro Commander's Corundum Earrings" count="1"/>
+            <item id="122001612" name="Sauro Commander's Corundum Ring" count="1"/>
+            <item id="123001392" name="Sauro Commander's Leather Belt" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="121001343" name="Sauro Commander's Corundum Necklace" count="1"/>
+            <item id="120001469" name="Sauro Commander's Corundum Earrings" count="1"/>
+            <item id="122001612" name="Sauro Commander's Corundum Ring" count="1"/>
+            <item id="123001392" name="Sauro Commander's Leather Belt" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="121001344" name="Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="120001470" name="Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="122001613" name="Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001393" name="Sauro Commander's Sash" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="121001344" name="Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="120001470" name="Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="122001613" name="Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001393" name="Sauro Commander's Sash" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="121001344" name="Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="120001470" name="Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="122001613" name="Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001393" name="Sauro Commander's Sash" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="121001344" name="Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="120001470" name="Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="122001613" name="Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001393" name="Sauro Commander's Sash" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="121001344" name="Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="120001470" name="Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="122001613" name="Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001393" name="Sauro Commander's Sash" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="121001344" name="Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="120001470" name="Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="122001613" name="Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001393" name="Sauro Commander's Sash" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053228" name="[Event] Heartseeker Equipment Box">
         <items player_class="SORCERER">
             <item id="100501302" name="[Event] Heartseeker Orb" count="1"/>
@@ -2655,7 +2931,85 @@
             <item id="101800316" name="Menotios' Pistol" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053233" name="[Event] Omega and Ragnarok Accessory Chest"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053233" name="[Event] Omega and Ragnarok Accessory Chest">
+        <items player_class="GLADIATOR">
+            <item id="125002306" name="Omega's Hat" count="1"/>
+            <item id="125002308" name="Omega's Helm" count="1"/>
+            <item id="121000953" name="Omega's Corundum Necklace" count="1"/>
+            <item id="122001190" name="Ragnarok's Corundum Ring" count="1"/>
+            <item id="120001105" name="Ragnarok's Corundum Earrings" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="125002306" name="Omega's Hat" count="1"/>
+            <item id="125002308" name="Omega's Helm" count="1"/>
+            <item id="121000953" name="Omega's Corundum Necklace" count="1"/>
+            <item id="122001190" name="Ragnarok's Corundum Ring" count="1"/>
+            <item id="120001105" name="Ragnarok's Corundum Earrings" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="125002306" name="Omega's Hat" count="1"/>
+            <item id="125002308" name="Omega's Helm" count="1"/>
+            <item id="121000953" name="Omega's Corundum Necklace" count="1"/>
+            <item id="122001190" name="Ragnarok's Corundum Ring" count="1"/>
+            <item id="120001105" name="Ragnarok's Corundum Earrings" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="125002306" name="Omega's Hat" count="1"/>
+            <item id="125002308" name="Omega's Helm" count="1"/>
+            <item id="121000953" name="Omega's Corundum Necklace" count="1"/>
+            <item id="122001190" name="Ragnarok's Corundum Ring" count="1"/>
+            <item id="120001105" name="Ragnarok's Corundum Earrings" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="125002306" name="Omega's Hat" count="1"/>
+            <item id="125002308" name="Omega's Helm" count="1"/>
+            <item id="121000953" name="Omega's Corundum Necklace" count="1"/>
+            <item id="122001190" name="Ragnarok's Corundum Ring" count="1"/>
+            <item id="120001105" name="Ragnarok's Corundum Earrings" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="125002305" name="Omega's Headband" count="1"/>
+            <item id="125002307" name="Omega's Chain Hood" count="1"/>
+            <item id="121000954" name="Omega's Turquoise Necklace" count="1"/>
+            <item id="122001191" name="Ragnarok's Turquoise Ring" count="1"/>
+            <item id="120001106" name="Ragnarok's Turquoise Earrings" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="125002305" name="Omega's Headband" count="1"/>
+            <item id="125002307" name="Omega's Chain Hood" count="1"/>
+            <item id="121000954" name="Omega's Turquoise Necklace" count="1"/>
+            <item id="122001191" name="Ragnarok's Turquoise Ring" count="1"/>
+            <item id="120001106" name="Ragnarok's Turquoise Earrings" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="125002305" name="Omega's Headband" count="1"/>
+            <item id="125002307" name="Omega's Chain Hood" count="1"/>
+            <item id="121000954" name="Omega's Turquoise Necklace" count="1"/>
+            <item id="122001191" name="Ragnarok's Turquoise Ring" count="1"/>
+            <item id="120001106" name="Ragnarok's Turquoise Earrings" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="125002305" name="Omega's Headband" count="1"/>
+            <item id="125002307" name="Omega's Chain Hood" count="1"/>
+            <item id="121000954" name="Omega's Turquoise Necklace" count="1"/>
+            <item id="122001191" name="Ragnarok's Turquoise Ring" count="1"/>
+            <item id="120001106" name="Ragnarok's Turquoise Earrings" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="125002305" name="Omega's Headband" count="1"/>
+            <item id="125002307" name="Omega's Chain Hood" count="1"/>
+            <item id="121000954" name="Omega's Turquoise Necklace" count="1"/>
+            <item id="122001191" name="Ragnarok's Turquoise Ring" count="1"/>
+            <item id="120001106" name="Ragnarok's Turquoise Earrings" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="125002305" name="Omega's Headband" count="1"/>
+            <item id="125002307" name="Omega's Chain Hood" count="1"/>
+            <item id="121000954" name="Omega's Turquoise Necklace" count="1"/>
+            <item id="122001191" name="Ragnarok's Turquoise Ring" count="1"/>
+            <item id="120001106" name="Ragnarok's Turquoise Earrings" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053238" name="Scroll Bundle (Linkgate Foundry)">
 		<items>
 			<item id="164000291" name="Slumber Trick Scroll" count="1"/>
@@ -3450,7 +3804,86 @@
             <item id="188600265" name="[Event] Sauro Supply Base Bonus Entry Scroll" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053526" name="[Event] Aion's Steel Form Candy Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053526" name="[Event] Aion's Steel Form Candy Box">
+        <items player_class="SORCERER">
+            <item id="160010317" name="Wise Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010323" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010319" name="Nimble Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010318" name="Wise Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010324" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010320" name="Nimble Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="160010317" name="Wise Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010323" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010319" name="Nimble Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010318" name="Wise Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010324" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010320" name="Nimble Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="160010317" name="Wise Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010323" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010319" name="Nimble Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010318" name="Wise Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010324" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010320" name="Nimble Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="160010317" name="Wise Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010323" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010319" name="Nimble Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010318" name="Wise Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010324" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010320" name="Nimble Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="BARD">
+            <item id="160010317" name="Wise Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010323" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010319" name="Nimble Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010318" name="Wise Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010324" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010320" name="Nimble Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="160010317" name="Wise Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010323" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010319" name="Nimble Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010318" name="Wise Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010324" name="Wunderkind Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010320" name="Nimble Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="160010315" name="Dignified Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010321" name="Courageous Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010316" name="Dignified Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010322" name="Courageous Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="160010315" name="Dignified Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010321" name="Courageous Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010316" name="Dignified Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010322" name="Courageous Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="160010315" name="Dignified Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010321" name="Courageous Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010316" name="Dignified Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010322" name="Courageous Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="160010315" name="Dignified Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010321" name="Courageous Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010316" name="Dignified Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010322" name="Courageous Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="160010315" name="Dignified Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010321" name="Courageous Iron Cobalt Form Candy" count="1" race="ELYOS"/>
+            <item id="160010316" name="Dignified Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+            <item id="160010322" name="Courageous Iron Cobalt Form Candy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053562" name="Resurgent Daevanion Weapon Box">
 		<items player_class="GLADIATOR">
 			<item id="100001773" name="Resurgent Daevanion Sword" count="1"/>
@@ -4554,8 +4987,144 @@
 			<item id="140001474" name="Meteor Strike (Inert)" count="1"/>
 		</items>
 	</decomposable_selectitem>
-	<decomposable_selectitem item_id="188053878" name="Bootleg Abyss Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053879" name="Bootleg Abyss Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053878" name="Bootleg Abyss Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201575" name="Bootleg Custodian's Poniard" count="1" race="ELYOS"/>
+            <item id="100001815" name="Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="100101401" name="Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="100901437" name="Bootleg Custodian's Claymore" count="1" race="ELYOS"/>
+            <item id="101301326" name="Bootleg Custodian's Glaive" count="1" race="ELYOS"/>
+            <item id="101701420" name="Bootleg Custodian's Flatbow" count="1" race="ELYOS"/>
+            <item id="115001842" name="Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="100201576" name="Bootleg Shepherd's Poniard" count="1" race="ASMODIANS"/>
+            <item id="100001816" name="Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="100101402" name="Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="100901438" name="Bootleg Shepherd's Claymore" count="1" race="ASMODIANS"/>
+            <item id="101301327" name="Bootleg Shepherd's Glaive" count="1" race="ASMODIANS"/>
+            <item id="101701421" name="Bootleg Shepherd's Flatbow" count="1" race="ASMODIANS"/>
+            <item id="115001844" name="Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001815" name="Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="100101401" name="Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="100901437" name="Bootleg Custodian's Claymore" count="1" race="ELYOS"/>
+            <item id="115001842" name="Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="100001816" name="Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="100101402" name="Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="100901438" name="Bootleg Shepherd's Claymore" count="1" race="ASMODIANS"/>
+            <item id="115001844" name="Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201575" name="Bootleg Custodian's Poniard" count="1" race="ELYOS"/>
+            <item id="100001815" name="Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="101701420" name="Bootleg Custodian's Flatbow" count="1" race="ELYOS"/>
+            <item id="100201576" name="Bootleg Shepherd's Poniard" count="1" race="ASMODIANS"/>
+            <item id="100001816" name="Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="101701421" name="Bootleg Shepherd's Flatbow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201575" name="Bootleg Custodian's Poniard" count="1" race="ELYOS"/>
+            <item id="100001815" name="Bootleg Custodian's Brand" count="1" race="ELYOS"/>
+            <item id="101701420" name="Bootleg Custodian's Flatbow" count="1" race="ELYOS"/>
+            <item id="100201576" name="Bootleg Shepherd's Poniard" count="1" race="ASMODIANS"/>
+            <item id="100001816" name="Bootleg Shepherd's Brand" count="1" race="ASMODIANS"/>
+            <item id="101701421" name="Bootleg Shepherd's Flatbow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101401" name="Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="101501418" name="Bootleg Custodian's Shakujo" count="1" race="ELYOS"/>
+            <item id="115001842" name="Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="115001843" name="Bootleg Custodian's Divine Protective Shield" count="1" race="ELYOS"/>
+            <item id="100101402" name="Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="101501419" name="Bootleg Shepherd's Shakujo" count="1" race="ASMODIANS"/>
+            <item id="115001844" name="Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+            <item id="115001845" name="Bootleg Shepherd's Divine Protective Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101401" name="Bootleg Custodian's Cudgel" count="1" race="ELYOS"/>
+            <item id="101501418" name="Bootleg Custodian's Shakujo" count="1" race="ELYOS"/>
+            <item id="115001842" name="Bootleg Custodian's Divine Battle Shield" count="1" race="ELYOS"/>
+            <item id="115001843" name="Bootleg Custodian's Divine Protective Shield" count="1" race="ELYOS"/>
+            <item id="100101402" name="Bootleg Shepherd's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="101501419" name="Bootleg Shepherd's Shakujo" count="1" race="ASMODIANS"/>
+            <item id="115001844" name="Bootleg Shepherd's Divine Battle Shield" count="1" race="ASMODIANS"/>
+            <item id="115001845" name="Bootleg Shepherd's Divine Protective Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501365" name="Bootleg Custodian's Globe" count="1" race="ELYOS"/>
+            <item id="100601482" name="Bootleg Custodian's Grimoire" count="1" race="ELYOS"/>
+            <item id="100501366" name="Bootleg Shepherd's Globe" count="1" race="ASMODIANS"/>
+            <item id="100601483" name="Bootleg Shepherd's Grimoire" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501365" name="Bootleg Custodian's Globe" count="1" race="ELYOS"/>
+            <item id="100601482" name="Bootleg Custodian's Grimoire" count="1" race="ELYOS"/>
+            <item id="100501366" name="Bootleg Shepherd's Globe" count="1" race="ASMODIANS"/>
+            <item id="100601483" name="Bootleg Shepherd's Grimoire" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801275" name="Bootleg Custodian's Peacemaker" count="1" race="ELYOS"/>
+            <item id="101901181" name="Bootleg Custodian's Aetherpulse" count="1" race="ELYOS"/>
+            <item id="101801276" name="Bootleg Shepherd's Peacemaker" count="1" race="ASMODIANS"/>
+            <item id="101901182" name="Bootleg Shepherd's Aetherpulse" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001302" name="Bootleg Custodian's Lyra" count="1" race="ELYOS"/>
+            <item id="102001303" name="Bootleg Shepherd's Lyra" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101119" name="Bootleg Custodian's Axial" count="1" race="ELYOS"/>
+            <item id="101801275" name="Bootleg Custodian's Peacemaker" count="1" race="ELYOS"/>
+            <item id="102101120" name="Bootleg Shepherd's Axial" count="1" race="ASMODIANS"/>
+            <item id="101801276" name="Bootleg Shepherd's Peacemaker" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053879" name="Bootleg Abyss Armor Box">
+        <items player_class="GLADIATOR">
+            <item id="188053882" name="Bootleg Divine Plate Armor Crate" count="1"/>
+            <item id="188053883" name="Bootleg Divine Plate Armor Box" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="188053882" name="Bootleg Divine Plate Armor Crate" count="1"/>
+            <item id="188053883" name="Bootleg Divine Plate Armor Box" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="188053884" name="Bootleg Divine Chain Crate" count="1"/>
+            <item id="188053885" name="Bootleg Divine Chain Box" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="188053884" name="Bootleg Divine Chain Crate" count="1"/>
+            <item id="188053885" name="Bootleg Divine Chain Box" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="188053884" name="Bootleg Divine Chain Crate" count="1"/>
+            <item id="188053885" name="Bootleg Divine Chain Box" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="188053886" name="Bootleg Divine Leather Armor Crate" count="1"/>
+            <item id="188053887" name="Bootleg Divine Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="188053886" name="Bootleg Divine Leather Armor Crate" count="1"/>
+            <item id="188053887" name="Bootleg Divine Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="188053886" name="Bootleg Divine Leather Armor Crate" count="1"/>
+            <item id="188053887" name="Bootleg Divine Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="188053888" name="Bootleg Divine Cloth Armor Crate" count="1"/>
+            <item id="188053889" name="Bootleg Divine Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="188053888" name="Bootleg Divine Cloth Armor Crate" count="1"/>
+            <item id="188053889" name="Bootleg Divine Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="188053888" name="Bootleg Divine Cloth Armor Crate" count="1"/>
+            <item id="188053889" name="Bootleg Divine Cloth Armor Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053880" name="Bootleg Modor's Weapon Box">
 		<items player_class="GLADIATOR">
 			<item id="100001817" name="Bootleg Lunatic Modor's Sword" count="1"/>
@@ -4825,10 +5394,134 @@
             <item id="114501815" name="Bootleg Ambassador's Divine Brogans" count="1" race="ASMODIANS"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188053886" name="Bootleg Divine Leather Armor Crate"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053887" name="Bootleg Divine Leather Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053888" name="Bootleg Divine Cloth Armor Crate"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188053889" name="Bootleg Divine Cloth Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188053886" name="Bootleg Divine Leather Armor Crate">
+        <items player_class="ASSASSIN">
+            <item id="110301892" name="Bootleg Custodian's Divine Jerkin" count="1" race="ELYOS"/>
+            <item id="111301830" name="Bootleg Custodian's Divine Vambraces" count="1" race="ELYOS"/>
+            <item id="112301769" name="Bootleg Custodian's Divine Shoulderguards" count="1" race="ELYOS"/>
+            <item id="113301861" name="Bootleg Custodian's Divine Breeches" count="1" race="ELYOS"/>
+            <item id="114301898" name="Bootleg Custodian's Divine Boots" count="1" race="ELYOS"/>
+            <item id="110301893" name="Bootleg Shepherd's Divine Jerkin" count="1" race="ASMODIANS"/>
+            <item id="111301831" name="Bootleg Shepherd's Divine Vambraces" count="1" race="ASMODIANS"/>
+            <item id="112301770" name="Bootleg Shepherd's Divine Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="113301862" name="Bootleg Shepherd's Divine Breeches" count="1" race="ASMODIANS"/>
+            <item id="114301899" name="Bootleg Shepherd's Divine Boots" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301892" name="Bootleg Custodian's Divine Jerkin" count="1" race="ELYOS"/>
+            <item id="111301830" name="Bootleg Custodian's Divine Vambraces" count="1" race="ELYOS"/>
+            <item id="112301769" name="Bootleg Custodian's Divine Shoulderguards" count="1" race="ELYOS"/>
+            <item id="113301861" name="Bootleg Custodian's Divine Breeches" count="1" race="ELYOS"/>
+            <item id="114301898" name="Bootleg Custodian's Divine Boots" count="1" race="ELYOS"/>
+            <item id="110301893" name="Bootleg Shepherd's Divine Jerkin" count="1" race="ASMODIANS"/>
+            <item id="111301831" name="Bootleg Shepherd's Divine Vambraces" count="1" race="ASMODIANS"/>
+            <item id="112301770" name="Bootleg Shepherd's Divine Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="113301862" name="Bootleg Shepherd's Divine Breeches" count="1" race="ASMODIANS"/>
+            <item id="114301899" name="Bootleg Shepherd's Divine Boots" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053887" name="Bootleg Divine Leather Armor Box">
+        <items player_class="ASSASSIN">
+            <item id="110301894" name="Bootleg Emissary's Divine Magic Jerkin" count="1" race="ELYOS"/>
+            <item id="111301832" name="Bootleg Emissary's Divine Magic Vambraces" count="1" race="ELYOS"/>
+            <item id="112301771" name="Bootleg Emissary's Divine Magic Shoulderguards" count="1" race="ELYOS"/>
+            <item id="113301863" name="Bootleg Emissary's Divine Magic Breeches" count="1" race="ELYOS"/>
+            <item id="114301900" name="Bootleg Emissary's Divine Magic Boots" count="1" race="ELYOS"/>
+            <item id="110301895" name="Bootleg Ambassador's Divine Magic Jerkin" count="1" race="ASMODIANS"/>
+            <item id="111301833" name="Bootleg Ambassador's Divine Magic Vambraces" count="1" race="ASMODIANS"/>
+            <item id="112301772" name="Bootleg Ambassador's Divine Magic Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="113301864" name="Bootleg Ambassador's Divine Magic Breeches" count="1" race="ASMODIANS"/>
+            <item id="114301901" name="Bootleg Ambassador's Divine Magic Boots" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301894" name="Bootleg Emissary's Divine Magic Jerkin" count="1" race="ELYOS"/>
+            <item id="111301832" name="Bootleg Emissary's Divine Magic Vambraces" count="1" race="ELYOS"/>
+            <item id="112301771" name="Bootleg Emissary's Divine Magic Shoulderguards" count="1" race="ELYOS"/>
+            <item id="113301863" name="Bootleg Emissary's Divine Magic Breeches" count="1" race="ELYOS"/>
+            <item id="114301900" name="Bootleg Emissary's Divine Magic Boots" count="1" race="ELYOS"/>
+            <item id="110301895" name="Bootleg Ambassador's Divine Magic Jerkin" count="1" race="ASMODIANS"/>
+            <item id="111301833" name="Bootleg Ambassador's Divine Magic Vambraces" count="1" race="ASMODIANS"/>
+            <item id="112301772" name="Bootleg Ambassador's Divine Magic Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="113301864" name="Bootleg Ambassador's Divine Magic Breeches" count="1" race="ASMODIANS"/>
+            <item id="114301901" name="Bootleg Ambassador's Divine Magic Boots" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053888" name="Bootleg Divine Cloth Armor Crate">
+        <items player_class="BARD">
+            <item id="110101899" name="Bootleg Custodian's Divine Tunic" count="1" race="ELYOS"/>
+            <item id="111101714" name="Bootleg Custodian's Divine Gloves" count="1" race="ELYOS"/>
+            <item id="112101663" name="Bootleg Custodian's Divine Pauldrons" count="1" race="ELYOS"/>
+            <item id="113101725" name="Bootleg Custodian's Divine Leggings" count="1" race="ELYOS"/>
+            <item id="114101759" name="Bootleg Custodian's Divine Shoes" count="1" race="ELYOS"/>
+            <item id="110101900" name="Bootleg Shepherd's Divine Tunic" count="1" race="ASMODIANS"/>
+            <item id="111101715" name="Bootleg Shepherd's Divine Gloves" count="1" race="ASMODIANS"/>
+            <item id="112101664" name="Bootleg Shepherd's Divine Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="113101726" name="Bootleg Shepherd's Divine Leggings" count="1" race="ASMODIANS"/>
+            <item id="114101760" name="Bootleg Shepherd's Divine Shoes" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101899" name="Bootleg Custodian's Divine Tunic" count="1" race="ELYOS"/>
+            <item id="111101714" name="Bootleg Custodian's Divine Gloves" count="1" race="ELYOS"/>
+            <item id="112101663" name="Bootleg Custodian's Divine Pauldrons" count="1" race="ELYOS"/>
+            <item id="113101725" name="Bootleg Custodian's Divine Leggings" count="1" race="ELYOS"/>
+            <item id="114101759" name="Bootleg Custodian's Divine Shoes" count="1" race="ELYOS"/>
+            <item id="110101900" name="Bootleg Shepherd's Divine Tunic" count="1" race="ASMODIANS"/>
+            <item id="111101715" name="Bootleg Shepherd's Divine Gloves" count="1" race="ASMODIANS"/>
+            <item id="112101664" name="Bootleg Shepherd's Divine Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="113101726" name="Bootleg Shepherd's Divine Leggings" count="1" race="ASMODIANS"/>
+            <item id="114101760" name="Bootleg Shepherd's Divine Shoes" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101899" name="Bootleg Custodian's Divine Tunic" count="1" race="ELYOS"/>
+            <item id="111101714" name="Bootleg Custodian's Divine Gloves" count="1" race="ELYOS"/>
+            <item id="112101663" name="Bootleg Custodian's Divine Pauldrons" count="1" race="ELYOS"/>
+            <item id="113101725" name="Bootleg Custodian's Divine Leggings" count="1" race="ELYOS"/>
+            <item id="114101759" name="Bootleg Custodian's Divine Shoes" count="1" race="ELYOS"/>
+            <item id="110101900" name="Bootleg Shepherd's Divine Tunic" count="1" race="ASMODIANS"/>
+            <item id="111101715" name="Bootleg Shepherd's Divine Gloves" count="1" race="ASMODIANS"/>
+            <item id="112101664" name="Bootleg Shepherd's Divine Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="113101726" name="Bootleg Shepherd's Divine Leggings" count="1" race="ASMODIANS"/>
+            <item id="114101760" name="Bootleg Shepherd's Divine Shoes" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188053889" name="Bootleg Divine Cloth Armor Box">
+        <items player_class="BARD">
+            <item id="110101901" name="Bootleg Emissary's Divine Tunic" count="1" race="ELYOS"/>
+            <item id="111101716" name="Bootleg Emissary's Divine Gloves" count="1" race="ELYOS"/>
+            <item id="112101665" name="Bootleg Emissary's Divine Pauldrons" count="1" race="ELYOS"/>
+            <item id="113101727" name="Bootleg Emissary's Divine Leggings" count="1" race="ELYOS"/>
+            <item id="114101761" name="Bootleg Emissary's Divine Shoes" count="1" race="ELYOS"/>
+            <item id="110101902" name="Bootleg Ambassador's Divine Tunic" count="1" race="ASMODIANS"/>
+            <item id="111101717" name="Bootleg Ambassador's Divine Gloves" count="1" race="ASMODIANS"/>
+            <item id="112101666" name="Bootleg Ambassador's Divine Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="113101728" name="Bootleg Ambassador's Divine Leggings" count="1" race="ASMODIANS"/>
+            <item id="114101762" name="Bootleg Ambassador's Divine Shoes" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101901" name="Bootleg Emissary's Divine Tunic" count="1" race="ELYOS"/>
+            <item id="111101716" name="Bootleg Emissary's Divine Gloves" count="1" race="ELYOS"/>
+            <item id="112101665" name="Bootleg Emissary's Divine Pauldrons" count="1" race="ELYOS"/>
+            <item id="113101727" name="Bootleg Emissary's Divine Leggings" count="1" race="ELYOS"/>
+            <item id="114101761" name="Bootleg Emissary's Divine Shoes" count="1" race="ELYOS"/>
+            <item id="110101902" name="Bootleg Ambassador's Divine Tunic" count="1" race="ASMODIANS"/>
+            <item id="111101717" name="Bootleg Ambassador's Divine Gloves" count="1" race="ASMODIANS"/>
+            <item id="112101666" name="Bootleg Ambassador's Divine Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="113101728" name="Bootleg Ambassador's Divine Leggings" count="1" race="ASMODIANS"/>
+            <item id="114101762" name="Bootleg Ambassador's Divine Shoes" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101901" name="Bootleg Emissary's Divine Tunic" count="1" race="ELYOS"/>
+            <item id="111101716" name="Bootleg Emissary's Divine Gloves" count="1" race="ELYOS"/>
+            <item id="112101665" name="Bootleg Emissary's Divine Pauldrons" count="1" race="ELYOS"/>
+            <item id="113101727" name="Bootleg Emissary's Divine Leggings" count="1" race="ELYOS"/>
+            <item id="114101761" name="Bootleg Emissary's Divine Shoes" count="1" race="ELYOS"/>
+            <item id="110101902" name="Bootleg Ambassador's Divine Tunic" count="1" race="ASMODIANS"/>
+            <item id="111101717" name="Bootleg Ambassador's Divine Gloves" count="1" race="ASMODIANS"/>
+            <item id="112101666" name="Bootleg Ambassador's Divine Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="113101728" name="Bootleg Ambassador's Divine Leggings" count="1" race="ASMODIANS"/>
+            <item id="114101762" name="Bootleg Ambassador's Divine Shoes" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188053890" name="Dazzling Daevanion Weapon Skin Box">
         <items player_class="SORCERER">
             <item id="100501364" name="Dazzling Daevanion Orb Skin" count="1"/>
@@ -5410,10 +6103,184 @@
         </items>
     </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054088" name="Specialized server_item replacement_selection type_test02"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054096" name="[Camping] Sealed General Goods Merchant Contract"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054097" name="[Camping] Sealed Warehouse Manager Contract"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054112" name="Wave Song Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054113" name="Sea Feast Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054096" name="[Camping] Sealed General Goods Merchant Contract">
+        <items>
+            <item id="170195129" name="[Employment Contract] Spring Camp General Goods Merchant" count="1" race="ELYOS"/>
+            <item id="170195130" name="[Employment Contract] Summer Camp General Goods Merchant" count="1" race="ELYOS"/>
+            <item id="170195131" name="[Employment Contract] Fall Camp General Goods Merchant" count="1" race="ELYOS"/>
+            <item id="170195132" name="[Employment Contract] Winter Camp General Goods Merchant" count="1" race="ELYOS"/>
+            <item id="170195145" name="[Employment Contract] Spring Camp General Goods Merchant" count="1" race="ASMODIANS"/>
+            <item id="170195146" name="[Employment Contract] Summer Camp General Goods Merchant" count="1" race="ASMODIANS"/>
+            <item id="170195147" name="[Employment Contract] Fall Camp General Goods Merchant" count="1" race="ASMODIANS"/>
+            <item id="170195148" name="[Employment Contract] Winter Camp General Goods Merchant" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054097" name="[Camping] Sealed Warehouse Manager Contract">
+        <items>
+            <item id="170195133" name="[Employment Contract] Spring Camp Warehouse Manager" count="1"/>
+            <item id="170195134" name="[Employment Contract] Summer Camp Warehouse Manager" count="1"/>
+            <item id="170195135" name="[Employment Contract] Fall Camp Warehouse Manager" count="1"/>
+            <item id="170195136" name="[Employment Contract] Winter Camp Warehouse Manager" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054112" name="Wave Song Armor Box">
+        <items player_class="SORCERER">
+            <item id="110101909" name="Wave Song Tunic" count="1"/>
+            <item id="111101724" name="Wave Song Gloves" count="1"/>
+            <item id="114101769" name="Wave Song Shoes" count="1"/>
+            <item id="113101736" name="Wave Song Leggings" count="1"/>
+            <item id="112101671" name="Wave Song Pauldrons" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101909" name="Wave Song Tunic" count="1"/>
+            <item id="111101724" name="Wave Song Gloves" count="1"/>
+            <item id="114101769" name="Wave Song Shoes" count="1"/>
+            <item id="113101736" name="Wave Song Leggings" count="1"/>
+            <item id="112101671" name="Wave Song Pauldrons" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101909" name="Wave Song Tunic" count="1"/>
+            <item id="111101724" name="Wave Song Gloves" count="1"/>
+            <item id="114101769" name="Wave Song Shoes" count="1"/>
+            <item id="113101736" name="Wave Song Leggings" count="1"/>
+            <item id="112101671" name="Wave Song Pauldrons" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301903" name="Wave Song Jerkin" count="1"/>
+            <item id="111301841" name="Wave Song Vambraces" count="1"/>
+            <item id="114301909" name="Wave Song Boots" count="1"/>
+            <item id="113301873" name="Wave Song Breeches" count="1"/>
+            <item id="112301780" name="Wave Song Shoulderguards" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301903" name="Wave Song Jerkin" count="1"/>
+            <item id="111301841" name="Wave Song Vambraces" count="1"/>
+            <item id="114301909" name="Wave Song Boots" count="1"/>
+            <item id="113301873" name="Wave Song Breeches" count="1"/>
+            <item id="112301780" name="Wave Song Shoulderguards" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301903" name="Wave Song Jerkin" count="1"/>
+            <item id="111301841" name="Wave Song Vambraces" count="1"/>
+            <item id="114301909" name="Wave Song Boots" count="1"/>
+            <item id="113301873" name="Wave Song Breeches" count="1"/>
+            <item id="112301780" name="Wave Song Shoulderguards" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110551239" name="Wave Song Hauberk" count="1"/>
+            <item id="111501798" name="Wave Song Handguards" count="1"/>
+            <item id="114501826" name="Wave Song Brogans" count="1"/>
+            <item id="113501818" name="Wave Song Chausses" count="1"/>
+            <item id="112501735" name="Wave Song Spaulders" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551239" name="Wave Song Hauberk" count="1"/>
+            <item id="111501798" name="Wave Song Handguards" count="1"/>
+            <item id="114501826" name="Wave Song Brogans" count="1"/>
+            <item id="113501818" name="Wave Song Chausses" count="1"/>
+            <item id="112501735" name="Wave Song Spaulders" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551239" name="Wave Song Hauberk" count="1"/>
+            <item id="111501798" name="Wave Song Handguards" count="1"/>
+            <item id="114501826" name="Wave Song Brogans" count="1"/>
+            <item id="113501818" name="Wave Song Chausses" count="1"/>
+            <item id="112501735" name="Wave Song Spaulders" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601700" name="Wave Song Breastplate" count="1"/>
+            <item id="111601663" name="Wave Song Gauntlets" count="1"/>
+            <item id="114601653" name="Wave Song Sabatons" count="1"/>
+            <item id="113601647" name="Wave Song Greaves" count="1"/>
+            <item id="112601645" name="Wave Song Shoulderplates" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="110601700" name="Wave Song Breastplate" count="1"/>
+            <item id="111601663" name="Wave Song Gauntlets" count="1"/>
+            <item id="114601653" name="Wave Song Sabatons" count="1"/>
+            <item id="113601647" name="Wave Song Greaves" count="1"/>
+            <item id="112601645" name="Wave Song Shoulderplates" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054113" name="Sea Feast Armor Box">
+        <items player_class="SORCERER">
+            <item id="110101910" name="Sea Feast Tunic" count="1"/>
+            <item id="111101725" name="Sea Feast Gloves" count="1"/>
+            <item id="114101770" name="Sea Feast Shoes" count="1"/>
+            <item id="113101737" name="Sea Feast Leggings" count="1"/>
+            <item id="112101672" name="Sea Feast Pauldrons" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101910" name="Sea Feast Tunic" count="1"/>
+            <item id="111101725" name="Sea Feast Gloves" count="1"/>
+            <item id="114101770" name="Sea Feast Shoes" count="1"/>
+            <item id="113101737" name="Sea Feast Leggings" count="1"/>
+            <item id="112101672" name="Sea Feast Pauldrons" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101910" name="Sea Feast Tunic" count="1"/>
+            <item id="111101725" name="Sea Feast Gloves" count="1"/>
+            <item id="114101770" name="Sea Feast Shoes" count="1"/>
+            <item id="113101737" name="Sea Feast Leggings" count="1"/>
+            <item id="112101672" name="Sea Feast Pauldrons" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301904" name="Sea Feast Jerkin" count="1"/>
+            <item id="111301842" name="Sea Feast Vambraces" count="1"/>
+            <item id="114301910" name="Sea Feast Boots" count="1"/>
+            <item id="113301874" name="Sea Feast Breeches" count="1"/>
+            <item id="112301781" name="Sea Feast Shoulderguards" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301904" name="Sea Feast Jerkin" count="1"/>
+            <item id="111301842" name="Sea Feast Vambraces" count="1"/>
+            <item id="114301910" name="Sea Feast Boots" count="1"/>
+            <item id="113301874" name="Sea Feast Breeches" count="1"/>
+            <item id="112301781" name="Sea Feast Shoulderguards" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301904" name="Sea Feast Jerkin" count="1"/>
+            <item id="111301842" name="Sea Feast Vambraces" count="1"/>
+            <item id="114301910" name="Sea Feast Boots" count="1"/>
+            <item id="113301874" name="Sea Feast Breeches" count="1"/>
+            <item id="112301781" name="Sea Feast Shoulderguards" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110551240" name="Sea Feast Hauberk" count="1"/>
+            <item id="111501799" name="Sea Feast Handguards" count="1"/>
+            <item id="114501827" name="Sea Feast Brogans" count="1"/>
+            <item id="113501819" name="Sea Feast Chausses" count="1"/>
+            <item id="112501736" name="Sea Feast Spaulders" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551240" name="Sea Feast Hauberk" count="1"/>
+            <item id="111501799" name="Sea Feast Handguards" count="1"/>
+            <item id="114501827" name="Sea Feast Brogans" count="1"/>
+            <item id="113501819" name="Sea Feast Chausses" count="1"/>
+            <item id="112501736" name="Sea Feast Spaulders" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551240" name="Sea Feast Hauberk" count="1"/>
+            <item id="111501799" name="Sea Feast Handguards" count="1"/>
+            <item id="114501827" name="Sea Feast Brogans" count="1"/>
+            <item id="113501819" name="Sea Feast Chausses" count="1"/>
+            <item id="112501736" name="Sea Feast Spaulders" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601701" name="Sea Feast Breastplate" count="1"/>
+            <item id="111601664" name="Sea Feast Gauntlets" count="1"/>
+            <item id="114601654" name="Sea Feast Sabatons" count="1"/>
+            <item id="113601648" name="Sea Feast Greaves" count="1"/>
+            <item id="112601646" name="Sea Feast Shoulderplates" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="110601701" name="Sea Feast Breastplate" count="1"/>
+            <item id="111601664" name="Sea Feast Gauntlets" count="1"/>
+            <item id="114601654" name="Sea Feast Sabatons" count="1"/>
+            <item id="113601648" name="Sea Feast Greaves" count="1"/>
+            <item id="112601646" name="Sea Feast Shoulderplates" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054156" name="Elegant Stigma Bundle">
         <items>
             <item id="188054123" name="Gladiator Stigma Bundle" count="1"/>
@@ -5678,8 +6545,122 @@
             <item id="188054251" name="[Event] Delegate's Cloth Armor Box" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054254" name="[Event] Nether Lotan's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054256" name="Pure Lunatic Modor's Weapon Crux Bundle"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054254" name="[Event] Nether Lotan's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201627" name="[Event] Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001919" name="[Event] Nether Fire Dragon King's Sword" count="1"/>
+            <item id="100101445" name="[Event] Nether Fire Dragon King's Mace" count="1"/>
+            <item id="100901481" name="[Event] Nether Fire Dragon King's Great Sword" count="1"/>
+            <item id="101301368" name="[Event] Nether Fire Dragon King's Polearm" count="1"/>
+            <item id="101701462" name="[Event] Nether Fire Dragon King's Bow" count="1"/>
+            <item id="115001906" name="[Event] Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001919" name="[Event] Nether Fire Dragon King's Sword" count="1"/>
+            <item id="100101445" name="[Event] Nether Fire Dragon King's Mace" count="1"/>
+            <item id="100901481" name="[Event] Nether Fire Dragon King's Great Sword" count="1"/>
+            <item id="115001906" name="[Event] Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201627" name="[Event] Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001919" name="[Event] Nether Fire Dragon King's Sword" count="1"/>
+            <item id="101701462" name="[Event] Nether Fire Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201627" name="[Event] Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001919" name="[Event] Nether Fire Dragon King's Sword" count="1"/>
+            <item id="101701462" name="[Event] Nether Fire Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101445" name="[Event] Nether Fire Dragon King's Mace" count="1"/>
+            <item id="101501465" name="[Event] Nether Fire Dragon King's Staff" count="1"/>
+            <item id="115001906" name="[Event] Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101445" name="[Event] Nether Fire Dragon King's Mace" count="1"/>
+            <item id="101501465" name="[Event] Nether Fire Dragon King's Staff" count="1"/>
+            <item id="115001906" name="[Event] Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501408" name="[Event] Nether Fire Dragon King's Orb" count="1"/>
+            <item id="100601526" name="[Event] Nether Fire Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501408" name="[Event] Nether Fire Dragon King's Orb" count="1"/>
+            <item id="100601526" name="[Event] Nether Fire Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801303" name="[Event] Nether Fire Dragon King's Magic Gun" count="1"/>
+            <item id="101901209" name="[Event] Nether Fire Dragon King's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001331" name="[Event] Nether Fire Dragon King's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101147" name="[Event] Nether Fire Dragon King's Keyblade" count="1"/>
+            <item id="101801303" name="[Event] Nether Fire Dragon King's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054256" name="Pure Lunatic Modor's Weapon Crux Bundle">
+        <items player_class="GLADIATOR">
+            <item id="169405301" name="Pure Lunatic Modor's Dagger Crux" count="1"/>
+            <item id="169405297" name="Pure Lunatic Modor's Sword Crux" count="1"/>
+            <item id="169405298" name="Pure Lunatic Modor's Warhammer Crux" count="1"/>
+            <item id="169405299" name="Pure Lunatic Modor's Greatsword Crux" count="1"/>
+            <item id="169405302" name="Pure Lunatic Modor's Polearm Crux" count="1"/>
+            <item id="169405303" name="Pure Lunatic Modor's Bow Crux" count="1"/>
+            <item id="169405300" name="Pure Lunatic Modor's Shield Crux" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="169405297" name="Pure Lunatic Modor's Sword Crux" count="1"/>
+            <item id="169405298" name="Pure Lunatic Modor's Warhammer Crux" count="1"/>
+            <item id="169405299" name="Pure Lunatic Modor's Greatsword Crux" count="1"/>
+            <item id="169405300" name="Pure Lunatic Modor's Shield Crux" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="169405301" name="Pure Lunatic Modor's Dagger Crux" count="1"/>
+            <item id="169405297" name="Pure Lunatic Modor's Sword Crux" count="1"/>
+            <item id="169405303" name="Pure Lunatic Modor's Bow Crux" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="169405301" name="Pure Lunatic Modor's Dagger Crux" count="1"/>
+            <item id="169405297" name="Pure Lunatic Modor's Sword Crux" count="1"/>
+            <item id="169405303" name="Pure Lunatic Modor's Bow Crux" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="169405304" name="Pure Lunatic Modor's Mace Crux" count="1"/>
+            <item id="169405298" name="Pure Lunatic Modor's Warhammer Crux" count="1"/>
+            <item id="169405305" name="Pure Lunatic Modor's Staff Crux" count="1"/>
+            <item id="169405306" name="Pure Lunatic Modor's Cane Crux" count="1"/>
+            <item id="169405307" name="Pure Lunatic Modor's Scale Shield Crux" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="169405304" name="Pure Lunatic Modor's Mace Crux" count="1"/>
+            <item id="169405298" name="Pure Lunatic Modor's Warhammer Crux" count="1"/>
+            <item id="169405305" name="Pure Lunatic Modor's Staff Crux" count="1"/>
+            <item id="169405306" name="Pure Lunatic Modor's Cane Crux" count="1"/>
+            <item id="169405307" name="Pure Lunatic Modor's Scale Shield Crux" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="169405308" name="Pure Lunatic Modor's Orb Crux" count="1"/>
+            <item id="169405309" name="Pure Lunatic Modor's Spellbook Crux" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="169405308" name="Pure Lunatic Modor's Orb Crux" count="1"/>
+            <item id="169405309" name="Pure Lunatic Modor's Spellbook Crux" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="169405310" name="Pure Lunatic Modor's Pistol Crux" count="1"/>
+            <item id="169405311" name="Pure Lunatic Modor's Aethercannon Crux" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="169405312" name="Pure Lunatic Modor's Harp Crux" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="169405313" name="Pure Lunatic Modor's Cipher-Blade Crux" count="1"/>
+            <item id="169405310" name="Pure Lunatic Modor's Pistol Crux" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054263" name="Rike's Idian Support Box">
         <items>
             <item id="166050090" name="Triumphal Idian: Physical Attack" count="1"/>
@@ -5712,9 +6693,300 @@
             <item id="160010426" name="Wise Daru Thief Transformation Candy" count="1" race="ASMODIANS"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054329" name="New Recruit's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054338" name="[Event] Empyrean Lord Protector's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054339" name="[Event] Empyrean Lord Protector's Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054329" name="New Recruit's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100200983" name="Elyos Fledgling's Dagger" count="1" race="ELYOS"/>
+            <item id="100001115" name="Elyos Fledgling's Sword" count="1" race="ELYOS"/>
+            <item id="100100854" name="Elyos Fledgling's Mace" count="1" race="ELYOS"/>
+            <item id="100900851" name="Elyos Fledgling's Greatsword" count="1" race="ELYOS"/>
+            <item id="101300818" name="Elyos Fledgling's Polearm" count="1" race="ELYOS"/>
+            <item id="101700893" name="Elyos Fledgling's Bow" count="1" race="ELYOS"/>
+            <item id="100200984" name="Asmodian Fledgling's Dagger" count="1" race="ASMODIANS"/>
+            <item id="100001116" name="Asmodian Fledgling's Sword" count="1" race="ASMODIANS"/>
+            <item id="100100855" name="Asmodian Fledgling's Mace" count="1" race="ASMODIANS"/>
+            <item id="100900852" name="Asmodian Fledgling's Greatsword" count="1" race="ASMODIANS"/>
+            <item id="101300819" name="Asmodian Fledgling's Polearm" count="1" race="ASMODIANS"/>
+            <item id="101700894" name="Asmodian Fledgling's Bow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001115" name="Elyos Fledgling's Sword" count="1" race="ELYOS"/>
+            <item id="100100854" name="Elyos Fledgling's Mace" count="1" race="ELYOS"/>
+            <item id="100900851" name="Elyos Fledgling's Greatsword" count="1" race="ELYOS"/>
+            <item id="100001116" name="Asmodian Fledgling's Sword" count="1" race="ASMODIANS"/>
+            <item id="100100855" name="Asmodian Fledgling's Mace" count="1" race="ASMODIANS"/>
+            <item id="100900852" name="Asmodian Fledgling's Greatsword" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100200983" name="Elyos Fledgling's Dagger" count="1" race="ELYOS"/>
+            <item id="100001115" name="Elyos Fledgling's Sword" count="1" race="ELYOS"/>
+            <item id="101700893" name="Elyos Fledgling's Bow" count="1" race="ELYOS"/>
+            <item id="100200984" name="Asmodian Fledgling's Dagger" count="1" race="ASMODIANS"/>
+            <item id="100001116" name="Asmodian Fledgling's Sword" count="1" race="ASMODIANS"/>
+            <item id="101700894" name="Asmodian Fledgling's Bow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100200983" name="Elyos Fledgling's Dagger" count="1" race="ELYOS"/>
+            <item id="100001115" name="Elyos Fledgling's Sword" count="1" race="ELYOS"/>
+            <item id="101700893" name="Elyos Fledgling's Bow" count="1" race="ELYOS"/>
+            <item id="100200984" name="Asmodian Fledgling's Dagger" count="1" race="ASMODIANS"/>
+            <item id="100001116" name="Asmodian Fledgling's Sword" count="1" race="ASMODIANS"/>
+            <item id="101700894" name="Asmodian Fledgling's Bow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100100854" name="Elyos Fledgling's Mace" count="1" race="ELYOS"/>
+            <item id="101500877" name="Elyos Fledgling's Staff" count="1" race="ELYOS"/>
+            <item id="100100855" name="Asmodian Fledgling's Mace" count="1" race="ASMODIANS"/>
+            <item id="101500878" name="Asmodian Fledgling's Staff" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100100854" name="Elyos Fledgling's Mace" count="1" race="ELYOS"/>
+            <item id="101500877" name="Elyos Fledgling's Staff" count="1" race="ELYOS"/>
+            <item id="100100855" name="Asmodian Fledgling's Mace" count="1" race="ASMODIANS"/>
+            <item id="101500878" name="Asmodian Fledgling's Staff" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100500868" name="Elyos Fledgling's Orb" count="1" race="ELYOS"/>
+            <item id="100600924" name="Elyos Fledgling's Spellbook" count="1" race="ELYOS"/>
+            <item id="100500869" name="Asmodian Fledgling's Orb" count="1" race="ASMODIANS"/>
+            <item id="100600925" name="Asmodian Fledgling's Spellbook" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100500868" name="Elyos Fledgling's Orb" count="1" race="ELYOS"/>
+            <item id="100600924" name="Elyos Fledgling's Spellbook" count="1" race="ELYOS"/>
+            <item id="100500869" name="Asmodian Fledgling's Orb" count="1" race="ASMODIANS"/>
+            <item id="100600925" name="Asmodian Fledgling's Spellbook" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101800848" name="Elyos Fledgling's Pistol" count="1" race="ELYOS"/>
+            <item id="101900846" name="Elyos Fledgling's Aethercannon" count="1" race="ELYOS"/>
+            <item id="101800849" name="Asmodian Fledgling's Pistol" count="1" race="ASMODIANS"/>
+            <item id="101900847" name="Asmodian Fledgling's Aethercannon" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102000880" name="Elyos Fledgling's Harp" count="1" race="ELYOS"/>
+            <item id="102000881" name="Asmodian Fledgling's Harp" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102100740" name="Elyos Fledgling's Cipher-Blade" count="1" race="ELYOS"/>
+            <item id="101800848" name="Elyos Fledgling's Pistol" count="1" race="ELYOS"/>
+            <item id="102100741" name="Asmodian Fledgling's Cipher-Blade" count="1" race="ASMODIANS"/>
+            <item id="101800849" name="Asmodian Fledgling's Pistol" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054338" name="[Event] Empyrean Lord Protector's Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001893" name="Kaisinel Protector's Sword" count="1" race="ELYOS"/>
+            <item id="100901455" name="Kaisinel Protector's Greatsword" count="1" race="ELYOS"/>
+            <item id="115001876" name="Kaisinel Protector's Battle Shield" count="1" race="ELYOS"/>
+            <item id="100001894" name="Marchutan Protector's Sword" count="1" race="ASMODIANS"/>
+            <item id="100901456" name="Marchutan Protector's Greatsword" count="1" race="ASMODIANS"/>
+            <item id="115001880" name="Marchutan Protector's Battle Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="101301343" name="Kaisinel Protector's Polearm" count="1" race="ELYOS"/>
+            <item id="100901455" name="Kaisinel Protector's Greatsword" count="1" race="ELYOS"/>
+            <item id="100001893" name="Kaisinel Protector's Sword" count="1" race="ELYOS"/>
+            <item id="100201600" name="Kaisinel Protector's Dagger" count="1" race="ELYOS"/>
+            <item id="101701436" name="Kaisinel Protector's Bow" count="1" race="ELYOS"/>
+            <item id="101301344" name="Marchutan Protector's Polearm" count="1" race="ASMODIANS"/>
+            <item id="100901456" name="Marchutan Protector's Greatsword" count="1" race="ASMODIANS"/>
+            <item id="100001894" name="Marchutan Protector's Sword" count="1" race="ASMODIANS"/>
+            <item id="100201601" name="Marchutan Protector's Dagger" count="1" race="ASMODIANS"/>
+            <item id="101701437" name="Marchutan Protector's Bow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201600" name="Kaisinel Protector's Dagger" count="1" race="ELYOS"/>
+            <item id="100001893" name="Kaisinel Protector's Sword" count="1" race="ELYOS"/>
+            <item id="101701436" name="Kaisinel Protector's Bow" count="1" race="ELYOS"/>
+            <item id="100201601" name="Marchutan Protector's Dagger" count="1" race="ASMODIANS"/>
+            <item id="100001894" name="Marchutan Protector's Sword" count="1" race="ASMODIANS"/>
+            <item id="101701437" name="Marchutan Protector's Bow" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="101701436" name="Kaisinel Protector's Bow" count="1" race="ELYOS"/>
+            <item id="100201600" name="Kaisinel Protector's Dagger" count="1" race="ELYOS"/>
+            <item id="100001893" name="Kaisinel Protector's Sword" count="1" race="ELYOS"/>
+            <item id="101701437" name="Marchutan Protector's Bow" count="1" race="ASMODIANS"/>
+            <item id="100201601" name="Marchutan Protector's Dagger" count="1" race="ASMODIANS"/>
+            <item id="100001894" name="Marchutan Protector's Sword" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101420" name="Kaisinel Protector's Mace" count="1" race="ELYOS"/>
+            <item id="101501438" name="Kaisinel Protector's Staff" count="1" race="ELYOS"/>
+            <item id="115001877" name="Kaisinel Protector's Scale Shield" count="1" race="ELYOS"/>
+            <item id="100101421" name="Marchutan Protector's Mace" count="1" race="ASMODIANS"/>
+            <item id="101501439" name="Marchutan Protector's Staff" count="1" race="ASMODIANS"/>
+            <item id="115001881" name="Marchutan Protector's Scale Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101420" name="Kaisinel Protector's Mace" count="1" race="ELYOS"/>
+            <item id="101501438" name="Kaisinel Protector's Staff" count="1" race="ELYOS"/>
+            <item id="115001877" name="Kaisinel Protector's Scale Shield" count="1" race="ELYOS"/>
+            <item id="100101421" name="Marchutan Protector's Mace" count="1" race="ASMODIANS"/>
+            <item id="101501439" name="Marchutan Protector's Staff" count="1" race="ASMODIANS"/>
+            <item id="115001881" name="Marchutan Protector's Scale Shield" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100601499" name="Kaisinel Protector's Spellbook" count="1" race="ELYOS"/>
+            <item id="100501380" name="Kaisinel Protector's Orb" count="1" race="ELYOS"/>
+            <item id="100601500" name="Marchutan Protector's Spellbook" count="1" race="ASMODIANS"/>
+            <item id="100501381" name="Marchutan Protector's Orb" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100601499" name="Kaisinel Protector's Spellbook" count="1" race="ELYOS"/>
+            <item id="100501380" name="Kaisinel Protector's Orb" count="1" race="ELYOS"/>
+            <item id="100601500" name="Marchutan Protector's Spellbook" count="1" race="ASMODIANS"/>
+            <item id="100501381" name="Marchutan Protector's Orb" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801288" name="Kaisinel Protector's Pistol" count="1" race="ELYOS"/>
+            <item id="101901194" name="Kaisinel Protector's Aethercannon" count="1" race="ELYOS"/>
+            <item id="101801289" name="Marchutan Protector's Pistol" count="1" race="ASMODIANS"/>
+            <item id="101901195" name="Marchutan Protector's Aethercannon" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001316" name="Kaisinel Protector's Harp" count="1" race="ELYOS"/>
+            <item id="102001317" name="Marchutan Protector's Harp" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101132" name="Kaisinel Protector's Cipher-Blade" count="1" race="ELYOS"/>
+            <item id="102101133" name="Marchutan Protector's Cipher-Blade" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054339" name="[Event] Empyrean Lord Protector's Armor Box">
+        <items player_class="TEMPLAR">
+            <item id="110601708" name="Kaisinel Protector's Breastplate" count="1" race="ELYOS"/>
+            <item id="113601655" name="Kaisinel Protector's Greaves" count="1" race="ELYOS"/>
+            <item id="112601653" name="Kaisinel Protector's Shoulderplates" count="1" race="ELYOS"/>
+            <item id="111601672" name="Kaisinel Protector's Gauntlets" count="1" race="ELYOS"/>
+            <item id="114601661" name="Kaisinel Protector's Sabatons" count="1" race="ELYOS"/>
+            <item id="110601710" name="Marchutan Protector's Breastplate" count="1" race="ASMODIANS"/>
+            <item id="113601657" name="Marchutan Protector's Greaves" count="1" race="ASMODIANS"/>
+            <item id="112601655" name="Marchutan Protector's Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="111601674" name="Marchutan Protector's Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="114601663" name="Marchutan Protector's Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601708" name="Kaisinel Protector's Breastplate" count="1" race="ELYOS"/>
+            <item id="113601655" name="Kaisinel Protector's Greaves" count="1" race="ELYOS"/>
+            <item id="112601653" name="Kaisinel Protector's Shoulderplates" count="1" race="ELYOS"/>
+            <item id="111601672" name="Kaisinel Protector's Gauntlets" count="1" race="ELYOS"/>
+            <item id="114601661" name="Kaisinel Protector's Sabatons" count="1" race="ELYOS"/>
+            <item id="110601710" name="Marchutan Protector's Breastplate" count="1" race="ASMODIANS"/>
+            <item id="113601657" name="Marchutan Protector's Greaves" count="1" race="ASMODIANS"/>
+            <item id="112601655" name="Marchutan Protector's Shoulderplates" count="1" race="ASMODIANS"/>
+            <item id="111601674" name="Marchutan Protector's Gauntlets" count="1" race="ASMODIANS"/>
+            <item id="114601663" name="Marchutan Protector's Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301911" name="Kaisinel Protector's Jerkin" count="1" race="ELYOS"/>
+            <item id="113301881" name="Kaisinel Protector's Breeches" count="1" race="ELYOS"/>
+            <item id="112301788" name="Kaisinel Protector's Shoulderguards" count="1" race="ELYOS"/>
+            <item id="111301850" name="Kaisinel Protector's Vambrace" count="1" race="ELYOS"/>
+            <item id="114301918" name="Kaisinel Protector's Boots" count="1" race="ELYOS"/>
+            <item id="110301915" name="Marchutan Protector's Jerkin" count="1" race="ASMODIANS"/>
+            <item id="113301885" name="Marchutan Protector's Breeches" count="1" race="ASMODIANS"/>
+            <item id="112301792" name="Marchutan Protector's Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="111301854" name="Marchutan Protector's Vambrace" count="1" race="ASMODIANS"/>
+            <item id="114301922" name="Marchutan Protector's Boots" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301911" name="Kaisinel Protector's Jerkin" count="1" race="ELYOS"/>
+            <item id="113301881" name="Kaisinel Protector's Breeches" count="1" race="ELYOS"/>
+            <item id="112301788" name="Kaisinel Protector's Shoulderguards" count="1" race="ELYOS"/>
+            <item id="111301850" name="Kaisinel Protector's Vambrace" count="1" race="ELYOS"/>
+            <item id="114301918" name="Kaisinel Protector's Boots" count="1" race="ELYOS"/>
+            <item id="110301915" name="Marchutan Protector's Jerkin" count="1" race="ASMODIANS"/>
+            <item id="113301885" name="Marchutan Protector's Breeches" count="1" race="ASMODIANS"/>
+            <item id="112301792" name="Marchutan Protector's Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="111301854" name="Marchutan Protector's Vambrace" count="1" race="ASMODIANS"/>
+            <item id="114301922" name="Marchutan Protector's Boots" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301912" name="Kaisinel Protector's Magic Jerkin" count="1" race="ELYOS"/>
+            <item id="113301882" name="Kaisinel Protector's Magic Breeches" count="1" race="ELYOS"/>
+            <item id="112301789" name="Kaisinel Protector's Magic Shoulderguards" count="1" race="ELYOS"/>
+            <item id="111301851" name="Kaisinel Protector's Magic Vambrace" count="1" race="ELYOS"/>
+            <item id="114301919" name="Kaisinel Protector's Magic Boots" count="1" race="ELYOS"/>
+            <item id="110301916" name="Marchutan Protector's Magic Jerkin" count="1" race="ASMODIANS"/>
+            <item id="113301886" name="Marchutan Protector's Magic Breeches" count="1" race="ASMODIANS"/>
+            <item id="112301793" name="Marchutan Protector's Magic Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="111301855" name="Marchutan Protector's Magic Vambrace" count="1" race="ASMODIANS"/>
+            <item id="114301923" name="Marchutan Protector's Magic Boots" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551251" name="Kaisinel Protector's Heavy Hauberk" count="1" race="ELYOS"/>
+            <item id="113501830" name="Kaisinel Protector's Heavy Chausses" count="1" race="ELYOS"/>
+            <item id="112501747" name="Kaisinel Protector's Heavy Spaulders" count="1" race="ELYOS"/>
+            <item id="111501811" name="Kaisinel Protector's Heavy Handguards" count="1" race="ELYOS"/>
+            <item id="114501838" name="Kaisinel Protector's Heavy Brogans" count="1" race="ELYOS"/>
+            <item id="110551255" name="Marchutan Protector's Heavy Hauberk" count="1" race="ASMODIANS"/>
+            <item id="113501834" name="Marchutan Protector's Heavy Chausses" count="1" race="ASMODIANS"/>
+            <item id="112501751" name="Marchutan Protector's Heavy Spaulders" count="1" race="ASMODIANS"/>
+            <item id="111501815" name="Marchutan Protector's Heavy Handguards" count="1" race="ASMODIANS"/>
+            <item id="114501842" name="Marchutan Protector's Heavy Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110551250" name="Kaisinel Protector's Hauberk" count="1" race="ELYOS"/>
+            <item id="113501829" name="Kaisinel Protector's Chausses" count="1" race="ELYOS"/>
+            <item id="112501746" name="Kaisinel Protector's Spaulders" count="1" race="ELYOS"/>
+            <item id="111501810" name="Kaisinel Protector's Handguards" count="1" race="ELYOS"/>
+            <item id="114501837" name="Kaisinel Protector's Brogans" count="1" race="ELYOS"/>
+            <item id="110551254" name="Marchutan Protector's Hauberk" count="1" race="ASMODIANS"/>
+            <item id="113501833" name="Marchutan Protector's Chausses" count="1" race="ASMODIANS"/>
+            <item id="112501750" name="Marchutan Protector's Spaulders" count="1" race="ASMODIANS"/>
+            <item id="111501814" name="Marchutan Protector's Handguards" count="1" race="ASMODIANS"/>
+            <item id="114501841" name="Marchutan Protector's Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551266" name="Kaisinel Protector's Hauberk" count="1" race="ELYOS"/>
+            <item id="113501845" name="Kaisinel Protector's Chausses" count="1" race="ELYOS"/>
+            <item id="112501762" name="Kaisinel Protector's Spaulders" count="1" race="ELYOS"/>
+            <item id="111501826" name="Kaisinel Protector's Handguards" count="1" race="ELYOS"/>
+            <item id="114501853" name="Kaisinel Protector's Brogans" count="1" race="ELYOS"/>
+            <item id="110551266" name="Kaisinel Protector's Hauberk" count="1" race="ASMODIANS"/>
+            <item id="113501845" name="Kaisinel Protector's Chausses" count="1" race="ASMODIANS"/>
+            <item id="112501762" name="Kaisinel Protector's Spaulders" count="1" race="ASMODIANS"/>
+            <item id="111501826" name="Kaisinel Protector's Handguards" count="1" race="ASMODIANS"/>
+            <item id="114501853" name="Kaisinel Protector's Brogans" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101918" name="Kaisinel Protector's Tunic" count="1" race="ELYOS"/>
+            <item id="113101745" name="Kaisinel Protector's Leggings" count="1" race="ELYOS"/>
+            <item id="112101680" name="Kaisinel Protector's Pauldrons" count="1" race="ELYOS"/>
+            <item id="111101734" name="Kaisinel Protector's Gloves" count="1" race="ELYOS"/>
+            <item id="114101779" name="Kaisinel Protector's Shoes" count="1" race="ELYOS"/>
+            <item id="110101920" name="Marchutan Protector's Tunic" count="1" race="ASMODIANS"/>
+            <item id="113101747" name="Marchutan Protector's Leggings" count="1" race="ASMODIANS"/>
+            <item id="112101682" name="Marchutan Protector's Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="111101736" name="Marchutan Protector's Gloves" count="1" race="ASMODIANS"/>
+            <item id="114101781" name="Marchutan Protector's Shoes" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101918" name="Kaisinel Protector's Tunic" count="1" race="ELYOS"/>
+            <item id="113101745" name="Kaisinel Protector's Leggings" count="1" race="ELYOS"/>
+            <item id="112101680" name="Kaisinel Protector's Pauldrons" count="1" race="ELYOS"/>
+            <item id="111101734" name="Kaisinel Protector's Gloves" count="1" race="ELYOS"/>
+            <item id="114101779" name="Kaisinel Protector's Shoes" count="1" race="ELYOS"/>
+            <item id="110101920" name="Marchutan Protector's Tunic" count="1" race="ASMODIANS"/>
+            <item id="113101747" name="Marchutan Protector's Leggings" count="1" race="ASMODIANS"/>
+            <item id="112101682" name="Marchutan Protector's Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="111101736" name="Marchutan Protector's Gloves" count="1" race="ASMODIANS"/>
+            <item id="114101781" name="Marchutan Protector's Shoes" count="1" race="ASMODIANS"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101918" name="Kaisinel Protector's Tunic" count="1" race="ELYOS"/>
+            <item id="113101745" name="Kaisinel Protector's Leggings" count="1" race="ELYOS"/>
+            <item id="112101680" name="Kaisinel Protector's Pauldrons" count="1" race="ELYOS"/>
+            <item id="111101734" name="Kaisinel Protector's Gloves" count="1" race="ELYOS"/>
+            <item id="114101779" name="Kaisinel Protector's Shoes" count="1" race="ELYOS"/>
+            <item id="110101920" name="Marchutan Protector's Tunic" count="1" race="ASMODIANS"/>
+            <item id="113101747" name="Marchutan Protector's Leggings" count="1" race="ASMODIANS"/>
+            <item id="112101682" name="Marchutan Protector's Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="111101736" name="Marchutan Protector's Gloves" count="1" race="ASMODIANS"/>
+            <item id="114101781" name="Marchutan Protector's Shoes" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054342" name="[Event] Brilliant Pallasite Material Box">
         <items>
             <item id="169405338" name="Pallasite Ore" count="5"/>
@@ -5723,11 +6995,302 @@
             <item id="169405341" name="Pallasite Refined Water" count="5"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054343" name="[Event] Vasharti Brigade General's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054344" name="[Event] Vasharti Brigade General's Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054343" name="[Event] Vasharti Brigade General's Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100101387" name="Vasharti Brigade General's Mace" count="1"/>
+            <item id="100901423" name="Vasharti Brigade General's Greatsword" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100101387" name="Vasharti Brigade General's Mace" count="1"/>
+            <item id="100201561" name="Vasharti Brigade General's Dagger" count="1"/>
+            <item id="100901423" name="Vasharti Brigade General's Greatsword" count="1"/>
+            <item id="101301312" name="Vasharti Brigade General's Polearm" count="1"/>
+            <item id="101701407" name="Vasharti Brigade General's Bow" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100201561" name="Vasharti Brigade General's Dagger" count="1"/>
+            <item id="101701407" name="Vasharti Brigade General's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100001796" name="Vasharti Brigade General's Sword" count="1"/>
+            <item id="100201561" name="Vasharti Brigade General's Dagger" count="1"/>
+            <item id="101701407" name="Vasharti Brigade General's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101387" name="Vasharti Brigade General's Mace" count="1"/>
+            <item id="100101388" name="Vasharti Brigade General's War Hammer" count="1"/>
+            <item id="101501402" name="Vasharti Brigade General's Staff" count="1"/>
+            <item id="101501403" name="Vasharti Brigade General's Cane" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+            <item id="115001828" name="Vasharti Brigade General's Scale Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101387" name="Vasharti Brigade General's Mace" count="1"/>
+            <item id="100101388" name="Vasharti Brigade General's War Hammer" count="1"/>
+            <item id="101501402" name="Vasharti Brigade General's Staff" count="1"/>
+            <item id="101501403" name="Vasharti Brigade General's Cane" count="1"/>
+            <item id="115001827" name="Vasharti Brigade General's Shield" count="1"/>
+            <item id="115001828" name="Vasharti Brigade General's Scale Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501354" name="Vasharti Brigade General's Orb" count="1"/>
+            <item id="100601471" name="Vasharti Brigade General's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501354" name="Vasharti Brigade General's Orb" count="1"/>
+            <item id="100601471" name="Vasharti Brigade General's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801265" name="Vasharti Brigade General's Pistol" count="1"/>
+            <item id="101901172" name="Vasharti Brigade General's Aethercannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001291" name="Vasharti Brigade General's Harp" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101108" name="Vasharti Brigade General's Cipher-Blade" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054344" name="[Event] Vasharti Brigade General's Armor Box">
+        <items player_class="TEMPLAR">
+            <item id="110601665" name="Vasharti Brigade General's Templar Breastplate" count="1"/>
+            <item id="113601611" name="Vasharti Brigade General's Templar Greaves" count="1"/>
+            <item id="111601628" name="Vasharti Brigade General's Templar Gauntlets" count="1"/>
+            <item id="114601618" name="Vasharti Brigade General's Templar Sabatons" count="1"/>
+            <item id="112601610" name="Vasharti Brigade General's Templar Shoulderplates" count="1"/>
+            <item id="125004273" name="Vasharti Brigade General's Templar Plate Helmet" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="110601666" name="Vasharti Brigade General's Gladiator Breastplate" count="1"/>
+            <item id="113601612" name="Vasharti Brigade General's Gladiator Greaves" count="1"/>
+            <item id="111601629" name="Vasharti Brigade General's Gladiator Gauntlets" count="1"/>
+            <item id="114601619" name="Vasharti Brigade General's Gladiator Sabatons" count="1"/>
+            <item id="112601611" name="Vasharti Brigade General's Gladiator Shoulderplates" count="1"/>
+            <item id="125004274" name="Vasharti Brigade General's Gladiator Plate Helmet" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="110301871" name="Vasharti Brigade General's Jerkin" count="1"/>
+            <item id="113301840" name="Vasharti Brigade General's Legguards" count="1"/>
+            <item id="111301809" name="Vasharti Brigade General's Vambraces" count="1"/>
+            <item id="114301877" name="Vasharti Brigade General's Boots" count="1"/>
+            <item id="112301748" name="Vasharti Brigade General's Shoulderguards" count="1"/>
+            <item id="125004278" name="Vasharti Brigade General's Hat" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="110301871" name="Vasharti Brigade General's Jerkin" count="1"/>
+            <item id="113301840" name="Vasharti Brigade General's Legguards" count="1"/>
+            <item id="111301809" name="Vasharti Brigade General's Vambraces" count="1"/>
+            <item id="114301877" name="Vasharti Brigade General's Boots" count="1"/>
+            <item id="112301748" name="Vasharti Brigade General's Shoulderguards" count="1"/>
+            <item id="125004278" name="Vasharti Brigade General's Hat" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="110551201" name="Vasharti Brigade General's Cleric Hauberk" count="1"/>
+            <item id="113501778" name="Vasharti Brigade General's Cleric Chausses" count="1"/>
+            <item id="111501760" name="Vasharti Brigade General's Cleric Handguards" count="1"/>
+            <item id="114501788" name="Vasharti Brigade General's Cleric Brogans" count="1"/>
+            <item id="112501699" name="Vasharti Brigade General's Cleric Spaulders" count="1"/>
+            <item id="125004276" name="Vasharti Brigade General's Cleric Chain Helm" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="110551200" name="Vasharti Brigade General's Chanter Hauberk" count="1"/>
+            <item id="113501777" name="Vasharti Brigade General's Chanter Chausses" count="1"/>
+            <item id="111501759" name="Vasharti Brigade General's Chanter Handguards" count="1"/>
+            <item id="114501787" name="Vasharti Brigade General's Chanter Brogans" count="1"/>
+            <item id="112501698" name="Vasharti Brigade General's Chanter Spaulders" count="1"/>
+            <item id="125004275" name="Vasharti Brigade General's Chanter Chain Helm" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="110101878" name="Vasharti Brigade General's Jacket" count="1"/>
+            <item id="113101704" name="Vasharti Brigade General's Leggings" count="1"/>
+            <item id="111101693" name="Vasharti Brigade General's Gloves" count="1"/>
+            <item id="114101738" name="Vasharti Brigade General's Shoes" count="1"/>
+            <item id="112101642" name="Vasharti Brigade General's Pauldrons" count="1"/>
+            <item id="125004280" name="Vasharti Brigade General's Cloth Hat" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="110101878" name="Vasharti Brigade General's Jacket" count="1"/>
+            <item id="113101704" name="Vasharti Brigade General's Leggings" count="1"/>
+            <item id="111101693" name="Vasharti Brigade General's Gloves" count="1"/>
+            <item id="114101738" name="Vasharti Brigade General's Shoes" count="1"/>
+            <item id="112101642" name="Vasharti Brigade General's Pauldrons" count="1"/>
+            <item id="125004280" name="Vasharti Brigade General's Cloth Hat" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="110301872" name="Vasharti Brigade General's Gunslinger Leather Breastplate" count="1"/>
+            <item id="113301841" name="Vasharti Brigade General's Gunslinger Leather Gaiters" count="1"/>
+            <item id="111301810" name="Vasharti Brigade General's Gunslinger Leather Protective Gloves" count="1"/>
+            <item id="114301878" name="Vasharti Brigade General's Gunslinger Leather Combat Boots" count="1"/>
+            <item id="112301749" name="Vasharti Brigade General's Gunslinger Leather Pauldrons" count="1"/>
+            <item id="125004279" name="Vasharti Brigade General's Gunslinger Leather Helmet" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="110101879" name="Vasharti Brigade General's Songweaver Jacket" count="1"/>
+            <item id="113101705" name="Vasharti Brigade General's Songweaver Leggings" count="1"/>
+            <item id="111101694" name="Vasharti Brigade General's Songweaver Gloves" count="1"/>
+            <item id="114101739" name="Vasharti Brigade General's Songweaver Shoes" count="1"/>
+            <item id="112101643" name="Vasharti Brigade General's Songweaver Pauldrons" count="1"/>
+            <item id="125004281" name="Vasharti Brigade General's Songweaver Bandana" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="110551202" name="Vasharti Brigade General's Aethertech Chain Breastplate" count="1"/>
+            <item id="113501779" name="Vasharti Brigade General's Aethertech Chain Gaiters" count="1"/>
+            <item id="111501761" name="Vasharti Brigade General's Aethertech Chain Combat Gloves" count="1"/>
+            <item id="114501789" name="Vasharti Brigade General's Aethertech Chain Combat Boots" count="1"/>
+            <item id="112501700" name="Vasharti Brigade General's Aethertech Chain Spaulders" count="1"/>
+            <item id="125004276" name="Vasharti Brigade General's Cleric Chain Helm" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054370" name="Master Veteran's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054371" name="Remodeled Danuar Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054372" name="[Event] Lannok's Fabled Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054371" name="Remodeled Danuar Armor Box">
+        <items player_class="GLADIATOR">
+            <item id="111601431" name="Remodeled Danuar Gauntlets" count="1"/>
+            <item id="111601432" name="Remodeled Danuar Gauntlets" count="1"/>
+            <item id="112601412" name="Remodeled Danuar Shoulderplates" count="1"/>
+            <item id="112601413" name="Remodeled Danuar Shoulderplates" count="1"/>
+            <item id="114601419" name="Remodeled Danuar Sabatons" count="1"/>
+            <item id="114601420" name="Remodeled Danuar Sabatons" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="111601431" name="Remodeled Danuar Gauntlets" count="1"/>
+            <item id="111601432" name="Remodeled Danuar Gauntlets" count="1"/>
+            <item id="112601412" name="Remodeled Danuar Shoulderplates" count="1"/>
+            <item id="112601413" name="Remodeled Danuar Shoulderplates" count="1"/>
+            <item id="114601419" name="Remodeled Danuar Sabatons" count="1"/>
+            <item id="114601420" name="Remodeled Danuar Sabatons" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="111501450" name="Remodeled Danuar Handguards" count="1"/>
+            <item id="111501451" name="Remodeled Danuar Magic Handguards" count="1"/>
+            <item id="111501504" name="Remodeled Magic Danuar Handguards" count="1"/>
+            <item id="112501392" name="Remodeled Danuar Spaulders" count="1"/>
+            <item id="112501393" name="Remodeled Danuar Magic Spaulders" count="1"/>
+            <item id="112501446" name="Remodeled Magic Danuar Spaulders" count="1"/>
+            <item id="114501475" name="Remodeled Danuar Brogans" count="1"/>
+            <item id="114501476" name="Remodeled Danuar Magic Brogans" count="1"/>
+            <item id="114501531" name="Remodeled Magic Danuar Brogans" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="111501450" name="Remodeled Danuar Handguards" count="1"/>
+            <item id="111501451" name="Remodeled Danuar Magic Handguards" count="1"/>
+            <item id="111501504" name="Remodeled Magic Danuar Handguards" count="1"/>
+            <item id="112501392" name="Remodeled Danuar Spaulders" count="1"/>
+            <item id="112501393" name="Remodeled Danuar Magic Spaulders" count="1"/>
+            <item id="112501446" name="Remodeled Magic Danuar Spaulders" count="1"/>
+            <item id="114501475" name="Remodeled Danuar Brogans" count="1"/>
+            <item id="114501476" name="Remodeled Danuar Magic Brogans" count="1"/>
+            <item id="114501531" name="Remodeled Magic Danuar Brogans" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="111501450" name="Remodeled Danuar Handguards" count="1"/>
+            <item id="111501451" name="Remodeled Danuar Magic Handguards" count="1"/>
+            <item id="111501504" name="Remodeled Magic Danuar Handguards" count="1"/>
+            <item id="112501392" name="Remodeled Danuar Spaulders" count="1"/>
+            <item id="112501393" name="Remodeled Danuar Magic Spaulders" count="1"/>
+            <item id="112501446" name="Remodeled Magic Danuar Spaulders" count="1"/>
+            <item id="114501475" name="Remodeled Danuar Brogans" count="1"/>
+            <item id="114501476" name="Remodeled Danuar Magic Brogans" count="1"/>
+            <item id="114501531" name="Remodeled Magic Danuar Brogans" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="111301592" name="Remodeled Danuar Magic Vambrace" count="1"/>
+            <item id="111301593" name="Remodeled Danuar Vambrace" count="1"/>
+            <item id="112301531" name="Remodeled Danuar Magic Shoulderguards" count="1"/>
+            <item id="112301532" name="Remodeled Danuar Shoulderguards" count="1"/>
+            <item id="114301658" name="Remodeled Danuar Magic Boots" count="1"/>
+            <item id="114301659" name="Remodeled Danuar Boots" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="111301592" name="Remodeled Danuar Magic Vambrace" count="1"/>
+            <item id="111301593" name="Remodeled Danuar Vambrace" count="1"/>
+            <item id="112301531" name="Remodeled Danuar Magic Shoulderguards" count="1"/>
+            <item id="112301532" name="Remodeled Danuar Shoulderguards" count="1"/>
+            <item id="114301658" name="Remodeled Danuar Magic Boots" count="1"/>
+            <item id="114301659" name="Remodeled Danuar Boots" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="111301592" name="Remodeled Danuar Magic Vambrace" count="1"/>
+            <item id="111301593" name="Remodeled Danuar Vambrace" count="1"/>
+            <item id="112301531" name="Remodeled Danuar Magic Shoulderguards" count="1"/>
+            <item id="112301532" name="Remodeled Danuar Shoulderguards" count="1"/>
+            <item id="114301658" name="Remodeled Danuar Magic Boots" count="1"/>
+            <item id="114301659" name="Remodeled Danuar Boots" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="111101487" name="Remodeled Danuar Gloves" count="1"/>
+            <item id="111101488" name="Remodeled Danuar Gloves" count="1"/>
+            <item id="112101440" name="Remodeled Danuar Pauldrons" count="1"/>
+            <item id="112101441" name="Remodeled Danuar Pauldrons" count="1"/>
+            <item id="114101534" name="Remodeled Danuar Shoes" count="1"/>
+            <item id="114101535" name="Remodeled Danuar Shoes" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="111101487" name="Remodeled Danuar Gloves" count="1"/>
+            <item id="111101488" name="Remodeled Danuar Gloves" count="1"/>
+            <item id="112101440" name="Remodeled Danuar Pauldrons" count="1"/>
+            <item id="112101441" name="Remodeled Danuar Pauldrons" count="1"/>
+            <item id="114101534" name="Remodeled Danuar Shoes" count="1"/>
+            <item id="114101535" name="Remodeled Danuar Shoes" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="111101487" name="Remodeled Danuar Gloves" count="1"/>
+            <item id="111101488" name="Remodeled Danuar Gloves" count="1"/>
+            <item id="112101440" name="Remodeled Danuar Pauldrons" count="1"/>
+            <item id="112101441" name="Remodeled Danuar Pauldrons" count="1"/>
+            <item id="114101534" name="Remodeled Danuar Shoes" count="1"/>
+            <item id="114101535" name="Remodeled Danuar Shoes" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054372" name="[Event] Lannok's Fabled Weapon Box">
+        <items player_class="SORCERER">
+            <item id="100500577" name="Lannok's Jewel" count="1"/>
+            <item id="100600614" name="Lannok's Tome" count="1"/>
+            <item id="100500633" name="Lannok's Orb" count="1"/>
+            <item id="100600690" name="Lannok's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100500577" name="Lannok's Jewel" count="1"/>
+            <item id="100600614" name="Lannok's Tome" count="1"/>
+            <item id="100500633" name="Lannok's Orb" count="1"/>
+            <item id="100600690" name="Lannok's Spellbook" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100000728" name="Lannok's Sword" count="1"/>
+            <item id="100200678" name="Lannok's Dagger" count="1"/>
+            <item id="101700599" name="Lannok's Longbow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100000728" name="Lannok's Sword" count="1"/>
+            <item id="100200678" name="Lannok's Dagger" count="1"/>
+            <item id="101700599" name="Lannok's Longbow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100100573" name="Lannok's Warhammer" count="1"/>
+            <item id="101500571" name="Lannok's Staff" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100100573" name="Lannok's Warhammer" count="1"/>
+            <item id="101500571" name="Lannok's Staff" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100000728" name="Lannok's Sword" count="1"/>
+            <item id="100100573" name="Lannok's Warhammer" count="1"/>
+            <item id="100900571" name="Lannok's Greatsword" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100000728" name="Lannok's Sword" count="1"/>
+            <item id="100100573" name="Lannok's Warhammer" count="1"/>
+            <item id="100200678" name="Lannok's Dagger" count="1"/>
+            <item id="100900571" name="Lannok's Greatsword" count="1"/>
+            <item id="101300543" name="Lannok's Spear" count="1"/>
+            <item id="101700599" name="Lannok's Longbow" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054383" name="Divine Belt Box">
         <items>
             <item id="123001468" name="Special Elite Emissary's Divine Band" count="1" race="ELYOS"/>
@@ -5832,7 +7395,66 @@
             <item id="152014007" name="Hard Balaur Scale" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054401" name="[Event] Lunatic Modor's Mythic Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054401" name="[Event] Lunatic Modor's Mythic Weapon Box">
+        <items player_class="TEMPLAR">
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="100901500" name="[Jakurerk] Lunatic Grendal's Great Sword" count="1"/>
+            <item id="115001927" name="[Jakurerk] Lunatic Grendal's Shield" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100201643" name="[Jakurerk] Lunatic Grendal's Dagger" count="1"/>
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="100901500" name="[Jakurerk] Lunatic Grendal's Great Sword" count="1"/>
+            <item id="101301383" name="[Jakurerk] Lunatic Grendal's Polearm" count="1"/>
+            <item id="101701477" name="[Jakurerk] Lunatic Grendal's Bow" count="1"/>
+            <item id="115001927" name="[Jakurerk] Lunatic Grendal's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201643" name="[Jakurerk] Lunatic Grendal's Dagger" count="1"/>
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="101701477" name="[Jakurerk] Lunatic Grendal's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201643" name="[Jakurerk] Lunatic Grendal's Dagger" count="1"/>
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="101701477" name="[Jakurerk] Lunatic Grendal's Bow" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501423" name="[Jakurerk] Lunatic Grendal's Orb" count="1"/>
+            <item id="100601541" name="[Jakurerk] Lunatic Grendal's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501423" name="[Jakurerk] Lunatic Grendal's Orb" count="1"/>
+            <item id="100601541" name="[Jakurerk] Lunatic Grendal's Spellbook" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101462" name="[Jakurerk] Lunatic Grendal's Mace" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="101501481" name="[Jakurerk] Lunatic Grendal's Staff" count="1"/>
+            <item id="101501482" name="[Jakurerk] Lunatic Grendal's Cane" count="1"/>
+            <item id="115001928" name="[Jakurerk] Lunatic Grendal's Scale Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101462" name="[Jakurerk] Lunatic Grendal's Mace" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="101501481" name="[Jakurerk] Lunatic Grendal's Staff" count="1"/>
+            <item id="101501482" name="[Jakurerk] Lunatic Grendal's Cane" count="1"/>
+            <item id="115001928" name="[Jakurerk] Lunatic Grendal's Scale Shield" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801318" name="[Jakurerk] Lunatic Grendal's Magic Gun" count="1"/>
+            <item id="101901223" name="[Jakurerk] Lunatic Grendal's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001345" name="[Jakurerk] Lunatic Grendal's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101161" name="[Jakurerk] Lunatic Grendal's Keyblade" count="1"/>
+            <item id="101801318" name="[Jakurerk] Lunatic Grendal's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box">
         <items>
             <item id="160010445" name="Strong Dignified Ayas Transformation Candy" count="3" race="ELYOS"/>
@@ -5861,7 +7483,66 @@
     </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054408" name="[Event] Wholehearted Ayas Manastone Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054409" name="[Event] Wholehearted Ayas Ancient Manastone Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054420" name="[Event] Lunatic Modor's Mythic Weapon Box (21 days)"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054420" name="[Event] Lunatic Modor's Mythic Weapon Box (21 days)">
+        <items player_class="TEMPLAR">
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="100901500" name="[Jakurerk] Lunatic Grendal's Great Sword" count="1"/>
+            <item id="115001927" name="[Jakurerk] Lunatic Grendal's Shield" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100201643" name="[Jakurerk] Lunatic Grendal's Dagger" count="1"/>
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="100901500" name="[Jakurerk] Lunatic Grendal's Great Sword" count="1"/>
+            <item id="101301383" name="[Jakurerk] Lunatic Grendal's Polearm" count="1"/>
+            <item id="101701477" name="[Jakurerk] Lunatic Grendal's Bow" count="1"/>
+            <item id="115001927" name="[Jakurerk] Lunatic Grendal's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201643" name="[Jakurerk] Lunatic Grendal's Dagger" count="1"/>
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="101701477" name="[Jakurerk] Lunatic Grendal's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201643" name="[Jakurerk] Lunatic Grendal's Dagger" count="1"/>
+            <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
+            <item id="101701477" name="[Jakurerk] Lunatic Grendal's Bow" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501423" name="[Jakurerk] Lunatic Grendal's Orb" count="1"/>
+            <item id="100601541" name="[Jakurerk] Lunatic Grendal's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501423" name="[Jakurerk] Lunatic Grendal's Orb" count="1"/>
+            <item id="100601541" name="[Jakurerk] Lunatic Grendal's Spellbook" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101462" name="[Jakurerk] Lunatic Grendal's Mace" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="101501481" name="[Jakurerk] Lunatic Grendal's Staff" count="1"/>
+            <item id="101501482" name="[Jakurerk] Lunatic Grendal's Cane" count="1"/>
+            <item id="115001928" name="[Jakurerk] Lunatic Grendal's Scale Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101462" name="[Jakurerk] Lunatic Grendal's Mace" count="1"/>
+            <item id="100101461" name="[Jakurerk] Lunatic Grendal's War Hammer" count="1"/>
+            <item id="101501481" name="[Jakurerk] Lunatic Grendal's Staff" count="1"/>
+            <item id="101501482" name="[Jakurerk] Lunatic Grendal's Cane" count="1"/>
+            <item id="115001928" name="[Jakurerk] Lunatic Grendal's Scale Shield" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801318" name="[Jakurerk] Lunatic Grendal's Magic Gun" count="1"/>
+            <item id="101901223" name="[Jakurerk] Lunatic Grendal's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001345" name="[Jakurerk] Lunatic Grendal's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101161" name="[Jakurerk] Lunatic Grendal's Keyblade" count="1"/>
+            <item id="101801318" name="[Jakurerk] Lunatic Grendal's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054427" name="Sea Feast Weapon Box">
         <items>
             <item id="100001791" name="Wave Song Sword" count="1"/>
@@ -5918,12 +7599,296 @@
             <item id="160002497" name="Fresh Oily Plucar Dragon Salad" count="500"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054449" name="Brilliant Nether Water Dragon King's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054450" name="Daring Nether Water Dragon's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054451" name="Brilliant Nether Fire Dragon King's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054452" name="Daring Nether Fire Dragon's Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054461" name="Daru Thief Transformation Candy Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054485" name="Brilliant Nether Fire Dragon King's Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054449" name="Brilliant Nether Water Dragon King's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201637" name="Brilliant Nether Water Dragon King's Dagger" count="1"/>
+            <item id="100001946" name="Brilliant Nether Water Dragon King's Sword" count="1"/>
+            <item id="100101455" name="Brilliant Nether Water Dragon King's Mace" count="1"/>
+            <item id="100901491" name="Brilliant Nether Water Dragon King's Great Sword" count="1"/>
+            <item id="101301378" name="Brilliant Nether Water Dragon King's Polearm" count="1"/>
+            <item id="101701472" name="Brilliant Nether Water Dragon King's Bow" count="1"/>
+            <item id="115001919" name="Brilliant Nether Water Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001946" name="Brilliant Nether Water Dragon King's Sword" count="1"/>
+            <item id="100101455" name="Brilliant Nether Water Dragon King's Mace" count="1"/>
+            <item id="100901491" name="Brilliant Nether Water Dragon King's Great Sword" count="1"/>
+            <item id="115001919" name="Brilliant Nether Water Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201637" name="Brilliant Nether Water Dragon King's Dagger" count="1"/>
+            <item id="100001946" name="Brilliant Nether Water Dragon King's Sword" count="1"/>
+            <item id="101701472" name="Brilliant Nether Water Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201637" name="Brilliant Nether Water Dragon King's Dagger" count="1"/>
+            <item id="100001946" name="Brilliant Nether Water Dragon King's Sword" count="1"/>
+            <item id="101701472" name="Brilliant Nether Water Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101455" name="Brilliant Nether Water Dragon King's Mace" count="1"/>
+            <item id="101501475" name="Brilliant Nether Water Dragon King's Staff" count="1"/>
+            <item id="115001919" name="Brilliant Nether Water Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101455" name="Brilliant Nether Water Dragon King's Mace" count="1"/>
+            <item id="101501475" name="Brilliant Nether Water Dragon King's Staff" count="1"/>
+            <item id="115001919" name="Brilliant Nether Water Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501418" name="Brilliant Nether Water Dragon King's Orb" count="1"/>
+            <item id="100601536" name="Brilliant Nether Water Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501418" name="Brilliant Nether Water Dragon King's Orb" count="1"/>
+            <item id="100601536" name="Brilliant Nether Water Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801312" name="Brilliant Nether Water Dragon King's Magic Gun" count="1"/>
+            <item id="101901218" name="Brilliant Nether Water Dragon King's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001340" name="Brilliant Nether Water Dragon King's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101156" name="Brilliant Nether Water Dragon King's Keyblade" count="1"/>
+            <item id="101801312" name="Brilliant Nether Water Dragon King's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054450" name="Daring Nether Water Dragon's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201636" name="Daring Nether Water Dragon's Dagger" count="1"/>
+            <item id="100001945" name="Daring Nether Water Dragon's Sword" count="1"/>
+            <item id="100101454" name="Daring Nether Water Dragon's Mace" count="1"/>
+            <item id="100901490" name="Daring Nether Water Dragon's Great Sword" count="1"/>
+            <item id="101301377" name="Daring Nether Water Dragon's Polearm" count="1"/>
+            <item id="101701471" name="Daring Nether Water Dragon's Bow" count="1"/>
+            <item id="115001918" name="Daring Nether Water Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001945" name="Daring Nether Water Dragon's Sword" count="1"/>
+            <item id="100101454" name="Daring Nether Water Dragon's Mace" count="1"/>
+            <item id="100901490" name="Daring Nether Water Dragon's Great Sword" count="1"/>
+            <item id="115001918" name="Daring Nether Water Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201636" name="Daring Nether Water Dragon's Dagger" count="1"/>
+            <item id="100001945" name="Daring Nether Water Dragon's Sword" count="1"/>
+            <item id="101701471" name="Daring Nether Water Dragon's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201636" name="Daring Nether Water Dragon's Dagger" count="1"/>
+            <item id="100001945" name="Daring Nether Water Dragon's Sword" count="1"/>
+            <item id="101701471" name="Daring Nether Water Dragon's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101454" name="Daring Nether Water Dragon's Mace" count="1"/>
+            <item id="101501474" name="Daring Nether Water Dragon's Staff" count="1"/>
+            <item id="115001918" name="Daring Nether Water Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101454" name="Daring Nether Water Dragon's Mace" count="1"/>
+            <item id="101501474" name="Daring Nether Water Dragon's Staff" count="1"/>
+            <item id="115001918" name="Daring Nether Water Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501417" name="Daring Nether Water Dragon's Orb" count="1"/>
+            <item id="100601535" name="Daring Nether Water Dragon's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501417" name="Daring Nether Water Dragon's Orb" count="1"/>
+            <item id="100601535" name="Daring Nether Water Dragon's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801311" name="Daring Nether Water Dragon's Magic Gun" count="1"/>
+            <item id="101901217" name="Daring Nether Water Dragon's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001339" name="Daring Nether Water Dragon's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101155" name="Daring Nether Water Dragon's Keyblade" count="1"/>
+            <item id="101801311" name="Daring Nether Water Dragon's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054451" name="Brilliant Nether Fire Dragon King's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201634" name="Brilliant Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="100901488" name="Brilliant Nether Fire Dragon King's Great Sword" count="1"/>
+            <item id="101301375" name="Brilliant Nether Fire Dragon King's Polearm" count="1"/>
+            <item id="101701469" name="Brilliant Nether Fire Dragon King's Bow" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="100901488" name="Brilliant Nether Fire Dragon King's Great Sword" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201634" name="Brilliant Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="101701469" name="Brilliant Nether Fire Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201634" name="Brilliant Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="101701469" name="Brilliant Nether Fire Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="101501472" name="Brilliant Nether Fire Dragon King's Staff" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="101501472" name="Brilliant Nether Fire Dragon King's Staff" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501415" name="Brilliant Nether Fire Dragon King's Orb" count="1"/>
+            <item id="100601533" name="Brilliant Nether Fire Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501415" name="Brilliant Nether Fire Dragon King's Orb" count="1"/>
+            <item id="100601533" name="Brilliant Nether Fire Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801309" name="Brilliant Nether Fire Dragon King's Magic Gun" count="1"/>
+            <item id="101901215" name="Brilliant Nether Fire Dragon King's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001337" name="Brilliant Nether Fire Dragon King's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101153" name="Brilliant Nether Fire Dragon King's Keyblade" count="1"/>
+            <item id="101801309" name="Brilliant Nether Fire Dragon King's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054452" name="Daring Nether Fire Dragon's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201633" name="Daring Nether Fire Dragon's Dagger" count="1"/>
+            <item id="100001942" name="Daring Nether Fire Dragon's Sword" count="1"/>
+            <item id="100101451" name="Daring Nether Fire Dragon's Mace" count="1"/>
+            <item id="100901487" name="Daring Nether Fire Dragon's Great Sword" count="1"/>
+            <item id="101301374" name="Daring Nether Fire Dragon's Polearm" count="1"/>
+            <item id="101701468" name="Daring Nether Fire Dragon's Bow" count="1"/>
+            <item id="115001915" name="Daring Nether Fire Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001942" name="Daring Nether Fire Dragon's Sword" count="1"/>
+            <item id="100101451" name="Daring Nether Fire Dragon's Mace" count="1"/>
+            <item id="100901487" name="Daring Nether Fire Dragon's Great Sword" count="1"/>
+            <item id="115001915" name="Daring Nether Fire Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201633" name="Daring Nether Fire Dragon's Dagger" count="1"/>
+            <item id="100001942" name="Daring Nether Fire Dragon's Sword" count="1"/>
+            <item id="101701468" name="Daring Nether Fire Dragon's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201633" name="Daring Nether Fire Dragon's Dagger" count="1"/>
+            <item id="100001942" name="Daring Nether Fire Dragon's Sword" count="1"/>
+            <item id="101701468" name="Daring Nether Fire Dragon's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101451" name="Daring Nether Fire Dragon's Mace" count="1"/>
+            <item id="101501471" name="Daring Nether Fire Dragon's Staff" count="1"/>
+            <item id="115001915" name="Daring Nether Fire Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101451" name="Daring Nether Fire Dragon's Mace" count="1"/>
+            <item id="101501471" name="Daring Nether Fire Dragon's Staff" count="1"/>
+            <item id="115001915" name="Daring Nether Fire Dragon's Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501414" name="Daring Nether Fire Dragon's Orb" count="1"/>
+            <item id="100601532" name="Daring Nether Fire Dragon's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501414" name="Daring Nether Fire Dragon's Orb" count="1"/>
+            <item id="100601532" name="Daring Nether Fire Dragon's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801308" name="Daring Nether Fire Dragon's Magic Gun" count="1"/>
+            <item id="101901214" name="Daring Nether Fire Dragon's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001336" name="Daring Nether Fire Dragon's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101152" name="Daring Nether Fire Dragon's Keyblade" count="1"/>
+            <item id="101801308" name="Daring Nether Fire Dragon's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054461" name="Daru Thief Transformation Candy Box">
+        <items>
+            <item id="160010439" name="[Event] Dignified Strengthened Robber Rabbit Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010441" name="[Event] Wise Strengthened Robber Rabbit Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010443" name="[Event] Fast Strengthened Robber Rabbit Transformation Candy" count="1" race="ELYOS"/>
+            <item id="160010440" name="[Event] Dignified Strengthened Robber Rabbit Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010442" name="[Event] Wise Strengthened Robber Rabbit Transformation Candy" count="1" race="ASMODIANS"/>
+            <item id="160010444" name="[Event] Fast Strengthened Robber Rabbit Transformation Candy" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054485" name="Brilliant Nether Fire Dragon King's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201634" name="Brilliant Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="100901488" name="Brilliant Nether Fire Dragon King's Great Sword" count="1"/>
+            <item id="101301375" name="Brilliant Nether Fire Dragon King's Polearm" count="1"/>
+            <item id="101701469" name="Brilliant Nether Fire Dragon King's Bow" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="100901488" name="Brilliant Nether Fire Dragon King's Great Sword" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201634" name="Brilliant Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="101701469" name="Brilliant Nether Fire Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201634" name="Brilliant Nether Fire Dragon King's Dagger" count="1"/>
+            <item id="100001943" name="Brilliant Nether Fire Dragon King's Sword" count="1"/>
+            <item id="101701469" name="Brilliant Nether Fire Dragon King's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="101501472" name="Brilliant Nether Fire Dragon King's Staff" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101452" name="Brilliant Nether Fire Dragon King's Mace" count="1"/>
+            <item id="101501472" name="Brilliant Nether Fire Dragon King's Staff" count="1"/>
+            <item id="115001916" name="Brilliant Nether Fire Dragon King's Shield" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501415" name="Brilliant Nether Fire Dragon King's Orb" count="1"/>
+            <item id="100601533" name="Brilliant Nether Fire Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501415" name="Brilliant Nether Fire Dragon King's Orb" count="1"/>
+            <item id="100601533" name="Brilliant Nether Fire Dragon King's Spellbook" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801309" name="Brilliant Nether Fire Dragon King's Magic Gun" count="1"/>
+            <item id="101901215" name="Brilliant Nether Fire Dragon King's Magic Cannon" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001337" name="Brilliant Nether Fire Dragon King's String Instrument" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="102101153" name="Brilliant Nether Fire Dragon King's Keyblade" count="1"/>
+            <item id="101801309" name="Brilliant Nether Fire Dragon King's Magic Gun" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054488" name="[Jakurerk] Noble Daevanion Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054489" name="[Jakurerk] Noble Daevanion Armor Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054497" name="Special Executor's Divine Weapon Box I"/> <!-- NEW -->
