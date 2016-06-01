@@ -27629,13 +27629,66 @@
 			<item id="187050025" name="[Event] White Angel Wings"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188052919" decomposable_name="Fortress Supplies"/> <!-- NEW -->
+	<decomposable item_id="188052919" decomposable_name="Fortress Supplies">
+        <items>
+            <item id="152012580" name="Fire Mote"/>
+		</items>
+		<items>
+            <item id="152012582" name="Fire Fragment"/>
+		</items>
+		<items>
+            <item id="152012584" name="Water Source"/>
+		</items>
+		<items>
+            <item id="169405252" name="Fury Powder"/>
+		</items>
+		<items>
+            <item id="169405267" name="Flame Vitality"/>
+		</items>
+		<items>
+            <item id="186000242" name="Ceramium Medal"/>
+		</items>
+		<items>
+            <item id="152012600" name="Patience Crystal"/>
+		</items>
+		<items>
+            <item id="152012602" name="Ore of Patience"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052920" decomposable_name="Manastone Box">
 		<items>
 			<random_item type="MANASTONE_RARE_GRADE_70" count="3"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188052921" decomposable_name="Ancient Relic Box"/> <!-- NEW -->
+	<decomposable item_id="188052921" decomposable_name="Ancient Relic Box">
+        <items>
+            <item id="186000065" name="Ancient Icon"/>
+		</items>
+		<items>
+            <item id="186000062" name="Lesser Ancient Seal"/>
+		</items>
+		<items>
+            <item id="186000061" name="Ancient Seal"/>
+		</items>
+		<items>
+            <item id="186000058" name="Lesser Ancient Goblet"/>
+		</items>
+		<items>
+            <item id="186000057" name="Ancient Goblet"/>
+		</items>
+		<items>
+            <item id="186000054" name="Lesser Ancient Crown"/>
+		</items>
+		<items>
+            <item id="186000250" name="Lesser Danuar Relic"/>
+		</items>
+		<items>
+            <item id="186000249" name="Danuar Relic"/>
+		</items>
+		<items>
+            <item id="186000242" name="Ceramium Medal"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052922" decomposable_name="[Event] Crimsonimbus Box">
 		<items chance="10.0">
 			<item id="190100090" name="Crimsonimbus"/>
@@ -36269,20 +36322,223 @@
 			<item id="190100142" name="Sleek Hovercycle (30 days)"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053628" decomposable_name="Pallasite Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053629" decomposable_name="Police Force Box"/> <!-- NEW -->
-	<decomposable item_id="188053630" decomposable_name="Greater Scroll Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053633" decomposable_name="Token Box"/> <!-- NEW -->
+	<decomposable item_id="188053628" decomposable_name="Pallasite Bundle">
+        <items>
+            <item id="169405338" name="Pallasite Ore"/>
+		</items>
+		<items>
+            <item id="169405339" name="Pallasite Crystal"/>
+		</items>
+		<items>
+            <item id="169405340" name="Pallasite Powder"/>
+		</items>
+		<items>
+            <item id="169405341" name="Pallasite Refined Water"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053629" decomposable_name="Police Force Box">
+        <items>
+            <item id="166200009" name="Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="166150019" name="Assured Greater Felicitous Socketing (Mythic)"/>
+		</items>
+		<items>
+            <item id="166200010" name="Mythic Armor Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="188053564" name="Illusion Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188053630" name="Greater Scroll Bundle"/>
+		</items>
+		<items>
+            <item id="164002235" name="Greater Running Scroll (10 Minutes)" count="40"/>
+		</items>
+		<items>
+            <item id="188052726" name="[Event] Ailu Form Candy Box"/>
+		</items>
+		<items>
+            <item id="110900858" name="Tiamat Tee"/>
+		</items>
+		<items>
+            <item id="110900859" name="Delightful Outfit"/>
+		</items>
+		<items>
+            <item id="110900860" name="Luxury Suit"/>
+		</items>
+		<items>
+            <item id="110900861" name="Vintage School Clothes"/>
+		</items>
+		<items>
+            <item id="110900862" name="Police Uniform"/>
+		</items>
+		<items>
+            <item id="125045516" name="Police Hat"/>
+		</items>
+		<items>
+            <item id="188053208" name="[Event] Tiamat Guard's Eternal Armor Chest"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053630" decomposable_name="Greater Scroll Bundle">
+        <items>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="GLADIATOR"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="TEMPLAR"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="ASSASSIN"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="RANGER"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="CHANTER"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="GUNNER"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="BARD"/>
+            <item id="164002236" name="Greater Courage Scroll (10 Minutes)" count="40" player_class="RIDER"/>
+            <item id="164002237" name="Greater Awakening Scroll (10 Minutes)" count="40" player_class="CLERIC"/>
+            <item id="164002237" name="Greater Awakening Scroll (10 Minutes)" count="40" player_class="SORCERER"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053633" decomposable_name="Token Box">
+        <items>
+            <item id="186000130" name="Crucible Insignia" rnd_min="1" rnd_max="100"/>
+		</items>
+		<items>
+            <item id="186000137" name="Courage Insignia" rnd_min="1" rnd_max="50"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" rnd_min="1" rnd_max="100"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053634" decomposable_name="Midsummer Honey Box"/> <!-- NEW -->
-	<decomposable item_id="188053635" decomposable_name="Kikorinerk's Sweet Surprise"/> <!-- NEW -->
+	<decomposable item_id="188053635" decomposable_name="Kikorinerk's Sweet Surprise">
+        <items>
+            <item id="166050124" name="Blazing Fighter's Idian: Physical Attack" count="2"/>
+		</items>
+		<items>
+            <item id="166050125" name="Blazing Fighter's Idian: Magical Attack" count="2"/>
+		</items>
+		<items>
+            <item id="166200014" name="Enduring Mythic Armor Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="152231937" name="[Material Conversion] Blood Mark Box"/>
+		</items>
+		<items>
+            <item id="165005081" name="Vindachinerk's Brilliant Abyss Accessory Extraction Tool"/>
+		</items>
+		<items>
+            <item id="165005074" name="Vindachinerk's Noble Abyss Accessory Extraction Tools"/>
+		</items>
+		<items>
+            <item id="166200013" name="Enduring Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="188053640" name="Dragon Lord's Mythic Weapon Box"/>
+		</items>
+		<items>
+            <item id="188053639" name="Buccaneer's Weapon Box"/>
+		</items>
+		<items>
+            <item id="188053642" name="Bonus Entry Scroll Bundle"/>
+		</items>
+		<items>
+            <item id="188053647" name="Nether Dragon's Sealed Box"/>
+		</items>
+		<items>
+            <item id="188053646" name="Nether Dragon King's Sealed Box"/>
+		</items>
+		<items>
+            <item id="188053564" name="Illusion Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188052935" name="Special Medal Chest"/>
+		</items>
+		<items>
+            <item id="188053633" name="Token Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053636" decomposable_name="Blood Mark Box">
 		<items>
 			<item id="186000236" name="Blood Mark" count="50"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053637" decomposable_name="[Event] PC Café Owner's Gift Bonanza"/> <!-- NEW -->
-	<decomposable item_id="188053638" decomposable_name="[Event] Big Ancient Coin Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053639" decomposable_name="Buccaneer's Weapon Box"/> <!-- NEW -->
+	<decomposable item_id="188053637" decomposable_name="[Event] PC Café Owner's Gift Bonanza">
+        <items>
+            <item id="188508003" name="[Motion Card] The Dragon's Moves"/>
+		</items>
+		<items>
+            <item id="166030010" name="[Event] Divine Ascension Water (7 days)"/>
+		</items>
+		<items>
+            <item id="188508004" name="[Motion Card] Private Store Sign"/>
+		</items>
+		<items>
+            <item id="188052917" name="[Event] Triniel's Shadow Wraith Attire Chest"/>
+		</items>
+		<items>
+            <item id="169230002" name="[Event] Dye: True White"/>
+		</items>
+		<items>
+            <item id="169230008" name="[Event] Dye: True Black"/>
+		</items>
+		<items>
+            <item id="164002222" name="Administrator's Boon IV - 1 Hour"/>
+		</items>
+		<items>
+            <item id="188053526" name="[Event] Aion's Steel Form Candy Box"/>
+		</items>
+		<items>
+            <item id="188053535" name="Castellan Consumables Bundle"/>
+		</items>
+		<items>
+            <item id="169000010" name="Superior Power Shard"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053638" decomposable_name="[Event] Big Ancient Coin Bundle">
+        <items>
+            <item id="186000237" name="Ancient Coin" count="30"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053639" decomposable_name="Buccaneer's Weapon Box">
+        <items>
+            <item id="100001733" name="Buccaneer's Sword"/>
+		</items>
+		<items>
+            <item id="100201499" name="Buccaneer's Dagger"/>
+		</items>
+		<items>
+            <item id="100101330" name="Buccaneer's Mace"/>
+		</items>
+		<items>
+            <item id="100501310" name="Buccaneer's Orb"/>
+		</items>
+		<items>
+            <item id="100601427" name="Buccaneer's Spellbook"/>
+		</items>
+		<items>
+            <item id="100901371" name="Buccaneer's Greatsword"/>
+		</items>
+		<items>
+            <item id="101301263" name="Buccaneer's Polearm"/>
+		</items>
+		<items>
+            <item id="101501353" name="Buccaneer's Staff"/>
+		</items>
+		<items>
+            <item id="101701364" name="Buccaneer's Bow"/>
+		</items>
+		<items>
+            <item id="101801214" name="Buccaneer's  Pistol"/>
+		</items>
+		<items>
+            <item id="101901123" name="Buccaneer's Aethercannon"/>
+		</items>
+		<items>
+            <item id="102101068" name="Buccaneer's Cipher-Blade"/>
+		</items>
+		<items>
+            <item id="102001242" name="Buccaneer's Harp"/>
+		</items>
+		<items>
+            <item id="115001755" name="Buccaneer's Shield"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053640" decomposable_name="Dragon Lord's Mythic Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188053641" decomposable_name="Gossamer Wing Box">
 		<items>
@@ -36295,8 +36551,16 @@
 			<item id="187050030" name="White Angel Wing Skin"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053643" decomposable_name="[Event] Arcade Token Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053644" decomposable_name="[Event] Small Ancient Coin Bundle"/> <!-- NEW -->
+	<decomposable item_id="188053643" decomposable_name="[Event] Arcade Token Bundle">
+        <items>
+            <item id="186000389" name="Arcade Token" count="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053644" decomposable_name="[Event] Small Ancient Coin Bundle">
+        <items>
+            <item id="186000237" name="Ancient Coin" count="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053645" decomposable_name="Shugo's Special Reward Chest">
 		<items>
 			<item id="100001695" name="Legendary Noble Katalium Sword" player_class="GLADIATOR"/>
@@ -36390,7 +36654,50 @@
 			<item id="101801181" name="Legendary Noble Katalium Pistol" player_class="RIDER"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053646" decomposable_name="Nether Dragon King's Sealed Box"/> <!-- NEW -->
+	<decomposable item_id="188053646" decomposable_name="Nether Dragon King's Sealed Box">
+        <items>
+            <item id="100001762" name="Nether Dragon King's Sword"/>
+		</items>
+		<items>
+            <item id="100101356" name="Nether Dragon King's Mace"/>
+		</items>
+		<items>
+            <item id="100201531" name="Nether Dragon King's Dagger"/>
+		</items>
+		<items>
+            <item id="100501333" name="Nether Dragon King's Orb"/>
+		</items>
+		<items>
+            <item id="100601452" name="Nether Dragon King's Spellbook"/>
+		</items>
+		<items>
+            <item id="100901397" name="Nether Dragon King's Greatsword"/>
+		</items>
+		<items>
+            <item id="101301288" name="Nether Dragon King's Polearm"/>
+		</items>
+		<items>
+            <item id="101501378" name="Nether Dragon King's Staff"/>
+		</items>
+		<items>
+            <item id="101701388" name="Nether Dragon King's Bow"/>
+		</items>
+		<items>
+            <item id="101801244" name="Nether Dragon King's Pistol"/>
+		</items>
+		<items>
+            <item id="101901153" name="Nether Dragon King's Aethercannon"/>
+		</items>
+		<items>
+            <item id="102001271" name="Nether Dragon King's Harp"/>
+		</items>
+		<items>
+            <item id="102101088" name="Nether Dragon King's Cipher-Blade"/>
+		</items>
+		<items>
+            <item id="115001797" name="Nether Dragon King's Shield"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053647" decomposable_name="Nether Dragon's Sealed Box"/> <!-- NEW -->
 	<decomposable item_id="188053648" decomposable_name="[Event] Delicious Leek Pancake"/> <!-- NEW -->
 	<decomposable item_id="188053650" decomposable_name="[Event] Timeless Weapon Box"/>
@@ -36619,7 +36926,11 @@
 			<item id="186000236" name="Blood Mark" count="10"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053664" decomposable_name="[Event] Kahrun's Insignia Box"/> <!-- NEW -->
+	<decomposable item_id="188053664" decomposable_name="[Event] Kahrun's Insignia Box">
+        <items>
+            <item id="186000143" name="Kahrun's Symbol" count="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053665" decomposable_name="[Event] Fine Ancient Crown Box">
 		<items>
 			<item id="186000347" name="[Event] Major Ancient Crown"/>
@@ -36641,8 +36952,31 @@
 			<item id="166030007" name="[Event] Tempering Solution" rnd_min="1" rnd_max="2"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053671" decomposable_name="[Event] Pallasite Material Box"/> <!-- NEW -->
-	<decomposable item_id="188053673" decomposable_name="[Event] Coiled Gift"/> <!-- NEW -->
+	<decomposable item_id="188053671" decomposable_name="[Event] Pallasite Material Box">
+        <items>
+            <item id="169405338" name="Pallasite Ore"/>
+		</items>
+		<items>
+            <item id="169405339" name="Pallasite Crystal"/>
+		</items>
+		<items>
+            <item id="169405340" name="Pallasite Powder"/>
+		</items>
+		<items>
+            <item id="169405341" name="Pallasite Refined Water"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053673" decomposable_name="[Event] Coiled Gift">
+        <items>
+            <item id="188100257" name="[Event] Blue Scale"/>
+		</items>
+		<items>
+            <item id="188100258" name="[Event] Yellow Scale"/>
+		</items>
+		<items>
+            <item id="188100259" name="[Event] Red Scale"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053674" decomposable_name="[Event] Chromatic Gift">
 		<items> <!-- Dye: True White -->
 			<item id="169200006" count="3"/>
@@ -36691,7 +37025,38 @@
 			<item id="186000236" name="Blood Mark" count="50"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053677" decomposable_name="[Event] Presto's Friendship Box"/> <!-- NEW -->
+	<decomposable item_id="188053677" decomposable_name="[Event] Presto's Friendship Box">
+        <items>
+            <item id="188052297" name="Noble Composite Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="188052648" name="Noble Fabled Godstone Box"/>
+		</items>
+		<items>
+            <item id="165020009" name="Armor Wrapping Scroll (Eternal/Lv. 60 and lower)"/>
+		</items>
+		<items>
+            <item id="165020008" name="Weapon Wrapping Scroll (Eternal/Lv. 60 and lower)"/>
+		</items>
+		<items>
+            <item id="166200010" name="Mythic Armor Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="166200009" name="Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="188053511" name="[Event] Bonus Entry Scroll Bundle"/>
+		</items>
+		<items>
+            <item id="188052709" name="[Event] Fleeting Chromanimbus Container(15 days)"/>
+		</items>
+		<items>
+            <item id="188052647" name="Daevic Fortune Cookie"/>
+		</items>
+		<items>
+            <item id="169620105" name="Berdin's 100% XP Amulet IV"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053684" decomposable_name="Nasto's Hero Accessory Box">
 		<items>
 			<item id="120001556" name="Nasto's Red Beryl Earrings"/>
@@ -36715,24 +37080,215 @@
 	<decomposable item_id="188053685" decomposable_name="Sand Wanderers Trader's Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053686" decomposable_name="Sand Wanderers Trader's Treasure Box"/> <!-- NEW -->
 	<decomposable item_id="188053687" decomposable_name="Test Item"/> <!-- NEW -->
-	<decomposable item_id="188053688" decomposable_name="Inggison Lesser Conqueror's Mark Box"/> <!-- NEW -->
-	<decomposable item_id="188053689" decomposable_name="Inggison Conqueror's Mark Box"/> <!-- NEW -->
-	<decomposable item_id="188053690" decomposable_name="Inggison Greater Conqueror's Mark Box"/> <!-- NEW -->
-	<decomposable item_id="188053691" decomposable_name="Gelkmaros Lesser Conqueror's Mark Box"/> <!-- NEW -->
-	<decomposable item_id="188053692" decomposable_name="Gelkmaros Conqueror's Mark Box"/> <!-- NEW -->
-	<decomposable item_id="188053693" decomposable_name="Gelkmaros Greater Conqueror's Mark Box"/> <!-- NEW -->
-	<decomposable item_id="188053694" decomposable_name="Ride Box of Conquest"/> <!-- NEW -->
-	<decomposable item_id="188053695" decomposable_name="High Grade Crafting Material Box of Conquest"/> <!-- NEW -->
-	<decomposable item_id="188053696" decomposable_name="Alluring Wing Feather Box"/> <!-- NEW -->
+	<decomposable item_id="188053688" decomposable_name="Inggison Lesser Conqueror's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="186000399" name="Honorable Conqueror's Mark" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053689" decomposable_name="Inggison Conqueror's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="186000399" name="Honorable Conqueror's Mark" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053690" decomposable_name="Inggison Greater Conqueror's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="5"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="186000399" name="Honorable Conqueror's Mark" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053691" decomposable_name="Gelkmaros Lesser Conqueror's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="186000399" name="Honorable Conqueror's Mark" race="ELYOS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053692" decomposable_name="Gelkmaros Conqueror's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="3"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="186000399" name="Honorable Conqueror's Mark" race="ELYOS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053693" decomposable_name="Gelkmaros Greater Conqueror's Mark Box">
+        <items>
+            <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="5"/>
+		</items>
+		<items>
+            <item id="186000236" name="Blood Mark" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="186000399" name="Honorable Conqueror's Mark" race="ELYOS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053694" decomposable_name="Ride Box of Conquest">
+        <items>
+            <item id="190100154" name="Quick Crestlich"/>
+		</items>
+		<items>
+            <item id="190100155" name="Fast Flight Bykion"/>
+		</items>
+		<items>
+            <item id="190100156" name="Quick Frillneck"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053695" decomposable_name="High Grade Crafting Material Box of Conquest">
+        <items>
+            <item id="152012585" name="Wind Mote"/>
+		</items>
+		<items>
+            <item id="152012588" name="Wind Fragment"/>
+		</items>
+		<items>
+            <item id="152012591" name="Water Fragment"/>
+		</items>
+		<items>
+            <item id="152012580" name="Fire Mote"/>
+		</items>
+		<items>
+            <item id="152012582" name="Fire Fragment"/>
+		</items>
+		<items>
+            <item id="152012584" name="Water Source"/>
+		</items>
+		<items>
+            <item id="152012581" name="Fire Breath"/>
+		</items>
+		<items>
+            <item id="152012583" name="Fire Source"/>
+		</items>
+		<items>
+            <item id="152012586" name="Wind Breath"/>
+		</items>
+		<items>
+            <item id="152012589" name="Wind Source"/>
+		</items>
+		<items>
+            <item id="152012587" name="Wind Eternity"/>
+		</items>
+		<items>
+            <item id="152012590" name="Wind Origin"/>
+		</items>
+		<items>
+            <item id="169405255" name="Water Eternity"/>
+		</items>
+		<items>
+            <item id="152012593" name="Valor's Heart"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053696" decomposable_name="Alluring Wing Feather Box">
+        <items>
+            <item id="187000149" name="Wing Feather of Allure"/>
+		</items>
+		<items>
+            <item id="187000150" name="Golden Wing Feather of Allure"/>
+		</items>
+		<items>
+            <item id="187000151" name="Bright Wing Feather of Allure"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053697" decomposable_name="Bundle of Honor and Conquest">
 		<items>
 			<item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="100"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053698" decomposable_name="Honorable Weapon Box of Conquest"/> <!-- NEW -->
+	<decomposable item_id="188053698" decomposable_name="Honorable Weapon Box of Conquest">
+        <items>
+            <item id="100001794" name="Conqueror's Honorable Sword"/>
+		</items>
+		<items>
+            <item id="100101384" name="Conqueror's Honorable Mace"/>
+		</items>
+		<items>
+            <item id="100201559" name="Conqueror's Honorable Dagger"/>
+		</items>
+		<items>
+            <item id="100501352" name="Conqueror's Honorable Orb"/>
+		</items>
+		<items>
+            <item id="100601469" name="Conqueror's Honorable Spellbook"/>
+		</items>
+		<items>
+            <item id="100901421" name="Conqueror's Honorable Greatsword"/>
+		</items>
+		<items>
+            <item id="101301310" name="Conqueror's Honorable Polearm"/>
+		</items>
+		<items>
+            <item id="101501399" name="Conqueror's Honorable Staff"/>
+		</items>
+		<items>
+            <item id="101701405" name="Conqueror's Honorable Bow"/>
+		</items>
+		<items>
+            <item id="101801263" name="Conqueror's Honorable Pistol"/>
+		</items>
+		<items>
+            <item id="101901170" name="Conqueror's Honorable Aethercannon"/>
+		</items>
+		<items>
+            <item id="102001289" name="Conqueror's Honorable Harp"/>
+		</items>
+		<items>
+            <item id="102101106" name="Conqueror's Honorable Cipher-Blade"/>
+		</items>
+		<items>
+            <item id="115001823" name="Conqueror's Honorable Protective Shield"/>
+		</items>
+		<items>
+            <item id="115001824" name="Conqueror's Honorable Magic Shield"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053699" decomposable_name="Honorable Armor Box of Conquest"/> <!-- NEW -->
 	<decomposable item_id="188053700" decomposable_name="Honorable Accessory Box of Conquest"/> <!-- NEW -->
-	<decomposable item_id="188053701" decomposable_name="Conquest Bundle"/> <!-- NEW -->
+	<decomposable item_id="188053701" decomposable_name="Conquest Bundle">
+        <items>
+            <item id="162000045" name="Major Recovery Potion" count="3"/>
+		</items>
+		<items>
+            <item id="164000076" name="Greater Running Scroll"/>
+		</items>
+		<items>
+            <item id="164000073" name="Greater Courage Scroll"/>
+		</items>
+		<items>
+            <item id="164000134" name="Greater Awakening Scroll"/>
+		</items>
+		<items>
+            <item id="188053903" name="Honorable Equipment of Conquest Box"/>
+		</items>
+		<items>
+            <item id="188053694" name="Ride Box of Conquest"/>
+		</items>
+		<items>
+            <item id="188053696" name="Alluring Wing Feather Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053702" decomposable_name="Vasharti's Equipment Box"/> <!-- NEW -->
 	<decomposable item_id="188053706" decomposable_name="Rentus Base Supplies">
 		<items>
