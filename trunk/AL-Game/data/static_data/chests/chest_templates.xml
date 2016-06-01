@@ -2033,5 +2033,18 @@
     <!-- Raksang Ruins Chest -->
     <chest npcid="702694">
     	<keyitem id="1" itemid="0" quantity="1"/>
-    </chest>    	
+    </chest>
+	<!-- Wishing Fountain Event -->
+	<!-- Yellow Aether Blossom -->
+	<chest npcid="702786">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<!-- Ruby Aether Blossom -->
+	<chest npcid="702787">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
+	<!-- Pure Aether Blossom -->
+	<chest npcid="702788">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
 </chest_templates>
