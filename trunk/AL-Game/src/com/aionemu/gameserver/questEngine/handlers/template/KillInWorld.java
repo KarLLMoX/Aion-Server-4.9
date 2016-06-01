@@ -46,8 +46,9 @@ public class KillInWorld extends QuestHandler {
     private final Set<Integer> worldIds = new HashSet<Integer>();
     private final int killAmount;
     private final int invasionWorldId;
+	private final int endDialog;
 
-    public KillInWorld(int questId, List<Integer> endNpcIds, List<Integer> startNpcIds, List<Integer> worldIds, int killAmount, int invasionWorld) {
+    public KillInWorld(int questId, List<Integer> endNpcIds, List<Integer> startNpcIds, List<Integer> worldIds, int killAmount, int invasionWorld, int endDialog) {
         super(questId);
         if (startNpcIds != null) {
             this.startNpcs.addAll(startNpcIds);
@@ -64,6 +65,7 @@ public class KillInWorld extends QuestHandler {
         this.worldIds.remove(0);
         this.killAmount = killAmount;
         this.invasionWorldId = invasionWorld;
+		this.endDialog = endDialog;
     }
 
     @Override
@@ -109,11 +111,25 @@ public class KillInWorld extends QuestHandler {
                     }
                 }
             }
-        } else if (qs != null && qs.getStatus() == QuestStatus.REWARD) {
-            if (endNpcs.contains(targetId)) {
-                return sendQuestEndDialog(env);
-            }
-        }
+        } else if (qs != null && qs.getStatus() == QuestStatus.REWARD) {        	
+			if (endNpcs.contains(targetId) && endDialog != 0) {
+				switch (dialog) {
+					case USE_OBJECT: {
+						return sendQuestDialog(env, endDialog);
+					}
+					case SELECT_QUEST_REWARD: {
+						return sendQuestDialog(env, 5);
+					}
+					case SELECTED_QUEST_NOREWARD: {
+                        return sendQuestEndDialog(env);
+					}
+					default:
+						break;
+				}
+            } else {
+				return sendQuestEndDialog(env);
+			}
+		}
         return false;
     }
 

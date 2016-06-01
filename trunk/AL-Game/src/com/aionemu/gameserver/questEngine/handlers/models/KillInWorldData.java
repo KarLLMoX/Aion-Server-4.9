@@ -47,6 +47,8 @@ public class KillInWorldData extends XMLQuest {
     protected List<Integer> worldIds;
     @XmlAttribute(name = "invasion_world")
     protected int invasionWorld;
+    @XmlAttribute(name = "end_dialog")
+    protected int endDialog;
 
     @Override
     public void register(QuestEngine questEngine) {
@@ -58,7 +60,7 @@ public class KillInWorldData extends XMLQuest {
                 worldIds.add(template.getMapId());
             }
         }
-        KillInWorld template = new KillInWorld(id, endNpcIds, startNpcIds, worldIds, amount, invasionWorld);
+        KillInWorld template = new KillInWorld(id, endNpcIds, startNpcIds, worldIds, amount, invasionWorld, endDialog);
         questEngine.addQuestHandler(template);
     }
 }

@@ -331,7 +331,7 @@
     <item_collecting start_npc_ids="832889" id="80620"/>
     <item_collecting start_npc_ids="832895" id="80643"/>
     <item_collecting start_npc_ids="832896" id="80644"/>
-    <item_collecting id="80707" start_npc_ids="833501"/>
+    <item_collecting start_npc_ids="833501" id="80707"/>
     <!-- All Dolled Up Event -->
     <item_collecting start_npc_ids="833622" id="80744" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="833623" id="80745" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007395"/>
@@ -339,7 +339,6 @@
     <item_collecting start_npc_ids="833622" id="80747" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="833623" id="80748" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007395"/>
     <item_collecting start_npc_ids="833625" id="80749" start_dialog_id="4762" start_dialog_id2="5"/>
-
     <!-- HUNTING QUESTS -->
     <monster_hunt start_npc_ids="202549" id="50021">
         <monster var="0" npc_ids="217161" end_var="15"/>
@@ -356,10 +355,10 @@
     <!-- KILL IN WORLD QUESTS -->
     <kill_in_world id="50031" start_npc_ids="831783" end_npc_ids="831783" worlds="0" amount="5"/>
     <kill_in_world id="51031" start_npc_ids="831784" end_npc_ids="831784" worlds="0" amount="5"/>
-    <kill_in_world id="80709" start_npc_ids="833502" end_npc_ids="833502" worlds="600100000" amount="2"/>
-    <kill_in_world id="80710" start_npc_ids="833502" end_npc_ids="833502" worlds="210070000" amount="2"/>
-    <kill_in_world id="80711" start_npc_ids="833502" end_npc_ids="833502" worlds="220080000" amount="2"/>
-	<kill_in_world id="80712" start_npc_ids="833502" end_npc_ids="833502" worlds="600100000" amount="2"/>
-	<kill_in_world id="80713" start_npc_ids="833502" end_npc_ids="833502" worlds="220080000" amount="2"/>
-	<kill_in_world id="80714" start_npc_ids="833502" end_npc_ids="833502" worlds="210070000" amount="2"/>
+    <kill_in_world id="80709" start_npc_ids="833502" end_npc_ids="833502" worlds="600100000" amount="40" end_dialog="10002"/> <!--select_success dialog -->
+    <kill_in_world id="80710" start_npc_ids="833502" end_npc_ids="833502" worlds="210070000" amount="15" end_dialog="10002"/>
+    <kill_in_world id="80711" start_npc_ids="833502" end_npc_ids="833502" worlds="220080000" amount="15" end_dialog="10002"/>
+	<kill_in_world id="80712" start_npc_ids="833502" end_npc_ids="833502" worlds="600100000" amount="40" end_dialog="10002"/>
+	<kill_in_world id="80713" start_npc_ids="833502" end_npc_ids="833502" worlds="220080000" amount="15" end_dialog="10002"/>
+	<kill_in_world id="80714" start_npc_ids="833502" end_npc_ids="833502" worlds="210070000" amount="15" end_dialog="10002"/>
 </quest_scripts>
