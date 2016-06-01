@@ -32,7 +32,7 @@ function scanDecomposableItems($itmid)
     $text = getDecomposableLines($itmid,$dfile);
         
     // Ergebnis anzeigen
-    logHead("Ergebnis");
+    logHead("Ergebnis ( Quelle: <a href='".getUrlName($itmid)."' target='_blank'>siehe hier</a> )");
     logSubHead('<br><textarea rows="20" cols="109" style="font-size:11px">'.$text.'</textarea><br>');
 }
 // ----------------------------------------------------------------------------

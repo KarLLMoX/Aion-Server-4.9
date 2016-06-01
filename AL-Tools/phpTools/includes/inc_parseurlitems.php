@@ -197,7 +197,7 @@ function getItemsFromAPB($item,$name,$logit=false)
     $tabitems = explode("<tr>",$itemtext);
     $maxitems = count($tabitems);
     
-    // Jede Tabellenzeile enthält nun 1 Item-Zeile von aionpowerbook
+    // Jede Tabellenzeile enthält nun 1 Item-Zeile (td) von aionpowerbook
     for ($l=1;$l<$maxitems;$l++)
     {        
         $tabtemp = explode("</td>",$tabitems[$l]);
@@ -223,6 +223,8 @@ function getItemsFromAPB($item,$name,$logit=false)
         
         // Items
         $itext = getTdValue($tabtemp[3]);
+        $zvon  = $ind;
+        $zbis  = $ind;
         
         if (stripos($itext,"tooltipId=") !== false)
         {
@@ -232,39 +234,54 @@ function getItemsFromAPB($item,$name,$logit=false)
                 $itemid = substr($itext,$idpos,9);
                 $itext  = substr($itext,$idpos + 10);
                 
-                for ($c=0;$c<$cmax;$c++)
+                $found  = false;
+                
+                // prüfen, ob identisches Item schon existiert                
+                for ($x=0;$x<$ind;$x++)
                 {
-                    $found  = false;
-                    
-                    // prüfen, ob identisches Item schon existiert                
-                    for ($x=0;$x<$ind;$x++)
+                    if ($ret[$x]['race']  == $race
+                    &&  $ret[$x]['class'] == $class[0]
+                    &&  $ret[$x]['level'] == $level
+                    &&  $ret[$x]['item']  == $itemid
+                    &&  $ret[$x]['tdgrp'] == $l)
                     {
-                        if ($ret[$x]['race']  == $race
-                        &&  $ret[$x]['class'] == $class[$c]
-                        &&  $ret[$x]['level'] == $level
-                        &&  $ret[$x]['item']  == $itemid
-                        &&  $ret[$x]['tdgrp'] == $l)
-                        {
-                            // wenn ja, dann Anzahl erhöhen
-                            $found = true;
-                            $ret[$x]['count']++;
-                        }
+                        // wenn ja, dann Anzahl erhöhen
+                        $found = true;
+                        $ret[$x]['count']++;
                     }
+                }
+                
+                // neues Item in die Tabelle übernehmen
+                if (!$found)
+                {
+                    $ret[$ind]['race']  = $race;
+                    $ret[$ind]['class'] = $class[0];
+                    $ret[$ind]['level'] = $level;
+                    $ret[$ind]['item']  = $itemid;
+                    $ret[$ind]['tdgrp'] = $l;
+                    $ret[$ind]['count'] = 1;
                     
-                    // neues Item in die Tabelle übernehmen
-                    if (!$found)
+                    $ind++;
+                }
+            } 
+            // das vervielfältigen der Items bei mehreren Klassen erfolgt erst
+            // hier, da sonst die Klassen-Items auseinander gerissen werden
+            if ($cmax > 1)  
+            {
+                $zbis = $ind;
+                
+                // für alle weiteren Klassen
+                for ($x=1;$x<$cmax;$x++)
+                {
+                    // für alle Items dieser Zeile (td)
+                    for ($y=$zvon;$y<$zbis;$y++)
                     {
-                        $ret[$ind]['race']  = $race;
-                        $ret[$ind]['class'] = $class[$c];
-                        $ret[$ind]['level'] = $level;
-                        $ret[$ind]['item']  = $itemid;
-                        $ret[$ind]['tdgrp'] = $l;
-                        $ret[$ind]['count'] = 1;
-                        
+                        $ret[$ind] = $ret[$y];
+                        $ret[$ind]['class'] = $class[$x];
                         $ind++;
                     }
                 }
-            }    
+            }            
         }
     }  
     // wenn keine Klasse vorgegeben wurde, dann evtl. eine aus dem Namen 
