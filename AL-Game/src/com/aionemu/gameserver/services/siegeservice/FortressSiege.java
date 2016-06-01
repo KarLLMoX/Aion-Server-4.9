@@ -75,9 +75,14 @@ public class FortressSiege extends Siege<FortressLocation> {
 
     @Override
     public void onSiegeStart() {
-        if (LoggingConfig.LOG_SIEGE) {
-            log.info("[FortressSiege] Siege started. [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "] [LegionId:" + getSiegeLocation().getLegionId() + "]");
+        if (getSiegeLocation().getOccupyCount() == 2) {
+        	log.info("Max Occupy reached(" + getSiegeLocation().getOccupyCount() +") , Fortress reset to default (Balaur)");
+        	OccupyCount();
+        } else if (LoggingConfig.LOG_SIEGE) {
+            log.info("[FortressSiege] Siege started. [FORTRESS:" + getSiegeLocationId() + "] [RACE: " + getSiegeLocation().getRace() + "]"
+            		+ " [LegionId:" + getSiegeLocation().getLegionId() + "]" + " [OccupyCount: " + getSiegeLocation().getOccupyCount() + "]");
         }
+        
         // Mark fortress as vulnerable
         getSiegeLocation().setVulnerable(true);
 
@@ -101,8 +106,18 @@ public class FortressSiege extends Siege<FortressLocation> {
 			captureBasePosts();
         }
     }
+    
+    private void OccupyCount() {
+    	//unregisterSiegeBossListeners();
+    	getSiegeLocation().setRace(SiegeRace.BALAUR);
+    	getSiegeLocation().setLegionId(0);
+    	getSiegeLocation().setOccupyCount(0);
+    	DAOManager.getDAO(SiegeDAO.class).updateLocation(getSiegeLocation());
+    	broadcastUpdate(getSiegeLocation());
+    	onSiegeStart();
+    }
 
-	private void captureBasePosts() {
+    private void captureBasePosts() {
 		BaseService.getInstance().capture(90, Race.ASMODIANS);
 		BaseService.getInstance().capture(91, Race.ELYOS);
 		BaseService.getInstance().capture(113, Race.getRaceByString(getSiegeLocation().getRace().toString()));
@@ -141,6 +156,7 @@ public class FortressSiege extends Siege<FortressLocation> {
             onCapture();
             broadcastUpdate(getSiegeLocation());
         } else {
+        	getSiegeLocation().setOccupyCount(getSiegeLocation().getOccupyCount() +1);
             broadcastState(getSiegeLocation());
         }
 
@@ -192,6 +208,7 @@ public class FortressSiege extends Siege<FortressLocation> {
 
         // Set new fortress and artifact owner race
         getSiegeLocation().setRace(winner.getSiegeRace());
+        getSiegeLocation().setOccupyCount(0);
         getArtifact().setRace(winner.getSiegeRace());
 
         log.info("[FortressSiege] Global Elyos Influence = " + Influence.getInstance().getGlobalElyosInfluence() + ".");

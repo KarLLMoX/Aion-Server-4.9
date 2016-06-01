@@ -39279,7 +39279,11 @@
 			<item id="140001103" name="Sure Strike"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053915" decomposable_name="[Event] Aether Bloom Bouquet"/> <!-- NEW -->
+	<decomposable item_id="188053915" decomposable_name="[Event] Aether Bloom Bouquet">
+	    <items>
+			<item id="186000406" name="[Event] Aether Bloom" rnd_min="1" rnd_max="3"/>
+		</items>
+	</decomposable>
 	<decomposable item_id="188053916" decomposable_name="Guestpetal Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053917" decomposable_name="Gentle Shugo Enchantment Stone Box"/> <!-- NEW -->
 	<decomposable item_id="188053918" decomposable_name="Illusion Godstone Box"/> <!-- NEW -->

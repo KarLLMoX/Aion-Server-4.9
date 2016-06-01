@@ -43,6 +43,7 @@ public class SiegeLocation implements ZoneHandler {
      */
     protected SiegeLocationTemplate template;
     protected int locationId;
+    protected int occupyCount;
     protected SiegeType type;
     protected int worldId;
     protected SiegeRace siegeRace = SiegeRace.BALAUR;
@@ -111,6 +112,14 @@ public class SiegeLocation implements ZoneHandler {
 
     public void setLegionId(int legionId) {
         this.legionId = legionId;
+    }
+    
+    public int getOccupyCount() {
+    	return this.occupyCount;
+    }
+    
+    public void setOccupyCount(int occupyCount) {
+    	this.occupyCount = occupyCount;
     }
 
     /**
