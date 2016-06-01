@@ -381,6 +381,7 @@
                 <xs:attribute name="worlds" type="IntListType" default="0"/>
                 <xs:attribute name="amount" type="xs:int" use="required"/>
                 <xs:attribute name="invasion_world" type="xs:int" default="0"/>
+				<xs:attribute name="end_dialog" type="xs:int" default="0"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
