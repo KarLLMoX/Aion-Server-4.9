@@ -6102,7 +6102,13 @@
             <item id="120000903" name="Atmach's Earrings" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054088" name="Specialized server_item replacement_selection type_test02"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054088" name="Specialized server_item replacement_selection type_test02">
+        <items>
+            <item id="102000362" name="Storm Harp" count="1"/>
+            <item id="102100480" name="Graceful Cipher-Blade" count="1"/>
+            <item id="166030008" name="[Stamp] Tempering Solution (7 days)" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054096" name="[Camping] Sealed General Goods Merchant Contract">
         <items>
             <item id="170195129" name="[Employment Contract] Spring Camp General Goods Merchant" count="1" race="ELYOS"/>
@@ -7146,7 +7152,47 @@
             <item id="125004276" name="Vasharti Brigade General's Cleric Chain Helm" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054370" name="Master Veteran's Weapon Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054370" name="Master Veteran's Weapon Box">
+        <items player_class="GLADIATOR">
+            <item id="100201628" name="Master Veteran's Dagger" count="1"/>
+            <item id="100001920" name="Master Veteran's Sword" count="1"/>
+            <item id="100101446" name="Master Veteran's Mace" count="1"/>
+            <item id="100901482" name="Master Veteran's Greatsword" count="1"/>
+            <item id="101301369" name="Master Veteran's Polearm " count="1"/>
+            <item id="101701463" name="Master Veteran's Bow" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001920" name="Master Veteran's Sword" count="1"/>
+            <item id="100101446" name="Master Veteran's Mace" count="1"/>
+            <item id="100901482" name="Master Veteran's Greatsword" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100201628" name="Master Veteran's Dagger" count="1"/>
+            <item id="100001920" name="Master Veteran's Sword" count="1"/>
+            <item id="101701463" name="Master Veteran's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100201628" name="Master Veteran's Dagger" count="1"/>
+            <item id="100001920" name="Master Veteran's Sword" count="1"/>
+            <item id="101701463" name="Master Veteran's Bow" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101446" name="Master Veteran's Mace" count="1"/>
+            <item id="101501466" name="Master Veteran's Staff " count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101446" name="Master Veteran's Mace" count="1"/>
+            <item id="101501466" name="Master Veteran's Staff " count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501409" name="Master Veteran's Orb" count="1"/>
+            <item id="100601527" name="Master Veteran's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501409" name="Master Veteran's Orb" count="1"/>
+            <item id="100601527" name="Master Veteran's Spellbook" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054371" name="Remodeled Danuar Armor Box">
         <items player_class="GLADIATOR">
             <item id="111601431" name="Remodeled Danuar Gauntlets" count="1"/>
@@ -7481,8 +7527,43 @@
             <item id="125045633" name="[Event] Crow Hat" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054408" name="[Event] Wholehearted Ayas Manastone Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054409" name="[Event] Wholehearted Ayas Ancient Manastone Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054408" name="[Event] Wholehearted Ayas Manastone Box">
+        <items>
+            <item id="167000954" name="[Stamp] Manastone: Attack +5" count="250"/>
+            <item id="167000955" name="[Stamp] Manastone: HP +100" count="250"/>
+            <item id="167000956" name="[Stamp] Manastone: MP +105" count="250"/>
+            <item id="167000957" name="[Stamp] Manastone: Accuracy +29" count="250"/>
+            <item id="167000958" name="[Stamp] Manastone: Evasion +19" count="250"/>
+            <item id="167000959" name="[Stamp] Manastone: Magic Boost +28" count="250"/>
+            <item id="167000960" name="[Stamp] Manastone: Parry +29" count="250"/>
+            <item id="167000961" name="[Stamp] Manastone: Block +29" count="250"/>
+            <item id="167000962" name="[Stamp] Manastone: Crit Strike +19" count="250"/>
+            <item id="167000963" name="[Stamp] Manastone: Maximum Flight Time +7" count="250"/>
+            <item id="167000964" name="[Stamp] Manastone: Magical Accuracy +16" count="250"/>
+            <item id="167000965" name="[Stamp] Manastone: Resist Magic +16" count="250"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054409" name="[Event] Wholehearted Ayas Ancient Manastone Box">
+        <items>
+            <item id="167020096" name="[Event] Ancient Manastone: HP +105" count="30"/>
+            <item id="167020097" name="[Event] Ancient Manastone: MP +120" count="30"/>
+            <item id="167020098" name="[Event] Ancient Manastone: Accuracy +31" count="30"/>
+            <item id="167020099" name="[Event] Ancient Manastone: Evasion +21" count="30"/>
+            <item id="167020100" name="[Event] Ancient Manastone: Parry +31" count="30"/>
+            <item id="167020101" name="[Event] Ancient Manastone: Block +31" count="30"/>
+            <item id="167020102" name="[Event] Ancient Manastone: Crit Strike +20" count="30"/>
+            <item id="167020103" name="[Event] Ancient Manastone: Physical Critical Resistance +21" count="30"/>
+            <item id="167020104" name="[Event] Ancient Manastone: Crit Spell +9" count="30"/>
+            <item id="167020105" name="[Event] Ancient Manastone: Magical Critical Resistance +8" count="30"/>
+            <item id="167020106" name="[Event] Ancient Manastone: Physical Defense +70" count="30"/>
+            <item id="167020107" name="[Event] Ancient Manastone: Resist Magic +19" count="30"/>
+            <item id="167020108" name="[Event] Ancient Manastone: Attack +6" count="30"/>
+            <item id="167020109" name="[Event] Ancient Manastone: Magical Accuracy +18" count="30"/>
+            <item id="167020110" name="[Event]Test Ancient Manastone: Magic Boosting Power +30" count="30"/>
+            <item id="167020111" name="[Event] Ancient Manastone: Magic Suppression +40" count="30"/>
+            <item id="167020112" name="[Event] Ancient Manastone: Healing Boost +5" count="30"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054420" name="[Event] Lunatic Modor's Mythic Weapon Box (21 days)">
         <items player_class="TEMPLAR">
             <item id="100001954" name="[Jakurerk] Lunatic Grendal's Long Sword" count="1"/>
@@ -7891,35 +7972,266 @@
     </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054488" name="[Jakurerk] Noble Daevanion Weapon Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054489" name="[Jakurerk] Noble Daevanion Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054497" name="Special Executor's Divine Weapon Box I"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054498" name="Special Executor's Divine Weapon Box II"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054499" name="Special Executor's Divine Weapon Box III"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054500" name="Special Executor's Divine Weapon Box IV"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054501" name="Special Executor's Divine Weapon Box V"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054502" name="Special Executor's Divine Weapon Box VI"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054560" name="Squad Leader Torso Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054561" name="Centurion Torso Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054562" name="Tribunus Torso Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054575" name="Steel Beard Pirates Torso Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054576" name="Steel Beard Pirates Leg Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054577" name="Steel Beard Pirates Shoulder Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054578" name="Steel Beard Pirates Hand Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054579" name="Steel Beard Pirates Foot Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054580" name="Brigade General's Torso Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054581" name="Brigade General's Leg Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054582" name="Brigade General's Shoulder Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054583" name="Brigade General's Hand Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054584" name="Brigade General's Foot Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054585" name="Anuhart's Torso Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054586" name="Anuhart's Leg Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054587" name="Anuhart's Shoulder Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054588" name="Anuhart's Hand Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054589" name="Anuhart's Foot Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054590" name="Steel Beard's Unique Accessory Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054591" name="Steel Beard's Hat Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054592" name="Steel Beard's Hat Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054497" name="Special Executor's Divine Weapon Box I">
+        <items>
+            <item id="100101357" name="Special Emissary's Cudgel" count="1" race="ELYOS"/>
+            <item id="101501379" name="Special Emissary's Shakujo" count="1" race="ELYOS"/>
+            <item id="100101358" name="Special Ambassador's Cudgel" count="1" race="ASMODIANS"/>
+            <item id="101501380" name="Special Ambassador's Shakujo" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054498" name="Special Executor's Divine Weapon Box II">
+        <items>
+            <item id="100501334" name="Special Emissary's Globe" count="1" race="ELYOS"/>
+            <item id="100601453" name="Special Emissary's Grimoire" count="1" race="ELYOS"/>
+            <item id="100501335" name="Special Ambassador's Globe" count="1" race="ASMODIANS"/>
+            <item id="100601454" name="Special Ambassador's Grimoire" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054499" name="Special Executor's Divine Weapon Box III">
+        <items>
+            <item id="100901398" name="Special Emissary's Claymore" count="1" race="ELYOS"/>
+            <item id="100001769" name="Special Emissary's Brand" count="1" race="ELYOS"/>
+            <item id="101301289" name="Special Emissary's Glaive" count="1" race="ELYOS"/>
+            <item id="100901399" name="Special Ambassador's Claymore" count="1" race="ASMODIANS"/>
+            <item id="100001770" name="Special Ambassador's Brand" count="1" race="ASMODIANS"/>
+            <item id="101301290" name="Special Ambassador's Glaive" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054500" name="Special Executor's Divine Weapon Box IV">
+        <items>
+            <item id="102001272" name="Special Emissary's Harp" count="1" race="ELYOS"/>
+            <item id="102001273" name="Special Ambassador's Harp" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054501" name="Special Executor's Divine Weapon Box V">
+        <items>
+            <item id="101801245" name="Special Emissary's Peacemaker" count="1" race="ELYOS"/>
+            <item id="101901154" name="Special Emissary's Aetherpulse" count="1" race="ELYOS"/>
+            <item id="102101089" name="Special Emissary's Cipher-Blade" count="1" race="ELYOS"/>
+            <item id="101801246" name="Special Ambassador's Peacemaker" count="1" race="ASMODIANS"/>
+            <item id="101901155" name="Special Ambassador's Aetherpulse" count="1" race="ASMODIANS"/>
+            <item id="102101090" name="Special Ambassador's Cipher-Blade" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054502" name="Special Executor's Divine Weapon Box VI">
+        <items>
+            <item id="101701389" name="Special Emissary's Flatbow" count="1" race="ELYOS"/>
+            <item id="100201532" name="Special Emissary's Stiletto" count="1" race="ELYOS"/>
+            <item id="101701390" name="Special Ambassador's Flatbow" count="1" race="ASMODIANS"/>
+            <item id="100201533" name="Special Ambassador's Stiletto" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054560" name="Squad Leader Torso Armor Box">
+        <items>
+            <item id="110100911" name="Guardian Squad Leader's Tunic" count="1" race="ELYOS"/>
+            <item id="110300866" name="Guardian Squad Leader's Jerkin" count="1" race="ELYOS"/>
+            <item id="110500836" name="Guardian Squad Leader's Hauberk" count="1" race="ELYOS"/>
+            <item id="110600821" name="Guardian Squad Leader's Breastplate" count="1" race="ELYOS"/>
+            <item id="110100913" name="Archon Squad Leader's Tunic" count="1" race="ASMODIANS"/>
+            <item id="110300868" name="Archon Squad Leader's Jerkin" count="1" race="ASMODIANS"/>
+            <item id="110500838" name="Archon Squad Leader's Hauberk" count="1" race="ASMODIANS"/>
+            <item id="110600823" name="Archon Squad Leader's Breastplate" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054561" name="Centurion Torso Armor Box">
+        <items>
+            <item id="110100912" name="Guardian Centurion's Tunic" count="1" race="ELYOS"/>
+            <item id="110300867" name="Guardian Centurion's Jerkin" count="1" race="ELYOS"/>
+            <item id="110500837" name="Guardian Centurion's Hauberk" count="1" race="ELYOS"/>
+            <item id="110600822" name="Guardian Centurion's Breastplate" count="1" race="ELYOS"/>
+            <item id="110100914" name="Archon Centurion's Tunic" count="1" race="ASMODIANS"/>
+            <item id="110300869" name="Archon Centurion's Jerkin" count="1" race="ASMODIANS"/>
+            <item id="110500839" name="Archon Centurion's Hauberk" count="1" race="ASMODIANS"/>
+            <item id="110600824" name="Archon Centurion's Breastplate" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054562" name="Tribunus Torso Armor Box">
+        <items>
+            <item id="110100842" name="Guardian Tribunus' Tunic" count="1" race="ELYOS"/>
+            <item id="110300794" name="Guardian Tribunus' Jerkin" count="1" race="ELYOS"/>
+            <item id="110500770" name="Guardian Tribunus' Hauberk" count="1" race="ELYOS"/>
+            <item id="110600758" name="Guardian Tribunus' Breastplate" count="1" race="ELYOS"/>
+            <item id="110100843" name="Archon Tribunus' Tunic" count="1" race="ASMODIANS"/>
+            <item id="110300795" name="Archon Tribunus' Jerkin" count="1" race="ASMODIANS"/>
+            <item id="110500771" name="Archon Tribunus' Hauberk" count="1" race="ASMODIANS"/>
+            <item id="110600759" name="Archon Tribunus' Breastplate" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054575" name="Steel Beard Pirates Torso Armor Box">
+        <items>
+            <item id="110100974" name="Steel Beard Pirate's Tunic" count="1"/>
+            <item id="110300919" name="Steel Beard Pirate's Jerkin" count="1"/>
+            <item id="110500887" name="Steel Beard Pirate's Hauberk" count="1"/>
+            <item id="110600871" name="Steel Beard Pirate's Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054576" name="Steel Beard Pirates Leg Armor Box">
+        <items>
+            <item id="110100974" name="Steel Beard Pirate's Tunic" count="1"/>
+            <item id="110300919" name="Steel Beard Pirate's Jerkin" count="1"/>
+            <item id="110500887" name="Steel Beard Pirate's Hauberk" count="1"/>
+            <item id="110600871" name="Steel Beard Pirate's Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054577" name="Steel Beard Pirates Shoulder Armor Box">
+        <items>
+            <item id="112100825" name="Steel Beard Pirate's Pauldrons" count="1"/>
+            <item id="112300819" name="Steel Beard Pirate's Shoulderguards" count="1"/>
+            <item id="112500810" name="Steel Beard Pirate's Spaulders" count="1"/>
+            <item id="112600821" name="Steel Beard Pirate's Shoulderplates" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054578" name="Steel Beard Pirates Hand Armor Box">
+        <items>
+            <item id="111100868" name="Steel Beard Pirate's Gloves" count="1"/>
+            <item id="111300869" name="Steel Beard Pirate's Vambrace" count="1"/>
+            <item id="111500859" name="Steel Beard Pirate's Handguards" count="1"/>
+            <item id="111600847" name="Steel Beard Pirate's Gauntlets" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054579" name="Steel Beard Pirates Foot Armor Box">
+        <items>
+            <item id="114100903" name="Steel Beard Pirate's Shoes" count="1"/>
+            <item id="114300928" name="Steel Beard Pirate's Boots" count="1"/>
+            <item id="114500871" name="Steel Beard Pirate's Brogans" count="1"/>
+            <item id="114600830" name="Steel Beard Pirate's Sabatons" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054580" name="Brigade General's Torso Armor Box">
+        <items>
+            <item id="110100734" name="Sunrise Tunic" count="1"/>
+            <item id="110300696" name="Jerkin of Dark Dusk" count="1"/>
+            <item id="110500673" name="Deep Abyss Hauberk" count="1"/>
+            <item id="110600659" name="Ice Black Breastplate" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054581" name="Brigade General's Leg Armor Box">
+        <items>
+            <item id="113100662" name="Sunrise Leggings" count="1"/>
+            <item id="113300678" name="Breeches of Dark Dusk" count="1"/>
+            <item id="113500651" name="Deep Abyss Chausses" count="1"/>
+            <item id="113600626" name="Ice Black Greaves" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054582" name="Brigade General's Shoulder Armor Box">
+        <items>
+            <item id="112100614" name="Sunrise Pauldrons" count="1"/>
+            <item id="112300614" name="Shoulderguards of Dark Dusk" count="1"/>
+            <item id="112500602" name="Deep Abyss Spaulders" count="1"/>
+            <item id="112600610" name="Ice Black Shoulderplates" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054583" name="Brigade General's Hand Armor Box">
+        <items>
+            <item id="111100653" name="Sunrise Gloves" count="1"/>
+            <item id="111300655" name="Vambrace of Dark Dusk" count="1"/>
+            <item id="111500642" name="Deep Abyss Handguards" count="1"/>
+            <item id="111600632" name="Ice Black Gauntlets" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054584" name="Brigade General's Foot Armor Box">
+        <items>
+            <item id="114100680" name="Sunrise Shoes" count="1"/>
+            <item id="114300693" name="Boots of Dark Dusk" count="1"/>
+            <item id="114500659" name="Deep Abyss Brogans" count="1"/>
+            <item id="114600617" name="Ice Black Sabatons" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054585" name="Anuhart's Torso Armor Box">
+        <items>
+            <item id="110600869" name="Anuhart Gladiator's Breastplate" count="1"/>
+            <item id="110600870" name="Anuhart Templar's Breastplate" count="1"/>
+            <item id="110300917" name="Anuhart Assassin's Jerkin" count="1"/>
+            <item id="110300918" name="Anuhart Ranger's Jerkin" count="1"/>
+            <item id="110500885" name="Anuhart Cleric's Hauberk" count="1"/>
+            <item id="110500886" name="Anuhart Chanter's Hauberk" count="1"/>
+            <item id="110100972" name="Anuhart Sorcerer's Tunic" count="1"/>
+            <item id="110100973" name="Anuhart Spiritmaster's Tunic" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054586" name="Anuhart's Leg Armor Box">
+        <items>
+            <item id="113600834" name="Anuhart Gladiator's Greaves" count="1"/>
+            <item id="113600835" name="Anuhart Templar's Greaves" count="1"/>
+            <item id="113300893" name="Anuhart Assassin's Breeches" count="1"/>
+            <item id="113300894" name="Anuhart Ranger's Breeches" count="1"/>
+            <item id="113500859" name="Anuhart Cleric's Chausses" count="1"/>
+            <item id="113500860" name="Anuhart Chanter's Chausses" count="1"/>
+            <item id="113100876" name="Anuhart Sorcerer's Leggings" count="1"/>
+            <item id="113100877" name="Anuhart Spiritmaster's Leggings" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054587" name="Anuhart's Shoulder Armor Box">
+        <items>
+            <item id="112600819" name="Anuhart Gladiator's Shoulderplates" count="1"/>
+            <item id="112600820" name="Anuhart Templar's Shoulderplates" count="1"/>
+            <item id="112300817" name="Anuhart Assassin's Shoulderguards" count="1"/>
+            <item id="112300818" name="Anuhart Ranger's Shoulderguards" count="1"/>
+            <item id="112500808" name="Anuhart Cleric's Spaulders" count="1"/>
+            <item id="112500809" name="Anuhart Chanter's Spaulders" count="1"/>
+            <item id="112100823" name="Anuhart Sorcerer's Pauldrons" count="1"/>
+            <item id="112100824" name="Anuhart Spiritmaster's Pauldrons" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054588" name="Anuhart's Hand Armor Box">
+        <items>
+            <item id="111600845" name="Anuhart Gladiator's Gauntlets" count="1"/>
+            <item id="111600846" name="Anuhart Templar's Gauntlets" count="1"/>
+            <item id="111300867" name="Anuhart Assassin's Vambrace" count="1"/>
+            <item id="111300868" name="Anuhart Ranger's Vambrace" count="1"/>
+            <item id="111500857" name="Anuhart Cleric's Handguards" count="1"/>
+            <item id="111500858" name="Anuhart Chanter's Handguards" count="1"/>
+            <item id="111100866" name="Anuhart Sorcerer's Gloves" count="1"/>
+            <item id="111100867" name="Anuhart Spiritmaster's Gloves" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054589" name="Anuhart's Foot Armor Box">
+        <items>
+            <item id="114600828" name="Anuhart Gladiator's Sabatons" count="1"/>
+            <item id="114600829" name="Anuhart Templar's Sabatons" count="1"/>
+            <item id="114300926" name="Anuhart Assassin's Boots" count="1"/>
+            <item id="114300927" name="Anuhart Ranger's Boots" count="1"/>
+            <item id="114500869" name="Anuhart Cleric's Brogans" count="1"/>
+            <item id="114500870" name="Anuhart Chanter's Brogans" count="1"/>
+            <item id="114100901" name="Anuhart Sorcerer's Shoes" count="1"/>
+            <item id="114100902" name="Anuhart Spiritmaster's Shoes" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054590" name="Steel Beard's Unique Accessory Box">
+        <items>
+            <item id="120000910" name="Steel Beard Pirate's Diamond Earrings" count="1"/>
+            <item id="120000911" name="Steel Beard Pirate's Sapphire Earrings" count="1"/>
+            <item id="121000828" name="Grengamam's Diamond Necklace" count="1"/>
+            <item id="121000829" name="Grengamam's Sapphire Necklace" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054591" name="Steel Beard's Hat Box">
+        <items>
+            <item id="125001996" name="Koruchinerk's Cap" count="1"/>
+            <item id="125001997" name="Koruchinerk's Mask" count="1"/>
+            <item id="125001998" name="Koruchinerk's Chain Cowl" count="1"/>
+            <item id="125001999" name="Koruchinerk's Chaperon" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054592" name="Steel Beard's Hat Box">
+        <items>
+            <item id="125002004" name="Teirunerk's Cap" count="1"/>
+            <item id="125002005" name="Teirunerk's Mask" count="1"/>
+            <item id="125002006" name="Teirunerk's Chain Cowl" count="1"/>
+            <item id="125002007" name="Teirunerk's Chaperon" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054603" name="Mysterious Commander's Accessory Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054604" name="Mysterious Sauro Commander's Accessory Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054604" name="Mysterious Sauro Commander's Accessory Box">
+        <items>
+            <item id="120001592" name="Mysterious Sauro Commander's Turquoise Earrings" count="1"/>
+            <item id="121001471" name="Mysterious Sauro Commander's Turquoise Necklace" count="1"/>
+            <item id="122001753" name="Mysterious Sauro Commander's Turquoise Ring" count="1"/>
+            <item id="123001512" name="Mysterious Sauro Commander's Cloth Waistband" count="1"/>
+            <item id="188054609" name="Mysterious Sauro Commander's Hat Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054605" name="Mysterious Centurion's Accessory Box"/> <!-- NEW -->
 	<decomposable_selectitem item_id="188054606" name="Mysterious Centurion's Hat Box">
         <items>
@@ -8056,14 +8368,102 @@
             <item id="188054662" name="Songweaver Stigma Set Box" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054665" name="Squad Leader's Leggings Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054666" name="Squad Leader's Pauldrons Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054667" name="Squad Leader's Gloves Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054668" name="Squad Leader's Shoes Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054669" name="Centurion's Leggings Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054670" name="Centurion's Pauldrons Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054671" name="Centurion's Gloves Armor Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054672" name="Centurion's Shoes Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054665" name="Squad Leader's Leggings Armor Box">
+        <items>
+            <item id="113100823" name="Guardian Squad Leader's Leggings" count="1" race="ELYOS"/>
+            <item id="113300841" name="Guardian Squad Leader's Breeches" count="1" race="ELYOS"/>
+            <item id="113500812" name="Guardian Squad Leader's Chausses" count="1" race="ELYOS"/>
+            <item id="113600785" name="Guardian Squad Leader's Greaves" count="1" race="ELYOS"/>
+            <item id="113100825" name="Archon Squad Leader's Leggings" count="1" race="ASMODIANS"/>
+            <item id="113300843" name="Archon Squad Leader's Breeches" count="1" race="ASMODIANS"/>
+            <item id="113500814" name="Archon Squad Leader's Chausses" count="1" race="ASMODIANS"/>
+            <item id="113600787" name="Archon Squad Leader's Greaves" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054666" name="Squad Leader's Pauldrons Armor Box">
+        <items>
+            <item id="112100773" name="Guardian Squad Leader's Pauldrons" count="1" race="ELYOS"/>
+            <item id="112300770" name="Guardian Squad Leader's Shoulderguards" count="1" race="ELYOS"/>
+            <item id="112500758" name="Guardian Squad Leader's Spaulders" count="1" race="ELYOS"/>
+            <item id="112600769" name="Guardian Squad Leader's Shoulderplates" count="1" race="ELYOS"/>
+            <item id="112100775" name="Archon Squad Leader's Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="112300772" name="Archon Squad Leader's Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="112500760" name="Archon Squad Leader's Spaulders" count="1" race="ASMODIANS"/>
+            <item id="112600771" name="Archon Squad Leader's Shoulderplates" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054667" name="Squad Leader's Gloves Armor Box">
+        <items>
+            <item id="111100815" name="Guardian Squad Leader's Gloves" count="1" race="ELYOS"/>
+            <item id="111300819" name="Guardian Squad Leader's Vambrace" count="1" race="ELYOS"/>
+            <item id="111500802" name="Guardian Squad Leader's Handguards" count="1" race="ELYOS"/>
+            <item id="111600794" name="Guardian Squad Leader's Gauntlets" count="1" race="ELYOS"/>
+            <item id="111100817" name="Archon Squad Leader's Gloves" count="1" race="ASMODIANS"/>
+            <item id="111300821" name="Archon Squad Leader's Vambrace" count="1" race="ASMODIANS"/>
+            <item id="111500804" name="Archon Squad Leader's Handguards" count="1" race="ASMODIANS"/>
+            <item id="111600796" name="Archon Squad Leader's Gauntlets" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054668" name="Squad Leader's Shoes Armor Box">
+        <items>
+            <item id="114100851" name="Guardian Squad Leader's Shoes" count="1" race="ELYOS"/>
+            <item id="114300877" name="Guardian Squad Leader's Boots" count="1" race="ELYOS"/>
+            <item id="114500823" name="Guardian Squad Leader's Brogans" count="1" race="ELYOS"/>
+            <item id="114600780" name="Guardian Squad Leader's Sabatons" count="1" race="ELYOS"/>
+            <item id="114100853" name="Archon Squad Leader's Shoes" count="1" race="ASMODIANS"/>
+            <item id="114300879" name="Archon Squad Leader's Boots" count="1" race="ASMODIANS"/>
+            <item id="114500825" name="Archon Squad Leader's Brogans" count="1" race="ASMODIANS"/>
+            <item id="114600782" name="Archon Squad Leader's Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054669" name="Centurion's Leggings Armor Box">
+        <items>
+            <item id="113100824" name="Guardian Centurion's Leggings" count="1" race="ELYOS"/>
+            <item id="113300842" name="Guardian Commando's Breeches" count="1" race="ELYOS"/>
+            <item id="113500813" name="Guardian Centurion's Chausses" count="1" race="ELYOS"/>
+            <item id="113600786" name="Guardian Centurion's Greaves" count="1" race="ELYOS"/>
+            <item id="113100826" name="Archon Centurion's Leggings" count="1" race="ASMODIANS"/>
+            <item id="113300844" name="Archon Centurion's Breeches" count="1" race="ASMODIANS"/>
+            <item id="113500815" name="Archon Centurion's Chausses" count="1" race="ASMODIANS"/>
+            <item id="113600788" name="Archon Centurion's Greaves" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054670" name="Centurion's Pauldrons Armor Box">
+        <items>
+            <item id="112100774" name="Guardian Centurion's Pauldrons" count="1" race="ELYOS"/>
+            <item id="112300771" name="Guardian Centurion's Shoulderguards" count="1" race="ELYOS"/>
+            <item id="112500759" name="Guardian Centurion's Spaulders" count="1" race="ELYOS"/>
+            <item id="112600770" name="Guardian Centurion's Shoulderplates" count="1" race="ELYOS"/>
+            <item id="112100776" name="Archon Centurion's Pauldrons" count="1" race="ASMODIANS"/>
+            <item id="112300773" name="Archon Centurion's Shoulderguards" count="1" race="ASMODIANS"/>
+            <item id="112500761" name="Archon Centurion's Spaulders" count="1" race="ASMODIANS"/>
+            <item id="112600772" name="Archon Centurion's Shoulderplates" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054671" name="Centurion's Gloves Armor Box">
+        <items>
+            <item id="111100816" name="Guardian Centurion's Gloves" count="1" race="ELYOS"/>
+            <item id="111300820" name="Guardian Centurion's Vambrace" count="1" race="ELYOS"/>
+            <item id="111500803" name="Guardian Centurion's Handguards" count="1" race="ELYOS"/>
+            <item id="111600795" name="Guardian Centurion's Gauntlets" count="1" race="ELYOS"/>
+            <item id="111100818" name="Archon Centurion's Gloves" count="1" race="ASMODIANS"/>
+            <item id="111300822" name="Archon Centurion's Vambrace" count="1" race="ASMODIANS"/>
+            <item id="111500805" name="Archon Centurion's Handguards" count="1" race="ASMODIANS"/>
+            <item id="111600797" name="Archon Centurion's Gauntlets" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054672" name="Centurion's Shoes Armor Box">
+        <items>
+            <item id="114100852" name="Guardian Centurion's Shoes" count="1" race="ELYOS"/>
+            <item id="114300878" name="Guardian Centurion's Boots" count="1" race="ELYOS"/>
+            <item id="114500824" name="Guardian Centurion's Brogans" count="1" race="ELYOS"/>
+            <item id="114600781" name="Guardian Centurion's Sabatons" count="1" race="ELYOS"/>
+            <item id="114100854" name="Archon Centurion's Shoes" count="1" race="ASMODIANS"/>
+            <item id="114300880" name="Archon Centurion's Boots" count="1" race="ASMODIANS"/>
+            <item id="114500826" name="Archon Centurion's Brogans" count="1" race="ASMODIANS"/>
+            <item id="114600783" name="Archon Centurion's Sabatons" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054673" name="Tribunus' Leggings Armor Box">
         <items>
             <item id="113100760" name="Guardian Tribunus' Leggings" count="1" race="ELYOS"/>
@@ -8286,8 +8686,17 @@
 			<item id="115001883" name="Peitan's Scale Shield" race="ASMODIANS"/>
 		</items>
 	</decomposable_selectitem>
-	<decomposable_selectitem item_id="188054869" name="Japan Lucky Game Box Race Option 49"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054987" name="Prestige Coin Bundle"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054869" name="Japan Lucky Game Box Race Option 49">
+        <items>
+            <item id="186000030" name="Gold Medal" count="1" race="ELYOS"/>
+            <item id="186000030" name="Gold Medal" count="1" race="ASMODIANS"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054987" name="Prestige Coin Bundle">
+        <items>
+            <item id="186000344" name="Prestige Coin" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054991" name="Elegant High Grade Idian Bundle">
         <items>
             <item id="166050044" name="Glossy Esoteric Idian: Resistance" count="1"/>
