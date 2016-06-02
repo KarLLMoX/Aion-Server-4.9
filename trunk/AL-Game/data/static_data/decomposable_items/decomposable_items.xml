@@ -34936,25 +34936,120 @@
 			<item id="188053422" name="[Stamp] Anniversary Consumables Box" count="1"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053424" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053425" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053426" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053427" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053428" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053429" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053430" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053431" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053432" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053433" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053434" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053435" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053436" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053437" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053438" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053439" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053440" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053441" decomposable_name="[Stamp] Anniversary Gift Box"/>
-	<decomposable item_id="188053442" decomposable_name="[Stamp] Anniversary Gift Box"/>
+	<decomposable item_id="188053424" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053425" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053426" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053427" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053428" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053429" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053430" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053431" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053432" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053433" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053434" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053435" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053436" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053437" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053438" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053439" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053440" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053441" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053442" decomposable_name="[Stamp] Anniversary Gift Box">
+        <items>
+            <item id="169610151" name="[Stamp] Anniversary Celebrant (7 Days)"/>
+            <item id="188053422" name="[Stamp] Anniversary Consumables Box"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053443" decomposable_name="Test Item"/> <!-- NEW -->
 	<decomposable item_id="188053444" decomposable_name="Test Item"/> <!-- NEW -->
 	<decomposable item_id="188053445" decomposable_name="Test Item"/> <!-- NEW -->
@@ -34962,13 +35057,117 @@
 	<decomposable item_id="188053447" decomposable_name="Test Item"/> <!-- NEW -->
 	<decomposable item_id="188053448" decomposable_name="Test Item"/> <!-- NEW -->
 	<decomposable item_id="188053449" decomposable_name="Test Item"/> <!-- NEW -->
-	<decomposable item_id="188053450" decomposable_name="Abyss Fortress Box"/> <!-- NEW -->
-	<decomposable item_id="188053451" decomposable_name="Ornate Abyss Fortress Box"/> <!-- NEW -->
-	<decomposable item_id="188053452" decomposable_name="Autumn Guy's Lucky Box"/> <!-- NEW -->
-	<decomposable item_id="188053453" decomposable_name="[Event] Scroll Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053454" decomposable_name="[Event] Quality Recovery Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053455" decomposable_name="[Event] High Grade Recovery Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053457" decomposable_name="[Event] Panda Transformation Candy Box"/> <!-- NEW -->
+	<decomposable item_id="188053450" decomposable_name="Abyss Fortress Box">
+        <items>
+            <item id="186000055" name="Major Ancient Goblet"/>
+            <item id="186000242" name="Ceramium Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053451" decomposable_name="Ornate Abyss Fortress Box">
+        <items>
+            <item id="186000052" name="Greater Ancient Crown"/>
+            <item id="186000242" name="Ceramium Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053452" decomposable_name="Autumn Guy's Lucky Box">
+        <items>
+            <item id="166050107" name="Infused Idian: Physical Attack"/>
+		</items>
+		<items>
+            <item id="166050108" name="Infused Idian: Magical Attack"/>
+		</items>
+		<items>
+            <item id="166050109" name="Infused Idian: Block"/>
+		</items>
+		<items>
+            <item id="166050110" name="Infused Idian: Strike Resist"/>
+		</items>
+		<items>
+            <item id="166050111" name="Infused Idian: Spell Resist"/>
+		</items>
+		<items>
+            <item id="164002228" name="Administrator's Boon â€“ 1-Time Pass"/>
+		</items>
+		<items>
+            <item id="188052654" name="Noble Ancient Manastone Bundle"/>
+		</items>
+		<items>
+            <item id="188052639" name="[Event] Heroic Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188052638" name="[Event] Fabled Godstone Bundle"/>
+		</items>
+		<items>
+            <item id="188051430" name="Felicitous Socketing (Eternal)"/>
+		</items>
+		<items>
+            <item id="188052104" name="Felicitous Socketing Box (Mythic)"/>
+		</items>
+		<items>
+            <item id="188052559" name="Assured Greater Felicitous Socketing Box (Eternal)"/>
+		</items>
+		<items>
+            <item id="188052560" name="Assured Greater Felicitous Socketing Box (Mythic)"/>
+		</items>
+		<items>
+            <item id="166200013" name="Enduring Mythic Weapon Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="166200014" name="Enduring Mythic Armor Tuning Scroll"/>
+		</items>
+		<items>
+            <item id="165005034" name="Vindachinerk's Abyss Accessory Extraction Tools"/>
+		</items>
+		<items>
+            <item id="165005074" name="Vindachinerk's Noble Abyss Accessory Extraction Tools"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053453" decomposable_name="[Event] Scroll Bundle">
+        <items>
+            <item id="164000076" name="Greater Running Scroll" count="100"/>
+		</items>
+		<items>
+            <item id="164000073" name="Greater Courage Scroll" count="100"/>
+		</items>
+		<items>
+            <item id="164000134" name="Greater Awakening Scroll" count="100"/>
+		</items>
+		<items>
+            <item id="164000079" name="Greater Raging Wind Scroll" count="100"/>
+		</items>
+		<items>
+            <item id="164000070" name="Major Anti-Shock Scroll" count="300"/>
+		</items>
+		<items>
+            <item id="164000066" name="Greater Crit Strike Scroll" count="300"/>
+		</items>
+		<items>
+            <item id="164000121" name="Greater Crit Spell Scroll" count="300"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053454" decomposable_name="[Event] Quality Recovery Bundle">
+        <items>
+            <item id="162000045" name="Major Recovery Potion" count="300"/>
+		</items>
+		<items>
+            <item id="162000050" name="Major Recovery Serum" count="300"/>
+		</items>
+		<items>
+            <item id="162000023" name="Greater Healing Potion" count="30"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053455" decomposable_name="[Event] High Grade Recovery Bundle">
+        <items>
+            <item id="162000043" name="Recovery Potion" count="300"/>
+		</items>
+		<items>
+            <item id="162000048" name="Recovery Serum" count="300"/>
+		</items>
+		<items>
+            <item id="162000023" name="Greater Healing Potion" count="30"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053457" decomposable_name="[Event] Panda Transformation Candy Box"/>
 	<decomposable item_id="188053458" decomposable_name="Prime Elite Enchantment Stone Box">
         <items>
             <random_item type="ENCHANTMENT" rnd_min="1" rnd_max="2"/>

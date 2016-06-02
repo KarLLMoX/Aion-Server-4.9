@@ -2,6 +2,11 @@
 <portal_templates2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="portal_template2.xsd">
     <!-- ***************** PORTAL USE ***************** -->
     <!-- ************ INSTANCES ************ -->
+	<!-- Drakensphire Depths Kampagnen Quest Exit (Elyos) -->
+	<portal_use npc_id="731550">
+        <portal_path loc_id="2100704" race="ELYOS"/>
+    </portal_use>
+
 	<!-- Shugo Imperial Exit -->
 	<portal_use npc_id="831118">
         <portal_path loc_id="1200109" race="ASMODIANS"/>
@@ -2472,6 +2477,14 @@
     <!-- Reshanta Tokanu Landing Site to Enshar -->
     <portal_dialog npc_id="805618">
         <portal_path dialog="1011" loc_id="4000119" race="ASMODIANS"/>
+    </portal_dialog>
+
+    <!-- Cygnea - Taking Arms Quest -->
+    <portal_dialog npc_id="805327">
+        <portal_path dialog="104" loc_id="1100201" race="ELYOS"/>
+    </portal_dialog>
+    <portal_dialog npc_id="805692">
+        <portal_path dialog="104" loc_id="2100703" race="ELYOS"/>
     </portal_dialog>
 
     <!-- **************** PORTAL SCROLL **************** -->
