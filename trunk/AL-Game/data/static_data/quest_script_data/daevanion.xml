@@ -14,6 +14,48 @@
                     2990 [SCRIPT] Making the Daevanion Weapon
                     2993 [SCRIPT] Another Beginning
                     2994 [SCRIPT] A New Choice
+					15301 [XML] Two Steps Closer
+					15302 [TODO] Hand in Glove
+					15303 [TODO] Souled Shoulder
+					15304 [TODO] Last Leg and Wit's End
+					15305 [TODO] Buffed Shirt
+					15306 [TODO] Wielding Power
+					15307 [TODO] Kaisinel's Oath
+					15311 [TODO] Kaisinel's Daevanion Shoes
+					15312 [TODO] Kaisinel's Daevanion Gloves
+					15313 [TODO] Kaisinel's Daevanion Pauldrons
+					15314 [TODO] Kaisinel's Daevanion Leggings
+					15315 [TODO] Kaisinel's Daevanion Tunic
+					15316 [TODO] Kaisinel's Daevanion Weapon
+					15321 [TODO] Supporting Kaisinel's Wings
+					15322 [TODO] [Infiltration] Scouting Enshar
+					15323 [TODO] Top Secret Order
+					15324 [TODO] Unyielding Spirit
+					15325 [TODO] [Group] Courageous Spirit
+					15326 [TODO] [Infiltration] Overcoming Chaos
+					15334 [TODO] Devoted Prayers
+					15335 [TODO] Your Lucky Day
+					25301 [TODO] First Steps as a Protector
+					25302 [TODO] A Tenacious Spirit
+					25303 [TODO] A Dedicated Protector
+					25304 [TODO] Walk the Walk
+					25305 [TODO] Guardian of Life
+					25306 [TODO] Wielding Strength
+					25307 [TODO] Marchutan's Oath
+					25311 [TODO] Marchutan's Daevanion Shoes
+					25312 [TODO] Marchutan's Daevanion Gloves
+					25313 [TODO] Marchutan's Daevanion Spaulders
+					25314 [TODO] Marchutan's Daevanion Leggings
+					25315 [TODO] Marchutan's Daevanion Tunic
+					25316 [TODO] Marchutan's Daevanion Weapon
+					25321 [TODO] The Grace of the Mace
+					25322 [TODO] [Infiltration] Through the Rift
+					25323 [TODO] Endure and Report
+					25324 [TODO] Tenacious Spree
+					25325 [TODO] Threat the Farm
+					25326 [TODO] [Infiltration] Controlling Chaos
+					25334 [TODO] A Prayer of Devotion
+					25335 [TODO] Lucky Break
                     80290 [XML] Durable Daevanion Armor
                     80291 [SCRIPT] Durable Daevanion Weapon
                     80292 [SCRIPT] A New Challenge
@@ -34,6 +76,7 @@
         <npc_infos var="0" npc_id="831387" quest_dialog="1003" close_dialog="1009"/>
     </report_to_many>
     <!-- COLLECTING QUESTS -->
+    <item_collecting start_npc_ids="805328" end_npc_ids="805692" id="15301"/>
     <item_collecting start_npc_ids="831384" id="80290"/>
     <item_collecting start_npc_ids="831387" id="80294"/>
     <!-- HUNTING QUESTS -->
