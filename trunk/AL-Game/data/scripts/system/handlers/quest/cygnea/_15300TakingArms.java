@@ -57,8 +57,8 @@ public class _15300TakingArms extends QuestHandler {
         qe.registerQuestNpc(805363).addOnTalkEvent(questId); // Killios
         qe.registerQuestNpc(805377).addOnTalkEvent(questId); // Agony's Well
 		qe.registerGetingItem(182215903, questId);
-		qe.registerQuestNpc(237224).addOnKillEvent(questId); //Fetid Phantomscorch Chimera
-		qe.registerQuestNpc(237230).addOnKillEvent(questId); // Immortal Orissan
+		qe.registerQuestNpc(237224).addOnKillEvent(questId); // Fetid Phantomscorch Chimera
+		qe.registerQuestNpc(237231).addOnKillEvent(questId); // Exhausted Orrisan
 		qe.registerQuestNpc(237236).addOnKillEvent(questId); // Commander Virtsha
 		qe.registerQuestNpc(237238).addOnKillEvent(questId); // Beritra
 		for (int mob : mobs) {
@@ -219,8 +219,8 @@ public class _15300TakingArms extends QuestHandler {
 			return defaultOnKillEvent(env, 237224, 5, 6); // 6
 		} else if (var == 6 && var < 7) {
 			return defaultOnKillEvent(env, mobs2, var, var + 1); // 7
-		} else if (var == 7 && targetId == 237230) {
-			return defaultOnKillEvent(env, 237230, 7, 8); // 8
+		} else if (var == 7 && targetId == 237231) {
+			return defaultOnKillEvent(env, 237231, 7, 8); // 8
 		} else if (var == 10 && targetId == 237236) {
 			return defaultOnKillEvent(env, 237236, 10, 11); // 11
 		} else if (var == 12 && targetId == 237238) {
