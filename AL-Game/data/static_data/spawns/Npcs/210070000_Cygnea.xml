@@ -498,7 +498,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_30_join"-->
 		<spawn npc_id="805145" respawn_time="295">
-			<spot x="2897.0762" y="921.45782" z="574.41437" h="116"/>
+			<spot x="2897.011" y="916.0499" z="574.00793" h="8"/>
 		</spawn>
 		<!--"LF5_fief_c_food_Seller"-->
 		<spawn npc_id="805085" respawn_time="295">
@@ -602,7 +602,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_30_gd_Seller"-->
 		<spawn npc_id="805139" respawn_time="295">
-			<spot x="2903.3706" y="925.54633" z="574.41437" h="90"/>
+			<spot x="2896.8096" y="921.5513" z="574.00793" h="116"/>
 		</spawn>
 		<!--"LF5_op_a_Stigma_short_battle"-->
 		<spawn npc_id="805124" respawn_time="295">
@@ -670,7 +670,7 @@
 		</spawn>
 		<!--"LF5_Niman_E"-->
 		<spawn npc_id="804940" respawn_time="295">
-			<spot x="2971.0085" y="885.40674" z="574.25891" h="45"/>
+			<spot x="2905.9895" y="924.9691" z="574.0079" h="75"/>
 		</spawn>
 		<!--"LF5_Ridlef_E"-->
 		<spawn npc_id="804943" respawn_time="295">
@@ -690,7 +690,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_30_sd_Seller"-->
 		<spawn npc_id="805138" respawn_time="295">
-			<spot x="2900.8726" y="924.77515" z="574.41437" h="90"/>
+			<spot x="2896.3743" y="919.65955" z="574.00793" h="0"/>
 		</spawn>
 		<!--"LF5_Chrisnis_E"-->
 		<spawn npc_id="804954" respawn_time="295">
@@ -782,7 +782,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_40_am_Seller"-->
 		<spawn npc_id="805141" respawn_time="295">
-			<spot x="2861.0598" y="808.73065" z="563.11145" h="31"/>
+			<spot x="2861.0598" y="808.73065" z="562.2722" h="30"/>
 		</spawn>
 		<!--"LF5_Harkenn_E"-->
 		<spawn npc_id="804884" respawn_time="295">
@@ -910,7 +910,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_30_am_Seller"-->
 		<spawn npc_id="805137" respawn_time="295">
-			<spot x="2898.0061" y="917.11371" z="574.41437" h="15"/>
+			<spot x="2898.7046" y="914.36914" z="574.0079" h="15"/>
 		</spawn>
 		<!--"F5_DirectPotalMonster_Set_01"-->
 		<spawn npc_id="804819" respawn_time="295">
@@ -942,7 +942,7 @@
 		</spawn>
 		<!--"LF5_Donand_E"-->
 		<spawn npc_id="804941" respawn_time="295">
-			<spot x="2905.4983" y="924.83655" z="574.25891" h="90"/>
+			<spot x="2897.73" y="923.0687" z="574.00793" h="113"/>
 		</spawn>
 		<!--"LF5_Vil2_2_Out"-->
 		<spawn npc_id="805169" respawn_time="295">
@@ -1102,7 +1102,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_50_gd_Seller"-->
 		<spawn npc_id="805144" respawn_time="295">
-			<spot x="2973.8093" y="891.65961" z="574.41437" h="61"/>
+			<spot x="2903.371" y="926.7024" z="574.0079" h="90"/>
 		</spawn>
 		<!--"LF5_op_l_Master_Stigma"-->
 		<spawn npc_id="805230" respawn_time="295">
@@ -1210,7 +1210,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_40_join"-->
 		<spawn npc_id="805146" respawn_time="295">
-			<spot x="2974.748" y="887.81989" z="574.41437" h="57"/>
+			<spot x="2901.1106" y="925.8508" z="574.00793" h="93"/>
 		</spawn>
 		<!--"LF5_Blut_E"-->
 		<spawn npc_id="804896" respawn_time="295">
@@ -1287,7 +1287,7 @@
 		</spawn>
 		<!--"LF5_op_a_daily_L_30_wp_Seller"-->
 		<spawn npc_id="805136" respawn_time="295">
-			<spot x="2899.1182" y="914.54871" z="574.41437" h="15"/>
+			<spot x="2901.1487" y="913.9477" z="574.0079" h="30"/>
 		</spawn>
 		<!--"WorldRaid_CTRL_03"-->
 		<spawn npc_id="702531" respawn_time="295">
@@ -1367,11 +1367,27 @@
         </spawn>
 		<!-- Shabee -->
 		<spawn npc_id="805361" respawn_time="295">
-            <spot x="77.36276" y="2755.8481" z="229.03867" h="110"/>
+            <spot x="78.15136" y="2761.8745" z="229.53447" h="105"/>
 		</spawn>
 		<!-- Rike ||| LF5_Dike_E -->
 		<spawn npc_id="805327" respawn_time="295">
 			<spot x="2974.466" y="887.504" z="574.0875" h="53"/>
+		</spawn>
+		<!-- Machina ||| LF5_Machina_E -->
+		<spawn npc_id="805331" respawn_time="295">
+			<spot x="2973.01" y="891.6167" z="574.08746" h="60"/>
+		</spawn>
+		<!-- Argon ||| LF5_Agon_E -->
+		<spawn npc_id="805329" respawn_time="295">
+			<spot x="2970.9158" y="885.8054" z="574.0875" h="46"/>
+		</spawn>
+		<!-- Potencia ||| LF5_Potencia_E -->
+		<spawn npc_id="805330" respawn_time="295">
+			<spot x="2974.6042" y="889.6064" z="574.0875" h="53"/>
+		</spawn>
+		<!-- Epaion ||| LF5_Efaion_E -->
+		<spawn npc_id="805328" respawn_time="295">
+			<spot x="2973.0781" y="885.9493" z="574.0875" h="53"/>
 		</spawn>
 		<!-- End NPCs -->
 		<!-- Start Monsters -->

@@ -686,5 +686,12 @@
     
     <!-- Argent Manor Instance -->
     <!-- Argent Manor Entrance -->
-    <portal_loc world_id="301510000" loc_id="3015100" x="993.69604" y="1206.2352" z="65.640015" h="90"/>    
+    <portal_loc world_id="301510000" loc_id="3015100" x="993.69604" y="1206.2352" z="65.640015" h="90"/>
+    
+    <!-- Cygnea - Taking Arms Quest -->
+    <portal_loc world_id="110020000" loc_id="1100201" x="464.0" y="499.0" z="499.5998" h="0"/>
+    <portal_loc world_id="210070000" loc_id="2100703" x="2971.0" y="888.0" z="574.0875" h="0"/>
+
+    <!-- Drakensphire Depths Exit (Elyos) -->
+    <portal_loc world_id="210070000" loc_id="2100704" x="2905.0" y="803.0" z="569.52704" h="0"/>
 </portal_locs>
