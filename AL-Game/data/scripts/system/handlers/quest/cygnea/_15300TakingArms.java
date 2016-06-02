@@ -47,6 +47,8 @@ public class _15300TakingArms extends QuestHandler {
 
     @Override
     public void register() {
+		qe.registerOnEnterZoneMissionEnd(questId);
+		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(805327).addOnQuestStart(questId); 
         qe.registerQuestNpc(805327).addOnTalkEvent(questId); // Dike
         qe.registerQuestNpc(805362).addOnTalkEvent(questId); // Kaisinel
@@ -228,5 +230,15 @@ public class _15300TakingArms extends QuestHandler {
 	@Override
     public boolean onGetItemEvent(QuestEnv env) {
         return defaultOnGetItemEvent(env, 1, 2, false); // 2
+    }
+	
+	@Override
+    public boolean onZoneMissionEndEvent(QuestEnv env) {
+        return defaultOnZoneMissionEndEvent(env, 10507);
+    }
+	
+	@Override
+    public boolean onLvlUpEvent(QuestEnv env) {
+        return defaultOnLvlUpEvent(env, 10507, true);
     }
 }
