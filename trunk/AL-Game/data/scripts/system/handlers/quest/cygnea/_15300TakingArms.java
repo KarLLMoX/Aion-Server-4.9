@@ -40,7 +40,7 @@ public class _15300TakingArms extends QuestHandler {
 
     public static final int questId = 15300;
 	private final static int[] mobs = {237228, 237229}; //Lava Protector, Heatvent Protector
-
+	private final static int[] mobs2 = {237225, 237226, 237227}; //Rapacious Kadena (right),Rapacious Kadena (middle),Rapacious Kadena (left)
     public _15300TakingArms() {
         super(questId);
     }
@@ -55,15 +55,17 @@ public class _15300TakingArms extends QuestHandler {
         qe.registerQuestNpc(805361).addOnTalkEvent(questId); // Shabee
         qe.registerQuestNpc(209863).addOnTalkEvent(questId); // Masionel
         qe.registerQuestNpc(805363).addOnTalkEvent(questId); // Killios
-        qe.registerQuestNpc(805377).addOnTalkEvent(questId); // Entry
+        qe.registerQuestNpc(805377).addOnTalkEvent(questId); // Agony's Well
 		qe.registerGetingItem(182215903, questId);
-		qe.registerQuestNpc(237224).addOnKillEvent(questId);
-		qe.registerQuestNpc(237225).addOnKillEvent(questId);
-		qe.registerQuestNpc(237230).addOnKillEvent(questId);
-		qe.registerQuestNpc(237236).addOnKillEvent(questId);
+		qe.registerQuestNpc(237224).addOnKillEvent(questId); //Fetid Phantomscorch Chimera
+		qe.registerQuestNpc(237230).addOnKillEvent(questId); // Immortal Orissan
+		qe.registerQuestNpc(237236).addOnKillEvent(questId); // Commander Virtsha
 		qe.registerQuestNpc(237238).addOnKillEvent(questId); // Beritra
 		for (int mob : mobs) {
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
+        }
+		for (int mob2 : mobs2) {
+			qe.registerQuestNpc(mob2).addOnKillEvent(questId);
         }
     }
 	
@@ -168,7 +170,7 @@ public class _15300TakingArms extends QuestHandler {
 						break;
 					}
 				}
-			} else if (targetId == 805377) { //Entry
+			} else if (targetId == 805377) { //Agony's Well
 					switch (dialog) {
 						case QUEST_SELECT: {
 							return sendQuestDialog(env, 6841);
@@ -215,8 +217,8 @@ public class _15300TakingArms extends QuestHandler {
 			return defaultOnKillEvent(env, mobs, var, var + 1); // 4
 		} else if (var == 5 && targetId == 237224) {
 			return defaultOnKillEvent(env, 237224, 5, 6); // 6
-		} else if (var == 6 && targetId == 237225) {
-			return defaultOnKillEvent(env, 237225, 6, 7); // 7
+		} else if (var == 6 && var < 7) {
+			return defaultOnKillEvent(env, mobs2, var, var + 1); // 7
 		} else if (var == 7 && targetId == 237230) {
 			return defaultOnKillEvent(env, 237230, 7, 8); // 8
 		} else if (var == 10 && targetId == 237236) {
