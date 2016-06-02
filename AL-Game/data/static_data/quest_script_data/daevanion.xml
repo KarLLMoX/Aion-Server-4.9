@@ -14,7 +14,7 @@
                     2990 [SCRIPT] Making the Daevanion Weapon
                     2993 [SCRIPT] Another Beginning
                     2994 [SCRIPT] A New Choice
-					15301 [XML] Two Steps Closer
+					15301 [TODO] Two Steps Closer
 					15302 [TODO] Hand in Glove
 					15303 [TODO] Souled Shoulder
 					15304 [TODO] Last Leg and Wit's End
@@ -76,7 +76,6 @@
         <npc_infos var="0" npc_id="831387" quest_dialog="1003" close_dialog="1009"/>
     </report_to_many>
     <!-- COLLECTING QUESTS -->
-    <item_collecting start_npc_ids="805328" end_npc_ids="805692" id="15301"/>
     <item_collecting start_npc_ids="831384" id="80290"/>
     <item_collecting start_npc_ids="831387" id="80294"/>
     <!-- HUNTING QUESTS -->
