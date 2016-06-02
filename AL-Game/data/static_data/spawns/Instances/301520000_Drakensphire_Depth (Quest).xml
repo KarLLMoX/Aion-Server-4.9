@@ -40,7 +40,7 @@
 		</spawn>
 		<!-- Kaisinel Elite Mage ||| IDSeal_Q_Guard_Devanion_Wi_Li -->
 		<spawn npc_id="209821">
-			<spot x="392.2124" y="175.88617" z="1684.216" h="0"/>
+			<!-- <spot x="392.2124" y="175.88617" z="1684.216" h="0"/> -->
 			<spot x="535.74524" y="207.18097" z="1681.8225" h="45"/>
 			<spot x="535.90454" y="146.62228" z="1681.8224" h="45"/>
 			<spot x="793.8695" y="567.98975" z="1701.0443" h="0"/>
@@ -62,21 +62,21 @@
 			<spot x="635.87787" y="881.1152" z="1600.7991" h="30"/>
 			<spot x="144.15024" y="518.7943" z="1749.4785" h="0"/>
 		</spawn>
-		<!-- Detachment Entry Soldier ||| IDSeal_Q_Guard_Fi_Li_NoMove -->
+		<!-- Detachment Entry Soldier ||| IDSeal_Q_Guard_Fi_Li_NoMove
 		<spawn npc_id="209823">
 			<spot x="351.19638" y="192.30641" z="1684.2166" h="90"/>
 			<spot x="347.11496" y="192.31288" z="1684.2166" h="90"/>
-		</spawn>
-		<!-- Detachment Entry Leader ||| IDSeal_Q_Guard_Leader_Fi_Li_NoMove -->
+		</spawn> -->
+		<!-- Detachment Entry Leader ||| IDSeal_Q_Guard_Leader_Fi_Li_NoMove
 		<spawn npc_id="209824">
 			<spot x="353.4427" y="182.63031" z="1684.2166" h="60"/>
-		</spawn>
+		</spawn> -->
 		<!-- Kaisinel Elite Combatant ||| IDSeal_Q_Guard_Devanion_Fi_Li_NoMove -->
 		<spawn npc_id="209825">
-			<spot x="423.92587" y="179.96892" z="1682.2166" h="0"/>
+			<!-- <spot x="423.92587" y="179.96892" z="1682.2166" h="0"/>
 			<spot x="403.47638" y="186.16238" z="1684.216" h="30"/>
 			<spot x="403.4316" y="180.21465" z="1684.216" h="90"/>
-			<spot x="435.78302" y="177.08868" z="1682.2167" h="0"/>
+			<spot x="435.78302" y="177.08868" z="1682.2167" h="0"/> -->
 			<spot x="745.25195" y="259.87677" z="1698.4928" h="0"/>
 			<spot x="727.12866" y="223.68538" z="1691.6482" h="90"/>
 			<spot x="765.06775" y="229.79947" z="1699.917" h="15"/>
@@ -88,8 +88,8 @@
 		</spawn>
 		<!-- Kaisinel Elite Archer ||| IDSeal_Q_Guard_Devanion_Ra_Li_NoMove -->
 		<spawn npc_id="209826">
-			<spot x="392.62598" y="190.2562" z="1684.216" h="0"/>
-			<spot x="431.28027" y="179.74289" z="1682.2166" h="45"/>
+			<!-- <spot x="392.62598" y="190.2562" z="1684.216" h="0"/>
+			<spot x="431.28027" y="179.74289" z="1682.2166" h="45"/> -->
 			<spot x="759.8345" y="235.59457" z="1699.1692" h="15"/>
 			<spot x="736.78394" y="237.67044" z="1694.7052" h="0"/>
 			<spot x="851.8908" y="318.0725" z="1723.512" h="30"/>
@@ -99,7 +99,7 @@
 		</spawn>
 		<!-- Kaisinel Elite Mage ||| IDSeal_Q_Guard_Devanion_Wi_Li_NoMove -->
 		<spawn npc_id="209827">
-			<spot x="437.78033" y="184.66359" z="1682.2167" h="45"/>
+			<!-- <spot x="437.78033" y="184.66359" z="1682.2167" h="45"/> -->
 			<spot x="722.6546" y="229.30038" z="1690.9214" h="15"/>
 			<spot x="749.22723" y="252.79541" z="1698.0111" h="15"/>
 			<spot x="847.91486" y="320.52365" z="1723.6188" h="30"/>
@@ -107,10 +107,10 @@
 		</spawn>
 		<!-- Kaisinel Elite Priest ||| IDSeal_Q_Guard_Devanion_Pr_Li_NoMove -->
 		<spawn npc_id="209828">
-			<spot x="407.54904" y="190.72981" z="1684.216" h="60"/>
-			<spot x="426.9866" y="186.64618" z="1682.2166" h="0"/>
-			<spot x="436.94476" y="194.55673" z="1682.2168" h="90"/>
+			<!-- <spot x="407.54904" y="190.72981" z="1684.216" h="60"/>
 			<spot x="407.55682" y="175.88617" z="1684.216" h="60"/>
+			<spot x="426.9866" y="186.64618" z="1682.2166" h="0"/>
+			<spot x="436.94476" y="194.55673" z="1682.2168" h="90"/> -->
 			<spot x="721.00323" y="237.67166" z="1691.2267" h="45"/>
 			<spot x="761.4117" y="241.65971" z="1699.2325" h="0"/>
 			<spot x="754.7587" y="250.23848" z="1698.7809" h="15"/>
@@ -153,11 +153,11 @@
 		<spawn npc_id="209880">
 			<spot x="635.49115" y="900.8507" z="1600.4794" h="105"/>
 		</spawn>
-		<!-- Detachment Demolisher ||| IDSeal_Q_NPC_Bomber_Li_04 -->
+		<!-- Detachment Demolisher ||| IDSeal_Q_NPC_Bomber_Li_04
 		<spawn npc_id="209881">
 			<spot x="351.18042" y="173.7679" z="1684.2166" h="30"/>
 			<spot x="347.099" y="173.77437" z="1684.2166" h="30"/>
-		</spawn>
+		</spawn> -->
 		<!-- Empyrean Lord's Siege Weapon ||| IDSeal_Q_NPC_DoorDestroyer_Li -->
 		<spawn npc_id="209882">
 			<spot x="634.5456" y="877.3056" z="1600.8502" h="30"/>
