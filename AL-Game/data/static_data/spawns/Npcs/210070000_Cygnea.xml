@@ -1364,7 +1364,15 @@
 		<!-- Diomio -->
         <spawn npc_id="805425" respawn_time="295">
             <spot x="2982.7117" y="809.4563" z="571.4921" h="15"/>
-        </spawn>		
+        </spawn>
+		<!-- Shabee -->
+		<spawn npc_id="805361" respawn_time="295">
+            <spot x="77.36276" y="2755.8481" z="229.03867" h="110"/>
+		</spawn>
+		<!-- Rike ||| LF5_Dike_E -->
+		<spawn npc_id="805327" respawn_time="295">
+			<spot x="2974.466" y="887.504" z="574.0875" h="53"/>
+		</spawn>
 		<!-- End NPCs -->
 		<!-- Start Monsters -->
 		<!--"LF5_F_NagaMage_60_An"-->

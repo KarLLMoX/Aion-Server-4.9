@@ -224,6 +224,10 @@
 		<spawn npc_id="209883" respawn_time="295">
 			<spot x="582.59424" y="178.01213" z="1684.9548" h="61"/>
 		</spawn>
+		<!-- TEMP ELYOS KAMP(15300) NPC -->
+		<spawn npc_id="209863" respawn_time="295">
+			<spot x="581.59424" y="177.01213" z="1684.9548" h="61"/>
+		</spawn>
 		<!--"IDSeal_Q_Sensory_CrossRoad_02"-->
 		<spawn npc_id="206417" respawn_time="295">
 			<spot x="683.47949" y="217.43304" z="1685.0964" h="90"/>
@@ -358,6 +362,16 @@
 		<!--"IDSeal_Q_Magician_65_Ae"-->
 		<spawn npc_id="237209" respawn_time="295">
 			<spot x="443.20517" y="194.4657" z="1683.3571" h="61"/>
+		</spawn>
+		<!-- Killios ||| IDSeal_Q_Killios_E -->
+		<spawn npc_id="805363" respawn_time="295">
+			<!-- 1 Spots -->
+			<spot x="817.0" y="542.0" z="1701.0" h="30"/>
+		</spawn>
+		<!-- Agony's Well ||| IDSeal_Boss_Teleport_Q -->
+		<spawn npc_id="805377" respawn_time="295">
+			<!-- 1 Spots -->
+			<spot x="635.5001" y="957.0204" z="1616.1471" h="90" static_id="50"/>
 		</spawn>
 	</spawn_map>
 </spawns>
