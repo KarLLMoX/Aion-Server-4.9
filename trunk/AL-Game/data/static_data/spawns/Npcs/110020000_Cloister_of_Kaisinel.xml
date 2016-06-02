@@ -108,6 +108,14 @@
 		<!-- Lidamis -->
 		<spawn npc_id="206331" respawn_time="295">
 			<spot x="2182.9495" y="1541.1444" z="1204.9725" h="106"/>
-		</spawn>	  
+		</spawn>
+        <!-- Kaisinel / SP_LC2_Kaisinel_E -->
+        <spawn npc_id="805362" respawn_time="295">
+			<spot x="500.05569" y="500.06332" z="500.29901" h="60"/>
+        </spawn>
+        <!-- Rike / SP_LC2_Dike_E -->
+        <spawn npc_id="805692" respawn_time="295">
+			<spot x="461.4756" y="499.32193" z="499.59976" h="119"/>
+        </spawn>		
 	</spawn_map>
 </spawns>

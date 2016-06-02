@@ -295,7 +295,7 @@ public abstract class QuestHandler extends AbstractQuestHandler implements Const
                 if ("useitem".equals(npc.getAi2().getName()) || ("quest_use_item".equals(npc.getAi2().getName()))) {
                     return closeDialogWindow(env);
                 } else {
-                    return sendQuestSelectionDialog(env);
+                    return closeDialogWindow(env);
                 }
             }
             return false;
