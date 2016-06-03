@@ -336,10 +336,10 @@
 		<spawn npc_id="237238">
 			<spot x="123.05485" y="519.1897" z="1750.3416" h="0"/>
 		</spawn>
-		<!-- Black Sun ||| IDSeal_Q_FOBJ_Boss_Room_04 -->
+		<!-- Black Sun ||| IDSeal_Q_FOBJ_Boss_Room_04
 		<spawn npc_id="702826">
 			<spot x="153.24979" y="516.4728" z="1751.0493" static_id="383"/>
-		</spawn>
+		</spawn> -->
 		<!-- Seal of Darkness ||| IDSeal_Q_FOBJ_AreaDoor -->
 		<spawn npc_id="702827">
 			<spot x="559.64056" y="211.89925" z="1684.7726" h="0" static_id="332"/>
@@ -347,10 +347,10 @@
 			<spot x="592.02484" y="181.32274" z="1683.7301" h="45" static_id="332"/>
 			<!-- <spot x="635.5001" y="905.0204" z="1600.5023" h="90" static_id="332"/> -->
 		</spawn>
-		<!-- Drakenspire Depths Exit ||| IDSeal_Q_Entrance_Out01 -->
+		<!-- Drakenspire Depths Exit ||| IDSeal_Q_Entrance_Out01
 		<spawn npc_id="731550">
 			<spot x="132.3337" y="518.45123" z="1749.3623" h="0"/>
-		</spawn>
+		</spawn> -->
 		<!-- Seal of Darkness ||| IDSeal_AreaDoor
 		<spawn npc_id="731580">
 			<spot x="809.73114" y="598.5216" z="1700.7819" h="90" static_id="522"/>
@@ -381,12 +381,12 @@
 		<spawn npc_id="855433">
 			<spot x="156.97609" y="517.79333" z="1749.5052" h="0"/>
 		</spawn>
-		<!-- Magma Glutten ||| BIDSeal_Q_Twin_P_Sum_65_An -->
+		<!-- Magma Glutten ||| BIDSeal_Q_Twin_P_Sum_65_An
 		<spawn npc_id="856548">
 			<spot x="538.7" y="203.5" z="1682.0" h="0"/>
 			<spot x="528.5" y="221.1" z="1682.0" h="0"/>
 			<spot x="524.3" y="201.1" z="1682.0" h="0"/>
-		</spawn>
+		</spawn> -->
 		<!-- Cinderhorn Ravager ||| BIDSeal_Q_Twin_P_HellFireField -->
 		<spawn npc_id="856550">
 			<spot x="531.0885" y="212.43806" z="1681.8224" h="0"/>

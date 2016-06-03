@@ -77,6 +77,26 @@ public class DrakenSphireDepthSoloInstance extends GeneralInstanceHandler {
 		}
 	}
 
+	@Override
+	public void onDie(Npc npc) {
+		int npcId = npc.getNpcId();
+		switch (npcId) {
+			case 237225: //Rapacious Kadena (right)
+				instance.getDoors().get(378).setOpen(true);
+				break;
+			case 237226: //Rapacious Kadena (middle)
+				instance.getDoors().get(376).setOpen(true);
+				break;
+			case 237227: //Rapacious Kadena (left)
+				instance.getDoors().get(375).setOpen(true);
+				break;
+            case 237238: //Beritra (Dragon Form)
+                spawn(731550, 132.3337f, 518.45123f, 1749.3623f, (byte) 0); //Drakenspire Depths Exit
+                spawn(702826, 153.24979f, 516.4728f, 1751.0493f, (byte) 0); //Black Sun
+                break;
+		}
+	}
+    
 	public void onDropRegistered(Npc npc) {
         Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
         int npcId = npc.getNpcId();
@@ -108,22 +128,6 @@ public class DrakenSphireDepthSoloInstance extends GeneralInstanceHandler {
 			break;
 		}
     }
-
-	@Override
-	public void onDie(Npc npc) {
-		int npcId = npc.getNpcId();
-		switch (npcId) {
-			case 237225: //Rapacious Kadena (right)
-				instance.getDoors().get(378).setOpen(true);
-				break;
-			case 237226: //Rapacious Kadena (middle)
-				instance.getDoors().get(376).setOpen(true);
-				break;
-			case 237227: //Rapacious Kadena (left)
-				instance.getDoors().get(375).setOpen(true);
-				break;				
-		}
-	}   
     
 	public void onExitInstance(Player player) {
 		switch (player.getRace()) {
