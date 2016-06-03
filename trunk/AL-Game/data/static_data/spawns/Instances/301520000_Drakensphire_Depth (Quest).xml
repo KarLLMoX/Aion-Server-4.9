@@ -320,10 +320,10 @@
 		<spawn npc_id="237230">
 			<spot x="811.85016" y="568.0076" z="1701.0443" h="90"/>
 		</spawn>
-		<!-- Exhausted Orissan ||| IDSeal_Q_Oritsa_65_Al_02 -->
+		<!-- Exhausted Orissan ||| IDSeal_Q_Oritsa_65_Al_02
 		<spawn npc_id="237231">
 			<spot x="800.3914" y="562.466" z="1701.0442" h="0"/>
-		</spawn>
+		</spawn> -->
 		<!-- Commander Virtsha ||| IDSeal_Q_Drakan_Fi_N_65_Ah -->
 		<spawn npc_id="237236">
 			<spot x="635.1635" y="791.67206" z="1596.8792" h="30"/>
@@ -332,10 +332,10 @@
 		<spawn npc_id="237237">
 			<spot x="152.08247" y="518.6036" z="1749.5946" h="0"/>
 		</spawn>
-		<!-- Beritra ||| IDSeal_Q_Vritra_N_65_Al_02 -->
+		<!-- Beritra ||| IDSeal_Q_Vritra_N_65_Al_02
 		<spawn npc_id="237238">
 			<spot x="123.05485" y="519.1897" z="1750.3416" h="0"/>
-		</spawn>
+		</spawn> -->
 		<!-- Black Sun ||| IDSeal_Q_FOBJ_Boss_Room_04
 		<spawn npc_id="702826">
 			<spot x="153.24979" y="516.4728" z="1751.0493" static_id="383"/>
@@ -373,10 +373,10 @@
 		<spawn npc_id="805377">
 			<spot x="635.5001" y="957.0204" z="1616.1471" h="90" static_id="50"/>
 		</spawn>
-		<!-- Sacred Beast of Dragon Lord Beritra ||| IDSeal_Q_VritraArm_TreasureBox -->
+		<!-- Sacred Beast of Dragon Lord Beritra ||| IDSeal_Q_VritraArm_TreasureBox
 		<spawn npc_id="833580">
 			<spot x="152.1312" y="518.49384" z="1749.5945" h="0"/>
-		</spawn>
+		</spawn> -->
 		<!-- Draconic Transformation ||| BIDSeal_Boss_Lv3_Transform -->
 		<spawn npc_id="855433">
 			<spot x="156.97609" y="517.79333" z="1749.5052" h="0"/>
