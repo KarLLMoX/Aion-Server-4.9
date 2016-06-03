@@ -92,7 +92,7 @@ public class DrakenSphireDepthSoloInstance extends GeneralInstanceHandler {
 				break;
             case 237238: //Beritra (Dragon Form)
                 spawn(731550, 132.3337f, 518.45123f, 1749.3623f, (byte) 0); //Drakenspire Depths Exit
-                spawn(702826, 153.24979f, 516.4728f, 1751.0493f, (byte) 0); //Black Sun
+                spawn(833580, 152.1312f, 518.49384f, 1749.5945f, (byte) 0); //Sacred Beast of Dragon Lord Beritra
                 break;
 		}
 	}
