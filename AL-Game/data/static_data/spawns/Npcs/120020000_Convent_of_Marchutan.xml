@@ -97,5 +97,13 @@
         <spawn npc_id="798711" respawn_time="295">
             <spot x="1561.5146" y="1426.4908" z="265.685" h="100"/>
         </spawn>
+		<!-- Marchutan ||| DC2_Marchutan_E -->
+		<spawn npc_id="805365" respawn_time="295">
+			<spot x="500.0149" y="499.9861" z="499.72083" h="60"/>
+		</spawn>
+		<!-- Skuldun ||| DC2_Skuldun_E -->
+		<spawn npc_id="805693" respawn_time="295">
+			<spot x="461.6594" y="499.50623" z="499.59976" h="0"/>
+		</spawn>
     </spawn_map>
 </spawns>

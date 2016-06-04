@@ -498,7 +498,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_50_gd_Seller"-->
 		<spawn npc_id="805055" respawn_time="295">
-			<spot x="409.76468" y="2197.1091" z="222.84711" h="114"/>
+			<spot x="457.4484" y="2197.385" z="221.85594" h="83"/>
 		</spawn>
 		<!--"DF5_fief_c_goods_Seller"-->
 		<spawn npc_id="805003" respawn_time="295">
@@ -749,7 +749,7 @@
 		</spawn>
 		<!--"DF5_Andria_E"-->
 		<spawn npc_id="804930" respawn_time="295">
-			<spot x="453.2244" y="2185.3806" z="222.4156" h="74"/>
+			<spot x="454.2538" y="2184.2778" z="221.85596" h="23"/>
 		</spawn>
 		<!--"DF5_op_a_special_goods_ApSeller"-->
 		<spawn npc_id="805043" respawn_time="295">
@@ -777,7 +777,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_30_gd_Seller"-->
 		<spawn npc_id="805050" respawn_time="295">
-			<spot x="469.50775" y="2193.8088" z="222.88889" h="54"/>
+			<spot x="469.50775" y="2193.8088" z="221.85596" h="53"/>
 		</spawn>
 		<!--"DF5_Vil3_2_Out"-->
 		<spawn npc_id="805185" respawn_time="295">
@@ -793,7 +793,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_40_join"-->
 		<spawn npc_id="805158" respawn_time="295">
-			<spot x="424.33786" y="2206.2268" z="222.84711" h="82"/>
+			<spot x="453.11273" y="2198.2268" z="221.85594" h="83"/>
 		</spawn>
 		<!--"DF5_op_a_Exchange_Mithril_ApItem"-->
 		<spawn npc_id="805262" respawn_time="295">
@@ -861,7 +861,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_30_sd_Seller"-->
 		<spawn npc_id="805049" respawn_time="295">
-			<spot x="469.05759" y="2192.0588" z="222.88889" h="54"/>
+			<spot x="469.0576" y="2192.0588" z="221.85596" h="53"/>
 		</spawn>
 		<!--"DF5_Op3_ZoneTeleport_D"-->
 		<spawn npc_id="805259" respawn_time="295">
@@ -993,7 +993,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_30_am_Seller"-->
 		<spawn npc_id="805048" respawn_time="295">
-			<spot x="467.4679" y="2184.8696" z="222.88889" h="54"/>
+			<spot x="467.4679" y="2184.8696" z="221.85596" h="53"/>
 		</spawn>
 		<!--"DF5_Jasyl_E"-->
 		<spawn npc_id="804931" respawn_time="295">
@@ -1037,7 +1037,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_30_wp_Seller"-->
 		<spawn npc_id="805047" respawn_time="295">
-			<spot x="467.05762" y="2183.1196" z="222.88889" h="54"/>
+			<spot x="467.05762" y="2183.1196" z="221.85596" h="53"/>
 		</spawn>
 		<!--"DF5_op_h_Stigma_long_magic"-->
 		<spawn npc_id="805040" respawn_time="295">
@@ -1073,7 +1073,7 @@
 		</spawn>
 		<!--"DF5_op_a_daily_D_30_join"-->
 		<spawn npc_id="805157" respawn_time="295">
-			<spot x="456.74734" y="2183.7395" z="222.88889" h="23"/>
+			<spot x="456.51694" y="2183.9368" z="221.85596" h="23"/>
 		</spawn>
 		<!--"DF5_op_a_housing_material_Seller"-->
 		<spawn npc_id="805021" respawn_time="295">
@@ -1181,7 +1181,7 @@
 		</spawn>
 		<!--"DF5_Salas_E"-->
 		<spawn npc_id="804962" respawn_time="295">
-			<spot x="411.75558" y="2206.1108" z="222.4156" h="114"/>
+			<spot x="459.5908" y="2197.3372" z="221.85594" h="83"/>
 		</spawn>
 		<!--"DF5_op_a_Holy_Recharger"-->
 		<spawn npc_id="804978" respawn_time="295">
@@ -1443,6 +1443,30 @@
         <spawn npc_id="805427" respawn_time="295">
             <spot x="373.65427" y="2260.8296" z="219.7153" h="40"/>
         </spawn>
+		<!-- Skuldun ||| DF5_Skuldun_E -->
+		<spawn npc_id="805339" respawn_time="295">
+			<spot x="409.38504" y="2201.79" z="223.07562" h="113"/>
+		</spawn>
+		<!-- Fachmann ||| DF5_Fachmann_E -->
+		<spawn npc_id="805340" respawn_time="295">
+			<spot x="412.39484" y="2199.2456" z="222.30118" h="113"/>
+		</spawn>
+		<!-- Kamfina ||| DF5_Kampfyna_E -->
+		<spawn npc_id="805341" respawn_time="295">
+			<spot x="414.52206" y="2196.3506" z="221.85593" h="26"/>
+		</spawn>
+		<!-- Hikait ||| DF5_Higkeit_E -->
+		<spawn npc_id="805342" respawn_time="295">
+			<spot x="413.20987" y="2202.8157" z="222.3012" h="113"/>
+		</spawn>
+		<!-- Mashinee ||| DF5_Maschine_E -->
+		<spawn npc_id="805343" respawn_time="295">
+			<spot x="416.6043" y="2204.4465" z="221.85596" h="86"/>
+		</spawn>
+		<!-- Grito ||| DF5_Grito_E -->
+		<spawn npc_id="805364" respawn_time="295">
+			<spot x="2987.3374" y="370.8684" z="308.9924" h="50"/>
+		</spawn>
 		<!-- End NPCs-->
 		<!-- Start Monsters -->
 		<!--"DF5_I_Centipede_63_n"-->

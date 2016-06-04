@@ -16,11 +16,20 @@
  */
 package admincommands;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.TreeMap;
+import java.util.concurrent.ScheduledFuture;
+
 import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.dataholders.SpawnsData2;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
@@ -36,15 +45,6 @@ import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.chathandlers.AdminCommand;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.TreeMap;
-import java.util.concurrent.ScheduledFuture;
 
 /**
  * @author CoolyT
@@ -173,8 +173,7 @@ public class SpawnFix extends AdminCommand {
 	
 	public static void go(final Player admin)
 	{
-        @SuppressWarnings("unused")
-		final SpawnsData2 spawnData = DataManager.SPAWNS_DATA2;//.clone();
+        final SpawnsData2 spawnData = DataManager.SPAWNS_DATA2;//.clone();
 		worldId = admin.getWorldId();
 		worldName = World.getInstance().getWorldMap(worldId).getName();
 		final String mapName = worldName;
@@ -311,13 +310,6 @@ public class SpawnFix extends AdminCommand {
         	        			sst.setZ(admin.getZ());
         	        	}        	        	
         	        	SpawnEngine.spawnObject(spawn, admin.getInstanceId());
-                        
-        	        	if (false)
-                        {
-                        	thread.cancel(true);
-                        	return;
-                        }
-        	        	//GameServer.log.info("passed end");
                     }
                 	
             	} catch (Exception e) {GameServer.log.info("Error: "+e.getCause());} 
