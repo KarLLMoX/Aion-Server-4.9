@@ -690,8 +690,11 @@
     
     <!-- Cygnea - Taking Arms Quest -->
     <portal_loc world_id="110020000" loc_id="1100201" x="464.0" y="499.0" z="499.5998" h="0"/>
+    <portal_loc world_id="120020000" loc_id="1200201" x="464.0" y="499.0" z="499.5998" h="0"/>
     <portal_loc world_id="210070000" loc_id="2100703" x="2971.0" y="888.0" z="574.0875" h="0"/>
-
+    <portal_loc world_id="220080000" loc_id="2200803" x="412.0" y="2201.0" z="222.30122" h="115"/>
+    
     <!-- Drakensphire Depths Exit (Elyos) -->
     <portal_loc world_id="210070000" loc_id="2100704" x="2905.0" y="803.0" z="569.52704" h="0"/>
+    <portal_loc world_id="220080000" loc_id="2200804" x="454.0" y="2262.0" z="220.04858" h="0"/>
 </portal_locs>
