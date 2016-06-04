@@ -3,6 +3,9 @@
                xsi:noNamespaceSchemaLocation="quest_SCRIPTipt_data.xsd">
     <!--
     [BEGIN] SUMMARY			   
+		15223 [SCRIPT] [Spy/Daily] Enter Enshar
+		15224 [SCRIPT] [Spy/Daily] Set for Cet
+		15225 [SCRIPT] [Spy/Daily] Down to the Bomire Wire
 		20500 [SCRIPT] Enshar Expedition
 		20501 [SCRIPT] What the Ruins Say
 		20502 [SCRIPT] Evolving Mysteries
@@ -59,8 +62,16 @@
 		25230 [XML] Treasure Box Keys
 		25231 [XML] Treasure Crate Keys
 		25232 [XML] Treasure Chest Keys
+		25235 [TODO]   [Urgent Order] Protect the Eastern Aurelian Line
+		25236 [TODO]   [Urgent Order] Protect the Eastern Sanguisand Line
+		25237 [TODO]   [Urgent Order] Protect the Oracular Chamber
+		25300 [SCRIPT]   A Bloody Battle with Beritra
 		28970 [SCRIPT] Opening Corridors
-		
+		28972 [TODO]   [Weekly] Protect Arden Village
+		28973 [TODO]   [Weekly] Protect Cet Village
+		28974 [TODO]   [Weekly] Protect Bomire Village
+		28975 [TODO]   Levinshor Fragments
+		28976 [TODO]   Kaldor Fragments
     [END] SUMMARY
     -->	
 	<!-- REPORTING QUESTS -->	
