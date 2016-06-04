@@ -6,6 +6,10 @@
 	<portal_use npc_id="731550">
         <portal_path loc_id="2100704" race="ELYOS"/>
     </portal_use>
+	<!-- Drakensphire Depths Kampagnen Quest Exit (Asmodians) -->
+	<portal_use npc_id="731551">
+        <portal_path loc_id="2200804" race="ASMODIANS"/>
+    </portal_use>
 
 	<!-- Shugo Imperial Exit -->
 	<portal_use npc_id="831118">
@@ -2479,12 +2483,19 @@
         <portal_path dialog="1011" loc_id="4000119" race="ASMODIANS"/>
     </portal_dialog>
 
-    <!-- Cygnea - Taking Arms Quest -->
+    <!-- Cygnea - Taking Arms Quest (Elyos) -->
     <portal_dialog npc_id="805327">
         <portal_path dialog="104" loc_id="1100201" race="ELYOS"/>
     </portal_dialog>
     <portal_dialog npc_id="805692">
         <portal_path dialog="104" loc_id="2100703" race="ELYOS"/>
+    </portal_dialog>
+    <!-- Cygnea - Taking Arms Quest (Asmodians) -->
+    <portal_dialog npc_id="805339">
+        <portal_path dialog="104" loc_id="1200201" race="ASMODIANS"/>
+    </portal_dialog>
+    <portal_dialog npc_id="805693">
+        <portal_path dialog="104" loc_id="2200803" race="ASMODIANS"/>
     </portal_dialog>
 
     <!-- **************** PORTAL SCROLL **************** -->
