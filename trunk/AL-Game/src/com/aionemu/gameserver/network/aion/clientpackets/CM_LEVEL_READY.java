@@ -38,7 +38,6 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.BaseService;
 import com.aionemu.gameserver.services.FastTrackService;
 import com.aionemu.gameserver.services.SiegeService;
-import com.aionemu.gameserver.services.TownService;
 import com.aionemu.gameserver.services.WeatherService;
 import com.aionemu.gameserver.services.rift.RiftInformer;
 import com.aionemu.gameserver.world.World;
