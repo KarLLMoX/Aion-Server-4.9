@@ -34,7 +34,6 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 public class _15300TakingArms extends QuestHandler {
 	
 	//TODO Check if user has Agent weapon + equipped
-	//Enter Kerker
 
     public static final int questId = 15300;
 	private final static int[] mobs = {237228, 237229}; //Lava Protector, Heatvent Protector
@@ -72,10 +71,10 @@ public class _15300TakingArms extends QuestHandler {
 		Player player = env.getPlayer();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
         int targetId = env.getTargetId();
-		int var = qs.getQuestVarById(0);
         DialogAction dialog = env.getDialog();
 
         if (qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
             if (targetId == 805327) { // Dike
 				switch (dialog) {
 					case QUEST_SELECT: {

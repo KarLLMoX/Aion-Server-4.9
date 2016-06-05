@@ -25,12 +25,15 @@ import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.network.aion.AionServerPacket;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_PLAY_MOVIE;
 import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.world.WorldMapInstance;
+import com.aionemu.gameserver.world.knownlist.Visitor;
 
 /**
  * @author Falke_34
@@ -93,6 +96,7 @@ public class DrakenSphireDepthSoloInstance extends GeneralInstanceHandler {
             case 237238: //Beritra (Dragon Form)
                 spawn(731550, 132.3337f, 518.45123f, 1749.3623f, (byte) 0); //Drakenspire Depths Exit
                 spawn(833580, 152.1312f, 518.49384f, 1749.5945f, (byte) 0); //Sacred Beast of Dragon Lord Beritra
+                sendPacket(new SM_PLAY_MOVIE(0, 919));
                 break;
 		}
 	}
@@ -141,6 +145,15 @@ public class DrakenSphireDepthSoloInstance extends GeneralInstanceHandler {
 			break;
 		}
         
+    }
+	
+    private void sendPacket(final AionServerPacket packet) {
+        instance.doOnAllPlayers(new Visitor<Player>() {
+            @Override
+            public void visit(Player player) {
+                PacketSendUtility.sendPacket(player, packet);
+            }
+        });
     }
 
 	@Override
