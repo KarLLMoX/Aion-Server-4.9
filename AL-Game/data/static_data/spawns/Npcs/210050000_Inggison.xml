@@ -8492,5 +8492,9 @@
             <spot x="2312.475" y="1673.8474" z="273.7846" static_id="1782"/>
         </spawn>
         <!-- Hanarkand 4.8 End -->
+		<!-- Somation || LF4_Somation_E -->
+		<spawn npc_id="805334" respawn_time="295">
+            <spot x="2157.0" y="277.8" z="489.77045" h="40"/>
+        </spawn>
 	</spawn_map>
 </spawns>

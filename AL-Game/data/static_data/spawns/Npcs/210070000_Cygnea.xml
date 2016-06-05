@@ -1373,9 +1373,9 @@
 		<spawn npc_id="805327" respawn_time="295">
 			<spot x="2974.466" y="887.504" z="574.0875" h="53"/>
 		</spawn>
-		<!-- Machina ||| LF5_Machina_E -->
-		<spawn npc_id="805331" respawn_time="295">
-			<spot x="2973.01" y="891.6167" z="574.08746" h="60"/>
+		<!-- Epaion ||| LF5_Efaion_E -->
+		<spawn npc_id="805328" respawn_time="295">
+			<spot x="2973.0781" y="885.9493" z="574.0875" h="53"/>
 		</spawn>
 		<!-- Argon ||| LF5_Agon_E -->
 		<spawn npc_id="805329" respawn_time="295">
@@ -1385,10 +1385,18 @@
 		<spawn npc_id="805330" respawn_time="295">
 			<spot x="2974.6042" y="889.6064" z="574.0875" h="53"/>
 		</spawn>
-		<!-- Epaion ||| LF5_Efaion_E -->
-		<spawn npc_id="805328" respawn_time="295">
-			<spot x="2973.0781" y="885.9493" z="574.0875" h="53"/>
+		<!-- Machina ||| LF5_Machina_E -->
+		<spawn npc_id="805331" respawn_time="295">
+			<spot x="2973.01" y="891.6167" z="574.08746" h="60"/>
 		</spawn>
+		<!-- Nephoria ||| LF5_Nephoria_E -->
+		<spawn npc_id="805332" respawn_time="295">
+			<spot x="637.6" y="324.6" z="441.2807" h="4"/>
+		</spawn>
+		<!-- Prestelle || LF5_Frestelle_E -->
+		<spawn npc_id="805333" respawn_time="295">
+            <spot x="1277.4" y="2065.3" z="202.26414" h="40"/>
+        </spawn>
 		<!-- End NPCs -->
 		<!-- Start Monsters -->
 		<!--"LF5_F_NagaMage_60_An"-->

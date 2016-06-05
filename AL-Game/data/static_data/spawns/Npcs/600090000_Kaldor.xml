@@ -1765,6 +1765,10 @@
         <!-- The Eternal Bastion Entrance -->
         <spawn npc_id="833009" respawn_time="295">
             <spot x="699.1963" y="777.31415" z="174.33951" static_id="1509"/>
+        </spawn>
+		<!-- Asteness || LDF5_Fortress_Hasteness_E -->
+        <spawn npc_id="805336" respawn_time="295">
+            <spot x="1098.2" y="1258.9" z="177.93349" h="91"/>
         </spawn>        
     </spawn_map>
 </spawns>

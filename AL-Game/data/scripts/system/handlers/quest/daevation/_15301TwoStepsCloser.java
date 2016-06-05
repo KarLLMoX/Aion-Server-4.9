@@ -38,7 +38,6 @@ public class _15301TwoStepsCloser extends QuestHandler {
 
     @Override
     public void register() {
-        qe.registerOnLevelUp(questId);
         qe.registerQuestNpc(805327).addOnQuestStart(questId); //Rike
         qe.registerQuestNpc(805327).addOnTalkEvent(questId); //Rike
         qe.registerQuestNpc(805328).addOnTalkEvent(questId); //Epaion
@@ -51,7 +50,6 @@ public class _15301TwoStepsCloser extends QuestHandler {
         QuestState qs = player.getQuestStateList().getQuestState(questId);
         DialogAction dialog = env.getDialog();
         int targetId = env.getTargetId();
-		int var = qs.getQuestVarById(0);
 		
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 805327) {
@@ -71,6 +69,7 @@ public class _15301TwoStepsCloser extends QuestHandler {
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
             if (targetId == 805328) {
 				if (var == 0) {
 					switch (dialog) {

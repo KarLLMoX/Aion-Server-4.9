@@ -1857,5 +1857,9 @@
 		<spawn npc_id="730972" respawn_time="295">
             <spot h="83" x="334.06253" y="412.31686" z="318.5"/>
         </spawn>
+		<!-- Spintel || LDF4_Advance_Sphintelle_E -->
+		<spawn npc_id="805335" respawn_time="295">
+            <spot x="250.5" y="266.9" z="351.0378" h="52"/>
+        </spawn>
     </spawn_map>
 </spawns>
