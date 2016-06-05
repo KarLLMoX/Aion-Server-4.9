@@ -14,7 +14,7 @@
                     2990 [SCRIPT] Making the Daevanion Weapon
                     2993 [SCRIPT] Another Beginning
                     2994 [SCRIPT] A New Choice
-					15301 [TODO] Two Steps Closer
+					15301 [SCRIPT] Two Steps Closer
 					15302 [TODO] Hand in Glove
 					15303 [TODO] Souled Shoulder
 					15304 [TODO] Last Leg and Wit's End
@@ -27,9 +27,9 @@
 					15314 [TODO] Kaisinel's Daevanion Leggings
 					15315 [TODO] Kaisinel's Daevanion Tunic
 					15316 [TODO] Kaisinel's Daevanion Weapon
-					15321 [TODO] Supporting Kaisinel's Wings
+					15321 [SCRIPT] Supporting Kaisinel's Wings
 					15322 [TODO] [Infiltration] Scouting Enshar
-					15323 [TODO] Top Secret Order
+					15323 [XML] Top Secret Order
 					15324 [TODO] Unyielding Spirit
 					15325 [TODO] [Group] Courageous Spirit
 					15326 [TODO] [Infiltration] Overcoming Chaos
@@ -78,5 +78,6 @@
     <!-- COLLECTING QUESTS -->
     <item_collecting start_npc_ids="831384" id="80290"/>
     <item_collecting start_npc_ids="831387" id="80294"/>
+    <item_collecting start_npc_ids="805330" id="15323" start_dialog_id="4762" start_dialog_id2="1011" item_id="182215889"/>
     <!-- HUNTING QUESTS -->
 </quest_scripts>
