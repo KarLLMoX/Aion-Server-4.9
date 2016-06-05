@@ -79,7 +79,7 @@ public class _15321SupportingKaisinelsWings extends QuestHandler {
         int targetId = env.getTargetId();
         DialogAction dialog = env.getDialog();
 		
-		if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+		if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
             if (targetId == 805330) { // Potencia
 				switch (dialog) {
                     case QUEST_SELECT: {
