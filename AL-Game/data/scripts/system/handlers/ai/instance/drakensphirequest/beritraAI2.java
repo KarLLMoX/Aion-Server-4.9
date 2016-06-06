@@ -42,7 +42,7 @@ public class beritraAI2 extends AggressiveNpcAI2 {
     private void checkPercentage(int hpPercentage) {
         if (hpPercentage <= 90) {
             if (isStartEvent.compareAndSet(false, true)) {
-                scheduleSpawnExhaustedOrissan(
+                scheduleSpawnBeritraDragon(
                         this.getPosition().getX(),
                         this.getPosition().getY(),
                         this.getPosition().getZ(),
@@ -52,7 +52,7 @@ public class beritraAI2 extends AggressiveNpcAI2 {
         }
     }
 
-    private void scheduleSpawnExhaustedOrissan(final float x, final float y, final float z, final byte h) {
+    private void scheduleSpawnBeritraDragon(final float x, final float y, final float z, final byte h) {
         ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
