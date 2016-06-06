@@ -39,7 +39,8 @@
        <a href="genTeleporter.php" target="_self"><input type="button" value="Generieren NPC-Teleporter" style="width:220px"></a><br><br>
        <a href="genTeleLocation.php" target="_self"><input type="button" value="Generieren Teleport-Locations" style="width:220px"></a><br><br>
        <a href="genGather.php"     target="_self"><input type="button" value="Generieren Gather-Spawns"  style="width:220px"></a><br><br>
-       <a href="genDecomposableItems.php" target="_self"><input type="button" value="Generieren DecomposableItems" style="width:220px"></a>
+       <a href="genDecomposableItems.php" target="_self"><input type="button" value="Generieren DecomposableItems" style="width:220px"></a><br><br>
+       <a href="genWorldZones.php" target="_self"><input type="button" value="Generieren World-Zones" style="width:220px"></a>
        <br>
        </center>
      </td>
