@@ -17,7 +17,6 @@
 package quest.daevation;
 
 import com.aionemu.gameserver.model.DialogAction;
-import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
@@ -97,7 +96,6 @@ public class _15321SupportingKaisinelsWings extends QuestHandler {
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-			int var = qs.getQuestVarById(0);
             if (targetId == 805332) { // Nephoria
 				switch (dialog) {
 					case QUEST_SELECT: {
@@ -200,7 +198,6 @@ public class _15321SupportingKaisinelsWings extends QuestHandler {
 		
 		int var = qs.getQuestVarById(0);
 		int var1 = qs.getQuestVarById(1);
-		int targetId = env.getTargetId();
 		if (var == 1 && var1 >= 0 && var1 < 29) {
 			return defaultOnKillEvent(env, mobs, var1, var1 + 1, 1);
 		} else if (var == 1 && var1 == 29) {

@@ -17,7 +17,6 @@
 package quest.daevation;
 
 import com.aionemu.gameserver.model.DialogAction;
-import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
@@ -108,7 +107,6 @@ public class _15324UnyieldingSpirit extends QuestHandler {
 		
 		int var = qs.getQuestVarById(0);
 		int var1 = qs.getQuestVarById(1);
-		int targetId = env.getTargetId();
 		if (var == 0 && var1 >= 0 && var1 < 19) {
 			return defaultOnKillEvent(env, mobs, var1, var1 + 1, 1);
 		} else if (var == 0 && var1 == 19) {
