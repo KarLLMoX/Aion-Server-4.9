@@ -4069,20 +4069,12 @@
 			<spot x="812.18" y="1019.18" z="284.386" h="14"/>
 			<spot x="666.04" y="813.02" z="287.7475" h="63" walker_id="D44D24FBF8A9B2F02EC86F1DECF329FDB0FF498B"/>
 		</spawn>
-		<!-- MuMu Zoo -->
-		<spawn npc_id="211794" respawn_time="300">
-			<spot x="1432.89" y="270.464" z="345.582" h="93"/>
-		</spawn>
 		<!-- Desert Kselliki -->
 		<spawn npc_id="210822" respawn_time="295">
 			<spot x="869.826" y="1258.51" z="277.979" h="107"/>
 			<spot x="469.76" y="1003.94" z="283.64" h="14"/>
 			<spot x="890.087" y="1349.25" z="273.708" h="54"/>
 			<spot x="876.981" y="1312.37" z="271.75" h="77"/>
-		</spawn>
-		<!-- MuMu Mon -->
-		<spawn npc_id="211793" respawn_time="300">
-			<spot x="1436.89" y="270.464" z="345.582" h="35"/>
 		</spawn>
 		<!-- Thorntail Scolopen -->
 		<spawn npc_id="210821" respawn_time="295">
@@ -4123,18 +4115,6 @@
 		<spawn npc_id="210819" respawn_time="295">
 			<spot x="1361.13" y="1751.42" z="289.964" h="21" random_walk="8"/>
 			<spot x="1454.59" y="1697.58" z="295.917" h="44" random_walk="10"/>
-		</spawn>
-		<!-- Arrogant Amurru -->
-		<spawn npc_id="211798" respawn_time="300">
-			<spot x="1405.88" y="268.53" z="345.582" h="4"/>
-		</spawn>
-		<!-- Cursed Muku -->
-		<spawn npc_id="211797" respawn_time="300">
-			<spot x="1435.17" y="240.76" z="348.06" h="14"/>
-		</spawn>
-		<!-- Cursed Miku -->
-		<spawn npc_id="211796" respawn_time="295">
-			<spot x="1405.24" y="348.048" z="400.925" h="82"/>
 		</spawn>
 		<!-- Beleffon -->
 		<spawn npc_id="210816" respawn_time="3600">
@@ -4195,10 +4175,6 @@
 		<spawn npc_id="210858" respawn_time="295">
 			<spot x="1304.75" y="1641.48" z="272.84375" h="85" walker_id="F2522270BD8EEA7CE7C959C38E642F63C294DF4A"/>
 			<spot x="1304.75" y="1641.48" z="272.84375" h="85" walker_id="F2522270BD8EEA7CE7C959C38E642F63C294DF4A"/>
-		</spawn>
-		<!-- Chaos Dracus -->
-		<spawn npc_id="211800" respawn_time="14400">
-			<spot x="1421.75" y="241.924" z="348.054" h="5"/>
 		</spawn>
 		<!-- Springwater Spirit -->
 		<spawn npc_id="210827" respawn_time="295">

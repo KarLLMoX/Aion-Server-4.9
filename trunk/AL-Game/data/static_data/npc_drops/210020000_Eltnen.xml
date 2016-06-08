@@ -4337,6 +4337,22 @@
             <drop item_id="182004149" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Huge Wind Fragment" />
         </drop_group>
     </npc_drop>
+	<npc_drop npc_id="211800">
+		<drop_group name="WEAPON_UNIQUE_LVL35" use_category="true" race="PC_ALL">
+			<drop item_id="100000228" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Sword" />
+			<drop item_id="100100142" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Warhammer" />
+			<drop item_id="100200245" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Dagger" />
+			<drop item_id="100500153" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Jewel" />
+			<drop item_id="100600166" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Tome" />
+			<drop item_id="100900148" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Greatsword" />
+			<drop item_id="101300145" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Spear" />
+			<drop item_id="101500154" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Staff" />
+			<drop item_id="101700164" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Longbow" />
+			<drop item_id="101800909" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Pistol" />
+			<drop item_id="101900272" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Aethercannon" />
+			<drop item_id="102000282" chance="9.0" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Chaos Harp" />
+		</drop_group>
+	</npc_drop>
     <npc_drop npc_id="211806">
         <drop_group name="WEAPON_COMMON_LVL30" use_category="true" race="PC_ALL">
             <drop item_id="102100212" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Jungle Cipher-Blade" />
