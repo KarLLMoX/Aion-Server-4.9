@@ -32,13 +32,9 @@ import com.aionemu.gameserver.world.WorldPosition;
 /**
  * @author Falke_34, CoolyT
  */
-@AIName("charlesrunerk")
+@AIName("charlesrunerk") //805338
 public class CharlesrunerkAI extends NpcAI2 {
 
-	//TODO
-    // NPC Charlesrunerk hat 7 Random Spawn Positionen,
-    // an jeder dieser Positionen bleibt er für 1 Stunde
-	
 	Collection<WorldPosition> loc = new ArrayList<WorldPosition>();
 	Npc npc = null;
 	

@@ -1467,6 +1467,10 @@
 		<spawn npc_id="805364" respawn_time="295">
 			<spot x="2987.3374" y="370.8684" z="308.9924" h="50"/>
 		</spawn>
+		<!-- Edinerk / SP_DF5_Edierung_E_4 -->
+        <spawn npc_id="805350" respawn_time="295">
+			<spot x="475.47388" y="2300.761" z="216.45724" h="96"/>
+		</spawn>
 		<!-- End NPCs-->
 		<!-- Start Monsters -->
 		<!--"DF5_I_Centipede_63_n"-->
