@@ -1397,6 +1397,10 @@
 		<spawn npc_id="805333" respawn_time="295">
             <spot x="1277.4" y="2065.3" z="202.26414" h="40"/>
         </spawn>
+		<!-- Charlesrunerk -->
+		<spawn npc_id="805338" respawn_time="295">
+			<spot x="480.80933" y="1918.559" z="466.5252" h="119"/>
+		</spawn>
 		<!-- End NPCs -->
 		<!-- Start Monsters -->
 		<!--"LF5_F_NagaMage_60_An"-->
