@@ -18,18 +18,27 @@ package ai.instance.argentManor;
 
 import ai.ActionItemNpcAI2;
 
+import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 
 /**
- * @author Falke_34
+ * @author Falke_34, CoolyT
  */
 @AIName("argent_manor_portal")
 public class ArgentManorPortalAI2 extends ActionItemNpcAI2 {
 
-	//TODO
+    @Override
+    protected void handleDialogStart(Player player) {
+        AI2Actions.selectDialog(this, player, 0, -1);
+        if (getTalkDelay() != 0) {
+            super.handleDialogStart(player);
+        } else {
+            handleUseItemFinish(player);
+        }
+    }
 	
 	@Override
 	protected void handleUseItemFinish(Player player) {
