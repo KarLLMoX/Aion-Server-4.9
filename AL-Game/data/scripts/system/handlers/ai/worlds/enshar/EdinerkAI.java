@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.worlds.cygnea;
+package ai.worlds.enshar;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,19 +24,17 @@ import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.GameServer;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.NpcAI2;
-import com.aionemu.gameserver.ai2.handler.TalkEventHandler;
 import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.world.WorldPosition;
 
 /**
  * @author Falke_34, CoolyT
  */
-@AIName("charlesrunerk")
-public class CharlesrunerkAI extends NpcAI2 {
+@AIName("edinerk")
+public class EdinerkAI extends NpcAI2 {
 
 	//TODO
-    // NPC Charlesrunerk hat 7 Random Spawn Positionen,
+    // NPC Edinerk hat 7 Random Spawn Positionen,
     // an jeder dieser Positionen bleibt er für 1 Stunde
 	
 	Collection<WorldPosition> loc = new ArrayList<WorldPosition>();
@@ -47,7 +45,7 @@ public class CharlesrunerkAI extends NpcAI2 {
 	{
 		super.handleSpawned();
         npc = getOwner();
-        int time = 60; //respawnTime in minutes -- default 60 min.
+        int time = 1; //respawnTime in minutes -- default 60 min.
         
         loc.clear();
         loc.add(new WorldPosition(210070000, 480.80933f, 1918.559f, 466.5252f, (byte) 15));
@@ -57,8 +55,18 @@ public class CharlesrunerkAI extends NpcAI2 {
         loc.add(new WorldPosition(210070000, 2092.6746f, 2840.4351f, 322.962f, (byte) 15));
         loc.add(new WorldPosition(210070000, 2400.4988f, 1524.213f, 439.5217f, (byte) 60));
         loc.add(new WorldPosition(210070000, 2826.0615f, 766.99139f, 564.83984f, (byte) 15));
+            
+            //Enshar Spawnpunkte - check korrekt "z" Kooardinaten
+            //<spawn npc_id="805350" respawn_time="295">
+			//<spot x="475.47388" y="2300.761" z="216.45724" h="96"/>
+			//<spot x="768.74994" y="1292.4216" z="251.5" h="60"/>
+			//<spot x="1456.0063" y="1744.8394" z="330.36365" h="98"/>
+			//<spot x="1573.4567" y="142.89934" z="186.81342" h="60"/>
+			//<spot x="1771.8647" y="2571.6003" z="300.01526" h="74"/>
+			//<spot x="2357.9692" y="808.9668" z="285.73026" h="74"/>
+			//<spot x="2660.1885" y="1424.3641" z="334.53787" h="74"/>
+			//</spawn>
 
-        GameServer.log.info("CharlesrunerkAI: Spawned ...");
         ThreadPoolManager.getInstance().schedule(new Runnable() 
         {
             @Override
@@ -66,20 +74,10 @@ public class CharlesrunerkAI extends NpcAI2 {
             {
             	int index = Rnd.get(0,6);
             	WorldPosition random = (WorldPosition) loc.toArray()[index];
-            	spawn(805338, random.getX(), random.getY(), random.getZ(), random.getHeading());
+            	spawn(805350, random.getX(), random.getY(), random.getZ(), random.getHeading());
             	npc.getController().delete();
-            	GameServer.log.info("CharlesrunerkAI: Spawned on Pos : "+ random.toString());
+            	GameServer.log.info("EdinerkAI: Spawned on Pos : "+ random.toString());
             }
         }, 1000 * 60 * time); 
 	}
-	
-	@Override
-    protected void handleDialogStart(Player player) {
-        TalkEventHandler.onTalk(this, player);
-    }
-
-    @Override
-    protected void handleDialogFinish(Player creature) {
-        TalkEventHandler.onFinishTalk(this, creature);
-    }
 }
