@@ -72,6 +72,9 @@ public class EventsConfig {
     @Property(key="gameserver.event.arcade.chance", defaultValue="70")
     public static int EVENT_ARCADE_CHANCE;
     
+    @Property(key="gameserver.event.arcade.onlyFrenzyRewardChance", defaultValue="50")
+    public static int EVENT_ARCADE_FRENZYITEM_CHANCE;
+    
     @Property(key="gameserver.event.arcade.frenzy_time", defaultValue="90")
     public static int EVENT_ARCADE_FRENZY_TIME;
 }
