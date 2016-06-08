@@ -61,7 +61,10 @@ public class ArcadeUpgradeService {
     	    	
     	List<ArcadeTabItem> items = DataManager.ARCADE_UPGRADE_DATA.getArcadeTabById(rewardLevel);
     	int count = (items.size()-1) - (isFrenzy ? 0 : 2); //only provide full itemlist if isFrenzy else don't provide the last two items of the list  
-    	ArcadeTabItem itemReward = items.get(Rnd.get(0, count));
+    	ArcadeTabItem itemReward = null;
+    	if (Rnd.chance(50)) //extraChance to get Only FrenzyItems
+    		itemReward = items.get(Rnd.get(count-2, count));    	
+    	else itemReward = items.get(Rnd.get(0, count));
     	
     	return itemReward;    	
     }
