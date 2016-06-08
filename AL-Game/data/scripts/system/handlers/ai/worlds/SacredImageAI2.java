@@ -27,7 +27,7 @@ import com.aionemu.gameserver.utils.MathUtil;
 /**
  * @author Steve
  */
-@AIName("sacred_image") //258313, 258314
+@AIName("sacred_image") //258280, 258281, 258313, 258314
 public class SacredImageAI2 extends NoActionAI2 {
 
     @Override
