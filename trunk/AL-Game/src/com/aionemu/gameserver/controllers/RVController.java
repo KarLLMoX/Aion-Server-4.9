@@ -84,6 +84,7 @@ public class RVController extends NpcController {
         if (!isMaster && !isAccepting) {
             return;
         }
+		onRequest(player);
     }
     
     private void onRequest(Player player) {
