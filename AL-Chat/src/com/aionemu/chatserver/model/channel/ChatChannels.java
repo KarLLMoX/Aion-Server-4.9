@@ -204,6 +204,7 @@ public class ChatChannels {
         addTradeChannel("trade_Test_Kgw");
         addTradeChannel("trade_Test_Basic_Mj");
         addTradeChannel("trade_test_intro");
+        addTradeChannel("trade_IDElemental_2_E");
         // REGION
         addRegionChannel(110010000, "public_LC1");
         addRegionChannel(110020000, "public_LC2");
@@ -320,6 +321,7 @@ public class ChatChannels {
         addRegionChannel(301310000, "public_IDLDF5_Fortress_Re");
         addRegionChannel(301320000, "public_IDLDF5_Under_01_PC");
         addRegionChannel(301330000, "public_IDLDF5_Under_Rune_PC");
+        addRegionChannel(301510000, "public_IDElemental_2_E");
         addRegionChannel(310010000, "public_IDAbProL1");
         addRegionChannel(310020000, "public_IDAbProL2");
         addRegionChannel(310030000, "public_IDAbGateL1");
