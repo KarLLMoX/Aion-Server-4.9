@@ -26,16 +26,16 @@ import com.aionemu.gameserver.world.WorldPosition;
 /**
  * @author Falke_34
  */
-@AIName("drained_hetgolem") // 856547
+@AIName("drained_hetgolem") //856547
 public class DrainedHetgolemAI2 extends ActionItemNpcAI2 {
 
-	//TODO when you use drained hetgolem with 185000242 then spawns random 237196 or 237196
+	//TODO when you use drained hetgolem with 185000242 then spawns random 237196 or 237197
 	
 	protected void handleUseItemFinish(Player player) {
 		final WorldPosition p = getPosition();
 		if (p != null) {
 			switch (getNpcId()) {
-			case 804573:
+			case 856547:
 				switch (Rnd.get(1, 2)) {
 				case 1:
 					spawn(237196, p.getX(), p.getY(), p.getZ(), (byte) 0);

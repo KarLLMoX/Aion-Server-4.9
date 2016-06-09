@@ -19,7 +19,6 @@ package instance;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.Future;
 
 import com.aionemu.commons.utils.Rnd;
@@ -27,7 +26,6 @@ import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.EmotionType;
-import com.aionemu.gameserver.model.drop.DropItem;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -38,7 +36,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_SCORE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.abyss.AbyssPointsService;
-import com.aionemu.gameserver.services.drop.DropRegistrationService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.skillengine.SkillEngine;
@@ -239,31 +236,27 @@ public class ArgentManorInstance extends GeneralInstanceHandler {
 		case 237190:
 		case 237191:
         case 237192:
-			despawnNpc(npc);
+			points = 0;
 			break;
 		case 237180:
 		case 237181:
 		case 237182:
 			points = 300;
-			despawnNpc(npc);
 			break;
 		case 237195: // Elemantal Iron Prison	
 		case 237199:
 		case 237200:
         case 237202:
 			points = 400;
-			despawnNpc(npc);
 			break;
 		case 237196: // Perfectly Restored Hetgolem
 		case 237197: // Restored Hetgolem
 		case 237198: // Poorly Restored Hetgolem
 			points = 1000;
-			despawnNpc(npc);
 			break;
 		case 237193: // Forgotten Zadra PhyBoss
 		case 237194: // Forgotten Zadra MagBoss
 			points = 1500;
-			despawnNpc(npc);
 			timerEnd = true;
 			break;
 		}
@@ -325,22 +318,6 @@ public class ArgentManorInstance extends GeneralInstanceHandler {
 		}
 
 		return rank;
-	}
-
-	public void onDropRegistered(Npc npc) {
-		Set<DropItem> dropItems = DropRegistrationService.getInstance().getCurrentDropMap().get(npc.getObjectId());
-		int npcId = npc.getNpcId();
-		switch (npcId) {
-		case 237190: // Manor Usher
-			dropItems.add(DropRegistrationService.getInstance().regDropItem(1, 0, npcId, 185000242, 1)); // Rechargeable Electric Fuel
-			break;
-		}
-	}
-
-	private void despawnNpc(Npc npc) {
-		if (npc != null) {
-			npc.getController().onDelete();
-		}
 	}
 
 	@Override
