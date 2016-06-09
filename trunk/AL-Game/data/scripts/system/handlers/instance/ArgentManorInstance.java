@@ -77,6 +77,33 @@ public class ArgentManorInstance extends GeneralInstanceHandler {
 		instanceReward = new ArgentManorReward(mapId, instanceId);
 		instanceReward.setInstanceScoreType(InstanceScoreType.PREPARING);
 
+        switch (Rnd.get(1, 4)) {
+            case 1:
+                spawn(237180, 1025.0f, 1130.0f, 70.5f, (byte) 60);
+                spawn(237190, 941.0f, 1136.0f, 71.67f, (byte) 90);
+                spawn(237180, 943.0f, 1050.0f, 70.0f, (byte) 119);
+                spawn(237190, 1022.0f, 1063.0f, 70.75f, (byte) 60);
+            break;
+            case 2:
+                spawn(237190, 1025.0f, 1130.0f, 70.5f, (byte) 60);
+                spawn(237180, 941.0f, 1136.0f, 71.67f, (byte) 90);
+                spawn(237190, 943.0f, 1050.0f, 70.0f, (byte) 119);
+                spawn(237180, 1022.0f, 1063.0f, 70.75f, (byte) 60);
+            break;
+            case 3:
+                spawn(237180, 1025.0f, 1130.0f, 70.5f, (byte) 60);
+                spawn(237180, 941.0f, 1136.0f, 71.67f, (byte) 90);
+                spawn(237190, 943.0f, 1050.0f, 70.0f, (byte) 119);
+                spawn(237190, 1022.0f, 1063.0f, 70.75f, (byte) 60);
+            break;
+            case 4:
+                spawn(237190, 1025.0f, 1130.0f, 70.5f, (byte) 60);
+                spawn(237190, 941.0f, 1136.0f, 71.67f, (byte) 90);
+                spawn(237180, 943.0f, 1050.0f, 70.0f, (byte) 119);
+                spawn(237180, 1022.0f, 1063.0f, 70.75f, (byte) 60);
+            break;  
+        }
+
 		// spawn random boss
 		int npcId = 0;
 		switch (Rnd.get(1, 2)) {
