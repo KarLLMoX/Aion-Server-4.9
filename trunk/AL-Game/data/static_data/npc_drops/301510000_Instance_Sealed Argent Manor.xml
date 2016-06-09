@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
+	<npc_drop npc_id="237190"> <!-- Manor Usher -->
+        <drop_group name="OTHER_COMMON" use_category="true" race="PC_ALL">
+            <drop item_id="185000242" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rechargeable Electric Fuel" />
+        </drop_group>
+	</npc_drop>
+</npc_drops>
