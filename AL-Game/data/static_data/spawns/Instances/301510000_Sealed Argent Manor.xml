@@ -16,8 +16,6 @@
 			<spot x="918.69794" y="1061.4098" z="92.201973" h="30"/>
 			<spot x="919.18292" y="1120.634" z="92.716599" h="90"/>
 			<spot x="941" y="1054" z="95" h="60"/>
-			<spot x="941.00" y="1136.10" z="71.67" h="90"/>
-			<spot x="943" y="1050" z="72.25" h="119"/>
 			<spot x="945" y="1125" z="71" h="119"/>
 			<spot x="954" y="1047" z="70" h="30"/>
 			<spot x="970.72607" y="1081.2057" z="70" h="30"/>
@@ -26,8 +24,6 @@
 			<spot x="990.00" y="1047.00" z="94.00" h="90" walker_id="IDELEMENTAL_2_E_NPCPATH_8"/>
 			<spot x="991.43597" y="1081.3092" z="70" h="119"/>
 			<spot x="1021" y="1075" z="70.25" h="60"/>
-			<spot x="1022" y="1063" z="70.75" h="60"/>
-			<spot x="1025" y="1130" z="70.5" h="60"/>
         </spawn>
         <!-- Agile Hetgolem / idelemental_2_e_meleegolemrun_p_65_an -->
         <spawn npc_id="237181">
@@ -61,10 +57,6 @@
         <!-- Manor Usher / idelemental_2_e_keymonster_65_an -->
         <spawn npc_id="237190">
             <spot x="909.0" y="1091.0" z="93.78" h="90" walker_id="IDELEMENTAL_2_E_NPCPATH_16"/>
-            <spot x="943.0" y="1050.0" z="71.25" h="119"/>
-            <spot x="1025.0" y="1130.1" z="69.91046" h="90"/>
-            <spot x="941.0" y="1136.0" z="69.98283" h="119"/>
-            <spot x="1022.0" y="1063.0" z="69.9307" h="60"/>
         </spawn>
         <!-- Solid Hetgolem / idelemental_2_e_strong_meleegolem_65_an -->
         <spawn npc_id="237191">
@@ -148,7 +140,7 @@
         </spawn>
         <!-- Celestial Observation Chamber Passage / SP_IDElemental_FOBJ_CtrlDoor3_2 -->
         <spawn npc_id="731650">
-			<spot x="820.1718" y="1300.6089" z="94.34702" h="90"/>
+			<spot x="820.42474" y="1289.7927" z="95.93631" h="90"/>
         </spawn>
         <!-- Closed Alchemical Lab Passageidelemental_fobj_ctrldoor4 -->
         <spawn npc_id="731651">

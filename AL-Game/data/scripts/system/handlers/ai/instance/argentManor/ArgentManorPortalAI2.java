@@ -47,7 +47,7 @@ public class ArgentManorPortalAI2 extends ActionItemNpcAI2 {
 			TeleportService2.teleportTo(player, 301510000, 820.6594f, 1081.6353f, 53.671883f, (byte) 30, TeleportAnimation.JUMP_ANIMATION);
 			break;
 		case 731649: //Light Lab
-			TeleportService2.teleportTo(player, 301510000, 794.67474f, 1195.2882f, 94.47192f, (byte) 3, TeleportAnimation.JUMP_ANIMATION);
+			TeleportService2.teleportTo(player, 301510000, 821.0668f, 1192.6146f, 94.36078f, (byte) 28, TeleportAnimation.JUMP_ANIMATION);
 			break;
 		case 731650: //Boss
 			TeleportService2.teleportTo(player, 301510000, 818.93384f, 1443.7001f, 195.00311f, (byte) 3, TeleportAnimation.JUMP_ANIMATION);
