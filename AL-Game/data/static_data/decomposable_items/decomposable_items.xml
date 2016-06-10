@@ -41894,8 +41894,36 @@
     </decomposable>
 	<decomposable item_id="188054400" decomposable_name="[Event] Lunatic Modor's Mythic Armor Box"/> <!-- NEW -->
 	<decomposable item_id="188054405" decomposable_name="[Jakurerk] Vial for Secret Remedy of Miraculous Growth (21-day)"/> <!-- NEW -->
-	<decomposable item_id="188054406" decomposable_name="[Event] Wholehearted Fuzzball New Support Bundle"/> <!-- NEW -->
-	<decomposable item_id="188054407" decomposable_name="[Event] Wholehearted Fuzzball Return Support Bundle"/> <!-- NEW -->
+	<decomposable item_id="188054406" decomposable_name="[Event] Wholehearted Fuzzball New Support Bundle">
+        <items>
+            <item id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box"/>
+            <item id="188054489" name="[Jakurerk] Noble Daevanion Armor Box"/>
+            <item id="188054488" name="[Jakurerk] Noble Daevanion Weapon Box"/>
+            <item id="188054404" name="[Event] Bird Hat Box"/>
+            <item id="187060159" name="Ghostly Angel Wings"/>
+            <item id="188051759" name="Plastic Surgery Ticket Box (1 day)"/>
+            <item id="190100132" name="Flamekissed Aetherboard (30 days)"/>
+            <item id="188054408" name="[Event] Wholehearted Ayas Manastone Box"/>
+            <item id="169610161" name="[Title] New Rotund Friend"/>
+            <item id="188054405" name="[Jakurerk] Vial for Secret Remedy of Miraculous Growth (21-day)"/>
+            <item id="188054419" name="[Jakurerk] Celebratory Box for Rotund Reaching Level 65 (30-day)"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054407" decomposable_name="[Event] Wholehearted Fuzzball Return Support Bundle">
+        <items>
+            <item id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box"/>
+            <item id="188054489" name="[Jakurerk] Noble Daevanion Armor Box"/>
+            <item id="188054488" name="[Jakurerk] Noble Daevanion Weapon Box"/>
+            <item id="188054404" name="[Event] Bird Hat Box"/>
+            <item id="187060159" name="Ghostly Angel Wings"/>
+            <item id="188051759" name="Plastic Surgery Ticket Box (1 day)"/>
+            <item id="190100132" name="Flamekissed Aetherboard (30 days)"/>
+            <item id="188054408" name="[Event] Wholehearted Ayas Manastone Box"/>
+            <item id="169610162" name="[Title] Returned Rotund Friend"/>
+            <item id="188054405" name="[Jakurerk] Vial for Secret Remedy of Miraculous Growth (21-day)"/>
+            <item id="188054419" name="[Jakurerk] Celebratory Box for Rotund Reaching Level 65 (30-day)"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054410" decomposable_name="[Event] Lunatic Modor's Templar Armor Box">
         <items>
             <item id="110601726" name="Lunatic Grendal's Templar Breastplate"/>
