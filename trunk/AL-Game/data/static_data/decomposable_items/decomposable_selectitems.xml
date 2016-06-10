@@ -7970,8 +7970,137 @@
             <item id="101801309" name="Brilliant Nether Fire Dragon King's Magic Gun" count="1"/>
         </items>
     </decomposable_selectitem>
-	<decomposable_selectitem item_id="188054488" name="[Jakurerk] Noble Daevanion Weapon Box"/> <!-- NEW -->
-	<decomposable_selectitem item_id="188054489" name="[Jakurerk] Noble Daevanion Armor Box"/> <!-- NEW -->
+	<decomposable_selectitem item_id="188054488" name="[Jakurerk] Noble Daevanion Weapon Box">
+        <items player_class="WARRIOR">
+            <item id="100001948" name="Noble Daevanion's Long Sword" count="1"/>
+            <item id="100901493" name="Noble Daevanion's Two-handed Sword" count="1"/>
+            <item id="101301380" name="Noble Daevanion's Polearm" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="100001948" name="Noble Daevanion's Long Sword" count="1"/>
+            <item id="100901493" name="Noble Daevanion's Two-handed Sword" count="1"/>
+            <item id="101301380" name="Noble Daevanion's Polearm" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="100001948" name="Noble Daevanion's Long Sword" count="1"/>
+            <item id="100901493" name="Noble Daevanion's Two-handed Sword" count="1"/>
+            <item id="101301380" name="Noble Daevanion's Polearm" count="1"/>
+        </items>
+        <items player_class="SCOUT">
+            <item id="100001948" name="Noble Daevanion's Long Sword" count="1"/>
+            <item id="100201639" name="Noble Daevanion's Dagger" count="1"/>
+            <item id="101701474" name="Noble Daevanion's Bow" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="100001948" name="Noble Daevanion's Long Sword" count="1"/>
+            <item id="100201639" name="Noble Daevanion's Dagger" count="1"/>
+            <item id="101701474" name="Noble Daevanion's Bow" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="100001948" name="Noble Daevanion's Long Sword" count="1"/>
+            <item id="100201639" name="Noble Daevanion's Dagger" count="1"/>
+            <item id="101701474" name="Noble Daevanion's Bow" count="1"/>
+        </items>
+        <items player_class="PRIEST">
+            <item id="100101457" name="Noble Daevanion's Mace" count="1"/>
+            <item id="101501477" name="Noble Daevanion's Staff" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="100101457" name="Noble Daevanion's Mace" count="1"/>
+            <item id="101501477" name="Noble Daevanion's Staff" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="100101457" name="Noble Daevanion's Mace" count="1"/>
+            <item id="101501477" name="Noble Daevanion's Staff" count="1"/>
+        </items>
+        <items player_class="MAGE">
+            <item id="100501420" name="Noble Daevanion's Orb" count="1"/>
+            <item id="100601538" name="Noble Daevanion's Spellbook" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="100501420" name="Noble Daevanion's Orb" count="1"/>
+            <item id="100601538" name="Noble Daevanion's Spellbook" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="100501420" name="Noble Daevanion's Orb" count="1"/>
+            <item id="100601538" name="Noble Daevanion's Spellbook" count="1"/>
+        </items>
+        <items player_class="ARTIST">
+            <item id="102001342" name="Noble Daevanion's String Instrument" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="102001342" name="Noble Daevanion's String Instrument" count="1"/>
+        </items>
+        <items player_class="ENGINEER">
+            <item id="101801314" name="Noble Daevanion's Magic Gun" count="1"/>
+            <item id="101901220" name="Noble Daevanion's Magic Cannon" count="1"/>
+            <item id="102101158" name="Noble Daevanion's Keyblade" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="101801314" name="Noble Daevanion's Magic Gun" count="1"/>
+            <item id="101901220" name="Noble Daevanion's Magic Cannon" count="1"/>
+            <item id="102101158" name="Noble Daevanion's Keyblade" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="101801314" name="Noble Daevanion's Magic Gun" count="1"/>
+            <item id="101901220" name="Noble Daevanion's Magic Cannon" count="1"/>
+            <item id="102101158" name="Noble Daevanion's Keyblade" count="1"/>
+        </items>
+    </decomposable_selectitem>
+	<decomposable_selectitem item_id="188054489" name="[Jakurerk] Noble Daevanion Armor Box">
+        <items player_class="WARRIOR">
+            <item id="188054490" name="[Jakurerk] Noble Daevanion Plate Armor Box" count="1"/>
+        </items>
+        <items player_class="GLADIATOR">
+            <item id="188054490" name="[Jakurerk] Noble Daevanion Plate Armor Box" count="1"/>
+        </items>
+        <items player_class="TEMPLAR">
+            <item id="188054490" name="[Jakurerk] Noble Daevanion Plate Armor Box" count="1"/>
+        </items>
+        <items player_class="SCOUT">
+            <item id="188054491" name="[Jakurerk] Noble Daevanion Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="RANGER">
+            <item id="188054491" name="[Jakurerk] Noble Daevanion Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="ASSASSIN">
+            <item id="188054491" name="[Jakurerk] Noble Daevanion Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="GUNNER">
+            <item id="188054491" name="[Jakurerk] Noble Daevanion Leather Armor Box" count="1"/>
+        </items>
+        <items player_class="PRIEST">
+            <item id="188054492" name="[Jakurerk] Noble Daevanion Chain Armor Box" count="1"/>
+        </items>
+        <items player_class="CLERIC">
+            <item id="188054492" name="[Jakurerk] Noble Daevanion Chain Armor Box" count="1"/>
+        </items>
+        <items player_class="CHANTER">
+            <item id="188054492" name="[Jakurerk] Noble Daevanion Chain Armor Box" count="1"/>
+        </items>
+        <items player_class="RIDER">
+            <item id="188054492" name="[Jakurerk] Noble Daevanion Chain Armor Box" count="1"/>
+        </items>
+        <items player_class="MAGE">
+            <item id="188054493" name="[Jakurerk] Noble Daevanion Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="SORCERER">
+            <item id="188054493" name="[Jakurerk] Noble Daevanion Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="SPIRIT_MASTER">
+            <item id="188054493" name="[Jakurerk] Noble Daevanion Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="BARD">
+            <item id="188054493" name="[Jakurerk] Noble Daevanion Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="ARTIST">
+            <item id="188054493" name="[Jakurerk] Noble Daevanion Cloth Armor Box" count="1"/>
+        </items>
+        <items player_class="ENGINEER">
+            <item id="188054491" name="[Jakurerk] Noble Daevanion Leather Armor Box" count="1"/>
+            <item id="188054492" name="[Jakurerk] Noble Daevanion Chain Armor Box" count="1"/>
+        </items>
+    </decomposable_selectitem>
 	<decomposable_selectitem item_id="188054497" name="Special Executor's Divine Weapon Box I">
         <items>
             <item id="100101357" name="Special Emissary's Cudgel" count="1" race="ELYOS"/>
