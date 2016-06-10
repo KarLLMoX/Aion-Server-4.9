@@ -2047,4 +2047,8 @@
 	<chest npcid="702788">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
+	<!-- Argent Manor Treasure Box -->
+	<chest npcid="702816">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
 </chest_templates>
