@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event</active>
     <events>
         <event name="World Blessers" start="2015-01-01T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">
             <quests>
@@ -11,14 +11,22 @@
                 <spawn_map map_id="110010000">
                     <!-- Riel -->
                     <spawn npc_id="831025" respawn_time="295">
-                        <spot h="65" x="1458.0" y="1533.0" z="573.07196"/> <!-- 4.8 -->
+                        <spot x="1458.0" y="1533.0" z="573.07196" h="65"/> <!-- 4.8 -->
+                    </spawn>
+                    <!-- Nebrith -->
+                    <spawn npc_id="831031" respawn_time="295">
+                        <spot x="1458.5" y="1531.6" z="573.07196" h="66"/> <!-- 4.8 -->
                     </spawn>
                 </spawn_map>
                 <!-- Pandaemonium -->
                 <spawn_map map_id="120010000">
                     <!-- Rikanellie -->
                     <spawn npc_id="831026" respawn_time="295">
-                        <spot h="9" x="1300.0" y="1406.0" z="208.125"/> <!-- 4.8 -->
+                        <spot x="1300.0" y="1406.0" z="208.125" h="9"/> <!-- 4.8 -->
+                    </spawn>
+                    <!-- Edandos -->
+                    <spawn npc_id="831029" respawn_time="295">
+                        <spot x="1297.7" y="1407.1" z="208.11656" h="18"/> <!-- 4.8 -->
                     </spawn>
                 </spawn_map> 
                 <!-- Poeta -->
@@ -1537,6 +1545,109 @@
                     </spawn>
                 </spawn_map>
             </spawns>
-        </event>        
+        </event>
+        <event name="Homeward Bound Event" start="2016-06-01T00:00:00+00:00" end="2016-06-30T00:00:00+00:00">
+            <quests>
+                <maintainable>80787;80788;80789;80790;80791;80792;80793;80794</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+                    <!-- New Friend New Rotund -->
+                    <spawn npc_id="833671" respawn_time="295">
+                        <spot x="1365.1" y="1488.4" z="569.0384" h="31"/>
+                    </spawn>
+                    <!-- Dormant Friend Familiar Rotund -->
+                    <spawn npc_id="833672" respawn_time="295">
+                        <spot x="1367.3" y="1488.4" z="569.0384" h="39"/>
+                    </spawn>
+                    <!-- Cheering Rotund -->
+                    <spawn npc_id="833675" respawn_time="295">
+                        <spot x="1368.9" y="1485.6" z="569.0384" h="31"/>
+                        <spot x="1363.3" y="1485.6" z="569.03845" h="31"/>
+                    </spawn>
+                    <!-- Cheering Rotund -->
+                    <spawn npc_id="833678" respawn_time="295">
+                        <spot x="1370.0" y="1483.8" z="569.0384" h="31"/>
+                        <spot x="1367.8" y="1483.8" z="569.03845" h="31"/>
+                        <spot x="1364.3" y="1483.8" z="569.03845" h="31"/>
+                        <spot x="1362.1" y="1483.8" z="569.03845" h="31"/>
+                    </spawn>
+                    <!-- Mongsil Atreia -->
+                    <spawn npc_id="833680" respawn_time="295">
+                        <spot x="1366.1" y="1486.1" z="569.03845" h="31"/>
+                    </spawn>
+                    <!-- Mongsil Prop -->
+                    <spawn npc_id="833681" respawn_time="295">
+                        <spot x="1367.3" y="1488.4" z="569.0384" h="31"/>
+                        <spot x="1365.1" y="1488.4" z="569.0384" h="31"/>
+                    </spawn>
+                    <!-- Mongsil Beam -->
+                    <spawn npc_id="833682" respawn_time="295">
+                        <spot x="1363.9" y="1488.4" z="569.0384" h="31"/>
+                        <spot x="1368.4" y="1488.4" z="569.0384" h="31"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Poeta -->
+                <spawn_map map_id="210010000">
+                    <!-- New Friend New Rotund -->
+                    <spawn npc_id="833671" respawn_time="295">
+                        <spot x="1198.2" y="1034.8" z="139.575" h="30"/>
+                    </spawn>
+                    <!-- Dormant Friend Familiar Rotund -->
+                    <spawn npc_id="833672" respawn_time="295">
+                        <spot x="1195.2" y="1034.1" z="139.275" h="30"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+                    <!-- New Friend New Rotund -->
+                    <spawn npc_id="833673" respawn_time="295">
+                        <spot x="1631.2" y="1412.9" z="193.12704" h="90"/>
+                    </spawn>
+                    <!-- Dormant Friend Familiar Rotund -->
+                    <spawn npc_id="833674" respawn_time="295">
+                        <spot x="1628.8" y="1412.9" z="193.1271" h="86"/>
+                    </spawn>
+                    <!-- Cheering Rotund -->
+                    <spawn npc_id="833675" respawn_time="295">
+                        <spot x="1627.4" y="1416.9" z="193.12714" h="90"/>
+                        <spot x="1632.7" y="1416.9" z="193.127" h="90"/>
+                    </spawn>
+                    <!-- Cheering Rotund -->
+                    <spawn npc_id="833678" respawn_time="295">
+                        <spot x="1626.3" y="1418.6" z="193.12717" h="90"/>
+                        <spot x="1628.6" y="1418.6" z="193.1271" h="90"/>
+                        <spot x="1631.6" y="1418.6" z="193.12704" h="90"/>
+                        <spot x="1633.9" y="1418.6" z="193.12697" h="90"/>
+                    </spawn>
+                    <!-- Mongsil Atreia -->
+                    <spawn npc_id="833680" respawn_time="295">
+                        <spot x="1630.1" y="1415.7" z="193.12708" h="90"/>
+                    </spawn>
+                    <!-- Mongsil Prop -->
+                    <spawn npc_id="833681" respawn_time="295">
+                        <spot x="1628.8" y="1412.9" z="193.1271" h="90"/>
+                        <spot x="1631.2" y="1412.9" z="193.12704" h="90"/>
+                    </spawn>
+                    <!-- Mongsil Beam -->
+                    <spawn npc_id="833682" respawn_time="295">
+                        <spot x="1627.3" y="1412.9" z="193.12714" h="90"/>
+                        <spot x="1632.6" y="1412.9" z="193.127" h="90"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Ishalgen -->
+                <spawn_map map_id="220010000">
+                    <!-- New Friend New Rotund -->
+                    <spawn npc_id="833673" respawn_time="295">
+                        <spot x="555.2" y="2773.9" z="299.37" h="36"/>
+                    </spawn>
+                    <!-- Dormant Friend Familiar Rotund -->
+                    <spawn npc_id="833674" respawn_time="295">
+                        <spot x="552.4" y="2773.8" z="298.99" h="36"/>
+                    </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
     </events>
 </events_config>
