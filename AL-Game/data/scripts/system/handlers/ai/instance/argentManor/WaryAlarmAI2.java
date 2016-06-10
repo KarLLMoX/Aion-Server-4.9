@@ -52,7 +52,7 @@ public class WaryAlarmAI2 extends AggressiveNpcAI2 {
                 if (startedEvent.compareAndSet(false, true)) {
                     canThink = false;
                     NpcShoutsService.getInstance().sendMsg(getOwner(), 1401350, 0); //TODO Shout
-                    spawn(237197, p.getX(), p.getY(), p.getZ(), (byte) 0); //TODO ID
+                    spawn(237187, p.getX(), p.getY(), p.getZ(), (byte) 0); //TODO ID Armored Hetgolem
                     getOwner().setState(1);
                     ThreadPoolManager.getInstance().schedule(new Runnable() {
                         @Override
