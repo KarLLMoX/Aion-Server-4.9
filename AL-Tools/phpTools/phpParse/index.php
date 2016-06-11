@@ -53,7 +53,8 @@
        <a href="genGoodlist.php" target="_self"><input type="button" value="Generieren Trade-Dateien ..."  style="width:220px"></a><br><br>
        <a href="genHousing.php"  target="_self"><input type="button" value="Generieren Housing-Dateien ..." style="width:220px"></a><br><br>
        <a href="genInstance.php" target="_self"><input type="button" value="Generieren Instance-Dateien ..." style="width:220px"></a><br><br>
-       <a href="genPets.php"     target="_self"><input type="button" value="Generieren Pets-Dateien ..." style="width:220px"></a>
+       <a href="genPets.php"     target="_self"><input type="button" value="Generieren Pets-Dateien ..." style="width:220px"></a><br><br>
+       <a href="genSkills.php"   target="_self"><input type="button" value="Generieren Skill-Dateien ..." style="width:220px"></a>
        </center>
      </td>
      <td valign="top">
