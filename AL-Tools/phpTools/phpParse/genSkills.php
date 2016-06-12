@@ -45,23 +45,31 @@ if (!file_exists("../outputs/parse_output/skills"))
 // ----------------------------------------------------------------------------
 function checkSpecialText($fname,$fvalue)
 {
+    // Tabelle Grossbuchstaben-Rückgabe
+    // enthält die EMU-Feldnamen
+    $gtab = array( // Skill-header
+                   "skilltype", "skillsubtype", "tslot", "dispel_category",
+                   "activation", "counter_skill",
+                   // properties
+                   "first_target", "target_relation", "target_type",
+                   "target_status", "direction", "target_species"
+                 );
+    $gmax = count($gtab);
+    
     // Prüfen auf Rückgabe in Grossbuchstaben
-    switch($fname)
+    for ($f=0;$f<$gmax;$f++)
     {
-        case "skilltype":
-        case "skillsubtype":
-        case "tslot":
-        case "dispel_category":
-        case "activation":
-        case "counter_skill":
+        if ($gtab[$f] == $fname)
+        {
             $fvalue = strtoupper($fvalue);
-            break;
-        default:
-            break;
+            $f      = $gmax;
+        }
     }
     
+    // spezielle Feldbehandlungen / -umwandlungen
     switch($fname)
     {
+        // SKILL-HEADER
         case "cooldown":   // Zeit muss durch 100 geteilt werden
             if ($fvalue > 0)
                 return $fvalue / 100;
@@ -77,7 +85,18 @@ function checkSpecialText($fname,$fvalue)
         case "tslot":
             if ($fvalue == "SPECIAL2")      return "SPEC2";
             if ($fvalue == "SPECIAL")       return "SPEC";
-        // ansonsten keine Veränderungen!        
+            return $fvalue;
+        // PROPERTIES
+        case "awr":
+            if ($fvalue == "1")             return "true";
+            return "";  
+        case "target_species":
+            if ($fvalue == "ALL")           return ""; 
+            return $fvalue;     
+        case "first_target_range":
+            if ($fvalue == "0")             return "";
+            return $fvalue;            
+        // SONSTIGE        keine Veränderungen!        
         default: break;
     }
     
@@ -96,9 +115,23 @@ function getFieldText($key,$cxml,$fname,$deflt)
     
     $tmp = "";
     
-    if (isset($tabcskill[$key][$cxml]))
-        $tmp = $tabcskill[$key][$cxml];
-    
+    // ? = lfd.Nummer einsetzen!
+    if (stripos($cxml,"?") !== false)
+    {
+        for ($i=1;$i<6;$i++)
+        {
+            $nfld = str_replace("?",$i,$cxml);
+            
+            if (isset($tabcskill[$key][$nfld]))
+                $tmp .= " ".$tabcskill[$key][$nfld];
+        }
+        $tmp = trim($tmp);
+    }
+    else
+    {
+        if (isset($tabcskill[$key][$cxml]))
+            $tmp = $tabcskill[$key][$cxml];
+    }
     if ($tmp == "" && $deflt != "") $tmp = $deflt;
     
     $tmp = checkSpecialText($fname,$tmp);
@@ -120,6 +153,7 @@ function getStackName($key)
     if (substr($ret,0,4) == "STR_")
         $ret = substr($ret,4);
     
+    // evtl. den letzten Namensteil abschneiden!
     $pos = strripos($ret,"_");
     $txt = substr($ret,$pos);
       
@@ -133,6 +167,9 @@ function getStackName($key)
             $ret = substr($ret,0,strlen($ret) - 2);
     }
     /*
+       durch die obige , allgemeine Routine wird immer der letzte Namensteil abgeschnitten!
+       wenn das zu Allgemein ist, dann müsste die nachfolgende SWITCH-Anweisung wieder aktiviert werden
+       
     // evtl. die letzten 3 Stellen am Ende abschneiden
     switch(substr($ret,-3,3))
     {
@@ -474,6 +511,514 @@ function scanClientSkills()
     logLine("Anzahl Zeilen gelesen",$cntles);
     logLine("Anzahl Skills gefunden",count($tabcskill));
 }
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: Properties
+// ---------------------------------------------------------------------------
+function getPropertiesLines($key)
+{
+    global $tabcskill;
+    
+    // spezielle Conditions für die Feld-Zeilen-Tabelle
+    // Cond-Tabelle: 0=true/false, 1=Feldname
+    $ctab = array(
+              0 => array(true ,""),                      // Dummy-Condition
+              1 => array(true ,"target_range_opt4"),     // = isset
+              2 => array(false,"target_range_opt4")      // = isnotset
+                 );
+    // Feld-Tabelle: 0=EXT-Feldname, 1=EMU-Feldname, 2=Default, 3=ConditionIndex (0=dummy)
+    $ftab = array(
+              array("first_target"               ,"first_target"      ,"",0),
+              array("first_target_valid_distance","first_target_range","",0),
+              array("target_relation_restriction","target_relation"   ,"",0),
+              array("target_range"               ,"target_type"       ,"",0),
+              array("add_wpn_range"              ,"awr"               ,"",0),
+              array("target_valid_status?"       ,"target_status"     ,"",0),  // ? = 1 bis 5
+              array("target_maxcount"            ,"target_maxcount"   ,"",0),
+              array("revision_distance"          ,"revision_distance" ,"",0),
+              array("target_range_opt3"          ,"effective_altitude","",0),
+              array("target_range_opt2"          ,"effective_dist"    ,"",1),  // wenn isset opt4!
+              array("target_range_opt2"          ,"effective_angle"   ,"",2),  // ohne isnotset opt4!
+              array("target_range_opt1"          ,"effective_range"   ,"",0),
+              array("target_range_opt4"          ,"direction"         ,"",0),
+              array("target_species_restriction" ,"target_species"    ,"",0)
+           // array("","target_distance","")                                   // akt. NotUsed in EMU
+                 );
+    $fmax = count($ftab);
+    $ret  = "";
+    
+    for ($f=0;$f<$fmax;$f++)
+    {
+        // Condition gesetzt / erfüllt?
+        if ($ftab[$f][3] > 0)
+        {
+            $cind = $ftab[$f][3];
+            $cfld = $ctab[$cind][1];
+            
+            // Feld gesetzt und muss vorhanden sein oder
+            // Feld nicht gesetzt und darf n icht vorhanden sein,
+            // dann Feld-Zeile der Tabelle berücksichtigen!
+            if ( isset($tabcskill[$key][$cfld]) && $ctab[$cind][0] == true
+            ||  !isset($tabcskill[$key][$cfld]) && $ctab[$cind][0] == false)
+                $ret .= getFieldText($key,$ftab[$f][0],$ftab[$f][1],$ftab[$f][2]);
+        }
+        else
+            // keine Condition vorhanden, also Feld-Zeile berücksichtigen
+            $ret .= getFieldText($key,$ftab[$f][0],$ftab[$f][1],$ftab[$f][2]);
+    }
+    
+    if ($ret != "")
+        $ret = '        <properties'.$ret.'/>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: StartConditions
+// ---------------------------------------------------------------------------
+function getStartConditionLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*    
+        <xs:complexType name="Conditions">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <startconditions>'."\n".
+               $ret.'</startconditions>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: UseConditions
+// ---------------------------------------------------------------------------
+function getuseConditionLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*    
+        <xs:complexType name="Conditions">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <useconditions>'."\n".
+               $ret.'</useconditions>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: EndConditions
+// ---------------------------------------------------------------------------
+function getEndConditionLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*    
+        <xs:complexType name="Conditions">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <endconditions>'."\n".
+               $ret.'</endconditions>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: UseEquipmentConditions
+// ---------------------------------------------------------------------------
+function getUseEquipConditionLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*    
+        <xs:complexType name="Conditions">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <useequipmentconditions>'."\n".
+               $ret.'</useequipmentconditions>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: Effects
+// ---------------------------------------------------------------------------
+function getEffectsLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*
+        <xs:complexType name="Effects">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="root" type="RootEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="stun" type="StunEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="sleep" type="SleepEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="snare" type="SnareEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="absolutesnare" type="AbsoluteSnareEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="slow" type="SlowEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="absoluteslow" type="AbsoluteSlowEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="poison" type="PoisonEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="bleed" type="BleedEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="stumble" type="StumbleEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="spin" type="SpinEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="stagger" type="StaggerEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="openaerial" type="OpenAerialEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="closeaerial" type="CloseAerialEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="bind" type="BindEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="shield" type="ShieldEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mpshield" type="MPShieldEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispel" type="DispelEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="statup" type="StatupEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="statboost" type="StatboostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="weaponstatboost" type="WeaponStatboostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="wpnmastery" type="WeaponMasteryEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="statdown" type="StatdownEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="spellatk" type="SpellAttackEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="deform" type="DeformEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="shapechange" type="ShapeChangeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="polymorph" type="PolymorphEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hide" type="HideEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="search" type="SearchEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="healinstant" type="HealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mphealinstant" type="MPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dphealinstant" type="DPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="fphealinstant" type="FPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillatk" type="SkillAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="spellatkinstant" type="SpellAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dash" type="DashEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="backdash" type="BackDashEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="delaydamage" type="DelayedSpellAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="return" type="ReturnEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="prochealinstant" type="ProcHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="procmphealinstant" type="ProcMPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="procdphealinstant" type="ProcDPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="procfphealinstant" type="ProcFPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="carvesignet" type="CarveSignetEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="signet" type="SignetEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="signetburst" type="SignetBurstEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="silence" type="SilenceEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="curse" type="CurseEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="blind" type="BlindEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="disease" type="DiseaseEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="boosthate" type="BoostHateEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hostileup" type="HostileUpEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="paralyze" type="ParalyzeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="confuse" type="ConfuseEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="alwaysresist" type="AlwaysResistEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="alwaysblock" type="AlwaysBlockEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="alwaysparry" type="AlwaysParryEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="alwaysdodge" type="AlwaysDodgeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispeldebuffphysical" type="DispelDebuffPhysicalEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispeldebuff" type="DispelDebuffEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="switchhpmp" type="SwitchHpMpEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="aura" type="AuraEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summon" type="SummonEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="fear" type="FearEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="resurrect" type="ResurrectEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispeldebuffmental" type="DispelDebuffMentalEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="reflector" type="ReflectorEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="returnpoint" type="ReturnPointEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="provoker" type="ProvokerEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="spellatkdraininstant" type="SpellAtkDrainInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onetimeboostskillattack" type="OneTimeBoostSkillAttackEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onetimeboostskillcritical" type="OneTimeBoostSkillCriticalEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="armormastery" type="ArmorMasteryEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="weaponstatup" type="WeaponStatupEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="boostskillcastingtime" type="BoostSkillCastingTimeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summontrap" type="SummonTrapEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summongroupgate" type="SummonGroupGateEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summonservant" type="SummonServantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillatkdraininstant" type="SkillAtkDrainInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="petorderuseultraskill" type="PetOrderUseUltraSkillEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="boostheal" type="BoostHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispelbuff" type="DispelBuffEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="procatk_instant" type="ProcAtkInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skilllauncher" type="SkillLauncherEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="pulled" type="PulledEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="movebehind" type="MoveBehindEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="rebirth" type="RebirthEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="boostskillcost" type="BoostSkillCostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="protect" type="ProtectEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="resurrectbase" type="ResurrectBaseEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="magiccounteratk" type="MagicCounterAtkEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="recallinstant" type="RecallInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="randommoveloc" type="RandomMoveLocEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summonhoming" type="SummonHomingEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="xpboost" type="XPBoostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="fpatkinstant" type="FpAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="fpatk" type="FpAttackEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="onetimeboostheal" type="OneTimeBoostHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="deboostheal" type="DeboostHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summonskillarea" type="SummonSkillAreaEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="resurrectpos" type="ResurrectPositionalEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="nofly" type="NoFlyEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="nofpconsum" type="NoFPConsumEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="healcastoronatk" type="HealCastorOnAttackedEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="wpndual" type="WeaponDualEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="invulnerablewing" type="InvulnerableWingEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="shieldmastery" type="ShieldMasteryEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="simpleroot" type="SimpleRootEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dptransfer" type="DPTransferEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mpattack" type="MpAttackEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="boostdroprate" type="BoostDropRateEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="spellatkdrain" type="SpellAtkDrainEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="extendedaurarange" type="ExtendAuraRangeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="changehateonattacked" type="ChangeHateOnAttackedEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="healcastorontargetdead" type="HealCastorOnTargetDeadEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="noreducespellatk" type="NoReduceSpellATKInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mpattackinstant" type="MpAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="condskilllauncher" type="CondSkillLauncherEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="fall" type="FallEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="evade" type="EvadeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="buffbind" type="BuffBindEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="buffsilence" type="BuffSilenceEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="buffsleep" type="BuffSleepEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="buffstun" type="BuffStunEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="heal" type="HealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mpheal" type="MPHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="fpheal" type="FPHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dpheal" type="DPHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summontotem" type="SummonTotemEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="boostspellattack" type="BoostSpellAttackEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="switchhostile" type="SwitchHostileEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="noresurrectpenalty" type="NoResurrectPenaltyEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hipass" type="HiPassEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="nodeathpenalty" type="NoDeathPenaltyEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="caseheal" type="CaseHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="procvphealinstant" type="ProcVPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summonhousegate" type="SummonHouseGateEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summonbindinggroupgate" type="SummonBindingGroupGateEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="convertheal" type="ConvertHealEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="sanctuary" type="SanctuaryEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="subtypeextendduration" type="SubTypeExtendDurationEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="subtypeboostresist" type="SubTypeBoostResistEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispelnpcbuff" type="DispelNpcBuffEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dispelnpcdebuff" type="DispelNpcDebuffEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="deathblow" type="DeathBlowEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="delayedskill" type="DelayedSkillEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="delayedfpatk_instant" type="DelayedFpAtkInstantEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="drboost" type="DRBoostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="apboost" type="APBoostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillxpboost" type="SkillXPBoostEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="summonfunctionalnpc" type="SummonFunctionalNpcEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="targetteleport" type="TargetTeleportEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="flyoff" type="FlyOffEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="escape" type="EscapeEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="skillcooltimereset" type="SkillCooltimeResetEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="riderobot" type="RideRobotEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="absstatbuff" type="AbsoluteStatToPCBuff" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="absstatdebuff" type="AbsoluteStatToPCDebuff" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="stunalways" type="StunAlwaysEffect" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="targetchange" type="TargetChangeEffect" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <effects>'."\n".
+               $ret.'</effects>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: Actions
+// ---------------------------------------------------------------------------
+function getActionsLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*
+        <xs:complexType name="Actions">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="itemuse" type="ItemUseAction" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mpuse" type="MpUseAction" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="hpuse" type="HpUseAction" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="dpuse" type="DpUseAction" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <actions>'."\n".
+               $ret.'</actions>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: PeriodicActions
+// ---------------------------------------------------------------------------
+function getPeriodicActionsLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*
+        <xs:complexType name="PeriodicActions">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="hpuse" type="HpUsePeriodicAction" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="mpuse" type="MpUsePeriodicAction" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="checktime" type="xs:int"/>
+        </xs:complexType>
+    */
+    
+    if ($ret != "")
+        $ret = '        <periodicactions>'."\n".
+               $ret.'</periodicactions>';
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Zeilen aufbereiten für: Motions
+// ---------------------------------------------------------------------------
+function getMotionLines($key)
+{
+    global $tabcskill;
+    
+    $ret = "";
+    
+    // ........
+    /*
+        <xs:complexType name="Motion">
+            <xs:attribute name="name" type="xs:string"/>
+            <xs:attribute name="speed" type="xs:int" use="optional" default="100"/>
+            <xs:attribute name="instant_skill" type="xs:boolean" use="optional" default="false"/>
+        </xs:complexType>
+    */
+    if ($ret != "")
+        $ret = '        <motion>'."\n".
+               $ret.'/>';
+        
+    return $ret;
+}
 // ----------------------------------------------------------------------------
 // SkillTemplate-Datei ausgeben
 // ----------------------------------------------------------------------------
@@ -587,6 +1132,28 @@ function generSkillTemplateFile()
             $cntout++;
             
             // .............
+            for ($l=1;$l<10;$l++)
+            {
+                switch($l)
+                {
+                    case  1: $oline = getPropertiesLines($key); break;
+                    case  2: $oline = getStartConditionLines($key); break;
+                    case  3: $oline = getuseConditionLines($key); break;
+                    case  4: $oline = getEndConditionLines($key); break;
+                    case  5: $oline = getUseEquipConditionLines($key); break;
+                    case  6: $oline = getEffectsLines($key); break;
+                    case  7: $oline = getActionsLines($key); break;
+                    case  8: $oline = getPeriodicActionsLines($key); break;
+                    case  9: $oline = getMotionLines($key); break;
+                    default: $oline = "";
+                }
+                
+                if ($oline != "")
+                {
+                    fwrite($hdlout,$oline."\n");
+                    $cntout += (1 + substr_count($oline,"\n"));
+                }
+            }
             
             fwrite($hdlout,"    </skill_template>\n");
             $cntout++;
@@ -634,9 +1201,14 @@ function makeAbgleichSvnFile()
     {
         $line = trim(fgets($hdlsvn));
         
-        if (stripos($line,"skill_template") !== false)
+        if     (stripos($line,"skill_template") !== false)
         {
             fwrite($hdlout,'    '.$line."\n");
+            $cntout++;
+        }
+        elseif (stripos($line,"properties")     !== false)
+        {
+            fwrite($hdlout,'        '.$line."\n");
             $cntout++;
         }
     }
