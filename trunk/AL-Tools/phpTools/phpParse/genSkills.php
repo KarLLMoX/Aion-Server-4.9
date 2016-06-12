@@ -15,6 +15,8 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 
 if (!file_exists("../outputs/parse_output/skills"))
     mkdir("../outputs/parse_output/skills");
+if (!file_exists("../outputs/parse_output/skill_tree"))
+    mkdir("../outputs/parse_output/skill_tree");
 ?>
 <body style="background-color:#000055;color:silver;padding:0px;">
 <center>
@@ -23,7 +25,7 @@ if (!file_exists("../outputs/parse_output/skills"))
   <div class="aktion">Erzeugen Skill-Dateien</div>
   <div class="hinweis" id="hinw">
   Erzeugen der skill....xml-Dateien.<br>
-  (skill_charge.xml und skill_templates.xml)
+  (skill_charge.xml, skill_templates.xml und skill_tree.xml)
   </div>
   <div width=100%>
 <h1 style="color:orange">Bitte Generierung starten</h1>
@@ -138,6 +140,18 @@ function getFieldText($key,$cxml,$fname,$deflt)
         
     if ($tmp != "")
         return ' '.$fname.'="'.$tmp.'"';
+    else
+        return "";
+}
+// ----------------------------------------------------------------------------
+// FeldText für TREE zurückgeben
+// ----------------------------------------------------------------------------
+function getTreeFieldText($fname,$fvalue)
+{
+    if ($fvalue != "")
+    {
+        return ' '.$fname.'="'.$fvalue.'"';
+    }
     else
         return "";
 }
@@ -1172,7 +1186,143 @@ function generSkillTemplateFile()
     
     logLine("Zeilen ausgegeben",$cntout);
     logLine("Skills ausgegeben",$cntids);
-    logLine("Skilsl ignoriert ",$cntign);
+    logLine("Skills ignoriert ",$cntign);
+}
+// ----------------------------------------------------------------------------
+// SkillTree-Datei ausgeben
+// ----------------------------------------------------------------------------
+function generSkillTreeFile()
+{
+    global $pathdata, $tabcskill;
+    
+    $fileout = "../outputs/parse_output/skill_tree/skill_tree.xml";
+    $fileu16 = formFileName($pathdata."\\skills\\client_skill_learns.xml");
+    
+    logHead("Generierung der Datei: ".basename($fileout));
+    
+    if (!file_exists($fileu16))
+    {
+        logLine("Datei nicht vorhanden",$fileu16);
+        return;
+    }
+    
+    $fileext = convFileToUtf8($fileu16);
+    $hdlext  = openInputFile($fileext);
+    
+    if (!$hdlext)
+    {
+        logLine("Fehler openInputFile",$fileext);
+        return;
+    }
+    
+    $hdlout  = openOutputFile($fileout);
+    $cntles  = 0;
+    $cntout  = 0;
+    $cntids  = 0;
+    
+    // Vorspann ausgeben
+    fwrite($hdlout,'<?xml version="1.0" encoding="utf-8"?>'."\n");
+    fwrite($hdlout,getCopyrightLine()."\n");
+    fwrite($hdlout,'<skill_tree xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="skill_tree.xsd">'."\n");
+    $cntout += 3;
+            
+    flush();
+    
+    $id = $lmin = $race = $auto = $name = $slev = $sid = $class = $stigma = "";
+    
+    while (!feof($hdlext))
+    {
+        $line = rtrim(fgets($hdlext));
+        $cntles++;
+        /*
+        <client_skill_learn>
+            <id>1</id>
+            <name>1</name>
+            <race>All</race>
+            <class>ARTIST</class>
+            <pc_level>1</pc_level>
+            <skill>P_EQUIP_EnhancedHarp_G1</skill>
+            <skill_level>1</skill_level>
+            <autolearn>TRUE</autolearn>
+            <ui_display>1</ui_display>
+            <stigma_display>0</stigma_display>
+        </client_skill_learn>
+        */
+        
+        if     (stripos($line,"<id>")             !== false) $id     = getXmlValue("id",$line);
+        elseif (stripos($line,"<pc_level>")       !== false) $lmin   = getXmlValue("pc_level",$line);
+        elseif (stripos($line,"<race>")           !== false) $race   = strtoupper(getXmlValue("race",$line));
+        elseif (stripos($line,"<autolearn>")      !== false) $auto   = getXmlValue("autolearn",$line);
+        elseif (stripos($line,"<skill>")          !== false) $name   = getXmlValue("skill",$line);
+        elseif (stripos($line,"<skill_level>")    !== false) $slev   = getXmlValue("skill_level",$line);
+        elseif (stripos($line,"<class>")          !== false) $class  = strtoupper(getXmlValue("class",$line));
+        elseif (stripos($line,"<stigma_display>") !== false) $stigma = getXmlValue("stigma_display",$line);
+        elseif (stripos($line,"</client_skill_learn>") !== false)
+        {
+            $cntids++;
+            
+            // fehlende Werte ermitteln
+            
+            // SkillId und Name
+            $sid  = getSkillNameId($name);
+            $desc = $tabcskill[$sid]['desc'];  // DESC zur akt. SkillId holen
+            $name = getIntSkillName($desc);
+            
+            // Rasse
+            if     ($race == "ALL")      $race = "PC_ALL";
+            elseif ($race == "PC_LIGHT") $race = "ELYOS";
+            elseif ($race == "PC_DARK")  $race = "ASMODIANS";
+            
+            // Klasse            
+            if     ($class == "ELEMENTALLIST")       $class = "SPIRIT_MASTER";
+            elseif ($class == "FIGHTER")             $class = "GLADIATOR";
+            elseif ($class == "KNIGHT")              $class = "TEMPLAR";
+            elseif ($class == "WIZARD")              $class = "SORCERER";
+            /* 
+                erst einmal keine Umsetzung, da die Vorgaben korrekt zu sein scheinen
+                Annahme: PRIEST gilt für CLERIC + CHANTER
+                Muss geprüft werden !!!!!!!!!!!!!!!!!!!!!
+                
+            elseif ($class == "PRIEST")
+            { 
+                if ($lmin > 9)                       $class = "CLERIC";
+                echo "\n<br>PRIEST: $id = $class = $sid = $lmin ";
+            }
+            */
+            // Stigma
+            if ($stigma == "1"     
+            ||  $stigma == "2"
+            ||  $stigma == "3")          $stigma = "true";
+            else                         $stigma = "";
+            
+            /*
+            <skill minLevel="1" race="PC_ALL" autolearn="true" name="Basic Harp Training" skillLevel="1" skillId="114" classId="ARTIST" />
+            */
+            $lout = '    <skill'.
+                    getTreeFieldText("minLevel"  ,$lmin).
+                    getTreeFieldText("race"      ,$race).
+                    getTreeFieldText("stigma"    ,$stigma).
+                    getTreeFieldText("autolearn" ,$auto).
+                    getTreeFieldText("name"      ,$name).
+                    getTreeFieldText("skillLevel",$slev).
+                    getTreeFieldText("skillId"   ,$sid).
+                    getTreeFieldText("classId"   ,$class).
+                    ' />';
+            fwrite($hdlout,$lout."\n");
+            $cntout++;
+            
+            $id = $lmin = $race = $auto = $name = $slev = $sid = $class = $stigma = "";
+        }
+    }
+    // Nachspann ausgeben
+    fwrite($hdlout,'</skill_tree>');
+    $cntout++;
+    fclose($hdlext);
+    fclose($hdlout);
+    
+    logLine("Anzahl Zeilen eingelesen",$cntles);
+    logLine("Anzahl Zeilen ausgegeben",$cntout);
+    logLine("Anzahl Skills gefunden"  ,$cntids);
 }
 // ----------------------------------------------------------------------------
 //
@@ -1183,6 +1333,8 @@ function makeAbgleichSvnFile()
 {
     global $pathsvn;
     
+    logHead("Erzeuge Abgleich-Test-Datei: svn_skill_templates.xml");
+    
     $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
     $fileout = "parse_temp/svn_skill_templates.xml";
 
@@ -1191,11 +1343,15 @@ function makeAbgleichSvnFile()
     
     $cntout = 0;
     
+    logLine("Ausgabedatei",$fileout);
+    
     // Vorspann ausgeben
     fwrite($hdlout,'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'."\n");
     fwrite($hdlout,getCopyrightLine()."\n");
     fwrite($hdlout,'<skill_data>'."\n");
     $cntout += 3;
+    
+    flush();
     
     while (!feof($hdlsvn))
     {
@@ -1262,6 +1418,7 @@ if ($submit == "J")
         // showSkillTags();
         
         generSkillTemplateFile();
+        generSkillTreeFile();
         
         makeAbgleichSvnFile();
         
