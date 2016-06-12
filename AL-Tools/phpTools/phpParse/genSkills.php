@@ -592,6 +592,37 @@ function getStartConditionLines($key)
 {
     global $tabcskill;
     
+    // Feld-Tabelle: 0=EXT-Feldname, 1=EMU-Feldname, 2=Default, 3=ConditionIndex (0=dummy)
+    // Zuordnung zu Start/End/Use-conditions muss noch geklärt werden
+    /*
+    $ftab = array(
+              array(""               ,"mp"      ,"",0),
+              array("","hp","",0),
+              array("cost_dp","dp"   ,"",0),
+              array(""               ,"target"       ,"",0),
+              array(""              ,"move_casting"               ,"",0),
+              array(""       ,"arrowcheck"     ,"",0),  
+              array(""            ,"robotcheck"   ,"",0),
+              array(""          ,"abnormal" ,"",0),
+              array(""          ,"onfly","",0),
+              array(""          ,"onflying"    ,"",1),  
+              array(""          ,"weapon"   ,"",2),  
+              array(""          ,"lefthandweapon"   ,"",0),
+              array(""          ,"targetflying"         ,"",0),
+              array("" ,"selfflying"    ,"",0)
+              array("","combatcheck","")                                   
+              array("","chain","")    
+              array("","back","")                                  
+              array("","front","")                                  
+              array("","form","")                                  
+              array("","charge","")                                  
+              array("","chargeweapon","")                                  
+              array("","chargearmor","")                                  
+              array("","polishchargeweapon","")                                  
+              array("","skillcharge","")                                                                
+                 );
+    $fmax = count($ftab);
+    */
     $ret = "";
     
     // ........
@@ -1027,9 +1058,19 @@ function getMotionLines($key)
             <xs:attribute name="instant_skill" type="xs:boolean" use="optional" default="false"/>
         </xs:complexType>
     */
+    
+    if (isset($tabcskill[$key]['motion_name']))
+        $ret .= ' name="'.strtolower($tabcskill[$key]['motion_name']).'"';
+    if (isset($tabcskill[$key]['motion_play_speed']))
+        $ret .= ' speed="'.$tabcskill[$key]['motion_play_speed'].'"';
+    if (isset($tabcskill[$key]['instant_skill']))
+    {
+        if ($tabcskill[$key]['instant_skill'] == "1")  
+            $ret .= ' instant_skill="true"';
+    }
+    
     if ($ret != "")
-        $ret = '        <motion>'."\n".
-               $ret.'/>';
+        $ret = '        <motion'.$ret.'/>';
         
     return $ret;
 }
@@ -1252,7 +1293,7 @@ function generSkillTreeFile()
         if     (stripos($line,"<id>")             !== false) $id     = getXmlValue("id",$line);
         elseif (stripos($line,"<pc_level>")       !== false) $lmin   = getXmlValue("pc_level",$line);
         elseif (stripos($line,"<race>")           !== false) $race   = strtoupper(getXmlValue("race",$line));
-        elseif (stripos($line,"<autolearn>")      !== false) $auto   = getXmlValue("autolearn",$line);
+        elseif (stripos($line,"<autolearn>")      !== false) $auto   = strtolower(getXmlValue("autolearn",$line));
         elseif (stripos($line,"<skill>")          !== false) $name   = getXmlValue("skill",$line);
         elseif (stripos($line,"<skill_level>")    !== false) $slev   = getXmlValue("skill_level",$line);
         elseif (stripos($line,"<class>")          !== false) $class  = strtoupper(getXmlValue("class",$line));
@@ -1362,7 +1403,8 @@ function makeAbgleichSvnFile()
             fwrite($hdlout,'    '.$line."\n");
             $cntout++;
         }
-        elseif (stripos($line,"properties")     !== false)
+        elseif (stripos($line,"properties")     !== false
+        ||      stripos($line,"<motion")        !== false)
         {
             fwrite($hdlout,'        '.$line."\n");
             $cntout++;
