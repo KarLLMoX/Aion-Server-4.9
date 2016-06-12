@@ -172,9 +172,6 @@ public class ServerPacketsOpcodes {
         addPacketOpcode(SM_WAREHOUSE_ADD_ITEM.class, 0xA9, idSet);
         addPacketOpcode(SM_DELETE_WAREHOUSE_ITEM.class, 0xAA, idSet);
         addPacketOpcode(SM_WAREHOUSE_UPDATE_ITEM.class, 0xAB, idSet);
-        addPacketOpcode(SM_IN_GAME_SHOP_CATEGORY_LIST.class, 0xAC, idSet); // ingameshop
-        addPacketOpcode(SM_IN_GAME_SHOP_LIST.class, 0xAD, idSet); // ingameshop
-        addPacketOpcode(SM_IN_GAME_SHOP_ITEM.class, 0xAE, idSet); // ingameshop
         addPacketOpcode(SM_TITLE_INFO.class, 0xB0, idSet);
         addPacketOpcode(SM_CHARACTER_SELECT.class, 0xB1, idSet);
         //addPacketOpcode(SM_BROKER_REGISTERED_LIST.class, 0xB1, idSet);

@@ -78,13 +78,6 @@
             <Pattern>%date %message%n</Pattern>
         </encoder>
     </appender>
-    <appender name="app_ingameshop" class="ch.qos.logback.core.FileAppender">
-        <file>${logFolder}/ingameshop.log</file>
-        <append>true</append>
-        <encoder>
-            <Pattern>%date %message%n</Pattern>
-        </encoder>
-    </appender>
     <appender name="app_instance" class="ch.qos.logback.core.FileAppender">
         <file>${logFolder}/instance.log</file>
         <append>true</append>

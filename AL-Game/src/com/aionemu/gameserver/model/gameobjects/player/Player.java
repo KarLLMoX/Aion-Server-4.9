@@ -16,6 +16,18 @@
  */
 package com.aionemu.gameserver.model.gameobjects.player;
 
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ScheduledFuture;
+
+import javolution.util.FastList;
+import javolution.util.FastMap;
+
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.administration.AdminConfig;
 import com.aionemu.gameserver.configs.main.MembershipConfig;
@@ -61,7 +73,6 @@ import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
 import com.aionemu.gameserver.model.house.House;
 import com.aionemu.gameserver.model.house.HouseRegistry;
 import com.aionemu.gameserver.model.house.HouseStatus;
-import com.aionemu.gameserver.model.ingameshop.InGameShop;
 import com.aionemu.gameserver.model.items.ItemCooldown;
 import com.aionemu.gameserver.model.items.storage.IStorage;
 import com.aionemu.gameserver.model.items.storage.LegionStorageProxy;
@@ -93,7 +104,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.HousingService;
-import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.skillengine.condition.ChainCondition;
 import com.aionemu.gameserver.skillengine.effect.AbnormalState;
 import com.aionemu.gameserver.skillengine.effect.EffectTemplate;
@@ -112,13 +122,6 @@ import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
 import com.aionemu.gameserver.world.zone.ZoneInstance;
 
-import javolution.util.FastList;
-import javolution.util.FastMap;
-
-import java.sql.Timestamp;
-import java.util.*;
-import java.util.concurrent.ScheduledFuture;
-
 /**
  * This class is representing Player object, it contains all needed data.
  *
@@ -128,12 +131,10 @@ import java.util.concurrent.ScheduledFuture;
  * @author cura
  * @author GiGatR00n v4.7.5.x
  */
-@SuppressWarnings("unused")
 public class Player extends Creature {
 
     public RideInfo ride;
     public InRoll inRoll;
-    public InGameShop inGameShop;
     public WindstreamPath windstreamPath;
     private PlayerAppearance playerAppearance;
     private PlayerAppearance savedPlayerAppearance;
@@ -313,7 +314,6 @@ public class Player extends Creature {
         setPlayerStatsTemplate(DataManager.PLAYER_STATS_DATA.getTemplate(this));
         setGameStats(new PlayerGameStats(this));
         setLifeStats(new PlayerLifeStats(this));
-        inGameShop = new InGameShop();
         absStatsHolder = new AbsoluteStatOwner(this, 0);
     }
 

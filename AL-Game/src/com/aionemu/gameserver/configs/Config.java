@@ -144,9 +144,6 @@ public class Config {
             ConfigurableProcessor.process(HTMLConfig.class, mainProps);
             log.info("[Config] Loading: " + main + "/html.properties");
 
-            ConfigurableProcessor.process(InGameShopConfig.class, mainProps);
-            log.info("[Config] Loading: " + main + "/ingameshop.properties");
-
             ConfigurableProcessor.process(LegionConfig.class, mainProps);
             log.info("[Config] Loading: " + main + "/legion.properties");
 
@@ -318,9 +315,6 @@ public class Config {
 
             ConfigurableProcessor.process(HTMLConfig.class, mainProps);
             log.info("[Config] Reload: " + main + "/html.properties");
-
-            ConfigurableProcessor.process(InGameShopConfig.class, mainProps);
-            log.info("[Config] Reload: " + main + "/ingameshop.properties");
 
             ConfigurableProcessor.process(LegionConfig.class, mainProps);
             log.info("[Config] Reload: " + main + "/legion.properties");

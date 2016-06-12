@@ -293,51 +293,6 @@ CREATE TABLE `house_scripts` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `ingameshop`
--- ----------------------------
-DROP TABLE IF EXISTS `ingameshop`;
-CREATE TABLE `ingameshop` (
-  `object_id` int(11) NOT NULL AUTO_INCREMENT,
-  `item_id` int(11) NOT NULL,
-  `item_count` bigint(13) NOT NULL DEFAULT '0',
-  `item_price` bigint(13) NOT NULL DEFAULT '0',
-  `category` tinyint(1) NOT NULL DEFAULT '0',
-  `sub_category` tinyint(1) NOT NULL DEFAULT '0',
-  `list` int(11) NOT NULL DEFAULT '0',
-  `sales_ranking` int(11) NOT NULL DEFAULT '0',
-  `item_type` tinyint(1) NOT NULL DEFAULT '0',
-  `gift` tinyint(1) NOT NULL DEFAULT '0',
-  `title_description` varchar(20) NOT NULL,
-  `description` varchar(20) NOT NULL,
-  PRIMARY KEY (`object_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of ingameshop
--- ----------------------------
-
--- ----------------------------
--- Table structure for `ingameshop_log`
--- ----------------------------
-DROP TABLE IF EXISTS `ingameshop_log`;
-CREATE TABLE `ingameshop_log` (
-  `transaction_id` int(11) NOT NULL AUTO_INCREMENT,
-  `transaction_type` enum('BUY','GIFT') NOT NULL,
-  `transaction_date` timestamp NULL DEFAULT NULL,
-  `payer_name` varchar(50) NOT NULL,
-  `payer_account_name` varchar(50) NOT NULL,
-  `receiver_name` varchar(50) NOT NULL,
-  `item_id` int(11) NOT NULL,
-  `item_count` bigint(13) NOT NULL DEFAULT '0',
-  `item_price` bigint(13) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`transaction_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of ingameshop_log
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `inventory`
 -- ----------------------------
 DROP TABLE IF EXISTS `inventory`;
@@ -434,6 +389,7 @@ CREATE TABLE `legions` (
   `description` varchar(255) NOT NULL DEFAULT '',
   `joinType` int(1) NOT NULL DEFAULT '0',
   `minJoinLevel` int(3) NOT NULL DEFAULT '0',
+  `territory` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_unique` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -650,6 +606,8 @@ CREATE TABLE `players` (
   `rewarded_pass` int(1) NOT NULL DEFAULT '0',
   `joinRequestLegionId` int(11) NOT NULL DEFAULT '0',
   `joinRequestState` enum('NONE','DENIED','ACCEPTED') NOT NULL DEFAULT 'NONE',
+  `frenzy_points` int(4) NOT NULL DEFAULT '0' COMMENT 'Upgrade Arcade FrenzyPoints',
+  `frenzy_count` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `name_unique` (`name`),
   KEY `account_id` (`account_id`)
@@ -1163,6 +1121,7 @@ CREATE TABLE `siege_locations` (
   `id` int(11) NOT NULL,
   `race` enum('ELYOS','ASMODIANS','BALAUR') NOT NULL,
   `legion_id` int(11) NOT NULL,
+  `occupy_count` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

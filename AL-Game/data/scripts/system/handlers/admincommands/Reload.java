@@ -53,7 +53,6 @@ import com.aionemu.gameserver.dataholders.loadingutils.XmlValidationHandler;
 import com.aionemu.gameserver.instance.InstanceEngine;
 import com.aionemu.gameserver.model.drop.NpcDrop;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.ingameshop.InGameShopEn;
 import com.aionemu.gameserver.model.templates.npc.NpcTemplate;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.services.EventService;
@@ -186,10 +185,7 @@ public class Reload extends AdminCommand {
 			}
 		}
 
-		else if (params[0].equals("gameshop")) {
-			InGameShopEn.getInstance().reload();
-			PacketSendUtility.sendMessage(admin, "Gameshop successfully reloaded!");
-		} else if (params[0].equals("events")) {
+		else if (params[0].equals("events")) {
 			File eventXml = new File("./data/static_data/events_config/events_config.xml");
 			EventData data = null;
 			try {
