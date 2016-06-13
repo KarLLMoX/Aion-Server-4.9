@@ -43,6 +43,18 @@ if (!file_exists("../outputs/parse_output/skill_tree"))
 //                       H I L F S F U N K T I O N E N
 //
 // ----------------------------------------------------------------------------
+// Value für Feld zurückgeben
+// ----------------------------------------------------------------------------
+function getTabValue($key,$fname,$deflt)
+{
+    global $tabcskill;
+    
+    if (isset($tabcskill[$key][$fname]))
+        return $tabcskill[$key][$fname];
+    else
+        return $deflt;
+}
+// ----------------------------------------------------------------------------
 // spezielle Text-Manipulationen überprüfen
 // ----------------------------------------------------------------------------
 function checkSpecialText($fname,$fvalue)
@@ -1009,9 +1021,49 @@ function getActionsLines($key)
         </xs:complexType>
     */
     
+    // MPUSE / HPUSE
+    $parm = strtolower(getTabValue($key,"cost_parameter",""));
+    $cost = getTabValue($key,"cost_end","0");
+    $delt = getTabValue($key,"cost_end_lv","0");
+    $ztxt = "";
+    
+    if ($parm != "" && $cost != "0")
+    {
+        if (stripos($parm,"_ratio") !== false)
+        {
+            $parm = str_replace("_ratio","",$parm);
+            $ztxt = ' ratio="true"';
+        }
+        else
+        {
+            // Delta nur, wenn kein Ratio!
+            if ($parm == "mp" || $parm = "hp")
+                $ztxt = ' delta="'.$delt.'"';
+        }
+        $ret .= '            <'.$parm.'use value="'.$cost.'"'.$ztxt.'/>'."\n";
+    }
+    
+    // DPUSE
+    $cost = getTabValue($key,"cost_dp","");
+    
+    if ($cost != "")
+        $ret .= '            <dpuse value="'.$cost.'"/>'."\n";
+        
+    // ITEMUSE
+    $item = getTabValue($key,"component","");
+    $icnt = getTabValue($key,"component_count","0");
+    
+    if ($item != "")
+    {
+        $itid = getClientItemId($item);
+        
+        $ret .= '            <itemuse itemid="'.$itid.'" count="'.$icnt.'"/>'."\n";
+    }
+    
     if ($ret != "")
         $ret = '        <actions>'."\n".
-               $ret.'</actions>';
+               $ret.
+               '        </actions>';
         
     return $ret;
 }
@@ -1319,17 +1371,20 @@ function generSkillTreeFile()
             elseif ($class == "FIGHTER")             $class = "GLADIATOR";
             elseif ($class == "KNIGHT")              $class = "TEMPLAR";
             elseif ($class == "WIZARD")              $class = "SORCERER";
-            /* 
-                erst einmal keine Umsetzung, da die Vorgaben korrekt zu sein scheinen
-                Annahme: PRIEST gilt für CLERIC + CHANTER
-                Muss geprüft werden !!!!!!!!!!!!!!!!!!!!!
+            /*
+                spezielle Umsetzung: im Client sind die Vorgaben für die Klassen
+                PRIEST/CLERIC vermischt, also nicht eindeutig. Daher Umsetzung
+                wie folgt:
                 
-            elseif ($class == "PRIEST")
+                Level 01 - 09 = PRIEST
+                Level 10 - 65 = CLERIC
+            */
+            elseif ($class == "PRIEST" || $class == "CLERIC")
             { 
                 if ($lmin > 9)                       $class = "CLERIC";
-                echo "\n<br>PRIEST: $id = $class = $sid = $lmin ";
+                else                                 $class = "PRIEST";
             }
-            */
+            
             // Stigma
             if ($stigma == "1"     
             ||  $stigma == "2"
@@ -1379,10 +1434,12 @@ function makeAbgleichSvnFile()
     $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
     $fileout = "parse_temp/svn_skill_templates.xml";
 
-    $hdlsvn = openInputFile($filesvn);
-    $hdlout = openOutputFile($fileout);    
+    $hdlsvn  = openInputFile($filesvn);
+    $hdlout  = openOutputFile($fileout);    
     
-    $cntout = 0;
+    $cntout  = 0;
+    $doblock = false;
+    $doline  = false;
     
     logLine("Ausgabedatei",$fileout);
     
@@ -1396,19 +1453,30 @@ function makeAbgleichSvnFile()
     
     while (!feof($hdlsvn))
     {
-        $line = trim(fgets($hdlsvn));
+        $line   = rtrim(fgets($hdlsvn));
+        $line   = str_replace("\t","    ",$line);
+        $doline = false;
         
-        if     (stripos($line,"skill_template") !== false)
+        // ganzen Block ausgeben?
+        if (stripos($line,"<actions>")          !== false)
+            $doblock = true;
+        
+        // einzelne Zeilen ausgeben?
+        if (stripos($line,"skill_template")     !== false
+        ||  stripos($line,"properties")         !== false
+        ||  stripos($line,"<motion")            !== false)
+            $doline = true;
+        
+        // Block/einzelnen Zeile ausgeben
+        if ($doblock || $doline)
         {
-            fwrite($hdlout,'    '.$line."\n");
+            fwrite($hdlout,$line."\n");
             $cntout++;
         }
-        elseif (stripos($line,"properties")     !== false
-        ||      stripos($line,"<motion")        !== false)
-        {
-            fwrite($hdlout,'        '.$line."\n");
-            $cntout++;
-        }
+        
+        // Blockende?
+        if (stripos($line,"</actions>")         !== false)
+            $doblock = false;
     }
     // Nachspann ausgeben
     fwrite($hdlout,"</skill_data>");
@@ -1424,6 +1492,7 @@ function makeAbgleichSvnFile()
 // ----------------------------------------------------------------------------
 
 include("includes/inc_getautonameids.php");
+include("includes/auto_inc_item_infos.php");
 include("includes/auto_inc_skill_names.php");
 include("includes/auto_inc_npc_infos.php");
 
