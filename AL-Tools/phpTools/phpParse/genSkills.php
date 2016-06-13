@@ -1021,26 +1021,35 @@ function getActionsLines($key)
         </xs:complexType>
     */
     
+    $time = getTabValue($key,"cost_time","");
+    
+    // Nutzungskosten für die Aktivierung
+    
     // MPUSE / HPUSE
     $parm = strtolower(getTabValue($key,"cost_parameter",""));
     $cost = getTabValue($key,"cost_end","0");
     $delt = getTabValue($key,"cost_end_lv","0");
-    $ztxt = "";
+    $dtxt = "";
+    $rtxt = "";
     
     if ($parm != "" && $cost != "0")
     {
+        // RATIO
         if (stripos($parm,"_ratio") !== false)
         {
             $parm = str_replace("_ratio","",$parm);
-            $ztxt = ' ratio="true"';
+            $rtxt = ' ratio="true"';
         }
-        else
+        
+        // DELTA
+        if ($parm == "mp" || $parm = "hp")
         {
-            // Delta nur, wenn kein Ratio!
-            if ($parm == "mp" || $parm = "hp")
-                $ztxt = ' delta="'.$delt.'"';
+            // Delta nur, wenn kein Ratio bzw. wenn RATIO und Wert != 0
+            if ($rtxt == "" || ($rtxt != "" && $delt != "0"))
+                $dtxt = ' delta="'.$delt.'"';
         }
-        $ret .= '            <'.$parm.'use value="'.$cost.'"'.$ztxt.'/>'."\n";
+        
+        $ret .= '            <'.$parm.'use value="'.$cost.'"'.$dtxt.$rtxt.'/>'."\n";
     }
     
     // DPUSE
@@ -1087,9 +1096,47 @@ function getPeriodicActionsLines($key)
         </xs:complexType>
     */
     
+    // HPUSE / MPUSE  (kein DPUSE gem. XSD)
+    $parm = strtolower(getTabValue($key,"cost_checktime_parameter",""));
+    $cost = getTabValue($key,"cost_checktime","");
+    $time = getTabValue($key,"effect1_checktime","0");
+    
+    // normale Nutzung
+    if (($parm == "hp" || $parm == "mp") && $cost != "")
+    {
+        $ret .= '            <'.$parm.'use value="'.$cost.'"/>'."\n";
+    }
+    
+    $parm = strtolower(getTabValue($key,"cost_parameter",""));
+    $ptim = getTabValue($key,"cost_time","");
+    $cost = getTabValue($key,"cost_toggle","0"); 
+    
+    if ($parm != "" && $ptim != "" && $cost != "0")
+    {
+        $time = $ptim;
+        $delt = getTabValue($key,"cost_end_lv","");
+        $ztxt = ($delt != "" && $parm == "hp") ? ' delta="'.$delt.'"' : '';
+        
+        // Nutzung bei RATIO
+        if (stripos($parm,"_ratio") !== false)
+        {
+            $parm = str_replace("_ratio","",$parm);
+            $cost = getTabValue($key,"cost_toggle","0");
+            $ret .= '            <'.$parm.'use value="'.$cost.'"'.$ztxt.' ratio="true"/>'."\n";
+        }
+        else
+        {
+            // normale Nutzung
+            if (($parm == "hp" || $parm == "mp") && $cost != "")
+            {
+                $ret .= '            <'.$parm.'use value="'.$cost.'"'.$delt.'/>'."\n";
+            }
+        }
+    }
     if ($ret != "")
-        $ret = '        <periodicactions>'."\n".
-               $ret.'</periodicactions>';
+        $ret = '        <periodicactions checktime="'.$time.'">'."\n".
+               $ret.
+               '        </periodicactions>';
         
     return $ret;
 }
@@ -1458,7 +1505,8 @@ function makeAbgleichSvnFile()
         $doline = false;
         
         // ganzen Block ausgeben?
-        if (stripos($line,"<actions>")          !== false)
+        if (stripos($line,"<actions>")          !== false
+        ||  stripos($line,"<periodicactions")   !== false)
             $doblock = true;
         
         // einzelne Zeilen ausgeben?
@@ -1475,7 +1523,8 @@ function makeAbgleichSvnFile()
         }
         
         // Blockende?
-        if (stripos($line,"</actions>")         !== false)
+        if (stripos($line,"</actions>")         !== false
+        ||  stripos($line,"</periodicactions>") !== false)
             $doblock = false;
     }
     // Nachspann ausgeben
