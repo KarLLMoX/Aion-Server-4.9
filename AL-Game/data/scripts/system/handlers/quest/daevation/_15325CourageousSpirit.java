@@ -28,14 +28,12 @@ import com.aionemu.gameserver.services.QuestService;
 /**
  * @author FrozenKiller
  */
-public class _15324UnyieldingSpirit extends QuestHandler {
+public class _15325CourageousSpirit extends QuestHandler {
 	
-    public static final int questId = 15324;
-	private final static int[] mobs = {235939, 235940, 235941, 235942, 235944, 235947};
-	private final static int[] mobs2 = {233929, 233930, 233931, 233932, 233933, 233934, 233935, 233936};
-	private final static int[] mobs3 = {234277, 234279, 234280, 234524, 234531, 234532};
+    public static final int questId = 15325;
+	private final static int[] mobs = {236472, 236473, 236474, 236475, 236476, 236502, 236503, 236504, 236505, 236506, 236507, 236508, 236509};
     
-	public _15324UnyieldingSpirit() {
+	public _15325CourageousSpirit() {
         super(questId);
     }
 
@@ -45,12 +43,6 @@ public class _15324UnyieldingSpirit extends QuestHandler {
         qe.registerQuestNpc(805331).addOnTalkEvent(questId); // Machina
 		for (int mob : mobs) {
 			qe.registerQuestNpc(mob).addOnKillEvent(questId);
-        }
-		for (int mob2 : mobs2) {
-			qe.registerQuestNpc(mob2).addOnKillEvent(questId);
-        }
-		for (int mob3 : mobs3) {
-			qe.registerQuestNpc(mob3).addOnKillEvent(questId);
         }
     }
 	
@@ -107,27 +99,12 @@ public class _15324UnyieldingSpirit extends QuestHandler {
 		
 		int var = qs.getQuestVarById(0);
 		int var1 = qs.getQuestVarById(1);
-		if (var == 0 && var1 >= 0 && var1 < 19) {
+
+		if (var == 0 && var1 >= 0 && var1 < 29) {
 			return defaultOnKillEvent(env, mobs, var1, var1 + 1, 1);
-		} else if (var == 0 && var1 == 19) {
+		} else if (var == 0 && var1 == 29) {
 			qs.setQuestVarById(1, 0);
-			changeQuestStep(env, 0, 1, false); // 1
-			updateQuestStatus(env);
-			return true;
-		}
-		if (var == 1 && var1 >= 0 && var1 < 19) {
-			return defaultOnKillEvent(env, mobs2, var1, var1 + 1, 1);
-		} else if (var == 1 && var1 == 19) {
-			qs.setQuestVarById(1, 0);
-			changeQuestStep(env, 1, 2, false); // 2
-			updateQuestStatus(env);
-			return true;
-		}
-		if (var == 2 && var1 >= 0 && var1 < 19) {
-			return defaultOnKillEvent(env, mobs3, var1, var1 + 1, 1);
-		} else if (var == 2 && var1 == 19) {
-			qs.setQuestVarById(1, 0);
-			qs.setQuestVar(3);
+			qs.setQuestVar(1);
 			qs.setStatus(QuestStatus.REWARD);
 			updateQuestStatus(env);
 			return true;
