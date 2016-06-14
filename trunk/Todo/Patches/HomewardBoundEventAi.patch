@@ -1,0 +1,106 @@
+Index: static_data/npcs/npc_templates.xml
+===================================================================
+--- static_data/npcs/npc_templates.xml	(revision 247)
++++ static_data/npcs/npc_templates.xml	(working copy)
+@@ -583687,7 +583687,7 @@
+         <bound_radius front="0.5" side="0.7" upper="2.0"/>
+         <talk_info distance="5"/>
+     </npc_template>
+-    <npc_template npc_id="833671" level="55" name="New Friend New Rotund" name_id="467110" name_desc="event_Mongsil_Newbie" height="1.85" title_id="370740" rank="VETERAN" rating="NORMAL" race="NONE" tribe="USEALL" ai="general" srange="20" adelay="2000" hpgauge="3">
++    <npc_template npc_id="833671" level="55" name="New Friend New Rotund" name_id="467110" name_desc="event_Mongsil_Newbie" height="1.85" title_id="370740" rank="VETERAN" rating="NORMAL" race="NONE" tribe="USEALL" ai="homeward_bound_event" srange="20" adelay="2000" hpgauge="3">
+         <stats maxHp="18756" maxXp="10000" main_hand_attack="1000" main_hand_accuracy="1000" pdef="1000" mresist="4000" power="100" evasion="1000" accuracy="1000">
+             <speeds walk="1.457" run="6.0" run_fight="5.0"/>
+         </stats>
+@@ -583694,7 +583694,7 @@
+         <bound_radius front="0.8" side="0.8" upper="1.85"/>
+         <talk_info distance="5" is_dialog="true"/>
+     </npc_template>
+-    <npc_template npc_id="833672" level="55" name="Dormant Friend Familiar Rotund" name_id="467111" name_desc="event_Mongsil_Return" height="1.85" title_id="370740" rank="VETERAN" rating="NORMAL" race="NONE" tribe="USEALL" ai="general" srange="20" adelay="2000" hpgauge="3">
++    <npc_template npc_id="833672" level="55" name="Dormant Friend Familiar Rotund" name_id="467111" name_desc="event_Mongsil_Return" height="1.85" title_id="370740" rank="VETERAN" rating="NORMAL" race="NONE" tribe="USEALL" ai="homeward_bound_event" srange="20" adelay="2000" hpgauge="3">
+         <stats maxHp="18756" maxXp="10000" main_hand_attack="1000" main_hand_accuracy="1000" pdef="1000" mresist="4000" power="100" evasion="1000" accuracy="1000">
+             <speeds walk="1.457" run="6.0" run_fight="5.0"/>
+         </stats>
+Index: scripts/system/handlers/ai/events/HomewardBoundEvent.java
+===================================================================
+--- scripts/system/handlers/ai/events/HomewardBoundEvent.java	(nonexistent)
++++ scripts/system/handlers/ai/events/HomewardBoundEvent.java	(working copy)
+@@ -0,0 +1,79 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package ai.events;
++
++import ai.GeneralNpcAI2;
++
++import com.aionemu.gameserver.ai2.AIName;
++import com.aionemu.gameserver.model.Race;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.questEngine.QuestEngine;
++import com.aionemu.gameserver.questEngine.model.QuestEnv;
++import com.aionemu.gameserver.skillengine.SkillEngine;
++
++/**
++ * @FrozenKiller
++ */
++@AIName("homeward_bound_event")
++public class HomewardBoundEvent extends GeneralNpcAI2 {
++
++    @Override
++    protected void handleDialogStart(Player player) {
++		switch (getNpcId()) {
++			case 833671:
++			case 833672:
++				super.handleDialogStart(player);
++                break;
++            default:
++            	break;
++		}
++	}
++
++    @Override
++    public boolean onDialogSelect(Player player, int dialogId, int questId, int extendedRewardIndex) {
++
++    	if (dialogId == 10000) {
++    		switch (getNpcId()) {
++    			case 833671: {
++    				if (player.getRace() == Race.ELYOS) {
++    					SkillEngine.getInstance().getSkill(player, 11047, 1, player).useWithoutPropSkill();
++    				} else {
++    					SkillEngine.getInstance().getSkill(player, 11048, 1, player).useWithoutPropSkill();
++    				}
++    				break;
++    			}
++    			case 833672: {
++    				if (getNpcId() == 833672 && player.getRace() == Race.ELYOS) {
++    	    			SkillEngine.getInstance().getSkill(player, 11049, 1, player).useWithoutPropSkill();
++    	            } else {
++    	            	SkillEngine.getInstance().getSkill(player, 11050, 1, player).useWithoutPropSkill();
++    	            }
++    				break;
++    			}
++    			default:
++    				break;
++    		}
++    	} else {
++            QuestEnv env = new QuestEnv(getOwner(), player, questId, dialogId);
++            env.setExtendedRewardIndex(extendedRewardIndex);
++            if (QuestEngine.getInstance().onDialog(env)) {
++                return true;
++            }
++    	}
++        return true;
++    }
++}
