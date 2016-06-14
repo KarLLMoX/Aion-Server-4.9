@@ -347,6 +347,15 @@
     <item_collecting start_npc_ids="833622" id="80747" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="833623" id="80748" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007395"/>
     <item_collecting start_npc_ids="833625" id="80749" start_dialog_id="4762" start_dialog_id2="5"/>
+    <!-- Homeward Bound Event -->
+    <item_collecting start_npc_ids="833671" id="80787" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833672" id="80788" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833671" id="80789" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833672" id="80790" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833671" id="80791" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833672" id="80792" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833671" id="80793" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833672" id="80794" start_dialog_id="4762" start_dialog_id2="5"/>
     <!-- HUNTING QUESTS -->
     <monster_hunt start_npc_ids="202549" id="50021">
         <monster var="0" npc_ids="217161" end_var="15"/>
