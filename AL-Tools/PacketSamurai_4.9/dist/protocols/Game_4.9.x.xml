@@ -618,32 +618,32 @@
 			<part name="serverTime" type="d">
 				<reader type="UnixDate"/>
 			</part>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
+			<part name="unk" type="d"/>
+			<!-- <part name="unk" type="h"/> -->
+			<part name="unk" type="d"/>
+			<!-- <part name="unk" type="h"/> -->
+			<part name="unk" type="d"/>
+			<!-- <part name="unk" type="h"/> -->
 			<part name="character reentry time" type="c"/>
 			<part name="enabled decor" type="c"/>
 			<part name="eventId" type="c"/>
+			<part name="unk" type="h"/>
+<!-- 			<part name="unk" type="c"/> -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="d"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="h"/>
+			<part name="unk" type="d"/>
+<!-- 			<part name="unk" type="c"/>
+			<part name="unk" type="h"/> -->
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
 			<part name="spacing(0x00)" type="b" size="8"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
+			<part name="unk" type="d"/>
+<!-- 			<part name="unk" type="c"/>
 			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
-			<part name="unk" type="c"/>
+			<part name="unk" type="c"/> -->
 			<part name="unk" type="h"/>
 			<part name="Spacer" type="b" size="17"/>
 			<part name="unk" type="d"/>
@@ -658,9 +658,9 @@
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
 			<part name="unk" type="d"/>
-			<part name="unk" type="h"/>
-			<part name="unk" type="h"/>
 			<part name="unk" type="d"/>
+			<part name="unk" type="d"/>
+			<!-- <part name="unk" type="h"/> -->
 			<part name="chatServerIp" type="d">
 				<reader type="IPv4"/>
 			</part>
@@ -3494,12 +3494,15 @@
                     <part id="0" name="subAction" type="c"/>
                     <switch id="0">
 						<case id="0">
-							<part name="unk" type="c"/>
+							<part name="itemObjectId" type="d"/>
+							<part name="dopeSlot" type="d"/>
+						</case>
+						<case id="1">
+							<part name="removeitem" type="d"/>
 						</case>
 						<case id="2"> <!-- food buffing -->
-							<part name="unk" type="c"/> <!-- Todo -->
-							<part name="unk" type="h"/> <!-- Todo -->
-							<part name="unk" type="h"/> <!-- Todo -->
+							<part name="unk" type="c"/>
+							<part name="unk" type="d"/>
 						</case>
 						<case id="3"> <!-- looting -->
 							<part name="unk" type="c"/>
@@ -8008,6 +8011,7 @@
 					<part name="petId" type="d"/>
 				</case>
 				<case id="9">
+					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
 					<part name="objectId" type="d"/>
 					<part name="count" type="d"/>
