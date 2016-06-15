@@ -1,0 +1,724 @@
+Index: data/scripts/system/database/mysql5/MySQL5F2pDAO.java
+===================================================================
+--- data/scripts/system/database/mysql5/MySQL5F2pDAO.java	(nonexistent)
++++ data/scripts/system/database/mysql5/MySQL5F2pDAO.java	(working copy)
+@@ -0,0 +1,111 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package mysql5;
++
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++import java.sql.ResultSet;
++
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import com.aionemu.commons.database.DatabaseFactory;
++import com.aionemu.gameserver.dao.F2pDAO;
++import com.aionemu.gameserver.dao.MySQL5DAOUtils;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
++import com.aionemu.gameserver.model.gameobjects.player.f2p.F2pAccount;
++
++public class MySQL5F2pDAO extends F2pDAO {
++
++	private static final Logger log = LoggerFactory.getLogger(MySQL5F2pDAO.class);
++	public static final String INSERT_QUERY = "INSERT INTO `f2paccount` (`player_id`, `time`) VALUES (?,?)";
++	public static final String SELECT_QUERY = "SELECT `time` FROM `f2paccount` WHERE `player_id`=?";
++	public static final String DELETE_QUERY = "DELETE FROM `f2paccount` WHERE `player_id`=?";
++
++	@Override
++	public void loadF2pInfo(Player player) {
++			Connection con = null;
++			F2p f2p = new F2p(player);
++			try {
++				con = DatabaseFactory.getConnection();
++				PreparedStatement stmt = con.prepareStatement(SELECT_QUERY);
++				stmt.setInt(1, player.getObjectId());
++				ResultSet rset = stmt.executeQuery();
++				while (rset.next()) {
++					int time = rset.getInt("time");
++					f2p.add(new F2pAccount(time), false);
++				}
++				rset.close();
++				stmt.close();
++			}
++			catch (Exception e) {
++				log.error("Could not restore f2p time for playerObjId: " +player.getObjectId() + " from DB: " + e.getMessage(),
++					e);
++			}
++			finally {
++				DatabaseFactory.close(con);
++			}
++			player.setF2p(f2p);
++	}
++	
++	@Override
++	public boolean storeF2p(int objectId, int time) {
++		Connection con = null;
++		try {
++			con = DatabaseFactory.getConnection();
++			PreparedStatement stmt = con.prepareStatement(INSERT_QUERY);
++			stmt.setInt(1, objectId);
++			stmt.setInt(2, time);
++			stmt.execute();
++			stmt.close();
++		}
++		catch (Exception e) {
++			log.error("Could not store f2p for player " + objectId + " from DB: " + e.getMessage(), e);
++			return false;
++		}
++		finally {
++			DatabaseFactory.close(con);
++		}
++		return true;
++	}
++
++	@Override
++	public boolean deleteF2p(int objectId) {
++		Connection con = null;
++		try {
++			con = DatabaseFactory.getConnection();
++			PreparedStatement stmt = con.prepareStatement(DELETE_QUERY);
++			stmt.setInt(1, objectId);
++			stmt.execute();
++			stmt.close();
++		}
++		catch (Exception e) {
++			log.error("Could not delete f2p for player " + objectId + " from DB: " + e.getMessage(), e);
++			return false;
++		}
++		finally {
++			DatabaseFactory.close(con);
++		}
++		return true;
++	}
++	
++	@Override
++	public boolean supports(String databaseName, int majorVersion, int minorVersion) {
++		return MySQL5DAOUtils.supports(databaseName, majorVersion, minorVersion);
++	}
++}
+Index: data/static_data/items/item_templates.xml
+===================================================================
+--- data/static_data/items/item_templates.xml	(revision 255)
++++ data/static_data/items/item_templates.xml	(working copy)
+@@ -960287,9 +960287,21 @@
+     <item_template id="188710038" name="TRADE Pack (7 Days)" desc="1583573" name_desc="world_gf_trade_pack_day_7" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710039" name="TRADE Pack (15 Days)" desc="1583575" name_desc="world_gf_trade_pack_day_15" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710040" name="TRADE Pack (30 Days)" desc="1583577" name_desc="world_gf_trade_pack_day_30" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710041" name="HFULL Pack (7 Days)" desc="1583579" name_desc="world_gf_hfull_pack_day_7" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710042" name="HFULL Pack (15 Days)" desc="1583581" name_desc="world_gf_hfull_pack_day_15" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710043" name="HFULL Pack (30 Days)" desc="1583583" name_desc="world_gf_hfull_pack_day_30" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
++    <item_template id="188710041" name="HFULL Pack (7 Days)" desc="1583579" name_desc="world_gf_hfull_pack_day_7" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="10080"/>
++		</actions>
++	</item_template>
++    <item_template id="188710042" name="HFULL Pack (15 Days)" desc="1583581" name_desc="world_gf_hfull_pack_day_15" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="21600"/>
++		</actions>
++	</item_template>
++    <item_template id="188710043" name="HFULL Pack (30 Days)" desc="1583583" name_desc="world_gf_hfull_pack_day_30" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="43200"/>
++		</actions>
++	</item_template>
+     <item_template id="188710044" name="Unbound Pack (7 Days)" desc="1583585" name_desc="world_gf_full_pack_day_7" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710045" name="Unbound Pack (15 Days)" desc="1583587" name_desc="world_gf_full_pack_day_15" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710046" name="Unbound Pack (30 Days)" desc="1583589" name_desc="world_gf_full_pack_day_30" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+@@ -960408,10 +960420,26 @@
+     <item_template id="188710155" name="Channel Chat Freedom (7 Days)" desc="1660487" name_desc="world_US_Channel_Chat_Write_pack_day_7" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710156" name="Channel Chat Freedom (15 Days)" desc="1660489" name_desc="world_US_Channel_Chat_Write_pack_day_15" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710157" name="Channel Chat Freedom (30 Days)" desc="1660491" name_desc="world_US_Channel_Chat_Write_pack_day_30" level="1" mask="4218" category="NONE" max_stack_count="1" item_type="NORMAL" quality="RARE" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710158" name="No Limits Pack (2 Days)" desc="1607187" name_desc="world_RU_full_pack_day_2a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710159" name="No Limits Pack (7 Days)" desc="1607189" name_desc="world_RU_full_pack_day_7a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710160" name="No Limits Pack (15 Days)" desc="1607191" name_desc="world_RU_full_pack_day_15a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+-    <item_template id="188710161" name="No Limits Pack (30 Days)" desc="1607193" name_desc="world_RU_full_pack_day_30a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
++    <item_template id="188710158" name="No Limits Pack (2 Days)" desc="1607187" name_desc="world_RU_full_pack_day_2a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="2881"/>
++		</actions>
++	</item_template>
++    <item_template id="188710159" name="No Limits Pack (7 Days)" desc="1607189" name_desc="world_RU_full_pack_day_7a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="10080"/>
++		</actions>
++	</item_template>
++    <item_template id="188710160" name="No Limits Pack (15 Days)" desc="1607191" name_desc="world_RU_full_pack_day_15a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="21600"/>
++		</actions>
++	</item_template>
++    <item_template id="188710161" name="No Limits Pack (30 Days)" desc="1607193" name_desc="world_RU_full_pack_day_30a" level="1" mask="4184" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1">
++		<actions>
++			<f2p minutes="43200"/>
++		</actions>
++	</item_template>
+     <item_template id="188710162" name="Full Pack (30 days)" desc="1683203" name_desc="world_gf_full_pack_day_gu_30" level="1" mask="4160" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710163" name="Full Pack (90 days)" desc="1683205" name_desc="world_gf_full_pack_day_gu_90" level="1" mask="4160" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+     <item_template id="188710164" name="Full Pack (180 days)" desc="1683207" name_desc="world_gf_full_pack_day_gu_180" level="1" mask="4160" category="NONE" max_stack_count="1" item_type="NORMAL" quality="LEGEND" price="5" race="PC_ALL" restrict="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1" bonus_apply="INVENTORY" activate_target="STANDALONE" activate_count="1"/>
+Index: data/static_data/items/item_templates.xsd
+===================================================================
+--- data/static_data/items/item_templates.xsd	(revision 255)
++++ data/static_data/items/item_templates.xsd	(working copy)
+@@ -147,7 +147,7 @@
+         <xs:attribute name="authorize_condition" type="xs:int" use="optional"/>
+         <xs:attribute name="authorize_name" type="xs:int" use="optional"/>
+         <xs:attribute name="oversea_only" type="xs:int" use="optional"/>
+-	<xs:attribute name="enchant_skill" type="xs:string"/>
++        <xs:attribute name="enchant_skill" type="xs:string"/>
+     </xs:complexType>
+     <xs:simpleType name="itemSlot">
+         <xs:restriction base="xs:string">
+@@ -212,7 +212,8 @@
+             <xs:element name="stenchant" type="AuthorizeAction" minOccurs="0" maxOccurs="1"/>
+             <xs:element name="multi_return_item" type="MultiReturnAction" minOccurs="0" maxOccurs="1"/>
+             <xs:element name="godsocket" type="GodstoneAction" minOccurs="0" maxOccurs="1"/>
+-	    <xs:element name="expreturn" type="ExpReturnAction" minOccurs="0" maxOccurs="1"/>
++            <xs:element name="expreturn" type="ExpReturnAction" minOccurs="0" maxOccurs="1"/>
++            <xs:element name="f2p" type="F2pAction" minOccurs="0" maxOccurs="1"/>
+         </xs:sequence>
+     </xs:complexType>
+     <xs:complexType name="RideAction">
+@@ -468,6 +469,13 @@
+             <xs:extension base="AbstractItemAction"/>
+         </xs:complexContent>
+     </xs:complexType>
++	<xs:complexType name="F2pAction">
++		<xs:complexContent>
++			<xs:extension base="AbstractItemAction">
++				<xs:attribute name="minutes" type="xs:int"/>
++			</xs:extension>
++		</xs:complexContent>
++	</xs:complexType>
+     <xs:simpleType name="equipType">
+         <xs:restriction base="xs:string">
+             <xs:enumeration value="ARMOR"/>
+Index: sql/updates/F2p.sql
+===================================================================
+--- sql/updates/F2p.sql	(nonexistent)
++++ sql/updates/F2p.sql	(working copy)
+@@ -0,0 +1,6 @@
++CREATE TABLE `f2paccount` (
++  `player_id` int(11) NOT NULL,
++  `time` int(11) NOT NULL,
++  PRIMARY KEY (`player_id`)
++)
++;
+\ No newline at end of file
+Index: src/com/aionemu/gameserver/dao/F2pDAO.java
+===================================================================
+--- src/com/aionemu/gameserver/dao/F2pDAO.java	(nonexistent)
++++ src/com/aionemu/gameserver/dao/F2pDAO.java	(working copy)
+@@ -0,0 +1,33 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.dao;
++
++import com.aionemu.commons.database.dao.DAO;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++
++public abstract class F2pDAO implements DAO {
++
++    public abstract void loadF2pInfo(final Player player);
++    
++    public abstract boolean storeF2p(final int objectId, final int time);
++    
++    public abstract boolean deleteF2p(final int objectId);
++    
++    public String getClassName() {
++        return F2pDAO.class.getName();
++    }
++}
+Index: src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2p.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2p.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2p.java	(working copy)
+@@ -0,0 +1,57 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.gameobjects.player.f2p;
++
++import com.aionemu.commons.database.dao.DAOManager;
++import com.aionemu.gameserver.dao.F2pDAO;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
++
++
++public class F2p {
++
++    private Player owner;
++    private F2pAccount f2pAccount;
++    
++    public F2p(final Player owner) {
++        this.owner = owner;
++    }
++    
++    public void add(final F2pAccount f2pacc, final boolean isNew) {
++        (f2pAccount = f2pacc).setActive(true);
++        if (isNew) {
++            if (f2pacc.getExpireTime() != 0) {
++                ExpireTimerTask.getInstance().addTask(f2pacc, owner);
++            }
++            DAOManager.getDAO(F2pDAO.class).storeF2p(owner.getObjectId(), f2pacc.getExpireTime());
++        }
++    }
++    
++    public F2pAccount getF2pAccount() {
++        return f2pAccount;
++    }
++    
++    public boolean remove() {
++        if (f2pAccount != null) {
++            f2pAccount.setActive(false);
++            DAOManager.getDAO(F2pDAO.class).deleteF2p(owner.getObjectId());
++            owner.getEquipment().checkRankLimitItems();
++            return true;
++        }
++        return false;
++    }
++}
+Index: src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2pAccount.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2pAccount.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2pAccount.java	(working copy)
+@@ -0,0 +1,69 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.gameobjects.player.f2p;
++
++import com.aionemu.gameserver.model.IExpirable;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++
++public class F2pAccount implements IExpirable {
++
++    private int deleteTime;
++    private boolean active;
++    
++    public F2pAccount(final int deletionTime) {
++        this.deleteTime = 0;
++        this.active = false;
++        this.deleteTime = deletionTime;
++    }
++    
++    public int getRemainingTime() {
++        if (this.deleteTime == 0) {
++            return 0;
++        }
++        return this.deleteTime - (int)(System.currentTimeMillis() / 1000L);
++    }
++    
++    @Override
++    public int getExpireTime() {
++        return this.deleteTime;
++    }
++    
++    public boolean getActive() {
++        return this.active;
++    }
++    
++    public void setActive(final boolean active) {
++        this.active = active;
++    }
++    
++    @Override
++    public void expireEnd(final Player player) {
++        setActive(false);
++        player.getF2p().remove();
++        //PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.);
++    }
++    
++    @Override
++    public boolean canExpireNow() {
++        return true;
++    }
++    
++    @Override
++    public void expireMessage(final Player player, final int time) {
++    	//PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.);
++    }
++}
+\ No newline at end of file
+Index: src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2p.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2p.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2p.java	(working copy)
+@@ -0,0 +1,57 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.gameobjects.player.f2p;
++
++import com.aionemu.commons.database.dao.DAOManager;
++import com.aionemu.gameserver.dao.F2pDAO;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
++
++
++public class F2p {
++
++    private Player owner;
++    private F2pAccount f2pAccount;
++    
++    public F2p(final Player owner) {
++        this.owner = owner;
++    }
++    
++    public void add(final F2pAccount f2pacc, final boolean isNew) {
++        (f2pAccount = f2pacc).setActive(true);
++        if (isNew) {
++            if (f2pacc.getExpireTime() != 0) {
++                ExpireTimerTask.getInstance().addTask(f2pacc, owner);
++            }
++            DAOManager.getDAO(F2pDAO.class).storeF2p(owner.getObjectId(), f2pacc.getExpireTime());
++        }
++    }
++    
++    public F2pAccount getF2pAccount() {
++        return f2pAccount;
++    }
++    
++    public boolean remove() {
++        if (f2pAccount != null) {
++            f2pAccount.setActive(false);
++            DAOManager.getDAO(F2pDAO.class).deleteF2p(owner.getObjectId());
++            owner.getEquipment().checkRankLimitItems();
++            return true;
++        }
++        return false;
++    }
++}
+Index: src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2pAccount.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2pAccount.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/gameobjects/player/f2p/F2pAccount.java	(working copy)
+@@ -0,0 +1,69 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.gameobjects.player.f2p;
++
++import com.aionemu.gameserver.model.IExpirable;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++
++public class F2pAccount implements IExpirable {
++
++    private int deleteTime;
++    private boolean active;
++    
++    public F2pAccount(final int deletionTime) {
++        this.deleteTime = 0;
++        this.active = false;
++        this.deleteTime = deletionTime;
++    }
++    
++    public int getRemainingTime() {
++        if (this.deleteTime == 0) {
++            return 0;
++        }
++        return this.deleteTime - (int)(System.currentTimeMillis() / 1000L);
++    }
++    
++    @Override
++    public int getExpireTime() {
++        return this.deleteTime;
++    }
++    
++    public boolean getActive() {
++        return this.active;
++    }
++    
++    public void setActive(final boolean active) {
++        this.active = active;
++    }
++    
++    @Override
++    public void expireEnd(final Player player) {
++        setActive(false);
++        player.getF2p().remove();
++        //PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.);
++    }
++    
++    @Override
++    public boolean canExpireNow() {
++        return true;
++    }
++    
++    @Override
++    public void expireMessage(final Player player, final int time) {
++    	//PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.);
++    }
++}
+\ No newline at end of file
+Index: src/com/aionemu/gameserver/model/gameobjects/player/Player.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/Player.java	(revision 255)
++++ src/com/aionemu/gameserver/model/gameobjects/player/Player.java	(working copy)
+@@ -65,6 +65,7 @@
+ import com.aionemu.gameserver.model.gameobjects.player.AbyssRank.AbyssRankUpdateType;
+ import com.aionemu.gameserver.model.gameobjects.player.FriendList.Status;
+ import com.aionemu.gameserver.model.gameobjects.player.emotion.EmotionList;
++import com.aionemu.gameserver.model.gameobjects.player.f2p.F2p;
+ import com.aionemu.gameserver.model.gameobjects.player.motion.MotionList;
+ import com.aionemu.gameserver.model.gameobjects.player.npcFaction.NpcFactions;
+ import com.aionemu.gameserver.model.gameobjects.player.title.TitleList;
+@@ -277,6 +278,7 @@
+     public static final int CHAT_FIXED_ON_BOTH = CHAT_FIXED_ON_ELYOS | CHAT_FIXED_ON_ASMOS;
+     public int CHAT_FIX_WORLD_CHANNEL = CHAT_NOT_FIXED;
+     private int useAutoGroup = 0;
++    private F2p f2p;
+     private int robotId = 0;
+     public int FAST_TRACK_TYPE = 0;// 0 = nothing,1 = moved exact current,2 = already moved
+     private boolean isOnFastTrack = false;
+@@ -2561,6 +2563,14 @@
+         this.useAutoGroup = useAutoGroup;
+     }
+ 
++    public F2p getF2p() {
++        return this.f2p;
++    }
++
++    public void setF2p(F2p f2p) {
++        this.f2p = f2p;
++    }
++
+     public int getRobotId() {
+         return robotId;
+     }
+Index: src/com/aionemu/gameserver/model/templates/item/actions/F2pAction.java
+===================================================================
+--- src/com/aionemu/gameserver/model/templates/item/actions/F2pAction.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/templates/item/actions/F2pAction.java	(working copy)
+@@ -0,0 +1,54 @@
++package com.aionemu.gameserver.model.templates.item.actions;
++
++import javax.xml.bind.annotation.*;
++
++import com.aionemu.gameserver.model.DescriptionId;
++import com.aionemu.gameserver.model.TaskId;
++import com.aionemu.gameserver.model.gameobjects.Item;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.model.gameobjects.player.f2p.F2pAccount;
++import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
++import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
++import com.aionemu.gameserver.utils.PacketSendUtility;
++import com.aionemu.gameserver.utils.ThreadPoolManager;
++import com.aionemu.gameserver.utils.TimeUtil;
++
++@XmlAccessorType(XmlAccessType.FIELD)
++@XmlType(name = "F2pAction")
++public class F2pAction extends AbstractItemAction {
++
++    @XmlAttribute
++    protected Integer minutes;    
++    
++    @Override
++    public boolean canAct(final Player player, final Item parentItem, final Item targetItem) {
++        if (parentItem == null) {
++            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_COLOR_ERROR);
++            return false;
++        }
++        if (player.getF2p() != null && player.getF2p().getF2pAccount() != null && player.getF2p().getF2pAccount().getActive()) {
++            PacketSendUtility.sendMessage(player, "you now have this effect!");
++            return false;
++        }
++        return true;
++    }
++    
++    @Override
++    public void act(final Player player, final Item parentItem, final Item targetItem) {
++        player.getController().cancelUseItem();
++        PacketSendUtility.sendPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 1000, 0, 0));
++        player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
++            @Override
++            public void run() {
++                final boolean succ = player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1L);
++                PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, 1, 0));
++                if (succ) {
++                    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300423, new Object[] { new DescriptionId(parentItem.getItemTemplate().getNameId()) }));
++                    PacketSendUtility.sendMessage(player, "\u88c5\u5907\u9650\u5236\u89e3\u9664\u6548\u679c\u622a\u81f3: " + ((F2pAction.this.minutes != null) ? TimeUtil.getTimeData((int)(System.currentTimeMillis() / 1000L + F2pAction.this.minutes * 60)) : "\u6c38\u4e45"));
++                    final F2pAccount f2pAccount = new F2pAccount((F2pAction.this.minutes == null) ? 0 : ((int)(System.currentTimeMillis() / 1000L + F2pAction.this.minutes * 60)));
++                    player.getF2p().add(f2pAccount, true);
++                }
++            }
++        }, 1000L));
++    }
++}
+Index: src/com/aionemu/gameserver/model/templates/item/actions/ItemActions.java
+===================================================================
+--- src/com/aionemu/gameserver/model/templates/item/actions/ItemActions.java	(revision 255)
++++ src/com/aionemu/gameserver/model/templates/item/actions/ItemActions.java	(working copy)
+@@ -59,6 +59,7 @@
+             @XmlElement(name = "tuning", type = TuningAction.class),
+             @XmlElement(name = "pack", type = PackAction.class),
+             @XmlElement(name = "stenchant", type = AuthorizeAction.class),
++            @XmlElement(name = "f2p", type=F2pAction.class),
+             @XmlElement(name = "multi_return_item", type = MultiReturnAction.class),
+             @XmlElement(name = "godsocket", type = GodstoneAction.class),
+             @XmlElement(name = "expreturn", type = ExpReturnAction.class)})
+Index: src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java	(revision 255)
++++ src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java	(working copy)
+@@ -34,6 +34,7 @@
+ import com.aionemu.gameserver.model.gameobjects.player.Player;
+ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
+ import com.aionemu.gameserver.model.gameobjects.player.emotion.Emotion;
++import com.aionemu.gameserver.model.gameobjects.player.f2p.F2pAccount;
+ import com.aionemu.gameserver.model.gameobjects.player.motion.Motion;
+ import com.aionemu.gameserver.model.gameobjects.player.title.Title;
+ import com.aionemu.gameserver.model.gameobjects.state.CreatureSeeState;
+@@ -64,6 +65,7 @@
+ import com.aionemu.gameserver.taskmanager.tasks.ExpireTimerTask;
+ import com.aionemu.gameserver.utils.PacketSendUtility;
+ import com.aionemu.gameserver.utils.ThreadPoolManager;
++import com.aionemu.gameserver.utils.TimeUtil;
+ import com.aionemu.gameserver.utils.audit.AuditLogger;
+ import com.aionemu.gameserver.utils.collections.ListSplitter;
+ import com.aionemu.gameserver.utils.i18n.CustomMessageId;
+@@ -681,6 +683,15 @@
+                     ExpireTimerTask.getInstance().addTask(item, player);               
+             }
+ 
++            if (player.getF2p().getF2pAccount() != null) {
++                F2pAccount f2pAccount = player.getF2p().getF2pAccount();
++                if (f2pAccount.getExpireTime() != 0) {
++                    ExpireTimerTask.getInstance().addTask(f2pAccount, player);
++                    String endtime = TimeUtil.getTimeData(f2pAccount.getExpireTime());
++                    PacketSendUtility.sendMessage(player, "\u88c5\u5907\u9650\u5236\u89e3\u9664\u6548\u679c\u6709\u6548\u671f\u81f3: " + endtime);
++                }
++            }
++
+             player.getEquipment().checkRankLimitItems(); // Remove items after offline changed rank
+ 
+             for (Motion motion : player.getMotions().getMotions().values()) {
+Index: src/com/aionemu/gameserver/services/player/PlayerService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/player/PlayerService.java	(revision 255)
++++ src/com/aionemu/gameserver/services/player/PlayerService.java	(working copy)
+@@ -26,6 +26,7 @@
+ import com.aionemu.gameserver.dao.BlockListDAO;
+ import com.aionemu.gameserver.dao.CraftCooldownsDAO;
+ import com.aionemu.gameserver.dao.EventItemsDAO;
++import com.aionemu.gameserver.dao.F2pDAO;
+ import com.aionemu.gameserver.dao.FriendListDAO;
+ import com.aionemu.gameserver.dao.HouseObjectCooldownsDAO;
+ import com.aionemu.gameserver.dao.HousesDAO;
+@@ -202,6 +203,7 @@
+         player.setFriendList(DAOManager.getDAO(FriendListDAO.class).load(player));
+         player.setBlockList(DAOManager.getDAO(BlockListDAO.class).load(player));
+         player.setTitleList(DAOManager.getDAO(PlayerTitleListDAO.class).loadTitleList(playerObjId));
++        DAOManager.getDAO(F2pDAO.class).loadF2pInfo(player);
+         DAOManager.getDAO(PlayerSettingsDAO.class).loadSettings(player);
+         DAOManager.getDAO(AbyssRankDAO.class).loadAbyssRank(player);
+         DAOManager.getDAO(PlayerNpcFactionsDAO.class).loadNpcFactions(player);
+Index: src/com/aionemu/gameserver/utils/TimeUtil.java
+===================================================================
+--- src/com/aionemu/gameserver/utils/TimeUtil.java	(revision 255)
++++ src/com/aionemu/gameserver/utils/TimeUtil.java	(working copy)
+@@ -16,6 +16,8 @@
+  */
+ package com.aionemu.gameserver.utils;
+ 
++import java.util.Date;
++
+ /**
+  * @author ATracer
+  */
+@@ -27,4 +29,11 @@
+     public static final boolean isExpired(long time) {
+         return time < System.currentTimeMillis();
+     }
++
++    @SuppressWarnings("deprecation")
++	public static String getTimeData(final long time) {
++        final Date d = new Date(time * 1000L);
++        final String localDate = d.toLocaleString();
++        return localDate;
++    }
+ }
