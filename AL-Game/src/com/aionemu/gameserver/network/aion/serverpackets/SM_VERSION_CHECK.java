@@ -112,41 +112,31 @@ public class SM_VERSION_CHECK extends AionServerPacket {
         writeC(serverMode | characterCreateMode);
         
         writeD((int) (Calendar.getInstance().getTimeInMillis() / 1000));
-        writeH(350);//4.8
-        writeH(1281);//4.8
-        writeH(2575);//4.8
-        writeH(257);//4.8
-        writeH(322);//4.8
-        writeH(2);//4.8
+        writeD(83951966);//4.9
+		writeD(16845327);//4.9
+        writeD(131394);//4.9
         writeC(GSConfig.CHARACTER_REENTRY_TIME);
    		writeC(EventsConfig.ENABLE_DECOR);
   		writeC(EventService.getInstance().getEventType().getId());
-        writeC(0);//4.8
-        writeD(-235929600);//4.8
-        writeC(-1);//4.8
-        writeC(-1);//4.8
-        writeC(4);//4.8
-        writeC(120);//4.8
-        writeH(25233);//4.8
-        writeC(2);// 4.8
-        writeC(1);//4.8
+        writeH(0);//4.9
+        writeC(0);//4.9
+        writeD(-3600);//4.9 (-3600 = +1 Std, 0 = -1Std)
+        writeD(1653700612);//4.9
+        writeC(2);// 4.9
+        writeC(1);//4.9
 		writeB(new byte[8]);
-        writeD(68536);// 4.8
-        writeC(0);//4.8
-        writeC(1);//4.8
-        writeC(0);//4.8
-        writeC(0);//4.8
-        writeC(0);//4.8
-        writeC(0);//4.8
-        writeH(257);//4.8
+        writeD(68536);// 4.9
+        writeC(0);//4.9
+        writeC(1);//4.9
+        writeD(-3600);//4.9 (-3600 = +1 Std, 0 = -1Std)
+        writeH(257);//4.9
         writeB(new byte[17]);
         for(int i = 0; i < 11; i++)
         {
             writeD(1000);
         }
 		writeD(20480);//4.9
-        writeH(0);
-        writeH(16384);
+        writeD(1073741824);//4.9
 		writeD(320);
         //for... chat servers?
         {
