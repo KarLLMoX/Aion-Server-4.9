@@ -24,24 +24,20 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/**
- * Created by Ace65 on 20/02/2016.
- */
+public class _19639TreesAndThrees extends QuestHandler {
 
-public class _29640Final_Krug_Clearing extends QuestHandler
-{
-    private final static int questId = 29640;
-    private final static int[] mobs = {215992, 215995};
+    private final static int questId = 19639;
+    private final static int[] mobs = {215524, 215526};
 
-    public _29640Final_Krug_Clearing() {
+    public _19639TreesAndThrees() {
         super(questId);
     }
 
     @Override
     public void register() {
-        qe.registerQuestNpc(799248).addOnQuestStart(questId);
-        qe.registerQuestNpc(799248).addOnTalkEvent(questId);
-        qe.registerQuestNpc(799248).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799022).addOnQuestStart(questId);
+        qe.registerQuestNpc(799022).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799022).addOnTalkEvent(questId);
         for (int mob: mobs) {
             qe.registerQuestNpc(mob).addOnKillEvent(questId);
         }
@@ -56,7 +52,7 @@ public class _29640Final_Krug_Clearing extends QuestHandler
         if (env.getVisibleObject() instanceof Npc) {
             targetId = ((Npc) env.getVisibleObject()).getNpcId();
         } if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 799248) {
+            if (targetId == 799022) {
                 switch (dialog) {
                     case QUEST_SELECT:
                         return sendQuestDialog(env, 4762);
@@ -71,7 +67,7 @@ public class _29640Final_Krug_Clearing extends QuestHandler
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-                case 799248: {
+                case 799022: {
                     switch (dialog) {
                         case QUEST_SELECT: {
                             return sendQuestDialog(env, 10002);
@@ -83,7 +79,7 @@ public class _29640Final_Krug_Clearing extends QuestHandler
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 799248) {
+            if (targetId == 799022) {
                 switch (dialog) {
                     case SELECT_QUEST_REWARD: {
                         return sendQuestDialog(env, 5);
@@ -103,8 +99,8 @@ public class _29640Final_Krug_Clearing extends QuestHandler
         if (qs == null || qs.getStatus() != QuestStatus.START) {
             return false;
         } switch (targetId) {
-            case 215992:
-            case 215995:
+            case 215524:
+            case 215526:
                 if (qs.getQuestVarById(1) < 10) {
                     qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
                     updateQuestStatus(env);

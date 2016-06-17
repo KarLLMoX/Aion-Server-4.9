@@ -24,24 +24,20 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/**
- * Created by Ace65 on 20/02/2016.
- */
+public class _19641FidgetyFives extends QuestHandler {
 
-public class _19640Flying_Through_Four extends QuestHandler
-{
-    private final static int questId = 19640;
-    private final static int[] mobs = {215525, 215527};
+    private final static int questId = 19641;
+    private final static int[] mobs = {215654, 215655, 215658, 215659};
 
-    public _19640Flying_Through_Four() {
+    public _19641FidgetyFives() {
         super(questId);
     }
 
     @Override
     public void register() {
-        qe.registerQuestNpc(799022).addOnQuestStart(questId);
-        qe.registerQuestNpc(799022).addOnTalkEvent(questId);
-        qe.registerQuestNpc(799022).addOnTalkEvent(questId);
+        qe.registerQuestNpc(798991).addOnQuestStart(questId);
+        qe.registerQuestNpc(798991).addOnTalkEvent(questId);
+        qe.registerQuestNpc(798991).addOnTalkEvent(questId);
         for (int mob: mobs) {
             qe.registerQuestNpc(mob).addOnKillEvent(questId);
         }
@@ -56,7 +52,7 @@ public class _19640Flying_Through_Four extends QuestHandler
         if (env.getVisibleObject() instanceof Npc) {
             targetId = ((Npc) env.getVisibleObject()).getNpcId();
         } if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 799022) {
+            if (targetId == 798991) {
                 switch (dialog) {
                     case QUEST_SELECT:
                         return sendQuestDialog(env, 4762);
@@ -71,7 +67,7 @@ public class _19640Flying_Through_Four extends QuestHandler
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-                case 799022: {
+                case 798991: {
                     switch (dialog) {
                         case QUEST_SELECT: {
                             return sendQuestDialog(env, 10002);
@@ -83,7 +79,7 @@ public class _19640Flying_Through_Four extends QuestHandler
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 799022) {
+            if (targetId == 798991) {
                 switch (dialog) {
                     case SELECT_QUEST_REWARD: {
                         return sendQuestDialog(env, 5);
@@ -103,8 +99,10 @@ public class _19640Flying_Through_Four extends QuestHandler
         if (qs == null || qs.getStatus() != QuestStatus.START) {
             return false;
         } switch (targetId) {
-            case 215525:
-            case 215527:
+            case 215654:
+            case 215655:
+            case 215658:
+            case 215659:
                 if (qs.getQuestVarById(1) < 10) {
                     qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
                     updateQuestStatus(env);

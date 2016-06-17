@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package quest.special_mission;
+package quest.important_mission;
 
 import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.Npc;
@@ -24,30 +24,20 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/**
- * Created by Ace65 on 20/02/2016.
- */
+public class _29641MoveAlongNow extends QuestHandler {
 
-public class _29637Trouble_Not_Trivial extends QuestHandler
-{
-    private final static int questId = 29637;
-    private final static int[] mobs = {215879, 215880, 215937};
+    private final static int questId = 29641;
+    private final static int[] mobs = {215942, 216045, 216046};
 
-    public _29637Trouble_Not_Trivial() {
+    public _29641MoveAlongNow() {
         super(questId);
     }
 
     @Override
-    public boolean onLvlUpEvent(QuestEnv env) {
-        return defaultOnLvlUpEvent(env);
-    }
-
-    @Override
     public void register() {
-        qe.registerOnLevelUp(questId);
-        qe.registerQuestNpc(799225).addOnQuestStart(questId);
-        qe.registerQuestNpc(799225).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799248).addOnQuestStart(questId);
         qe.registerQuestNpc(799248).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799297).addOnTalkEvent(questId);
         for (int mob: mobs) {
             qe.registerQuestNpc(mob).addOnKillEvent(questId);
         }
@@ -62,7 +52,7 @@ public class _29637Trouble_Not_Trivial extends QuestHandler
         if (env.getVisibleObject() instanceof Npc) {
             targetId = ((Npc) env.getVisibleObject()).getNpcId();
         } if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 799225) {
+            if (targetId == 799248) {
                 switch (dialog) {
                     case QUEST_SELECT:
                         return sendQuestDialog(env, 4762);
@@ -77,7 +67,7 @@ public class _29637Trouble_Not_Trivial extends QuestHandler
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-                case 799248: {
+                case 799297: {
                     switch (dialog) {
                         case QUEST_SELECT: {
                             return sendQuestDialog(env, 10002);
@@ -89,7 +79,7 @@ public class _29637Trouble_Not_Trivial extends QuestHandler
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 799248) {
+            if (targetId == 799297) {
                 switch (dialog) {
                     case SELECT_QUEST_REWARD: {
                         return sendQuestDialog(env, 5);
@@ -109,9 +99,9 @@ public class _29637Trouble_Not_Trivial extends QuestHandler
         if (qs == null || qs.getStatus() != QuestStatus.START) {
             return false;
         } switch (targetId) {
-            case 215879:
-            case 215880:
-            case 215937:
+            case 215942:
+            case 216045:
+            case 216046:
                 if (qs.getQuestVarById(1) < 10) {
                     qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
                     updateQuestStatus(env);

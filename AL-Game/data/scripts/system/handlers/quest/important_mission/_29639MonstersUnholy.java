@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package quest.special_mission;
+package quest.important_mission;
 
 import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.Npc;
@@ -24,16 +24,12 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/**
- * Created by Ace65 on 20/02/2016.
- */
+public class _29639MonstersUnholy extends QuestHandler {
 
-public class _29639Monsters_Unholy extends QuestHandler
-{
     private final static int questId = 29639;
     private final static int[] mobs = {215988, 215989};
 
-    public _29639Monsters_Unholy() {
+    public _29639MonstersUnholy() {
         super(questId);
     }
 

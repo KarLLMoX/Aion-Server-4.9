@@ -14,7 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package quest.special_mission;
+package quest.important_mission;
 
 import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.Npc;
@@ -24,29 +24,20 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/**
- * Created by Ace65 on 20/02/2016.
- */
-public class _19637Onboard_For_One extends QuestHandler
-{
-    private final static int questId = 19637;
-    private final static int[] mobs = {215500, 215501, 215502, 215503};
+public class _29642GoodOnGelkmaros extends QuestHandler {
 
-    public _19637Onboard_For_One() {
+    private final static int questId = 29642;
+    private final static int[] mobs = {215888, 215889, 216009, 216010};
+
+    public _29642GoodOnGelkmaros() {
         super(questId);
     }
 
     @Override
-    public boolean onLvlUpEvent(QuestEnv env) {
-        return defaultOnLvlUpEvent(env);
-    }
-
-    @Override
     public void register() {
-        qe.registerOnLevelUp(questId);
-        qe.registerQuestNpc(798926).addOnQuestStart(questId);
-        qe.registerQuestNpc(798926).addOnTalkEvent(questId);
-        qe.registerQuestNpc(798926).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799297).addOnQuestStart(questId);
+        qe.registerQuestNpc(799297).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799225).addOnTalkEvent(questId);
         for (int mob: mobs) {
             qe.registerQuestNpc(mob).addOnKillEvent(questId);
         }
@@ -61,7 +52,7 @@ public class _19637Onboard_For_One extends QuestHandler
         if (env.getVisibleObject() instanceof Npc) {
             targetId = ((Npc) env.getVisibleObject()).getNpcId();
         } if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 798926) {
+            if (targetId == 799297) {
                 switch (dialog) {
                     case QUEST_SELECT:
                         return sendQuestDialog(env, 4762);
@@ -76,7 +67,7 @@ public class _19637Onboard_For_One extends QuestHandler
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-                case 798926: {
+                case 799225: {
                     switch (dialog) {
                         case QUEST_SELECT: {
                             return sendQuestDialog(env, 10002);
@@ -88,7 +79,7 @@ public class _19637Onboard_For_One extends QuestHandler
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 798926) {
+            if (targetId == 799225) {
                 switch (dialog) {
                     case SELECT_QUEST_REWARD: {
                         return sendQuestDialog(env, 5);
@@ -108,10 +99,10 @@ public class _19637Onboard_For_One extends QuestHandler
         if (qs == null || qs.getStatus() != QuestStatus.START) {
             return false;
         } switch (targetId) {
-            case 215500:
-            case 215501:
-            case 215502:
-            case 215503:
+            case 215888:
+            case 215889:
+            case 216009:
+            case 216010:
                 if (qs.getQuestVarById(1) < 10) {
                     qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
                     updateQuestStatus(env);
