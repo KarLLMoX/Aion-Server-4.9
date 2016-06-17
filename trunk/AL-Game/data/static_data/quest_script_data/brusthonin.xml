@@ -77,11 +77,6 @@
                     4088 [XML] Jackdaw's Liquor
                     4089 [XML] Lobnites on the Half-Shell
                     4090 [XML] Return to Aether's Flow
-                    4091 [XML] A Family's Memento // MOVE TO ADMA
-                    4092 [XML] Lukmann's Justice // MOVE TO ADMA
-                    4093 [XML] The Unforgivable One // MOVE TO ADMA
-                    4094 [XML] Adma's Trove // MOVE TO ADMA
-                    4095 [XML] Imowen's Request // MOVE TO ADMA
                     4096 [XML] Cleansing the Water
                     4097 [XML] For Virhu
                     4098 [XML] A True Rest
@@ -96,8 +91,6 @@
                     4107 [XML] Quit Bugging Me!
                     4108 [XML] Safari in Sudorville
                     4111 [XML] A Case of the Snufflers
-                    4112 [XML] Lord of Darkness
-                    4120 [XML] Vengeful Spirit Consolation
                     24200 [XML] Induction to Brusthonin
                     24201 [SCRIPT] History, Mystery
                     24202 [TODO] Let Me In, Let Me In
@@ -162,10 +155,6 @@
     <item_collecting id="4085" start_npc_ids="205170" end_npc_ids="205164"/>
     <item_collecting id="4089" start_npc_ids="205203"/>
     <item_collecting id="4090" start_npc_ids="205205"/>
-    <item_collecting id="4091" start_npc_ids="205225"/>
-    <item_collecting id="4092" start_npc_ids="205225"/>
-    <item_collecting id="4094" start_npc_ids="205225" action_item_ids="700433 700434 700435 700436"/>
-    <item_collecting id="4095" start_npc_ids="205206"/>
     <item_collecting id="4098" start_npc_ids="205190" end_npc_ids="205187"/>
     <item_collecting id="4099" start_npc_ids="205149" action_item_ids="700451"/>
     <item_collecting id="4100" start_npc_ids="205149"/>
@@ -246,9 +235,6 @@
     <monster_hunt id="4083" start_npc_ids="205195">
         <monster var="0" npc_ids="214411 214412" end_var="12"/>
     </monster_hunt>
-    <monster_hunt id="4093" start_npc_ids="205225">
-        <monster var="0" npc_ids="214696" end_var="1"/>
-    </monster_hunt>
     <monster_hunt id="4096" start_npc_ids="205201">
         <monster var="0" npc_ids="214550 214551" end_var="10"/>
     </monster_hunt>
@@ -275,12 +261,6 @@
     </monster_hunt>
     <monster_hunt id="4111" start_npc_ids="730103">
         <monster var="0" npc_ids="213847 213848" end_var="10"/>
-    </monster_hunt>
-    <monster_hunt id="4112" start_npc_ids="205163">
-        <monster var="0" npc_ids="214696" end_var="1"/>
-    </monster_hunt>
-	<monster_hunt id="4120" start_npc_ids="205150" end_npc_ids="282370">
-        <monster var="0" npc_ids="214698" end_var="1"/>
     </monster_hunt>
     <monster_hunt id="39001" start_npc_ids="800500">
         <monster var="0" npc_ids="209445 209446 209447 209448 209449" end_var="32"/>
