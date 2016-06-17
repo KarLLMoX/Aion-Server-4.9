@@ -43,7 +43,7 @@ public class MonsterHuntData extends XMLQuest {
     protected List<Integer> startNpcIds;
     @XmlAttribute(name = "end_npc_ids")
     protected List<Integer> endNpcIds;
-    @XmlAttribute(name = "HACTION_QUEST_SELECT_id")
+    @XmlAttribute(name = "start_dialog_id")
     protected int startDialog;
     @XmlAttribute(name = "end_dialog_id")
     protected int endDialog;
