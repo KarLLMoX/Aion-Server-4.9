@@ -83,10 +83,6 @@
                     3092 [SCRIPT] Vison the Drakie
                     3093 [SCRIPT] Secret Dumpling Recipe
                     3094 [XML] Koreumtor's Request
-                    3095 [SCRIPT] A Decisive Clue
-                    3096 [SCRIPT] Examine the Extraction Devices
-                    3097 [XML] Berserk Silikor
-                    3098 [XML] The Theobomos Syndrome
                     3099 [XML] Cheorunerk's Care of His Wife
                     3100 [SCRIPT] A Shugo's Best Friend
                     3101 [XML] Picky Ixion
@@ -98,7 +94,6 @@
                     3110 [XML] What's for Dinner?
                     3111 [XML] Clearing the Route
                     3112 [XML] Bricks for Fun and Profit
-                    3113 [XML] Triroan in the Lab
                     3121 [XML] Archaeologist Pyrrha
                     14200 [SCRIPT] Eternal Flames
                     14201 [SCRIPT] Weapons of Past Destruction
@@ -228,12 +223,6 @@
     <monster_hunt id="3094" start_npc_ids="798215">
         <monster var="0" npc_ids="214545 214546" end_var="10"/>
     </monster_hunt>
-    <monster_hunt id="3097" start_npc_ids="798225">
-        <monster npc_ids="214668" var="0" end_var="1"/>
-    </monster_hunt>
-    <monster_hunt id="3098" start_npc_ids="798225">
-        <monster npc_ids="214669" var="0" end_var="1"/>
-    </monster_hunt>
     <monster_hunt id="3105" start_npc_ids="798158">
         <monster var="0" npc_ids="214202 214203" end_var="8"/>
         <monster var="1" npc_ids="214194 214195" end_var="8"/>
@@ -245,9 +234,6 @@
     <monster_hunt id="3111" start_npc_ids="798154">
         <monster npc_ids="214173" var="0" end_var="8"/>
         <monster npc_ids="214182" var="1" end_var="7"/>
-    </monster_hunt>
-    <monster_hunt id="3113" start_npc_ids="205304">
-        <monster npc_ids="214669" var="0" end_var="1"/>
     </monster_hunt>
     <monster_hunt id="3121" start_npc_ids="798155" end_npc_ids="798225">
         <monster var="0" npc_ids="214615" end_var="1"/>
