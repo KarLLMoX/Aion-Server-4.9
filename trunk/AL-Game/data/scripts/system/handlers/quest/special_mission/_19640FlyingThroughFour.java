@@ -24,24 +24,20 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
-/**
- * Created by Ace65 on 20/02/2016.
- */
+public class _19640FlyingThroughFour extends QuestHandler {
 
-public class _19642Success_For_Six extends QuestHandler
-{
-    private final static int questId = 19642;
-    private final static int[] mobs = {215650, 215651, 215652, 215653};
+    private final static int questId = 19640;
+    private final static int[] mobs = {215525, 215527};
 
-    public _19642Success_For_Six() {
+    public _19640FlyingThroughFour() {
         super(questId);
     }
 
     @Override
     public void register() {
-        qe.registerQuestNpc(798991).addOnQuestStart(questId);
-        qe.registerQuestNpc(798991).addOnTalkEvent(questId);
-        qe.registerQuestNpc(798926).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799022).addOnQuestStart(questId);
+        qe.registerQuestNpc(799022).addOnTalkEvent(questId);
+        qe.registerQuestNpc(799022).addOnTalkEvent(questId);
         for (int mob: mobs) {
             qe.registerQuestNpc(mob).addOnKillEvent(questId);
         }
@@ -56,7 +52,7 @@ public class _19642Success_For_Six extends QuestHandler
         if (env.getVisibleObject() instanceof Npc) {
             targetId = ((Npc) env.getVisibleObject()).getNpcId();
         } if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 798991) {
+            if (targetId == 799022) {
                 switch (dialog) {
                     case QUEST_SELECT:
                         return sendQuestDialog(env, 4762);
@@ -71,7 +67,7 @@ public class _19642Success_For_Six extends QuestHandler
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-                case 798926: {
+                case 799022: {
                     switch (dialog) {
                         case QUEST_SELECT: {
                             return sendQuestDialog(env, 10002);
@@ -83,7 +79,7 @@ public class _19642Success_For_Six extends QuestHandler
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 798926) {
+            if (targetId == 799022) {
                 switch (dialog) {
                     case SELECT_QUEST_REWARD: {
                         return sendQuestDialog(env, 5);
@@ -103,10 +99,8 @@ public class _19642Success_For_Six extends QuestHandler
         if (qs == null || qs.getStatus() != QuestStatus.START) {
             return false;
         } switch (targetId) {
-            case 215650:
-            case 215651:
-            case 215652:
-            case 215653:
+            case 215525:
+            case 215527:
                 if (qs.getQuestVarById(1) < 10) {
                     qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
                     updateQuestStatus(env);
