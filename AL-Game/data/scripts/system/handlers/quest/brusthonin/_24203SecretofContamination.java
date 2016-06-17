@@ -54,7 +54,7 @@ public class _24203SecretofContamination extends QuestHandler {
         final Player player = env.getPlayer();
         int targetId = env.getTargetId();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		int var = qs.getQuestVarById(0);
+		
         DialogAction dialog = env.getDialog();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
@@ -65,8 +65,9 @@ public class _24203SecretofContamination extends QuestHandler {
                     return sendQuestStartDialog(env);
                 }
             }
-		}  else if (targetId == 205150) { // Surt
-				if (var == 0) {
+		} else if (qs.getStatus() == QuestStatus.START) {
+				int var = qs.getQuestVarById(0);
+				if (targetId == 205150) { // Surt
 					switch (dialog) {
 						case QUEST_SELECT: {
 							return sendQuestDialog(env, 1011);
@@ -74,12 +75,10 @@ public class _24203SecretofContamination extends QuestHandler {
 						case SETPRO1: {
 							return defaultCloseDialog(env, 0, 1);
 						}
-					default:
-						break;
+						default:
+							break;
 					}
-				}
-			} else if (qs.getStatus() == QuestStatus.START) {
-				if (targetId == 205192) { // Sahnu
+				} else if (targetId == 205192) { // Sahnu
 					switch (dialog) {
 						case QUEST_SELECT: {
 							if (var == 1) {
