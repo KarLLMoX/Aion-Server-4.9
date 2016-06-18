@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="quest_SCRIPTipt_data.xsd">
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
-    [BEGIN] SUMMARY			   
-		15223 [SCRIPT] [Spy/Daily] Enter Enshar
-		15224 [SCRIPT] [Spy/Daily] Set for Cet
-		15225 [SCRIPT] [Spy/Daily] Down to the Bomire Wire
-		20500 [SCRIPT] Enshar Expedition
-		20501 [SCRIPT] What the Ruins Say
-		20502 [SCRIPT] Evolving Mysteries
-		20503 [SCRIPT] Ancient, Evil Plans
-		20504 [SCRIPT] Tiamat's Shadow
-		20505 [SCRIPT] Ancient Crystal
-		20506 [SCRIPT] Muscle over Mind
-		20507 [SCRIPT] It's Worse than We Thought	
-		25000 [SCRIPT] Getting to Know You
-		25001 [XML] Shell Out
-		25002 [SCRIPT] Kill the Kerubs
-		25010 [SCRIPT] Ruin Research Relief
-		25012 [XML] Big Scale Research
-		25013 [XML] Seaweed Procede
-		25020 [SCRIPT] Tejhi Technology
-		25022 [SCRIPT] Soup De Cure
-		25023 [SCRIPT] Sprouting Developments
-		25030 [SCRIPT] Clues from the Undead
-		25031 [SCRIPT] The Tejhi Ghost
-		25032 [SCRIPT] Avenge Varnur
-		25033 [SCRIPT] Mouths to Feed
-		25050 [SCRIPT] Treasure in the Deep Sea
-		25051 [SCRIPT] Treasure of Ancient Kings
-		25052 [SCRIPT] An Offering of Peace
-		25060 [SCRIPT] Take Down the Barricade
-		25062 [SCRIPT] Ominous Advice
-		25070 [SCRIPT] Truth of the Crystal
-		25073 [SCRIPT] No Revival for the Balaur
-		25080 [XML] Hot Shards!
-		25081 [XML] Red Coral Delights
-		25082 [SCRIPT] Tyrant Take Out
-		25084 [SCRIPT] Is This a Trap?
-		25085 [XML] Intercept the Ide
-		25090 [SCRIPT] They Chose Poorly
-		25091 [XML] The More You Know...
-		25092 [XML] Pontificating Possible Power
-		25093 [SCRIPT] A Royal Target
-		25094 [XML] An Offering of Friendship
-		25201 [SCRIPT] Tejhi Termination
-		25202 [SCRIPT] Tejhi Tasks
-		25203 [SCRIPT] Creatures of Cloudtalon Valley
-		25204 [SCRIPT] [Daily] Elyos in Enshar?
-		25205 [XML] Boss Toss
-		25210 [XML] Melzirinerk's Tempting Proposal
-		25211 [XML] Pekrunerk's Enticing Proposal
-		25212 [XML] Moterinerk's Enticing Proposal
-		25213 [XML] Are Ya Feelin' Lucky?
-		25215 [XML] [Daily]Securing Leviathan's Ruin
-		25216 [XML] [Daily] Securing Wavehollow Brink
-		25217 [XML] [Daily] Securing Cloudtalon Valley
-		25220 [SCRIPT] [Daily] Arden Not Your Heart
-		25221 [SCRIPT] [Daily] Ready Cet Go
-		25222 [SCRIPT] [Daily] Embracing Bomire
-		25230 [XML] Treasure Box Keys
-		25231 [XML] Treasure Crate Keys
-		25232 [XML] Treasure Chest Keys
-		25235 [TODO]   [Urgent Order] Protect the Eastern Aurelian Line
-		25236 [TODO]   [Urgent Order] Protect the Eastern Sanguisand Line
-		25237 [TODO]   [Urgent Order] Protect the Oracular Chamber
-		25300 [SCRIPT]   A Bloody Battle with Beritra
-		28970 [SCRIPT] Opening Corridors
-		28972 [TODO]   [Weekly] Protect Arden Village
-		28973 [TODO]   [Weekly] Protect Cet Village
-		28974 [TODO]   [Weekly] Protect Bomire Village
-		28975 [TODO]   Levinshor Fragments
-		28976 [TODO]   Kaldor Fragments
-    [END] SUMMARY
-    -->	
+        [BEGIN] SUMMARY
+               15223 [SCRIPT] [Spy/Daily] Enter Enshar
+               15224 [SCRIPT] [Spy/Daily] Set for Cet
+               15225 [SCRIPT] [Spy/Daily] Down to the Bomire Wire
+               20500 [SCRIPT] Enshar Expedition
+               20501 [SCRIPT] What the Ruins Say
+               20502 [SCRIPT] Evolving Mysteries
+               20503 [SCRIPT] Ancient, Evil Plans
+               20504 [SCRIPT] Tiamat's Shadow
+               20505 [SCRIPT] Ancient Crystal
+               20506 [SCRIPT] Muscle over Mind
+               20507 [SCRIPT] It's Worse than We Thought
+               25000 [SCRIPT] Getting to Know You
+               25001 [XML] Shell Out
+               25002 [SCRIPT] Kill the Kerubs
+               25010 [SCRIPT] Ruin Research Relief
+               25012 [XML] Big Scale Research
+               25013 [XML] Seaweed Procede
+               25020 [SCRIPT] Tejhi Technology
+               25022 [SCRIPT] Soup De Cure
+               25023 [SCRIPT] Sprouting Developments
+               25030 [SCRIPT] Clues from the Undead
+               25031 [SCRIPT] The Tejhi Ghost
+               25032 [SCRIPT] Avenge Varnur
+               25033 [SCRIPT] Mouths to Feed
+               25050 [SCRIPT] Treasure in the Deep Sea
+               25051 [SCRIPT] Treasure of Ancient Kings
+               25052 [SCRIPT] An Offering of Peace
+               25060 [SCRIPT] Take Down the Barricade
+               25062 [SCRIPT] Ominous Advice
+               25070 [SCRIPT] Truth of the Crystal
+               25073 [SCRIPT] No Revival for the Balaur
+               25080 [XML] Hot Shards!
+               25081 [XML] Red Coral Delights
+               25082 [SCRIPT] Tyrant Take Out
+               25084 [SCRIPT] Is This a Trap?
+               25085 [XML] Intercept the Ide
+               25090 [SCRIPT] They Chose Poorly
+               25091 [XML] The More You Know...
+               25092 [XML] Pontificating Possible Power
+               25093 [SCRIPT] A Royal Target
+               25094 [XML] An Offering of Friendship
+               25201 [SCRIPT] Tejhi Termination
+               25202 [SCRIPT] Tejhi Tasks
+               25203 [SCRIPT] Creatures of Cloudtalon Valley
+               25204 [SCRIPT] [Daily] Elyos in Enshar?
+               25205 [XML] Boss Toss
+               25210 [XML] Melzirinerk's Tempting Proposal
+               25211 [XML] Pekrunerk's Enticing Proposal
+               25212 [XML] Moterinerk's Enticing Proposal
+               25213 [XML] Are Ya Feelin' Lucky?
+               25215 [XML] [Daily]Securing Leviathan's Ruin
+               25216 [XML] [Daily] Securing Wavehollow Brink
+               25217 [XML] [Daily] Securing Cloudtalon Valley
+               25220 [SCRIPT] [Daily] Arden Not Your Heart
+               25221 [SCRIPT] [Daily] Ready Cet Go
+               25222 [SCRIPT] [Daily] Embracing Bomire
+               25230 [XML] Treasure Box Keys
+               25231 [XML] Treasure Crate Keys
+               25232 [XML] Treasure Chest Keys
+               25235 [XML] [Urgent Order] Protect the Eastern Aurelian Line
+               25236 [XML] [Urgent Order] Protect the Eastern Sanguisand Line
+               25237 [XML] [Urgent Order] Protect the Oracular Chamber
+               25300 [SCRIPT] A Bloody Battle with Beritra
+               28970 [SCRIPT] Opening Corridors
+               28972 [XML] [Weekly] Protect Arden Village
+               28973 [XML] [Weekly] Protect Cet Village
+               28974 [XML] [Weekly] Protect Bomire Village
+               28975 [XML] Levinshor Fragments
+               28976 [XML] Kaldor Fragments
+        [END] SUMMARY
+    -->
 	<!-- REPORTING QUESTS -->	
 	<!-- COLLECTING QUESTS -->
 	<item_collecting id="25001" start_npc_ids="804901" end_npc_ids="804902" action_item_ids="702749" start_dialog_id="4762" start_dialog_id2="1011"/>
@@ -95,7 +95,22 @@
 	<item_collecting id="25230" start_npc_ids="805226" end_npc_ids="805226"/>
 	<item_collecting id="25231" start_npc_ids="805226" end_npc_ids="805226"/>
 	<item_collecting id="25232" start_npc_ids="805226" end_npc_ids="805226"/>
+	<item_collecting id="28975" start_npc_ids="805218"/>
+	<item_collecting id="28976" start_npc_ids="805218"/>
 	<!-- HUNTING QUESTS -->
+	<monster_hunt id="28972" start_npc_ids="804924" end_npc_ids="805216">
+        <monster var="0" npc_ids="219686 219687" end_var="6"/>
+    </monster_hunt>
+	<monster_hunt id="28973" start_npc_ids="804924" end_npc_ids="805217">
+        <monster var="0" npc_ids="219728 219729" end_var="6"/>
+    </monster_hunt>
+	<monster_hunt id="28974" start_npc_ids="804924" end_npc_ids="805218">
+        <monster var="0" npc_ids="219746" end_var="6"/>
+    </monster_hunt>
 	<!-- OTHERS -->
 	<fountain_rewards id="25205" start_npc_ids="804759"/>
+	<!-- KILL QUESTS -->
+	<kill_in_world id="25235" start_npc_ids="804719" end_npc_ids="804719" worlds="220080000" amount="2"/>
+	<kill_in_world id="25236" start_npc_ids="804719" end_npc_ids="804719" worlds="220080000" amount="2"/>
+	<kill_in_world id="25237" start_npc_ids="804719" end_npc_ids="804719" worlds="220080000" amount="2"/>
 </quest_scripts>

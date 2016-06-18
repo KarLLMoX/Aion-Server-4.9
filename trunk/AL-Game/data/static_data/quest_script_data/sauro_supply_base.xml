@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
-                   [BEGIN] SUMMARY
-                           18911 [XML] [Group] Killing Spree
-                           18912 [XML] [Group] Slay Sheba, Blind Beritra
-                           18913 [XML] [Group] What Sheba Hath Wrought
-                           18914 [XML] [Group] Hunks of Junk
-                           18915 [XML] [Group] Sauro: The Final Assault
-                           18916 [XML] [Group] For the Folks Back Home
-                           28911 [XML] [Group] Doomed Commanders
-                           28912 [XML] [Group] Unlock the Mystery Box
-                           28913 [XML] [Group] Alas, Poor Shugo, Nyerk
-                           28914 [XML] [Group] Prototype of Destruction
-                           28915 [XML] [Group] Demolition Mania
-                           28916 [XML] [Group] Precious Seal
-                   [END] SUMMARY	
+        [BEGIN] SUMMARY
+               18911 [XML] [Group] Killing Spree
+               18912 [XML] [Group] Slay Sheba, Blind Beritra
+               18913 [XML] [Group] What Sheba Hath Wrought
+               18914 [XML] [Group] Hunks of Junk
+               18915 [XML] [Group] Sauro: The Final Assault
+               18916 [XML] [Group] For the Folks Back Home
+               18917 [TODO] Don't Wait, Infiltrate
+               28911 [XML] [Group] Doomed Commanders
+               28912 [XML] [Group] Unlock the Mystery Box
+               28913 [XML] [Group] Alas, Poor Shugo, Nyerk
+               28914 [XML] [Group] Prototype of Destruction
+               28915 [XML] [Group] Demolition Mania
+               28916 [XML] [Group] Precious Seal
+               28917 [TODO] When One Door Closes
+        [END] SUMMARY
     -->
     <!-- COLLECTING QUESTS -->
     <item_collecting id="18913" start_npc_ids="801945"/>
