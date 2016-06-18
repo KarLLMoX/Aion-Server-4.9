@@ -562,22 +562,13 @@ public class Player extends Creature {
         return getClientConnection() != null;
     }
 
-    public void setQuestExpands(int questExpands) {
-        this.playerCommonData.setQuestExpands(questExpands);
-        getInventory().setLimit(getInventory().getLimit() + (questExpands + getNpcExpands()) * CUBE_SPACE);
+    public void setCubeExpands(int cubeExpands) {
+        this.playerCommonData.setCubeExpands(cubeExpands);
+        getInventory().setLimit(getInventory().getLimit() + (cubeExpands) * CUBE_SPACE);
     }
 
-    public int getQuestExpands() {
-        return this.playerCommonData.getQuestExpands();
-    }
-
-    public void setNpcExpands(int npcExpands) {
-        this.playerCommonData.setNpcExpands(npcExpands);
-        getInventory().setLimit(getInventory().getLimit() + (npcExpands + getQuestExpands()) * CUBE_SPACE);
-    }
-
-    public int getNpcExpands() {
-        return this.playerCommonData.getNpcExpands();
+    public int getCubeExpands() {
+        return this.playerCommonData.getCubeExpands();
     }
 
     public PlayerClass getPlayerClass() {

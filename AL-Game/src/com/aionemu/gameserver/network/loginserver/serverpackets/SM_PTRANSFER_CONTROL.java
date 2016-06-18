@@ -113,8 +113,7 @@ public class SM_PTRANSFER_CONTROL extends LsServerPacket {
                 writeD(player.getCommonData().getGender().getGenderId());
                 writeD(player.getCommonData().getTitleId());
                 writeD(player.getCommonData().getDp());
-                writeD(player.getCommonData().getQuestExpands());
-                writeD(player.getCommonData().getNpcExpands());
+                writeD(player.getCommonData().getCubeExpands());
                 writeD(player.getCommonData().getAdvancedStigmaSlotSize());
                 writeD(player.getCommonData().getWarehouseSize());
 

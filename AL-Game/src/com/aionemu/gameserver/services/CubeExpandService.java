@@ -36,17 +36,15 @@ public class CubeExpandService {
      * Expands the cubes
      *
      * @param player
-     * @param isNpcExpand
+     * @param isCubeExpand
      */
-    public static void expand(Player player, boolean isNpcExpand) {
+    public static void expand(Player player, boolean isCubeExpand) {
         if (!canExpand(player)) {
             return;
         }
         PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300431, "9")); // 9 Slots added
-        if (isNpcExpand) {
-            player.setNpcExpands(player.getNpcExpands() + 1);
-        } else {
-            player.setQuestExpands(player.getQuestExpands() + 1);
+        if (isCubeExpand) {
+            player.setCubeExpands(player.getCubeExpands() + 1);
         }
         PacketSendUtility.sendPacket(player, SM_CUBE_UPDATE.cubeSize(StorageType.CUBE, player));
     }
@@ -56,7 +54,7 @@ public class CubeExpandService {
      * @return
      */
     public static boolean canExpand(Player player) {
-        return validateNewSize(player.getNpcExpands() + player.getQuestExpands() + 1);
+        return validateNewSize(player.getCubeExpands() + 1);
     }
 
     /**

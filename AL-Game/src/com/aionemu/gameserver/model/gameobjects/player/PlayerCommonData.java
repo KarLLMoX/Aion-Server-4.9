@@ -70,8 +70,7 @@ public class PlayerCommonData extends VisibleObjectTemplate {
     private boolean online;
     private String note;
     private WorldPosition position;
-    private int questExpands = 0;
-    private int npcExpands = 0;
+    private int cubeExpands = 0;
     private int warehouseSize = 0;
     private int AdvancedStigmaSlotSize = 0;
     private int titleId = -1;
@@ -116,20 +115,12 @@ public class PlayerCommonData extends VisibleObjectTemplate {
         return this.exp;
     }
 
-    public int getQuestExpands() {
-        return this.questExpands;
+    public int getCubeExpands() {
+        return this.cubeExpands;
     }
 
-    public void setQuestExpands(int questExpands) {
-        this.questExpands = questExpands;
-    }
-
-    public void setNpcExpands(int npcExpands) {
-        this.npcExpands = npcExpands;
-    }
-
-    public int getNpcExpands() {
-        return npcExpands;
+    public void setCubeExpands(int cubeExpands) {
+        this.cubeExpands = cubeExpands;
     }
 
     /**

@@ -83,8 +83,7 @@ public class CMT_CHARACTER_INFORMATION extends AionClientPacket {
         playerCommonData.setGender(readD() == 0 ? Gender.MALE : Gender.FEMALE);
         playerCommonData.setTitleId(readD());
         playerCommonData.setDp(readD());
-        playerCommonData.setQuestExpands(readD());
-        playerCommonData.setNpcExpands(readD());
+        playerCommonData.setCubeExpands(readD());
         playerCommonData.setAdvancedStigmaSlotSize(readD());
         playerCommonData.setWarehouseSize(readD());
 
