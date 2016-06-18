@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+    <!--
+        [BEGIN] SUMMARY
+                1855 [XML] Killing the Krotan Guardian General
+                1856 [XML] Killing the Kysis Guardian General
+                1857 [XML] Killing the Miren Guardian General
+                1871 [TODO] Temporary
+                2855 [XML] Eliminating the Krotan Guardian General
+                2856 [XML] Eliminating the Kysis Guardian General
+                2857 [XML] Eliminate Miren Guardian General
+                2871 [TODO] Temporary
+               15401 [TODO] Support Redemption Landing
+               15402 [TODO] Reinforce Redemption Landing
+               15403 [TODO] [Weekly] Collect Intact Hitonium
+               15404 [TODO] [Weekly] Collect Shattered Hitonium
+               15405 [TODO] [Weekly] Collect Broken Hitonium
+               15406 [TODO] [Weekly] Defeat the Ereshkigal Legion
+               15407 [TODO] [Weekly] Defeat the Beritra Legion in the Ruins of Roah
+               15408 [TODO] [Weekly] Defeat the Beritra Legion in Asteria
+               15409 [TODO] [League] Defeat Terracrusher
+               15410 [TODO] [League] Defeat Wurg the Glacier
+               15411 [TODO] [Group] Protect the Ruins of Roah
+               15412 [TODO] [Group] Protect Bloodburn Reach
+               15413 [TODO] [Group] Protect Lake Asteria
+               15414 [TODO] [Weekly] Protect Rattlefrost Outpost
+               15415 [TODO] [Weekly] Protect Sliversleet Outpost
+               15416 [TODO] [Weekly] Protect Coldforge Outpost
+               15417 [TODO] [Weekly] Protect Shimmerfrost Outpost
+               15418 [TODO] [Weekly] Protect Icehowl Outpost
+               15419 [TODO] [Weekly] Protect Chillhaunt Outpost
+               15420 [TODO] [Weekly] Protect Wildersage Artifact Outpost
+               15421 [TODO] [Weekly] Protect Dauntless Artifact Outpost
+               15422 [TODO] [Weekly] Protect Anchorbrak Artifact Outpost
+               15423 [TODO] [Weekly] Protect Brokenblade Artifact Outpost
+               15424 [TODO] [Weekly] Protect Sootguzzle Outpost
+               15425 [TODO] [Weekly] Protect Flameruin Outpost
+               15426 [TODO] [Weekly] Protect Stokebellow Outpost
+               15427 [TODO] [Weekly] Protect Blazerack Outpost
+               15428 [TODO] [Weekly] Protect Smoldergeist Outpost
+               15429 [TODO] [Weekly] Protect Moltenspike Outpost
+               15430 [TODO] [Weekly] Shield Rattlefrost Outpost
+               15431 [TODO] [Weekly] Shield Silversleet Outpost
+               15432 [TODO] [Weekly] Shield Coldforge Outpost
+               15433 [TODO] [Weekly] Shield Shimmerfrost Outpost
+               15434 [TODO] [Weekly] Shield Icehowl Outpost
+               15435 [TODO] [Weekly] Shield Chillhaunt Outpost
+               15436 [TODO] [Weekly] Shield Wildersage Artifact Outpost
+               15437 [TODO] [Weekly] Shield Dauntless Artifact Outpost
+               15438 [TODO] [Weekly] Shield Anchorbrak Artifact Outpost
+               15439 [TODO] [Weekly] Shield Brokenblade Artifact Outpost
+               15440 [TODO] [Weekly] Shield Sootguzzle Outpost
+               15441 [TODO] [Weekly] Shield Flameruin Outpost
+               15442 [TODO] [Weekly] Shield Stokebellow Outpost
+               15443 [TODO] [Weekly] Shield Blazerack Outpost
+               15444 [TODO] [Weekly] Shield Smoldergeist Outpost
+               15445 [TODO] [Weekly] Shield Moltenspike Outpost
+               15446 [TODO] [Urgent Order] Segla's Request
+               15447 [TODO] [Urgent Order] Rojanggas' Request
+               15448 [TODO] [Urgent Order] Raska's Request
+               15449 [TODO] [Urgent Order] Billaran's Request
+               15450 [TODO] [Urgent Order] Mongros' Request
+               15451 [TODO] [Urgent Order] Bokaiyu's Request
+               15452 [TODO] [Urgent Order] Kodesnel's Request
+               15453 [TODO] [Urgent Order] Dupor's Request
+               15454 [TODO] [Urgent Order] Raros' Request
+               15455 [TODO] The Krotan Spirit's Necklace
+               15456 [TODO] The Guardian Spirit of Krotan
+               15457 [TODO] [Urgent Order] Recapturing Krotan Fortress
+               15458 [TODO] The Miren Spirit's Necklace
+               15459 [TODO] The Guardian Spirit of Miren
+               15460 [TODO] [Urgent Order] Recapturing Miren Fortress
+               15461 [TODO] The Kysis Spirit's Necklace
+               15462 [TODO] The Guardian Spirit of Kysis
+               15463 [TODO] [Urgent Order] Will of Recapturing Kysis Fortress
+               15464 [TODO] [Urgent Order/Daily] Protect Redemption Landing
+               15465 [TODO] [Urgent Order/Daily] Attack on Harbinger's Landing
+               15466 [TODO] [Urgent Order] Protect the Upper Abyss
+               15467 [TODO] Unirunerk's Tempting Proposal
+               15468 [TODO] Uirunerk's Tempting Proposal
+               15471 [TODO] [Landing Level 2/Weekly] Setting up the Outposts
+               15472 [TODO] [Landing Level 2/Weekly] Scaling up for the Outposts
+               15473 [TODO] [Landing Level 2/Weekly] Artifact Base Foundations
+               15474 [TODO] [Landing Level 2/Weekly] Ruins of Roah Occupation
+               15475 [TODO] [Landing Level 2/Weekly] Occupiers Groundwork
+               15476 [TODO] [Landing Level 4/Weekly] Enhance Base Accessibility
+               15477 [TODO] [Landing Level 4/Weekly] Improve Base Accessibility
+               15478 [TODO] [Landing Level 6/Weekly] Halting the Cold
+               15479 [TODO] [Landing Level 6/Weekly] Crystalline Hunt
+               15480 [TODO] [Landing Level 8/Weekly] Clearing a Path
+               15481 [TODO] Redeemer's Wing Legion Gift
+               25401 [TODO] Harbinger's Hero
+               25402 [TODO] Fixing the Landing
+               25403 [TODO] [Weekly] Gather Hitonium Lumps
+               25404 [TODO] [Weekly] Gather Hitonium Pieces
+               25405 [TODO] [Weekly] Gather Hitonium Fragments
+               25406 [TODO] [Weekly] Thwart the Ereshkigal Legion
+               25407 [TODO] [Weekly] Thwart the Beritra Legion
+               25408 [TODO] [Weekly] Handle the Remaining Beritra in Asteria
+               25409 [TODO] [League] Defeat Terracrusher
+               25410 [TODO] [League] Defeat Wurg the Glacier
+               25411 [TODO] [Group] Handle the Intruder to Protect the Ancient City of Rhoo
+               25412 [TODO] [Group] Handle the Intruder to Protect Triple Island
+               25413 [TODO] [Group] Handle the Intruder to Protect Asteria
+               25414 [TODO] [Weekly] Defend Rattlefrost Outpost
+               25415 [TODO] [Weekly] Defend Sliversleet Outpost
+               25416 [TODO] [Weekly] Defend Coldforge Outpost
+               25417 [TODO] [Weekly] Defend Shimmerfrost Outpost
+               25418 [TODO] [Weekly] Defend Icehowl Outpost
+               25419 [TODO] [Weekly] Defend Chillhaunt Outpost
+               25420 [TODO] [Weekly] Defend Wildersage Artifact Outpost
+               25421 [TODO] [Weekly] Defend Dauntless Artifact Outpost
+               25422 [TODO] [Weekly] Defend Anchorbrak Artifact Outpost
+               25423 [TODO] [Weekly] Defend Brokenblade Artifact Outpost
+               25424 [TODO] [Weekly] Defend Sootguzzle Outpost
+               25425 [TODO] [Weekly] Defend Flameruin Outpost
+               25426 [TODO] [Weekly] Defend Stokebellow Outpost
+               25427 [TODO] [Weekly] Defend Blazerack Outpost
+               25428 [TODO] [Weekly] Defend Smoldergeist Outpost
+               25429 [TODO] [Weekly] Defend Moltenspike Outpost
+               25430 [TODO] [Weekly] Secure Rattlefrost Outpost
+               25431 [TODO] [Weekly] Secure Silversleet Outpost
+               25432 [TODO] [Weekly] Secure Coldforge Outpost
+               25433 [TODO] [Weekly] Secure Shimmerfrost Outpost
+               25434 [TODO] [Weekly] Secure Icehowl Outpost
+               25435 [TODO] [Weekly] Secure Chillhaunt Outpost
+               25436 [TODO] [Weekly] Secure Wildersage Artifact Outpost
+               25437 [TODO] [Weekly] Secure Dauntless Artifact Outpost
+               25438 [TODO] [Weekly] Secure Anchorbrak Artifact Outpost
+               25439 [TODO] [Weekly] Secure Brokenblade Artifact Outpost
+               25440 [TODO] [Weekly] Secure Sootguzzle Outpost
+               25441 [TODO] [Weekly] Secure Flameruin Outpost
+               25442 [TODO] [Weekly] Secure Stokebellow Outpost
+               25443 [TODO] [Weekly] Secure Blazerack Outpost
+               25444 [TODO] [Weekly] Secure Smoldergeist Outpost
+               25445 [TODO] [Weekly] Secure Moltenspike Outpost
+               25446 [TODO] [Urgent Orders] Pierre's Request
+               25447 [TODO] [Urgent Orders] Dukru's Request
+               25448 [TODO] [Urgent Orders] Duar's Request
+               25449 [TODO] [Urgent Orders] Pedesklo's Request
+               25450 [TODO] [Urgent Orders] Belgrad's Request
+               25451 [TODO] [Urgent Orders] Katmer's Request
+               25452 [TODO] [Urgent Orders] Katmors' Request
+               25453 [TODO] [Urgent Orders] Karne's Request
+               25454 [TODO] [Urgent Orders] Markiar's Request
+               25455 [TODO] Krotan's Necklace
+               25456 [TODO] Facing the Krotan Guardian Spirit
+               25457 [TODO] [Urgent Order] Recapture Krotan Fortress
+               25458 [TODO] Miren's Necklace
+               25459 [TODO] Facing the Miren Guardian Spirit
+               25460 [TODO] [Urgent Order] Save Miren Fortress
+               25461 [TODO] Kysis' Pendant
+               25462 [TODO] Facing the Kysis Guardian Spirit
+               25463 [TODO] [Urgent Orders] Recapture Kysis Fortress
+               25464 [TODO] [Urgent Orders/Daily] Protect Harbinger's Landing
+               25465 [TODO] [Urgent Orders] Attack Redemption Landing
+               25466 [TODO] [Urgent Order] Protect the Upper Abyss
+               25467 [TODO] Sunirunerk's Tempting Proposal
+               25468 [TODO] Henirunerk's Tempting Proposal
+               25471 [TODO] [Landing Level 2/Weekly] Outpost Footholds
+               25472 [TODO] [Landing Level 2/Weekly] Taking the Outposts
+               25473 [TODO] [Landing Level 2/Weekly] Artifact Occupation
+               25474 [TODO] [Landing Level 2/Weekly] Ruins of Roah Occupation
+               25475 [TODO] [Landing Level 2/Weekly] Gearing Up For Occupation
+               25476 [TODO] [Landing Level 4/Weekly] Boost Base Accessibility
+               25477 [TODO] [Landing Level 4/Weekly] Expand Base Accessibility
+               25478 [TODO] [Landing Level 6/Weekly] Thawing the Abyss
+               25479 [TODO] [Landing Level 6/Weekly] Shattering the Cold
+               25480 [TODO] [Landing Level 8/Weekly] Clearing the Way
+               25481 [TODO] Omen's Herald Legion Gift
+        [END] SUMMARY
+    -->
+    <!-- REPORTING QUESTS -->
+    <!-- COLLECTING QUESTS -->
+    <!-- HUNTING QUESTS -->
+	<monster_hunt id="1855" start_npc_ids="268080">
+		<monster var="0" npc_ids="233632 233633" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="1856" start_npc_ids="269265">
+		<monster var="0" npc_ids="233675 233676" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="1857" start_npc_ids="270165">
+		<monster var="0" npc_ids="233718 233719" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="2855" start_npc_ids="268081">
+		<monster var="0" npc_ids="233632 233633" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="2856" start_npc_ids="269266">
+		<monster var="0" npc_ids="233675 233676" end_var="1"/>
+	</monster_hunt>
+	<monster_hunt id="2857" start_npc_ids="270166">
+		<monster var="0" npc_ids="233718 233719" end_var="1"/>
+	</monster_hunt>
+</quest_scripts>

@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
-	<!--
-		[BEGIN] SUMMARY
-			19600 [SCRIPT] Welcome to Wisplight Abbey
-			19601 [SCRIPT] Meet Your Instructors
-			19602 [XML] Academies and Abbeys
-			19603 [XML] [Daily] Clipping the Commotion
-			19604 [XML] Drauped into Theobomos
-			19605 [XML] Through Dust and Rifts
-			19606 [XML] Adma's Riches
-			19607 [XML] The Darkness Beyond
-			19608 [XML] Be Prepared
-			19609 [XML] [Daily] Dealing with Dionaes
-			19610 [XML] Brimming Hollow
-			19611 [XML] Undermined in Undirborg
-			19612 [XML] Balaur in Beshmundir
-			19615 [XML] Hasten to Hariken
-			19617 [XML] Refuge no More
-			19618 [XML] Reinforcing Rentus
-			19619 [XML] Steal the Siel
-			19623 [XML] Still More in Levinshor
-			19624 [XML] Kaldor is Burning
-			19626 [XML] Fight on Ophidan
-			19627 [XML] Sanctuary Sanctioning
-			19628 [XML] Finding Linkgate Foundry
-			19629 [XML] Sorry, Sauro
-			19630 [XML] Threat at Illuminary Obelisk
-		[END] SUMMARY
-	-->
+    <!--
+        [BEGIN] SUMMARY
+               19600 [SCRIPT] Welcome to Wisplight Abbey
+               19601 [SCRIPT] Meet Your Instructors
+               19602 [XML] Academies and Abbeys
+               19603 [XML] [Daily] Clipping the Commotion
+               19604 [XML] Drauped into Theobomos
+               19605 [XML] Through Dust and Rifts
+               19606 [XML] Adma's Riches
+               19607 [XML] The Darkness Beyond
+               19608 [XML] Be Prepared
+               19609 [XML] [Daily] Dealing with Dionaes
+               19610 [XML] Brimming Hollow
+               19611 [XML] Undermined in Undirborg
+               19612 [XML] Balaur in Beshmundir
+               19615 [XML] Hasten to Hariken
+               19617 [XML] Refuge no More
+               19618 [XML] Reinforcing Rentus
+               19619 [XML] Steal the Siel
+               19623 [XML] Still More in Levinshor
+               19624 [XML] Kaldor is Burning
+               19626 [XML] Fight on Ophidan
+               19627 [XML] Sanctuary Sanctioning
+               19628 [XML] Finding Linkgate Foundry
+               19629 [XML] Sorry, Sauro
+               19630 [XML] Threat at Illuminary Obelisk
+               19644 [TODO] To the Land of the Unknown
+               19645 [TODO] [Daily] Eliminating the Hindrance in the Supply Route
+               19646 [TODO] What Beritra is After
+               19647 [TODO] [Daily] Eukraton in Need
+               19648 [TODO] Cooperation Request for Elimination of Beritra
+               19649 [TODO] To Raksang Ruins
+               19650 [TODO] [Daily] Warding the Old
+               19651 [TODO] To Verteron
+               19652 [TODO] [Daily] Forest for the Trees
+               19653 [TODO] [Daily] Observing the Field
+               19654 [TODO] To Haramel
+               19655 [TODO] To Eltnen
+               19656 [TODO] [Daily] Protect Eltnen Fortress
+               19657 [TODO] [Daily] Protect Cascade Springs
+               19658 [TODO] To Nochsana
+               19659 [TODO] Into the Fire
+               19660 [TODO] To Heiron Observatory
+               19661 [TODO] [Daily] Protect Hieronopolis
+               19662 [TODO] [Daily] Protect Poie Jungle
+               19663 [TODO] To Arbolu's Haven
+               19664 [TODO] [Daily] In a Manor of Trouble
+        [END] SUMMARY
+    -->
 	<!-- REPORTING QUESTS --> 
     <report_to_many id="19602" start_npc_ids="804652" end_npc_ids="798155">
 		<npc_infos var="0" npc_id="205985" quest_dialog="1352"/>
