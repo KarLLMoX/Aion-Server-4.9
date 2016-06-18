@@ -138,7 +138,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
         try {
             con = DatabaseFactory.getConnection();
             PreparedStatement stmt = con
-                    .prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, quest_expands=?, npc_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=? WHERE id=?");
+                    .prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=? WHERE id=?");
 
             log.debug("[DAO: MySQL5PlayerDAO] storing player " + player.getObjectId() + " " + player.getName());
             PlayerCommonData pcd = player.getCommonData();
@@ -154,40 +154,39 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             stmt.setString(10, player.getRace().toString());
             stmt.setString(11, pcd.getPlayerClass().toString());
             stmt.setTimestamp(12, pcd.getLastOnline());
-            stmt.setInt(13, player.getQuestExpands());
-            stmt.setInt(14, player.getNpcExpands());
-            stmt.setInt(15, pcd.getAdvancedStigmaSlotSize());
-            stmt.setInt(16, player.getWarehouseSize());
-            stmt.setString(17, pcd.getNote());
-            stmt.setInt(18, pcd.getTitleId());
-            stmt.setInt(19, pcd.getBonusTitleId());
-            stmt.setInt(20, pcd.getDp());
-            stmt.setInt(21, pcd.getDeathCount());
+            stmt.setInt(13, player.getCubeExpands());
+            stmt.setInt(14, pcd.getAdvancedStigmaSlotSize());
+            stmt.setInt(15, player.getWarehouseSize());
+            stmt.setString(16, pcd.getNote());
+            stmt.setInt(17, pcd.getTitleId());
+            stmt.setInt(18, pcd.getBonusTitleId());
+            stmt.setInt(19, pcd.getDp());
+            stmt.setInt(20, pcd.getDeathCount());
             Mailbox mailBox = player.getMailbox();
             int mails = mailBox != null ? mailBox.size() : pcd.getMailboxLetters();
-            stmt.setInt(22, mails);
-            stmt.setLong(23, pcd.getCurrentReposteEnergy());
-            stmt.setLong(24, pcd.getCurrentEventExp());
-            stmt.setInt(25, player.getCommonData().getBattleGroundPoints());
-            stmt.setInt(26, pcd.getMentorFlagTime());
-            stmt.setInt(27, pcd.isInitialGameStats());
+            stmt.setInt(21, mails);
+            stmt.setLong(22, pcd.getCurrentReposteEnergy());
+            stmt.setLong(23, pcd.getCurrentEventExp());
+            stmt.setInt(24, player.getCommonData().getBattleGroundPoints());
+            stmt.setInt(25, pcd.getMentorFlagTime());
+            stmt.setInt(26, pcd.isInitialGameStats());
             if (player.getPosition().getWorldMapInstance() == null) {
                 log.error("Error saving player: " + player.getObjectId() + " " + player.getName() + ", world map instance is null. Setting world owner to 0. Position: " + player.getWorldId() + " " + player.getX() + " " + player.getY() + " " + player.getZ());
-                stmt.setInt(28, 0);
+                stmt.setInt(27, 0);
             } else {
-                stmt.setInt(28, player.getPosition().getWorldMapInstance().getOwnerId());
+                stmt.setInt(27, player.getPosition().getWorldMapInstance().getOwnerId());
             }
-            stmt.setInt(29, pcd.getFatigue());
-            stmt.setInt(30, pcd.getFatigueRecover());
-            stmt.setInt(31, pcd.getFatigueReset());
-            stmt.setInt(32, pcd.getPassportStamps());
-            stmt.setInt(33, pcd.getPassportReward());
-            stmt.setTimestamp(34, pcd.getLastStamp());
-            stmt.setInt(35, pcd.getJoinRequestLegionId());
-            stmt.setString(36, pcd.getJoinRequestState().name());
-            stmt.setInt(37, player.getUpgradeArcade().getFrenzyPoints());
-            stmt.setInt(38, player.getUpgradeArcade().getFrenzyCount());
-            stmt.setInt(39, player.getObjectId());
+            stmt.setInt(28, pcd.getFatigue());
+            stmt.setInt(29, pcd.getFatigueRecover());
+            stmt.setInt(30, pcd.getFatigueReset());
+            stmt.setInt(31, pcd.getPassportStamps());
+            stmt.setInt(32, pcd.getPassportReward());
+            stmt.setTimestamp(33, pcd.getLastStamp());
+            stmt.setInt(34, pcd.getJoinRequestLegionId());
+            stmt.setString(35, pcd.getJoinRequestState().name());
+            stmt.setInt(36, player.getUpgradeArcade().getFrenzyPoints());
+            stmt.setInt(37, player.getUpgradeArcade().getFrenzyCount());
+            stmt.setInt(38, player.getObjectId());
             stmt.execute();
             stmt.close();
         } catch (Exception e) {
@@ -213,8 +212,8 @@ public class MySQL5PlayerDAO extends PlayerDAO {
         try {
             con = DatabaseFactory.getConnection();
             PreparedStatement preparedStatement = con
-                    .prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , quest_expands, npc_expands, warehouse_size, online) "
-                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
+                    .prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , cube_expands, warehouse_size, online) "
+                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
 
             log.debug("[DAO: MySQL5PlayerDAO] saving new player: " + pcd.getPlayerObjId() + " " + pcd.getName());
 
@@ -230,9 +229,8 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             preparedStatement.setString(10, pcd.getGender().toString());
             preparedStatement.setString(11, pcd.getRace().toString());
             preparedStatement.setString(12, pcd.getPlayerClass().toString());
-            preparedStatement.setInt(13, pcd.getQuestExpands());
-            preparedStatement.setInt(14, pcd.getNpcExpands());
-            preparedStatement.setInt(15, pcd.getWarehouseSize());
+            preparedStatement.setInt(13, pcd.getCubeExpands());
+            preparedStatement.setInt(14, pcd.getWarehouseSize());
             preparedStatement.execute();
             preparedStatement.close();
         } catch (Exception e) {
@@ -312,8 +310,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
                 cd.setGender(Gender.valueOf(resultSet.getString("gender")));
                 cd.setLastOnline(resultSet.getTimestamp("last_online"));
                 cd.setNote(resultSet.getString("note"));
-                cd.setQuestExpands(resultSet.getInt("quest_expands"));
-                cd.setNpcExpands(resultSet.getInt("npc_expands"));
+                cd.setCubeExpands(resultSet.getInt("cube_expands"));
                 cd.setAdvancedStigmaSlotSize(resultSet.getInt("advanced_stigma_slot_size"));
                 cd.setTitleId(resultSet.getInt("title_id"));
                 cd.setBonusTitleId(resultSet.getInt("bonus_title_id"));

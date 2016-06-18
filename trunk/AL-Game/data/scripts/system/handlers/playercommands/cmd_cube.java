@@ -34,11 +34,11 @@ public class cmd_cube extends PlayerCommand {
 
     @Override
     public void execute(Player player, String... params) {
-        if (player.getNpcExpands() >= 9) {
+        if (player.getCubeExpands() >= 9) {
             PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.CUBE_ALLREADY_EXPANDED));
             return;
         }
-        while (player.getNpcExpands() < 9) {
+        while (player.getCubeExpands() < 9) {
             CubeExpandService.expand(player, true);
         }
         PacketSendUtility.sendMessage(player, LanguageHandler.translate(CustomMessageId.CUBE_SUCCESS_EXPAND));

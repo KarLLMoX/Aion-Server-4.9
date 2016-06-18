@@ -33,8 +33,7 @@ public class SM_CUBE_UPDATE extends AionServerPacket {
      */
     private int actionValue;
     private int itemsCount;
-    private int npcExpands;
-    private int questExpands;
+    private int cubeExpands;
 
     public static SM_CUBE_UPDATE stigmaSlots(int slots) {
         return new SM_CUBE_UPDATE(6, slots);
@@ -42,35 +41,31 @@ public class SM_CUBE_UPDATE extends AionServerPacket {
 
     public static SM_CUBE_UPDATE cubeSize(StorageType type, Player player) {
         int itemsCount = 0;
-        int npcExpands = 0;
-        int questExpands = 0;
+        int cubeExpands = 0;
         switch (type) {
             case CUBE:
                 itemsCount = player.getInventory().size();
-                npcExpands = player.getNpcExpands();
-                questExpands = player.getQuestExpands();
+                cubeExpands = player.getCubeExpands();
                 break;
             case REGULAR_WAREHOUSE:
                 itemsCount = player.getWarehouse().size();
-                npcExpands = player.getWarehouseSize();
-                //questExpands = ?? //TODO!
+                cubeExpands = player.getWarehouseSize();
                 break;
             case LEGION_WAREHOUSE:
                 itemsCount = player.getLegion().getLegionWarehouse().size();
-                npcExpands = player.getLegion().getWarehouseLevel();
+                cubeExpands = player.getLegion().getWarehouseLevel();
                 break;
 		default:
 			break;
         }
 
-        return new SM_CUBE_UPDATE(0, type.ordinal(), itemsCount, npcExpands, questExpands);
+        return new SM_CUBE_UPDATE(0, type.ordinal(), itemsCount, cubeExpands);
     }
 
-    private SM_CUBE_UPDATE(int action, int actionValue, int itemsCount, int npcExpands, int questExpands) {
+    private SM_CUBE_UPDATE(int action, int actionValue, int itemsCount, int cubeExpands) {
         this(action, actionValue);
         this.itemsCount = itemsCount;
-        this.npcExpands = npcExpands;
-        this.questExpands = questExpands;
+        this.cubeExpands = cubeExpands;
     }
 
     private SM_CUBE_UPDATE(int action, int actionValue) {
@@ -85,8 +80,8 @@ public class SM_CUBE_UPDATE extends AionServerPacket {
         switch (action) {
             case 0:
                 writeD(itemsCount);
-                writeC(npcExpands); // cube size from npc (so max 5 for now)
-                writeC(questExpands); // cube size from quest (so max 2 for now)
+                writeC(cubeExpands); // cube size from npc (so max 5 for now)
+				writeC(0);
                 writeC(0); // unk - expands from items?
                 break;
             case 6:

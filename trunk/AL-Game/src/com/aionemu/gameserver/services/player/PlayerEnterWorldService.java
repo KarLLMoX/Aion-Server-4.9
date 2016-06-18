@@ -750,9 +750,8 @@ public final class PlayerEnterWorldService {
      */
     private static void sendItemInfos(AionConnection client, Player player) {
         // Cubesize limit set in inventory.
-        int questExpands = player.getQuestExpands();
-        int npcExpands = player.getNpcExpands();
-        player.getInventory().setLimit(StorageType.CUBE.getLimit() + (questExpands + npcExpands) * 12);
+        int cubeExpands = player.getCubeExpands();
+        player.getInventory().setLimit(StorageType.CUBE.getLimit() + cubeExpands * 12);
         player.getWarehouse().setLimit(StorageType.REGULAR_WAREHOUSE.getLimit() + player.getWarehouseSize() * 8);
 
         // items
@@ -768,11 +767,11 @@ public final class PlayerEnterWorldService {
         boolean isFirst = true;
         ListSplitter<Item> splitter = new ListSplitter<Item>(allItems, 10);
         while (!splitter.isLast()) {
-            client.sendPacket(new SM_INVENTORY_INFO(isFirst, splitter.getNext(), npcExpands, questExpands, false, player));
+            client.sendPacket(new SM_INVENTORY_INFO(isFirst, splitter.getNext(), cubeExpands, false, player));
             isFirst = false;
         }
 
-        client.sendPacket(new SM_INVENTORY_INFO(false, new ArrayList<Item>(0), npcExpands, questExpands, false, player));
+        client.sendPacket(new SM_INVENTORY_INFO(false, new ArrayList<Item>(0), cubeExpands, false, player));
         client.sendPacket(new SM_STATS_INFO(player));
         client.sendPacket(SM_CUBE_UPDATE.stigmaSlots(player.getCommonData().getAdvancedStigmaSlotSize()));
     }

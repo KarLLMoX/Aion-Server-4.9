@@ -35,18 +35,16 @@ public class SM_INVENTORY_INFO extends AionServerPacket {
 
     private boolean isFirstPacket;
     private boolean isPopUp;
-    private int npcExpandsSize = 0;
-    private int questExpandsSize = 0;
+    private int cubeExpandsSize = 0;
     private List<Item> items;
     private Player player;
 
-    public SM_INVENTORY_INFO(boolean isFirstPacket, List<Item> items, int npcExpandsSize, int questExpandsSize, boolean isPopUp, Player player) {
+    public SM_INVENTORY_INFO(boolean isFirstPacket, List<Item> items, int cubeExpandsSize, boolean isPopUp, Player player) {
         // this should prevent client crashes but need to discover when item is null
         items.removeAll(Collections.singletonList(null));
         this.isFirstPacket = isFirstPacket;
         this.items = items;
-        this.npcExpandsSize = npcExpandsSize;
-        this.questExpandsSize = questExpandsSize;
+        this.cubeExpandsSize = cubeExpandsSize;
         this.isPopUp = isPopUp;
         this.player = player;
     }
@@ -55,8 +53,8 @@ public class SM_INVENTORY_INFO extends AionServerPacket {
     protected void writeImpl(AionConnection con) {
     	// something wrong with cube part.
         writeC(isFirstPacket ? 1 : 0);
-        writeC(npcExpandsSize); // cube size from npc (so max 5 for now)
-        writeC(questExpandsSize); // cube size from quest (so max 2 for now)
+        writeC(cubeExpandsSize); // cube size from npc (so max 5 for now)
+		writeC(0);
         writeC(isPopUp ? 1 : 0); // popup cube on login
         writeH(items.size()); // number of entries
         for (Item item : items) {
