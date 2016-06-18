@@ -1,76 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
+<quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
-            [BEGIN] SUMMARY
-                    18604 [SCRIPT] Meeting with Rotan
-                    18618 [XML] Kaliga's Collection
-                    18619 [XML] Kaliga's Collection
-                    18620 [XML] Kaliga's Collection
-                    18621 [XML] Kaliga's Collection
-                    18622 [XML] Kaliga's Collection
-                    18623 [XML] Kaliga's Collection
-                    18624 [XML] Kaliga's Collection
-                    18625 [XML] Kaliga's Collection
-                    18626 [XML] Kaliga's Collection
-                    18627 [XML] Kaliga's Collection
-                    18628 [XML] Judge's Flame-Heated Sword
-                    18629 [XML] Judge's Flame-Heated Warhammer
-                    18630 [XML] Judge's Flame-Heated Dagger
-                    18631 [XML] Judge's Flame-Heated Jewel
-                    18632 [XML] Judge's Flame-Heated Tome
-                    18633 [XML] Judge's Flame-Heated Greatsword
-                    18634 [XML] Judge's Flame-Heated Spear
-                    18635 [XML] Judge's Flame-Heated Staff
-                    18636 [XML] Judge's Flame-Heated Longbow
-                    18637 [XML] The Crying Pistol
-                    18638 [XML] The Crying Aethercannon
-                    18639 [XML] The Crying Harp
-                    18640 [XML] Judge's Flame-Heated Pistol
-                    18641 [XML] Judge's Flame-Heated Aethercannon
-                    18642 [XML] Judge's Flame-Heated Harp
-                    18643 [XML] Kaliga's Collection
-                    18644 [XML] Kaliga's Collection
-                    18645 [XML] Kaliga's Collection
-                    28604 [SCRIPT] Recovering Rotan
-                    28608 [XML] Judge's Tear-Soaked Sword
-                    28609 [XML] Judge's Tear-Soaked Warhammer
-                    28610 [XML] Judge's Tear-Soaked Dagger
-                    28611 [XML] Judge's Tear-Soaked Jewel
-                    28612 [XML] Judge's Tear-Soaked Tome
-                    28613 [XML] Judge's Tear-Soaked Greatsword
-                    28614 [XML] Judge's Tear-Soaked Spear
-                    28615 [XML] Judge's Tear-Soaked Staff
-                    28616 [XML] Judge's Tear-Soaked Longbow
-                    28637 [XML] Judge's Tear-Soaked Pistol
-                    28638 [XML] Judge's Tear-Soaked Aethercannon
-                    28639 [XML] Judge's Tear-Soaked Harp
-                    28618 [XML] Kaliga's Collection
-                    28619 [XML] Kaliga's Collection
-                    28620 [XML] Kaliga's Collection
-                    28621 [XML] Kaliga's Collection
-                    28622 [XML] Kaliga's Collection
-                    28623 [XML] Kaliga's Collection
-                    28624 [XML] Kaliga's Collection
-                    28625 [XML] Kaliga's Collection
-                    28626 [XML] Kaliga's Collection
-                    28627 [XML] Kaliga's Collection
-                    28628 [XML] Judge's Flame-Heated Sword
-                    28629 [XML] Judge's Flame-Heated Warhammer
-                    28630 [XML] Judge's Flame-Heated Dagger
-                    28631 [XML] Judge's Flame-Heated Jewel
-                    28632 [XML] Judge's Flame-Heated Tome
-                    28633 [XML] Judge's Flame-Heated Greatsword
-                    28634 [XML] Judge's Flame-Heated Spear
-                    28635 [XML] Judge's Flame-Heated Staff
-                    28636 [XML] Judge's Flame-Heated Longbow
-                    28640 [XML] Judge's Flame-Heated Pistol
-                    28641 [XML] Judge's Flame-Heated Aethercannon
-                    28642 [XML] Judge's Flame-Heated Harp
-                    28643 [XML] Kaliga's Collection
-                    28644 [XML] Kaliga's Collection
-                    28645 [XML] Kaliga's Collection
-            [END] SUMMARY
+        [BEGIN] SUMMARY
+               18600 [SCRIPT] Scoring Some Bad Stigma
+               18601 [SCRIPT] Nightmare on My Street
+               18602 [SCRIPT] Nightmare in Shining Armor
+               18604 [SCRIPT] Meeting with Rotan
+               18605 [XML] Dreams of the Dungeon
+               18606 [XML] To Dream, To Die
+               18607 [XML] Dream Fragment
+               18608 [XML] The Crying Sword
+               18609 [XML] The Crying Warhammer
+               18610 [XML] The Crying Dagger
+               18611 [XML] The Crying Jewel
+               18612 [XML] The Crying Tome
+               18613 [XML] The Crying Greatsword
+               18614 [XML] The Crying Spear
+               18615 [XML] The Crying Staff
+               18616 [XML] The Crying Longbow
+               18617 [XML] [Coin] Quell the Nightmare
+               18618 [XML] Kaliga's Collection
+               18619 [XML] Kaliga's Collection
+               18620 [XML] Kaliga's Collection
+               18621 [XML] Kaliga's Collection
+               18622 [XML] Kaliga's Collection
+               18623 [XML] Kaliga's Collection
+               18624 [XML] Kaliga's Collection
+               18625 [XML] Kaliga's Collection
+               18626 [XML] Kaliga's Collection
+               18627 [XML] Kaliga's Collection
+               18628 [XML] Judge's Flame-Heated Sword
+               18629 [XML] Judge's Flame-Heated Warhammer
+               18630 [XML] Judge's Flame-Heated Dagger
+               18631 [XML] Judge's Flame-Heated Jewel
+               18632 [XML] Judge's Flame-Heated Tome
+               18633 [XML] Judge's Flame-Heated Greatsword
+               18634 [XML] Judge's Flame-Heated Spear
+               18635 [XML] Judge's Flame-Heated Staff
+               18636 [XML] Judge's Flame-Heated Longbow
+               18643 [XML] Kaliga's Collection
+               18644 [XML] Kaliga's Collection
+               18645 [XML] Kaliga's Collection
+               18648 [XML] A Peek into Kaliga's Trove
+               28600 [SCRIPT] Suspicious Errand
+               28601 [SCRIPT] Nightmares and Dreamscapes
+               28602 [SCRIPT] Into the Unknown
+               28604 [SCRIPT] Recovering Rotan
+               28605 [XML] Seeking Slumber
+               28606 [XML] An Honorable Death
+               28607 [XML] A Blacksmith's Dream
+               28608 [XML] Judge's Tear-Soaked Sword
+               28609 [XML] Judge's Tear-Soaked Warhammer
+               28610 [XML] Judge's Tear-Soaked Dagger
+               28611 [XML] Judge's Tear-Soaked Jewel
+               28612 [XML] Judge's Tear-Soaked Tome
+               28613 [XML] Judge's Tear-Soaked Greatsword
+               28614 [XML] Judge's Tear-Soaked Spear
+               28615 [XML] Judge's Tear-Soaked Staff
+               28616 [XML] Judge's Tear-Soaked Longbow
+               28617 [XML] [Coin] Confirmation in Dreams
+               28618 [XML] Kaliga's Collection
+               28619 [XML] Kaliga's Collection
+               28620 [XML] Kaliga's Collection
+               28621 [XML] Kaliga's Collection
+               28622 [XML] Kaliga's Collection
+               28623 [XML] Kaliga's Collection
+               28624 [XML] Kaliga's Collection
+               28625 [XML] Kaliga's Collection
+               28626 [XML] Kaliga's Collection
+               28627 [XML] Kaliga's Collection
+               28628 [XML] Judge's Flame-Heated Sword
+               28629 [XML] Judge's Flame-Heated Warhammer
+               28630 [XML] Judge's Flame-Heated Dagger
+               28631 [XML] Judge's Flame-Heated Jewel
+               28632 [XML] Judge's Flame-Heated Tome
+               28633 [XML] Judge's Flame-Heated Greatsword
+               28634 [XML] Judge's Flame-Heated Spear
+               28635 [XML] Judge's Flame-Heated Staff
+               28636 [XML] Judge's Flame-Heated Longbow
+               28643 [XML] Kaliga's Collection
+               28644 [XML] Kaliga's Collection
+               28645 [XML] Kaliga's Collection
+               28648 [XML] Kaliga's Collection
+        [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
     <!-- COLLECTING QUESTS -->
@@ -108,6 +121,7 @@
     <item_collecting id="18643" start_npc_ids="730775"/>
     <item_collecting id="18644" start_npc_ids="730776"/>
     <item_collecting id="18645" start_npc_ids="730777"/>
+    <item_collecting id="18648" start_npc_ids="730887"/>
     <item_collecting id="18627" start_npc_ids="730335"/>
     <item_collecting id="28608" start_npc_ids="205237"/>
     <item_collecting id="28609" start_npc_ids="205237"/>
@@ -153,5 +167,6 @@
     <item_collecting id="28643" start_npc_ids="730775"/>
     <item_collecting id="28644" start_npc_ids="730776"/>
     <item_collecting id="28645" start_npc_ids="730777"/>
+    <item_collecting id="28648" start_npc_ids="730887"/>
     <!-- HUNTING QUESTS -->
 </quest_scripts>

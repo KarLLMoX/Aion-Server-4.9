@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
-	<!--
-		[BEGIN] SUMMARY
-			13800 [XML] New Lands to Behold
-			13801 [TODO] [Urgent Order] Minus One
-			13806 [XML] Hymrunerk Power and Associates
-			13807 [XML] The Flames of Kaldor
-			13808 [XML] Obnoxious Obscuras
-			13809 [XML] Tree is Company
-			13810 [XML] Legends of Folly
-			13811 [XML] Remnants of the Past
-			13812 [XML] An Unlikely Alliance
-			13813 [XML] [Weekly] Rabble Unroused
-			13814 [XML] [Weekly] Jobs Beget Jobs
-			13815 [XML] [Weekly] Broken
-			13817 [XML] [Weekly] The Fury Within
-			13818 [XML] [Weekly] Indirect Warfare
-			13819 [XML] [Weekly] On the Heels of Failure
-			13820 [XML] [Weekly] Keen Resource
-			13821 [XML] [Weekly] Ashen Duty
-			16922 [XML] Shugo Checkup
-			23800 [XML] A Full New World
-			23801 [TODO] [Urgent Order] Feroz's Request
-			23806 [XML] Talking 'Bout My Generators
-			23807 [XML] An Ample Sample
-			23808 [XML] Keeping the Keep Clear
-			23809 [XML] Scar of the Past
-			23810 [XML] Memory of the Collapsed Rune
-			23811 [XML] Cozy Conspiracy
-			23812 [XML] They've Got a Plot
-			23813 [XML] [Weekly] Vanquish the Vicinity
-			23814 [XML] [Weekly] Timberrrrrr
-			23815 [XML] [Weekly] A Spirit Released
-			23817 [XML] [Weekly] Free Spirit
-			23818 [XML] [Weekly] Spirit, Surprise, Strike
-			23819 [XML] [Weekly] Agitator Devastator
-			23820 [XML] [Weekly] No Heckling Allowed
-			23821 [XML] [Weekly] Due Diligence
-			26922 [XML] Another Passage
-		[END] SUMMARY
-	-->
+    <!--
+        [BEGIN] SUMMARY
+               13800 [XML] New Lands to Behold
+               13801 [XML] [Urgent Order] Minus One
+               13806 [XML] Hymrunerk Power and Associates
+               13807 [XML] The Flames of Kaldor
+               13808 [XML] Obnoxious Obscuras
+               13809 [XML] Tree is Company
+               13810 [XML] Legends of Folly
+               13811 [XML] Remnants of the Past
+               13812 [XML] An Unlikely Alliance
+               13813 [XML] [Weekly] Rabble Unroused
+               13814 [XML] [Weekly] Jobs Beget Jobs
+               13815 [XML] [Weekly] Broken
+               13817 [XML] [Weekly] The Fury Within
+               13818 [XML] [Weekly] Indirect Warfare
+               13819 [XML] [Weekly] On the Heels of Failure
+               13820 [XML] [Weekly] Keen Resource
+               13821 [XML] [Weekly] Ashen Duty
+               16922 [XML] Shugo Checkup
+               18978 [XML] Shard Discovered in Kaldor
+               23800 [XML] A Full New World
+               23801 [XML] [Urgent Order] Feroz's Request
+               23806 [XML] Talking 'Bout My Generators
+               23807 [XML] An Ample Sample
+               23808 [XML] Keeping the Keep Clear
+               23809 [XML] Scar of the Past
+               23810 [XML] Memory of the Collapsed Rune
+               23811 [XML] Cozy Conspiracy
+               23812 [XML] They've Got a Plot
+               23813 [XML] [Weekly] Vanquish the Vicinity
+               23814 [XML] [Weekly] Timberrrrrr
+               23815 [XML] [Weekly] A Spirit Released
+               23817 [XML] [Weekly] Free Spirit
+               23818 [XML] [Weekly] Spirit, Surprise, Strike
+               23819 [XML] [Weekly] Agitator Devastator
+               23820 [XML] [Weekly] No Heckling Allowed
+               23821 [XML] [Weekly] Due Diligence
+               26922 [XML] Another Passage
+               28978 [XML] Discovery in Kaldor
+        [END] SUMMARY
+    -->
 	<!-- REPORTING QUESTS -->
 	<report_to_many id="13800" start_npc_ids="800527" end_npc_ids="801163">
 		<npc_infos var="0" npc_id="800958" quest_dialog="1352"/>
@@ -75,11 +78,13 @@
 	<item_collecting id="13819" start_npc_ids="804588"/>
 	<item_collecting id="13820" start_npc_ids="804584"/>
 	<item_collecting id="13821" start_npc_ids="804584"/>
+    <item_collecting id="18978" start_npc_ids="802431" end_npc_ids="805215"/>
 	<item_collecting id="23812" start_npc_ids="802430"/>
 	<item_collecting id="23813" start_npc_ids="804589"/>
 	<item_collecting id="23819" start_npc_ids="804593"/>
 	<item_collecting id="23820" start_npc_ids="804589"/>
 	<item_collecting id="23821" start_npc_ids="804589"/>
+    <item_collecting id="28978" start_npc_ids="802433" end_npc_ids="805218"/>
 	<!-- MONSTER HUNT QUESTS -->
 	<monster_hunt id="13808" start_npc_ids="802431">	
 		<monster var="0" npc_ids="234294 234530" end_var="5"/>
@@ -114,8 +119,8 @@
 		<monster var="0" npc_ids="702618" end_var="1"/>
 	</monster_hunt>
 	<!-- KILL IN WORLD QUESTS -->
-    <!-- <kill_in_world id="13801" start_npc_ids="000000" end_npc_ids="802431" worlds="600090000" amount="1"/> --> <!-- REMOVED IN 4.7 -->
+    <kill_in_world id="13801" start_npc_ids="802431" end_npc_ids="802431" worlds="600090000" amount="2"/>
 	<kill_in_world id="13818" start_npc_ids="804588" end_npc_ids="804588" worlds="600090000" amount="6"/>
-	<!-- <kill_in_world id="23801" start_npc_ids="000000" end_npc_ids="802433" worlds="600090000" amount="1"/> --> <!-- REMOVED IN 4.7 -->
+	<kill_in_world id="23801" start_npc_ids="802433" end_npc_ids="802433" worlds="600090000" amount="2"/>
 	<kill_in_world id="23818" start_npc_ids="804593" end_npc_ids="804593" worlds="600090000" amount="6"/>
 </quest_scripts>

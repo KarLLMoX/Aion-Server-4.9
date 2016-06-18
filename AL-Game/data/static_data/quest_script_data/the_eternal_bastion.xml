@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
-            [BEGIN] SUMMARY
-                    13305 [SCRIPT] Meet Stifas the Stiff
-                    18030 [XML] [Alliance] Accounting for Orders
-                    18031 [XML] [Alliance] Eternal Campers
-                    18032 [XML] [Alliance] Artillery Action
-                    18033 [XML] [Alliance] Retreat Into Death
-                    18034 [XML] [Alliance] The Follow-Through
-                    18035 [XML] [Alliance] DRAKINT
-                    18036 [XML] Bastions Are Eternal; Positions Are Not
-                    18037 Add missing Quest
-                    23305 [SCRIPT] A Fierce Struggle
-                    28030 [XML] [Alliance] Protecting The Eternal Bastion
-                    28031 [XML] [Alliance] Eliminating the Bind Point Commander
-                    28032 [XML] [Alliance] The Enemy's Key Strength
-                    28033 [XML] [Alliance] Confusing the Chain of Command
-                    28034 [XML] [Alliance] Conquering Ambitions
-                    28035 [XML] [Alliance] Trust In None, But Verify
-                    28036 [XML] Interrogate Kvash
-                    28037 Add missing Quest
-            [END] SUMMARY
+        [BEGIN] SUMMARY
+               13305 [SCRIPT] Meet Stifas the Stiff
+               18030 [XML] [Alliance] Accounting for Orders
+               18031 [XML] [Alliance] Eternal Campers
+               18032 [XML] [Alliance] Artillery Action
+               18033 [XML] [Alliance] Retreat Into Death
+               18034 [XML] [Alliance] The Follow-Through
+               18035 [XML] [Alliance] Sheba's Surveillance
+               18036 [XML] Bastions Are Eternal; Positions Are Not
+               18037 [XML] [Alliance] Keep Up the Defense
+               23305 [SCRIPT] A Fierce Struggle
+               28030 [XML] [Alliance] Protecting The Eternal Bastion
+               28031 [XML] [Alliance] Eliminating the Bind Point Commander
+               28032 [XML] [Alliance] The Enemy's Key Strength
+               28033 [XML] [Alliance] Confusing the Chain of Command
+               28034 [XML] [Alliance] Conquering Ambitions
+               28035 [XML] [Alliance] Trust In None, But Verify
+               28036 [XML] Interrogate Kvash
+               28037 [XML] [Alliance] Defend to the End
+        [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
     <report_to id="18035" start_npc_ids="801037" end_npc_ids="800527"/>

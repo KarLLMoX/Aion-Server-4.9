@@ -127,9 +127,7 @@
                     80641 [XML] [Event] A Fruit Loving Girl 2 (Asmodians)
                     80642 [XML] [Event] A Fruit Loving Girl 2 (Asmodians)                   
                     80643 [XML] [Event/Weekly] A Busy Mother's Request (Elyos)
-                    80644 [XML] [Event/Weekly] A Busy Mother's Request (Asmodians)                   
-                    80670 [XML] [Event] Honorable Ceramium Medal Exchange (Elyos)
-                    80672 [XML] [Event] Honorable Ceramium Medal Exchange (Asmodians)                    
+                    80644 [XML] [Event/Weekly] A Busy Mother's Request (Asmodians)                                       
                     80683 [XML] [Event] Blessings of the Prismatic Serpent (Elyos)
                     80685 [XML] [Event] For the Glory of Rainbow Snake (Elyos)
                     80686 [XML] [Event] Blessings of the Prismatic Serpent (Asmodians)
@@ -277,9 +275,7 @@
     <item_collecting start_npc_ids="799763" id="80322"/>
     <item_collecting start_npc_ids="799763" id="80323"/>
     <item_collecting start_npc_ids="799763" id="80328"/>
-    <item_collecting start_npc_ids="799763" id="80329"/>
-    <item_collecting start_npc_ids="832903" id="80670"/>
-    <item_collecting start_npc_ids="832904" id="80672"/>    
+    <item_collecting start_npc_ids="799763" id="80329"/>   
     <item_collecting start_npc_ids="831871" id="80475"/> 
     <item_collecting start_npc_ids="831873" id="80477"/>
     <item_collecting start_npc_ids="831874" id="80478"/> 
