@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- parsed by phpTools from Aion Germany Group (Mariella) at 2016-06-17 15:24 -->
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
-	<!--
-		[BEGIN] SUMMARY
-			29600 [XML] Welcome Back
-			29601 [XML] Instruction on Instructors
-			29602 [XML] The Sheen of Newness
-			29603 [XML] [Daily] Brusthonin Brushback
-			29604 [XML] Drop into Draupnir
-			29605 [XML] Spiking the Spirits
-			29606 [XML] For Great Justice!
-			29607 [XML] Back to the Future from the Present
-			29608 [XML] Ready for Gelkmaros
-			29609 [XML] [Daily] Trouble Near Taloc
-			29610 [XML] Aether Aegis
-			29611 [XML] Under a Spell in Undirborg
-			29612 [XML] Temple and Tomb
-			29615 [XML] Dredgion Dismantling
-			29617 [XML] A Time to Kill
-			29618 [XML] Recovering from Betrayal
-			29619 [XML] Reclaiming Relics
-			29623 [XML] Right Time for a War
-			29624 [XML] Flames and Stone
-			29626 [XML] A Game of Bridge
-			29627 [XML] Come Back with Friends
-			29628 [XML] Foundry-Field Link
-			29629 [XML] Hyperion before It was Cool
-			29630 [XML] Light Up the Obelisk
-		[END] SUMMARY
-	-->
+    <!--
+        [BEGIN] SUMMARY
+               29600 [XML] Welcome Back
+               29601 [XML] Instruction on Instructors
+               29602 [XML] The Sheen of Newness
+               29603 [XML] [Daily] Brusthonin Brushback
+               29604 [XML] Drop into Draupnir
+               29605 [XML] Spiking the Spirits
+               29606 [XML] For Great Justice!
+               29607 [XML] Back to the Future from the Present
+               29608 [XML] Ready for Gelkmaros
+               29609 [XML] [Daily] Trouble Near Taloc
+               29610 [XML] Aether Aegis
+               29611 [XML] Under a Spell in Undirborg
+               29612 [XML] Temple and Tomb
+               29615 [XML] Dredgion Dismantling
+               29617 [XML] A Time to Kill
+               29618 [XML] Recovering from Betrayal
+               29619 [XML] Reclaiming Relics
+               29623 [XML] Right Time for a War
+               29624 [XML] Flames and Stone
+               29626 [XML] A Game of Bridge
+               29627 [XML] Come Back with Friends
+               29628 [XML] Foundry-Field Link
+               29629 [XML] Hyperion before It was Cool
+               29630 [XML] Light Up the Obelisk
+               29644 [TODO] Heading into the Unknown
+               29645 [TODO] [Daily] A Tidy Supply Route 
+               29646 [TODO] Tasks Ahead
+               29647 [TODO] [Daily] Assisting Grangund
+               29648 [TODO] Supporting Sefrim
+               29649 [TODO] Raksang Ruins Roundup
+               29650 [TODO] [Daily] Protect Whirlpool Temple
+               29651 [TODO] To Altgard
+               29652 [TODO] [Daily] Protect Moslan Forest
+               29653 [TODO] Protect Impetusium
+               29654 [TODO] To Haramel
+               29655 [TODO] To Morheim
+               29656 [TODO] [Daily] Protect Morheim
+               29657 [TODO] [Daily] Protect the Salt Desert
+               29658 [TODO] To the Nochsana Training Camp
+               29659 [TODO] To the Fire Temple
+               29660 [TODO] To Beluslan
+               29661 [TODO] [Daily] Protect Beluslan
+               29662 [TODO] [Daily] Protect Kidorun's Campsite
+               29663 [TODO] To Red Mane Cavern
+               29664 [TODO] [Daily] Protect Hoarfrost Shelter
+        [END] SUMMARY
+    -->
 	<!-- REPORTING QUESTS -->
     <report_to id="29600" start_npc_ids="209677" end_npc_ids="804662"/>
 	<report_to_many id="29601" start_npc_ids="804662" end_npc_ids="804666">
