@@ -379,24 +379,55 @@ function getNoremoveStatus($key)
     return "";
 }
 // ----------------------------------------------------------------------------
-// alle Skill-Tags ausgeben
+// alle relevanten Waffentypen zurückgeben
 // ----------------------------------------------------------------------------
-function showSkillTags()
+function getWeapons($key)
 {
-    global $tabxskill;
+    global $tabcskill;
     
-    logHead("Liste aller gefundenen Skill-Xml-Tags");
+    $tabweaps = array(
+                  // ohne Erweiterung 1H/2H
+                  array( "required_bow"    , "BOW"),
+                  // 1-Hand Waffen
+                  array( "required_dagger" , "DAGGER_1H"),
+                  array( "required_gun"    , "GUN_1H"),
+                  array( "required_mace"   , "MACE_1H"),
+                  array( "required_sword"  , "SWORD_1H"),
+                  // 2-Hand Waffen
+                  array( "required_book"   , "BOOK_2H"),
+                  array( "required_cannon" , "CANNON_2H"),
+                  array( "required_harp"   , "HARP_2H"),
+                  array( "required_keyblade","KEYBLADE_2H"),
+                  array( "required_orb"    , "ORB_2H"),
+                  array( "required_polearm", "POLEARM_2H"),
+                  array( "required_staff"  , "STAFF_2H"),
+                  array( "required_2hsword", "SWORD_2H")
+                     );
+    $maxweaps = count($tabweaps);
+    $ret      = "";
     
-    $tabSort = array_keys($tabxskill);
-    $maxSort = count($tabSort);
-    sort($tabSort);
-    
-    for ($s=0;$s<$maxSort;$s++)
+    for ($w=0;$w<$maxweaps;$w++)
     {
-        logLine("- Skill-Tag gefunden",$tabSort[$s]);
+        $wbin = getTabValue($key,$tabweaps[$w][0],"?");
+        
+        if ($wbin != "?")
+            $ret .= $tabweaps[$w][1]." ";
     }
+    return rtrim($ret);
+}
+// ----------------------------------------------------------------------------
+// SkillChargeId zurückgeben
+// ----------------------------------------------------------------------------
+function getChargeNameId($name)
+{
+    global $tabcharge;
     
-    logLine("Anzahl gefundene Tags",$maxSort);
+    $key = strtoupper($name);
+    
+    if (isset($tabcharge[$key]))
+        return $tabcharge[$key];
+    else
+        return "";
 }
 // ----------------------------------------------------------------------------
 //
@@ -473,6 +504,52 @@ function scanPsSkillNames()
         logLine("Anzahl Zeilen gelesen",$cntles);
         logLine("Anzahl Namen gefunden",$cntstr);
     }
+}
+// ----------------------------------------------------------------------------
+// Scannen der SkillCharges aus client_skill_charge.xml
+// ----------------------------------------------------------------------------
+function scanSkillCharges()
+{
+    global $pathdata, $tabcharge;
+    
+    $fileu16 = formFileName($pathdata."\\skills\\client_skill_charge.xml");
+    $fileext = convFileToUtf8($fileu16);
+    
+    logHead("Scanne die SkillCharges aus dem Client");
+    logLine("Eingabedatei UTF16",$fileu16);
+    logLine("Eingabedatei UTF8",$fileext);
+    
+    $cntles  = 0;
+    $cntids  = 0;
+    
+    $id = $name = "";
+    
+    $hdlext = openInputFile($fileext);
+    
+    flush();
+    
+    while (!feof($hdlext))
+    {
+        $line = rtrim(fgets($hdlext));
+        $cntles++;
+        
+        if     (stripos($line,"<id>")   !== false) 
+            $id   = getXmlValue("id",$line);
+        elseif (stripos($line,"<name>") !== false)
+            $name = strtoupper(getXmlValue("name",$line));
+        elseif (stripos($line,"</skill_charge_client>") !== false)
+        {
+            $tabcharge[$name] = $id;
+            $cntids++;
+            
+            $id = $name = "";
+        }
+    }
+    fclose($hdlext);
+    unlink($fileext);
+    
+    logLine("Anzahl Zeilen gelesen",$cntles);
+    logLine("Anzahl Charges gefunden",$cntids);
 }
 // ----------------------------------------------------------------------------
 // Scannen der ClientSkills aus client_skills.xml
@@ -581,7 +658,7 @@ function getPropertiesLines($key)
             $cfld = $ctab[$cind][1];
             
             // Feld gesetzt und muss vorhanden sein oder
-            // Feld nicht gesetzt und darf n icht vorhanden sein,
+            // Feld nicht gesetzt und darf nicht vorhanden sein,
             // dann Feld-Zeile der Tabelle berücksichtigen!
             if ( isset($tabcskill[$key][$cfld]) && $ctab[$cind][0] == true
             ||  !isset($tabcskill[$key][$cfld]) && $ctab[$cind][0] == false)
@@ -598,127 +675,182 @@ function getPropertiesLines($key)
     return $ret;
 }
 // ---------------------------------------------------------------------------
+//                          C O N D I T I O N S
+//
+// Möglichkeiten gem. aktueller XSD-Datei im SVN
+//
+// <xs:complexType name="Conditions">
+//     <xs:sequence minOccurs="0" maxOccurs="unbounded">
+//         <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
+//         <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+//     </xs:sequence>
+// </xs:complexType>
+//
+// Zuordnungen aktuell (gem. SVN):
+// startconditions          dp, mp, chain, target, selfflying, weapon, combatcheck,
+//                          form, targetflying, skillcharge, hp, lefthandweapon
+// - zusätzlich zum SVN     arrowcheck, robotcheck
+//          
+// endconditions            chargeweapon, chargearmor, polishchargeweapon
+//
+// useconditions            move_casting
+//
+// useequipmentconditions   lefthandweapon
+//
+// noch nicht zugeordnet, auch aktuell im SVN nicht vorhanden:
+//                          abnormal, onfly, noflying, back, front, charge
+// ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: StartConditions
 // ---------------------------------------------------------------------------
 function getStartConditionLines($key)
 {
     global $tabcskill;
     
-    // Feld-Tabelle: 0=EXT-Feldname, 1=EMU-Feldname, 2=Default, 3=ConditionIndex (0=dummy)
-    // Zuordnung zu Start/End/Use-conditions muss noch geklärt werden
-    /*
-    $ftab = array(
-              array(""               ,"mp"      ,"",0),
-              array("","hp","",0),
-              array("cost_dp","dp"   ,"",0),
-              array(""               ,"target"       ,"",0),
-              array(""              ,"move_casting"               ,"",0),
-              array(""       ,"arrowcheck"     ,"",0),  
-              array(""            ,"robotcheck"   ,"",0),
-              array(""          ,"abnormal" ,"",0),
-              array(""          ,"onfly","",0),
-              array(""          ,"onflying"    ,"",1),  
-              array(""          ,"weapon"   ,"",2),  
-              array(""          ,"lefthandweapon"   ,"",0),
-              array(""          ,"targetflying"         ,"",0),
-              array("" ,"selfflying"    ,"",0)
-              array("","combatcheck","")                                   
-              array("","chain","")    
-              array("","back","")                                  
-              array("","front","")                                  
-              array("","form","")                                  
-              array("","charge","")                                  
-              array("","chargeweapon","")                                  
-              array("","chargearmor","")                                  
-              array("","polishchargeweapon","")                                  
-              array("","skillcharge","")                                                                
-                 );
-    $fmax = count($ftab);
-    */
     $ret = "";
     
-    // ........
-    /*    
-        <xs:complexType name="Conditions">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
-            </xs:sequence>
-        </xs:complexType>
-    */
+    $chain = getTabValue($key,"chain_category_name","?");
+    $comb  = getTabValue($key,"nouse_combat_state","?");
+    $dp    = getTabValue($key,"cost_dp","?");
+    $form  = strtoupper(getTabValue($key,"allow_use_form_category","?"));
+    $hpmp  = strtolower(getTabValue($key,"cost_parameter","?"));
+    $left  = strtoupper(getTabValue($key,"required_leftweapon","?"));
+    $selff = strtoupper(getTabValue($key,"self_flying_restriction","?"));
+    $skill = getTabValue($key,"charge_set_name","?");
+    $targ  = strtoupper(getTabValue($key,"target_species_restriction","?"));
+    $targf = strtoupper(getTabValue($key,"target_flying_restriction","?"));
+    $weapn = getWeapons($key);
+    
+    $arrow = getTabValue($key,"use_arrow","?");
+    $robot = getTabValue($key,"required_ride_robot","?");
+    
+    $rtxt  = "";
+    $dtxt  = "";
+    
+    if ($targ != "?" && $targ != "ALL")
+        $ret .= '            <target value="'.$targ.'"/>'."\n";
+        
+    if ($dp != "?")
+        $ret .= '            <dp value="'.$dp.'"/>'."\n";
+    
+    if ($hpmp != "?")
+    {
+        $cost = getTabValue($key,'cost_end','0');
+        
+        if ($cost != "?" && $cost != "0")
+        {
+            $delt = getTabValue($key,'cost_end_lv','0');
+            
+            // RATIO
+            if (stripos($hpmp,"_ratio") !== false)
+            {
+                $hpmp = str_replace("_ratio","",$hpmp);
+                $rtxt = ' ratio="true"';
+            }
+        
+            // DELTA
+            if ($hpmp == "mp" || $hpmp = "hp")
+            {
+                // Delta nur, wenn kein Ratio bzw. wenn RATIO und Wert != 0
+                if ($rtxt == "" || ($rtxt != "" && $delt != "0"))
+                    $dtxt = ' delta="'.$delt.'"';
+            }
+                    
+            $ret .= '            <'.$hpmp.' value="'.$cost.'"'.$dtxt.$rtxt.'/>'."\n";       
+        }
+    }
+        
+    if ($comb == "1")
+        $ret .= '            <combatcheck/>'."\n";
+    
+    if ($arrow == "1")
+        $ret .= '            <arrowcheck/>'."\n";
+        
+    if ($robot == "1")
+        $ret .= '            <robotcheck/>'."\n";
+    
+    if ($weapn != "")
+        $ret .= '            <weapon weapon="'.$weapn.'"/>'."\n";    
+    
+    if ($left != "?")
+        $ret .= '            <lefthandweapon type="'.$left.'"/>'."\n";
+    
+    if ($chain != "?")
+    {
+        $cpre = strtoupper(getTabValue($key,"prechain_category_name","?"));
+        $pcnt = getTabValue($key,"prechain_count","?");
+        $time = getTabValue($key,"chain_time","?");
+        $scnt = getTabValue($key,"self_chain_count","?");
+        
+        $ret .= '            <chain category="'.$chain.'"';
+        if ($cpre != "?") $ret .= ' precategory="'.$cpre.'"';
+        if ($time != "?") $ret .= ' time="'.$time.'"';
+        if ($pcnt != "?") $ret .= ' precount="'.$pcnt.'"';
+        if ($scnt != "?") $ret .= ' selfcount="'.$scnt.'"';
+        $ret .= "/>\n";
+    }    
+    
+    if ($targf != "?")
+        $ret .= '            <targetflying restriction="'.$targf.'"/>'."\n";
+        
+    if ($selff != "?")
+        $ret .= '            <selfflying restriction="'.$selff.'"/>'."\n";
+    
+    if ($form != "?")
+        $ret .= '            <form value="'.$form.'"/>'."\n";
+     
+    if ($skill != "?")
+    {
+        $skid = getChargeNameId($skill);
+        $ret .= '            <skillcharge value="'.$skid.'"/>'."\n";
+    }
     
     if ($ret != "")
         $ret = '        <startconditions>'."\n".
-               $ret.'</startconditions>';
+               $ret.'        </startconditions>';
         
     return $ret;
 }
 // ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: UseConditions
 // ---------------------------------------------------------------------------
-function getuseConditionLines($key)
+function getUseConditionLines($key)
 {
     global $tabcskill;
     
     $ret = "";
     
-    // ........
-    /*    
-        <xs:complexType name="Conditions">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
-            </xs:sequence>
-        </xs:complexType>
-    */
+    // Gemäss akt. SVN-Datei nur "move_casting" ermittelt!
+    // wenn nicht gesetzt ("?") oder "0", dann ausgeben!
+    $move = getTabValue($key,"move_casting","?");
     
+    if ($move != "1")
+        $ret = '            <move_casting allow="false"/>'."\n";
+                
     if ($ret != "")
         $ret = '        <useconditions>'."\n".
-               $ret.'</useconditions>';
+               $ret.'        </useconditions>';
         
     return $ret;
 }
@@ -731,41 +863,22 @@ function getEndConditionLines($key)
     
     $ret = "";
     
-    // ........
-    /*    
-        <xs:complexType name="Conditions">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
-            </xs:sequence>
-        </xs:complexType>
-    */
+    $weapn = getTabValue($key,"cost_charge_weapon","?");
+    $armor = getTabValue($key,"cost_charge_armor","?");
+    $polis = getTabValue($key,"polish_charge_weapon","?");
+    
+    if ($weapn != "?" && $weapn != "0")
+        $ret .= '            <chargeweapon value="'.$weapn.'"/>'."\n";
+    
+    if ($armor != "?" && $armor != "0")
+        $ret .= '            <chargearmor value="'.$armor.'"/>'."\n";
+    
+    if ($polis != "?" && $polis != "0")
+        $ret .= '            <polishchargeweapon value="'.$polis.'"/>'."\n";
     
     if ($ret != "")
         $ret = '        <endconditions>'."\n".
-               $ret.'</endconditions>';
+               $ret.'        </endconditions>';
         
     return $ret;
 }
@@ -778,41 +891,14 @@ function getUseEquipConditionLines($key)
     
     $ret = "";
     
-    // ........
-    /*    
-        <xs:complexType name="Conditions">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
-            </xs:sequence>
-        </xs:complexType>
-    */
+    $left = getTabValue($key,"required_leftweapon","?");
     
+    if ($left != "?")
+        $ret .= '            <lefthandweapon type="'.strtoupper($left).'"/>'."\n";
+        
     if ($ret != "")
         $ret = '        <useequipmentconditions>'."\n".
-               $ret.'</useequipmentconditions>';
+               $ret.'        </useequipmentconditions>';
         
     return $ret;
 }
@@ -1201,35 +1287,6 @@ function generSkillTemplateFile()
     
     while (list($key,$val) = each($tabcskill))
     {   
-        /*
-        <skill_template skill_id="1" name="Transformation: White Tiger" nameId="4571867" name_desc="RA_Light_WhiteTiger_G1" cooldownId="792" stack="SKILLN_RA_LIGHT_WHITETIGER" lvl="1" skilltype="MAGICAL" skillsubtype="BUFF" tslot="BUFF" dispel_category="BUFF" req_dispel_level="2" activation="ACTIVE" cooldown="100" duration="0" cancel_rate="20">
-            <properties first_target="ME" first_target_range="1" target_relation="FRIEND" target_type="ONLYONE"/>
-            <startconditions>
-                <dp value="2000"/>
-            </startconditions>
-            <endconditions>
-                <chargeweapon value="10"/>
-                <chargearmor value="11"/>
-                <polishchargeweapon value="77"/>
-            </endconditions>
-            <effects>
-                <shapechange model="202641" type="PC" duration2="120000" effectid="175" e="1" basiclvl="100" noresist="true" hoptype="SKILLLV" hopb="248"/>
-                <statup duration2="120000" effectid="107922" e="2" basiclvl="100" noresist="true" preeffect="1">
-                    <change stat="PHYSICAL_ATTACK" func="PERCENT" value="10"/>
-                </statup>
-                <statup duration2="120000" effectid="107923" e="3" basiclvl="100" noresist="true" preeffect="1">
-                    <change stat="ATTACK_SPEED" func="PERCENT" value="-30"/>
-                </statup>
-                <statup duration2="120000" effectid="107924" e="4" basiclvl="100" noresist="true" preeffect="1">
-                    <change stat="SPEED" func="PERCENT" value="30"/>
-                </statup>
-            </effects>
-            <actions>
-                <dpuse value="2000"/>
-            </actions>
-            <motion name="phburst"/>
-        </skill_template>
-        */
         $cntids++;
         
         $skillname = getIntSkillName($tabcskill[$key]['desc']);
@@ -1292,7 +1349,7 @@ function generSkillTemplateFile()
                 {
                     case  1: $oline = getPropertiesLines($key); break;
                     case  2: $oline = getStartConditionLines($key); break;
-                    case  3: $oline = getuseConditionLines($key); break;
+                    case  3: $oline = getUseConditionLines($key); break;
                     case  4: $oline = getEndConditionLines($key); break;
                     case  5: $oline = getUseEquipConditionLines($key); break;
                     case  6: $oline = getEffectsLines($key); break;
@@ -1506,7 +1563,11 @@ function makeAbgleichSvnFile()
         
         // ganzen Block ausgeben?
         if (stripos($line,"<actions>")          !== false
-        ||  stripos($line,"<periodicactions")   !== false)
+        ||  stripos($line,"<periodicactions")   !== false
+        ||  stripos($line,"<startconditions")   !== false
+        ||  stripos($line,"<endconditions")     !== false
+        ||  stripos($line,"<useconditions")     !== false
+        ||  stripos($line,"<useequipmentconditions") !== false)
             $doblock = true;
         
         // einzelne Zeilen ausgeben?
@@ -1523,8 +1584,12 @@ function makeAbgleichSvnFile()
         }
         
         // Blockende?
-        if (stripos($line,"</actions>")         !== false
-        ||  stripos($line,"</periodicactions>") !== false)
+        if (stripos($line,"</actions>")          !== false
+        ||  stripos($line,"</periodicactions>")  !== false
+        ||  stripos($line,"</startconditions")   !== false
+        ||  stripos($line,"</endconditions")     !== false
+        ||  stripos($line,"</useconditions")     !== false
+        ||  stripos($line,"</useequipmentconditions") !== false)
             $doblock = false;
     }
     // Nachspann ausgeben
@@ -1536,6 +1601,117 @@ function makeAbgleichSvnFile()
     
     logLine("Anzahl Zeilen ausgegeben",$cntout);
 }
+// ----------------------------------------------------------------------------
+//
+//                     T E S T - F U N K T I O N E N
+//
+// ----------------------------------------------------------------------------
+// alle Skill-Tags ausgeben
+// ----------------------------------------------------------------------------
+function showSkillTags()
+{
+    global $tabxskill;
+    
+    logHead("Liste aller gefundenen Skill-Xml-Tags");
+    
+    $tabSort = array_keys($tabxskill);
+    $maxSort = count($tabSort);
+    sort($tabSort);
+    
+    for ($s=0;$s<$maxSort;$s++)
+    {
+        logLine("- Skill-Tag gefunden",$tabSort[$s]);
+    }
+    
+    logLine("Anzahl gefundene Tags",$maxSort);
+}
+// ----------------------------------------------------------------------------
+// alle genutzten Condition-Tags im akt. SVN ermitteln/ausgeben
+// ----------------------------------------------------------------------------
+function showAllConditions()
+{
+    global $pathsvn;
+    
+    $tabcond = array();
+    
+    logHead("Erzeuge Conditions-Liste aus dem SVN");
+    
+    $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
+    $hdlsvn  = openInputFile($filesvn);
+     
+    $incond = "";
+    $endkey = "???";
+    
+    while (!feof($hdlsvn))
+    {
+        $line = rtrim(fgets($hdlsvn));
+        
+        if (stripos($line,"<startconditions>") !== false
+        ||  stripos($line,"<endconditions>")   !== false
+        ||  stripos($line,"<useconditions>")   !== false
+        ||  stripos($line,"<useequipmentconditions>") !== false)
+        {
+            $incond = getXmlKey($line);
+            $endkey = "</$incond>";
+        }
+        else
+        {
+            if ($incond)
+            {
+                if (stripos($line,$endkey) !== false)
+                {
+                    $incond = "";
+                    $endkey = "???";
+                }
+                else
+                {
+                    $xml = getXmlKey($line);
+                    $tabcond[$incond][$xml] = 1;
+                }
+            }
+        }
+    }
+    fclose($hdlsvn);
+    
+    while (list($key,$val) = each($tabcond))
+    {
+        logLine($key,"Condition Start");
+        
+        while (list($xml,$xval) = each($tabcond[$key]))
+        {   
+            logLine("- XML-Key",$xml);
+        }
+    }
+    /* aktuelles Ergebnis !!!!
+        startconditions
+        - XML-Key 	dp
+        - XML-Key 	mp
+        - XML-Key 	chain
+        - XML-Key 	target
+        - XML-Key 	selfflying
+        - XML-Key 	weapon
+        - XML-Key 	combatcheck
+        - XML-Key 	form
+        - XML-Key 	targetflying
+        - XML-Key 	skillcharge
+        - XML-Key 	lefthandweapon
+        - XML-Key 	hp
+        endconditions 
+        - XML-Key 	chargeweapon
+        - XML-Key 	chargearmor
+        - XML-Key 	polishchargeweapon
+        useconditions 
+        - XML-Key 	move_casting
+        useequipmentconditions
+        - XML-Key 	lefthandweapon
+    */
+}  
+// ----------------------------------------------------------------------------
+// alle genutzten Effect-Tags im akt. SVN ermitteln/ausgeben
+// ----------------------------------------------------------------------------
+function showAllEffects()
+{
+}  
 // ----------------------------------------------------------------------------
 //                             M  A  I  N
 // ----------------------------------------------------------------------------
@@ -1549,6 +1725,7 @@ $starttime = microtime(true);
 $tabSNames = array();
 $tabcskill = array();
 $tabxskill = array();
+$tabcharge = array();
 
 echo '
    <tr>
@@ -1574,9 +1751,14 @@ if ($submit == "J")
     else
     {
         scanPsSkillNames();
+        scanSkillCharges();
         scanClientSkills();
+        // -------------------------
+        // nur zum Testen benötigt!
         // showSkillTags();
-        
+        // showAllConditions();
+        // showAllEffects();
+        // -------------------------
         generSkillTemplateFile();
         generSkillTreeFile();
         
