@@ -251,6 +251,14 @@ function getXmlKey($line)
     $xmlkey = substr($line,stripos($line,"<") + 1);
     $xmlkey = substr($xmlkey,0,stripos($xmlkey,">"));
     
+    // wenn der XmlKey " " enthält, dann sind offensichtlich Attribute vorge-
+    // geben, also nur bis " " ermitteln/zurückgeben
+    if (stripos($xmlkey," ") !== false)
+        $xmlkey = substr($xmlkey,0,stripos($xmlkey," "));
+    // Wenn es sich um ein ShortTag handelt, dann nur bis zum "/" ermitteln
+    if (stripos($xmlkey,"/") !== false)
+        $xmlkey = substr($xmlkey,0,stripos($xmlkey,"/"));
+        
     return $xmlkey;
 }
 // ----------------------------------------------------------------------------
