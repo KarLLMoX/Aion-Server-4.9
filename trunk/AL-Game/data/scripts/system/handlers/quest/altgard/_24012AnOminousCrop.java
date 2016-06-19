@@ -25,7 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
- * Talk with Loriniah (203605). Scout the MuMu Farmland (DF1A_SENSORYAREA_Q2013_206012_1_220030000). Scouting completed! Talk with
+ * Talk with Loriniah (203605). Scout the MuMu Farmland (DF1A_SENSORYAREA_Q2412_206012_1_220030000). Scouting completed! Talk with
  * Loriniah. Burn the MuMu Carts (700096) in the MuMu Farmland (3). Talk with Loriniah. Defeat the Skurvs and Mau and
  * bring the evidence to Loriniah.
  * 
@@ -46,7 +46,7 @@ public class _24012AnOminousCrop extends QuestHandler {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(203605).addOnTalkEvent(questId);
 		qe.registerQuestNpc(700096).addOnTalkEvent(questId);
-		qe.registerOnEnterZone(ZoneName.get("DF1A_SENSORYAREA_Q2013_206012_1_220030000"), questId);
+		qe.registerOnEnterZone(ZoneName.get("DF1A_SENSORYAREA_Q2412_206012_1_220030000"), questId);
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class _24012AnOminousCrop extends QuestHandler {
 
 	@Override
 	public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
-		if (zoneName == ZoneName.get("DF1A_SENSORYAREA_Q2013_206012_1_220030000")) {
+		if (zoneName == ZoneName.get("DF1A_SENSORYAREA_Q2412_206012_1_220030000")) {
 			Player player = env.getPlayer();
 			if (player == null)
 				return false;

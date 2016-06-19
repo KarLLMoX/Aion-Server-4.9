@@ -999,4 +999,7 @@
     <zone mapid="210070000" name="LF5_SensoryArea_Q26987" area_type="SPHERE" zone_type="SUB">
         <sphere x="2099" y="2282" z="295" r="10.0"/>
     </zone>
+	<zone mapid="220030000" name="DF1A_SENSORYAREA_Q2412_206012_1_220030000" area_type="SPHERE" zone_type="SUB">
+        <sphere x="1815" y="1240" z="280" r="10.0"/>
+    </zone>
 </zones>
