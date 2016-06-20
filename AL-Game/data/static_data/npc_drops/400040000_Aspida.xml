@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 02.04.2016 17:53 aus PS-Drop-Datei: Aspida_4.9_loot_live422376647.xml -->
+<!-- generiert am/um 20.06.2016 09:54 aus PS-Drop-Datei: Aspida_4.9_loot_live398081299.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="881080">
         <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
@@ -410,6 +410,11 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="881114">
+        <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
+            <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
+            <drop item_id="152011103" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Armor Flux" />
+            <drop item_id="152011106" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Accessory Flux" />
+        </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="152012594" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Harmony Breath" />
         </drop_group>
@@ -1217,6 +1222,7 @@
     </npc_drop>
     <npc_drop npc_id="881412">
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
@@ -1268,8 +1274,12 @@
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="5" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
         </drop_group>
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="152012595" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Unity Breath" />
             <drop item_id="152012605" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sheltered Breath" />
             <drop item_id="152012606" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vigor Breath" />
+        </drop_group>
+        <drop_group name="POWER_SHARD_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="169000010" chance="10.00" min_amount="1" max_amount="234" no_reduce="false" eachmember="false" name="Superior Power Shard" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000374" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Aspida Fragment" />
@@ -1287,6 +1297,11 @@
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="186000374" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Glossy Aspida Fragment" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="881418">
+        <drop_group name="OTHER_RARE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="186000378" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prismatic Aspida Fragment" />
         </drop_group>
     </npc_drop>
 </npc_drops>
