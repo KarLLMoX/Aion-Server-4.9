@@ -1,0 +1,412 @@
+Index: config/main/abbeyreturn.properties
+===================================================================
+--- config/main/abbeyreturn.properties	(nonexistent)
++++ config/main/abbeyreturn.properties	(working copy)
+@@ -0,0 +1,22 @@
++#
++# This file is part of aion-lightning <aion-lightning.org>.
++#
++# aion-lightning is free software: you can redistribute it and/or modify
++# it under the terms of the GNU General Public License as published by
++# the Free Software Foundation, either version 3 of the License, or
++# (at your option) any later version.
++#
++# aion-lightning is distributed in the hope that it will be useful,
++# but WITHOUT ANY WARRANTY; without even the implied warranty of
++# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++# GNU General Public License for more details.
++#
++# You should have received a copy of the GNU General Public License
++# along with aion-lightning.  If not, see <http://www.gnu.org/licenses/>.
++#
++# ----------------------------
++# Abbey Return Configs
++# ----------------------------
++# Abbey Return
++# Default: false
++gameserver.abbey.return.enable = true
+Index: src/com/aionemu/gameserver/configs/Config.java
+===================================================================
+--- src/com/aionemu/gameserver/configs/Config.java	(revision 279)
++++ src/com/aionemu/gameserver/configs/Config.java	(working copy)
+@@ -72,6 +72,9 @@
+             Properties[] mainProps = PropertiesUtils.loadAllFromDirectory(main);
+             PropertiesUtils.overrideProperties(mainProps, myProps);
+ 
++            ConfigurableProcessor.process(AbbeyReturnConfig.class, mainProps);
++            log.info("[Config] Loading: " + main + "/abbeyreturn.properties");
++
+             ConfigurableProcessor.process(AgentFightConfig.class, mainProps);
+             log.info("[Config] Loading: " + main + "/agentfight.properties");
+ 
+@@ -247,6 +250,9 @@
+             Properties[] mainProps = PropertiesUtils.loadAllFromDirectory(main);
+             PropertiesUtils.overrideProperties(mainProps, myProps);
+ 
++            ConfigurableProcessor.process(AbbeyReturnConfig.class, mainProps);
++            log.info("[Config] Loading: " + main + "/abbeyreturn.properties");
++
+             ConfigurableProcessor.process(AgentFightConfig.class, mainProps);
+             log.info("[Config] Reload: " + main + "/agentfight.properties");
+ 
+Index: src/com/aionemu/gameserver/configs/main/AbbeyReturnConfig.java
+===================================================================
+--- src/com/aionemu/gameserver/configs/main/AbbeyReturnConfig.java	(nonexistent)
++++ src/com/aionemu/gameserver/configs/main/AbbeyReturnConfig.java	(working copy)
+@@ -0,0 +1,25 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.configs.main;
++
++import com.aionemu.commons.configuration.Property;
++
++public class AbbeyReturnConfig {
++
++    @Property(key="gameserver.abbey.return.enable", defaultValue="false")
++	public static boolean BUFF_SERVICE_ENABLED;
++}
+Index: src/com/aionemu/gameserver/GameServer.java
+===================================================================
+--- src/com/aionemu/gameserver/GameServer.java	(revision 279)
++++ src/com/aionemu/gameserver/GameServer.java	(working copy)
+@@ -269,7 +269,7 @@
+          *  be optimized unused memory. (Avoids OutOfMemoryException)
+          */
+         GarbageCollector.getInstance().start();  
+-        Util.printSsSection("Other Services");
++        Util.printSsSection("Other Services");    
+         WorldBuffService.getInstance();
+         //PetitionService.getInstance();
+         if (AIConfig.SHOUTS_ENABLE) {
+@@ -303,6 +303,7 @@
+         LookManager.getInstance().onStart();
+         SupportService.getInstance();
+         TerritoryService.getInstance().init();
++        AbbeyReturnService.getInstance().init();        
+         if (MembershipConfig.ONLINE_BONUS_ENABLE)
+             OnlineBonus.getInstance();
+ 		RestartService.getInstance();
+Index: src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java
+===================================================================
+--- src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java	(working copy)
+@@ -0,0 +1,32 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.bonus_service;
++
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++
++public class PlayersBonus {
++
++	public PlayersBonus(int i) {
++		// TODO Auto-generated constructor stub
++	}
++
++	public void applyEffect(Player player, int i) {
++		// TODO Auto-generated method stub
++		
++	}
++
++}
+Index: src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java
+===================================================================
+--- src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java	(working copy)
+@@ -0,0 +1,21 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.bonus_service;
++
++public class ServiceBuff {
++
++}
+Index: src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java
+===================================================================
+--- src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java	(working copy)
+@@ -0,0 +1,32 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.bonus_service;
++
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++
++public class PlayersBonus {
++
++	public PlayersBonus(int i) {
++		// TODO Auto-generated constructor stub
++	}
++
++	public void applyEffect(Player player, int i) {
++		// TODO Auto-generated method stub
++		
++	}
++
++}
+Index: src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java
+===================================================================
+--- src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java	(working copy)
+@@ -0,0 +1,21 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.bonus_service;
++
++public class ServiceBuff {
++
++}
+Index: src/com/aionemu/gameserver/model/gameobjects/player/Player.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/Player.java	(revision 279)
++++ src/com/aionemu/gameserver/model/gameobjects/player/Player.java	(working copy)
+@@ -2643,4 +2643,9 @@
+ 	public void setConquerorDefenderData(PlayerConquererProtectorData conquerorDefenderData) {
+ 		this.conquerorProtectorData = conquerorDefenderData;
+ 	}
++
++	public void setPlayersBonusId(int i) {
++		// TODO Auto-generated method stub
++		
++	}
+ }
+Index: src/com/aionemu/gameserver/model/gameobjects/player/PlayerCommonData.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/PlayerCommonData.java	(revision 279)
++++ src/com/aionemu/gameserver/model/gameobjects/player/PlayerCommonData.java	(working copy)
+@@ -101,6 +101,7 @@
+ 
+ 	public Map<Integer, AtreianPassport> playerPassports = new HashMap<Integer, AtreianPassport>(1);
+     private PlayerPassports completedPassports;
++	private Timestamp endReturnDate;
+ 
+     // TODO: Move all function to playerService or Player class.
+     public PlayerCommonData(int objId) {
+@@ -823,4 +824,13 @@
+ 	public void setUpgradeArcade(PlayerUpgradeArcade upgradeArcade) {
+ 		this.upgradeArcade = upgradeArcade;
+ 	}
+-}
+\ No newline at end of file
++
++	public void setReturnEnd(Timestamp endReturnDate) {
++		this.endReturnDate = endReturnDate;		
++	}
++
++	public Timestamp getReturnEnd() {
++		// TODO Auto-generated method stub
++		return null;
++	}
++}
+Index: src/com/aionemu/gameserver/services/AbbeyReturnService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/AbbeyReturnService.java	(nonexistent)
++++ src/com/aionemu/gameserver/services/AbbeyReturnService.java	(working copy)
+@@ -0,0 +1,137 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.services;
++
++import java.sql.Timestamp;
++
++import org.joda.time.DateTime;
++import org.slf4j.Logger;
++import org.slf4j.LoggerFactory;
++
++import com.aionemu.gameserver.configs.main.AbbeyReturnConfig;
++import com.aionemu.gameserver.model.Race;
++import com.aionemu.gameserver.model.bonus_service.PlayersBonus;
++import com.aionemu.gameserver.model.bonus_service.ServiceBuff;
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
++import com.aionemu.gameserver.services.item.ItemService;
++
++public class AbbeyReturnService {
++
++    private static final Logger log = LoggerFactory.getLogger(AbbeyReturnService.class);
++
++    private static ServiceBuff serviceBuff;
++    private static PlayersBonus playersBonus;
++
++	public void init() {
++		if (AbbeyReturnConfig.BUFF_SERVICE_ENABLED) {
++			log.info("Abbey Return Service are actived...");
++		} else {
++			log.info("Abbey Return Service are disabled...");
++		}
++	}
++
++	public static void initBuffService(Player player){
++		if (checkOnlineDate(player.getCommonData())) {
++			addReturnPlayer(player);
++		} 
++		if (!checkOnlineDate(player.getCommonData())) {
++			addReturnBuff(player);
++		}
++		if (player.getClientConnection().getAccount().getMembership() == 1) {
++			prestigePlayerbuff(player);
++		} else {
++			newPlayerBuff(player);
++		}
++	}
++
++	public static void addReturnPlayer(Player player) {
++		PlayerCommonData pcd = player.getCommonData();
++		pcd.setReturnEnd(endReturnDate());
++		addReturnBuff(player);
++                addItem(player);
++	}
++
++	public static void addReturnBuff(Player player) {
++		PlayerCommonData pcd = player.getCommonData();
++		if (checkEndDate(player.getCommonData())) {
++            playersBonus = new PlayersBonus(3);
++            playersBonus.applyEffect(player, 3);
++            player.setPlayersBonusId(3);
++        }
++	}
++
++	public static void newPlayerBuff(Player player) {
++		PlayerCommonData pcd = player.getCommonData();
++		if (player.getLevel() >= 1 && player.getLevel() <= 64) {
++            playersBonus = new PlayersBonus(2);
++            playersBonus.applyEffect(player, 2);
++            player.setPlayersBonusId(2);
++        }
++	}
++
++	public static void prestigePlayerbuff(Player player) {
++        playersBonus = new PlayersBonus(10);
++        playersBonus.applyEffect(player, 10);
++        player.setPlayersBonusId(10);
++	}
++
++	private static Timestamp endReturnDate() {
++		DateTime now = DateTime.now();
++		DateTime repeatDate = new DateTime(now.getYear(), now.getMonthOfYear(), now.getDayOfMonth(), 9, 0, 0);
++		repeatDate = repeatDate.plusDays(30);
++		
++		return new Timestamp(repeatDate.getMillis());
++	}
++
++
++	private static boolean checkOnlineDate(PlayerCommonData pcd) {
++	    long lastOnline = pcd.getLastOnline().getTime();
++	    long secondsOffline = (System.currentTimeMillis() / 1000) - lastOnline / 1000;
++	    double hours = secondsOffline / 3600d;
++        return hours > 720;
++	}
++
++	private static boolean checkEndDate(PlayerCommonData pcd) {
++	    long lastOnline = pcd.getReturnEnd().getTime();
++	    long secondsOffline = (System.currentTimeMillis() / 1000) - lastOnline / 1000;
++	    double hours = secondsOffline / 3600d;
++
++        return hours < 720;
++	}
++
++	private static void addItem(Player player) {
++		if (player.getRace() == Race.ELYOS){
++			ItemService.addItem(player, 164000335, 1); //Abbey Return Stone (30 days)
++		} else {
++			ItemService.addItem(player, 164000336, 1); //Abbey Return Stone (30 days)
++		}
++
++	}
++
++	private static boolean isReturnPlayer(Player player){
++        return checkEndDate(player.getCommonData());
++	}
++
++	private static class SingletonHolder {
++		private static final AbbeyReturnService INSTANCE = new AbbeyReturnService();
++	}
++	
++	public static AbbeyReturnService getInstance() {
++		return SingletonHolder.INSTANCE;
++	}
++}
