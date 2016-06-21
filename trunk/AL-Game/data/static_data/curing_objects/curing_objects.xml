@@ -12,7 +12,8 @@
     <curing_object map_id="700010000" x="685.51056" y="2225.5466" z="159.19759" range="11.2"/>
     <curing_object map_id="700010000" x="1214.8632" y="1910.168" z="95.05228" range="16.5"/>
     <curing_object map_id="700010000" x="1206.8019" y="1778.9161" z="93.82584" range="16.5"/>
-    <!-- 4.7.5 -->
-    <!--<curing_object map_id="130090000" x="246.58" y="291.43" z="130.25021" range="19.5"/>
-    <curing_object map_id="140010000" x="219.5" y="266.16" z="97.24827" range="19.5"/>-->
+    <!-- Wisplight Abbey -->
+    <curing_object map_id="130090000" x="246.22" y="290.17" z="130.25" range="19.5"/>
+    <!-- Fatebound Abbey -->
+    <curing_object map_id="140010000" x="219.75" y="266.20" z="97.25" range="19.5"/>
 </curing_objects>
