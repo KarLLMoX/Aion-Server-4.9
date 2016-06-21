@@ -3,39 +3,39 @@
     <spawn_map map_id="130090000">
         <!-- Adrena -->
         <spawn npc_id="804661" respawn_time="295">
-            <spot x="242.50053" y="266.85034" z="130.23604" h="90"/>
+            <spot x="242.06308" y="266.85034" z="130.23604" h="90"/>
         </spawn>
         <!-- Agnes -->
         <spawn npc_id="804654" respawn_time="295">
-            <spot x="256.42606" y="296.46173" z="131.29041" h="75"/>
+            <spot x="259.28275" y="292.82425" z="131.29041" h="74"/>
         </spawn>
         <!-- Aiming -->
         <spawn npc_id="804695" respawn_time="295">
-            <spot x="235.31483" y="252.5274" z="130.23604"/>
+            <spot x="235.31483" y="252.5274" z="130.23604" h="119"/>
         </spawn>
         <!-- Argius -->
         <spawn npc_id="804656" respawn_time="295">
-            <spot x="258.30603" y="259.87329" z="130.23604" h="60"/>
+            <spot x="258.30603" y="258.02017" z="130.23604" h="60"/>
         </spawn>
         <!-- Dereus -->
         <spawn npc_id="804693" respawn_time="295">
-            <spot x="258.30603" y="252.32512" z="130.23604" h="60"/>
+            <spot x="258.30603" y="250.472" z="130.23604" h="60"/>
         </spawn>
         <!-- Deronis -->
         <spawn npc_id="804653" respawn_time="295">
-            <spot x="240.65581" y="299.64941" z="131.29041" h="105"/>
+            <spot x="236.98303" y="295.81339" z="130.30666" h="105"/>
         </spawn>
         <!-- Elgon -->
         <spawn npc_id="804658" respawn_time="295">
-            <spot x="235.34206" y="260.16205" z="130.23604"/>
+            <spot x="235.34206" y="260.16205" z="130.23604" h="119"/>
         </spawn>
         <!-- Karona -->
         <spawn npc_id="804657" respawn_time="295">
-            <spot x="258.30603" y="256.12384" z="130.23604" h="60"/>
+            <spot x="258.30603" y="254.27072" z="130.23604" h="60"/>
         </spawn>
         <!-- Kerojus -->
         <spawn npc_id="804655" respawn_time="295">
-            <spot x="254.00732" y="280.71707" z="131.29041" h="45"/>
+            <spot x="254.00732" y="280.71707" z="131.29041" h="44"/>
         </spawn>
         <!-- Rena -->
         <spawn npc_id="804651" respawn_time="295">
@@ -47,11 +47,27 @@
         </spawn>
         <!-- Tezea -->
         <spawn npc_id="804659" respawn_time="295">
-            <spot x="235.31483" y="256.392" z="130.23604"/>
+            <spot x="235.31483" y="256.392" z="130.23604" h="119"/>
         </spawn>
         <!-- Trabos -->
         <spawn npc_id="804660" respawn_time="295">
-            <spot x="251.58197" y="266.74738" z="130.23604" h="90"/>
+            <spot x="251.74721" y="266.74738" z="130.23604" h="90"/>
+        </spawn>
+        <!-- Margges -->
+        <spawn npc_id="805304" respawn_time="295">
+			<spot x="250.1181" y="301.45502" z="130.30666" h="90"/>
+        </spawn>
+        <!-- Malina -->
+        <spawn npc_id="805306" respawn_time="295">
+			<spot x="251.72324" y="238.80342" z="130.23604" h="78"/>
+        </spawn>
+        <!-- Junion -->
+        <spawn npc_id="805307" respawn_time="295">
+			<spot x="258.30603" y="265.95276" z="130.23604" h="60"/>
+        </spawn>
+        <!-- Amilia -->
+        <spawn npc_id="805308" respawn_time="295">
+			<spot x="258.30603" y="262.08685" z="130.23604" h="60"/>
         </spawn>
 		<!-- Entrance 1 -->
 		<spawn npc_id="804677" respawn_time="295">

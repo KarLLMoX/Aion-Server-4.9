@@ -3,7 +3,7 @@
     <spawn_map map_id="140010000">
         <!-- Derot -->
         <spawn npc_id="804663" respawn_time="295">
-            <spot x="229.96431" y="259.74994" z="98.683357" h="45"/>
+            <spot x="229.96431" y="259.74994" z="98.683357" h="44"/>
         </spawn>
         <!-- Duena -->
         <spawn npc_id="804670" respawn_time="295">
@@ -11,11 +11,11 @@
         </spawn>
         <!-- Eomer -->
         <spawn npc_id="804671" respawn_time="295">
-            <spot x="242.76779" y="270.81256" z="97.338799"/>
+            <spot x="242.76779" y="270.81256" z="97.338799" h="119"/>
         </spawn>
         <!-- Guthrum -->
         <spawn npc_id="804667" respawn_time="295">
-            <spot x="250.70613" y="276.05411" z="97.338799" h="90"/>
+            <spot x="253.20937" y="276.05411" z="97.338799" h="90"/>
         </spawn>
         <!-- Iruming -->
         <spawn npc_id="804696" respawn_time="295">
@@ -27,11 +27,11 @@
         </spawn>
         <!-- Lobelia -->
         <spawn npc_id="804672" respawn_time="295">
-            <spot x="242.6335" y="261.47379" z="97.338799"/>
+            <spot x="242.6335" y="261.47379" z="97.338799" h="119"/>
         </spawn>
         <!-- Madril -->
         <spawn npc_id="804665" respawn_time="295">
-            <spot x="212.89746" y="276.26953" z="98.683357" h="107"/>
+            <spot x="217.41103" y="278.31097" z="98.683357" h="106"/>
         </spawn>
         <!-- Melrania -->
         <spawn npc_id="804662" respawn_time="295">
@@ -39,19 +39,35 @@
         </spawn>
         <!-- Pwyll -->
         <spawn npc_id="804664" respawn_time="295">
-            <spot x="209.79309" y="259.32913" z="98.683357" h="15"/>
+            <spot x="214.06198" y="256.13821" z="97.435745" h="15"/>
         </spawn>
         <!-- Sigurd -->
         <spawn npc_id="804666" respawn_time="295">
-            <spot x="229.85445" y="272.68936" z="98.683357" h="75"/>
+            <spot x="229.85445" y="272.68936" z="98.683357" h="74"/>
         </spawn>
         <!-- Tet -->
         <spawn npc_id="804694" respawn_time="295">
-            <spot x="257.02832" y="276.05411" z="97.338799" h="90"/>
+            <spot x="259.53156" y="276.05411" z="97.338799" h="90"/>
         </spawn>
         <!-- Zenue -->
         <spawn npc_id="804668" respawn_time="295">
-            <spot x="253.87012" y="276.05411" z="97.338799" h="90"/>
+            <spot x="256.37335" y="276.05411" z="97.338799" h="90"/>
+        </spawn>
+        <!-- Brunk -->
+        <spawn npc_id="805305" respawn_time="295">
+			<spot x="207.90253" y="269.62424" z="97.435745" h="119"/>
+        </spawn>
+        <!-- Melika -->
+        <spawn npc_id="805311" respawn_time="295">
+			<spot x="269.46524" y="270.70581" z="97.338799" h="105"/>
+        </spawn>
+        <!-- Zumank -->
+        <spawn npc_id="805312" respawn_time="295">
+			<spot x="246.47195" y="276.08191" z="97.338799" h="90"/>
+        </spawn>
+        <!-- Amillota -->
+        <spawn npc_id="805313" respawn_time="295">
+			<spot x="249.69731" y="276.08191" z="97.338799" h="90"/>
         </spawn>
 		<!-- Entrance 1 -->
 		<spawn npc_id="804682" respawn_time="295">
