@@ -1,0 +1,376 @@
+Index: data/static_data/pets/pet_buff.xml
+===================================================================
+--- data/static_data/pets/pet_buff.xml	(nonexistent)
++++ data/static_data/pets/pet_buff.xml	(working copy)
+@@ -0,0 +1,64 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<pet_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pet_buff.xsd">
++    <pet_bonusattr buff_id="1" food_count="5">
++        <penalty_attr stat="ATTACK_SPEED" func="PERCENT" value="-2"/>
++        <penalty_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="2"/>
++        <penalty_attr stat="SPEED" func="PERCENT" value="5"/>
++        <penalty_attr stat="MAXHP" func="ADD" value="120"/>
++        <penalty_attr stat="MAXMP" func="ADD" value="200"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="2" food_count="2">
++        <penalty_attr stat="ATTACK_SPEED" func="PERCENT" value="-1"/>
++        <penalty_attr stat="BOOST_CASTING_TIME" func="PERCENT" value="1"/>
++        <penalty_attr stat="SPEED" func="PERCENT" value="3"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="3" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="11"/>
++        <penalty_attr stat="PHYSICAL_ATTACK" func="ADD" value="2"/>
++        <penalty_attr stat="PHYSICAL_CRITICAL" func="ADD" value="8"/>
++        <penalty_attr stat="MAGICAL_CRITICAL" func="ADD" value="2"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="4" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="PHYSICAL_DEFENSE" func="ADD" value="30"/>
++        <penalty_attr stat="PARRY" func="ADD" value="8"/>
++        <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="6"/>
++        <penalty_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="6"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="5" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="FLY_SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="FLY_TIME" func="ADD" value="3"/>
++        <penalty_attr stat="MAXMP" func="ADD" value="44"/>
++        <penalty_attr stat="MAXHP" func="ADD" value="40"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="6" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="BOOST_MAGICAL_SKILL" func="ADD" value="11"/>
++        <penalty_attr stat="MAGICAL_CRITICAL" func="ADD" value="2"/>
++        <penalty_attr stat="MAGICAL_ACCURACY" func="ADD" value="6"/>
++        <penalty_attr stat="MAXHP" func="ADD" value="40"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="7" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="PHYSICAL_ATTACK" func="ADD" value="2"/>
++        <penalty_attr stat="PHYSICAL_CRITICAL" func="ADD" value="8"/>
++        <penalty_attr stat="PHYSICAL_ACCURACY" func="ADD" value="12"/>
++        <penalty_attr stat="MAXHP" func="ADD" value="40"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="8" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="MAGICAL_RESIST" func="ADD" value="6"/>
++        <penalty_attr stat="MAGIC_SKILL_BOOST_RESIST" func="ADD" value="6"/>
++        <penalty_attr stat="MAXHP" func="ADD" value="40"/>
++        <penalty_attr stat="MAXMP" func="ADD" value="44"/>
++    </pet_bonusattr>
++    <pet_bonusattr buff_id="9" food_count="5">
++        <penalty_attr stat="SPEED" func="PERCENT" value="2"/>
++        <penalty_attr stat="PVP_ATTACK_RATIO" func="ADD" value="4"/>
++        <penalty_attr stat="PVP_DEFEND_RATIO" func="ADD" value="4"/>
++        <penalty_attr stat="MAXHP" func="ADD" value="40"/>
++        <penalty_attr stat="MAXMP" func="ADD" value="44"/>
++    </pet_bonusattr>
++</pet_bonusattrs>
+\ No newline at end of file
+Index: data/static_data/pets/pet_buff.xsd
+===================================================================
+--- data/static_data/pets/pet_buff.xsd	(nonexistent)
++++ data/static_data/pets/pet_buff.xsd	(working copy)
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
++<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
++    <xs:element name="pet_bonusattrs">
++        <xs:complexType>
++            <xs:sequence>
++                <xs:element name="pet_bonusattr" type="petbuff" minOccurs="0" maxOccurs="unbounded"/>
++            </xs:sequence>
++        </xs:complexType>
++    </xs:element>
++    <xs:complexType name="petbuff">
++        <xs:sequence>
++            <xs:element name="penalty_attr" minOccurs="0" maxOccurs="unbounded">
++                <xs:complexType>
++                    <xs:attribute name="stat" type="xs:string"/>
++                    <xs:attribute name="func" type="funcType"/>
++                    <xs:attribute name="value" type="xs:int"/>
++                </xs:complexType>
++            </xs:element>
++        </xs:sequence>        
++        <xs:attribute name="buff_id" type="xs:short"/>
++        <xs:attribute name="food_count" type="xs:int"/>
++    </xs:complexType>
++    <xs:simpleType name="funcType">
++        <xs:restriction base="xs:string">
++            <xs:enumeration value="ADD"/>
++            <xs:enumeration value="PERCENT"/>
++        </xs:restriction>
++    </xs:simpleType>
++</xs:schema>
+Index: data/static_data/static_data.xml
+===================================================================
+--- data/static_data/static_data.xml	(revision 280)
++++ data/static_data/static_data.xml	(working copy)
+@@ -91,6 +91,9 @@
+     <dopings>
+         <import file="pets/pet_doping.xml" skipRoot="true"/>
+     </dopings>
++    <pet_bonusattrs>
++        <import file="pets/pet_buff.xml" skipRoot="true"/>
++    </pet_bonusattrs>
+     <import file="quest_data/quest_data.xml"/>
+     <quest_scripts>
+         <import file="quest_script_data" skipRoot="true"/>
+Index: data/static_data/static_data.xsd
+===================================================================
+--- data/static_data/static_data.xsd	(revision 280)
++++ data/static_data/static_data.xsd	(working copy)
+@@ -23,6 +23,7 @@
+     <xs:include schemaLocation="pets/pets.xsd"/>
+     <xs:include schemaLocation="pets/pet_feed.xsd"/>
+     <xs:include schemaLocation="pets/pet_doping.xsd"/>
++    <xs:include schemaLocation="pets/pet_buff.xsd"/>
+     <xs:include schemaLocation="quest_data/quest_data.xsd"/>
+     <xs:include schemaLocation="quest_script_data/quest_script_data.xsd"/>
+     <xs:include schemaLocation="recipe/recipe_templates.xsd"/>
+@@ -120,6 +121,7 @@
+                 <xs:element ref="pets" minOccurs="0"/>
+                 <xs:element ref="pet_feed" minOccurs="0"/>
+                 <xs:element ref="dopings" minOccurs="0"/>
++                <xs:element ref="pet_bonusattrs" minOccurs="0"/>
+                 <xs:element ref="quests" minOccurs="0"/>
+                 <xs:element ref="quest_scripts" minOccurs="0"/>
+                 <xs:element ref="recipe_templates" minOccurs="0"/>
+Index: src/com/aionemu/gameserver/dataholders/DataManager.java
+===================================================================
+--- src/com/aionemu/gameserver/dataholders/DataManager.java	(revision 280)
++++ src/com/aionemu/gameserver/dataholders/DataManager.java	(working copy)
+@@ -77,6 +77,7 @@
+     public static PetData PET_DATA;
+     public static PetFeedData PET_FEED_DATA;
+     public static PetDopingData PET_DOPING_DATA;
++    public static PetBonusData PET_BONUS_DATA;
+     public static RoadData ROAD_DATA;
+     public static InstanceCooltimeData INSTANCE_COOLTIME_DATA;
+     public static DecomposableItemsData DECOMPOSABLE_ITEMS_DATA;
+@@ -191,6 +192,7 @@
+         PET_DATA = data.petData;
+         PET_FEED_DATA = data.petFeedData;
+         PET_DOPING_DATA = data.petDopingData;
++        PET_BONUS_DATA = data.petBonusData;
+         GUIDE_HTML_DATA = data.guideData;
+         ROAD_DATA = data.roadData;
+         INSTANCE_COOLTIME_DATA = data.instanceCooltimeData;
+Index: src/com/aionemu/gameserver/dataholders/PetBonusData.java
+===================================================================
+--- src/com/aionemu/gameserver/dataholders/PetBonusData.java	(nonexistent)
++++ src/com/aionemu/gameserver/dataholders/PetBonusData.java	(working copy)
+@@ -0,0 +1,57 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.dataholders;
++
++import gnu.trove.map.hash.TIntObjectHashMap;
++
++import java.util.List;
++
++import javax.xml.bind.Unmarshaller;
++import javax.xml.bind.annotation.XmlAccessType;
++import javax.xml.bind.annotation.XmlAccessorType;
++import javax.xml.bind.annotation.XmlElement;
++import javax.xml.bind.annotation.XmlRootElement;
++import javax.xml.bind.annotation.XmlTransient;
++import javax.xml.bind.annotation.XmlType;
++
++import com.aionemu.gameserver.model.templates.pet.PetBonusattr;
++
++/**
++ * @author Falke_34
++ */
++@XmlAccessorType(XmlAccessType.FIELD)
++@XmlType(name = "", propOrder = {"petBonusattr"})
++@XmlRootElement(name = "pet_bonusattrs")
++public class PetBonusData {
++
++    @XmlElement(name = "pet_bonusattr")
++    protected List<PetBonusattr> petBonusattr;
++    @XmlTransient
++    private TIntObjectHashMap<PetBonusattr> templates = new TIntObjectHashMap<PetBonusattr>();
++
++    void afterUnmarshal(Unmarshaller u, Object parent){
++        for (PetBonusattr template : petBonusattr){
++            templates.put(template.getId(), template);
++        }
++        petBonusattr.clear();
++        petBonusattr = null;
++    }
++
++    public int size(){
++        return templates.size();
++    }
++}
+Index: src/com/aionemu/gameserver/dataholders/StaticData.java
+===================================================================
+--- src/com/aionemu/gameserver/dataholders/StaticData.java	(revision 280)
++++ src/com/aionemu/gameserver/dataholders/StaticData.java	(working copy)
+@@ -117,6 +117,8 @@
+     public PetFeedData petFeedData;
+     @XmlElement(name = "dopings")
+     public PetDopingData petDopingData;
++    @XmlElement(name = "pet_bonusattrs")
++    public PetBonusData petBonusData;
+     @XmlElement(name = "guides")
+     public GuideHtmlData guideData;
+     @XmlElement(name = "roads")
+@@ -240,6 +242,7 @@
+         DataManager.log.info("[DataManager] Loaded " + petData.size() + " pet templates");
+         DataManager.log.info("[DataManager] Loaded " + petFeedData.size() + " food flavours");
+         DataManager.log.info("[DataManager] Loaded " + petDopingData.size() + " pet doping templates");
++        DataManager.log.info("[DataManager] Loaded " + petBonusData.size() + " pet bonus templates");
+         DataManager.log.info("[DataManager] Loaded " + playerInitialData.size() + " initial player templates");
+         DataManager.log.info("[DataManager] Loaded " + tradeListData.size() + " trade lists");
+         DataManager.log.info("[DataManager] Loaded " + teleporterData.size() + " npc teleporter templates");
+Index: src/com/aionemu/gameserver/model/templates/pet/PetBonusattr.java
+===================================================================
+--- src/com/aionemu/gameserver/model/templates/pet/PetBonusattr.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/templates/pet/PetBonusattr.java	(working copy)
+@@ -0,0 +1,61 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.templates.pet;
++
++import java.util.ArrayList;
++import java.util.List;
++
++import javax.xml.bind.annotation.XmlAccessType;
++import javax.xml.bind.annotation.XmlAccessorType;
++import javax.xml.bind.annotation.XmlAttribute;
++import javax.xml.bind.annotation.XmlElement;
++import javax.xml.bind.annotation.XmlType;
++
++/**
++ * @author Falke_34
++ */
++@XmlAccessorType(XmlAccessType.FIELD)
++@XmlType(name = "PetBonusattr", propOrder = {"penaltyAttr"})
++public class PetBonusattr {
++
++    @XmlElement(name = "penalty_attr")
++    protected List<PetPenaltyAttr> penaltyAttr;
++    @XmlAttribute(name = "buff_id", required = true)
++    protected int buff_id;
++    @XmlAttribute(name = "food_count", required = true)
++    protected int food_count;
++
++    public List<PetPenaltyAttr> getPenaltyAttr() {
++        if (penaltyAttr == null) {
++            penaltyAttr = new ArrayList<PetPenaltyAttr>();
++        }
++        return this.penaltyAttr;
++    }
++    
++    public int getId() {
++    	return buff_id;
++    }
++
++
++    public int getFoodCount() {
++        return food_count;
++    }
++
++    public void setFoodCount(int value) {
++        this.food_count = value;
++    }
++}
+Index: src/com/aionemu/gameserver/model/templates/pet/PetPenaltyAttr.java
+===================================================================
+--- src/com/aionemu/gameserver/model/templates/pet/PetPenaltyAttr.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/templates/pet/PetPenaltyAttr.java	(working copy)
+@@ -0,0 +1,64 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.templates.pet;
++
++import com.aionemu.gameserver.model.stats.container.StatEnum;
++import com.aionemu.gameserver.skillengine.change.Func;
++
++import javax.xml.bind.annotation.XmlAccessType;
++import javax.xml.bind.annotation.XmlAccessorType;
++import javax.xml.bind.annotation.XmlAttribute;
++import javax.xml.bind.annotation.XmlType;
++
++/**
++ * @author Falke_34
++ */
++@XmlAccessorType(XmlAccessType.FIELD)
++@XmlType(name = "PetPenaltyAttr")
++public class PetPenaltyAttr {
++
++    @XmlAttribute(required = true)
++    protected StatEnum stat;
++    @XmlAttribute(required = true)
++    protected Func func;
++    @XmlAttribute(required = true)
++    protected int value;
++
++    public StatEnum getStat() {
++        return stat;
++    }
++
++    public void setStat(StatEnum value) {
++        this.stat = value;
++    }
++
++    public Func getFunc() {
++        return func;
++    }
++
++    public void setFunc(Func value) {
++        this.func = value;
++    }
++
++    public int getValue() {
++        return value;
++    }
++
++    public void setValue(int value) {
++        this.value = value;
++    }
++}
