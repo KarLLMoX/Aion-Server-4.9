@@ -33,7 +33,7 @@ Index: data/static_data/pets/pet_merchant.xsd
 +</xs:schema>
 Index: data/static_data/pets/pets.xml
 ===================================================================
---- data/static_data/pets/pets.xml	(revision 159)
+--- data/static_data/pets/pets.xml	(revision 281)
 +++ data/static_data/pets/pets.xml	(working copy)
 @@ -951,7 +951,7 @@
          <petstats reaction="brave" run_speed="6.0" walk_speed="1.132" height="1.2"/>
@@ -88,7 +88,7 @@ Index: data/static_data/pets/pets.xml
      <pet id="970002" name="Sidekick 03" nameid="1609817" condition_reward="188051378">
 Index: data/static_data/pets/pets.xsd
 ===================================================================
---- data/static_data/pets/pets.xsd	(revision 159)
+--- data/static_data/pets/pets.xsd	(revision 281)
 +++ data/static_data/pets/pets.xsd	(working copy)
 @@ -40,7 +40,7 @@
              <xs:enumeration value="LOOT"/>
@@ -102,7 +102,7 @@ Index: data/static_data/pets/pets.xsd
 \ No newline at end of file
 Index: data/static_data/static_data.xml
 ===================================================================
---- data/static_data/static_data.xml	(revision 159)
+--- data/static_data/static_data.xml	(revision 281)
 +++ data/static_data/static_data.xml	(working copy)
 @@ -91,6 +91,9 @@
      <dopings>
@@ -116,7 +116,7 @@ Index: data/static_data/static_data.xml
          <import file="quest_script_data" skipRoot="true"/>
 Index: data/static_data/static_data.xsd
 ===================================================================
---- data/static_data/static_data.xsd	(revision 159)
+--- data/static_data/static_data.xsd	(revision 281)
 +++ data/static_data/static_data.xsd	(working copy)
 @@ -23,6 +23,7 @@
      <xs:include schemaLocation="pets/pets.xsd"/>
@@ -136,7 +136,7 @@ Index: data/static_data/static_data.xsd
                  <xs:element ref="recipe_templates" minOccurs="0"/>
 Index: src/com/aionemu/gameserver/dataholders/DataManager.java
 ===================================================================
---- src/com/aionemu/gameserver/dataholders/DataManager.java	(revision 159)
+--- src/com/aionemu/gameserver/dataholders/DataManager.java	(revision 281)
 +++ src/com/aionemu/gameserver/dataholders/DataManager.java	(working copy)
 @@ -77,6 +77,7 @@
      public static PetData PET_DATA;
@@ -218,7 +218,7 @@ Index: src/com/aionemu/gameserver/dataholders/PetMerchantData.java
 +}
 Index: src/com/aionemu/gameserver/dataholders/StaticData.java
 ===================================================================
---- src/com/aionemu/gameserver/dataholders/StaticData.java	(revision 159)
+--- src/com/aionemu/gameserver/dataholders/StaticData.java	(revision 281)
 +++ src/com/aionemu/gameserver/dataholders/StaticData.java	(working copy)
 @@ -117,6 +117,8 @@
      public PetFeedData petFeedData;
@@ -282,3 +282,17 @@ Index: src/com/aionemu/gameserver/model/templates/pet/PetMerchantEntry.java
 +        return ratePrice;
 +    }
 +}
+Index: src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java	(revision 281)
++++ src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java	(working copy)
+@@ -95,6 +95,9 @@
+                 case 15://buy from reward shop
+                     tradeList.addBuyItem(itemId, count);
+                     break;
++                case 17://sell from Miol
++                    tradeList.addSellItem(itemId, count);
++                    break;
+             }
+         }
+     }
