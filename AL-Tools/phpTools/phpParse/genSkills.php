@@ -117,13 +117,13 @@ function checkSpecialText($fname,$fvalue)
     return $fvalue;
 }
 // ----------------------------------------------------------------------------
-// Feld-Text zurückgeben
+// Feld-Text aus Tabelle zurückgeben
 // Params:  $key        Key in der Tabelle ( = id)
 //          $cxml       Xml-Tag-Name Client
 //          $fname      Ausgabename für Feld
 //          $deflt      Default-Wert, wenn nicht vorhanden
 // ----------------------------------------------------------------------------
-function getFieldText($key,$cxml,$fname,$deflt)
+function getTabFieldText($key,$cxml,$fname,$deflt)
 {
     global $tabcskill;
     
@@ -156,11 +156,11 @@ function getFieldText($key,$cxml,$fname,$deflt)
         return "";
 }
 // ----------------------------------------------------------------------------
-// FeldText für TREE zurückgeben
+// FeldText zurückgeben
 // ----------------------------------------------------------------------------
-function getTreeFieldText($fname,$fvalue)
+function getFieldText($fname,$fvalue)
 {
-    if ($fvalue != "")
+    if ($fvalue != "" && $fvalue != "?")
     {
         return ' '.$fname.'="'.$fvalue.'"';
     }
@@ -300,7 +300,70 @@ function getIntSkillNameId($desc)
     if (isset($tabSNames[$key]))
         return $tabSNames[$key]['id'];
     else
-        return "???";
+    {
+        $key = str_replace("STR_","",$key);
+        
+        if (isset($tabSNames[$key]))
+            return $tabSNames[$key]['id'];
+        else
+            return "???";
+    }
+}
+// ----------------------------------------------------------------------------
+// Effekt-Skill-Name-ID zurückgeben
+// ----------------------------------------------------------------------------
+function getRefSkillNameId($sname)
+{
+    global $tabrskill;
+    
+    $key = strtoupper($sname);
+    $org = $key;
+    
+    // direkte Suche
+    if (isset($tabrskill[$key]))
+        return $tabrskill[$key];
+    //
+    //  Text-Ersetzungen 1. Versuch
+    //
+    $len = strlen($org);
+    
+    // einige Angaben hinten abschneiden!
+    $key = $org;
+    $key = (substr($org,-2,2) == "_N")     ? substr($key,0,$len - 2) : $key;
+    $key = (substr($org,-4,4) == "_NPC")   ? substr($key,0,$len - 4) : $key;
+    
+    // einige Angaben entfernen
+    $key = str_replace("PR_N_DARK_"          ,"",$key);
+    $key = str_replace("PR_N_LIGHT_"         ,"",$key);
+    $key = str_replace("PR_DARK_"            ,"",$key);
+    $key = str_replace("PR_LIGHT_"           ,"",$key);
+    $key = str_replace("STR_"                ,"",$key);
+    $key = str_replace("ABYSS_RANKERSKILL_L_","",$key);
+    $key = str_replace("ABYSS_RANKERSKILL_D_","",$key);
+    
+    // einige Angaben ersetzen
+    $key = str_replace("HOLYSILIKA_CRYSTAL_","HOLYSERVENT_",$key);
+    $key = str_replace("HOLYSILIKA_"        ,"HOLYSERVENT_",$key);
+    
+    if (isset($tabrskill[$key]))
+        return $tabrskill[$key];
+    //
+    // Text-Ersetzungen 2. Versuch  
+    // (für z.B. PR_N_LIGHT_HOLYSERVENT_G6_NPC)
+    //
+    $key = $org;
+    $key = (substr($org,-2,2) == "_N")     ? substr($key,0,$len - 2) : $key;
+    $key = (substr($org,-4,4) == "_NPC")   ? substr($key,0,$len - 4) : $key;
+    
+    $key = str_replace("_LIGHT_","_",$key);
+    $key = str_replace("_DARK_" ,"_",$key);
+    
+    if (isset($tabrskill[$key]))
+        return $tabrskill[$key];
+    
+    logLine("<font color=yellow>RefSkill nicht gefunden",$org);
+    
+    return "???";
 }
 // ----------------------------------------------------------------------------
 // PenaltySkillId zurückgeben
@@ -385,23 +448,21 @@ function getWeapons($key)
 {
     global $tabcskill;
     
+    // neue Sortierung, nun in der Reihenfolge wie in der akt. EMU
     $tabweaps = array(
-                  // ohne Erweiterung 1H/2H
-                  array( "required_bow"    , "BOW"),
-                  // 1-Hand Waffen
+                  array( "required_2hsword", "SWORD_2H"), 
+                  array( "required_book"   , "BOOK_2H"),    
+                  array( "required_bow"    , "BOW"), 
                   array( "required_dagger" , "DAGGER_1H"),
-                  array( "required_gun"    , "GUN_1H"),
                   array( "required_mace"   , "MACE_1H"),
-                  array( "required_sword"  , "SWORD_1H"),
-                  // 2-Hand Waffen
-                  array( "required_book"   , "BOOK_2H"),
-                  array( "required_cannon" , "CANNON_2H"),
-                  array( "required_harp"   , "HARP_2H"),
-                  array( "required_keyblade","KEYBLADE_2H"),
                   array( "required_orb"    , "ORB_2H"),
                   array( "required_polearm", "POLEARM_2H"),
                   array( "required_staff"  , "STAFF_2H"),
-                  array( "required_2hsword", "SWORD_2H")
+                  array( "required_sword"  , "SWORD_1H"),   
+                  array( "required_gun"    , "GUN_1H"),
+                  array( "required_cannon" , "CANNON_2H"),
+                  array( "required_harp"   , "HARP_2H"),
+                  array( "required_keyblade","KEYBLADE_2H")
                      );
     $maxweaps = count($tabweaps);
     $ret      = "";
@@ -615,6 +676,26 @@ function scanClientSkills()
     logLine("Anzahl Skills gefunden",count($tabcskill));
 }
 // ---------------------------------------------------------------------------
+// Skill-Referenz-Tabelle aufbauen
+// ---------------------------------------------------------------------------
+function makeSkillsRefTab()
+{
+    global $tabcskill, $tabrskill;
+    
+    logHead("Erzeuge interne Skill-Referenz-Tabelle");
+    
+    flush();
+    
+    while (list($key,$val) = each($tabcskill))
+    {
+        $name             = strtoupper($tabcskill[$key]['name']);
+        $tabrskill[$name] = $key;
+    }
+    reset($tabcskill);
+    
+    logLine("Anzahl Skills gefunden",count($tabrskill));
+}
+// ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: Properties
 // ---------------------------------------------------------------------------
 function getPropertiesLines($key)
@@ -662,11 +743,11 @@ function getPropertiesLines($key)
             // dann Feld-Zeile der Tabelle berücksichtigen!
             if ( isset($tabcskill[$key][$cfld]) && $ctab[$cind][0] == true
             ||  !isset($tabcskill[$key][$cfld]) && $ctab[$cind][0] == false)
-                $ret .= getFieldText($key,$ftab[$f][0],$ftab[$f][1],$ftab[$f][2]);
+                $ret .= getTabFieldText($key,$ftab[$f][0],$ftab[$f][1],$ftab[$f][2]);
         }
         else
             // keine Condition vorhanden, also Feld-Zeile berücksichtigen
-            $ret .= getFieldText($key,$ftab[$f][0],$ftab[$f][1],$ftab[$f][2]);
+            $ret .= getTabFieldText($key,$ftab[$f][0],$ftab[$f][1],$ftab[$f][2]);
     }
     
     if ($ret != "")
@@ -681,30 +762,30 @@ function getPropertiesLines($key)
 //
 // <xs:complexType name="Conditions">
 //     <xs:sequence minOccurs="0" maxOccurs="unbounded">
-//         <xs:element name="mp" type="MpCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="hp" type="HpCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="dp" type="DpCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="target" type="TargetCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="move_casting" type="PlayerMovedCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="arrowcheck" type="ArrowCheckCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="robotcheck" type="RobotCheckCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="abnormal" type="AbnormalStateCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="onfly" type="OnFlyCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="noflying" type="NoFlyingCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="weapon" type="WeaponCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="lefthandweapon" type="LeftHandCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="targetflying" type="TargetFlyingCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="selfflying" type="SelfFlyingCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="combatcheck" type="CombatCheckCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="chain" type="ChainCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="back" type="BackCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="front" type="FrontCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="form" type="FormCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="charge" type="ItemChargeCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="chargeweapon" type="ChargeWeaponCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="chargearmor" type="ChargeArmorCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="polishchargeweapon" type="PolishChargeCondition" minOccurs="0" maxOccurs="1"/>
-//         <xs:element name="skillcharge" type="SkillChargeCondition" minOccurs="0" maxOccurs="1"/>
+//         name="mp" type="MpCondition"
+//         name="hp" type="HpCondition"
+//         name="dp" type="DpCondition"
+//         name="target" type="TargetCondition"
+//         name="move_casting" type="PlayerMovedCondition"
+//         name="arrowcheck" type="ArrowCheckCondition"
+//         name="robotcheck" type="RobotCheckCondition"
+//         name="abnormal" type="AbnormalStateCondition"
+//         name="onfly" type="OnFlyCondition"
+//         name="noflying" type="NoFlyingCondition"
+//         name="weapon" type="WeaponCondition"
+//         name="lefthandweapon" type="LeftHandCondition"
+//         name="targetflying" type="TargetFlyingCondition"
+//         name="selfflying" type="SelfFlyingCondition"
+//         name="combatcheck" type="CombatCheckCondition"
+//         name="chain" type="ChainCondition"
+//         name="back" type="BackCondition"
+//         name="front" type="FrontCondition"
+//         name="form" type="FormCondition"
+//         name="charge" type="ItemChargeCondition"
+//         name="chargeweapon" type="ChargeWeaponCondition"
+//         name="chargearmor" type="ChargeArmorCondition"
+//         name="polishchargeweapon" type="PolishChargeCondition"
+//         name="skillcharge" type="SkillChargeCondition"
 //     </xs:sequence>
 // </xs:complexType>
 //
@@ -779,22 +860,13 @@ function getStartConditionLines($key)
                     
             $ret .= '            <'.$hpmp.' value="'.$cost.'"'.$dtxt.$rtxt.'/>'."\n";       
         }
-    }
-        
-    if ($comb == "1")
-        $ret .= '            <combatcheck/>'."\n";
-    
-    if ($arrow == "1")
-        $ret .= '            <arrowcheck/>'."\n";
-        
-    if ($robot == "1")
-        $ret .= '            <robotcheck/>'."\n";
-    
-    if ($weapn != "")
-        $ret .= '            <weapon weapon="'.$weapn.'"/>'."\n";    
+    }        
     
     if ($left != "?")
         $ret .= '            <lefthandweapon type="'.$left.'"/>'."\n";
+    
+    if ($weapn != "")
+        $ret .= '            <weapon weapon="'.$weapn.'"/>'."\n";    
     
     if ($chain != "?")
     {
@@ -806,8 +878,8 @@ function getStartConditionLines($key)
         $ret .= '            <chain category="'.$chain.'"';
         if ($cpre != "?") $ret .= ' precategory="'.$cpre.'"';
         if ($time != "?") $ret .= ' time="'.$time.'"';
-        if ($pcnt != "?") $ret .= ' precount="'.$pcnt.'"';
         if ($scnt != "?") $ret .= ' selfcount="'.$scnt.'"';
+        if ($pcnt != "?") $ret .= ' precount="'.$pcnt.'"';
         $ret .= "/>\n";
     }    
     
@@ -816,6 +888,15 @@ function getStartConditionLines($key)
         
     if ($selff != "?")
         $ret .= '            <selfflying restriction="'.$selff.'"/>'."\n";
+        
+    if ($comb == "1")
+        $ret .= '            <combatcheck/>'."\n";
+    
+    if ($arrow == "1")
+        $ret .= '            <arrowcheck/>'."\n";
+        
+    if ($robot == "1")
+        $ret .= '            <robotcheck/>'."\n";
     
     if ($form != "?")
         $ret .= '            <form value="'.$form.'"/>'."\n";
@@ -902,187 +983,710 @@ function getUseEquipConditionLines($key)
         
     return $ret;
 }
+// ----------------------------------------------------------------------------
+//
+//                             E F F E C T S
+//
+// ----------------------------------------------------------------------------
+// StatsNames zurückgeben
+// ----------------------------------------------------------------------------
+function getStatNames($name)
+{
+    $name = strtolower($name);
+    
+    // wenn Waffe vorgegeben, dann hierzu den StatsNamen ermitteln
+    if (substr($name,0,2) == "1h" 
+    ||  substr($name,0,2) == "2h"
+    ||  $name             == "bow")
+        return getEffectAttackType($name);
+        
+    switch($name)
+    {
+        case "?":                               return "";
+        case "activedefend":                    return "EVASION,PARRY,BLOCK";            
+        case "agi":                             return "AGILITY";            
+        case "allpara":                         return "ALLPARA";            
+        case "allresist":                       return "ALLRESIST";            
+        case "allspeed":                        return "SPEED,FLY_SPEED";            
+        case "arall":                           return "ABNORMAL_RESISTANCE_ALL";            
+        case "arbind":                          return "BIND_RESISTANCE";        
+        case "arblind":                         return "BLIND_RESISTANCE";
+        case "ardeform":                        return "DEFORM_RESISTANCE";            
+        case "arfear":                          return "FEAR_RESISTANCE";            
+        case "arparalyze":                      return "PARALYZE_RESISTANCE";            
+        case "arpulled":                        return "PULLED_RESISTANCE";            
+        case "arroot":                          return "ROOT_RESISTANCE";            
+        case "arsilence":                       return "SILENCE_RESISTANCE";            
+        case "arsleep":                         return "SLEEP_RESISTANCE";            
+        case "arsnare":                         return "SNARE_RESISTANCE";            
+        case "arspin":                          return "SPIN_RESISTANCE";            
+        case "arstagger":                       return "STAGGER_RESISTANCE";            
+        case "arstumble":                       return "STUMBLE_RESISTANCE";            
+        case "arstun":                          return "STUN_RESISTANCE";            
+        case "arstunlike":                      return "STUN_RESISTANCE,STUMBLE_RESISTANCE,STAGGER_RESISTANCE,SPIN_RESISTANCE,OPENAREIAL_RESISTANCE";            
+        case "attackdelay":                     return "ATTACK_SPEED";            
+        case "attackrange":                     return "ATTACK_RANGE";            
+        case "block":                           return "BLOCK";            
+        case "boostcastingtime":                return "BOOST_CASTING_TIME";            
+        case "boostchargetime":                 return "BOOST_CHARGE_TIME";            
+        case "buff":                            return "BOOST_DURATION_BUFF";            
+        case "concentration":                   return "CONCENTRATION";            
+        case "critical":                        return "PHYSICAL_CRITICAL";            
+        case "debuff":                          return "BOOST_RESIST_DEBUFF";            
+        case "dex":                             return "ACCURACY";            
+        case "dodge":                           return "EVASION";            
+        case "elementaldefendair":              return "WIND_RESISTANCE";            
+        case "elementaldefendall":              return "WATER_RESISTANCE,WIND_RESISTANCE,FIRE_RESISTANCE,EARTH_RESISTANCE";            
+        case "elementaldefenddark":             return "ELEMENTAL_RESISTANCE_DARK";            
+        case "elementaldefendearth":            return "EARTH_RESISTANCE";            
+        case "elementaldefendfire":             return "FIRE_RESISTANCE";            
+        case "elementaldefendlight":            return "ELEMENTAL_RESISTANCE_LIGHT";            
+        case "elementaldefendwater":            return "WATER_RESISTANCE";            
+        case "erair":                           return "ERAIR";            
+        case "erearth":                         return "EREARTH";            
+        case "erfire":                          return "ERFIRE";            
+        case "erwater":                         return "ERWATER";            
+        case "flyspeed":                        return "FLY_SPEED";            
+        case "fpregen":                         return "REGEN_FP";            
+        case "healskillboost":                  return "HEAL_BOOST";            
+        case "hitaccuracy":                     return "PHYSICAL_ACCURACY";            
+        case "hp":                              return "HP";            
+        case "hpregen":                         return "REGEN_HP";            
+        case "kno":                             return "KNOWLEDGE";            
+        case "knowil":                          return "KNOWIL";            
+        case "magicalattack":                   return "MAGICAL_ATTACK";            
+        case "magicalcritical":                 return "MAGICAL_CRITICAL";            
+        case "magicalcriticaldamagereduce":     return "MAGICAL_CRITICAL_DAMAGE_REDUCE";            
+        case "magicalcriticalreducerate":       return "MAGICAL_CRITICAL_RESIST";            
+        case "magicaldefend":                   return "MAGICAL_DEFEND";            
+        case "magicalhitaccuracy":              return "MAGICAL_ACCURACY";            
+        case "magicalresist":                   return "MAGICAL_RESIST";            
+        case "magicalskillboost":               return "BOOST_MAGICAL_SKILL";            
+        case "magicalskillboostresist":         return "MAGIC_SKILL_BOOST_RESIST";            
+        case "maxfp":                           return "FLY_TIME";            
+        case "maxhp":                           return "MAXHP";            
+        case "maxmp":                           return "MAXMP";            
+        case "mp":                              return "MP";            
+        case "mpregen":                         return "REGEN_MP";            
+        case "openareial_arp":                  return "OPENAREIAL_RESISTANCE_PENETRATION";            
+        case "parry":                           return "PARRY";  
+        case "paralyze_arp":                    return "PARALYZE_RESISTANCE_PENETRATION";        
+        case "phyattack":                       return "PHYSICAL_ATTACK";            
+        case "physicalcriticaldamagereduce":    return "PHYSICAL_CRITICAL_DAMAGE_REDUCE";            
+        case "physicalcriticalreducerate":      return "PHYSICAL_CRITICAL_RESIST";            
+        case "physicaldefend":                  return "PHYSICAL_DEFENSE";            
+        case "pmattack":                        return "PHYSICAL_ATTACK,MAGICAL_ATTACK";            
+        case "pmdefend":                        return "PHYSICAL_DEFENSE,MAGICAL_RESIST";            
+        case "procreducerate":                  return "PROC_REDUCE_RATE";            
+        case "pveattackratio":                  return "PVE_ATTACK_RATIO";            
+        case "pvedefendratio":                  return "PVE_DEFEND_RATIO";                    
+        case "pvpattackratio":                  return "PVP_ATTACK_RATIO";            
+        case "pvpattackratio_magical":          return "PVP_ATTACK_RATIO_MAGICAL";            
+        case "pvpattackratio_physical":         return "PVP_ATTACK_RATIO_PHYSICAL";             
+        case "pvpdefendratio":                  return "PVP_DEFEND_RATIO";    
+        case "pvpdefendratio_magical":          return "PVP_DEFEND_RATIO_MAGICAL";         
+        case "pvpdefendratio_physical":         return "PVP_DEFEND_RATIO_PHYSICAL";
+        case "silence_arp":                     return "SILENCE_RESISTANCE_PENETRATION";
+        case "speed":                           return "SPEED";            
+        case "spin_arp":                        return "SPIN_RESISTANCE_PENETRATION";            
+        case "stagger_arp":                     return "STAGGER_RESISTANCE_PENETRATION";            
+        case "str":                             return "POWER";            
+        case "stumble_arp":                     return "STUMBLE_RESISTANCE_PENETRATION";            
+        case "stun_arp":                        return "STUN_RESISTANCE_PENETRATION";            
+        case "vit":                             return "HEALTH";            
+        case "wil":                             return "WILL";            
+        case "xpboost":                         return "BOOST_CRAFTING_XP_RATE,BOOST_GATHERING_XP_RATE,BOOST_GROUP_HUNTING_XP_RATE,BOOST_HUNTING_XP_RATE";            
+        default:                                return $name;
+    }
+    return "";
+}
+// ----------------------------------------------------------------------------
+// EffectFunc zurückgeben
+// ----------------------------------------------------------------------------
+function getEffectFunc($key,$field)
+{
+    $val = getTabValue($key,$field,"?");
+    
+    // wenn das Feld gesetzt ist, also nicht "?" und nicht "0", dann PERCENT
+    if ($val == "?" || $val == "0")
+        return "ADD";
+    else
+        return "PERCENT";
+}
+// ----------------------------------------------------------------------------
+// Vorzeichen für die Value-Angabe ermitteln
+// ----------------------------------------------------------------------------
+function getValueSign($block,$stat,$value,$tbneg)
+{    
+    $ret  = 1;
+    $mneg = count($tbneg);
+    $stat = strtoupper($stat);
+    
+    // nur für Werte ungleich 0
+    if ($value != 0 && $value != "?")
+    {
+        // wenn Feld in Tabelle enthalten, dann negieren
+        if ($stat != "" && $mneg > 0)
+        {
+            for ($n=0;$n<$mneg;$n++)
+            {
+                if ($stat == $tbneg[$n])
+                {
+                    $ret = -1;
+                    $n   = $mneg;
+                }
+            }
+        }
+        // bei StatDOWN immer das Vorzeichen umkehren!!!
+        if ($block == "statdown")
+            $ret = -1;
+    }  
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Zeilen für die StatUp Changes aufbereiten
+// ----------------------------------------------------------------------------
+function getChangeStats($block,$key,$e,$tbneg)
+{    
+    global $protkey;
+    
+    $protkey = $key;
+    
+    // Tabelle für alle Client-Felder, die STAT-Werte enthalten
+    $tabstats = array(
+                  //    Name         Value        Stats???
+                  array("reserved5" ,"reserved2" ,"reserved2" ), 
+                  array("reserved13","reserved2" ,"reserved6" ),
+                  array("reserved14","reserved4" ,"reserved6" ),
+                  array("reserved18","reserved16","reserved17"),
+                  array("reserved22","reserved20","reserved19")
+                     );
+    $maxstats = count($tabstats);
+    
+    $ename    = "effect".$e."_";
+    $ret      = "";
+    $func     = "";
+    $res9     = getTabValue($key,$ename."reserved9","?");
+    $res1     = getTabValue($key,$ename."reserved1","?");
+    $chend    = "/>";
+        
+    // Condition ONFLY aufbereiten
+    if ($res9 == "1")
+        $chend = ">\n".
+                 '                    <conditions>'."\n".
+                 '                        <onfly/>'."\n".
+                 '                    </conditions>'."\n".
+                 '                </change>';
+    
+    // für alle Stat-Werte aus obiger Tabelle!
+    for ($t=0;$t<$maxstats;$t++)
+    {
+        $name  = getTabValue($key,$ename.$tabstats[$t][0],"?");
+        $value = getTabValue($key,$ename.$tabstats[$t][1],"?");
+        
+        if (($name != "?" && $name != "0") && $value != "?")
+        {  
+            $func = getEffectFunc($key, $ename.$tabstats[$t][2] );
+            $stab = explode(",", getStatNames($name) );
+            $smax = count($stab);    
+
+            for ($s=0;$s<$smax;$s++)
+            {
+                $sndel = getValueSign($block,$stab[$s],$res1 ,$tbneg);
+                $snval = getValueSign($block,$stab[$s],$value,$tbneg);
+                
+                $ret .= '                <change stat="'.strtoupper($stab[$s]).'" func="'.$func.'"';
+                
+                // Delta ausgeben, wenn ungleich "?" oder "0"
+                if ($res1 != "?" && $res1 != "0")
+                    $ret .= ' delta="'.($res1 * $sndel).'"';
+                                    
+                $ret .= ' value="'.($value * $snval).'"'.$chend."\n";
+            }
+        }
+    }
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// EffectWeaponType zurückgeben
+// ----------------------------------------------------------------------------
+function getEffectWeaponType($weapn)
+{    
+    $weapn = strtoupper($weapn);
+    
+    switch($weapn)
+    {
+        case "1H_SWORD":    return "SWORD_1H"; 
+        case "1H_DAGGER":   return "DAGGER_1H";  
+        case "1H_MACE":     return "MACE_1H";  
+        case "1H_GUN":      return "GUN_1H";   
+        case "2H_SWORD":    return "SWORD_2H";  
+        case "2H_POLEARM":  return "POLEARM_2H"; 
+        case "2H_STAFF":    return "STAFF_2H";  
+        case "2H_BOOK":     return "BOOK_2H"; 
+        case "2H_ORB":      return "ORB_2H"; 
+        case "2H_CANNON":   return "CANNON_2H"; 
+        case "2H_HARP":     return "HARP_2H";  
+        case "2H_KEYBLADE": return "KEYBLADE_2H"; 
+        case "BOW":         return "BOW";
+        default:            return $weapn;
+    }
+    return $weapn;
+}
+// ----------------------------------------------------------------------------
+// EffectAttackType zurückgeben
+// ----------------------------------------------------------------------------
+function getEffectAttackType($weapn)
+{
+    switch(strtoupper($weapn))
+    {
+        // physische Angriffe
+        case "1H_DAGGER":    
+        case "1H_GUN":   
+        case "1H_MACE":   
+        case "1H_SWORD":      
+        case "2H_CANNON":     
+        case "2H_HARP":     
+        case "2H_KEYBLADE": 
+        case "2H_POLEARM": 
+        case "2H_STAFF":    
+        case "2H_SWORD": 
+        case "BOW":         return "PHYSICAL_ATTACK";     
+        // magische Angriffe
+        case "2H_BOOK": 
+        case "2H_ORB":      return "MAGICAL_ATTACK";    
+        default:            return "PHYSICAL_ATTACK";
+    }
+    return "PHYSICAL_ATTACK";    
+}
+// ---------------------------------------------------------------------------
+// Effect-Werte speziell bearbeiten / zurückgeben           (ZENTRALE ROUTINE)
+//
+// params: $spec   =  Typ der speziellen Behandlung
+//         $wert   =  Wert, der behandelt werden muss
+// ---------------------------------------------------------------------------
+function getEffSpecial($spec,$wert)
+{
+    $ret = "";
+    
+    switch($spec)
+    {
+        case "upper":  // Rückgabe in Grossbuchstaben
+            return strtoupper($wert);
+        case "npcid":  // Rückgabe der NpcId
+            $tab = getNpcIdNameTab($wert);
+            $ret = ($tab['npcid'] != "000000") ? $tab['npcid'] : "?";            
+            return $ret;
+        case "nozero": // Rückgabe 0 = ? (keine "0")
+            $ret = ($wert == "0") ? "?" : $wert;
+            return $ret;
+        case "true1":  // Rückgabe 1=true
+            $ret = ($wert == "1") ? "true" : "?";
+            return $ret;
+        case "preff":  // Rückgabe von PreEffectId
+            return substr($wert,1);
+        case "prob2";  // Rückgabe bei 0/100 = ?
+            if ($wert == "0" || $wert == "100")
+                return "?";
+            else
+                return $wert;
+        case "weapon": // Weapon-Type zurückgeben!
+            return getEffectWeaponType($wert);
+        case "state":  // State-Type zurückgeben
+            if ($wert == "1")
+                return "ROOT";
+            else
+                return "?";
+        default:       // unbekannter Wert, protokollieren!
+            logLine("Fehler getEffSpecial",$feld." / ".$wert);
+            return $ret;
+    }
+    return "";
+}
+// ---------------------------------------------------------------------------
+// EffectBasicLine zurückgeben
+// Offensichtlich besitzen alle Block-XML-Tags identische Angaben, sodass
+// diese hier zentral aufbereitet werden können
+// ---------------------------------------------------------------------------
+function getEffectBasicLine($efftyp,$key,$e)
+{     
+    $ename = "effect".$e."_";     
+    $ret   = "";
+    
+    // alle notwendigen Daten aus dem Client auslesen
+    $model = getEffSpecial( "npcid" ,getTabValue($key,$ename."reserved9","?") );
+    $type  = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved8","?") );
+    $dura1 = getEffSpecial( "nozero",getTabValue($key,$ename."remain1","?") );
+    $dura2 = getEffSpecial( "nozero",getTabValue($key,$ename."remain2","?") );
+    $tran  =                         getTabValue($key,$ename."randomtime","?");
+    $effid =                         getTabValue($key,$ename."effectid","?");
+    $blev  =                         getTabValue($key,$ename."basiclv","?");
+    $nores = getEffSpecial( "true1" ,getTabValue($key,$ename."noresist","?") );
+    $elem  = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved10","?") );
+    $preff = getEffSpecial( "preff" ,getTabValue($key,$ename."cond_preeffect","?") );
+    $prob2 = getEffSpecial( "prob2" ,getTabValue($key,$ename."cond_preeffect_prob2","?") );
+    $acmod =                         getTabValue($key,$ename."acc_mod2","?");
+    $htyp  = getEffSpecial( "upper" ,getTabValue($key,$ename."hop_type","?") );
+    $hopb  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_b","?") );   
+    $hopa  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_a","?") );             
+    $skill = "?";
+    $panel = "?";
+    $state = "?";
+    
+    // einige Inhalte an die EMU anpassen
+    $elem   = ($elem == "AIR") ? "WIND" : $elem;  
+    $npctag = ($efftyp == "summonservant") ? "npc_id" : "model";  
+    
+    // spezielle Behandlungen gem. Effect-Tagtype
+    if ($efftyp == "summonservant")
+    {
+        $skill = getTabValue($key,$ename."reserved9","?");
+        $skid  = getRefSkillNameId($skill);
+        
+        if ($skid != "???")
+           $ret .= ' skill_id="'.$skid.'"';        
+    }
+    
+    if ($efftyp == "wpnmastery")
+    {
+        $weapn = getEffSpecial( "weapon",getTabValue($key,$ename."reserved5","?") ); 
+        $ret .= getFieldText( "weapon" ,$weapn );
+    }
+    
+    if (stripos($efftyp,"summon") !== false)
+    {
+        $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") ); 
+        $ret .= getFieldText( "time"   ,$time  );
+    }
+    
+    if ($efftyp == "shapechange")
+    {
+        $panel = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") );
+        $state = getEffSpecial( "state" ,getTabValue($key,$ename."reserved13","?") );
+    }
+    
+    if ($efftyp == "statup")
+        $type = "?";
+    
+    // allgemeine Zeile aufbereiten
+    $ret .= getFieldText( $npctag         ,$model ).
+            getFieldText( "type"          ,$type  ).
+            getFieldText( "state"         ,$state ).   
+            getFieldText( "panelid"       ,$panel ).
+            getFieldText( "duration2"     ,$dura2 ).
+            getFieldText( "duration1"     ,$dura1 ).
+            getFieldText( "randomtime"    ,$tran  ).
+            getFieldText( "effectid"      ,$effid ).
+            getFieldText( "e"             ,$e     ).
+            getFieldText( "basiclvl"      ,$blev  ).
+            getFieldText( "noresist"      ,$nores ).
+            getFieldText( "accmod2"       ,$acmod ).
+            getFieldText( "element"       ,$elem  ).
+            getFieldText( "preeffect"     ,$preff ).
+            getFieldText( "preeffect_prob",$prob2 ).
+            getFieldText( "hoptype"       ,$htyp  ).
+            getFieldText( "hopb"          ,$hopb  ).
+            getFieldText( "hopa"          ,$hopa  );
+                            
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: ShapeChange
+// ---------------------------------------------------------------------------
+function getEffectShapeChange($key,$e)
+{
+    $ret   = getEffectBasicLine("shapechange",$key,$e);
+            
+    if ($ret != "")
+        $ret = '            <shapechange'.$ret.'/>'."\n";
+        
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: StatUp
+// ---------------------------------------------------------------------------
+function getEffectStatUp($key,$e)
+{
+    $tbneg = array("ATTACK_SPEED");    
+    $ret   = getEffectBasicLine("statup",$key,$e);
+            
+    if ($ret != "")
+    {
+        $ret  = '            <statup'.$ret.'>'."\n";
+        $ret .= getChangeStats("statup",$key,$e,$tbneg);
+        $ret .= '            </statup>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: StatDown
+// ---------------------------------------------------------------------------
+function getEffectStatDown($key,$e)
+{
+    $tbneg = array("ATTACK_SPEED","SPEED");   
+    $ret   = getEffectBasicLine("statdown",$key,$e);
+            
+    if ($ret != "")
+    {
+        $ret  = '            <statdown'.$ret.'>'."\n";
+        $ret .= getChangeStats("statdown",$key,$e,$tbneg);
+        $ret .= '            </statdown>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: Sleep
+// ---------------------------------------------------------------------------
+function getEffectSleep($key,$e)
+{    
+    $ret   = getEffectBasicLine("sleep",$key,$e);
+            
+    if ($ret != "")
+        $ret  = '            <sleep'.$ret.'/>'."\n";
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: SummonServant
+// ---------------------------------------------------------------------------
+function getEffectSummonServant($key,$e)
+{    
+    $ret   = getEffectBasicLine("summonservant",$key,$e);
+            
+    if ($ret != "")
+        $ret  = '            <summonservant'.$ret.'/>'."\n";
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: WpnMastery
+// ---------------------------------------------------------------------------
+function getEffectWpnMastery($key,$e)
+{
+    $ename = "effect".$e."_";
+    $tbneg = array("ATTACK_SPEED");
+    $ret   = getEffectBasicLine("wpnmastery",$key,$e);
+    
+    if ($ret != "")
+    {
+        $ret  = '            <wpnmastery'.$ret.'>'."\n";
+        $ret .= getChangeStats("wpnmastery",$key,$e,$tbneg);
+        $ret .= '            </wpnmastery>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: ???
+// ---------------------------------------------------------------------------
+function getEffectMuster($key,$e)
+{
+    $ename = "effect".$e."_";
+    
+    $ret   = getEffectBasicLine("???",$key,$e);
+            
+    if ($ret != "")
+        $ret  = '            <???'.$ret.'/>'."\n";
+    
+    return $ret;
+}
 // ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: Effects
 // ---------------------------------------------------------------------------
 function getEffectsLines($key)
 {
-    global $tabcskill;
+    global $tabcskill, $taberreff;
     
     $ret = "";
     
     // ........
     /*
-        <xs:complexType name="Effects">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="root" type="RootEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="stun" type="StunEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="sleep" type="SleepEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="snare" type="SnareEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="absolutesnare" type="AbsoluteSnareEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="slow" type="SlowEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="absoluteslow" type="AbsoluteSlowEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="poison" type="PoisonEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="bleed" type="BleedEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="stumble" type="StumbleEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="spin" type="SpinEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="stagger" type="StaggerEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="openaerial" type="OpenAerialEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="closeaerial" type="CloseAerialEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="bind" type="BindEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="shield" type="ShieldEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mpshield" type="MPShieldEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispel" type="DispelEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="statup" type="StatupEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="statboost" type="StatboostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="weaponstatboost" type="WeaponStatboostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="wpnmastery" type="WeaponMasteryEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="statdown" type="StatdownEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="spellatk" type="SpellAttackEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="deform" type="DeformEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="shapechange" type="ShapeChangeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="polymorph" type="PolymorphEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hide" type="HideEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="search" type="SearchEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="healinstant" type="HealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mphealinstant" type="MPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dphealinstant" type="DPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="fphealinstant" type="FPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillatk" type="SkillAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="spellatkinstant" type="SpellAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dash" type="DashEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="backdash" type="BackDashEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="delaydamage" type="DelayedSpellAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="return" type="ReturnEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="prochealinstant" type="ProcHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="procmphealinstant" type="ProcMPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="procdphealinstant" type="ProcDPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="procfphealinstant" type="ProcFPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="carvesignet" type="CarveSignetEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="signet" type="SignetEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="signetburst" type="SignetBurstEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="silence" type="SilenceEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="curse" type="CurseEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="blind" type="BlindEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="disease" type="DiseaseEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="boosthate" type="BoostHateEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hostileup" type="HostileUpEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="paralyze" type="ParalyzeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="confuse" type="ConfuseEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="alwaysresist" type="AlwaysResistEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="alwaysblock" type="AlwaysBlockEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="alwaysparry" type="AlwaysParryEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="alwaysdodge" type="AlwaysDodgeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispeldebuffphysical" type="DispelDebuffPhysicalEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispeldebuff" type="DispelDebuffEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="switchhpmp" type="SwitchHpMpEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="aura" type="AuraEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summon" type="SummonEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="fear" type="FearEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="resurrect" type="ResurrectEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispeldebuffmental" type="DispelDebuffMentalEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="reflector" type="ReflectorEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="returnpoint" type="ReturnPointEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="provoker" type="ProvokerEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="spellatkdraininstant" type="SpellAtkDrainInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onetimeboostskillattack" type="OneTimeBoostSkillAttackEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onetimeboostskillcritical" type="OneTimeBoostSkillCriticalEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="armormastery" type="ArmorMasteryEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="weaponstatup" type="WeaponStatupEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="boostskillcastingtime" type="BoostSkillCastingTimeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summontrap" type="SummonTrapEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summongroupgate" type="SummonGroupGateEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summonservant" type="SummonServantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillatkdraininstant" type="SkillAtkDrainInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="petorderuseultraskill" type="PetOrderUseUltraSkillEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="boostheal" type="BoostHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispelbuff" type="DispelBuffEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="procatk_instant" type="ProcAtkInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skilllauncher" type="SkillLauncherEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="pulled" type="PulledEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="movebehind" type="MoveBehindEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="rebirth" type="RebirthEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="boostskillcost" type="BoostSkillCostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="protect" type="ProtectEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="resurrectbase" type="ResurrectBaseEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="magiccounteratk" type="MagicCounterAtkEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="recallinstant" type="RecallInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="randommoveloc" type="RandomMoveLocEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summonhoming" type="SummonHomingEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="xpboost" type="XPBoostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="fpatkinstant" type="FpAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="fpatk" type="FpAttackEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="onetimeboostheal" type="OneTimeBoostHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="deboostheal" type="DeboostHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summonskillarea" type="SummonSkillAreaEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="resurrectpos" type="ResurrectPositionalEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="nofly" type="NoFlyEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="nofpconsum" type="NoFPConsumEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="healcastoronatk" type="HealCastorOnAttackedEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="wpndual" type="WeaponDualEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="invulnerablewing" type="InvulnerableWingEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="shieldmastery" type="ShieldMasteryEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="simpleroot" type="SimpleRootEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dptransfer" type="DPTransferEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mpattack" type="MpAttackEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="boostdroprate" type="BoostDropRateEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="spellatkdrain" type="SpellAtkDrainEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="extendedaurarange" type="ExtendAuraRangeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="changehateonattacked" type="ChangeHateOnAttackedEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="healcastorontargetdead" type="HealCastorOnTargetDeadEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="noreducespellatk" type="NoReduceSpellATKInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mpattackinstant" type="MpAttackInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="condskilllauncher" type="CondSkillLauncherEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="fall" type="FallEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="evade" type="EvadeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="buffbind" type="BuffBindEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="buffsilence" type="BuffSilenceEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="buffsleep" type="BuffSleepEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="buffstun" type="BuffStunEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="heal" type="HealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mpheal" type="MPHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="fpheal" type="FPHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dpheal" type="DPHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summontotem" type="SummonTotemEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="boostspellattack" type="BoostSpellAttackEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="switchhostile" type="SwitchHostileEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="noresurrectpenalty" type="NoResurrectPenaltyEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hipass" type="HiPassEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="nodeathpenalty" type="NoDeathPenaltyEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="caseheal" type="CaseHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="procvphealinstant" type="ProcVPHealInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summonhousegate" type="SummonHouseGateEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summonbindinggroupgate" type="SummonBindingGroupGateEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="convertheal" type="ConvertHealEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="sanctuary" type="SanctuaryEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="subtypeextendduration" type="SubTypeExtendDurationEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="subtypeboostresist" type="SubTypeBoostResistEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispelnpcbuff" type="DispelNpcBuffEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dispelnpcdebuff" type="DispelNpcDebuffEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="deathblow" type="DeathBlowEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="delayedskill" type="DelayedSkillEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="delayedfpatk_instant" type="DelayedFpAtkInstantEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="drboost" type="DRBoostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="apboost" type="APBoostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillxpboost" type="SkillXPBoostEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="summonfunctionalnpc" type="SummonFunctionalNpcEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="targetteleport" type="TargetTeleportEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="flyoff" type="FlyOffEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="escape" type="EscapeEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="skillcooltimereset" type="SkillCooltimeResetEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="riderobot" type="RideRobotEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="absstatbuff" type="AbsoluteStatToPCBuff" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="absstatdebuff" type="AbsoluteStatToPCDebuff" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="stunalways" type="StunAlwaysEffect" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="targetchange" type="TargetChangeEffect" minOccurs="0" maxOccurs="1"/>
-            </xs:sequence>
-        </xs:complexType>
+        name="absoluteslow" type="AbsoluteSlowEffect"
+        name="absolutesnare" type="AbsoluteSnareEffect"
+        name="absstatbuff" type="AbsoluteStatToPCBuff"
+        name="absstatdebuff" type="AbsoluteStatToPCDebuff"
+        name="alwaysblock" type="AlwaysBlockEffect"
+        name="alwaysdodge" type="AlwaysDodgeEffect"
+        name="alwaysparry" type="AlwaysParryEffect"
+        name="alwaysresist" type="AlwaysResistEffect"
+        name="apboost" type="APBoostEffect"
+        name="armormastery" type="ArmorMasteryEffect"
+        name="aura" type="AuraEffect"
+        name="backdash" type="BackDashEffect"
+        name="bind" type="BindEffect"
+        name="bleed" type="BleedEffect"
+        name="blind" type="BlindEffect"
+        name="boostdroprate" type="BoostDropRateEffect"
+        name="boosthate" type="BoostHateEffect"
+        name="boostheal" type="BoostHealEffect"
+        name="boostskillcastingtime" type="BoostSkillCastingTimeEffect"
+        name="boostskillcost" type="BoostSkillCostEffect"
+        name="boostspellattack" type="BoostSpellAttackEffect"
+        name="buffbind" type="BuffBindEffect"
+        name="buffsilence" type="BuffSilenceEffect"
+        name="buffsleep" type="BuffSleepEffect"
+        name="buffstun" type="BuffStunEffect"
+        name="carvesignet" type="CarveSignetEffect"
+        name="caseheal" type="CaseHealEffect"
+        name="changehateonattacked" type="ChangeHateOnAttackedEffect"
+        name="closeaerial" type="CloseAerialEffect"
+        name="condskilllauncher" type="CondSkillLauncherEffect"
+        name="confuse" type="ConfuseEffect"
+        name="convertheal" type="ConvertHealEffect"
+        name="curse" type="CurseEffect"
+        name="dash" type="DashEffect"
+        name="deathblow" type="DeathBlowEffect"
+        name="deboostheal" type="DeboostHealEffect"
+        name="deform" type="DeformEffect"
+        name="delaydamage" type="DelayedSpellAttackInstantEffect"
+        name="delayedfpatk_instant" type="DelayedFpAtkInstantEffect"
+        name="delayedskill" type="DelayedSkillEffect"
+        name="disease" type="DiseaseEffect"
+        name="dispel" type="DispelEffect"
+        name="dispelbuff" type="DispelBuffEffect"
+        name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect"
+        name="dispeldebuff" type="DispelDebuffEffect"
+        name="dispeldebuffmental" type="DispelDebuffMentalEffect"
+        name="dispeldebuffphysical" type="DispelDebuffPhysicalEffect"
+        name="dispelnpcbuff" type="DispelNpcBuffEffect"
+        name="dispelnpcdebuff" type="DispelNpcDebuffEffect"
+        name="dpheal" type="DPHealEffect"
+        name="dphealinstant" type="DPHealInstantEffect"
+        name="dptransfer" type="DPTransferEffect"
+        name="drboost" type="DRBoostEffect"
+        name="escape" type="EscapeEffect"
+        name="evade" type="EvadeEffect"
+        name="extendedaurarange" type="ExtendAuraRangeEffect"
+        name="fall" type="FallEffect"
+        name="fear" type="FearEffect"
+        name="flyoff" type="FlyOffEffect"
+        name="fpatk" type="FpAttackEffect"
+        name="fpatkinstant" type="FpAttackInstantEffect"
+        name="fpheal" type="FPHealEffect"
+        name="fphealinstant" type="FPHealInstantEffect"
+        name="heal" type="HealEffect"
+        name="healcastoronatk" type="HealCastorOnAttackedEffect"
+        name="healcastorontargetdead" type="HealCastorOnTargetDeadEffect"
+        name="healinstant" type="HealInstantEffect"
+        name="hide" type="HideEffect"
+        name="hipass" type="HiPassEffect"
+        name="hostileup" type="HostileUpEffect"
+        name="invulnerablewing" type="InvulnerableWingEffect"
+        name="magiccounteratk" type="MagicCounterAtkEffect"
+        name="movebehind" type="MoveBehindEffect"
+        name="mpattack" type="MpAttackEffect"
+        name="mpattackinstant" type="MpAttackInstantEffect"
+        name="mpheal" type="MPHealEffect"
+        name="mphealinstant" type="MPHealInstantEffect"
+        name="mpshield" type="MPShieldEffect"
+        name="nodeathpenalty" type="NoDeathPenaltyEffect"
+        name="nofly" type="NoFlyEffect"
+        name="nofpconsum" type="NoFPConsumEffect"
+        name="noreducespellatk" type="NoReduceSpellATKInstantEffect"
+        name="noresurrectpenalty" type="NoResurrectPenaltyEffect"
+        name="onetimeboostheal" type="OneTimeBoostHealEffect"
+        name="onetimeboostskillattack" type="OneTimeBoostSkillAttackEffect"
+        name="onetimeboostskillcritical" type="OneTimeBoostSkillCriticalEffect"
+        name="openaerial" type="OpenAerialEffect"
+        name="paralyze" type="ParalyzeEffect"
+        name="petorderuseultraskill" type="PetOrderUseUltraSkillEffect"
+        name="poison" type="PoisonEffect"
+        name="polymorph" type="PolymorphEffect"
+        name="procatk_instant" type="ProcAtkInstantEffect"
+        name="procdphealinstant" type="ProcDPHealInstantEffect"
+        name="procfphealinstant" type="ProcFPHealInstantEffect"
+        name="prochealinstant" type="ProcHealInstantEffect"
+        name="procmphealinstant" type="ProcMPHealInstantEffect"
+        name="procvphealinstant" type="ProcVPHealInstantEffect"
+        name="protect" type="ProtectEffect"
+        name="provoker" type="ProvokerEffect"
+        name="pulled" type="PulledEffect"
+        name="randommoveloc" type="RandomMoveLocEffect"
+        name="rebirth" type="RebirthEffect"
+        name="recallinstant" type="RecallInstantEffect"
+        name="reflector" type="ReflectorEffect"
+        name="resurrect" type="ResurrectEffect"
+        name="resurrectbase" type="ResurrectBaseEffect"
+        name="resurrectpos" type="ResurrectPositionalEffect"
+        name="return" type="ReturnEffect"
+        name="returnpoint" type="ReturnPointEffect"
+        name="riderobot" type="RideRobotEffect"
+        name="root" type="RootEffect"
+        name="sanctuary" type="SanctuaryEffect"
+        name="search" type="SearchEffect"
+        name="shapechange" type="ShapeChangeEffect"
+        name="shield" type="ShieldEffect"
+        name="shieldmastery" type="ShieldMasteryEffect"
+        name="signet" type="SignetEffect"
+        name="signetburst" type="SignetBurstEffect"
+        name="silence" type="SilenceEffect"
+        name="simpleroot" type="SimpleRootEffect"
+        name="skillatk" type="SkillAttackInstantEffect"
+        name="skillatkdraininstant" type="SkillAtkDrainInstantEffect"
+        name="skillcooltimereset" type="SkillCooltimeResetEffect"
+        name="skilllauncher" type="SkillLauncherEffect"
+        name="skillxpboost" type="SkillXPBoostEffect"
+        name="slow" type="SlowEffect"
+        name="snare" type="SnareEffect"
+        name="spellatk" type="SpellAttackEffect"
+        name="spellatkdrain" type="SpellAtkDrainEffect"
+        name="spellatkdraininstant" type="SpellAtkDrainInstantEffect"
+        name="spellatkinstant" type="SpellAttackInstantEffect"
+        name="spin" type="SpinEffect"
+        name="stagger" type="StaggerEffect"
+        name="statboost" type="StatboostEffect"
+        name="stumble" type="StumbleEffect"
+        name="stun" type="StunEffect"
+        name="stunalways" type="StunAlwaysEffect"
+        name="subtypeboostresist" type="SubTypeBoostResistEffect"
+        name="subtypeextendduration" type="SubTypeExtendDurationEffect"
+        name="summon" type="SummonEffect"
+        name="summonbindinggroupgate" type="SummonBindingGroupGateEffect"
+        name="summonfunctionalnpc" type="SummonFunctionalNpcEffect"
+        name="summongroupgate" type="SummonGroupGateEffect"
+        name="summonhoming" type="SummonHomingEffect"
+        name="summonhousegate" type="SummonHouseGateEffect"
+        name="summonskillarea" type="SummonSkillAreaEffect"
+        name="summontotem" type="SummonTotemEffect"
+        name="summontrap" type="SummonTrapEffect"
+        name="switchhostile" type="SwitchHostileEffect"
+        name="switchhpmp" type="SwitchHpMpEffect"
+        name="targetchange" type="TargetChangeEffect"
+        name="targetteleport" type="TargetTeleportEffect"
+        name="weaponstatboost" type="WeaponStatboostEffect"
+        name="weaponstatup" type="WeaponStatupEffect"
+        name="wpndual" type="WeaponDualEffect"
+        name="xpboost" type="XPBoostEffect"
     */
+    for ($e=1;$e<5;$e++)
+    {
+        $effkey = "effect".$e."_type";
+        $efftyp = getTabValue($key,$effkey,"?");
+        
+        switch(strtolower($efftyp))
+        { 
+            case "?"             :  /* kein EffektType vorhanden */          break;
+
+            case "shapechange"   :  $ret .= getEffectShapeChange($key,$e);   break;
+            case "statup"        :  $ret .= getEffectStatUp($key,$e);        break;
+            case "statdown"      :  $ret .= getEffectStatDown($key,$e);      break; 
+            case "sleep"         :  $ret .= getEffectSleep($key,$e);         break;
+            case "summonservant" :  $ret .= getEffectSummonServant($key,$e); break;
+            case "wpn_mastery"   :  $ret .= getEffectWpnMastery($key,$e);    break;
+      
+            default              :  $taberreff[$efftyp] = 1;                break;
+        }
+    }
     
     if ($ret != "")
         $ret = '        <effects>'."\n".
-               $ret.'</effects>';
+               $ret.'        </effects>';
         
     return $ret;
 }
@@ -1099,10 +1703,10 @@ function getActionsLines($key)
     /*
         <xs:complexType name="Actions">
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="itemuse" type="ItemUseAction" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mpuse" type="MpUseAction" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="hpuse" type="HpUseAction" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="dpuse" type="DpUseAction" minOccurs="0" maxOccurs="1"/>
+                name="itemuse" type="ItemUseAction"
+                name="mpuse" type="MpUseAction"
+                name="hpuse" type="HpUseAction"
+                name="dpuse" type="DpUseAction"
             </xs:sequence>
         </xs:complexType>
     */
@@ -1175,8 +1779,8 @@ function getPeriodicActionsLines($key)
     /*
         <xs:complexType name="PeriodicActions">
             <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                <xs:element name="hpuse" type="HpUsePeriodicAction" minOccurs="0" maxOccurs="1"/>
-                <xs:element name="mpuse" type="MpUsePeriodicAction" minOccurs="0" maxOccurs="1"/>
+                name="hpuse" type="HpUsePeriodicAction"
+                name="mpuse" type="MpUsePeriodicAction"
             </xs:sequence>
             <xs:attribute name="checktime" type="xs:int"/>
         </xs:complexType>
@@ -1307,28 +1911,28 @@ function generSkillTemplateFile()
         {
             $lout  = '    <skill_template skill_id="'.$key.'" name="'.$skillname.'" nameId="'.$skillnid.
                      '" name_desc="'.$tabcskill[$key]['name'].'"'; 
-            $lout .= getFieldText($key,"delay_id","cooldownId",""); 
+            $lout .= getTabFieldText($key,"delay_id","cooldownId",""); 
             $lout .= getStackName($key);
-            $lout .= getFieldText($key,"chain_category_level","lvl","1");
-            $lout .= getFieldText($key,"type","skilltype","NONE");
-            $lout .= getFieldText($key,"sub_type","skillsubtype","NONE");
-            $lout .= getFieldText($key,"target_slot","tslot","NONE");
-            $lout .= getFieldText($key,"target_slot_level","tslot_level","");
-            $lout .= getFieldText($key,"conflict_id","conflict_id","");
-            $lout .= getFieldText($key,"dispel_category","dispel_category","");
-            $lout .= getFieldText($key,"required_dispel_level","req_dispel_level","");
-            $lout .= getFieldText($key,"activation_attribute","activation","NONE");
-            $lout .= getFieldText($key,"delay_time","cooldown","0");
-            $lout .= getFieldText($key,"toggle_timer","toggle_timer","");
-            $lout .= getFieldText($key,"casting_delay","duration","0");
-            $lout .= getFieldText($key,"pvp_damage_ratio","pvp_damage","");
-            $lout .= getFieldText($key,"pvp_remain_time_ratio","pvp_duration","");
-            $lout .= getFieldText($key,"ammo_speed","ammospeed","");
+            $lout .= getTabFieldText($key,"chain_category_level","lvl","1");
+            $lout .= getTabFieldText($key,"type","skilltype","NONE");
+            $lout .= getTabFieldText($key,"sub_type","skillsubtype","NONE");
+            $lout .= getTabFieldText($key,"target_slot","tslot","NONE");
+            $lout .= getTabFieldText($key,"target_slot_level","tslot_level","");
+            $lout .= getTabFieldText($key,"conflict_id","conflict_id","");
+            $lout .= getTabFieldText($key,"dispel_category","dispel_category","");
+            $lout .= getTabFieldText($key,"required_dispel_level","req_dispel_level","");
+            $lout .= getTabFieldText($key,"activation_attribute","activation","NONE");
+            $lout .= getTabFieldText($key,"delay_time","cooldown","0");
+            $lout .= getTabFieldText($key,"toggle_timer","toggle_timer","");
+            $lout .= getTabFieldText($key,"casting_delay","duration","0");
+            $lout .= getTabFieldText($key,"pvp_damage_ratio","pvp_damage","");
+            $lout .= getTabFieldText($key,"pvp_remain_time_ratio","pvp_duration","");
+            $lout .= getTabFieldText($key,"ammo_speed","ammospeed","");
             $lout .= getPenaltySkillId($key);
             $lout .= getGroundStatus($key);
-            $lout .= getFieldText($key,"cancel_rate","cancel_rate","");
-            $lout .= getFieldText($key,"chain_skill_prob2","chain_skill_prob","");
-            $lout .= getFieldText($key,"counter_skill","counter_skill","");
+            $lout .= getTabFieldText($key,"cancel_rate","cancel_rate","");
+            $lout .= getTabFieldText($key,"chain_skill_prob2","chain_skill_prob","");
+            $lout .= getTabFieldText($key,"counter_skill","counter_skill","");
             $lout .= getStanceStatus($key);
             $lout .= getAvatarStatus($key);
             $lout .= getNoremoveStatus($key);
@@ -1499,14 +2103,14 @@ function generSkillTreeFile()
             <skill minLevel="1" race="PC_ALL" autolearn="true" name="Basic Harp Training" skillLevel="1" skillId="114" classId="ARTIST" />
             */
             $lout = '    <skill'.
-                    getTreeFieldText("minLevel"  ,$lmin).
-                    getTreeFieldText("race"      ,$race).
-                    getTreeFieldText("stigma"    ,$stigma).
-                    getTreeFieldText("autolearn" ,$auto).
-                    getTreeFieldText("name"      ,$name).
-                    getTreeFieldText("skillLevel",$slev).
-                    getTreeFieldText("skillId"   ,$sid).
-                    getTreeFieldText("classId"   ,$class).
+                    getFieldText("minLevel"  ,$lmin).
+                    getFieldText("race"      ,$race).
+                    getFieldText("stigma"    ,$stigma).
+                    getFieldText("autolearn" ,$auto).
+                    getFieldText("name"      ,$name).
+                    getFieldText("skillLevel",$slev).
+                    getFieldText("skillId"   ,$sid).
+                    getFieldText("classId"   ,$class).
                     ' />';
             fwrite($hdlout,$lout."\n");
             $cntout++;
@@ -1535,15 +2139,18 @@ function makeAbgleichSvnFile()
     
     logHead("Erzeuge Abgleich-Test-Datei: svn_skill_templates.xml");
     
-    $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
-    $fileout = "parse_temp/svn_skill_templates.xml";
+    $filesvn  = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
+    $fileout  = "parse_temp/svn_skill_templates.xml";
 
-    $hdlsvn  = openInputFile($filesvn);
-    $hdlout  = openOutputFile($fileout);    
+    $hdlsvn   = openInputFile($filesvn);
+    $hdlout   = openOutputFile($fileout);    
     
-    $cntout  = 0;
-    $doblock = false;
-    $doline  = false;
+    $cntout   = 0;
+    $doblock  = false;
+    $doline   = false;
+    $doeff    = false;
+    $effwait  = "";
+    $endblock = "";
     
     logLine("Ausgabedatei",$fileout);
     
@@ -1561,20 +2168,72 @@ function makeAbgleichSvnFile()
         $line   = str_replace("\t","    ",$line);
         $doline = false;
         
-        // ganzen Block ausgeben?
-        if (stripos($line,"<actions>")          !== false
-        ||  stripos($line,"<periodicactions")   !== false
-        ||  stripos($line,"<startconditions")   !== false
-        ||  stripos($line,"<endconditions")     !== false
-        ||  stripos($line,"<useconditions")     !== false
-        ||  stripos($line,"<useequipmentconditions") !== false)
-            $doblock = true;
+        // spezielle B ehandlung für die Effekte, da es ca. 216 verschiedene gibt
+        // und die erst nach und nach realisiert werden
+        if (stripos($line,"<effects") !== false)
+        {
+            $effwait = $line;
+            $doeff   = false;
+        }
+        else
+        {            
+            // momentan auch für die Effekte nur Zeilenweise!  
+            // Effekt Blöcke
+            if     (stripos($line,"<statup")        !== false
+            ||      stripos($line,"<statdown")      !== false
+            ||      stripos($line,"<wpnmastery")    !== false)
+            {
+                $doblock  = true;
+                $endblock = "</".getXmlKey($line).">";
+                $doeff    = true;
+            }
+            // Effekt Zeilen
+            elseif (stripos($line,"<shapechange")   !== false
+            ||      stripos($line,"<sleep")         !== false
+            ||      stripos($line,"<summonservant") !== false)
+            {
+                $doline   = true;
+                $doeff    = true;
+            }  
+            // Start <effects> ausgeben
+            if ($doeff)
+            {
+                if ($effwait != "")
+                {
+                    fwrite($hdlout,$effwait."\n");
+                    $cntout++;
+                    $effwait = "";
+                }
+                // Ende </effects> nur ausgeben, wenn Effekte vorhanden sind
+                if (stripos($line,"</effects>")      !== false)
+                {
+                    $doline   = true;
+                    $doeff    = false;
+                }
+            }
+        }        
         
-        // einzelne Zeilen ausgeben?
-        if (stripos($line,"skill_template")     !== false
-        ||  stripos($line,"properties")         !== false
-        ||  stripos($line,"<motion")            !== false)
-            $doline = true;
+        // alles andere (ausser Effekte) prüfen
+        if (!$doline && !$doblock)
+        {
+            // ganzen Block ausgeben?
+            if (stripos($line,"<actions>")          !== false
+            ||  stripos($line,"<periodicactions")   !== false
+            ||  stripos($line,"<startconditions")   !== false
+            ||  stripos($line,"<endconditions")     !== false
+            ||  stripos($line,"<useconditions")     !== false
+            ||  stripos($line,"<useequipmentconditions") !== false)
+            {
+                $doblock = true;
+                $endblock = "</".getXmlKey($line).">";
+            }
+            
+            // einzelne Zeilen ausgeben?
+            if (stripos($line,"skill_template")     !== false
+            ||  stripos($line,"properties")         !== false
+            ||  stripos($line,"<motion")            !== false)
+                $doline = true;
+        }
         
         // Block/einzelnen Zeile ausgeben
         if ($doblock || $doline)
@@ -1584,13 +2243,8 @@ function makeAbgleichSvnFile()
         }
         
         // Blockende?
-        if (stripos($line,"</actions>")          !== false
-        ||  stripos($line,"</periodicactions>")  !== false
-        ||  stripos($line,"</startconditions")   !== false
-        ||  stripos($line,"</endconditions")     !== false
-        ||  stripos($line,"</useconditions")     !== false
-        ||  stripos($line,"</useequipmentconditions") !== false)
-            $doblock = false;
+        if (stripos($line,$endblock)                !== false)
+            $doblock = false;               
     }
     // Nachspann ausgeben
     fwrite($hdlout,"</skill_data>");
@@ -1711,7 +2365,84 @@ function showAllConditions()
 // ----------------------------------------------------------------------------
 function showAllEffects()
 {
-}  
+    global $pathsvn;
+    
+    $tabcond = array();
+    
+    logHead("Erzeuge Effect-Liste aus dem SVN");
+    
+    $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
+    $hdlsvn  = openInputFile($filesvn);
+     
+    $incond = "";
+    $endkey = "???";
+    $id     = "";
+    
+    while (!feof($hdlsvn))
+    {
+        $line = rtrim(fgets($hdlsvn));
+        
+        if (stripos($line,"<effects>") !== false)
+        {
+            $incond = getXmlKey($line);
+            $endkey = "</$incond>";
+        }
+        else
+        {
+            if ($incond)
+            {
+                if (stripos($line,$endkey) !== false)
+                {
+                    $incond = "";
+                    $endkey = "???";
+                }
+                else
+                {
+                    $xml = getXmlKey($line);
+                    if ($xml != "" && substr($xml,0,1) != "/")
+                    {
+                        if (isset($tabcond[$incond][$xml]))
+                        {
+                            if (stripos($tabcond[$incond][$xml],$id) === false)
+                                $tabcond[$incond][$xml] .= $id." ";
+                        }
+                        else
+                            $tabcond[$incond][$xml]  = $id." ";
+                    }
+                }
+            }
+            elseif (stripos($line,"skill_id=") !== false)
+                $id = getKeyValue("skill_id",$line);
+        }
+    }
+    fclose($hdlsvn);
+    
+    while (list($key,$val) = each($tabcond))
+    {
+        logLine($key,"Condition Start");
+        
+        while (list($xml,$xval) = each($tabcond[$key]))
+        {   
+            logLine("- ".$xml,$xval);
+        }
+    }
+    /* aktuelles Ergebnis !!!!
+    
+    
+    */
+} 
+// ----------------------------------------------------------------------------
+// Anzeigen aller Effekte, die noch nicht bearbeitet werden!
+// ---------------------------------------------------------------------------- 
+function showMissingEffects()
+{
+    global $taberreff;
+    
+    logLine("Anzahl fehlende Effekt-Scripts",count($taberreff)." von 216 (sind im Parser noch nicht realisiert!)");
+    
+    while (list($key,$val) = each($taberreff))
+        logLine("<font color=red>Add Effect-Script",$key);
+}
 // ----------------------------------------------------------------------------
 //                             M  A  I  N
 // ----------------------------------------------------------------------------
@@ -1723,9 +2454,13 @@ include("includes/auto_inc_npc_infos.php");
 
 $starttime = microtime(true);
 $tabSNames = array();
+$tabrskill = array();
 $tabcskill = array();
 $tabxskill = array();
 $tabcharge = array();
+$taberreff = array();
+
+$protkey   = ""; // wird nur zu Testzwecken genutzt!
 
 echo '
    <tr>
@@ -1753,6 +2488,7 @@ if ($submit == "J")
         scanPsSkillNames();
         scanSkillCharges();
         scanClientSkills();
+        makeSkillsRefTab();
         // -------------------------
         // nur zum Testen benötigt!
         // showSkillTags();
@@ -1760,6 +2496,7 @@ if ($submit == "J")
         // showAllEffects();
         // -------------------------
         generSkillTemplateFile();
+        showMissingEffects();
         generSkillTreeFile();
         
         makeAbgleichSvnFile();
