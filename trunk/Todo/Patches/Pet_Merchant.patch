@@ -237,6 +237,19 @@ Index: src/com/aionemu/gameserver/dataholders/StaticData.java
          DataManager.log.info("[DataManager] Loaded " + playerInitialData.size() + " initial player templates");
          DataManager.log.info("[DataManager] Loaded " + tradeListData.size() + " trade lists");
          DataManager.log.info("[DataManager] Loaded " + teleporterData.size() + " npc teleporter templates");
+Index: src/com/aionemu/gameserver/model/templates/pet/PetFunctionType.java
+===================================================================
+--- src/com/aionemu/gameserver/model/templates/pet/PetFunctionType.java	(revision 281)
++++ src/com/aionemu/gameserver/model/templates/pet/PetFunctionType.java	(working copy)
+@@ -27,6 +27,8 @@
+     LOOT(3, 8),
+     APPEARANCE(1),
+     NONE(4, true),
++    BUFF(5), //Todo
++    MERCHANT(6), //Todo
+     // non writable to packets
+     BAG(-1),
+     WING(-2);
 Index: src/com/aionemu/gameserver/model/templates/pet/PetMerchantEntry.java
 ===================================================================
 --- src/com/aionemu/gameserver/model/templates/pet/PetMerchantEntry.java	(nonexistent)
@@ -296,3 +309,32 @@ Index: src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java
              }
          }
      }
+@@ -176,6 +179,9 @@
+                         TradeService.performBuyFromRewardShop(npc, player, tradeList);
+                     }
+                     break;
++                case 17://sell from Miol
++                    TradeService.performSellForKinahToShop(player, tradeList, purchaseTemplate);
++                    break;
+                 default:
+                     log.info(String.format("Unhandle shop action unk1: %d", tradeActionId));
+                     break;
+Index: src/com/aionemu/gameserver/network/aion/serverpackets/SM_PET.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/serverpackets/SM_PET.java	(revision 281)
++++ src/com/aionemu/gameserver/network/aion/serverpackets/SM_PET.java	(working copy)
+@@ -234,6 +234,14 @@
+                     writeQ(0);
+                     specialtyCount++;
+                 }
++                if (petTemplate.ContainsFunction(PetFunctionType.MERCHANT)) {
++                    writeH(PetFunctionType.MERCHANT.getId());
++                    specialtyCount++;
++                }
++                if (petTemplate.ContainsFunction(PetFunctionType.BUFF)) {
++                    writeH(PetFunctionType.BUFF.getId());
++                    specialtyCount++;
++                }
+                 // Pets have only 2 functions max. If absent filled with NONE
+                 if (specialtyCount == 0) {
+                     writeH(PetFunctionType.NONE.getId());
