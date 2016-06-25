@@ -3,8 +3,8 @@
 <quest_scripts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="quest_script_data.xsd">
     <!--
         [BEGIN] SUMMARY
-               29600 [XML] Welcome Back
-               29601 [XML] Instruction on Instructors
+               29600 [SCRIPT] Welcome Back
+               29601 [SCRIPT] Instruction on Instructors
                29602 [XML] The Sheen of Newness
                29603 [XML] [Daily] Brusthonin Brushback
                29604 [XML] Drop into Draupnir
@@ -51,13 +51,6 @@
         [END] SUMMARY
     -->
 	<!-- REPORTING QUESTS -->
-    <report_to id="29600" start_npc_ids="209677" end_npc_ids="804662"/>
-	<report_to_many id="29601" start_npc_ids="804662" end_npc_ids="804666">
-		<npc_infos var="0" npc_id="804663" quest_dialog="1352"/>
-		<npc_infos var="1" npc_id="804664" quest_dialog="1693"/>
-		<npc_infos var="2" npc_id="804665" quest_dialog="2034"/>
-		<npc_infos var="3" npc_id="804666" quest_dialog="2375" close_dialog="1009"/>
-	</report_to_many>
 	<report_to_many id="29602" start_npc_ids="804663" end_npc_ids="798155">
 		<npc_infos var="0" npc_id="205986" quest_dialog="1352"/>
 		<npc_infos var="1" npc_id="209476" quest_dialog="1693" close_dialog="1009"/>

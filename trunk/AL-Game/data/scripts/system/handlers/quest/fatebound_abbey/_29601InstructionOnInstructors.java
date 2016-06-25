@@ -26,23 +26,23 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 /**
  * @author FrozenKiller
  */
-public class _19601MeetYourInstructors extends QuestHandler {
+public class _29601InstructionOnInstructors extends QuestHandler {
 
-    private final static int questId = 19601;
+    private final static int questId = 29601;
 
-    public _19601MeetYourInstructors() {
+    public _29601InstructionOnInstructors() {
         super(questId);
     }
 
     @Override
     public void register() {
-        qe.registerQuestNpc(804651).addOnQuestStart(questId);
-        qe.registerQuestNpc(804651).addOnTalkEvent(questId); // Lena
-        qe.registerQuestNpc(805304).addOnTalkEvent(questId); // Margges
-		qe.registerQuestNpc(804652).addOnTalkEvent(questId); // Rosette
-		qe.registerQuestNpc(804653).addOnTalkEvent(questId); // Deronis
-		qe.registerQuestNpc(804654).addOnTalkEvent(questId); // Agnes
-		qe.registerQuestNpc(804655).addOnTalkEvent(questId); // Kiran
+        qe.registerQuestNpc(804662).addOnQuestStart(questId);
+        qe.registerQuestNpc(804662).addOnTalkEvent(questId); // Janete
+        qe.registerQuestNpc(805305).addOnTalkEvent(questId); // Brunk
+		qe.registerQuestNpc(804663).addOnTalkEvent(questId); // Simona
+		qe.registerQuestNpc(804664).addOnTalkEvent(questId); // Christian
+		qe.registerQuestNpc(804665).addOnTalkEvent(questId); // Letania
+		qe.registerQuestNpc(804666).addOnTalkEvent(questId); // Pascal
     }
 	
 	@Override
@@ -53,7 +53,7 @@ public class _19601MeetYourInstructors extends QuestHandler {
         DialogAction dialog = env.getDialog();
 
 		if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
-			if (targetId == 804651) { // Lena
+			if (targetId == 804662) { // Janete
 			   if (env.getDialog() == DialogAction.QUEST_SELECT) {
 				   return sendQuestDialog(env, 4762);
 			   } else {
@@ -62,7 +62,7 @@ public class _19601MeetYourInstructors extends QuestHandler {
 			}
 		} else if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			if (targetId == 805304) { // Margges
+			if (targetId == 805305) { // Brunk
 				switch (dialog) {
 					case QUEST_SELECT: {
 						if (var == 0) {
@@ -77,7 +77,7 @@ public class _19601MeetYourInstructors extends QuestHandler {
 				default:
 					break;
 				}
-			} else if (targetId == 804652) { // Rosette
+			} else if (targetId == 804663) { // Simona
 				switch (dialog) {
 					case QUEST_SELECT: {
 						if (var == 1) {
@@ -92,7 +92,7 @@ public class _19601MeetYourInstructors extends QuestHandler {
 				default:
 					break;
 				}
-			} else if (targetId == 804653) { // Deronis
+			} else if (targetId == 804664) { // Christian
 				switch (dialog) {
 					case QUEST_SELECT: {
 						if (var == 2) {
@@ -100,14 +100,14 @@ public class _19601MeetYourInstructors extends QuestHandler {
 						} 
 					}
 					case SETPRO2: {
-						qs.setQuestVar(3);
+						qs.setQuestVar(2);
                         updateQuestStatus(env);
 						return closeDialogWindow(env);
 					}
 				default:
 					break;
 				}
-			} else if (targetId == 804654) { // Agnes
+			} else if (targetId == 804665) { // Letania
 				switch (dialog) {
 					case QUEST_SELECT: {
 						if (var == 3) {
@@ -115,14 +115,14 @@ public class _19601MeetYourInstructors extends QuestHandler {
 						} 
 					}
 					case SET_SUCCEED: {
-						return defaultCloseDialog(env, 3, 4, true, false); // reward
+						return defaultCloseDialog(env, 2, 3, true, false); // Reward
 					}
 				default:
 					break;
 				}
 			} 
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 804655) { // Kiran
+            if (targetId == 804666) { // Pascal
                 if (dialog == DialogAction.USE_OBJECT) {
                     return sendQuestDialog(env, 10002);
                 } else {
