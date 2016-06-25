@@ -1,0 +1,412 @@
+Index: data/scripts/system/database/mysql5/MySQL5PlayerDAO.java
+===================================================================
+--- data/scripts/system/database/mysql5/MySQL5PlayerDAO.java	(revision 287)
++++ data/scripts/system/database/mysql5/MySQL5PlayerDAO.java	(working copy)
+@@ -34,6 +34,7 @@
+ import com.aionemu.gameserver.model.account.PlayerAccountData;
+ import com.aionemu.gameserver.model.gameobjects.player.Mailbox;
+ import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.model.gameobjects.player.PlayerBonusTimeStatus;
+ import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
+ import com.aionemu.gameserver.model.gameobjects.player.PlayerUpgradeArcade;
+ import com.aionemu.gameserver.model.team.legion.LegionJoinRequestState;
+@@ -41,7 +42,9 @@
+ import com.aionemu.gameserver.world.World;
+ import com.aionemu.gameserver.world.WorldPosition;
+ import com.google.common.collect.Maps;
++
+ import javolution.util.FastMap;
++
+ import org.apache.commons.lang.StringUtils;
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+@@ -137,8 +140,7 @@
+         Connection con = null;
+         try {
+             con = DatabaseFactory.getConnection();
+-            PreparedStatement stmt = con
+-                    .prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=? WHERE id=?");
++            PreparedStatement stmt = con.prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=?, bonus_type=?, bonus_buff_time=? WHERE id=?");
+ 
+             log.debug("[DAO: MySQL5PlayerDAO] storing player " + player.getObjectId() + " " + player.getName());
+             PlayerCommonData pcd = player.getCommonData();
+@@ -186,7 +188,9 @@
+             stmt.setString(35, pcd.getJoinRequestState().name());
+             stmt.setInt(36, player.getUpgradeArcade().getFrenzyPoints());
+             stmt.setInt(37, player.getUpgradeArcade().getFrenzyCount());
+-            stmt.setInt(38, player.getObjectId());
++            stmt.setString(38, player.getBonusTime().getStatus().toString());
++            stmt.setTimestamp(39, pcd.getBonusTime().getTime());
++            stmt.setInt(40, player.getObjectId());
+             stmt.execute();
+             stmt.close();
+         } catch (Exception e) {
+@@ -211,9 +215,8 @@
+         Connection con = null;
+         try {
+             con = DatabaseFactory.getConnection();
+-            PreparedStatement preparedStatement = con
+-                    .prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , cube_expands, warehouse_size, online) "
+-                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
++            PreparedStatement preparedStatement = con.prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , cube_expands, warehouse_size, bonus_type, online) "
++                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
+ 
+             log.debug("[DAO: MySQL5PlayerDAO] saving new player: " + pcd.getPlayerObjId() + " " + pcd.getName());
+ 
+@@ -231,6 +234,7 @@
+             preparedStatement.setString(12, pcd.getPlayerClass().toString());
+             preparedStatement.setInt(13, pcd.getCubeExpands());
+             preparedStatement.setInt(14, pcd.getWarehouseSize());
++            preparedStatement.setString(15, pcd.getBonusTime().getStatus().toString());
+             preparedStatement.execute();
+             preparedStatement.close();
+         } catch (Exception e) {
+@@ -308,6 +312,7 @@
+                 cd.setRecoverableExp(resultSet.getLong("recoverexp"));
+                 cd.setRace(Race.valueOf(resultSet.getString("race")));
+                 cd.setGender(Gender.valueOf(resultSet.getString("gender")));
++                cd.setCreationDate(resultSet.getTimestamp("creation_date"));
+                 cd.setLastOnline(resultSet.getTimestamp("last_online"));
+                 cd.setNote(resultSet.getString("note"));
+                 cd.setCubeExpands(resultSet.getInt("cube_expands"));
+@@ -365,6 +370,8 @@
+                 PlayerUpgradeArcade pua = new PlayerUpgradeArcade();
+                 pua.setFrenzyPoints(resultSet.getInt("frenzy_points"));
+                 pua.setFrenzyCount(resultSet.getInt("frenzy_count"));
++                cd.setBonusType(PlayerBonusTimeStatus.valueOf(resultSet.getString("bonus_type")));
++                cd.setBonusTime(resultSet.getTimestamp("bonus_buff_time"));
+                 cd.setUpgradeArcade(pua);
+             } else {
+                 log.info("Missing PlayerCommonData from db " + playerObjId);
+@@ -765,8 +772,19 @@
+             }
+         });
+     }
+-    
++
+     @Override
++    public boolean updateBonusTime(final int playerObjId) {
++        return DB.insertUpdate("UPDATE players SET bonus_type = 'NORMAL', bonus_buff_time = NULL WHERE `id` = ? and `bonus_buff_time` < CURRENT_TIMESTAMP", new IUStH() {
++            @Override
++            public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException {
++                preparedStatement.setInt(1, playerObjId);
++                preparedStatement.execute();
++            }
++        });
++    }
++
++    @Override
+ 	public Timestamp getCharacterCreationDateId(final int obj) {
+ 		Connection con = null;
+ 		Timestamp creationDate;
+Index: sql/updates/bonus_buff.sql
+===================================================================
+--- sql/updates/bonus_buff.sql	(nonexistent)
++++ sql/updates/bonus_buff.sql	(working copy)
+@@ -0,0 +1,2 @@
++ALTER TABLE `players` ADD `bonus_buff_time` timestamp NULL default NULL;
++ALTER TABLE `players` ADD COLUMN `bonus_type`  enum('RETURN','NEW','NORMAL') NOT NULL DEFAULT 'NORMAL';
+Index: src/com/aionemu/gameserver/dao/PlayerDAO.java
+===================================================================
+--- src/com/aionemu/gameserver/dao/PlayerDAO.java	(revision 287)
++++ src/com/aionemu/gameserver/dao/PlayerDAO.java	(working copy)
+@@ -190,6 +190,8 @@
+     public abstract Set<Integer> getInactiveAccounts(final int daysOfInactivity, int limitation);
+ 
+     public abstract void setPlayerLastTransferTime(final int playerId, final long time);
++    
++    public abstract boolean updateBonusTime(final int playerObjId);
+ 
+     @Override
+     public final String getClassName() {
+Index: src/com/aionemu/gameserver/model/gameobjects/player/Player.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/Player.java	(revision 287)
++++ src/com/aionemu/gameserver/model/gameobjects/player/Player.java	(working copy)
+@@ -283,6 +283,11 @@
+     private boolean isInLiveParty = false;
+ 	//private int linkedSkill;
+     private PlayerConquererProtectorData conquerorProtectorData;
++    
++    private PlayerBonusTime bonusTime;
++    private boolean newPlayer = false;
++    private long creationDay;
++    
+     /**
+      * Used for JUnit tests
+      */
+@@ -2643,4 +2648,66 @@
+ 	public void setConquerorDefenderData(PlayerConquererProtectorData conquerorDefenderData) {
+ 		this.conquerorProtectorData = conquerorDefenderData;
+ 	}
++
++    /**
++     * @return the New User Bonus Time
++     */
++    public void setNew(boolean b) {
++        this.newPlayer = b;
++    }
++
++    public boolean isNewPlayer() {
++        return newPlayer;
++    }
++
++    public PlayerBonusTime getBonusTime() {
++        return bonusTime;
++    }
++
++    public void setBonusTime(PlayerBonusTime bonusTime) {
++        this.bonusTime = bonusTime;
++    }
++
++    public long getCreationDate() {
++        Timestamp creationDate = playerCommonData.getCreationDate();
++        if (creationDate == null) {
++            return 0;
++        }
++
++        return creationDate.getTime();
++    }
++
++    public void setCreationDataDay(long i) {
++        this.creationDay = i;
++    }
++
++    public long getCreationDataDay() {
++        return creationDay;
++    }
++
++    public void setBonusTimeStatus() {
++        Timestamp tm = getClientConnection().getAccount().getPlayerAccountData(getObjectId()).getPlayerCommonData().getLastOnline();
++        long lastOnlineTimeDay = (System.currentTimeMillis() - tm.getTime()) / 24 / 60 / 60 / 1000;
++        long t = (System.currentTimeMillis() - getCommonData().getCreationDate().getTime()) / 24 / 60 / 60 / 1000;
++        long bonus_time = getBonusTime().getTime() != null ? System.currentTimeMillis() - getBonusTime().getTime().getTime() : 0;
++        boolean bonus_comeback = System.currentTimeMillis() < bonus_time;
++        setCreationDataDay(t);
++        if (t <= 3L) {
++            setNew(true);
++        } else {
++            setNew(false);
++        }
++        if (getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN && bonus_comeback || getBonusTime().getStatus() == PlayerBonusTimeStatus.NEW && t <= 30) {
++            return;
++        }
++
++        if (t <= 30L) {
++            getBonusTime().setStatus(PlayerBonusTimeStatus.NEW);
++        } else if (lastOnlineTimeDay >= 30L) {
++            getBonusTime().setStatus(PlayerBonusTimeStatus.RETURN);
++            getBonusTime().setTime(new Timestamp(System.currentTimeMillis() + 30L * 24 * 60 * 60 * 1000));
++        } else {
++            getBonusTime().setStatus(PlayerBonusTimeStatus.NORMAL);
++        }
++    }
+ }
+Index: src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTime.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTime.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTime.java	(working copy)
+@@ -0,0 +1,54 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.gameobjects.player;
++
++import java.sql.Timestamp;
++
++/**
++ * @author Steve
++ * @modified Alex
++ */
++public class PlayerBonusTime {
++
++    private Timestamp time;
++    private PlayerBonusTimeStatus status;
++
++    public PlayerBonusTime() {
++        this.time = null;
++        this.status = PlayerBonusTimeStatus.NORMAL;
++    }
++
++    public void setTime(Timestamp time) {
++        this.time = time;
++    }
++
++    public void setStatus(PlayerBonusTimeStatus status) {
++        this.status = status;
++    }
++
++    public Timestamp getTime() {
++        return time;
++    }
++
++    public PlayerBonusTimeStatus getStatus() {
++        return status;
++    }
++
++    public boolean isBonus() {
++        return getStatus().isBonus();
++    }
++}
+Index: src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTimeStatus.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTimeStatus.java	(nonexistent)
++++ src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTimeStatus.java	(working copy)
+@@ -0,0 +1,42 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.model.gameobjects.player;
++
++/**
++ * @author Steve
++ * @modified Alex
++ */
++public enum PlayerBonusTimeStatus {
++
++    NORMAL(1),
++    NEW(2),
++    RETURN(3),
++    BONUS(RETURN.id | NEW.id);
++    private int id;
++
++    private PlayerBonusTimeStatus(int id) {
++        this.id = id;
++    }
++
++    public int getId() {
++        return id;
++    }
++
++    public boolean isBonus() {
++        return (BONUS.id & getId()) == getId();
++    }
++}
+Index: src/com/aionemu/gameserver/model/gameobjects/player/PlayerCommonData.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/PlayerCommonData.java	(revision 287)
++++ src/com/aionemu/gameserver/model/gameobjects/player/PlayerCommonData.java	(working copy)
+@@ -98,7 +98,10 @@
+     private int joinRequestLegionId = 0;
+     private LegionJoinRequestState joinRequestState = LegionJoinRequestState.NONE;
+     private PlayerUpgradeArcade upgradeArcade;
+-
++    
++    private PlayerBonusTime bonusTime = new PlayerBonusTime();
++    private Timestamp creationDate;
++    
+ 	public Map<Integer, AtreianPassport> playerPassports = new HashMap<Integer, AtreianPassport>(1);
+     private PlayerPassports completedPassports;
+ 
+@@ -823,4 +826,27 @@
+ 	public void setUpgradeArcade(PlayerUpgradeArcade upgradeArcade) {
+ 		this.upgradeArcade = upgradeArcade;
+ 	}
++
++    /**
++     * @New User Bonus Time
++     */
++    public PlayerBonusTime getBonusTime() {
++        return bonusTime;
++    }
++
++    public void setBonusTime(Timestamp time) {
++        this.bonusTime.setTime(time);
++    }
++
++    public void setBonusType(PlayerBonusTimeStatus status) {
++        this.bonusTime.setStatus(status);
++    }
++
++    public void setCreationDate(Timestamp date) {
++        creationDate = date;
++    }
++
++    public Timestamp getCreationDate() {
++        return creationDate;
++    }
+ }
+\ No newline at end of file
+Index: src/com/aionemu/gameserver/network/aion/clientpackets/CM_CREATE_CHARACTER.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/clientpackets/CM_CREATE_CHARACTER.java	(revision 287)
++++ src/com/aionemu/gameserver/network/aion/clientpackets/CM_CREATE_CHARACTER.java	(working copy)
+@@ -270,7 +270,7 @@
+ 
+             accPlData.setCreationDate(new Timestamp(System.currentTimeMillis()));
+             PlayerService.storeCreationTime(player.getObjectId(), accPlData.getCreationDate());
+-
++            playerCommonData.setCreationDate(accPlData.getCreationDate());
+             account.addPlayerAccountData(accPlData);
+             client.sendPacket(new SM_CREATE_CHARACTER(accPlData, SM_CREATE_CHARACTER.RESPONSE_OK));
+         }
+Index: src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java	(revision 287)
++++ src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java	(working copy)
+@@ -352,10 +352,10 @@
+         writeH(0x00); // unk - 0x01
+         writeD(player.getTarget() == null ? 0 : player.getTarget().getObjectId());
+         writeC(0); // suspect id
+-        writeD(0);
++        writeD(player.getBonusTime().isBonus() ? 1 : 0); // bonus 1 - true, 0 - false
+         writeC(player.isMentor() ? 1 : 0);
+         writeD(player.getHouseOwnerId()); // 3.0
+-        writeD(0x01);
++        writeD(player.getBonusTime().getStatus().getId()); // bonus buff id
+         writeD(0x00);//unk 0x00 4.7 //TODO need to figure out
+         writeC(raceId == 0 ? 3 : 5); // language asmo:3 ely:5
+         /**
+Index: src/com/aionemu/gameserver/services/drop/DropRegistrationService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/drop/DropRegistrationService.java	(revision 287)
++++ src/com/aionemu/gameserver/services/drop/DropRegistrationService.java	(working copy)
+@@ -176,6 +176,9 @@
+         boostDropRate += genesis.getActiveHouse() != null ? genesis.getActiveHouse().getHouseType().equals(HouseType.PALACE) ? 0.05f : 0 : 0;
+         // Hmm.. 169625013 have boost drop rate 5% info but no such desc on buff
+ 
++        // Online Time 10% Boost drop rate
++        boostDropRate += genesis.getBonusTime().isBonus() ? 0.1f : 0;
++
+         // can be exploited on duel with Spiritmaster Erosion skill
+         boostDropRate += genesis.getGameStats().getStat(StatEnum.BOOST_DROP_RATE, 100).getCurrent() / 100f - 1;
+ 
+Index: src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java	(revision 287)
++++ src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java	(working copy)
+@@ -785,6 +785,8 @@
+      */
+     private static void playerLoggedIn(Player player) {
+         log.info("Player logged in: " + player.getName() + " Account: " + player.getClientConnection().getAccount().getName());
++        player.setBonusTime(player.getCommonData().getBonusTime());
++        player.setBonusTimeStatus();
+         player.getCommonData().setOnline(true);
+         DAOManager.getDAO(PlayerDAO.class).onlinePlayer(player, true);
+         player.onLoggedIn();
