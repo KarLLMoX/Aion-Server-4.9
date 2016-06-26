@@ -337,6 +337,8 @@ function getRefSkillNameId($sname)
     $key = str_replace("PR_N_LIGHT_"         ,"",$key);
     $key = str_replace("PR_DARK_"            ,"",$key);
     $key = str_replace("PR_LIGHT_"           ,"",$key);
+    $key = str_replace("RA_DARK_"            ,"",$key);
+    $key = str_replace("RA_LIGHT_"           ,"",$key);
     $key = str_replace("STR_"                ,"",$key);
     $key = str_replace("ABYSS_RANKERSKILL_L_","",$key);
     $key = str_replace("ABYSS_RANKERSKILL_D_","",$key);
@@ -344,7 +346,11 @@ function getRefSkillNameId($sname)
     // einige Angaben ersetzen
     $key = str_replace("HOLYSILIKA_CRYSTAL_","HOLYSERVENT_",$key);
     $key = str_replace("HOLYSILIKA_"        ,"HOLYSERVENT_",$key);
-    
+    $key = str_replace("_DARK_TORNADO_"     ,"_SA_TORNADO_",$key);
+    $key = str_replace("_LIGHT_TORNADO_"    ,"_SA_TORNADO_",$key);
+    $key = str_replace("_SKILL_NPC01"       ,"_SKILL_NPC_AREADAMAGE",$key);
+    $key = str_replace("_ESCAPEROBOT_G1_D"  ,"_ESCAPEROBOT_G1_SYS" ,$key);
+    $key = str_replace("_ESCAPEROBOT_G1_L"  ,"_ESCAPEROBOT_G1_SYS" ,$key);
     if (isset($tabrskill[$key]))
         return $tabrskill[$key];
     //
@@ -361,9 +367,9 @@ function getRefSkillNameId($sname)
     if (isset($tabrskill[$key]))
         return $tabrskill[$key];
     
-    logLine("<font color=yellow>RefSkill nicht gefunden",$org);
+    logLine("<font color=yellow>RefSkillId nicht gefunden",$org);
     
-    return "???";
+    return "?";
 }
 // ----------------------------------------------------------------------------
 // PenaltySkillId zurückgeben
@@ -811,7 +817,7 @@ function getStartConditionLines($key)
     
     $ret = "";
     
-    $chain = getTabValue($key,"chain_category_name","?");
+    $chain = strtoupper(getTabValue($key,"chain_category_name","?"));
     $comb  = getTabValue($key,"nouse_combat_state","?");
     $dp    = getTabValue($key,"cost_dp","?");
     $form  = strtoupper(getTabValue($key,"allow_use_form_category","?"));
@@ -1137,9 +1143,9 @@ function getValueSign($block,$stat,$value,$tbneg)
                 }
             }
         }
-        // bei StatDOWN immer das Vorzeichen umkehren!!!
+        // bei StatDOWN immer Negativ, ausser $tbneg-Stats
         if ($block == "statdown")
-            $ret = -1;
+            $ret *= -1;
     }  
     
     return $ret;
@@ -1169,8 +1175,32 @@ function getChangeStats($block,$key,$e,$tbneg)
     $func     = "";
     $res9     = getTabValue($key,$ename."reserved9","?");
     $res1     = getTabValue($key,$ename."reserved1","?");
+    $res2     = getTabValue($key,$ename."reserved2","?");
     $chend    = "/>";
-        
+     
+    // spezielle Conditions vorab prüfen (Default-Changes !!!)
+    switch($block)
+    {
+        case "absoluteslow":
+            if ($res2 != "?")
+                $ret = '                <change stat="ATTACK_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n"; 
+            return $ret;   
+        case"absolutesnare":
+            if ($res2 != "?")
+                $ret = '                <change stat="SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n". 
+                       '                <change stat="FLY_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n";
+            return $ret;
+        case "armormastery":
+            $ret = '                <change stat="PHYSICAL_DEFENSE" func="PERCENT" value="'.$res2.'"/>'."\n";
+            return $ret;
+        case "shieldmastery":
+            $dta = ($res1 != "?" && $res1 != "0") ? ' delta="'.$res1.'"' : '';
+            $ret = '                <change stat="BLOCK" func="PERCENT"'.$dta.' value="'.$res2.'"/>'."\n";
+            return $ret;
+        default:
+            break;
+    }
+    
     // Condition ONFLY aufbereiten
     if ($res9 == "1")
         $chend = ">\n".
@@ -1183,7 +1213,7 @@ function getChangeStats($block,$key,$e,$tbneg)
     for ($t=0;$t<$maxstats;$t++)
     {
         $name  = getTabValue($key,$ename.$tabstats[$t][0],"?");
-        $value = getTabValue($key,$ename.$tabstats[$t][1],"?");
+        $value = getTabValue($key,$ename.$tabstats[$t][1],"0");
         
         if (($name != "?" && $name != "0") && $value != "?")
         {  
@@ -1330,48 +1360,107 @@ function getEffectBasicLine($efftyp,$key,$e)
     $acmod =                         getTabValue($key,$ename."acc_mod2","?");
     $htyp  = getEffSpecial( "upper" ,getTabValue($key,$ename."hop_type","?") );
     $hopb  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_b","?") );   
-    $hopa  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_a","?") );             
+    $hopa  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_a","?") ); 
+    // nur bedingt genutzte Tags generell deaktivieren (werden später gesetzt)
+    $atcnt = "?";
+    $npcnt = "?";
+    $owner = "?";
     $skill = "?";
+    $skid  = "?";
+    $time  = "?";
     $panel = "?";
     $state = "?";
+    $weapn = "?";
+    $armor = "?";
     
     // einige Inhalte an die EMU anpassen
     $elem   = ($elem == "AIR") ? "WIND" : $elem;  
-    $npctag = ($efftyp == "summonservant") ? "npc_id" : "model";  
+    $npctag = (stripos($efftyp,"summon") !== false) ? "npc_id" : "model"; 
     
-    // spezielle Behandlungen gem. Effect-Tagtype
-    if ($efftyp == "summonservant")
+    // ----------------------------------------------------
+    // Deaktivierung einiger Tags
+    // ----------------------------------------------------  
+    // TYPE deaktivieren
+    if ($efftyp == "statup"
+    ||  $efftyp == "summontrap"
+    ||  $efftyp == "shieldmastery"
+    ||  $efftyp == "armormastery")
+        $type = "?";
+    
+    // ELEMENT deaktivieren
+    if ($efftyp == "armormastery")
+        $elem = "?";
+    
+    // ----------------------------------------------------
+    // Hinzufügen einiger Tags
+    // ----------------------------------------------------
+    // ATTACK_COUNT und NPC_COUNT
+    if ($efftyp == "summonhoming")
+    {
+        $atcnt = getTabValue($key,$ename."reserved4","?");
+        $npcnt = getTabValue($key,$ename."reserved6","?");
+    }    
+    // OWNER
+    if ($efftyp == "summonfunctionalnpc")
+    {
+        $owner = getEffSpecial( "upper",getTabValue($key,$ename."reserved7","?") );
+        
+        switch($owner)
+        {
+            case "FORCE"  : $owner = "ALLIANCE"; break;
+            case "PARTY"  : $owner = "GROUP";    break;
+            case "GUILD"  : $owner = "LEGION";   break;
+            case "PRIVATE": $owner = "PRIVATE";  break;
+            default;        $owner = "?";        break;
+        }
+    }    
+    // SKILL-ID 
+    if ($efftyp == "summonservant"
+    ||  $efftyp == "summonskillarea"
+    ||  $efftyp == "summontrap"
+    ||  $efftyp == "summontotem")
     {
         $skill = getTabValue($key,$ename."reserved9","?");
-        $skid  = getRefSkillNameId($skill);
-        
-        if ($skid != "???")
-           $ret .= ' skill_id="'.$skid.'"';        
-    }
-    
+        $skid  = getRefSkillNameId($skill); 
+    }        
+    // WEAPON 
     if ($efftyp == "wpnmastery")
     {
-        $weapn = getEffSpecial( "weapon",getTabValue($key,$ename."reserved5","?") ); 
-        $ret .= getFieldText( "weapon" ,$weapn );
-    }
-    
+        $weapn = getEffSpecial( "weapon",getTabValue($key,$ename."reserved5","?") );
+    }    
+    // ARMOR 
+    if ($efftyp == "armormastery")
+    {
+        $armor = getEffSpecial( "upper",getTabValue($key,$ename."reserved5","?") );
+    }    
+    // TIME 
     if (stripos($efftyp,"summon") !== false)
     {
-        $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") ); 
-        $ret .= getFieldText( "time"   ,$time  );
-    }
-    
+        if     ($efftyp == "summonfunctionalnpc"
+        ||      $efftyp == "summongroupgate"
+        ||      $efftyp == "summonhousegate")
+            $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","?") );
+        elseif ($efftyp == "summonhoming")
+            $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved5","?") );
+        else
+            $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") ); 
+    }    
+    // PANELID und STATE 
     if ($efftyp == "shapechange")
     {
         $panel = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") );
         $state = getEffSpecial( "state" ,getTabValue($key,$ename."reserved13","?") );
-    }
-    
-    if ($efftyp == "statup")
-        $type = "?";
-    
-    // allgemeine Zeile aufbereiten
-    $ret .= getFieldText( $npctag         ,$model ).
+    }    
+    // ----------------------------------------------------
+    // Allgemeine Zeile mit allen aktiven Tags aufbereiten 
+    // ----------------------------------------------------
+    $ret .= getFieldText( "weapon"        ,$weapn ).
+            getFieldText( "armor"         ,$armor ).
+            getFieldText( "attack_count"  ,$atcnt ).
+            getFieldText( "npc_count"     ,$npcnt ).
+            getFieldText( $npctag         ,$model ).
+            getFieldText( "skill_id"      ,$skid  ).
+            getFieldText( "time"          ,$time  ).
             getFieldText( "type"          ,$type  ).
             getFieldText( "state"         ,$state ).   
             getFieldText( "panelid"       ,$panel ).
@@ -1428,7 +1517,7 @@ function getEffectStatUp($key,$e)
 // ---------------------------------------------------------------------------
 function getEffectStatDown($key,$e)
 {
-    $tbneg = array("ATTACK_SPEED","SPEED");   
+    $tbneg = array("ATTACK_SPEED");   
     $ret   = getEffectBasicLine("statdown",$key,$e);
             
     if ($ret != "")
@@ -1453,14 +1542,14 @@ function getEffectSleep($key,$e)
     return $ret;
 }
 // ---------------------------------------------------------------------------
-// Effect aufbereiten für: SummonServant
+// Effect aufbereiten für: Summon... (alle Summon-Blöcke!)
 // ---------------------------------------------------------------------------
-function getEffectSummonServant($key,$e)
-{    
-    $ret   = getEffectBasicLine("summonservant",$key,$e);
+function getEffectSummonAll($block,$key,$e)
+{
+    $ret   = getEffectBasicLine($block,$key,$e);
             
     if ($ret != "")
-        $ret  = '            <summonservant'.$ret.'/>'."\n";
+        $ret  = '            <'.$block.$ret.'/>'."\n";
     
     return $ret;
 }
@@ -1478,6 +1567,92 @@ function getEffectWpnMastery($key,$e)
         $ret  = '            <wpnmastery'.$ret.'>'."\n";
         $ret .= getChangeStats("wpnmastery",$key,$e,$tbneg);
         $ret .= '            </wpnmastery>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: ArmorMastery
+// ---------------------------------------------------------------------------
+function getEffectArmorMastery($key,$e)
+{
+    $ename = "effect".$e."_";
+    $tbneg = array("ATTACK_SPEED");
+    $ret   = getEffectBasicLine("armormastery",$key,$e);
+    
+    if ($ret != "")
+    {
+        $ret  = '            <armormastery'.$ret.'>'."\n";
+        $ret .= getChangeStats("armormastery",$key,$e,$tbneg);
+        $ret .= '            </armormastery>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: ShieldMastery
+// ---------------------------------------------------------------------------
+function getEffectShieldMastery($key,$e)
+{
+    $ename = "effect".$e."_";
+    $tbneg = array("ATTACK_SPEED");
+    $ret   = getEffectBasicLine("shieldmastery",$key,$e);
+    
+    if ($ret != "")
+    {
+        $ret  = '            <shieldmastery'.$ret.'>'."\n";
+        $ret .= getChangeStats("shieldmastery",$key,$e,$tbneg);
+        $ret .= '            </shieldmastery>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: AbsoluteSlow
+// ---------------------------------------------------------------------------
+function getEffectAbsoluteSlow($key,$e)
+{
+    $ename = "effect".$e."_";
+    $tbneg = array("ATTACK_SPEED");
+    $ret   = getEffectBasicLine("absoluteslow",$key,$e);
+    
+    if ($ret != "")
+    {
+        $stat = getChangeStats("absoluteslow",$key,$e,$tbneg);
+        
+        if ($stat != "")
+        {
+            $ret  = '            <absoluteslow'.$ret.'>'."\n";
+            $ret .= getChangeStats("absoluteslow",$key,$e,$tbneg);
+            $ret .= '            </absoluteslow>'."\n";
+        }
+        else
+            $ret  = '            <absoluteslow'.$ret.'/>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: AbsoluteSnare
+// ---------------------------------------------------------------------------
+function getEffectAbsoluteSnare($key,$e)
+{
+    $ename = "effect".$e."_";
+    $tbneg = array("ATTACK_SPEED");
+    $ret   = getEffectBasicLine("absolutesnare",$key,$e);
+    
+    if ($ret != "")
+    {
+        $stat = getChangeStats("absolutesnare",$key,$e,$tbneg);
+        
+        if ($stat != "")
+        {
+            $ret  = '            <absolutesnare'.$ret.'>'."\n";
+            $ret .= getChangeStats("absolutesnare",$key,$e,$tbneg);
+            $ret .= '            </absolutesnare>'."\n";
+        }
+        else
+            $ret  = '            <absolutesnare'.$ret.'/>'."\n";
     }
     
     return $ret;
@@ -1507,8 +1682,6 @@ function getEffectsLines($key)
     
     // ........
     /*
-        name="absoluteslow" type="AbsoluteSlowEffect"
-        name="absolutesnare" type="AbsoluteSnareEffect"
         name="absstatbuff" type="AbsoluteStatToPCBuff"
         name="absstatdebuff" type="AbsoluteStatToPCDebuff"
         name="alwaysblock" type="AlwaysBlockEffect"
@@ -1516,7 +1689,6 @@ function getEffectsLines($key)
         name="alwaysparry" type="AlwaysParryEffect"
         name="alwaysresist" type="AlwaysResistEffect"
         name="apboost" type="APBoostEffect"
-        name="armormastery" type="ArmorMasteryEffect"
         name="aura" type="AuraEffect"
         name="backdash" type="BackDashEffect"
         name="bind" type="BindEffect"
@@ -1620,9 +1792,7 @@ function getEffectsLines($key)
         name="root" type="RootEffect"
         name="sanctuary" type="SanctuaryEffect"
         name="search" type="SearchEffect"
-        name="shapechange" type="ShapeChangeEffect"
         name="shield" type="ShieldEffect"
-        name="shieldmastery" type="ShieldMasteryEffect"
         name="signet" type="SignetEffect"
         name="signetburst" type="SignetBurstEffect"
         name="silence" type="SilenceEffect"
@@ -1646,15 +1816,7 @@ function getEffectsLines($key)
         name="stunalways" type="StunAlwaysEffect"
         name="subtypeboostresist" type="SubTypeBoostResistEffect"
         name="subtypeextendduration" type="SubTypeExtendDurationEffect"
-        name="summon" type="SummonEffect"
-        name="summonbindinggroupgate" type="SummonBindingGroupGateEffect"
-        name="summonfunctionalnpc" type="SummonFunctionalNpcEffect"
-        name="summongroupgate" type="SummonGroupGateEffect"
-        name="summonhoming" type="SummonHomingEffect"
-        name="summonhousegate" type="SummonHouseGateEffect"
-        name="summonskillarea" type="SummonSkillAreaEffect"
-        name="summontotem" type="SummonTotemEffect"
-        name="summontrap" type="SummonTrapEffect"
+NOTUSED name="summonbindinggroupgate" type="SummonBindingGroupGateEffect"
         name="switchhostile" type="SwitchHostileEffect"
         name="switchhpmp" type="SwitchHpMpEffect"
         name="targetchange" type="TargetChangeEffect"
@@ -1667,20 +1829,32 @@ function getEffectsLines($key)
     for ($e=1;$e<5;$e++)
     {
         $effkey = "effect".$e."_type";
-        $efftyp = getTabValue($key,$effkey,"?");
+        $efftyp = strtolower(getTabValue($key,$effkey,"?"));
         
         switch(strtolower($efftyp))
         { 
-            case "?"             :  /* kein EffektType vorhanden */          break;
+            case "?"                         :  /* kein EffektType vorhanden */                              break;
 
-            case "shapechange"   :  $ret .= getEffectShapeChange($key,$e);   break;
-            case "statup"        :  $ret .= getEffectStatUp($key,$e);        break;
-            case "statdown"      :  $ret .= getEffectStatDown($key,$e);      break; 
-            case "sleep"         :  $ret .= getEffectSleep($key,$e);         break;
-            case "summonservant" :  $ret .= getEffectSummonServant($key,$e); break;
-            case "wpn_mastery"   :  $ret .= getEffectWpnMastery($key,$e);    break;
+            case "absoluteslow"              :  $ret .= getEffectAbsoluteSlow($key,$e);                      break;
+            case "absolutesnare"             :  $ret .= getEffectAbsoluteSnare($key,$e);                     break;
+            case "amr_mastery"               :  $ret .= getEffectArmorMastery($key,$e);                      break;
+            case "shapechange"               :  $ret .= getEffectShapeChange($key,$e);                       break;
+            case "shieldmastery"             :  $ret .= getEffectShieldMastery($key,$e);                     break;
+            case "statup"                    :  $ret .= getEffectStatUp($key,$e);                            break;
+            case "statdown"                  :  $ret .= getEffectStatDown($key,$e);                          break; 
+            case "sleep"                     :  $ret .= getEffectSleep($key,$e);                             break;
+            case "summon"                    :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summonfunctionalnpc"       :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summongroupgate"           :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summonhoming"              :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summonhousegate"           :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summonservant"             :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summonskillarea"           :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summontotem"               :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "summontrap"                :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
+            case "wpn_mastery"               :  $ret .= getEffectWpnMastery($key,$e);                        break;
       
-            default              :  $taberreff[$efftyp] = 1;                break;
+            default                          :  $taberreff[$efftyp] = 1;                                     break;
         }
     }
     
@@ -2168,7 +2342,7 @@ function makeAbgleichSvnFile()
         $line   = str_replace("\t","    ",$line);
         $doline = false;
         
-        // spezielle B ehandlung für die Effekte, da es ca. 216 verschiedene gibt
+        // spezielle Behandlung für die Effekte, da es 168 verschiedene gibt
         // und die erst nach und nach realisiert werden
         if (stripos($line,"<effects") !== false)
         {
@@ -2181,16 +2355,26 @@ function makeAbgleichSvnFile()
             // Effekt Blöcke
             if     (stripos($line,"<statup")        !== false
             ||      stripos($line,"<statdown")      !== false
-            ||      stripos($line,"<wpnmastery")    !== false)
+            ||      stripos($line,"<wpnmastery")    !== false
+            ||      stripos($line,"<absoluteslow")  !== false
+            ||      stripos($line,"<absolutesnare") !== false
+            ||      stripos($line,"<armormastery")  !== false
+            ||      stripos($line,"<shieldmastery") !== false)
             {
-                $doblock  = true;
-                $endblock = "</".getXmlKey($line).">";
                 $doeff    = true;
+                
+                if (stripos($line,"/>") === false)
+                {
+                    $doblock  = true;
+                    $endblock = "</".getXmlKey($line).">";
+                }
+                else
+                    $doline = true;
             }
             // Effekt Zeilen
-            elseif (stripos($line,"<shapechange")   !== false
-            ||      stripos($line,"<sleep")         !== false
-            ||      stripos($line,"<summonservant") !== false)
+            elseif (stripos($line,"<shapechange")         !== false
+            ||      stripos($line,"<sleep")               !== false
+            ||      stripos($line,"<summon")              !== false) // alle Summon-Zeilen !!!
             {
                 $doline   = true;
                 $doeff    = true;
@@ -2438,7 +2622,7 @@ function showMissingEffects()
 {
     global $taberreff;
     
-    logLine("Anzahl fehlende Effekt-Scripts",count($taberreff)." von 216 (sind im Parser noch nicht realisiert!)");
+    logLine("Anzahl fehlende Effekt-Scripts",count($taberreff)." von 168 (sind im Parser noch nicht realisiert!)");
     
     while (list($key,$val) = each($taberreff))
         logLine("<font color=red>Add Effect-Script",$key);
