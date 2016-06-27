@@ -147,6 +147,10 @@ public class NpcTemplate extends VisibleObjectTemplate {
         return tribe;
     }
 
+    public void setTribe(TribeClass tribe) {
+        this.tribe = tribe;
+    }
+
     public String getAi() {
         // TODO: npc_template repars
         return (!"noaction".equals(ai) && level > 1 && getAbyssNpcType().equals(AbyssNpcType.TELEPORTER)) ? "siege_teleporter" : ai;
