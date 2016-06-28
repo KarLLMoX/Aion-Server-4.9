@@ -14,32 +14,17 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.network.aion.clientpackets;
+package com.aionemu.gameserver.network.aion.serverpackets;
 
-import com.aionemu.gameserver.network.aion.AionClientPacket;
-import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_TUNE_RESULT;
+import com.aionemu.gameserver.network.aion.AionConnection;
+import com.aionemu.gameserver.network.aion.AionServerPacket;
 
 /**
  * @author Falke_34
  */
-public class CM_TUNE_RESULT extends AionClientPacket {
-
-    private int itemObjectId;
-    private int itemCount;
-
-    public CM_TUNE_RESULT(int opcode, State state, State... restStates) {
-        super(opcode, state, restStates);
-    }
+public class SM_TUNE_RESULT extends AionServerPacket {
 
     @Override
-    protected void readImpl() {
-        itemObjectId = readD();
-        itemCount = readC();
-    }
-
-    @Override
-    protected void runImpl() {
-        sendPacket(new SM_TUNE_RESULT());
+    protected void writeImpl(AionConnection con) {
     }
 }
