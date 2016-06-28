@@ -18,7 +18,6 @@ package com.aionemu.gameserver.network.aion.clientpackets;
 
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_TUNE_RESULT;
 
 /**
  * @author Falke_34
@@ -40,6 +39,9 @@ public class CM_TUNE_RESULT extends AionClientPacket {
 
     @Override
     protected void runImpl() {
-        sendPacket(new SM_TUNE_RESULT());
+        //STR_MSG_ITEM_REIDENTIFY_APPLY_YES
+        //PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401910);
+        //STR_MSG_ITEM_REIDENTIFY_APPLY_NO
+        //PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401911);
     }
 }
