@@ -7340,6 +7340,38 @@
             <part name="unk" type="c"/>
             <part name="unk" type="c"/>
 		</packet>
+		<packet id="0x120" name="________________SM_TUNE_RESULT"> <!-- Tune Result -->
+            <part name="objectId" type="d"/>
+            <part name="ItemId(Scroll)" type="d">
+				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
+			</part>
+            <part name="unk" type="h"/>
+            <part name="EnchantLvl ?" type="c"/>
+            <part name="ItemId" type="d">
+				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
+			</part>
+			<part name="unk" type="c"/>
+			<part name="unk" type="c"/>
+            <part name="Manastone1" type="d">
+				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
+			</part>
+            <part name="Manastone2" type="d"/>
+            <part name="Manastone3" type="d"/>
+            <part name="Manastone4" type="d"/>
+            <part name="Manastone5" type="d"/>
+            <part name="Manastone6" type="d"/>
+            <part name="GodStone" type="d">
+				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
+			</part>
+            <part name="Spacer" type="b" size="13"/>
+			<part name="Indian" type="d">
+				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
+			</part>
+			<part name="unk" type="c"/>
+			<part name="Garbage ?" type="b" size="120"/>
+			<part name="unk" type="c"/>
+			<part name="unk" type="c"/>
+		</packet>
 		<!-- =============== -->
 		<!-- Not coded in AL -->
 		<!-- =============== -->
@@ -8790,6 +8822,10 @@
 		</packet>
 
 		<packet id="0x2FA" name="________________CM_LANDING_REINFORCEMENT"/> <!-- New/TODO AionNA 4.9 -->
+		<packet id="0x1A8" name="________________CM_TUNE_RESULT"> <!-- New/TODO AionNA 4.9 - Tune Result -->
+			<part name="objectId" type="d"/>
+			<part name="unk" type="c"/>
+		</packet>
 		<!-- MISSED OPCODES
 		<packet id="0x10F" name="_CM_UNK1">
 			<part name="size" type="d" />
