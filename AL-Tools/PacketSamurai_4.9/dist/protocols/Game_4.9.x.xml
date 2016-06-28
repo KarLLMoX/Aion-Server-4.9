@@ -7341,13 +7341,15 @@
             <part name="unk" type="c"/>
 		</packet>
 		<packet id="0x120" name="________________SM_TUNE_RESULT"> <!-- Tune Result -->
-            <part name="objectId" type="d"/>
-            <part name="ItemId(Scroll)" type="d">
+            <part name="itemObjId" type="d"/>
+            <part name="itemId(Scroll)" type="d">
 				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
 			</part>
-            <part name="unk" type="h"/>
-            <part name="EnchantLvl ?" type="c"/>
-            <part name="ItemId" type="d">
+            <part name="Armor/Weapon" type="h">
+				<reader type="MultiValue" name="armortype"/>
+			</part>
+            <part name="EnchantLvl" type="c"/>
+            <part name="itemId(Target)" type="d">
 				<reader type="UrlOpen" url="http://aiondatabase.net/en/item/%s"/>
 			</part>
 			<part name="unk" type="c"/>
