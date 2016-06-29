@@ -38,7 +38,7 @@ public class _29600WelcomeBack extends QuestHandler {
     @Override
     public void register() {
         qe.registerQuestNpc(804662).addOnTalkEvent(questId);
-        qe.registerOnEnterZone(ZoneName.get("VIFROST_BRIDGE_120010000"), questId);
+        qe.registerOnEnterZone(ZoneName.get("FATEBOUND_ABBEY_140010000"), questId);
     }
 
 	@Override
@@ -46,8 +46,6 @@ public class _29600WelcomeBack extends QuestHandler {
         final Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-        @SuppressWarnings("unused")
-		DialogAction dialog = env.getDialog();
 		
         if (targetId != 804662) {
             return false;
@@ -70,6 +68,6 @@ public class _29600WelcomeBack extends QuestHandler {
 
     @Override
     public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
-        return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("VIFROST_BRIDGE_120010000"));
+        return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("FATEBOUND_ABBEY_140010000"));
     }
 }

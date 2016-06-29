@@ -38,7 +38,7 @@ public class _19600WelcometoWisplightAbbey extends QuestHandler {
     @Override
     public void register() {
         qe.registerQuestNpc(804651).addOnTalkEvent(questId);
-        qe.registerOnEnterZone(ZoneName.get("SANCTUM_GATE_110010000"), questId);
+        qe.registerOnEnterZone(ZoneName.get("WISPLIGHT_ABBEY_130090000"), questId);
     }
 
 	@Override
@@ -46,8 +46,6 @@ public class _19600WelcometoWisplightAbbey extends QuestHandler {
         final Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-        @SuppressWarnings("unused")
-		DialogAction dialog = env.getDialog();
 		
         if (targetId != 804651) {
             return false;
@@ -70,6 +68,6 @@ public class _19600WelcometoWisplightAbbey extends QuestHandler {
 
     @Override
     public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
-        return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("SANCTUM_GATE_110010000"));
+        return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("WISPLIGHT_ABBEY_130090000"));
     }
 }
