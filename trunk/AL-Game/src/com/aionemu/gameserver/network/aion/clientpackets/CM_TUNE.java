@@ -104,7 +104,7 @@ public class CM_TUNE extends AionClientPacket {
                 item.setRndBonus();
                 item.setPersistentState(PersistentState.UPDATE_REQUIRED);
                 PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
-                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new DescriptionId(nameId)));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new DescriptionId(nameId)));
             }
         }, 5000));
 
