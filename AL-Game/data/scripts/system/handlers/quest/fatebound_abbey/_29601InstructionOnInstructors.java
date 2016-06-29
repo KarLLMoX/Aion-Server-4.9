@@ -96,11 +96,11 @@ public class _29601InstructionOnInstructors extends QuestHandler {
 				switch (dialog) {
 					case QUEST_SELECT: {
 						if (var == 2) {
-							return sendQuestDialog(env, 1352);
+							return sendQuestDialog(env, 1693);
 						} 
 					}
-					case SETPRO2: {
-						qs.setQuestVar(2);
+					case SETPRO3: {
+						qs.setQuestVar(3);
                         updateQuestStatus(env);
 						return closeDialogWindow(env);
 					}
@@ -111,11 +111,14 @@ public class _29601InstructionOnInstructors extends QuestHandler {
 				switch (dialog) {
 					case QUEST_SELECT: {
 						if (var == 3) {
-							return sendQuestDialog(env, 1693);
+							return sendQuestDialog(env, 2034);
 						} 
 					}
 					case SET_SUCCEED: {
-						return defaultCloseDialog(env, 2, 3, true, false); // Reward
+						qs.setQuestVar(4);
+						qs.setStatus(QuestStatus.REWARD); // reward
+                        updateQuestStatus(env);
+						return closeDialogWindow(env); 
 					}
 				default:
 					break;
