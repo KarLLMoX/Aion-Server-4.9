@@ -176,6 +176,9 @@ public class DropRegistrationService {
         boostDropRate += genesis.getActiveHouse() != null ? genesis.getActiveHouse().getHouseType().equals(HouseType.PALACE) ? 0.05f : 0 : 0;
         // Hmm.. 169625013 have boost drop rate 5% info but no such desc on buff
 
+        // Online Time 10% Boost drop rate
+        boostDropRate += genesis.getBonusTime().isBonus() ? 0.1f : 0;
+
         // can be exploited on duel with Spiritmaster Erosion skill
         boostDropRate += genesis.getGameStats().getStat(StatEnum.BOOST_DROP_RATE, 100).getCurrent() / 100f - 1;
 

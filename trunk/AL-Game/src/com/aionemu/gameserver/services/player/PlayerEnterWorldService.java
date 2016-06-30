@@ -32,6 +32,7 @@ import com.aionemu.gameserver.model.gameobjects.HouseObject;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.gameobjects.player.PlayerBonusTimeStatus;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.emotion.Emotion;
 import com.aionemu.gameserver.model.gameobjects.player.motion.Motion;
@@ -55,6 +56,7 @@ import com.aionemu.gameserver.services.abyss.AbyssSkillService;
 import com.aionemu.gameserver.services.conquerer_protector.ConquerorsService;
 import com.aionemu.gameserver.services.craft.RelinquishCraftStatus;
 import com.aionemu.gameserver.services.instance.InstanceService;
+import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.services.mail.MailService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.services.territory.TerritoryService;
@@ -128,8 +130,23 @@ public final class PlayerEnterWorldService {
     public static final void startEnterWorld(final int objectId, final AionConnection client) {
         // check if char is banned
         PlayerAccountData playerAccData = client.getAccount().getPlayerAccountData(objectId);
+        if (playerAccData == null) {
+            log.warn("playerAccData == null " + objectId);
+            if (client != null) {
+                client.closeNow();
+            }
+            return;
+        }
+        if (playerAccData.getPlayerCommonData() == null) {
+            log.warn("playerAccData.getPlayerCommonData() == null " + objectId);
+            if (client != null) {
+                client.closeNow();
+            }
+            return;
+        }
         Timestamp lastOnline = playerAccData.getPlayerCommonData().getLastOnline();
-        if (lastOnline != null && client.getAccount().getAccessLevel() < AdminConfig.GM_LEVEL) {
+        Player edit = playerAccData.getPlayerCommonData().getPlayer();
+        if (lastOnline != null && client.getAccount().getAccessLevel() < AdminConfig.GM_LEVEL && edit != null && !edit.isInEditMode()) {
             if (System.currentTimeMillis() - lastOnline.getTime() < (GSConfig.CHARACTER_REENTRY_TIME * 1000)) {
                 client.sendPacket(new SM_ENTER_WORLD_CHECK((byte) 6)); // 20 sec time
                 client.sendPacket(new SM_AFTER_TIME_CHECK());//TODO
@@ -785,6 +802,22 @@ public final class PlayerEnterWorldService {
      */
     private static void playerLoggedIn(Player player) {
         log.info("Player logged in: " + player.getName() + " Account: " + player.getClientConnection().getAccount().getName());
+        //start Abbey Return Entrys
+        player.setBonusTime(player.getCommonData().getBonusTime());
+        player.setBonusTimeStatus();
+        //TODO
+        if (player.getRace() == Race.ASMODIANS && player.getBonusTime().getStatus() != PlayerBonusTimeStatus.RETURN) {
+			if (player.getInventory().getItemCountByItemId(164000336) > 0) {
+				return;
+			}
+			ItemService.addItem(player, 164000336, 1); //Abbey Return Stone (30 days)
+        }
+        if (player.getRace() == Race.ELYOS && player.getBonusTime().getStatus() != PlayerBonusTimeStatus.RETURN) {
+        	if (player.getInventory().getItemCountByItemId(164000335) > 0) {
+				return;
+			}
+        	ItemService.addItem(player, 164000335, 1); //Abbey Return Stone (30 days)
+        }
         player.getCommonData().setOnline(true);
         DAOManager.getDAO(PlayerDAO.class).onlinePlayer(player, true);
         player.onLoggedIn();

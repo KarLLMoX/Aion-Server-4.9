@@ -270,7 +270,7 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
 
             accPlData.setCreationDate(new Timestamp(System.currentTimeMillis()));
             PlayerService.storeCreationTime(player.getObjectId(), accPlData.getCreationDate());
-
+            playerCommonData.setCreationDate(accPlData.getCreationDate());
             account.addPlayerAccountData(accPlData);
             client.sendPacket(new SM_CREATE_CHARACTER(accPlData, SM_CREATE_CHARACTER.RESPONSE_OK));
         }
