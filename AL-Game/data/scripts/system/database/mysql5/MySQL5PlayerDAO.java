@@ -34,6 +34,7 @@ import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.player.Mailbox;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.gameobjects.player.PlayerBonusTimeStatus;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerUpgradeArcade;
 import com.aionemu.gameserver.model.team.legion.LegionJoinRequestState;
@@ -41,7 +42,9 @@ import com.aionemu.gameserver.world.MapRegion;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
 import com.google.common.collect.Maps;
+
 import javolution.util.FastMap;
+
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -137,8 +140,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
         Connection con = null;
         try {
             con = DatabaseFactory.getConnection();
-            PreparedStatement stmt = con
-                    .prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=? WHERE id=?");
+            PreparedStatement stmt = con.prepareStatement("UPDATE players SET name=?, exp=?, recoverexp=?, x=?, y=?, z=?, heading=?, world_id=?, gender=?, race=?, player_class=?, last_online=?, cube_expands=?, advanced_stigma_slot_size=?, warehouse_size=?, note=?, title_id=?, bonus_title_id=?, dp=?, soul_sickness=?, mailbox_letters=?, reposte_energy=?, event_exp=?, bg_points=?, mentor_flag_time=?, initial_gamestats=?, world_owner=?, fatigue=?, fatigueRecover=?, fatigueReset=?, stamps=?, rewarded_pass=?, last_stamp=?, joinRequestLegionId=?, joinRequestState=?, frenzy_points=?, frenzy_count=?, bonus_type=?, bonus_buff_time=? WHERE id=?");
 
             log.debug("[DAO: MySQL5PlayerDAO] storing player " + player.getObjectId() + " " + player.getName());
             PlayerCommonData pcd = player.getCommonData();
@@ -186,7 +188,9 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             stmt.setString(35, pcd.getJoinRequestState().name());
             stmt.setInt(36, player.getUpgradeArcade().getFrenzyPoints());
             stmt.setInt(37, player.getUpgradeArcade().getFrenzyCount());
-            stmt.setInt(38, player.getObjectId());
+            stmt.setString(38, player.getBonusTime().getStatus().toString());
+            stmt.setTimestamp(39, pcd.getBonusTime().getTime());
+            stmt.setInt(40, player.getObjectId());
             stmt.execute();
             stmt.close();
         } catch (Exception e) {
@@ -211,9 +215,8 @@ public class MySQL5PlayerDAO extends PlayerDAO {
         Connection con = null;
         try {
             con = DatabaseFactory.getConnection();
-            PreparedStatement preparedStatement = con
-                    .prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , cube_expands, warehouse_size, online) "
-                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
+            PreparedStatement preparedStatement = con.prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , cube_expands, warehouse_size, bonus_type, online) "
+                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
 
             log.debug("[DAO: MySQL5PlayerDAO] saving new player: " + pcd.getPlayerObjId() + " " + pcd.getName());
 
@@ -231,6 +234,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             preparedStatement.setString(12, pcd.getPlayerClass().toString());
             preparedStatement.setInt(13, pcd.getCubeExpands());
             preparedStatement.setInt(14, pcd.getWarehouseSize());
+            preparedStatement.setString(15, pcd.getBonusTime().getStatus().toString());
             preparedStatement.execute();
             preparedStatement.close();
         } catch (Exception e) {
@@ -308,6 +312,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
                 cd.setRecoverableExp(resultSet.getLong("recoverexp"));
                 cd.setRace(Race.valueOf(resultSet.getString("race")));
                 cd.setGender(Gender.valueOf(resultSet.getString("gender")));
+                cd.setCreationDate(resultSet.getTimestamp("creation_date"));
                 cd.setLastOnline(resultSet.getTimestamp("last_online"));
                 cd.setNote(resultSet.getString("note"));
                 cd.setCubeExpands(resultSet.getInt("cube_expands"));
@@ -365,6 +370,8 @@ public class MySQL5PlayerDAO extends PlayerDAO {
                 PlayerUpgradeArcade pua = new PlayerUpgradeArcade();
                 pua.setFrenzyPoints(resultSet.getInt("frenzy_points"));
                 pua.setFrenzyCount(resultSet.getInt("frenzy_count"));
+                cd.setBonusType(PlayerBonusTimeStatus.valueOf(resultSet.getString("bonus_type")));
+                cd.setBonusTime(resultSet.getTimestamp("bonus_buff_time"));
                 cd.setUpgradeArcade(pua);
             } else {
                 log.info("Missing PlayerCommonData from db " + playerObjId);
@@ -765,7 +772,18 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             }
         });
     }
-    
+
+    @Override
+    public boolean updateBonusTime(final int playerObjId) {
+        return DB.insertUpdate("UPDATE players SET bonus_type = 'NORMAL', bonus_buff_time = NULL WHERE `id` = ? and `bonus_buff_time` < CURRENT_TIMESTAMP", new IUStH() {
+            @Override
+            public void handleInsertUpdate(PreparedStatement preparedStatement) throws SQLException {
+                preparedStatement.setInt(1, playerObjId);
+                preparedStatement.execute();
+            }
+        });
+    }
+
     @Override
 	public Timestamp getCharacterCreationDateId(final int obj) {
 		Connection con = null;

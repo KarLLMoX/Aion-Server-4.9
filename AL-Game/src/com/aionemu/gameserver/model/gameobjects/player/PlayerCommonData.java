@@ -98,7 +98,10 @@ public class PlayerCommonData extends VisibleObjectTemplate {
     private int joinRequestLegionId = 0;
     private LegionJoinRequestState joinRequestState = LegionJoinRequestState.NONE;
     private PlayerUpgradeArcade upgradeArcade;
-
+    
+    private PlayerBonusTime bonusTime = new PlayerBonusTime();
+    private Timestamp creationDate;
+    
 	public Map<Integer, AtreianPassport> playerPassports = new HashMap<Integer, AtreianPassport>(1);
     private PlayerPassports completedPassports;
 
@@ -738,7 +741,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
         this.battleGroundPoints = battleGroundPoints;
     }
 
-
     public int isInitialGameStats() {
         return initialGameStatsDatabase;
     }
@@ -811,7 +813,6 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 		this.joinRequestState = joinRequestState;
 	}
 
-
 	public PlayerUpgradeArcade getUpgradeArcade() 
 	{
 		if (upgradeArcade == null)
@@ -823,4 +824,27 @@ public class PlayerCommonData extends VisibleObjectTemplate {
 	public void setUpgradeArcade(PlayerUpgradeArcade upgradeArcade) {
 		this.upgradeArcade = upgradeArcade;
 	}
+
+    /**
+     * @New User Bonus Time
+     */
+    public PlayerBonusTime getBonusTime() {
+        return bonusTime;
+    }
+
+    public void setBonusTime(Timestamp time) {
+        this.bonusTime.setTime(time);
+    }
+
+    public void setBonusType(PlayerBonusTimeStatus status) {
+        this.bonusTime.setStatus(status);
+    }
+
+    public void setCreationDate(Timestamp date) {
+        creationDate = date;
+    }
+
+    public Timestamp getCreationDate() {
+        return creationDate;
+    }
 }

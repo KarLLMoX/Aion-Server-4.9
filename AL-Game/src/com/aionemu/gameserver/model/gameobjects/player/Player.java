@@ -283,6 +283,11 @@ public class Player extends Creature {
     private boolean isInLiveParty = false;
 	//private int linkedSkill;
     private PlayerConquererProtectorData conquerorProtectorData;
+    
+    private PlayerBonusTime bonusTime;
+    private boolean newPlayer = false;
+    private long creationDay;
+    
     /**
      * Used for JUnit tests
      */
@@ -2643,4 +2648,66 @@ public class Player extends Creature {
 	public void setConquerorDefenderData(PlayerConquererProtectorData conquerorDefenderData) {
 		this.conquerorProtectorData = conquerorDefenderData;
 	}
+
+    /**
+     * @return the New User Bonus Time
+     */
+    public void setNew(boolean b) {
+        this.newPlayer = b;
+    }
+
+    public boolean isNewPlayer() {
+        return newPlayer;
+    }
+
+    public PlayerBonusTime getBonusTime() {
+        return bonusTime;
+    }
+
+    public void setBonusTime(PlayerBonusTime bonusTime) {
+        this.bonusTime = bonusTime;
+    }
+
+    public long getCreationDate() {
+        Timestamp creationDate = playerCommonData.getCreationDate();
+        if (creationDate == null) {
+            return 0;
+        }
+
+        return creationDate.getTime();
+    }
+
+    public void setCreationDataDay(long i) {
+        this.creationDay = i;
+    }
+
+    public long getCreationDataDay() {
+        return creationDay;
+    }
+
+    public void setBonusTimeStatus() {
+        Timestamp tm = getClientConnection().getAccount().getPlayerAccountData(getObjectId()).getPlayerCommonData().getLastOnline();
+        long lastOnlineTimeDay = (System.currentTimeMillis() - tm.getTime()) / 24 / 60 / 60 / 1000;
+        long t = (System.currentTimeMillis() - getCommonData().getCreationDate().getTime()) / 24 / 60 / 60 / 1000;
+        long bonus_time = getBonusTime().getTime() != null ? System.currentTimeMillis() - getBonusTime().getTime().getTime() : 0;
+        boolean bonus_comeback = System.currentTimeMillis() < bonus_time;
+        setCreationDataDay(t);
+        if (t <= 3L) {
+            setNew(true);
+        } else {
+            setNew(false);
+        }
+        if (getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN && bonus_comeback || getBonusTime().getStatus() == PlayerBonusTimeStatus.NEW && t <= 30) {
+            return;
+        }
+
+        if (t <= 30L) {
+            getBonusTime().setStatus(PlayerBonusTimeStatus.NEW);
+        } else if (lastOnlineTimeDay >= 30L) {
+            getBonusTime().setStatus(PlayerBonusTimeStatus.RETURN);
+            getBonusTime().setTime(new Timestamp(System.currentTimeMillis() + 30L * 24 * 60 * 60 * 1000));
+        } else {
+            getBonusTime().setStatus(PlayerBonusTimeStatus.NORMAL);
+        }
+    }
 }

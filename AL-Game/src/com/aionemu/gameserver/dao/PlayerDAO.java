@@ -190,6 +190,8 @@ public abstract class PlayerDAO implements IDFactoryAwareDAO {
     public abstract Set<Integer> getInactiveAccounts(final int daysOfInactivity, int limitation);
 
     public abstract void setPlayerLastTransferTime(final int playerId, final long time);
+    
+    public abstract boolean updateBonusTime(final int playerObjId);
 
     @Override
     public final String getClassName() {
