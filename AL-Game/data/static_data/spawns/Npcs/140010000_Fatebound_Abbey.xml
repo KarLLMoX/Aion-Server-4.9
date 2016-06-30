@@ -69,21 +69,25 @@
         <spawn npc_id="805313" respawn_time="295">
 			<spot x="249.69731" y="276.08191" z="97.338799" h="90"/>
         </spawn>
-		<!-- Entrance 1 -->
+		<!-- Atreia Defense Portal -->
 		<spawn npc_id="804682" respawn_time="295">
-			<spot x="210.16159" y="276.1655" z="97.435745" static_id="48"/>
+			<spot x="229.77243" y="256.99167" z="97.08676" static_id="52"/>
 		</spawn>
-		<!-- Entrance 2 -->
+		<!-- Balaurea Advance Portal -->
 		<spawn npc_id="804683" respawn_time="295">
-			<spot x="230.00827" y="256.93872" z="97.435745" static_id="52"/>
+			<spot x="214.96442" y="253.43503" z="97.08674" static_id="73"/>
 		</spawn>
-		<!-- Entrance 3 -->
+		<!-- Balaurea Invasion Portal -->
 		<spawn npc_id="804684" respawn_time="295">
-			<spot x="229.82544" y="275.66202" z="97.435745" static_id="68"/>
+			<spot x="214.67113" y="278.90762" z="97.08672" static_id="48"/>
 		</spawn>
-		<!-- Entrance 4 -->
+		<!-- Balaurea Frontier Portal -->
 		<spawn npc_id="804685" respawn_time="295">
-			<spot x="210.26091" y="256.2836" z="97.435745" static_id="73"/>
+			<spot x="229.61552" y="275.71957" z="97.08678" static_id="68"/>
+		</spawn>
+		<!-- South Balaurea Portal -->
+		<spawn npc_id="804686" respawn_time="295">
+			<spot x="205.87926" y="266.1277" z="97.08674" static_id="5"/>
 		</spawn>
 		<!-- Pandaemonium Teleporter -->
 		<spawn npc_id="804688" respawn_time="295">
