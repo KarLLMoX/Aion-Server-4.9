@@ -69,23 +69,27 @@
         <spawn npc_id="805308" respawn_time="295">
 			<spot x="258.30603" y="262.08685" z="130.23604" h="60"/>
         </spawn>
-		<!-- Entrance 1 -->
+		<!-- Atreia Defense Portal -->
 		<spawn npc_id="804677" respawn_time="295">
-			<spot x="256.18573" y="299.34811" z="130.30666" static_id="18"/>
+			<spot x="236.83192" y="281.66638" z="130.21106" static_id="2"/>
 		</spawn>
-		<!-- Entrance 2 -->
+		<!-- Balaurea Advance Portal -->
 		<spawn npc_id="804678" respawn_time="295">
-			<spot x="237.73581" y="299.29596" z="130.30666" static_id="1"/>
+			<spot x="234.50984" y="295.94675" z="130.21104" static_id="1"/>
 		</spawn>
-		<!-- Entrance 3 -->
+		<!-- Balaurea Invasion Portal -->
 		<spawn npc_id="804679" respawn_time="295">
-			<spot x="256.91629" y="281.27362" z="130.30666" static_id="26"/>
+			<spot x="259.3105" y="295.50775" z="130.21106" static_id="18"/>
 		</spawn>
-		<!-- Entrance 4 -->
+		<!-- Balaurea Frontier Portal -->
 		<spawn npc_id="804680" respawn_time="295">
-			<spot x="236.74979" y="281.51816" z="130.30666" static_id="2"/>
+			<spot x="256.8341" y="281.02942" z="130.21106" static_id="26"/>
 		</spawn>
-		<!-- Sanctum Teleporter -->
+		<!-- South Balaurea Portal -->
+		<spawn npc_id="804681" respawn_time="295">
+			<spot x="247.10356" y="303.655" z="130.21104" h="90" static_id="17"/>
+		</spawn>
+		<!-- Sanctum Teleport Statue -->
 		<spawn npc_id="804687" respawn_time="295">
 			<spot x="247.00725" y="220.52324" z="129.3826" static_id="81"/>
 		</spawn>
