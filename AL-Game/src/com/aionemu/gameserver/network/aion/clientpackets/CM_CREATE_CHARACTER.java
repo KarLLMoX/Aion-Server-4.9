@@ -28,6 +28,7 @@ import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerAppearance;
+import com.aionemu.gameserver.model.gameobjects.player.PlayerBonusTimeStatus;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection;
@@ -259,6 +260,7 @@ public class CM_CREATE_CHARACTER extends AionClientPacket {
             }
         }
         AccountService.removeDeletedCharacters(account);
+        playerCommonData.setBonusType(PlayerBonusTimeStatus.NEW);
         Player player = PlayerService.newPlayer(playerCommonData, playerAppearance, account);
 
         if (!PlayerService.storeNewPlayer(player, account.getName(), account.getId())) {

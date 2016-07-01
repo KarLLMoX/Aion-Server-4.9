@@ -130,23 +130,8 @@ public final class PlayerEnterWorldService {
     public static final void startEnterWorld(final int objectId, final AionConnection client) {
         // check if char is banned
         PlayerAccountData playerAccData = client.getAccount().getPlayerAccountData(objectId);
-        if (playerAccData == null) {
-            log.warn("playerAccData == null " + objectId);
-            if (client != null) {
-                client.closeNow();
-            }
-            return;
-        }
-        if (playerAccData.getPlayerCommonData() == null) {
-            log.warn("playerAccData.getPlayerCommonData() == null " + objectId);
-            if (client != null) {
-                client.closeNow();
-            }
-            return;
-        }
         Timestamp lastOnline = playerAccData.getPlayerCommonData().getLastOnline();
-        Player edit = playerAccData.getPlayerCommonData().getPlayer();
-        if (lastOnline != null && client.getAccount().getAccessLevel() < AdminConfig.GM_LEVEL && edit != null && !edit.isInEditMode()) {
+        if (lastOnline != null && client.getAccount().getAccessLevel() < AdminConfig.GM_LEVEL) {
             if (System.currentTimeMillis() - lastOnline.getTime() < (GSConfig.CHARACTER_REENTRY_TIME * 1000)) {
                 client.sendPacket(new SM_ENTER_WORLD_CHECK((byte) 6)); // 20 sec time
                 client.sendPacket(new SM_AFTER_TIME_CHECK());//TODO
