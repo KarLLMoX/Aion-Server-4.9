@@ -492,9 +492,11 @@ public final class QuestService {
                     fulfilledStartConditions++;
                 }
             }
-            if (fulfilledStartConditions < requiredStartConditions) {
+            if (env.getQuestId() >= 19601 && env.getQuestId() <= 19630 || env.getQuestId() >= 29601 && env.getQuestId() <= 29630) { //Workaround for Wisplight Abbey & Fatebound Abbey Quests
+            	return true;
+            } else if (fulfilledStartConditions < requiredStartConditions) {
                 return false;
-            }
+            } 
         }
 
         if (!inventoryItemCheck(env, warn)) {
