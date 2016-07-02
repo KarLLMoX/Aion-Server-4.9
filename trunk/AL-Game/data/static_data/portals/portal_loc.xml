@@ -697,4 +697,56 @@
     <!-- Drakensphire Depths Exit (Elyos) -->
     <portal_loc world_id="210070000" loc_id="2100704" x="2905.0" y="803.0" z="569.52704" h="0"/>
     <portal_loc world_id="220080000" loc_id="2200804" x="454.0" y="2262.0" z="220.04858" h="0"/>
+
+    <!-- Wisplight Abbey Portals Elyos Start -->
+    <!-- 1. Atreia Defense Portal to Draupnir Cave -->
+    <portal_loc world_id="210040000" loc_id="1300901" x="2530.9" y="2684.2" z="155.36249" h="0"/>
+    <!-- 2. Atreia Defense Portal to Theobomos Lab -->
+    <portal_loc world_id="210060000" loc_id="1300902" x="2677.5" y="820.4" z="138.35718" h="0"/>
+    <!-- 3. Atreia Defense Portal to Adma Stronghold -->
+    <portal_loc world_id="210060000" loc_id="1300903" x="2682.1" y="850.6" z="138.35718" h="0"/>
+    <!-- 4. Atreia Defense Portal to Dark Poeta -->
+    <portal_loc world_id="210040000" loc_id="1300904" x="2024.2" y="1470.5" z="126.9875" h="0"/>
+    <!-- 1. Balaurea Advance Portal to Talocs Hollow -->
+    <portal_loc world_id="210050000" loc_id="1300905" x="2888.6" y="359.6" z="298.70145" h="0"/>
+    <!-- 2. Balaurea Advance Portal to Udas Temple -->
+    <portal_loc world_id="210050000" loc_id="1300906" x="333.5" y="1354.0" z="263.98422" h="0"/>
+    <!-- 3. Balaurea Advance Portal to Lower Udas Temple -->
+    <portal_loc world_id="210050000" loc_id="1300907" x="205.0" y="1386.5" z="266.42322" h="0"/>
+    <!-- 4. Balaurea Advance Portal to Beshmundirs Temple -->
+    <portal_loc world_id="600010000" loc_id="1300908" x="1408.7" y="767.6" z="312.7773" h="0"/>
+    <!-- 1. Balaurea Invasion Portal to Aturam Sky Fortress -->
+    <portal_loc world_id="210070000" loc_id="1300909" x="2418.3" y="628.5" z="548.02655" h="0"/>
+    <!-- 2. Balaurea Invasion Portal to Rentus Base -->
+    <portal_loc world_id="210070000" loc_id="1300910" x="1144.3" y="798.3" z="562.75" h="0"/>
+    <!-- 3. Balaurea Invasion Portal to Tiamat Stronghold -->
+    <portal_loc world_id="210070000" loc_id="1300911" x="96.5" y="1496.6" z="491.58353" h="0"/>
+    <!-- 4. Balaurea Invasion Portal to Dragon Lords Refuge -->
+    <portal_loc world_id="210070000" loc_id="1300912" x="105.9" y="1458.6" z="491.87137" h="0"/>
+    <!-- 5. Balaurea Invasion Portal to Raksang Ruins -->
+    <portal_loc world_id="210070000" loc_id="1300913" x="2690.2" y="1447.1" z="434.86566" h="0"/>
+    <!-- 1. Balaurea Frontier Portal to Danuar Sanctuary -->
+    <portal_loc world_id="210070000" loc_id="1300914" x="2098.0" y="2290.0" z="294.625" h="0"/>
+    <!-- 2. Balaurea Frontier Portal to Ophidan Bridge -->
+    <portal_loc world_id="210070000" loc_id="1300915" x="2781.9" y="3002.5" z="274.875" h="0"/>
+    <!-- 3. Balaurea Frontier Portal to Linkgate Foundry -->
+    <portal_loc world_id="600100000" loc_id="1300916" x="330.8" y="402.4" z="318.625" h="0"/>
+    <!-- 4. Balaurea Frontier Portal to Sauro Supply Base -->
+    <portal_loc world_id="600100000" loc_id="1300917" x="353.6" y="256.9" z="352.5" h="0"/>
+    <!-- 5. Balaurea Frontier Portal to Illuminary Obelsik -->
+    <portal_loc world_id="600100000" loc_id="1300918" x="460.0" y="1544.8" z="241.50108" h="0"/>
+    <!-- 1. South Balaurea Portal to Verteron -->
+    <portal_loc world_id="210030000" loc_id="1300919" x="1672.8" y="1505.6" z="119.11" h="1"/>
+    <!-- 2. South Balaurea Portal to Haramel -->
+    <portal_loc world_id="210030000" loc_id="1300920" x="2366.0" y="854.0" z="101.5" h="0"/>
+    <!-- 3. South Balaurea Portal to Nochsana -->
+    <portal_loc world_id="210020000" loc_id="1300921" x="333.5" y="2733.8" z="263.4721" h="0"/>
+    <!-- 4. South Balaurea Portal to Fire Temple -->
+    <portal_loc world_id="210020000" loc_id="1300922" x="1343.5" y="344.1" z="348.6672" h="0"/>
+    <!-- 5. South Balaurea Portal to Heiron -->
+    <portal_loc world_id="210040000" loc_id="1300923" x="2523.3" y="347.1" z="411.6492" h="0"/>
+    <!-- Wisplight Abbey Portals Elyos End -->
+    <!-- Fatebound Abbey Portals Elyos Start -->
+
+    <!-- Fatebound Abbey Portals Elyos End -->
 </portal_locs>
