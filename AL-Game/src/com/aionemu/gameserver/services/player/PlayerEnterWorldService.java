@@ -787,26 +787,27 @@ public final class PlayerEnterWorldService {
      */
     private static void playerLoggedIn(Player player) {
         log.info("Player logged in: " + player.getName() + " Account: " + player.getClientConnection().getAccount().getName());
+        player.getCommonData().setOnline(true);
+        DAOManager.getDAO(PlayerDAO.class).onlinePlayer(player, true);
+        player.onLoggedIn();
+        player.setOnlineTime();
+        
         //start Abbey Return Entrys
         player.setBonusTime(player.getCommonData().getBonusTime());
         player.setBonusTimeStatus();
-        //TODO
-        if (player.getRace() == Race.ASMODIANS && player.getBonusTime().getStatus() != PlayerBonusTimeStatus.RETURN) {
+
+        if (player.getLevel() >= 10 && player.getRace() == Race.ASMODIANS && player.getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN) {
 			if (player.getInventory().getItemCountByItemId(164000336) > 0) {
 				return;
 			}
 			ItemService.addItem(player, 164000336, 1); //Abbey Return Stone (30 days)
         }
-        if (player.getRace() == Race.ELYOS && player.getBonusTime().getStatus() != PlayerBonusTimeStatus.RETURN) {
+        if (player.getLevel() >= 10 && player.getRace() == Race.ELYOS && player.getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN) {
         	if (player.getInventory().getItemCountByItemId(164000335) > 0) {
 				return;
 			}
         	ItemService.addItem(player, 164000335, 1); //Abbey Return Stone (30 days)
         }
-        player.getCommonData().setOnline(true);
-        DAOManager.getDAO(PlayerDAO.class).onlinePlayer(player, true);
-        player.onLoggedIn();
-        player.setOnlineTime();
     }
 
     private static void showPremiumAccountInfo(AionConnection client, Account account) {
