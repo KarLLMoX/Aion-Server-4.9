@@ -5,83 +5,51 @@
         [BEGIN] SUMMARY
                29600 [SCRIPT] Welcome Back
                29601 [SCRIPT] Instruction on Instructors
-               29602 [XML] The Sheen of Newness
-               29603 [XML] [Daily] Brusthonin Brushback
-               29604 [XML] Drop into Draupnir
-               29605 [XML] Spiking the Spirits
-               29606 [XML] For Great Justice!
-               29607 [XML] Back to the Future from the Present
-               29608 [XML] Ready for Gelkmaros
-               29609 [XML] [Daily] Trouble Near Taloc
-               29610 [XML] Aether Aegis
-               29611 [XML] Under a Spell in Undirborg
-               29612 [XML] Temple and Tomb
-               29615 [XML] Dredgion Dismantling
-               29617 [XML] A Time to Kill
-               29618 [XML] Recovering from Betrayal
-               29619 [XML] Reclaiming Relics
-               29623 [XML] Right Time for a War
-               29624 [XML] Flames and Stone
-               29626 [XML] A Game of Bridge
-               29627 [XML] Come Back with Friends
-               29628 [XML] Foundry-Field Link
-               29629 [XML] Hyperion before It was Cool
-               29630 [XML] Light Up the Obelisk
-               29644 [TODO] Heading into the Unknown
+               29602 [TODO] The Sheen of Newness
+               29603 [TODO] [Daily] Brusthonin Brushback
+               29604 [SCRIPT] Drop into Draupnir
+               29605 [SCRIPT] Spiking the Spirits
+               29606 [SCRIPT] For Great Justice!
+               29607 [SCRIPT] Back to the Future from the Present
+               29608 [SCRIPT] Ready for Gelkmaros
+               29609 [TODO] [Daily] Trouble Near Taloc
+               29610 [SCRIPT] Aether Aegis
+               29611 [SCRIPT] Under a Spell in Undirborg
+               29612 [SCRIPT] Temple and Tomb
+               29615 [SCRIPT] Dredgion Dismantling
+               29617 [SCRIPT] A Time to Kill
+               29618 [SCRIPT] Recovering from Betrayal
+               29619 [SCRIPT] Reclaiming Relics
+               29623 [SCRIPT] Right Time for a War
+               29624 [SCRIPT] Flames and Stone
+               29626 [SCRIPT] A Game of Bridge
+               29627 [SCRIPT] Come Back with Friends
+               29628 [SCRIPT] Foundry-Field Link
+               29629 [SCRIPT] Hyperion before It was Cool
+               29630 [SCRIPT] Light Up the Obelisk
+               29644 [SCRIPT] Heading into the Unknown
                29645 [TODO] [Daily] A Tidy Supply Route 
-               29646 [TODO] Tasks Ahead
+               29646 [SCRIPT] Tasks Ahead
                29647 [TODO] [Daily] Assisting Grangund
-               29648 [TODO] Supporting Sefrim
-               29649 [TODO] Raksang Ruins Roundup
+               29648 [SCRIPT] Supporting Sefrim
+               29649 [SCRIPT] Raksang Ruins Roundup
                29650 [TODO] [Daily] Protect Whirlpool Temple
-               29651 [TODO] To Altgard
+               29651 [SCRIPT] To Altgard
                29652 [TODO] [Daily] Protect Moslan Forest
                29653 [TODO] Protect Impetusium
-               29654 [TODO] To Haramel
-               29655 [TODO] To Morheim
+               29654 [SCRIPT] To Haramel
+               29655 [SCRIPT] To Morheim
                29656 [TODO] [Daily] Protect Morheim
                29657 [TODO] [Daily] Protect the Salt Desert
-               29658 [TODO] To the Nochsana Training Camp
-               29659 [TODO] To the Fire Temple
-               29660 [TODO] To Beluslan
+               29658 [SCRIPT] To the Nochsana Training Camp
+               29659 [SCRIPT] To the Fire Temple
+               29660 [SCRIPT] To Beluslan
                29661 [TODO] [Daily] Protect Beluslan
                29662 [TODO] [Daily] Protect Kidorun's Campsite
-               29663 [TODO] To Red Mane Cavern
+               29663 [SCRIPT] To Red Mane Cavern
                29664 [TODO] [Daily] Protect Hoarfrost Shelter
         [END] SUMMARY
     -->
 	<!-- REPORTING QUESTS -->
-	<report_to_many id="29602" start_npc_ids="804663" end_npc_ids="798155">
-		<npc_infos var="0" npc_id="205986" quest_dialog="1352"/>
-		<npc_infos var="1" npc_id="209476" quest_dialog="1693" close_dialog="1009"/>
-	</report_to_many>
-	<report_to id="29604" start_npc_ids="804663" end_npc_ids="204817"/>
-	<report_to id="29605" start_npc_ids="804663" end_npc_ids="800421"/>
-	<report_to id="29606" start_npc_ids="804663" end_npc_ids="205225"/>
-	<report_to id="29607" start_npc_ids="804663" end_npc_ids="204837"/>
-	<report_to_many id="29608" start_npc_ids="804664" end_npc_ids="799225">
-		<npc_infos var="0" npc_id="205986" quest_dialog="1352"/>
-		<npc_infos var="1" npc_id="799225" quest_dialog="1693" close_dialog="1009"/>
-	</report_to_many>
-	<report_to id="29610" start_npc_ids="804664" end_npc_ids="799208"/>
-	<report_to id="29611" start_npc_ids="804664" end_npc_ids="799333"/>
-	<report_to id="29612" start_npc_ids="804664" end_npc_ids="799225"/>
-	<report_to id="29615" start_npc_ids="804665" end_npc_ids="799531"/>
-	<report_to id="29617" start_npc_ids="804665" end_npc_ids="205886"/>
-	<report_to id="29618" start_npc_ids="804665" end_npc_ids="205864"/>
-	<report_to id="29619" start_npc_ids="804665" end_npc_ids="800070"/>
-	<report_to id="29623" start_npc_ids="804666" end_npc_ids="802353"/>
-	<report_to id="29624" start_npc_ids="804666" end_npc_ids="802433"/>
-	<report_to id="29626" start_npc_ids="804666" end_npc_ids="804614"/>
-	<report_to id="29627" start_npc_ids="804666" end_npc_ids="804614"/>
-	<report_to id="29628" start_npc_ids="804666" end_npc_ids="802353"/>
-	<report_to id="29629" start_npc_ids="804666" end_npc_ids="801947"/>
-	<report_to id="29630" start_npc_ids="804666" end_npc_ids="804599"/>
 	<!-- MONSTER HUNT QUESTS -->
-	<monster_hunt id="29603" start_npc_ids="804651" end_npc_ids="209476">	
-		<monster var="0" npc_ids="214498 214494" end_var="10"/>
-	</monster_hunt>
-	<monster_hunt id="29609" start_npc_ids="804651" end_npc_ids="799225">	
-		<monster var="0" npc_ids="215989 215931" end_var="10"/>
-	</monster_hunt>
 </quest_scripts>
