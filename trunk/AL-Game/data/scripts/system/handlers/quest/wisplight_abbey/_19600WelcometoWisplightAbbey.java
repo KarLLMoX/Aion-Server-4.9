@@ -38,6 +38,7 @@ public class _19600WelcometoWisplightAbbey extends QuestHandler {
     @Override
     public void register() {
         qe.registerQuestNpc(804651).addOnTalkEvent(questId);
+        qe.registerOnMovieEndQuest(908, questId);
         qe.registerOnEnterZone(ZoneName.get("WISPLIGHT_ABBEY_130090000"), questId);
     }
 
@@ -46,28 +47,53 @@ public class _19600WelcometoWisplightAbbey extends QuestHandler {
         final Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-		
+        DialogAction dialog = env.getDialog();
+
         if (targetId != 804651) {
             return false;
         }
         if (qs.getStatus() == QuestStatus.START) {
-            if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                return sendQuestDialog(env, 10002);
-            } else if (env.getDialogId() == 1009) {
-                qs.setStatus(QuestStatus.REWARD);
-                qs.setQuestVarById(0, 1);
-                updateQuestStatus(env);
-                return sendQuestDialog(env, 5);
-            }
-            return false;
+        	switch (dialog) {
+       			case QUEST_SELECT: {
+             		return sendQuestDialog(env, 1011);
+       			}
+       			case SETPRO1: {
+       				playQuestMovie(env, 908);
+       				return true;
+       			}
+       			default:
+       				break;
+       		}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            return sendQuestEndDialog(env);
+        	switch (dialog) {
+        		case USE_OBJECT: {
+        			return sendQuestDialog(env, 10002);
+        		}
+        		case SELECT_QUEST_REWARD: {
+        			return sendQuestDialog(env, 5); 
+        		}
+        		default:
+        			return sendQuestEndDialog(env); 
+        	}
+        }
+        return false;
+    }
+	    
+	@Override
+    public boolean onMovieEndEvent(QuestEnv env, int movieId) {
+        Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+        if (qs.getStatus() == QuestStatus.START && movieId == 908) {
+			qs.setQuestVar(1);
+			qs.setStatus(QuestStatus.REWARD);
+            updateQuestStatus(env);
+            return closeDialogWindow(env);
         }
         return false;
     }
 
     @Override
     public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
-        return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("WISPLIGHT_ABBEY_130090000"));
+    	return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("WISPLIGHT_ABBEY_130090000"));
     }
 }
