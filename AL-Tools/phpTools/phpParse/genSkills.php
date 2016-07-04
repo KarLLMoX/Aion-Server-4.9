@@ -322,6 +322,14 @@ function getRefSkillNameId($sname)
     // direkte Suche
     if (isset($tabrskill[$key]))
         return $tabrskill[$key];
+        
+    // direkte Suche mit bekannten Erweiterungen
+    if ($org == "SIMPLEMOVEBACK")
+    {
+        $key = "NORMALATTACK_".$org;
+        if (isset($tabrskill[$key]))
+            return $tabrskill[$key];
+    }
     //
     //  Text-Ersetzungen 1. Versuch
     //
@@ -1261,7 +1269,7 @@ function getChangeStats($block,$key,$e,$tbneg)
                 $ret  = '                <change stat="AP_BOOST" func="'.$func.'" value="'.$res2.'"/>'."\n"; 
             }
             return $ret;   
-        case"absolutesnare":
+        case "absolutesnare":
             if ($res2 != "?")
                 $ret = '                <change stat="SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n". 
                        '                <change stat="FLY_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n";
@@ -1301,6 +1309,13 @@ function getChangeStats($block,$key,$e,$tbneg)
             $dta = ($res1 != "?" && $res1 != "0") ? ' delta="'.$res1.'"' : '';
             $ret = '                <change stat="BLOCK" func="PERCENT"'.$dta.' value="'.$res2.'"/>'."\n";
             return $ret;
+        case "snare":
+            if ($res2 != "?")
+                $func = getTabValue($key,$ename."reserved6","?");
+                $func = ($func == "1") ? "PERCENT" : "ADD";
+                $ret  = '                <change stat="SPEED" func="'.$func.'" value="'.($res2 * -1).'"/>'."\n". 
+                        '                <change stat="FLY_SPEED" func="'.$func.'" value="'.($res2 * -1).'"/>'."\n";
+            return $ret;
         default:
             break;
     }
@@ -1333,6 +1348,32 @@ function getChangeStats($block,$key,$e,$tbneg)
         }
     }
     
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Zeilen für die Subeffekte aufbereiten
+// ----------------------------------------------------------------------------
+function getSubEffect($efftyp,$key,$e,$field)
+{
+    $ret    = "";
+    
+    $ename  = "effect".$e."_";
+    $sub    = getEffSpecial( "upper",getTabValue($key,$ename.$field,"?") );
+    
+    if ($sub != "?")
+    {
+        $sid = getRefSkillNameId($sub);
+        
+        if ($sid != "?")
+        {
+            $ret = '                <subeffect skill_id="'.$sid.'"';
+            
+            if (stripos($sub,"_ADDEFFECT") !== false)
+                $ret .= ' addeffect="true"';
+            
+            $ret .= '/>'."\n";
+        }
+    }
     return $ret;
 }
 // ----------------------------------------------------------------------------
@@ -1462,6 +1503,7 @@ function getEffectBasicLine($efftyp,$key,$e)
     $armor = "?";
     $atcnt = "?";
     $check = "?";
+    $crit2 = "?";
     $delta = "?";
     $distz = "?";
     $npcnt = "?";
@@ -1475,6 +1517,8 @@ function getEffectBasicLine($efftyp,$key,$e)
     $val01 = "?";
     $val02 = "?";
     $weapn = "?";
+    // komplette Texte
+    $txt01 = "";
     
     // einige Inhalte an die EMU anpassen
     $elem   = ($elem == "AIR") ? "WIND" : $elem;  
@@ -1494,11 +1538,13 @@ function getEffectBasicLine($efftyp,$key,$e)
     } 
     // TYPE deaktivieren ----------------------------------
     if ($efftyp == "aura"
+    ||  $efftyp == "armormastery"
     ||  $efftyp == "bleed"
-    ||  $efftyp == "statup"
-    ||  $efftyp == "summontrap"
+    ||  $efftyp == "carvesignet"
     ||  $efftyp == "shieldmastery"
-    ||  $efftyp == "armormastery")
+    ||  $efftyp == "signetburst"
+    ||  $efftyp == "statup"
+    ||  $efftyp == "summontrap")
     {
         $type = "?";    
     }
@@ -1530,11 +1576,16 @@ function getEffectBasicLine($efftyp,$key,$e)
     {
         $delta = getTabValue($key,$ename."reserved3","0");
     }    
+    if ($efftyp == "carvesignet")
+    {
+        $delta = getEffSpecial( "nozero",getTabValue($key,$ename."reserved3","?") );
+    }    
     if ($efftyp == "bleed")
     {
         $delta = getEffSpecial( "nozero",getTabValue($key,$ename."reserved8","?") );
     }   
-    if ($efftyp == "blind")
+    if ($efftyp == "blind"
+    ||  $efftyp == "signetburst")
     {
         $delta = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","?") );
     }
@@ -1547,6 +1598,11 @@ function getEffectBasicLine($efftyp,$key,$e)
     if ($efftyp == "backdash")
     {
         $adist = getTabValue($key,$ename."reserved12","?");
+    }
+    // ELEMENT --------------------------------------------
+    if ($efftyp == "carvesignet")
+    {
+        $elem  = "?";
     }
     // OWNER ----------------------------------------------
     if ($efftyp == "summonfunctionalnpc")
@@ -1568,6 +1624,10 @@ function getEffectBasicLine($efftyp,$key,$e)
         $panel = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") );
         $state = getEffSpecial( "state" ,getTabValue($key,$ename."reserved13","?") );
     } 
+    elseif ($efftyp == "deform") 
+    {
+        $state = "DEFORM";
+    }
     // RANDOMTIME 
     if ($efftyp == "bleed")
     {
@@ -1623,7 +1683,8 @@ function getEffectBasicLine($efftyp,$key,$e)
     {
         $val01 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved9","?") );
     }
-    if ($efftyp == "dash")
+    if ($efftyp == "dash"
+    ||  $efftyp == "carvesignet")
     {
         $val01 = getTabValue($key,$ename."reserved4","?");
     }
@@ -1638,9 +1699,46 @@ function getEffectBasicLine($efftyp,$key,$e)
         $weapn = getEffSpecial( "weapon",getTabValue($key,$ename."reserved5","?") );
     } 
     // ----------------------------------------------------
-    // Allgemeine Zeile mit allen aktiven Tags aufbereiten 
+    // hinzufügen einiger, kompletter Tag-Texte 
     // ----------------------------------------------------
-    $ret .= getFieldText( "owner"         ,$owner ).
+    // SIGNET-Texte
+    if    ($efftyp == "carvesignet")
+    {
+        // signet,signetid,signetlvlstart,signetlvl
+        $x10   = getTabValue($key,$ename."reserved10","0");
+        $x13   = getTabValue($key,$ename."reserved13","");
+        $x14   = getTabValue($key,$ename."reserved14","");
+        $sig   = "signet".$x13."_".$x14;
+        $sid   = getRefSkillNameId($sig);
+        
+        $txt01 = ' signet="SYSTEM_SKILL_SIGNET'.$x13.'" signetid="'.$sid.'"';
+        if ($x10 > "1")
+            $txt01 .= ' signetlvlstart="'.$x10.'"';
+        $txt01 .= ' signetlvl="'.$x14.'"';
+        
+        if ($blev == "0") $blev = "?";
+    }
+    elseif ($efftyp == "signet")
+    {
+        if ($effid == "0") $effid = "?";
+    }
+    elseif ($efftyp == "signetburst")
+    {
+        // signetlvl,signet,value
+        $x02   = getTabValue($key,$ename."reserved2","");
+        $x07   = getTabValue($key,$ename."reserved7","");
+        $x08   = getTabValue($key,$ename."reserved8","");
+        $crit2 = getTabValue($key,$ename."critical_prob_mod2","0");
+        
+        $txt01 = ' signetlvl="'.$x08.'" signet="SYSTEM_SKILL_SIGNET'.$x07.'"'.
+                 ' value="'.$x02.'"';
+    }
+    // ----------------------------------------------------
+    // Allgemeine Zeile mit allen aktiven Tags aufbereiten 
+    // ----------------------------------------------------    
+        
+    $ret .= $txt01.
+            getFieldText( "owner"         ,$owner ).
             getFieldText( "statsetid"     ,$stset ).
             getFieldText( "checktime"     ,$check ).
             getFieldText( "value"         ,$val01 ).
@@ -1669,6 +1767,7 @@ function getEffectBasicLine($efftyp,$key,$e)
             getFieldText( "element"       ,$elem  ).
             getFieldText( "preeffect"     ,$preff ).
             getFieldText( "preeffect_prob",$prob2 ).
+            getFieldText( "critprobmod2"  ,$crit2 ).
             getFieldText( "hoptype"       ,$htyp  ).
             getFieldText( "hopb"          ,$hopb  ).
             getFieldText( "hopa"          ,$hopa  );
@@ -1823,25 +1922,25 @@ function getEffectAbsoluteSlow($key,$e)
     return $ret;
 }
 // ---------------------------------------------------------------------------
-// Effect aufbereiten für: AbsoluteSnare
+// Effect aufbereiten für: ...snare...
 // ---------------------------------------------------------------------------
-function getEffectAbsoluteSnare($key,$e)
+function getEffectSnareAll($effkey,$key,$e)
 {
     $tbneg = array("ATTACK_SPEED");
-    $ret   = getEffectBasicLine("absolutesnare",$key,$e);
+    $ret   = getEffectBasicLine($effkey,$key,$e);
     
     if ($ret != "")
     {
-        $stat = getChangeStats("absolutesnare",$key,$e,$tbneg);
+        $stat = getChangeStats($effkey,$key,$e,$tbneg);
         
         if ($stat != "")
         {
-            $ret  = '            <absolutesnare'.$ret.'>'."\n";
+            $ret  = '            <'.$effkey.$ret.'>'."\n";
             $ret .= $stat;
-            $ret .= '            </absolutesnare>'."\n";
+            $ret .= '            </'.$effkey.'>'."\n";
         }
         else
-            $ret  = '            <absolutesnare'.$ret.'/>'."\n";
+            $ret  = '            <'.$effkey.$ret.'/>'."\n";
     }
     
     return $ret;
@@ -1992,6 +2091,42 @@ function getEffectBuffAll($efftyp,$key,$e)
     return $ret;
 }
 // ---------------------------------------------------------------------------
+// Effect aufbereiten für: ...signet...
+// ---------------------------------------------------------------------------
+function getEffectSignetAll($efftyp,$key,$e)
+{    
+    $xml = strtolower($efftyp);
+    $ret = getEffectBasicLine($xml,$key,$e);
+    $sub = "";
+    
+    if ($ret != "")
+    {        
+        switch ($efftyp)
+        {
+            case "carvesignet":  
+                $sub = getSubEffect($efftyp,$key,$e,"reserved7");  
+                break;
+            case "signetburst":  
+                $sub = getSubEffect($efftyp,$key,$e,"reserved15"); 
+                
+                if ($sub == "")
+                    $sub = getSubEffect($efftyp,$key,$e,"reserved13");
+                break;
+            default           :                                                     break;
+        }
+        if ($sub != "")
+        {
+            $ret  = '            <'.$efftyp.$ret.'>'."\n";
+            $ret .= $sub;
+            $ret .= '            </'.$efftyp.'>'."\n";
+        }
+        else
+            $ret  = '            <'.$efftyp.$ret.'/>'."\n";
+    }
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
 // Effect aufbereiten für: dash
 // ---------------------------------------------------------------------------
 function getEffectDash($key,$e)
@@ -2000,6 +2135,18 @@ function getEffectDash($key,$e)
             
     if ($ret != "")
         $ret  = '            <dash'.$ret.'/>'."\n";
+    
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: deform
+// ---------------------------------------------------------------------------
+function getEffectDeform($key,$e)
+{    
+    $ret   = getEffectBasicLine("deform",$key,$e);
+            
+    if ($ret != "")
+        $ret  = '            <deform'.$ret.'/>'."\n";
     
     return $ret;
 }
@@ -2059,8 +2206,7 @@ function getEffectsLines($key)
         NOTUSED     name="buffsleep" type="BuffSleepEffect"  
         NOTUSED     name="summonbindinggroupgate" type="SummonBindingGroupGateEffect"  
         
-        
-        name="carvesignet" type="CarveSignetEffect"
+        // TODO
         name="caseheal" type="CaseHealEffect"
         name="changehateonattacked" type="ChangeHateOnAttackedEffect"
         name="closeaerial" type="CloseAerialEffect"
@@ -2070,7 +2216,6 @@ function getEffectsLines($key)
         name="curse" type="CurseEffect"
         name="deathblow" type="DeathBlowEffect"
         name="deboostheal" type="DeboostHealEffect"
-        name="deform" type="DeformEffect"
         name="delaydamage" type="DelayedSpellAttackInstantEffect"
         name="delayedfpatk_instant" type="DelayedFpAtkInstantEffect"
         name="delayedskill" type="DelayedSkillEffect"
@@ -2140,14 +2285,11 @@ function getEffectsLines($key)
         name="resurrect" type="ResurrectEffect"
         name="resurrectbase" type="ResurrectBaseEffect"
         name="resurrectpos" type="ResurrectPositionalEffect"
-          name="returnpoint" type="ReturnPointEffect"
         name="riderobot" type="RideRobotEffect"
         name="root" type="RootEffect"
         name="sanctuary" type="SanctuaryEffect"
         name="search" type="SearchEffect"
         name="shield" type="ShieldEffect"
-        name="signet" type="SignetEffect"
-        name="signetburst" type="SignetBurstEffect"
         name="silence" type="SilenceEffect"
         name="simpleroot" type="SimpleRootEffect"
         name="skillatk" type="SkillAttackInstantEffect"
@@ -2156,7 +2298,6 @@ function getEffectsLines($key)
         name="skilllauncher" type="SkillLauncherEffect"
         name="skillxpboost" type="SkillXPBoostEffect"
         name="slow" type="SlowEffect"
-        name="snare" type="SnareEffect"
         name="spellatk" type="SpellAttackEffect"
         name="spellatkdrain" type="SpellAtkDrainEffect"
         name="spellatkdraininstant" type="SpellAtkDrainInstantEffect"
@@ -2190,7 +2331,7 @@ function getEffectsLines($key)
             case "absstatbuff"               :  
             case "absstatdebuff"             :  $ret .= getEffectAbsStatAll($efftyp,$key,$e);                break;            
             case "absoluteslow"              :  $ret .= getEffectAbsoluteSlow($key,$e);                      break;
-            case "absolutesnare"             :  $ret .= getEffectAbsoluteSnare($key,$e);                     break;
+            case "absolutesnare"             :  $ret .= getEffectSnareAll($efftyp,$key,$e);                  break;
             // alle always...-Effekte
             case "alwaysblock"               :
             case "alwaysdodge"               :
@@ -2212,15 +2353,20 @@ function getEffectsLines($key)
             case "buffbind"                  :
             case "buffsilence"               :
             case "buffstun"                  :  $ret .= getEffectBuffAll($efftyp,$key,$e);                   break;
+            case "carvesignet"               :  $ret .= getEffectSignetAll($efftyp,$key,$e);                 break;
             case "dash"                      :  $ret .= getEffectDash($key,$e);                              break;
+            case "deform"                    :  $ret .= getEffectDeform($key,$e);                            break;
             case "hipass"                    :  $ret .= getEffectHipass($key,$e);                            break;
             case "return"                    :  
             case "returnpoint"               :  $ret .= getEffectReturnAll($efftyp,$key,$e);                 break;
             case "shapechange"               :  $ret .= getEffectShapeChange($key,$e);                       break;
             case "shieldmastery"             :  $ret .= getEffectShieldMastery($key,$e);                     break;
+            case "signet"                    :
+            case "signetburst"               :  $ret .= getEffectSignetAll($efftyp,$key,$e);                 break;
             case "statup"                    :  $ret .= getEffectStatUp($key,$e);                            break;
             case "statdown"                  :  $ret .= getEffectStatDown($key,$e);                          break; 
             case "sleep"                     :  $ret .= getEffectSleep($key,$e);                             break;
+            case "snare"                     :  $ret .= getEffectSnareAll($efftyp,$key,$e);                  break;
             // alle summon...-Effekte
             case "summon"                    :  
             case "summonfunctionalnpc"       : 
@@ -2746,13 +2892,16 @@ function makeAbgleichSvnFile()
             // Effekt Blöcke
             if     (stripos($line,"<apboost")       !== false
             ||      stripos($line,"<boost")         !== false  // alle boost-Zeilen
+            ||      stripos($line,"<carvesignet")   !== false
             ||      stripos($line,"<statup")        !== false
             ||      stripos($line,"<statdown")      !== false
             ||      stripos($line,"<wpnmastery")    !== false
             ||      stripos($line,"<absoluteslow")  !== false
             ||      stripos($line,"<absolutesnare") !== false
             ||      stripos($line,"<armormastery")  !== false
-            ||      stripos($line,"<shieldmastery") !== false)
+            ||      stripos($line,"<shieldmastery") !== false
+            ||      stripos($line,"<signetburst")   !== false
+            ||      stripos($line,"<snare")         !== false)
             {
                 $doeff    = true;
                 
@@ -2774,9 +2923,11 @@ function makeAbgleichSvnFile()
             ||      stripos($line,"<blind")               !== false
             ||      stripos($line,"<buff")                !== false  // alle buff-Zeilen
             ||      stripos($line,"<dash")                !== false
+            ||      stripos($line,"<deform")              !== false
             ||      stripos($line,"<hipass")              !== false
             ||      stripos($line,"<return")              !== false  // alle return-Zeilen
             ||      stripos($line,"<shapechange")         !== false
+            ||      stripos($line,"<signet")              !== false  // alle signet-Zeilen
             ||      stripos($line,"<sleep")               !== false
             ||      stripos($line,"<summon")              !== false) // alle Summon-Zeilen !!!
             {
