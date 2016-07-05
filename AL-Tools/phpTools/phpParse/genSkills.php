@@ -312,7 +312,7 @@ function getIntSkillNameId($desc)
 // ----------------------------------------------------------------------------
 // Effekt-Skill-Name-ID zurückgeben
 // ----------------------------------------------------------------------------
-function getRefSkillNameId($sname)
+function getRefSkillNameId($tkey,$sname)
 {
     global $tabrskill;
     
@@ -324,9 +324,13 @@ function getRefSkillNameId($sname)
         return $tabrskill[$key];
         
     // direkte Suche mit bekannten Erweiterungen
-    if ($org == "SIMPLEMOVEBACK")
+    if ($org == "SIMPLEMOVEBACK"
+    ||  $org == "SPIN"
+    ||  $org == "STAGGER"
+    ||  $org == "STUMBLE")
     {
         $key = "NORMALATTACK_".$org;
+        
         if (isset($tabrskill[$key]))
             return $tabrskill[$key];
     }
@@ -375,7 +379,7 @@ function getRefSkillNameId($sname)
     if (isset($tabrskill[$key]))
         return $tabrskill[$key];
     
-    logLine("<font color=yellow>- RefSkillId nicht gefunden",$org);
+    logLine("<font color=yellow>- RefSkillId nicht gefunden",$tkey.' = '.$org);
     
     return "?";
 }
@@ -770,6 +774,10 @@ function makeSkillsRefTab()
     logLine("Anzahl Skills gefunden",count($tabrskill));
 }
 // ---------------------------------------------------------------------------
+//
+//                            P R O P E R T I E S
+//
+// ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: Properties
 // ---------------------------------------------------------------------------
 function getPropertiesLines($key)
@@ -830,6 +838,7 @@ function getPropertiesLines($key)
     return $ret;
 }
 // ---------------------------------------------------------------------------
+//
 //                          C O N D I T I O N S
 //
 // Möglichkeiten gem. aktueller XSD-Datei im SVN
@@ -1059,8 +1068,10 @@ function getUseEquipConditionLines($key)
 }
 // ----------------------------------------------------------------------------
 //
-//                             E F F E C T S
+//                               E F F E C T S
 //
+// ----------------------------------------------------------------------------
+//        H I L F S - F U N K T I O N E N   W E R T E R M I T T L U N G
 // ----------------------------------------------------------------------------
 // StatsNames zurückgeben
 // ----------------------------------------------------------------------------
@@ -1177,20 +1188,26 @@ function getStatNames($name)
 // ----------------------------------------------------------------------------
 // EffectFunc zurückgeben
 // ----------------------------------------------------------------------------
-function getEffectFunc($key,$field)
+function getEffectFunc($efftyp,$key,$field)
 {
     $val = getTabValue($key,$field,"?");
     
-    // wenn das Feld gesetzt ist, also nicht "?" und nicht "0", dann PERCENT
-    if ($val == "?" || $val == "0")
-        return "ADD";
-    else
-        return "PERCENT";
+    switch ($efftyp)
+    {
+        // wenn Feld = "1", dann PERCENT
+        case "statup":
+        case "statdown":        
+            return ( ($val == "1") ? "PERCENT" : "ADD" );
+        
+        // wenn Feld ungleich "1", dann PERCENT
+        default:                                
+            return ( ($val != "1") ? "PERCENT" : "ADD" );
+    }
 }
 // ----------------------------------------------------------------------------
 // Vorzeichen für die Value-Angabe ermitteln
 // ----------------------------------------------------------------------------
-function getValueSign($block,$stat,$value,$tbneg)
+function getValueSign($efftyp,$stat,$value,$tbneg)
 {    
     $ret  = 1;
     $mneg = count($tbneg);
@@ -1212,168 +1229,10 @@ function getValueSign($block,$stat,$value,$tbneg)
             }
         }
         // bei StatDOWN immer Negativ, ausser $tbneg-Stats
-        if ($block == "statdown")
+        if ($efftyp == "statdown")
             $ret *= -1;
     }  
     
-    return $ret;
-}
-// ----------------------------------------------------------------------------
-// Zeilen für die StatUp Changes aufbereiten
-// ----------------------------------------------------------------------------
-function getChangeStats($block,$key,$e,$tbneg)
-{    
-    global $protkey;
-    
-    $protkey = $key;
-    
-    // Tabelle für alle Client-Felder, die STAT-Werte enthalten
-    $tabstats = array(
-                  //     Name         Value        Stats???
-                  array("reserved5" ,"reserved2" ,"reserved2" ), 
-                  array("reserved13","reserved2" ,"reserved6" ),
-                  array("reserved14","reserved4" ,"reserved6" ),
-                  array("reserved18","reserved16","reserved17"),
-                  array("reserved22","reserved20","reserved19")
-                     );
-    $maxstats = count($tabstats);
-    
-    $ename    = "effect".$e."_";
-    $ret      = "";
-    $func     = "";
-    $res9     = getTabValue($key,$ename."reserved9","?");
-    $res1     = getTabValue($key,$ename."reserved1","?");
-    $res2     = getTabValue($key,$ename."reserved2","?");
-    $chend    = "/>";     
-    
-    // Condition ONFLY aufbereiten
-    if ($res9 == "1")
-        $chend = ">\n".
-                 '                    <conditions>'."\n".
-                 '                        <onfly/>'."\n".
-                 '                    </conditions>'."\n".
-                 '                </change>';
-    // spezielle Conditions vorab prüfen (Default-Changes !!!)
-    switch($block)
-    {
-        case "absoluteslow":
-            if ($res2 != "?")
-                $ret = '                <change stat="ATTACK_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n"; 
-            return $ret;   
-        case "apboost":
-            if ($res2 != "?")
-            {
-                $func = getTabValue($key,$ename."reserved1","?");
-                $func = ($func == "?") ? "ADD" : "PERCENT";
-                
-                $ret  = '                <change stat="AP_BOOST" func="'.$func.'" value="'.$res2.'"/>'."\n"; 
-            }
-            return $ret;   
-        case "absolutesnare":
-            if ($res2 != "?")
-                $ret = '                <change stat="SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n". 
-                       '                <change stat="FLY_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n";
-            return $ret;
-        case "armormastery":
-            $ret = '                <change stat="PHYSICAL_DEFENSE" func="PERCENT" value="'.$res2.'"/>'."\n";
-            return $ret;
-        case "boostdroprate":
-            $ret = '                <change stat="BOOST_DROP_RATE" func="ADD" value="'.$res2.'"/>'."\n";
-            return $ret;
-        case "boosthate":
-            $ret = '                <change stat="BOOST_HATE" func="PERCENT" value="'.$res2.'"/>'."\n";
-            return $ret;
-        case "boostheal":
-            $ret = '                <change stat="HEAL_SKILL_BOOST" func="PERCENT" value="'.$res2.'"'.$chend."\n";
-            return $ret;
-        case "boostskillcastingtime":
-            $zus = strtolower(getTabValue($key,$ename."reserved3","?"));
-            
-            switch($zus)
-            {
-                case "summontrap"  : $zus = "_TRAP";         break;
-                case "summon"      : $zus = "_SUMMON";       break;
-                case "summonhoming": $zus = "_SUMMONHOMING"; break;
-                case "heal"        : $zus = "_HEAL";         break;
-                case "attack"      : $zus = "_ATTACK";       break;
-                default            : $zus = "";              break;
-            }
-            $ret = '                <change stat="BOOST_CASTING_TIME'.$zus.'" func="PERCENT" value="'.$res2.'"/>'."\n";
-            return $ret;
-        case "boostskillcost":      // keine Changes
-            return "";  
-        case "boostspellattack":    
-            $ret = '                <change stat="BOOST_SPELL_ATTACK" func="PERCENT" value="'.$res2.'"'.$chend."\n";
-            return $ret;            
-        case "shieldmastery":
-            $dta = ($res1 != "?" && $res1 != "0") ? ' delta="'.$res1.'"' : '';
-            $ret = '                <change stat="BLOCK" func="PERCENT"'.$dta.' value="'.$res2.'"/>'."\n";
-            return $ret;
-        case "snare":
-            if ($res2 != "?")
-                $func = getTabValue($key,$ename."reserved6","?");
-                $func = ($func == "1") ? "PERCENT" : "ADD";
-                $ret  = '                <change stat="SPEED" func="'.$func.'" value="'.($res2 * -1).'"/>'."\n". 
-                        '                <change stat="FLY_SPEED" func="'.$func.'" value="'.($res2 * -1).'"/>'."\n";
-            return $ret;
-        default:
-            break;
-    }
-    
-    // für alle Stat-Werte aus obiger Tabelle!
-    for ($t=0;$t<$maxstats;$t++)
-    {
-        $name  = getTabValue($key,$ename.$tabstats[$t][0],"?");
-        $value = getTabValue($key,$ename.$tabstats[$t][1],"0");
-        
-        if (($name != "?" && $name != "0") && $value != "?")
-        {  
-            $func = getEffectFunc($key, $ename.$tabstats[$t][2] );
-            $stab = explode(",", getStatNames($name) );
-            $smax = count($stab);    
-
-            for ($s=0;$s<$smax;$s++)
-            {
-                $sndel = getValueSign($block,$stab[$s],$res1 ,$tbneg);
-                $snval = getValueSign($block,$stab[$s],$value,$tbneg);
-                
-                $ret .= '                <change stat="'.strtoupper($stab[$s]).'" func="'.$func.'"';
-                
-                // Delta ausgeben, wenn ungleich "?" oder "0"
-                if ($res1 != "?" && $res1 != "0")
-                    $ret .= ' delta="'.($res1 * $sndel).'"';
-                                    
-                $ret .= ' value="'.($value * $snval).'"'.$chend."\n";
-            }
-        }
-    }
-    
-    return $ret;
-}
-// ----------------------------------------------------------------------------
-// Zeilen für die Subeffekte aufbereiten
-// ----------------------------------------------------------------------------
-function getSubEffect($efftyp,$key,$e,$field)
-{
-    $ret    = "";
-    
-    $ename  = "effect".$e."_";
-    $sub    = getEffSpecial( "upper",getTabValue($key,$ename.$field,"?") );
-    
-    if ($sub != "?")
-    {
-        $sid = getRefSkillNameId($sub);
-        
-        if ($sid != "?")
-        {
-            $ret = '                <subeffect skill_id="'.$sid.'"';
-            
-            if (stripos($sub,"_ADDEFFECT") !== false)
-                $ret .= ' addeffect="true"';
-            
-            $ret .= '/>'."\n";
-        }
-    }
     return $ret;
 }
 // ----------------------------------------------------------------------------
@@ -1428,12 +1287,340 @@ function getEffectAttackType($weapn)
     }
     return "PHYSICAL_ATTACK";    
 }
-// ---------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//
+//  S P E Z I E L L E   W E R T E R M I T T L U N G E N   B A S I C - L I N E
+//
+// ----------------------------------------------------------------------------
+// Wert ermitteln für: TYPE
+// ----------------------------------------------------------------------------
+function getEffValType($efftyp,$key,$ename)
+{ 
+    $ret = "?";
+    
+    // Effekte ohne TYPE
+    if ($efftyp == "aura"
+    ||  $efftyp == "armormastery"
+    ||  $efftyp == "bleed"
+    ||  $efftyp == "carvesignet"
+    ||  $efftyp == "delaydamage"
+    ||  $efftyp == "delayedfpatk_instant"
+    ||  $efftyp == "shieldmastery"
+    ||  $efftyp == "signetburst"
+    ||  $efftyp == "statup"
+    ||  $efftyp == "summontrap")
+    {
+        return $ret;    
+    }
+        
+    if ($efftyp == "condskilllauncher"
+    ||  $efftyp == "convertheal"
+    ||  $efftyp == "caseheal")
+        $ret = getEffSpecial( "upper",getTabValue($key,$ename."reserved13","?") );
+    else
+        $ret = getEffSpecial( "upper",getTabValue($key,$ename."reserved8","?") );
+    
+    // Effekte ohne TYPE, wenn TYPE = 0
+    if (substr($efftyp,0,6) == "always")
+    {        
+        if ($ret == "0") $ret = "?";
+    }
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Wert ermitteln für: VALUE
+// ----------------------------------------------------------------------------
+function getEffValValue($efftyp,$key,$ename)
+{
+    $ret = "?";
+    
+    // aus reserved2
+    if     ($efftyp == "boostskillcost"
+    ||      $efftyp == "blind"
+    ||      $efftyp == "delaydamage"
+    ||      $efftyp == "flyoff")
+    {
+        $ret = getTabValue($key,$ename."reserved2","?");
+    }
+    // aus reserved2 (aber ungleich 0)
+    elseif ($efftyp == "caseheal"
+    ||      $efftyp == "delayedskill"
+    ||      $efftyp == "delayedfpatk_instant")
+    {
+        $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","?") );
+    }
+    // aus reserved4
+    elseif ($efftyp == "backdash"
+    ||      $efftyp == "condskilllauncher"
+    ||      $efftyp == "dash")
+    {
+        $ret = getTabValue($key,$ename."reserved4","?");
+    }
+    // aus reserved8 
+    elseif ($efftyp == "convertheal")
+    {
+        $ret = getTabValue($key,$ename."reserved8","?");
+    }
+    // aus reserved9
+    elseif (substr($efftyp,0,6) == "always")
+    {
+        $ret = getTabValue($key,$ename."reserved9","?");
+    }
+    // aus reserved9 ( aber ungleich 0)
+    elseif ($efftyp == "bleed")
+    {
+        $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved9","?") );
+    }
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Wert ermitteln für: DELTA
+// ----------------------------------------------------------------------------
+function getEffValDelta($efftyp,$key,$ename)
+{
+    $ret = "?";
+    
+    if     ($efftyp == "backdash"
+    ||      $efftyp == "dash")
+    {
+        $ret = getTabValue($key,$ename."reserved3","0");
+    } 
+    elseif ($efftyp == "bleed")
+    {
+        $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved8","?") );
+    }   
+    elseif ($efftyp == "blind"
+    ||      $efftyp == "signetburst")
+    {
+        $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","?") );
+    }
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Wert ermitteln für: SKILL_ID
+// ----------------------------------------------------------------------------
+function getEffValSkillid($efftyp,$key,$ename)
+{
+    $skill = "?";
+    
+    if     ($efftyp == "summonservant"
+    ||      $efftyp == "summonskillarea"
+    ||      $efftyp == "summontrap"
+    ||      $efftyp == "summontotem")
+    {
+        $skill = getTabValue($key,$ename."reserved9","?");
+    }   
+    elseif ($efftyp == "aura"
+    ||      $efftyp == "delayedskill")
+    {
+        $skill = getTabValue($key,$ename."reserved1","?");
+    } 
+    elseif ($efftyp == "condskilllauncher")
+    {
+        $skill = getTabValue($key,$ename."reserved3","?");
+    }
+    if ($skill != "?")
+        return getRefSkillNameId($key,$skill);
+    else
+        return "?";
+}
+// ----------------------------------------------------------------------------
+//    H I L F S - F U N K T I O N E N   Z E I L E N A U F B E R E I T U N G
+// ----------------------------------------------------------------------------
+// Zeilen für die StatUp Changes aufbereiten
+// ----------------------------------------------------------------------------
+function getChangeStats($efftyp,$key,$e,$tbneg)
+{    
+    global $protkey;
+    
+    $protkey = $key;
+    
+    // Tabelle für alle Client-Felder, die STAT-Werte enthalten
+    $tabstats = array(
+                  //     Name         Value        Stats???
+                  array("reserved5" ,"reserved2" ,"reserved2" ), 
+                  array("reserved13","reserved2" ,"reserved6" ),
+                  array("reserved14","reserved4" ,"reserved7" ),
+                  array("reserved18","reserved16","reserved17"),
+                  array("reserved22","reserved20","reserved19")
+                     );
+    $maxstats = count($tabstats);
+    
+    $ename    = "effect".$e."_";
+    $ret      = "";
+    $func     = "";
+    $res9     = getTabValue($key,$ename."reserved9","?");
+    $res1     = getTabValue($key,$ename."reserved1","?");
+    $res2     = getTabValue($key,$ename."reserved2","?");
+    $chend    = "/>";     
+    
+    // Condition ONFLY aufbereiten
+    if ($res9 == "1")
+        $chend = ">\n".
+                 '                    <conditions>'."\n".
+                 '                        <onfly/>'."\n".
+                 '                    </conditions>'."\n".
+                 '                </change>';
+    // spezielle Conditions vorab prüfen (Default-Changes !!!)
+    switch($efftyp)
+    {
+        case "absoluteslow":
+            if ($res2 != "?")
+                $ret = '                <change stat="ATTACK_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n"; 
+            return $ret;   
+        case "apboost":
+            if ($res2 != "?")
+            {
+                $func = getTabValue($key,$ename."reserved1","?");
+                $func = ($func == "?") ? "ADD" : "PERCENT";
+                
+                $ret = '                <change stat="AP_BOOST" func="'.$func.'" value="'.$res2.'"/>'."\n"; 
+            }
+            return $ret;   
+        case "absolutesnare":
+            if ($res2 != "?")
+                $ret = '                <change stat="SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n". 
+                       '                <change stat="FLY_SPEED" func="REPLACE" value="'.($res2 * 100 ).'"/>'."\n";
+            return $ret;
+        case "armormastery":
+            $ret = '                <change stat="PHYSICAL_DEFENSE" func="PERCENT" value="'.$res2.'"/>'."\n";
+            return $ret;
+        case "boostdroprate":
+            $ret = '                <change stat="BOOST_DROP_RATE" func="ADD" value="'.$res2.'"/>'."\n";
+            return $ret;
+        case "boosthate":
+            $ret = '                <change stat="BOOST_HATE" func="PERCENT" value="'.$res2.'"/>'."\n";
+            return $ret;
+        case "boostheal":
+            $ret = '                <change stat="HEAL_SKILL_BOOST" func="PERCENT" value="'.$res2.'"'.$chend."\n";
+            return $ret;
+        case "boostskillcastingtime":
+            $zus = strtolower(getTabValue($key,$ename."reserved3","?"));
+            
+            switch($zus)
+            {
+                case "summontrap"  : $zus = "_TRAP";         break;
+                case "summon"      : $zus = "_SUMMON";       break;
+                case "summonhoming": $zus = "_SUMMONHOMING"; break;
+                case "heal"        : $zus = "_HEAL";         break;
+                case "attack"      : $zus = "_ATTACK";       break;
+                default            : $zus = "";              break;
+            }
+            $ret = '                <change stat="BOOST_CASTING_TIME'.$zus.'" func="PERCENT" value="'.$res2.'"/>'."\n";
+            return $ret;
+        case "boostskillcost":      // keine Changes
+            return "";  
+        case "boostspellattack":    
+            $ret = '                <change stat="BOOST_SPELL_ATTACK" func="PERCENT" value="'.$res2.'"'.$chend."\n";
+            return $ret;      
+        case "curse":
+            if ($res2 != "?")
+            {
+                $func = getTabValue($key,$ename."reserved6","?");
+                $func = ($func == "1") ? "PERCENT" : "ADD";
+                
+                $ret  = '                <change stat="MAXHP" func="'.$func.'" value="'.($res2 * -1).'"/>'."\n".
+                        '                <change stat="MAXMP" func="'.$func.'" value="'.($res2 * -1).'"/>'."\n";                
+            }
+            return $ret;              
+        case "deboostheal":
+            if ($res2 != "?"  &&  $res2 != "0")
+            {                
+                $ret  = '                <change stat="HEAL_SKILL_DEBOOST" func="PERCENT" value="'.($res2 * -1).'"/>'."\n"; 
+            }
+            else
+            {
+                $res1 = getTabValue($key,$ename."reserved1","0");
+                
+                if ($res1 != "?"  &&  $res1 != "0")
+                {                
+                    $ret  = '                <change stat="HEAL_SKILL_DEBOOST" func="ADD" value="'.($res1 * -1).'"/>'."\n"; 
+                }
+            }
+            return $ret;           
+        case "shieldmastery":
+            $dta = ($res1 != "?" && $res1 != "0") ? ' delta="'.$res1.'"' : '';
+            $ret = '                <change stat="BLOCK" func="PERCENT"'.$dta.' value="'.$res2.'"/>'."\n";
+            return $ret;
+        case "snare":
+            if ($res2 != "?")
+            {
+                $dta = ($res1 != "?" && $res1 != "0") ? ' delta="'.$res1.'"' : '';
+                $func = getTabValue($key,$ename."reserved6","?");
+                $func = ($func == "1") ? "PERCENT" : "ADD";
+                $ret  = '                <change stat="SPEED" func="'.$func.'" value="'.($res2 * -1).'"'.$dta.'/>'."\n". 
+                        '                <change stat="FLY_SPEED" func="'.$func.'" value="'.($res2 * -1).'"'.$dta.'/>'."\n";
+            }
+            return $ret;
+        default:
+            break;
+    }
+    
+    // für alle Stat-Werte aus obiger Tabelle!
+    for ($t=0;$t<$maxstats;$t++)
+    {
+        $name  = getTabValue($key,$ename.$tabstats[$t][0],"?");
+        $value = getTabValue($key,$ename.$tabstats[$t][1],"0");
+        
+        if (($name != "?" && $name != "0") && $value != "?")
+        {  
+            $func = getEffectFunc($efftyp,$key,$ename.$tabstats[$t][2] );
+            $stab = explode(",", getStatNames($name) );
+            $smax = count($stab);  
+            
+            for ($s=0;$s<$smax;$s++)
+            {
+                $sndel = getValueSign($efftyp,$stab[$s],$res1 ,$tbneg);
+                $snval = getValueSign($efftyp,$stab[$s],$value,$tbneg);
+                
+                $ret .= '                <change stat="'.strtoupper($stab[$s]).'" func="'.$func.'"';
+                
+                // Delta ausgeben, wenn ungleich "?" oder "0"
+                if ($res1 != "?" && $res1 != "0")
+                    $ret .= ' delta="'.($res1 * $sndel).'"';
+                                    
+                $ret .= ' value="'.($value * $snval).'"'.$chend."\n";
+            }
+        }
+    }
+    
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Zeilen für die Subeffekte aufbereiten
+// ----------------------------------------------------------------------------
+function getSubEffect($efftyp,$key,$e,$field)
+{
+    $ret    = "";
+    
+    $ename  = "effect".$e."_";
+    $sub    = getEffSpecial( "upper",getTabValue($key,$ename.$field,"?") );
+    
+    if ($sub != "?")
+    {
+        $sid = getRefSkillNameId($key,$sub);
+        
+        if ($sid != "?")
+        {
+            $ret = '                <subeffect skill_id="'.$sid.'"';
+            
+            if (stripos($sub,"_ADDEFFECT") !== false)
+                $ret .= ' addeffect="true"';
+            
+            $ret .= '/>'."\n";
+        }
+    }
+    return $ret;
+}
+// ----------------------------------------------------------------------------
 // Effect-Werte speziell bearbeiten / zurückgeben           (ZENTRALE ROUTINE)
 //
 // params: $spec   =  Typ der speziellen Behandlung
 //         $wert   =  Wert, der behandelt werden muss
-// ---------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 function getEffSpecial($spec,$wert)
 {
     $ret = "";
@@ -1472,11 +1659,11 @@ function getEffSpecial($spec,$wert)
     }
     return "";
 }
-// ---------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 // EffectBasicLine zurückgeben
 // Offensichtlich besitzen alle Block-XML-Tags identische Angaben, sodass
 // diese hier zentral aufbereitet werden können
-// ---------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
 function getEffectBasicLine($efftyp,$key,$e)
 {     
     $ename = "effect".$e."_";     
@@ -1497,25 +1684,30 @@ function getEffectBasicLine($efftyp,$key,$e)
     $preff = getEffSpecial( "preff" ,getTabValue($key,$ename."cond_preeffect","?") );
     $prob2 = getEffSpecial( "prob2" ,getTabValue($key,$ename."cond_preeffect_prob2","?") );
     $tran  =                         getTabValue($key,$ename."randomtime","?");
-    $type  = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved8","?") );
-    // nur bedingt genutzte Tags generell deaktivieren (werden später gesetzt)
+    
+    // nur bedingt relevante Werte per Funktion ermitteln
+    $type  = getEffValType($efftyp,$key,$ename);  
+    $delta = getEffValDelta($efftyp,$key,$ename); 
+    $skid  = getEffValSkillid($efftyp,$key,$ename); 
+    $value = getEffValValue($efftyp,$key,$ename);
+    
+    // nur bedingt relevante Werte, werden nachfolgend ermittelt
     $adist = "?";
     $armor = "?";
     $atcnt = "?";
     $check = "?";
+    $condv = "?";
     $crit2 = "?";
-    $delta = "?";
+    $delay = "?";
     $distz = "?";
     $npcnt = "?";
     $owner = "?";
     $panel = "?";
-    $skid  = "?";
-    $skill = "?";
+    $perct = "?"; 
+    $share = "?";
     $state = "?";
     $stset = "?";
     $time  = "?";
-    $val01 = "?";
-    $val02 = "?";
     $weapn = "?";
     // komplette Texte
     $txt01 = "";
@@ -1530,24 +1722,35 @@ function getEffectBasicLine($efftyp,$key,$e)
     // bei einigen Effekten werden diese deaktivierten Tags
     // nicht genutzt
     // ---------------------------------------------------- 
-    
-    // ELEMENT --------------------------------------------
-    if ($efftyp == "armormastery")
+    // ACMOD = 0 ------------------------------------------
+    if ($efftyp == "escape")
     {
-        $elem = "?";
-    } 
-    // TYPE deaktivieren ----------------------------------
-    if ($efftyp == "aura"
-    ||  $efftyp == "armormastery"
-    ||  $efftyp == "bleed"
-    ||  $efftyp == "carvesignet"
-    ||  $efftyp == "shieldmastery"
-    ||  $efftyp == "signetburst"
-    ||  $efftyp == "statup"
-    ||  $efftyp == "summontrap")
-    {
-        $type = "?";    
+        if ($acmod == "0") $acmod = "?";
     }
+    // BASICLVL = 0 ---------------------------------------
+    if ($efftyp == "curse")
+    {
+        if ($blev == "0")  $blev = "?";
+    }
+    // EFFECTID = 0 ---------------------------------------
+    if ($efftyp == "signet")
+    {
+        if ($effid == "0") $effid = "?";
+    }
+    // ELEMENT --------------------------------------------
+    if ($efftyp == "armormastery"
+    ||  $efftyp == "carvesignet"
+    ||  $efftyp == "caseheal")
+    {
+        $elem  = "?";
+    }
+    // RANDOMTIME = 0 -------------------------------------
+    if ($efftyp == "bleed"
+    ||  $efftyp == "snare")
+    {
+        $tran = getEffSpecial( "nozero",$tran);
+    } 
+
     // ----------------------------------------------------
     // Hinzufügen einiger Tags
     //
@@ -1570,39 +1773,37 @@ function getEffectBasicLine($efftyp,$key,$e)
     {
         $check = getTabValue($key,$ename."checktime","?");
     }
-    // DELTA ----------------------------------------------
-    if ($efftyp == "backdash"
-    ||  $efftyp == "dash")
+    // COND_VALUE -----------------------------------------
+    if ($efftyp == "caseheal")
     {
-        $delta = getTabValue($key,$ename."reserved3","0");
-    }    
-    if ($efftyp == "carvesignet")
-    {
-        $delta = getEffSpecial( "nozero",getTabValue($key,$ename."reserved3","?") );
-    }    
-    if ($efftyp == "bleed")
-    {
-        $delta = getEffSpecial( "nozero",getTabValue($key,$ename."reserved8","?") );
-    }   
-    if ($efftyp == "blind"
+        $condv = getTabValue($key,$ename."reserved10","?");
+    }
+    // CRITPROBMOD2 ---------------------------------------
+    if ($efftyp == "delaydamage"
     ||  $efftyp == "signetburst")
     {
-        $delta = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","?") );
+        $crit2 = getTabValue($key,$ename."critical_prob_mod2","0");
+        $crit2 = ($crit2 == "100") ? "?" : $crit2;
+    }
+    // DELAY ----------------------------------------------
+    if ($efftyp == "delaydamage"
+    ||  $efftyp == "delayedfpatk_instant")
+    {
+        $delay = getTabValue($key,$ename."reserved9","?");
     }
     // DISTANCE / DISTANCE_Z ------------------------------
-    if ($efftyp == "aura")
+    if     ($efftyp == "aura")
     {
         $adist = getTabValue($key,$ename."reserved3","?");
         $distz = getTabValue($key,$ename."reserved4","?");
     }
-    if ($efftyp == "backdash")
+    elseif ($efftyp == "backdash")
     {
         $adist = getTabValue($key,$ename."reserved12","?");
     }
-    // ELEMENT --------------------------------------------
-    if ($efftyp == "carvesignet")
+    elseif ($efftyp == "flyoff")
     {
-        $elem  = "?";
+        $adist = getTabValue($key,$ename."reserved4","?");
     }
     // OWNER ----------------------------------------------
     if ($efftyp == "summonfunctionalnpc")
@@ -1628,25 +1829,18 @@ function getEffectBasicLine($efftyp,$key,$e)
     {
         $state = "DEFORM";
     }
-    // RANDOMTIME 
-    if ($efftyp == "bleed")
+    // PERCENT --------------------------------------------
+    if ($efftyp == "delayedfpatk_instant")
     {
-        $tran = getEffSpecial( "nozero",$tran);
-    }    
-    // SKILL-ID -------------------------------------------
-    if ($efftyp == "summonservant"
-    ||  $efftyp == "summonskillarea"
-    ||  $efftyp == "summontrap"
-    ||  $efftyp == "summontotem")
+        $perct = getTabValue($key,$ename."reserved6","0");
+        $perct = ($perct == "1") ? "true" : "?";
+    }
+    // SHARED ---------------------------------------------
+    if ($efftyp == "delaydamage")
     {
-        $skill = getTabValue($key,$ename."reserved9","?");
-        $skid  = getRefSkillNameId($skill); 
-    }   
-    if ($efftyp == "aura")
-    {
-        $skill = getTabValue($key,$ename."reserved1","?");
-        $skid  = getRefSkillNameId($skill); 
-    } 
+        $share = getTabValue($key,$ename."reserved19","?");
+        $share = ($share == "1") ? "true" : "?";
+    }
     // STATSETID ------------------------------------------
     if ($efftyp == "absstatbuff"
     ||  $efftyp == "absstatdebuff")
@@ -1665,34 +1859,7 @@ function getEffectBasicLine($efftyp,$key,$e)
             $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved5","?") );
         else
             $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") ); 
-    }    
-    // VALUE ----------------------------------------------
-    // 1. Eintrag unten in der Liste! 
-    if (substr($efftyp,0,6) == "always")
-    {
-        $val01 = getTabValue($key,$ename."reserved9","?");
-        
-        if ($type == "0") $type = "?";
-    }
-    if ($efftyp == "boostskillcost"
-    ||  $efftyp == "blind")
-    {
-        $val01 = getTabValue($key,$ename."reserved2","?");
-    }
-    if ($efftyp == "bleed")
-    {
-        $val01 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved9","?") );
-    }
-    if ($efftyp == "dash"
-    ||  $efftyp == "carvesignet")
-    {
-        $val01 = getTabValue($key,$ename."reserved4","?");
-    }
-    // 2. Eintrag unten in der Liste! 
-    if ($efftyp == "backdash")
-    {
-        $val02 = getTabValue($key,$ename."reserved4","?");
-    }
+    } 
     // WEAPON ---------------------------------------------
     if ($efftyp == "wpnmastery")
     {
@@ -1705,22 +1872,37 @@ function getEffectBasicLine($efftyp,$key,$e)
     if    ($efftyp == "carvesignet")
     {
         // signet,signetid,signetlvlstart,signetlvl
+        $x02   = getTabValue($key,$ename."reserved2","?");
+        $x04   = getTabValue($key,$ename."reserved4","?");
         $x10   = getTabValue($key,$ename."reserved10","0");
         $x13   = getTabValue($key,$ename."reserved13","");
         $x14   = getTabValue($key,$ename."reserved14","");
+        $x16   = getTabValue($key,$ename."reserved16","0");
         $sig   = "signet".$x13."_".$x14;
-        $sid   = getRefSkillNameId($sig);
+        $sid   = getRefSkillNameId($key,$sig);
         
         $txt01 = ' signet="SYSTEM_SKILL_SIGNET'.$x13.'" signetid="'.$sid.'"';
         if ($x10 > "1")
             $txt01 .= ' signetlvlstart="'.$x10.'"';
         $txt01 .= ' signetlvl="'.$x14.'"';
         
+        if ($x16 > 0  && $x16 != "100")
+            $txt01 .= ' prob="'.$x16.'"';
+        
+        if ($x04 != "?")
+        {
+            $txt01 .= ' value="'.$x04.'"';
+            $dta    = getTabValue($key,$ename."reserved3","?");
+            $dta    = ($dta != "?" && $dta != "0") ? ' delta="'.$dta.'"' : '';
+            $txt01 .= $dta;
+        }
+        elseif ($x02 != "?")
+            $txt01 .= ' mode="PERCENT" value="'.$x02.'"';
+            $dta    = getTabValue($key,$ename."reserved1","?");
+            $dta    = ($dta != "?" && $dta != "0") ? ' delta="'.$dta.'"' : '';
+            $txt01 .= $dta;
+            
         if ($blev == "0") $blev = "?";
-    }
-    elseif ($efftyp == "signet")
-    {
-        if ($effid == "0") $effid = "?";
     }
     elseif ($efftyp == "signetburst")
     {
@@ -1728,7 +1910,6 @@ function getEffectBasicLine($efftyp,$key,$e)
         $x02   = getTabValue($key,$ename."reserved2","");
         $x07   = getTabValue($key,$ename."reserved7","");
         $x08   = getTabValue($key,$ename."reserved8","");
-        $crit2 = getTabValue($key,$ename."critical_prob_mod2","0");
         
         $txt01 = ' signetlvl="'.$x08.'" signet="SYSTEM_SKILL_SIGNET'.$x07.'"'.
                  ' value="'.$x02.'"';
@@ -1739,26 +1920,29 @@ function getEffectBasicLine($efftyp,$key,$e)
         
     $ret .= $txt01.
             getFieldText( "owner"         ,$owner ).
-            getFieldText( "statsetid"     ,$stset ).
-            getFieldText( "checktime"     ,$check ).
-            getFieldText( "value"         ,$val01 ).
             getFieldText( "weapon"        ,$weapn ).
             getFieldText( "armor"         ,$armor ).
+            getFieldText( "statsetid"     ,$stset ).
+            getFieldText( "checktime"     ,$check ).
+            getFieldText( "delay"         ,$delay ).
+            getFieldText( "shared"        ,$share ).
+            getFieldText( "percent"       ,$perct ).
             getFieldText( "attack_count"  ,$atcnt ).
             getFieldText( "npc_count"     ,$npcnt ).
             getFieldText( $npctag         ,$model ).
             getFieldText( "skill_id"      ,$skid  ).
             getFieldText( "time"          ,$time  ).
             getFieldText( "type"          ,$type  ).
+            getFieldText( "cond_value"    ,$condv ).
             getFieldText( "state"         ,$state ).   
             getFieldText( "panelid"       ,$panel ).
+            getFieldText( "value"         ,$value ).
+            getFieldText( "delta"         ,$delta ).
             getFieldText( "duration2"     ,$dura2 ).
             getFieldText( "duration1"     ,$dura1 ).
             getFieldText( "randomtime"    ,$tran  ).
             getFieldText( "distance"      ,$adist ).
             getFieldText( "distance_z"    ,$distz ).
-            getFieldText( "value"         ,$val02 ).
-            getFieldText( "delta"         ,$delta ).
             getFieldText( "effectid"      ,$effid ).
             getFieldText( "e"             ,$e     ).
             getFieldText( "basiclvl"      ,$blev  ).
@@ -1775,321 +1959,67 @@ function getEffectBasicLine($efftyp,$key,$e)
     return $ret;
 }
 // ---------------------------------------------------------------------------
+// merken Effekt für den SVN-Abgleich
+// ---------------------------------------------------------------------------
+function setEffectSvnAbgleich($efftyp,$linetyp)
+{
+    global $tabeffsvn;
+    
+    // wenn nicht gesetzt oder LineTyp == "B", dann setzen bzw. überschreiben
+    if (!isset($tabeffsvn[$efftyp])
+    ||  $linetyp == "B")
+        $tabeffsvn[$efftyp] = $linetyp;
+}
+// ---------------------------------------------------------------------------
+//
+//                   D E F A U L T - E F F E K T - Z E I L E N
 //
 // ---------------------------------------------------------------------------
-// Effect aufbereiten für: ShapeChange
+// Effect aufbereiten für: alle einzeiligen Effekte
+//
+// gibt einen Einzeiler für den jeweiligen Effekt zurück. Besonderheiten
+// eines Effektes werden in der Funktion getEffectBasicLine behandelt!
 // ---------------------------------------------------------------------------
-function getEffectShapeChange($key,$e)
+function getEffectDefault($efftyp,$key,$e)
 {
-    $ret   = getEffectBasicLine("shapechange",$key,$e);
-            
-    if ($ret != "")
-        $ret = '            <shapechange'.$ret.'/>'."\n";
-        
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: StatUp
-// ---------------------------------------------------------------------------
-function getEffectStatUp($key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");    
-    $ret   = getEffectBasicLine("statup",$key,$e);
-            
-    if ($ret != "")
-    {
-        $ret  = '            <statup'.$ret.'>'."\n";
-        $ret .= getChangeStats("statup",$key,$e,$tbneg);
-        $ret .= '            </statup>'."\n";
-    }
+    setEffectSvnAbgleich($efftyp,"L");
     
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: StatDown
-// ---------------------------------------------------------------------------
-function getEffectStatDown($key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");   
-    $ret   = getEffectBasicLine("statdown",$key,$e);
-            
-    if ($ret != "")
-    {
-        $ret  = '            <statdown'.$ret.'>'."\n";
-        $ret .= getChangeStats("statdown",$key,$e,$tbneg);
-        $ret .= '            </statdown>'."\n";
-    }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: Sleep
-// ---------------------------------------------------------------------------
-function getEffectSleep($key,$e)
-{    
-    $ret   = getEffectBasicLine("sleep",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <sleep'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: Summon... (alle Summon-Blöcke!)
-// ---------------------------------------------------------------------------
-function getEffectSummonAll($block,$key,$e)
-{
-    $ret   = getEffectBasicLine($block,$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <'.$block.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: WpnMastery
-// ---------------------------------------------------------------------------
-function getEffectWpnMastery($key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");
-    $ret   = getEffectBasicLine("wpnmastery",$key,$e);
-    
-    if ($ret != "")
-    {
-        $ret  = '            <wpnmastery'.$ret.'>'."\n";
-        $ret .= getChangeStats("wpnmastery",$key,$e,$tbneg);
-        $ret .= '            </wpnmastery>'."\n";
-    }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: ArmorMastery
-// ---------------------------------------------------------------------------
-function getEffectArmorMastery($key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");
-    $ret   = getEffectBasicLine("armormastery",$key,$e);
-    
-    if ($ret != "")
-    {
-        $ret  = '            <armormastery'.$ret.'>'."\n";
-        $ret .= getChangeStats("armormastery",$key,$e,$tbneg);
-        $ret .= '            </armormastery>'."\n";
-    }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: ShieldMastery
-// ---------------------------------------------------------------------------
-function getEffectShieldMastery($key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");
-    $ret   = getEffectBasicLine("shieldmastery",$key,$e);
-    
-    if ($ret != "")
-    {
-        $ret  = '            <shieldmastery'.$ret.'>'."\n";
-        $ret .= getChangeStats("shieldmastery",$key,$e,$tbneg);
-        $ret .= '            </shieldmastery>'."\n";
-    }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: AbsoluteSlow
-// ---------------------------------------------------------------------------
-function getEffectAbsoluteSlow($key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");
-    $ret   = getEffectBasicLine("absoluteslow",$key,$e);
-    
-    if ($ret != "")
-    {
-        $stat = getChangeStats("absoluteslow",$key,$e,$tbneg);
-        
-        if ($stat != "")
-        {
-            $ret  = '            <absoluteslow'.$ret.'>'."\n";
-            $ret .= getChangeStats("absoluteslow",$key,$e,$tbneg);
-            $ret .= '            </absoluteslow>'."\n";
-        }
-        else
-            $ret  = '            <absoluteslow'.$ret.'/>'."\n";
-    }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: ...snare...
-// ---------------------------------------------------------------------------
-function getEffectSnareAll($effkey,$key,$e)
-{
-    $tbneg = array("ATTACK_SPEED");
-    $ret   = getEffectBasicLine($effkey,$key,$e);
-    
-    if ($ret != "")
-    {
-        $stat = getChangeStats($effkey,$key,$e,$tbneg);
-        
-        if ($stat != "")
-        {
-            $ret  = '            <'.$effkey.$ret.'>'."\n";
-            $ret .= $stat;
-            $ret .= '            </'.$effkey.'>'."\n";
-        }
-        else
-            $ret  = '            <'.$effkey.$ret.'/>'."\n";
-    }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: absstat...
-// ---------------------------------------------------------------------------
-function getEffectAbsStatAll($efftyp,$key,$e)
-{    
     $ret   = getEffectBasicLine($efftyp,$key,$e);
             
     if ($ret != "")
-        $ret  = '            <'.$efftyp.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: always...
-// ---------------------------------------------------------------------------
-function getEffectAlwaysAll($efftyp,$key,$e)
-{        
-    $ret   = getEffectBasicLine($efftyp,$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <'.$efftyp.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: apboost
-// ---------------------------------------------------------------------------
-function getEffectApBoost($key,$e)
-{    
-    $tbneg = array();
-    $ret   = getEffectBasicLine("apboost",$key,$e);
-            
-    if ($ret != "")
-    {
-        $stat = getChangeStats("apboost",$key,$e,$tbneg);
+        $ret = '            <'.$efftyp.$ret.'/>'."\n";
         
-        if ($stat != "")
-        {
-            $ret  = '            <apboost'.$ret.'>'."\n";
-            $ret .= $stat;
-            $ret .= '            </apboost>'."\n";
-        }
-        else
-            $ret  = '            <apboost'.$ret.'/>'."\n";
-    }
-    
-    return $ret;
+    return $ret;    
 }
 // ---------------------------------------------------------------------------
-// Effect aufbereiten für: aura
+// Effect aufbereiten für: alle Effekte mit CHANGES-Zeilen
 // ---------------------------------------------------------------------------
-function getEffectAura($key,$e)
-{    
-    $ret   = getEffectBasicLine("aura",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <aura'.$ret.'/>'."\n";
+function getEffectDefaultChanges($efftyp,$key,$e,&$tbneg)
+{  
+    setEffectSvnAbgleich($efftyp,"B");
     
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: backdash
-// ---------------------------------------------------------------------------
-function getEffectBackDash($key,$e)
-{    
-    $ret   = getEffectBasicLine("backdash",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <backdash'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: bind
-// ---------------------------------------------------------------------------
-function getEffectBind($key,$e)
-{    
-    $ret   = getEffectBasicLine("bind",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <bind'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: bleed
-// ---------------------------------------------------------------------------
-function getEffectBleed($key,$e)
-{    
-    $ret   = getEffectBasicLine("bleed",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <bleed'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: blind
-// ---------------------------------------------------------------------------
-function getEffectBlind($key,$e)
-{    
-    $ret   = getEffectBasicLine("blind",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <blind'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: boost...
-// ---------------------------------------------------------------------------
-function getEffectBoostAll($efftyp,$key,$e)
-{    
-    $tbneg = array();
     $ret   = getEffectBasicLine($efftyp,$key,$e);
-                   
+            
     if ($ret != "")
     {
         $stat = getChangeStats($efftyp,$key,$e,$tbneg);
         
         if ($stat != "")
         {
-            $ret  = '            <'.$efftyp.$ret.'>'."\n";
-            $ret .= $stat;
-            $ret .= '            </'.$efftyp.'>'."\n";
+            $ret = '            <'.$efftyp.$ret.'>'."\n".
+                   $stat.
+                   '            </'.$efftyp.'>'."\n";
         }
         else
-            $ret  = '            <'.$efftyp.$ret.'/>'."\n";
+            $ret = '            <'.$efftyp.$ret.'/>'."\n";
     }
     
     return $ret;
 }
 // ---------------------------------------------------------------------------
-// Effect aufbereiten für: buff...
-// ---------------------------------------------------------------------------
-function getEffectBuffAll($efftyp,$key,$e)
-{    
-    $xml   = strtolower($efftyp);
-    $ret   = getEffectBasicLine($xml,$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <'.$xml.$ret.'/>'."\n";
-    
-    return $ret;
-}
+//
+//            I N D I V I D U E L L E   E F F E K T - Z E I L E N
+//
 // ---------------------------------------------------------------------------
 // Effect aufbereiten für: ...signet...
 // ---------------------------------------------------------------------------
@@ -2097,7 +2027,7 @@ function getEffectSignetAll($efftyp,$key,$e)
 {    
     $xml = strtolower($efftyp);
     $ret = getEffectBasicLine($xml,$key,$e);
-    $sub = "";
+    $sub = "";    
     
     if ($ret != "")
     {        
@@ -2112,78 +2042,24 @@ function getEffectSignetAll($efftyp,$key,$e)
                 if ($sub == "")
                     $sub = getSubEffect($efftyp,$key,$e,"reserved13");
                 break;
-            default           :                                                     break;
+            default:                                                    
+                break;
         }
         if ($sub != "")
         {
+            setEffectSvnAbgleich($efftyp,"B");
+            
             $ret  = '            <'.$efftyp.$ret.'>'."\n";
             $ret .= $sub;
             $ret .= '            </'.$efftyp.'>'."\n";
         }
         else
+        {
+            setEffectSvnAbgleich($efftyp,"L");
+            
             $ret  = '            <'.$efftyp.$ret.'/>'."\n";
+        }
     }
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: dash
-// ---------------------------------------------------------------------------
-function getEffectDash($key,$e)
-{    
-    $ret   = getEffectBasicLine("dash",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <dash'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: deform
-// ---------------------------------------------------------------------------
-function getEffectDeform($key,$e)
-{    
-    $ret   = getEffectBasicLine("deform",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <deform'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: hipass
-// ---------------------------------------------------------------------------
-function getEffectHipass($key,$e)
-{    
-    $ret   = getEffectBasicLine("hipass",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <hipass'.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: return...
-// ---------------------------------------------------------------------------
-function getEffectReturnAll($efftyp,$key,$e)
-{    
-    $ret   = getEffectBasicLine($efftyp,$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <'.$efftyp.$ret.'/>'."\n";
-    
-    return $ret;
-}
-// TODO
-// ---------------------------------------------------------------------------
-// Effect aufbereiten für: ???
-// ---------------------------------------------------------------------------
-function getEffectMuster($key,$e)
-{    
-    $ret   = getEffectBasicLine("???",$key,$e);
-            
-    if ($ret != "")
-        $ret  = '            <???'.$ret.'/>'."\n";
     
     return $ret;
 }
@@ -2192,7 +2068,7 @@ function getEffectMuster($key,$e)
 // ---------------------------------------------------------------------------
 function getEffectsLines($key)
 {
-    global $tabcskill, $taberreff, $tabnotdef;
+    global $tabcskill, $taberreff, $tabnotdef, $tabnotuse;
     
     $ret    = "";
     
@@ -2203,23 +2079,18 @@ function getEffectsLines($key)
         NOTINEMU    alwayshit
         NOTINEMU    alwaysnoresist
         
-        NOTUSED     name="buffsleep" type="BuffSleepEffect"  
-        NOTUSED     name="summonbindinggroupgate" type="SummonBindingGroupGateEffect"  
-        
+        NOTUSED     buffsleep
+        NOTUSED     changehateonattacked
+        NOTUSED     summonbindinggroupgate 
+        NOTUSED     deathblow
+    */
+    $tabnotuse['buffsleep']                      = 1;
+    $tabnotuse['changehateonattacked']           = 1;
+    $tabnotuse['summonbindinggroupgate']         = 1;
+    $tabnotuse['deathblow']                      = 1;
+    /*    
         // TODO
-        name="caseheal" type="CaseHealEffect"
-        name="changehateonattacked" type="ChangeHateOnAttackedEffect"
-        name="closeaerial" type="CloseAerialEffect"
-        name="condskilllauncher" type="CondSkillLauncherEffect"
-        name="confuse" type="ConfuseEffect"
-        name="convertheal" type="ConvertHealEffect"
-        name="curse" type="CurseEffect"
-        name="deathblow" type="DeathBlowEffect"
-        name="deboostheal" type="DeboostHealEffect"
-        name="delaydamage" type="DelayedSpellAttackInstantEffect"
-        name="delayedfpatk_instant" type="DelayedFpAtkInstantEffect"
-        name="delayedskill" type="DelayedSkillEffect"
-        name="disease" type="DiseaseEffect"
+          name="disease" type="DiseaseEffect"
         name="dispel" type="DispelEffect"
         name="dispelbuff" type="DispelBuffEffect"
         name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect"
@@ -2232,12 +2103,12 @@ function getEffectsLines($key)
         name="dphealinstant" type="DPHealInstantEffect"
         name="dptransfer" type="DPTransferEffect"
         name="drboost" type="DRBoostEffect"
-        name="escape" type="EscapeEffect"
+          name="escape" type="EscapeEffect"
         name="evade" type="EvadeEffect"
         name="extendedaurarange" type="ExtendAuraRangeEffect"
-        name="fall" type="FallEffect"
+          name="fall" type="FallEffect"
         name="fear" type="FearEffect"
-        name="flyoff" type="FlyOffEffect"
+          name="flyoff" type="FlyOffEffect"
         name="fpatk" type="FpAttackEffect"
         name="fpatkinstant" type="FpAttackInstantEffect"
         name="fpheal" type="FPHealEffect"
@@ -2248,7 +2119,7 @@ function getEffectsLines($key)
         name="healinstant" type="HealInstantEffect"
         name="hide" type="HideEffect"
         name="hostileup" type="HostileUpEffect"
-        name="invulnerablewing" type="InvulnerableWingEffect"
+          name="invulnerablewing" type="InvulnerableWingEffect"
         name="magiccounteratk" type="MagicCounterAtkEffect"
         name="movebehind" type="MoveBehindEffect"
         name="mpattack" type="MpAttackEffect"
@@ -2319,55 +2190,55 @@ function getEffectsLines($key)
         name="wpndual" type="WeaponDualEffect"
         name="xpboost" type="XPBoostEffect"
     */
+    // die verschiedenen Tabellen für negierte Werte aufbereiten
+    $tbneg0 = array();                      // keine negierten Werte
+    $tbneg1 = array("ATTACK_SPEED");        // nur ATTACK_SPEED
+    
     for ($e=1;$e<5;$e++)
     {
         $effkey = "effect".$e."_type";
         $efftyp = getEmuEffectTag(getTabValue($key,$effkey,"?"));
-        
+                
         switch($efftyp)
         { 
-            case "?"                         :  /* kein EffektType vorhanden */                              break;
-            // alle absstat...-Effekte
+            // KEINE EFFECTS
+            case "?"                         :  /* kein EffektType vorhanden */                              break;  
+
+            // DEFAULT-ZEILE = EINZEILER
             case "absstatbuff"               :  
-            case "absstatdebuff"             :  $ret .= getEffectAbsStatAll($efftyp,$key,$e);                break;            
-            case "absoluteslow"              :  $ret .= getEffectAbsoluteSlow($key,$e);                      break;
-            case "absolutesnare"             :  $ret .= getEffectSnareAll($efftyp,$key,$e);                  break;
-            // alle always...-Effekte
+            case "absstatdebuff"             :  
             case "alwaysblock"               :
             case "alwaysdodge"               :
             case "alwaysparry"               :
-            case "alwaysresist"              :  $ret .= getEffectAlwaysAll($efftyp,$key,$e);                 break;            
-            case "armormastery"              :  $ret .= getEffectArmorMastery($key,$e);                      break;
-            case "apboost"                   :  $ret .= getEffectApBoost($key,$e);                           break;
-            case "aura"                      :  $ret .= getEffectAura($key,$e);                              break;
-            case "backdash"                  :  $ret .= getEffectBackDash($key,$e);                          break;
-            case "bind"                      :  $ret .= getEffectBind($key,$e);                              break;
-            case "bleed"                     :  $ret .= getEffectBleed($key,$e);                             break;
-            case "blind"                     :  $ret .= getEffectBlind($key,$e);                             break;
-            case "boostdroprate"             :
-            case "boosthate"                 :
-            case "boostheal"                 :
-            case "boostskillcastingtime"     :
-            case "boostskillcost"            :
-            case "boostspellattack"          :  $ret .= getEffectBoostAll($efftyp,$key,$e);                  break;
+            case "alwaysresist"              :   
+            case "aura"                      : 
+            case "backdash"                  :  
+            case "bind"                      :  
+            case "bleed"                     :  
+            case "blind"                     :  
             case "buffbind"                  :
             case "buffsilence"               :
-            case "buffstun"                  :  $ret .= getEffectBuffAll($efftyp,$key,$e);                   break;
-            case "carvesignet"               :  $ret .= getEffectSignetAll($efftyp,$key,$e);                 break;
-            case "dash"                      :  $ret .= getEffectDash($key,$e);                              break;
-            case "deform"                    :  $ret .= getEffectDeform($key,$e);                            break;
-            case "hipass"                    :  $ret .= getEffectHipass($key,$e);                            break;
+            case "buffstun"                  :  
+            case "caseheal"                  :  
+            case "closeaerial"               :  
+            case "condskilllauncher"         :  
+            case "confuse"                   :  
+            case "convertheal"               :  
+            case "dash"                      :  
+            case "deform"                    :  
+            case "delaydamage"               :  
+            case "delayedfpatk_instant"      :  
+            case "delayedskill"              :  
+            case "disease"                   :  
+            case "escape"                    :  
+            case "fall"                      :  
+            case "flyoff"                    :  
+            case "hipass"                    :  
+            case "invulnerablewing"          :       
             case "return"                    :  
-            case "returnpoint"               :  $ret .= getEffectReturnAll($efftyp,$key,$e);                 break;
-            case "shapechange"               :  $ret .= getEffectShapeChange($key,$e);                       break;
-            case "shieldmastery"             :  $ret .= getEffectShieldMastery($key,$e);                     break;
-            case "signet"                    :
-            case "signetburst"               :  $ret .= getEffectSignetAll($efftyp,$key,$e);                 break;
-            case "statup"                    :  $ret .= getEffectStatUp($key,$e);                            break;
-            case "statdown"                  :  $ret .= getEffectStatDown($key,$e);                          break; 
-            case "sleep"                     :  $ret .= getEffectSleep($key,$e);                             break;
-            case "snare"                     :  $ret .= getEffectSnareAll($efftyp,$key,$e);                  break;
-            // alle summon...-Effekte
+            case "returnpoint"               :  
+            case "shapechange"               :  
+            case "sleep"                     :   
             case "summon"                    :  
             case "summonfunctionalnpc"       : 
             case "summongroupgate"           :  
@@ -2376,16 +2247,42 @@ function getEffectsLines($key)
             case "summonservant"             :  
             case "summonskillarea"           :  
             case "summontotem"               : 
-            case "summontrap"                :  $ret .= getEffectSummonAll($efftyp,$key,$e);                 break;
-            case "wpnmastery"                :  $ret .= getEffectWpnMastery($key,$e);                        break;
+            case "summontrap"                :  $ret .= getEffectDefault($efftyp,$key,$e);                   break;
+
+            // DEFAULT-ZEILE MIT CHANGES und TBNEG0
+            case "apboost"                   :  
+            case "boostdroprate"             :
+            case "boosthate"                 :
+            case "boostheal"                 :
+            case "boostskillcastingtime"     :
+            case "boostskillcost"            :
+            case "boostspellattack"          :  
+            case "curse"                     :  
+            case "deboostheal"               :  $ret .= getEffectDefaultChanges($efftyp,$key,$e,$tbneg0);    break;
+
+            // DEFAULT-ZEILE MIT CHANGES und TBNEG1
+            case "absoluteslow"              :  
+            case "absolutesnare"             :           
+            case "armormastery"              :  
+            case "shieldmastery"             :  
+            case "snare"                     :  
+            case "statup"                    :  
+            case "statdown"                  :  
+            case "wpnmastery"                :  $ret .= getEffectDefaultChanges($efftyp,$key,$e,$tbneg1);    break;  
             
-            // nicht in der EMU definiert / bekannt!
+            // SPEZIELLE EFFEKT-ZEILEN
+            case "carvesignet"               :  
+            case "signet"                    :
+            case "signetburst"               :  $ret .= getEffectSignetAll($efftyp,$key,$e);                 break;
+            
+            // IN DER EMU-XSD NICHT DEFINIERT / BEKANNT
             case "110282"                    :
             case "absoluteexppoint_heal_instant":
             case "activate_enslave"          :
             case "alwayshit"                 :
             case "alwaysnoresist"            :  $tabnotdef[$efftyp] = 1;                                     break;
-                
+            
+            // SCRIPT FEHLT IM PARSER            
             default                          :  $taberreff[$efftyp] = 1;                                     break;
         }
     }
@@ -2397,26 +2294,17 @@ function getEffectsLines($key)
     return $ret;
 }
 // ---------------------------------------------------------------------------
+//
+//                              A C T I O N S
+//
+// ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: Actions
 // ---------------------------------------------------------------------------
 function getActionsLines($key)
 {
     global $tabcskill;
     
-    $ret = "";
-    
-    // ........
-    /*
-        <xs:complexType name="Actions">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                name="itemuse" type="ItemUseAction"
-                name="mpuse" type="MpUseAction"
-                name="hpuse" type="HpUseAction"
-                name="dpuse" type="DpUseAction"
-            </xs:sequence>
-        </xs:complexType>
-    */
-    
+    $ret  = "";        
     $time = getTabValue($key,"cost_time","");
     
     // Nutzungskosten für die Aktivierung
@@ -2480,18 +2368,7 @@ function getPeriodicActionsLines($key)
     global $tabcskill;
     
     $ret = "";
-    
-    // ........
-    /*
-        <xs:complexType name="PeriodicActions">
-            <xs:sequence minOccurs="0" maxOccurs="unbounded">
-                name="hpuse" type="HpUsePeriodicAction"
-                name="mpuse" type="MpUsePeriodicAction"
-            </xs:sequence>
-            <xs:attribute name="checktime" type="xs:int"/>
-        </xs:complexType>
-    */
-    
+        
     // HPUSE / MPUSE  (kein DPUSE gem. XSD)
     $parm = strtolower(getTabValue($key,"cost_checktime_parameter",""));
     $cost = getTabValue($key,"cost_checktime","");
@@ -2537,6 +2414,10 @@ function getPeriodicActionsLines($key)
     return $ret;
 }
 // ---------------------------------------------------------------------------
+//
+//                                 M O T I O N
+//
+// ---------------------------------------------------------------------------
 // Zeilen aufbereiten für: Motions
 // ---------------------------------------------------------------------------
 function getMotionLines($key)
@@ -2544,16 +2425,7 @@ function getMotionLines($key)
     global $tabcskill;
     
     $ret = "";
-    
-    // ........
-    /*
-        <xs:complexType name="Motion">
-            <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="speed" type="xs:int" use="optional" default="100"/>
-            <xs:attribute name="instant_skill" type="xs:boolean" use="optional" default="false"/>
-        </xs:complexType>
-    */
-    
+        
     if (isset($tabcskill[$key]['motion_name']))
         $ret .= ' name="'.strtolower($tabcskill[$key]['motion_name']).'"';
     if (isset($tabcskill[$key]['motion_play_speed']))
@@ -2569,6 +2441,10 @@ function getMotionLines($key)
         
     return $ret;
 }
+// ----------------------------------------------------------------------------
+//
+//                        S K I L L _ T E M P L A T E S
+//
 // ----------------------------------------------------------------------------
 // SkillTemplate-Datei ausgeben
 // ----------------------------------------------------------------------------
@@ -2594,10 +2470,6 @@ function generSkillTemplateFile()
     $cntout += 3;
             
     flush();
-            
-    // nicht in der EMU genutzte Tags (aktuell)
-    $tabnotuse["buffsleep"] = 1;
-    $tabnotuse["summonbindinggroupgate"] = 1;
     
     while (list($key,$val) = each($tabcskill))
     {   
@@ -2700,6 +2572,10 @@ function generSkillTemplateFile()
     logLine("Skills ignoriert ",$cntign);
 }
 // ----------------------------------------------------------------------------
+//
+//                            S K I L L _ T R E E
+//
+// ----------------------------------------------------------------------------
 // SkillTree-Datei ausgeben
 // ----------------------------------------------------------------------------
 function generSkillTreeFile()
@@ -2745,20 +2621,6 @@ function generSkillTreeFile()
     {
         $line = rtrim(fgets($hdlext));
         $cntles++;
-        /*
-        <client_skill_learn>
-            <id>1</id>
-            <name>1</name>
-            <race>All</race>
-            <class>ARTIST</class>
-            <pc_level>1</pc_level>
-            <skill>P_EQUIP_EnhancedHarp_G1</skill>
-            <skill_level>1</skill_level>
-            <autolearn>TRUE</autolearn>
-            <ui_display>1</ui_display>
-            <stigma_display>0</stigma_display>
-        </client_skill_learn>
-        */
         
         if     (stripos($line,"<id>")             !== false) $id     = getXmlValue("id",$line);
         elseif (stripos($line,"<pc_level>")       !== false) $lmin   = getXmlValue("pc_level",$line);
@@ -2837,18 +2699,20 @@ function generSkillTreeFile()
     logLine("Anzahl Zeilen eingelesen",$cntles);
     logLine("Anzahl Zeilen ausgegeben",$cntout);
     logLine("Anzahl Skills gefunden"  ,$cntids);
+    
+    showMissingEffects();
 }
 // ----------------------------------------------------------------------------
 //
 //                       A B G L E I C H   M I T   S V N
 //
 // ----------------------------------------------------------------------------
-function makeAbgleichSvnFile()
+function makeSvnCompareFile()
 {
-    global $pathsvn;
+    global $pathsvn, $tabeffsvn;
     
     logHead("Erzeuge Abgleich-Test-Datei: svn_skill_templates.xml");
-    
+        
     $filesvn  = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
     $fileout  = "parse_temp/svn_skill_templates.xml";
 
@@ -2886,7 +2750,33 @@ function makeAbgleichSvnFile()
             $doeff   = false;
         }
         else
-        {    
+        {   
+            $xml = getXmlKey($line);
+            
+            // Effekt bereits vom Parser bearbeitet?            
+            if (isset($tabeffsvn[$xml]))
+            {
+                // BLOCK
+                if ($tabeffsvn[$xml] == "B")
+                {
+                    $doeff    = true;
+                    
+                    if (stripos($line,"/>") === false)
+                    {
+                        $doblock  = true;
+                        $endblock = "</".$xml.">";
+                    }
+                    else
+                        $doline = true;
+                }
+                // EINZEILER
+                else
+                {
+                    $doline   = true;
+                    $doeff    = true;
+                }
+            }
+            /*
             // TODO        
             // momentan auch für die Effekte nur Zeilenweise!  
             // Effekt Blöcke
@@ -2922,6 +2812,13 @@ function makeAbgleichSvnFile()
             ||      stripos($line,"<bleed")               !== false
             ||      stripos($line,"<blind")               !== false
             ||      stripos($line,"<buff")                !== false  // alle buff-Zeilen
+            ||      stripos($line,"<caseheal")            !== false
+            ||      stripos($line,"<closeaerial")         !== false
+            ||      stripos($line,"<condskilllaucncher")  !== false
+            ||      stripos($line,"<confuse")             !== false
+            ||      stripos($line,"<convertheal")         !== false
+            ||      stripos($line,"<delaydamage")         !== false
+            ||      stripos($line,"<delayedskill")        !== false
             ||      stripos($line,"<dash")                !== false
             ||      stripos($line,"<deform")              !== false
             ||      stripos($line,"<hipass")              !== false
@@ -2933,7 +2830,8 @@ function makeAbgleichSvnFile()
             {
                 $doline   = true;
                 $doeff    = true;
-            }  
+            } 
+            */            
             // Start <effects> ausgeben
             if ($doeff)
             {
@@ -2999,175 +2897,7 @@ function makeAbgleichSvnFile()
 //                     T E S T - F U N K T I O N E N
 //
 // ----------------------------------------------------------------------------
-// alle Skill-Tags ausgeben
-// ----------------------------------------------------------------------------
-function showSkillTags()
-{
-    global $tabxskill;
-    
-    logHead("Liste aller gefundenen Skill-Xml-Tags");
-    
-    $tabSort = array_keys($tabxskill);
-    $maxSort = count($tabSort);
-    sort($tabSort);
-    
-    for ($s=0;$s<$maxSort;$s++)
-    {
-        logLine("- Skill-Tag gefunden",$tabSort[$s]);
-    }
-    
-    logLine("Anzahl gefundene Tags",$maxSort);
-}
-// ----------------------------------------------------------------------------
-// alle genutzten Condition-Tags im akt. SVN ermitteln/ausgeben
-// ----------------------------------------------------------------------------
-function showAllConditions()
-{
-    global $pathsvn;
-    
-    $tabcond = array();
-    
-    logHead("Erzeuge Conditions-Liste aus dem SVN");
-    
-    $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
-    $hdlsvn  = openInputFile($filesvn);
-     
-    $incond = "";
-    $endkey = "???";
-    
-    while (!feof($hdlsvn))
-    {
-        $line = rtrim(fgets($hdlsvn));
-        
-        if (stripos($line,"<startconditions>") !== false
-        ||  stripos($line,"<endconditions>")   !== false
-        ||  stripos($line,"<useconditions>")   !== false
-        ||  stripos($line,"<useequipmentconditions>") !== false)
-        {
-            $incond = getXmlKey($line);
-            $endkey = "</$incond>";
-        }
-        else
-        {
-            if ($incond)
-            {
-                if (stripos($line,$endkey) !== false)
-                {
-                    $incond = "";
-                    $endkey = "???";
-                }
-                else
-                {
-                    $xml = getXmlKey($line);
-                    $tabcond[$incond][$xml] = 1;
-                }
-            }
-        }
-    }
-    fclose($hdlsvn);
-    
-    while (list($key,$val) = each($tabcond))
-    {
-        logLine($key,"Condition Start");
-        
-        while (list($xml,$xval) = each($tabcond[$key]))
-        {   
-            logLine("- XML-Key",$xml);
-        }
-    }
-    /* aktuelles Ergebnis !!!!
-        startconditions
-        - XML-Key 	dp
-        - XML-Key 	mp
-        - XML-Key 	chain
-        - XML-Key 	target
-        - XML-Key 	selfflying
-        - XML-Key 	weapon
-        - XML-Key 	combatcheck
-        - XML-Key 	form
-        - XML-Key 	targetflying
-        - XML-Key 	skillcharge
-        - XML-Key 	lefthandweapon
-        - XML-Key 	hp
-        endconditions 
-        - XML-Key 	chargeweapon
-        - XML-Key 	chargearmor
-        - XML-Key 	polishchargeweapon
-        useconditions 
-        - XML-Key 	move_casting
-        useequipmentconditions
-        - XML-Key 	lefthandweapon
-    */
-}  
-// ----------------------------------------------------------------------------
-// alle genutzten Effect-Tags im akt. SVN ermitteln/ausgeben
-// ----------------------------------------------------------------------------
-function showAllEffects()
-{
-    global $pathsvn;
-    
-    $tabcond = array();
-    
-    logHead("Erzeuge Effect-Liste aus dem SVN");
-    
-    $filesvn = formFileName($pathsvn."\\trunk\\AL-Game\\data\\static_data\\skills\\skill_templates.xml");
-    $hdlsvn  = openInputFile($filesvn);
-     
-    $incond = "";
-    $endkey = "???";
-    $id     = "";
-    
-    while (!feof($hdlsvn))
-    {
-        $line = rtrim(fgets($hdlsvn));
-        
-        if (stripos($line,"<effects>") !== false)
-        {
-            $incond = getXmlKey($line);
-            $endkey = "</$incond>";
-        }
-        else
-        {
-            if ($incond)
-            {
-                if (stripos($line,$endkey) !== false)
-                {
-                    $incond = "";
-                    $endkey = "???";
-                }
-                else
-                {
-                    $xml = getXmlKey($line);
-                    if ($xml != "" && substr($xml,0,1) != "/")
-                    {
-                        if (isset($tabcond[$incond][$xml]))
-                        {
-                            if (stripos($tabcond[$incond][$xml],$id) === false)
-                                $tabcond[$incond][$xml] .= $id." ";
-                        }
-                        else
-                            $tabcond[$incond][$xml]  = $id." ";
-                    }
-                }
-            }
-            elseif (stripos($line,"skill_id=") !== false)
-                $id = getKeyValue("skill_id",$line);
-        }
-    }
-    fclose($hdlsvn);
-    
-    while (list($key,$val) = each($tabcond))
-    {
-        logLine($key,"Condition Start");
-        
-        while (list($xml,$xval) = each($tabcond[$key]))
-        {   
-            logLine("- ".$xml,$xval);
-        }
-    }
-} 
-// ----------------------------------------------------------------------------
-// Anzeigen aller Effekte, die noch nicht bearbeitet werden!
+// Protokollieren der übergebenen Tabelle mit den Effekten
 // ----------------------------------------------------------------------------
 function protErrorTable($text,&$table)
 {
@@ -3178,6 +2908,9 @@ function protErrorTable($text,&$table)
     for ($t=0;$t<$max;$t++)
         logLine($text,$tab[$t]);
 } 
+// ----------------------------------------------------------------------------
+// Anzeigen aller Effekte, die noch nicht bearbeitet werden
+// ----------------------------------------------------------------------------
 function showMissingEffects()
 {
     global $taberreff,$tabnotuse,$tabnotdef;
@@ -3215,6 +2948,7 @@ $taberreff = array();
 $tabastats = array();
 $tabnotdef = array();
 $tabnotuse = array();
+$tabeffsvn = array();
 
 $protkey   = ""; // wird nur zu Testzwecken genutzt!
 
@@ -3241,23 +2975,21 @@ if ($submit == "J")
     }
     else
     {
+        // VORARBEITEN
         scanPsSkillNames();
         scanSkillCharges();
         scanAbsoluteStat();
         scanClientSkills();
         makeSkillsRefTab();
-        // -------------------------
-        // nur zum Testen benötigt!
-        // showSkillTags();
-        // showAllConditions();
-        // showAllEffects();
-        // -------------------------
+        
+        // GENERIERUNG
         generSkillTemplateFile();
-        showMissingEffects();
         generSkillTreeFile();
         
-        makeAbgleichSvnFile();
+        // SVN-ABGLEICHDATEI
+        makeSvnCompareFile();  
         
+        // AUFRÄUMEN      
         cleanPathUtf8Files();
     }
 }    
