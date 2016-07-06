@@ -33621,14 +33621,22 @@
 			<item id="123001393" name="Sauro Commander's Sash" player_class="RIDER"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053220" decomposable_name="[Event] Ancient Coin Bundle"/> <!-- NEW -->
+	<decomposable item_id="188053220" decomposable_name="[Event] Ancient Coin Bundle">
+        <items>
+            <item id="186000237" name="Ancient Coin" count="10"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053221" decomposable_name="test bundle"/> <!-- NEW -->
 	<decomposable item_id="188053222" decomposable_name="[Event] Lustrous Skymane (1 day)">
 		<items>
 			<item id="190100129" name="Lustrous Skymane (1 day)"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188053223" decomposable_name="Key Box for Cube Expansion"/> <!-- NEW -->
+	<decomposable item_id="188053223" decomposable_name="Key Box for Cube Expansion">
+        <items>
+            <item id="186000419" name="Cube Expansion Coin"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053224" decomposable_name="[Expand Card] Expand Warehouse Ticket (lvl 3)">
 		<items>
 			<item id="169640005" name="[Expand Card] Expand Warehouse Ticket (lvl 3)"/>
