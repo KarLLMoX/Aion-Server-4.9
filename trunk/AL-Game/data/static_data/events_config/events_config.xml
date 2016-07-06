@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <events_config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="events_config.xsd">
-    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Transidium Annex;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event</active>
+    <active>World Blessers;Ruhnadium Bonus;Upgrade Arcade Inventory;Novice Event Inventory;Novice Event Inventory1;Novice Event;Mega Kinah Event;Upgrade Arcade;Return To The Shugo Tomb;Code Red: Atreia;Alchemist's Gift Drop;Alchemist's Gift;Sweet Fruits Inventory;Sweet Fruits Drop;Sweet Fruits;The Heroine Weeks;Violet Revolution Drop;Violet Revolution;The Lost Words Drop;The Lost Words;Divine Bonfire Inventory;Divine Bonfire;Daeva Day New Inventory;Daeva Day New;Legendary Symphony Event;Live Party Concert Hall;Shugo Emperor's Vault;Rainbow Snake Festival Inventory;Rainbow Snake Festival Inventory 1;Rainbow Snake Festival Inventory 2;Rainbow Snake Festival;Snowy Freezy;Shop Event;Dafarunerk Inventory;Dafarunerk Event;All Dolled Up;Wishing Fountain Inventory;Wishing Fountain;Homeward Bound Event;Toy Festival</active>
     <events>
         <event name="World Blessers" start="2015-01-01T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">
             <quests>
@@ -1257,20 +1257,6 @@
 				</spawn_map>								
             </spawns>
         </event>
-        <event name="Transidium Annex" start="2016-01-01T00:00:00+00:00" end="2016-12-31T00:00:00+00:00">           
-            <spawns>
-				<spawn_map map_id="110010000"><!-- Sanctum -->
-                    <spawn npc_id="730949" respawn_time="295">
-                        <spot x="1547.9" y="1511.5" z="565.9" h="60"/>
-                    </spawn>
-                </spawn_map>    
-				<spawn_map map_id="120010000"><!-- Pandaemonium -->
-                    <spawn npc_id="730953" respawn_time="295">
-                        <spot x="1226.02" y="1373.9" z="208.1" h="56"/>
-                    </spawn>                  
-				</spawn_map>							
-            </spawns>
-        </event>
         <event name="Dafarunerk Inventory" start="2016-01-01T00:00:00+00:00" end="2018-12-31T00:00:00+00:00">
             <inventory_drop startlevel="1" interval="60">186000317</inventory_drop>
         </event>
@@ -1646,6 +1632,132 @@
                     <spawn npc_id="833674" respawn_time="295">
                         <spot x="552.4" y="2773.8" z="298.99" h="36"/>
                     </spawn>
+                </spawn_map>
+            </spawns>
+        </event>
+        <event name="Toy Festival" start="2016-07-01T00:00:00+00:00" end="2016-07-31T00:00:00+00:00">
+            <quests>
+                <maintainable>80783;80784;80785;80786</maintainable>
+            </quests>
+            <spawns>
+                <!-- Sanctum -->
+                <spawn_map map_id="110010000">
+                    <!-- Tonirunerk -->
+                    <spawn npc_id="833657" respawn_time="295">
+                        <spot x="1539.9" y="1516.67" z="565.90356" h="57"/>
+                    </spawn>
+                    <!-- Hairunerk -->
+                    <spawn npc_id="833658" respawn_time="295">
+                        <spot x="1532.47" y="1508.83" z="565.88885" h="39"/>
+                    </spawn>
+                    <!-- Hairinerk -->
+                    <spawn npc_id="833659" respawn_time="295">
+                        <spot x="1532.47" y="1514.12" z="565.8884" h="96"/>
+                    </spawn>
+                    <!-- Strong Hero's Rookie Toy -->
+                    <spawn npc_id="833662" respawn_time="295">
+                        <spot x="1538.55" y="1499.74" z="565.91425" h="62"/>
+                    </spawn>
+                    <!-- Hyperion Toy -->
+                    <spawn npc_id="833663" respawn_time="295">
+                        <spot x="1534.87" y="1501.28" z="565.908" h="90"/>
+                    </spawn>
+                    <!-- Legendary Toy Bear -->
+                    <spawn npc_id="833669" respawn_time="295">
+                        <spot x="1534.43" y="1520.33" z="565.9042" h="60"/>
+                    </spawn>
+                    <!-- Bulldozer Toy -->
+                    <spawn npc_id="833670" respawn_time="295">
+                        <spot x="1534.87" y="1496.85" z="565.91876" h="29"/>
+                    </spawn>
+                    <spawn npc_id="833683" respawn_time="295">
+                        <spot x="1535.65" y="1522.69" z="565.91034" h="61"/>
+                    </spawn>
+                    <spawn npc_id="833684" respawn_time="295">
+                        <spot x="1534.72" y="1515.48" z="565.89307" h="60"/>
+                    </spawn>
+                    <spawn npc_id="833685" respawn_time="295">
+                        <spot x="1534.03" y="1507.0" z="565.89386" h="61"/>
+                    </spawn>
+                    <spawn npc_id="833691" respawn_time="295">
+                        <spot x="1545.4" y="1519.25" z="565.9179" h="60"/>
+                    </spawn>
+                    <spawn npc_id="833692" respawn_time="295">
+                        <spot x="1541.41" y="1505.51" z="565.9088" h="0"/>
+                        <spot x="1543.39" y="1510.71" z="565.90875" h="60"/>
+                        <spot x="1545.73" y="1508.05" z="565.91583" h="60"/>
+                        <spot x="1543.99" y="1504.43" z="565.9155" h="60"/>
+                        <spot x="1543.67" y="1507.75" z="565.9111" h="70"/>
+                        <spot x="1545.96" y="1505.63" z="565.9178" h="0"/>
+                        <spot x="1545.46" y="1510.89" z="565.9136" h="0"/>
+                    </spawn>
+                </spawn_map>
+                <!-- Pandaemonium -->
+                <spawn_map map_id="120010000">
+                    <!-- Tonirunerk -->
+                    <spawn npc_id="833657" respawn_time="295">
+                        <spot x="1268.59" y="1335.27" z="204.41998" h="90"/>
+                    </spawn>
+                    <!-- Hairunerk -->
+                    <spawn npc_id="833658" respawn_time="295">
+                        <spot x="1277.65" y="1332.13" z="204.42003" h="90"/>
+                    </spawn>
+                    <!-- Hairinerk -->
+                    <spawn npc_id="833659" respawn_time="295">
+                        <spot x="1273.89" y="1332.13" z="204.41998" h="90"/>
+                    </spawn>
+                    <!-- Strong Hero's Rookie Toy -->
+                    <spawn npc_id="833662" respawn_time="295">
+                        <spot x="1261.71" y="1337.0" z="203.67366" h="59"/>
+                    </spawn>
+                    <!-- Hyperion Toy -->
+                    <spawn npc_id="833663" respawn_time="295">
+                        <spot x="1259.17" y="1338.95" z="203.67366" h="91"/>
+                    </spawn>
+                    <!-- Legendary Toy Bear -->
+                    <spawn npc_id="833669" respawn_time="295">
+                        <spot x="1283.29" y="1330.77" z="204.42001" h="90"/>
+                    </spawn>
+                    <!-- Bulldozer Toy -->
+                    <spawn npc_id="833670" respawn_time="295">
+                        <spot x="1254.29" y="1336.45" z="203.67366" h="1"/>
+                    </spawn>
+                    <spawn npc_id="833683" respawn_time="295">
+                        <spot x="1285.22" y="1333.88" z="204.42001" h="88"/>
+                    </spawn>
+                    <spawn npc_id="833684" respawn_time="295">
+                        <spot x="1272.87" y="1333.65" z="204.41998" h="89"/>
+                    </spawn>
+                    <spawn npc_id="833658" respawn_time="295">
+                        <spot x="1277.65" y="1332.13" z="204.42003" h="90"/>
+                    </spawn>
+                    <spawn npc_id="833691" respawn_time="295">
+                        <spot x="1282.72" y="1340.37" z="204.42001" h="90"/>
+                        <spot x="1268.72" y="1340.01" z="204.41998" h="90"/>
+                    </spawn>
+                    <spawn npc_id="833692" respawn_time="295">
+                        <spot x="1297.2" y="1343.74" z="203.67366" h="90"/>
+                        <spot x="1293.36" y="1341.26" z="203.67366" h="90"/>
+                        <spot x="1294.18" y="1343.99" z="203.67366" h="31"/>
+                        <spot x="1291.03" y="1343.18" z="203.67366" h="2"/>
+                        <spot x="1297.2" y="1341.06" z="203.67366" h="53"/>
+                        <spot x="1291.45" y="1343.78" z="203.67366" h="1"/>
+                        <spot x="1295.36" y="1340.79" z="203.67366" h="53"/>
+                        <spot x="1291.7" y="1340.27" z="203.67366" h="25"/>
+                        <spot x="1290.61" y="1338.71" z="203.67366" h="0"/>
+                        <spot x="1288.85" y="1339.17" z="203.67366" h="12"/>
+                        <spot x="1288.04" y="1342.85" z="203.67366" h="90"/>
+                    </spawn>
+                </spawn_map>
+                <!-- TODO - Event Spawns in Kaldor, Levinshor, Cygnea and Enshar -->
+                <!-- Kaldor -->
+                <spawn_map map_id="600090000">
+              		<!-- Shining Capsule -->
+                    <spawn npc_id="833660" respawn_time="295">
+                        <spot x="1294.97" y="744.0" z="163.43562" h="90"/>
+                        <spot x="830.0" y="820.0" z="164.0" h="90"/>
+                        <spot x="536.17" y="431.35" z="158.47716" h="90"/>
+                    </spawn> 
                 </spawn_map>
             </spawns>
         </event>
