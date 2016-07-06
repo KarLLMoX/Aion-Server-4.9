@@ -41857,10 +41857,140 @@
             <item id="188054376" name="Tonirunerk's General Present Box"/>
         </items>
     </decomposable>
-	<decomposable item_id="188054374" decomposable_name="Tonirunerk's Toy Robot"/> <!-- NEW -->
-	<decomposable item_id="188054375" decomposable_name="Tonirunerk's Parts Box"/> <!-- NEW -->
-	<decomposable item_id="188054376" decomposable_name="Tonirunerk's General Present Box"/> <!-- NEW -->
-	<decomposable item_id="188054377" decomposable_name="Tonirunerk's Really Good Present Box"/> <!-- NEW -->
+	<decomposable item_id="188054374" decomposable_name="Tonirunerk's Toy Robot">
+        <items>
+            <item id="110900955" name="Suave Outfit"/>
+		</items>
+		<items>
+            <item id="169200006" name="Dye: True White" count="4"/>
+		</items>
+		<items>
+            <item id="169200007" name="Dye: True Black" count="4"/>
+		</items>
+		<items>
+            <item id="188052319" name="[Event] Dragon Lord's Wing Box"/>
+        </items>
+		<items>
+            <item id="188052632" name="[Event] Superior Manastone Bundle"/>
+        </items>
+		<items>
+            <item id="188053005" name="[Event] Hyperion's Wing Chest"/>
+        </items>
+		<items>
+            <item id="188053206" name="[Event] Stormwing's Eternal Armor Chest"/>
+        </items>
+		<items>
+            <item id="188053208" name="[Event] Tiamat Guard's Eternal Armor Chest"/>
+        </items>
+		<items>
+            <item id="188053644" name="[Event] Small Ancient Coin Bundle" count="6"/>
+        </items>
+		<items>
+            <item id="190100159" name="The Afterburner"/>
+        </items>
+		<items>
+            <item id="166030005" name="Tempering Solution"/>
+        </items>
+		<items>
+            <item id="188052716" name="[Event] Lucky Scroll Pouch" count="6"/>
+        </items>
+		<items>
+            <item id="188054038" name="Wave Song Armor Box"/>
+        </items>
+		<items>
+            <item id="188054039" name="Sea Feast Armor Box"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054375" decomposable_name="Tonirunerk's Parts Box">
+        <items>
+            <item id="182007396" name="Robot Energy"/>
+		</items>
+		<items>
+            <item id="188100291" name="Tonirunerk's Toy Body"/>
+        </items>
+		<items>
+            <item id="188100292" name="Tonirunerk's Toy Legs"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054376" decomposable_name="Tonirunerk's General Present Box">
+        <items>
+            <item id="161001001" name="Revival Stone" count="2"/>
+		</items>
+		<items>
+            <item id="169650000" name="Plastic Surgery Ticket"/>
+        </items>
+		<items>
+            <item id="188052693" name="[Event] Saam King's Herbs Bundle" count="9"/>
+        </items>
+        <items>
+            <item id="188053220" name="[Event] Ancient Coin Bundle"/>
+		</items>
+		<items>
+            <item id="188051855" name="[Event] Manastone Bundle"/>
+        </items>
+		<items>
+            <item id="188053784" name="Stigma Bundle"/>
+        </items>
+        <items>
+            <item id="188053663" name="[Event] Blood Mark Box"/>
+		</items>
+		<items>
+            <item id="166030005" name="Tempering Solution"/>
+        </items>
+		<items>
+            <item id="188053540" name="Supply Scroll Bundle" count="3"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054377" decomposable_name="Tonirunerk's Really Good Present Box">
+        <items>
+            <item id="110900949" name="Breezy Summer Outfit"/>
+		</items>
+		<items>
+            <item id="110900958" name="Stormbringer's Regalia"/>
+        </items>
+		<items>
+            <item id="125045568" name="Breezy Summer Hat"/>
+        </items>
+        <items>
+            <item id="125045571" name="Stormbringer Circlet"/>
+		</items>
+		<items>
+            <item id="101501427" name="Stormbringer Staff"/>
+        </items>
+		<items>
+            <item id="190020237" name="Cloudmaster Egg"/>
+        </items>
+        <items>
+            <item id="188052560" name="Assured Greater Felicitous Socketing Box (Mythic)"/>
+		</items>
+		<items>
+            <item id="188508013" name="[Motion Card] Legendary Fist"/>
+        </items>
+		<items>
+            <item id="188508017" name="[Motion Card] Stormbringer"/>
+        </items>
+		<items>
+            <item id="188053785" name="Greater Stigma Bundle"/>
+        </items>
+        <items>
+            <item id="188053786" name="Major Stigma Bundle"/>
+		</items>
+		<items>
+            <item id="190100163" name="Magnificent Clucklich"/>
+        </items>
+		<items>
+            <item id="166020000" name="Omega Enchantment Stone"/>
+        </items>
+		<items>
+            <item id="166030005" name="Tempering Solution" count="7"/>
+        </items>
+		<items>
+            <item id="190020235" name="Mini Hyperion Egg"/>
+        </items>
+		<items>
+            <item id="187060177" name="Aether Glider"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054378" decomposable_name="Modor's Mythic Accessory Box"/> <!-- NEW -->
 	<decomposable item_id="188054379" decomposable_name="Dynatoum's Brazen Accessory Box"/> <!-- NEW -->
 	<decomposable item_id="188054380" decomposable_name="Pallasite Ingredient Box"/> <!-- NEW -->
