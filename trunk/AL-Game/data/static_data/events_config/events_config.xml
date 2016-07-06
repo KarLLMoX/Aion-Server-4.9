@@ -1728,8 +1728,8 @@
                     <spawn npc_id="833684" respawn_time="295">
                         <spot x="1272.87" y="1333.65" z="204.41998" h="89"/>
                     </spawn>
-                    <spawn npc_id="833658" respawn_time="295">
-                        <spot x="1277.65" y="1332.13" z="204.42003" h="90"/>
+                    <spawn npc_id="833685" respawn_time="295">
+                        <spot x="1279.15" y="1333.52" z="204.42004" h="89"/>
                     </spawn>
                     <spawn npc_id="833691" respawn_time="295">
                         <spot x="1282.72" y="1340.37" z="204.42001" h="90"/>
@@ -1753,7 +1753,7 @@
                 <!-- Kaldor -->
                 <spawn_map map_id="600090000">
               		<!-- Shining Capsule -->
-                    <spawn npc_id="833660" respawn_time="295">
+                    <spawn npc_id="833660" respawn_time="600">
                         <spot x="1294.97" y="744.0" z="163.43562" h="90"/>
                         <spot x="830.0" y="820.0" z="164.0" h="90"/>
                         <spot x="536.17" y="431.35" z="158.47716" h="90"/>
