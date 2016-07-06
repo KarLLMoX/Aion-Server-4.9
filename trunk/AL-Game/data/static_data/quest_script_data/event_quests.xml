@@ -146,12 +146,10 @@
                     80747 [XML] [Event] Draw Matryoshka (Asmodians)
                     80748 [XML] [Event] Once More! (Asmodians)
                     80749 [XML] [Event] Gift from Last Matryoshka (Asmodians)
-                    
-                    80783 [TODO] [Event] Put Tonirunerk's Toy Together for a Prize! (Elyos)
-                    80784 [TODO] [Event] Put Tonirunerk's Toy Together for a Prize! (Asmodians)
-                    80785 [TODO] [Event] Find Robot Energy! (Elyos)
-                    80786 [TODO] [Event] Find Robot Energy! (Asmodians)
-                    
+                    80783 [XML] [Event] Put Tonirunerk's Toy Together for a Prize! (Elyos)
+                    80784 [XML] [Event] Put Tonirunerk's Toy Together for a Prize! (Asmodians)
+                    80785 [XML] [Event] Find Robot Energy! (Elyos)
+                    80786 [XML] [Event] Find Robot Energy! (Asmodians)
                     80787 [TODO] [Event] Hang In There, New User! This is the Giving Rotund!
                     80788 [TODO] [Event] Hang In There, Dormant User! This is the Giving Rotund!
                     80789 [TODO] [Event/Daily] Hang In There, New User! Encouragement from the Giving Rotund
@@ -358,6 +356,11 @@
     <item_collecting start_npc_ids="833672" id="80792" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="833671" id="80793" start_dialog_id="4762" start_dialog_id2="5"/>
     <item_collecting start_npc_ids="833672" id="80794" start_dialog_id="4762" start_dialog_id2="5"/>
+    <!-- Toy Festival Event -->    
+    <item_collecting start_npc_ids="833658" id="80783" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833658" id="80784" start_dialog_id="4762" start_dialog_id2="5"/>
+    <item_collecting start_npc_ids="833659" id="80785" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007396"/>
+    <item_collecting start_npc_ids="833659" id="80786" start_dialog_id="4762" start_dialog_id2="1011" item_id="182007396"/>
     <!-- HUNTING QUESTS -->
     <monster_hunt start_npc_ids="202549" id="50021">
         <monster var="0" npc_ids="217161" end_var="15"/>
