@@ -2051,4 +2051,8 @@
 	<chest npcid="702816">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
+    <!-- Shining Capsule -->
+	<chest npcid="833660">
+        <keyitem id="1" itemid="0" quantity="1"/>
+    </chest>
 </chest_templates>
