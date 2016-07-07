@@ -24,9 +24,11 @@ import ai.AggressiveNpcAI2;
 
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.Creature;
+import com.aionemu.gameserver.model.gameobjects.Npc;
 
 /**
  * @author Falke_34
+ * @rework FrozenKiller
  */
 @AIName("fierce_sandmane_tigric") //235973
 public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2 {
@@ -41,8 +43,8 @@ public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2 {
 
     @Override
     protected void handleAttack(Creature creature) {
-        super.handleAttack(creature);
         checkPercentage(getLifeStats().getHpPercentage());
+        super.handleAttack(creature);
     }
 
     @Override
@@ -52,15 +54,18 @@ public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2 {
     }
 
     @Override
-    protected void handleDespawned() {
-        percents.clear();
-        super.handleDespawned();
-    }
-
-    @Override
     protected void handleDied() {
-        percents.clear();
-        super.handleDied();
+    	Npc npc = getPosition().getWorldMapInstance().getNpc(235973);
+    	Npc add = getPosition().getWorldMapInstance().getNpc(235974);
+    	if (npc != null) {
+    		System.out.println("NPC Info: " + npc);
+    		add.getController().onDelete();
+    		percents.clear();
+    		super.handleDied();
+    	} else {
+    		percents.clear();
+    		super.handleDied();
+    	}
     }
 
     private void addPercent() {
@@ -73,8 +78,8 @@ public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2 {
             if(hpPercent <= percent) {
                 switch(percent) {
                     case 50:
-                    	spawn(235974, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) getOwner().getHeading()); //Cloned Seagric
-                        break;                        
+                        spawn(235974, getOwner().getX() -2, getOwner().getY() -2, getOwner().getZ(), (byte) getOwner().getHeading()); //Cloned Seagric
+                        break;
                 }
                 percents.remove(percent);
                 break;
