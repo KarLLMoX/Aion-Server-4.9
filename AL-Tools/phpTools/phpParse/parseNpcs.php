@@ -320,6 +320,49 @@ function getTalkLine($n)
     return $ret;
 }
 // ----------------------------------------------------------------------------
+// erzeugt, wenn vorhanden, die Zeile für die KiskStat-Angaben
+// ----------------------------------------------------------------------------
+function getKiskLine($n)
+{
+    global $tabnpcs;
+    
+    $ret  = "?";
+    $typ  = isset($tabnpcs[$n]['bindstone_type'])     ? $tabnpcs[$n]['bindstone_type']     : "?";
+    $cap  = isset($tabnpcs[$n]['bindstone_capacity']) ? $tabnpcs[$n]['bindstone_capacity'] : "?";
+    $use  = isset($tabnpcs[$n]['bindstone_usecount']) ? $tabnpcs[$n]['bindstone_usecount'] : "?";
+    
+    // Muster:    <kisk_stats usemask="0" members="30" resurrects="0"/>
+    // Ausgabe erfolgt nur, wenn einer der Werte gesetzt ist!!!
+    if ($typ != "?" || $cap != "?" || $use != "?")
+    {
+        $ret = '        <kisk_stats';
+        
+        // usemask
+        switch(strtolower($typ))
+        {
+            case "normal" : $ret .= ' usemask="0"'; break;
+            case "guild"  : $ret .= ' usemask="2"'; break;
+            case "private": $ret .= ' usemask="3"'; break;
+            case "party"  : $ret .= ' usemask="4"'; break;
+            case "force"  : $ret .= ' usemask="5"'; break;
+            default       : $ret .= ' usemask="0"'; break;            
+        }
+        // members
+        if ($cap != "?")
+            $ret .= ' members="'.$cap.'"';
+        else
+            $ret .= ' members="0"';
+        // resurrects
+        if ($use != "?")
+            $ret .= ' resurrects="'.$use.'"';
+        else
+            $ret .= ' resurrects="0"';
+            
+        $ret .= '/>';
+    }
+    return $ret;
+}
+// ----------------------------------------------------------------------------
 // Fehlende Werte ersetzen, sofern in der alten npc_templates vorhanden
 // ----------------------------------------------------------------------------
 function getMissingValues($n)
@@ -620,7 +663,8 @@ function putNpcInclude($act)
                       "move_speed_normal_run","move_speed_combat_run","cursor_type",
                       "talking_distance","hpgauge_level","attack_delay","ai_name","tribe",
                       "race_type","sensory_range","attack_range","attack_rate","npc_type",
-                      "ment","float_corpse","abyss_npc_type",     
+                      "ment","float_corpse","abyss_npc_type",
+                      "bindstone_type","bindstone_capacity","bindstone_usecount",     
     // Tabelle mit fehlenden Schlüsselbegriffen im Client
                       "level","maxhp","maxxp","nameid","rank","rating","main_hand_attack",
                       "main_hand_accuracy","pdef","mresist","power","evasion","accuracy",
@@ -666,7 +710,9 @@ function getNpcInfos()
                       "move_speed_normal_run","move_speed_combat_run","cursor_type",
                       "talking_distance","talk_delay_time","hpgauge_level","attack_delay",
                       "ai_name","tribe","race_type","sensory_range","attack_range",
-                      "attack_rate","npc_type","ment","float_corpse","abyss_npc_type");   
+                      "attack_rate","npc_type","ment","float_corpse","abyss_npc_type",
+                      "bindstone_type","bindstone_capacity","bindstone_usecount"
+                      );   
     $maxkeys  = count($tabkeys);
     
     // Tabelle mit fehlenden Schlüsselbegriffen im Client
@@ -821,7 +867,8 @@ function getNpcInfosScanned()
                       "move_speed_normal_run","move_speed_combat_run","cursor_type",
                       "talking_distance","talk_delay_time","hpgauge_level","attack_delay",
                       "ai_name","tribe","race_type","sensory_range","attack_range",
-                      "attack_rate","npc_type","ment","float_corpse","abyss_npc_type",     
+                      "attack_rate","npc_type","ment","float_corpse","abyss_npc_type", 
+                      "bindstone_type","bindstone_capacity","bindstone_usecount", 
     // Tabelle mit fehlenden Schlüsselbegriffen im Client
                       "level","maxhp","maxxp","nameid","rank","rating","main_hand_attack",
                       "main_hand_accuracy","pdef","mresist","power","evasion","accuracy",
@@ -908,6 +955,7 @@ function putNpcTemplates()
             $speedline    = getSpeedLine($n);    // füllt SpeedLine
             $equipline    = getEquipLines($n);   // füllt EquipLine
             $talkline     = getTalkLine($n);     // füllt TalkLine
+            $kiskline     = getKiskLine($n);     // füllt KiskLine
             
             // fix 2016-02-25 für nameid/titleid
             if (!is_numeric($tabnpcs[$n]['titleid']))
@@ -962,13 +1010,17 @@ function putNpcTemplates()
             if ($equipline != "?")
                 fwrite($hdlout, $equipline."\n");
             
+            // Kisk-Stat-Zeile 
+            if ($kiskline != "?")
+                fwrite($hdlout, $kiskline."\n");
+            
             // Bound-Radius-Zeile
             fwrite($hdlout, $lev2.'<bound_radius'.
                     getOutText("front",$tabnpcs[$n]['front']).
                     getOutText("side",$tabnpcs[$n]['side']).
                     getOutText("upper",$tabnpcs[$n]['upper']).
                     '/>'."\n");
-                    
+                
             // TalkInfo-Zeile
             if ($talkline != "?")
                 fwrite($hdlout, $talkline."\n");
