@@ -878,25 +878,6 @@ function getAuthId($key)
     }
 }
 // ----------------------------------------------------------------------------
-// Ermitteln Wert für: npcname
-// ----------------------------------------------------------------------------
-/*
-function getNpcNameId($name)
-{
-    global $tabNpcInfos;
-    
-    $such = strtoupper($name);
-    
-    if (isset($tabNpcInfos[$such]))
-        return $tabNpcInfos[$such]['npc_id'];
-    else
-    {
-        logLine("NPC-Name fehlt",$such);
-        return "";
-    }
-}
-*/
-// ----------------------------------------------------------------------------
 // Ermitteln Wert für: skillclass
 // ----------------------------------------------------------------------------
 function getSkillClassName($key)
@@ -1591,7 +1572,7 @@ function getActionLines($key)
     
     if ($name != "")
     {
-        $ret .= '            <toypetspawn npcid="'.getNpcNameId($name).'"/>'."\n";
+        $ret .= '            <toypetspawn npcid="'.getNpcNameNpcId($name).'"/>'."\n";
     }
     unset($name);
     
