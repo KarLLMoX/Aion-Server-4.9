@@ -1760,6 +1760,13 @@
                         <spot x="793.02" y="467.63" z="143.97687" h="90"/>
                     </spawn> 
                 </spawn_map>
+                <!-- Levinshor -->
+                <spawn_map map_id="600100000">
+              		<!-- Shining Capsule -->
+                    <spawn npc_id="833660" respawn_time="600">
+                        <spot x="1030.86" y="1024.3" z="332.72443" h="90"/>
+                    </spawn>
+                </spawn_map>
             </spawns>
         </event>
     </events>
