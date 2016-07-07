@@ -16,9 +16,12 @@
  */
 package ai.worlds.cygnea;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import ai.AggressiveNpcAI2;
 
-import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.model.gameobjects.Creature;
 
@@ -26,18 +29,56 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
  * @author Falke_34
  */
 @AIName("fierce_sandmane_tigric") //235973
-public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2
-{
-	@Override
-	protected void handleAttack(Creature creature) {
-		super.handleAttack(creature);
-		checkPercentage(getLifeStats().getHpPercentage());
-	}
-	
-	private void checkPercentage(int hpPercentage) {
-		if (hpPercentage <= 50) {
-			spawn(235974, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) getOwner().getHeading()); //Cloned Seagric
-			AI2Actions.deleteOwner(this);
-		}
-	}
+public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2 {
+
+    protected List<Integer> percents = new ArrayList<Integer>();
+
+    @Override
+    protected void handleSpawned() {
+        addPercent();
+        super.handleSpawned();
+    }
+
+    @Override
+    protected void handleAttack(Creature creature) {
+        super.handleAttack(creature);
+        checkPercentage(getLifeStats().getHpPercentage());
+    }
+
+    @Override
+    protected void handleBackHome() {
+        addPercent();
+        super.handleBackHome();
+    }
+
+    @Override
+    protected void handleDespawned() {
+        percents.clear();
+        super.handleDespawned();
+    }
+
+    @Override
+    protected void handleDied() {
+        percents.clear();
+        super.handleDied();
+    }
+
+    private void addPercent() {
+        percents.clear();
+        Collections.addAll(percents, new Integer[]{50});
+    }
+
+    private synchronized void checkPercentage(int hpPercent) {
+        for(Integer percent : percents) {
+            if(hpPercent <= percent) {
+                switch(percent) {
+                    case 50:
+                    	spawn(235974, getOwner().getX(), getOwner().getY(), getOwner().getZ(), (byte) getOwner().getHeading()); //Cloned Seagric
+                        break;                        
+                }
+                percents.remove(percent);
+                break;
+            }
+        }
+    }
 }

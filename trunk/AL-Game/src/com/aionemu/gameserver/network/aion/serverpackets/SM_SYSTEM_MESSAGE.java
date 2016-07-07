@@ -21777,7 +21777,8 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	{
 		return new SM_SYSTEM_MESSAGE(1403138, "[item:" + itemId + "]", count);
 	}
-        /**
+	
+    /**
 	 * [Beritra Invasion] 4.7
 	 */
 	public static final SM_SYSTEM_MESSAGE STR_MSG_WORLDRAID_INVADE_VRITRA = new SM_SYSTEM_MESSAGE(1402459);
@@ -21793,6 +21794,9 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     private int textColorId = 0x19;
     
     public static final SM_SYSTEM_MESSAGE STR_MSG_Telepoter_Under_User = new SM_SYSTEM_MESSAGE(1402945);
+
+    public static final SM_SYSTEM_MESSAGE STR_MSG_LIGHT_SIDE_LEGION_DIRECT_PORTAL_OPEN = new SM_SYSTEM_MESSAGE(1402877);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_DARK_SIDE_LEGION_DIRECT_PORTAL_OPEN = new SM_SYSTEM_MESSAGE(1402878);
 
     /**
      * Constructs new <tt>SM_SYSTEM_MESSAGE </tt> packet
