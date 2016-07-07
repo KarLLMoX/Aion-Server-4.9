@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.network.aion.serverpackets;
 
 import com.aionemu.gameserver.model.gameobjects.Kisk;
+import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.AionServerPacket;
 
@@ -41,7 +42,9 @@ public class SM_KISK_UPDATE extends AionServerPacket {
     private int remainingLifetime;
 
     public SM_KISK_UPDATE(Kisk kisk) {
+
         this.objId = kisk.getObjectId();
+        
         this.useMask = kisk.getUseMask();
         this.currentMembers = kisk.getCurrentMemberCount();
         this.maxMembers = kisk.getMaxMembers();
@@ -52,8 +55,9 @@ public class SM_KISK_UPDATE extends AionServerPacket {
 
     @Override
     protected void writeImpl(AionConnection con) {
+    	Player player = con.getActivePlayer();
     	writeD(objId);
-    	writeD(1443306566);
+    	writeD(player.getObjectId());
         writeD(useMask);
         writeD(currentMembers);
         writeD(maxMembers);
