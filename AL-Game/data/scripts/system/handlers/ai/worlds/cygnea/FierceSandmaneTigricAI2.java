@@ -58,7 +58,6 @@ public class FierceSandmaneTigricAI2 extends AggressiveNpcAI2 {
     	Npc npc = getPosition().getWorldMapInstance().getNpc(235973);
     	Npc add = getPosition().getWorldMapInstance().getNpc(235974);
     	if (npc != null) {
-    		System.out.println("NPC Info: " + npc);
     		add.getController().onDelete();
     		percents.clear();
     		super.handleDied();
