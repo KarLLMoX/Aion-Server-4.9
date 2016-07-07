@@ -4465,6 +4465,7 @@
 		</packet>
 		<packet id="0x90" name="SM_KISK_UPDATE">
 			<part name="objId" type="d"/>
+			<part name="playerObjId" type="d"/>
 			<part name="useMask" type="d"/>
 			<part name="currentMembers" type="d"/>
 			<part name="maxMembers" type="d"/>
