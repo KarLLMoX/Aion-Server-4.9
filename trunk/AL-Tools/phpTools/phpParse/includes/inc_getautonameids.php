@@ -174,6 +174,23 @@ function getNpcNameId($name)
         return $name;
 }
 // ----------------------------------------------------------------------------
+// ermitteln NpcId zum NPC-Namen
+// ----------------------------------------------------------------------------
+function getNpcNameNpcId($name)
+{
+    global $tabNpcInfos;
+    
+    $such = strtoupper($name);
+    
+    if (isset($tabNpcInfos[$such]))
+        return $tabNpcInfos[$such]['npc_id'];
+    else
+    {
+        logLine("NPC-Name fehlt",$such);
+        return "";
+    }
+}
+// ----------------------------------------------------------------------------
 // ermitteln Id zum Npc-Titel                                        
 // ----------------------------------------------------------------------------
 function getNpcTitleId($name)
