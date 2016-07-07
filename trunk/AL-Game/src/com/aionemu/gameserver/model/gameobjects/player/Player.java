@@ -120,7 +120,7 @@ import com.aionemu.gameserver.utils.rates.Rates;
 import com.aionemu.gameserver.utils.rates.RegularRates;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
-import com.aionemu.gameserver.world.zone.ZoneInstance;
+//import com.aionemu.gameserver.world.zone.ZoneInstance;
 
 /**
  * This class is representing Player object, it contains all needed data.
@@ -1244,34 +1244,33 @@ public class Player extends Creature {
         // int worldId = enemy.getWorldId();
         if (!enemy.getRace().equals(getRace())) {
             if (World.getInstance().getWorldMap(getWorldId()).isPvpAllowed()) {
-                return (!this.isInDisablePvPZone() && !enemy.isInDisablePvPZone());
-            } else {
+//                return (!this.isInDisablePvPZone() && !enemy.isInDisablePvPZone());
+//            } else {
                 return (this.isInPvPZone() && enemy.isInPvPZone());
             }
         }
         return false;
     }
 
-    private boolean isInDisablePvPZone() {
-        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
-        for (ZoneInstance zone : zones) {
-            if (!zone.isPvpAllowed()) {
-                return true;
-            }
-        }
-
-        return false;
-    }
+//    private boolean isInDisablePvPZone() {
+//        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
+//        for (ZoneInstance zone : zones) {
+//            if (!zone.isPvpAllowed()) {
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//    }
 
     private boolean isInPvPZone() {
-        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
-        for (ZoneInstance zone : zones) {
-            if (zone.isPvpAllowed()) {
-                return true;
-            }
-        }
-
-        return false;
+//        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
+//        for (ZoneInstance zone : zones) {
+//            if (zone.isPvpAllowed()) {
+//                return true;
+//            }
+//        }
+        return true;
     }
 
     public boolean isInSameTeam(Player player) {
