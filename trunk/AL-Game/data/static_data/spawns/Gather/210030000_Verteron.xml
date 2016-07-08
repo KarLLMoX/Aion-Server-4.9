@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Updated via PacketSamurai AionGer-Edtion - [Mon Apr 04 20:21:24 CEST 2016] -->
+<!-- Updated via PacketSamurai AionGer-Edtion - [Fri Jul 08 20:51:10 CEST 2016] -->
 <spawns>
 	<!-- Verteron -->
 	<spawn_map map_id="210030000">
@@ -364,6 +364,7 @@
 			<spot x="1638.6665" y="1755.5732" z="216.15265" h="0"/>
 			<spot x="1658.106" y="1766.1006" z="197.88225" h="0"/>
 			<spot x="1725.5546" y="1259.446" z="166.06773" h="0"/>
+			<spot x="1910.773" y="1617.6326" z="145.70457" h="0"/> <!-- New -->
 		</spawn>
 		<!-- Targena ||| HERB -->
 		<spawn npc_id="400604" respawn_time="105">
