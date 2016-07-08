@@ -16,7 +16,7 @@ $submit   = isset($_GET['submit'])   ? "J"               : "N";
 if (!file_exists("../outputs/parse_output/skills"))
     mkdir("../outputs/parse_output/skills");
 if (!file_exists("../outputs/parse_output/skill_tree"))
-    mkdir("../outputs/parse_output/skill_tree");
+    mkdir("../outputs/parse_output/skill_tree");    
 ?>
 <body style="background-color:#000055;color:silver;padding:0px;">
 <center>
@@ -1305,6 +1305,14 @@ function getEffValType($efftyp,$key,$ename)
     ||  $efftyp == "carvesignet"
     ||  $efftyp == "delaydamage"
     ||  $efftyp == "delayedfpatk_instant"
+    ||  $efftyp == "dispel"
+    ||  $efftyp == "dispelbuffcounteratk"
+    ||  $efftyp == "dispeldebuff"
+    ||  $efftyp == "dispeldebuffmental"
+    ||  $efftyp == "dispeldebuffphysical"
+    ||  $efftyp == "dispelnpcbuff"
+    ||  $efftyp == "dpheal"
+    ||  $efftyp == "dphealinstant"
     ||  $efftyp == "shieldmastery"
     ||  $efftyp == "signetburst"
     ||  $efftyp == "statup"
@@ -1346,7 +1354,14 @@ function getEffValValue($efftyp,$key,$ename)
     // aus reserved2 (aber ungleich 0)
     elseif ($efftyp == "caseheal"
     ||      $efftyp == "delayedskill"
-    ||      $efftyp == "delayedfpatk_instant")
+    ||      $efftyp == "delayedfpatk_instant"
+    ||      $efftyp == "dispelbuff"
+    ||      $efftyp == "dispelbuffcounteratk"
+    ||      $efftyp == "dispeldebuff"
+    ||      $efftyp == "dispeldebuffmental"
+    ||      $efftyp == "dispeldebuffphysical"
+    ||      $efftyp == "dispelnpcbuff"
+    ||      $efftyp == "dphealinstant")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","?") );
     }
@@ -1368,7 +1383,8 @@ function getEffValValue($efftyp,$key,$ename)
         $ret = getTabValue($key,$ename."reserved9","?");
     }
     // aus reserved9 ( aber ungleich 0)
-    elseif ($efftyp == "bleed")
+    elseif ($efftyp == "bleed"
+    ||      $efftyp == "dpheal")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved9","?") );
     }
@@ -1382,16 +1398,26 @@ function getEffValDelta($efftyp,$key,$ename)
 {
     $ret = "?";
     
+    // aus reserved3
     if     ($efftyp == "backdash"
     ||      $efftyp == "dash")
     {
         $ret = getTabValue($key,$ename."reserved3","0");
     } 
-    elseif ($efftyp == "bleed")
+    // aus reserved8
+    elseif ($efftyp == "bleed"
+    ||      $efftyp == "dpheal")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved8","?") );
-    }   
+    } 
+    // aus reserved1    
     elseif ($efftyp == "blind"
+    ||      $efftyp == "dispelbuff"
+    ||      $efftyp == "dispeldebuff"
+    ||      $efftyp == "dispeldebuffmental"
+    ||      $efftyp == "dispeldebuffphysical"
+    ||      $efftyp == "dispelnpcbuff"
+    ||      $efftyp == "dphealinstant"
     ||      $efftyp == "signetburst")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","?") );
@@ -1629,6 +1655,8 @@ function getEffSpecial($spec,$wert)
     {
         case "upper":  // Rückgabe in Grossbuchstaben
             return strtoupper($wert);
+        case "lower":  // Rückgabe in Kleinbuchstaben
+            return strtolower($wert);
         case "npcid":  // Rückgabe der NpcId
             $tab = getNpcIdNameTab($wert);
             $ret = ($tab['npcid'] != "000000") ? $tab['npcid'] : "?";            
@@ -1674,7 +1702,7 @@ function getEffectBasicLine($efftyp,$key,$e)
     $blev  =                         getTabValue($key,$ename."basiclv","?");
     $dura1 = getEffSpecial( "nozero",getTabValue($key,$ename."remain1","?") );
     $dura2 = getEffSpecial( "nozero",getTabValue($key,$ename."remain2","?") );
-    $effid =                         getTabValue($key,$ename."effectid","?");
+    $effid = getEffSpecial( "nozero",getTabValue($key,$ename."effectid","?") );
     $elem  = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved10","?") );
     $hopa  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_a","?") ); 
     $hopb  = getEffSpecial( "nozero",getTabValue($key,$ename."hop_b","?") );   
@@ -1711,6 +1739,8 @@ function getEffectBasicLine($efftyp,$key,$e)
     $weapn = "?";
     // komplette Texte
     $txt01 = "";
+    
+    // TODO  weitere Sonderfälle einarbeiten
     
     // einige Inhalte an die EMU anpassen
     $elem   = ($elem == "AIR") ? "WIND" : $elem;  
@@ -1769,7 +1799,8 @@ function getEffectBasicLine($efftyp,$key,$e)
         $npcnt = getTabValue($key,$ename."reserved6","?");
     } 
     // CHECKTIME ------------------------------------------
-    if ($efftyp == "bleed")
+    if ($efftyp == "bleed"
+    ||  $efftyp == "dpheal")
     {
         $check = getTabValue($key,$ename."checktime","?");
     }
@@ -1780,6 +1811,7 @@ function getEffectBasicLine($efftyp,$key,$e)
     }
     // CRITPROBMOD2 ---------------------------------------
     if ($efftyp == "delaydamage"
+    ||  $efftyp == "dispelbuff"
     ||  $efftyp == "signetburst")
     {
         $crit2 = getTabValue($key,$ename."critical_prob_mod2","0");
@@ -1830,7 +1862,9 @@ function getEffectBasicLine($efftyp,$key,$e)
         $state = "DEFORM";
     }
     // PERCENT --------------------------------------------
-    if ($efftyp == "delayedfpatk_instant")
+    if ($efftyp == "convertheal"
+    ||  $efftyp == "delayedfpatk_instant"
+    ||  $efftyp == "dpheal")
     {
         $perct = getTabValue($key,$ename."reserved6","0");
         $perct = ($perct == "1") ? "true" : "?";
@@ -1914,6 +1948,62 @@ function getEffectBasicLine($efftyp,$key,$e)
         $txt01 = ' signetlvl="'.$x08.'" signet="SYSTEM_SKILL_SIGNET'.$x07.'"'.
                  ' value="'.$x02.'"';
     }
+    // CONVERTHEAL-Texte
+    elseif ($efftyp == "convertheal")
+    {
+        // hitpercent,hitvalue
+        $x02 = getTabValue($key,$ename."reserved2","0");
+        $x06 = getTabValue($key,$ename."reserved6","0");
+        
+        if ($x02 != "0") $txt01 = ' hitpercent="true" hitvalue="'.$x02.'"';
+    }
+    // DISPEL...-Texte
+    elseif ($efftyp == "dispel")
+    {
+        $x01   = getEffSpecial( "upper",getTabValue($key,$ename."reserved1","?") );        
+        $x01   = str_replace("_","",$x01);            
+        $txt01 = ' dispeltype="'.$x01.'"';         
+    }
+    elseif ($efftyp == "dispelbuff"
+    ||      $efftyp == "dispelbuffcounteratk"
+    ||      $efftyp == "dispeldebuff"
+    ||      $efftyp == "dispeldebuffmental"
+    ||      $efftyp == "dispeldebuffphysical"
+    ||      $efftyp == "dispelnpcbuff")
+    {
+        // hitvalue,hitdelta
+        if ($efftyp == "dispelbuffcounteratk")
+        {
+            $x08 = getTabValue($key,$ename."reserved8","0");
+            $x09 = getTabValue($key,$ename."reserved9","0");
+            
+            if ($x09 != "0")   $txt01 .= ' hitvalue="'.$x09.'"';
+            if ($x08 != "0")   $txt01 .= ' hitdelta="'.$x08.'"';
+        }
+        
+        // dispel_level,power
+        $x16 = getTabValue($key,$ename."reserved16","0");
+        $x18 = getTabValue($key,$ename."reserved18","0");
+        
+        if ($x16 != "0")   $txt01 .= ' dispel_level="'.$x16.'"';
+        if ($x18 != "0")   $txt01 .= ' power="'.$x18.'"';
+        
+        // dpower
+        if ($efftyp == "dispeldebuffphysical")
+        {
+            $x17 = getTabValue($key,$ename."reserved17","0");
+            
+            if ($x17 != "0") $txt01 .= ' dpower="'.$x17.'"';
+        }    
+    }
+    elseif ($efftyp == "fear")
+    {
+        // resistchance
+        $x02 = getTabValue($key,$ename."reserved2","0");
+        
+        if ($x02 != "0"  &&  $x02 != "100")
+            $txt01 = ' resistchance="'.$x02.'"';
+    }
     // ----------------------------------------------------
     // Allgemeine Zeile mit allen aktiven Tags aufbereiten 
     // ----------------------------------------------------    
@@ -1961,7 +2051,7 @@ function getEffectBasicLine($efftyp,$key,$e)
 // ---------------------------------------------------------------------------
 // merken Effekt für den SVN-Abgleich
 // ---------------------------------------------------------------------------
-function setEffectSvnAbgleich($efftyp,$linetyp)
+function setEffectSvnCompare($efftyp,$linetyp)
 {
     global $tabeffsvn;
     
@@ -1982,7 +2072,7 @@ function setEffectSvnAbgleich($efftyp,$linetyp)
 // ---------------------------------------------------------------------------
 function getEffectDefault($efftyp,$key,$e)
 {
-    setEffectSvnAbgleich($efftyp,"L");
+    setEffectSvnCompare($efftyp,"L");
     
     $ret   = getEffectBasicLine($efftyp,$key,$e);
             
@@ -1996,7 +2086,7 @@ function getEffectDefault($efftyp,$key,$e)
 // ---------------------------------------------------------------------------
 function getEffectDefaultChanges($efftyp,$key,$e,&$tbneg)
 {  
-    setEffectSvnAbgleich($efftyp,"B");
+    setEffectSvnCompare($efftyp,"B");
     
     $ret   = getEffectBasicLine($efftyp,$key,$e);
             
@@ -2047,7 +2137,7 @@ function getEffectSignetAll($efftyp,$key,$e)
         }
         if ($sub != "")
         {
-            setEffectSvnAbgleich($efftyp,"B");
+            setEffectSvnCompare($efftyp,"B");
             
             $ret  = '            <'.$efftyp.$ret.'>'."\n";
             $ret .= $sub;
@@ -2055,12 +2145,60 @@ function getEffectSignetAll($efftyp,$key,$e)
         }
         else
         {
-            setEffectSvnAbgleich($efftyp,"L");
+            setEffectSvnCompare($efftyp,"L");
             
             $ret  = '            <'.$efftyp.$ret.'/>'."\n";
         }
     }
     
+    return $ret;
+}
+// ---------------------------------------------------------------------------
+// Effect aufbereiten für: dispel
+// ---------------------------------------------------------------------------
+function getEffectDispel($efftyp,$key,$e)
+{
+    $ret   = getEffectBasicLine($efftyp,$key,$e);
+    $ename = "effect".$e."_";
+    
+    if ($ret != "")
+    {
+        $disp  = "";
+        $x01   = getEffSpecial( "lower",getTabValue($key,$ename."reserved1","?") );        
+        $x01   = str_replace("_","",$x01); 
+        
+        for ($x=2;$x<10;$x++)   // reserved2 bis reserved9
+        {
+            $x02   = getEffSpecial( "upper",getTabValue($key,$ename."reserved".$x,"?") );
+            
+            if ($x02 != "?")
+            {
+                if     ($x02 == "SPECIAL")   $x02 = "SPEC";
+                elseif ($x02 == "SPECIAL2")  $x02 = "SPEC2";
+                
+                $disp .= '                <';
+                
+                if (stripos($x01,"TYPE") !== false)
+                    $disp .= $x01.'>'.$x02.'</'.$x01.'>'."\n";
+                else    
+                    $disp .= 'effectids>'.$x02.'</effectids>'."\n";
+            }
+        }
+        if ($disp != "")
+        {
+            setEffectSvnCompare($efftyp,"B");
+            
+            $ret = '            <'.$efftyp.$ret.'>'."\n".
+                   $disp.
+                   '            </'.$efftyp.'>'."\n";
+        }
+        else
+        {
+            setEffectSvnCompare($efftyp,"L");
+            
+            $ret = '            <'.$efftyp.$ret.'/>'."\n";
+        }
+    }
     return $ret;
 }
 // ---------------------------------------------------------------------------
@@ -2083,32 +2221,30 @@ function getEffectsLines($key)
         NOTUSED     changehateonattacked
         NOTUSED     summonbindinggroupgate 
         NOTUSED     deathblow
+        NOTUSED     dispelnpcdebuff
     */
     $tabnotuse['buffsleep']                      = 1;
     $tabnotuse['changehateonattacked']           = 1;
     $tabnotuse['summonbindinggroupgate']         = 1;
     $tabnotuse['deathblow']                      = 1;
+    $tabnotuse['dispelnpcdebuff']                = 1;
     /*    
         // TODO
-          name="disease" type="DiseaseEffect"
-        name="dispel" type="DispelEffect"
-        name="dispelbuff" type="DispelBuffEffect"
-        name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect"
-        name="dispeldebuff" type="DispelDebuffEffect"
-        name="dispeldebuffmental" type="DispelDebuffMentalEffect"
-        name="dispeldebuffphysical" type="DispelDebuffPhysicalEffect"
-        name="dispelnpcbuff" type="DispelNpcBuffEffect"
-        name="dispelnpcdebuff" type="DispelNpcDebuffEffect"
-        name="dpheal" type="DPHealEffect"
-        name="dphealinstant" type="DPHealInstantEffect"
+          name="dispel" type="DispelEffect"
+          name="dispelbuff" type="DispelBuffEffect"
+          name="dispelbuffcounteratk" type="DispelBuffCounterAtkEffect"
+          name="dispeldebuff" type="DispelDebuffEffect"
+          name="dispeldebuffmental" type="DispelDebuffMentalEffect"
+          name="dispeldebuffphysical" type="DispelDebuffPhysicalEffect"
+          name="dispelnpcbuff" type="DispelNpcBuffEffect"
+          name="dispelnpcdebuff" type="DispelNpcDebuffEffect"
+          name="dpheal" type="DPHealEffect"
+          name="dphealinstant" type="DPHealInstantEffect"
         name="dptransfer" type="DPTransferEffect"
         name="drboost" type="DRBoostEffect"
-          name="escape" type="EscapeEffect"
         name="evade" type="EvadeEffect"
         name="extendedaurarange" type="ExtendAuraRangeEffect"
-          name="fall" type="FallEffect"
-        name="fear" type="FearEffect"
-          name="flyoff" type="FlyOffEffect"
+          name="fear" type="FearEffect"
         name="fpatk" type="FpAttackEffect"
         name="fpatkinstant" type="FpAttackInstantEffect"
         name="fpheal" type="FPHealEffect"
@@ -2119,7 +2255,6 @@ function getEffectsLines($key)
         name="healinstant" type="HealInstantEffect"
         name="hide" type="HideEffect"
         name="hostileup" type="HostileUpEffect"
-          name="invulnerablewing" type="InvulnerableWingEffect"
         name="magiccounteratk" type="MagicCounterAtkEffect"
         name="movebehind" type="MoveBehindEffect"
         name="mpattack" type="MpAttackEffect"
@@ -2230,8 +2365,17 @@ function getEffectsLines($key)
             case "delayedfpatk_instant"      :  
             case "delayedskill"              :  
             case "disease"                   :  
+            case "dispelbuff"                :
+            case "dispelbuffcounteratk"      :
+            case "dispeldebuff"              :
+            case "dispeldebuffmental"        :
+            case "dispeldebuffphysical"      :
+            case "dispelnpcbuff"             :
+            case "dpheal"                    :
+            case "dphealinstant"             :
             case "escape"                    :  
             case "fall"                      :  
+            case "fear"                      :
             case "flyoff"                    :  
             case "hipass"                    :  
             case "invulnerablewing"          :       
@@ -2274,6 +2418,7 @@ function getEffectsLines($key)
             case "carvesignet"               :  
             case "signet"                    :
             case "signetburst"               :  $ret .= getEffectSignetAll($efftyp,$key,$e);                 break;
+            case "dispel"                    :  $ret .= getEffectDispel($efftyp,$key,$e);                    break;
             
             // IN DER EMU-XSD NICHT DEFINIERT / BEKANNT
             case "110282"                    :
@@ -2776,62 +2921,6 @@ function makeSvnCompareFile()
                     $doeff    = true;
                 }
             }
-            /*
-            // TODO        
-            // momentan auch für die Effekte nur Zeilenweise!  
-            // Effekt Blöcke
-            if     (stripos($line,"<apboost")       !== false
-            ||      stripos($line,"<boost")         !== false  // alle boost-Zeilen
-            ||      stripos($line,"<carvesignet")   !== false
-            ||      stripos($line,"<statup")        !== false
-            ||      stripos($line,"<statdown")      !== false
-            ||      stripos($line,"<wpnmastery")    !== false
-            ||      stripos($line,"<absoluteslow")  !== false
-            ||      stripos($line,"<absolutesnare") !== false
-            ||      stripos($line,"<armormastery")  !== false
-            ||      stripos($line,"<shieldmastery") !== false
-            ||      stripos($line,"<signetburst")   !== false
-            ||      stripos($line,"<snare")         !== false)
-            {
-                $doeff    = true;
-                
-                if (stripos($line,"/>") === false)
-                {
-                    $doblock  = true;
-                    $endblock = "</".getXmlKey($line).">";
-                }
-                else
-                    $doline = true;
-            }
-            // Effekt Zeilen
-            elseif (stripos($line,"<absstat")             !== false  // alle absstat-Zeilen
-            ||      stripos($line,"<always")              !== false  // alle always-Zeilen
-            ||      stripos($line,"<aura")                !== false
-            ||      stripos($line,"<backdash")            !== false
-            ||      stripos($line,"<bind")                !== false
-            ||      stripos($line,"<bleed")               !== false
-            ||      stripos($line,"<blind")               !== false
-            ||      stripos($line,"<buff")                !== false  // alle buff-Zeilen
-            ||      stripos($line,"<caseheal")            !== false
-            ||      stripos($line,"<closeaerial")         !== false
-            ||      stripos($line,"<condskilllaucncher")  !== false
-            ||      stripos($line,"<confuse")             !== false
-            ||      stripos($line,"<convertheal")         !== false
-            ||      stripos($line,"<delaydamage")         !== false
-            ||      stripos($line,"<delayedskill")        !== false
-            ||      stripos($line,"<dash")                !== false
-            ||      stripos($line,"<deform")              !== false
-            ||      stripos($line,"<hipass")              !== false
-            ||      stripos($line,"<return")              !== false  // alle return-Zeilen
-            ||      stripos($line,"<shapechange")         !== false
-            ||      stripos($line,"<signet")              !== false  // alle signet-Zeilen
-            ||      stripos($line,"<sleep")               !== false
-            ||      stripos($line,"<summon")              !== false) // alle Summon-Zeilen !!!
-            {
-                $doline   = true;
-                $doeff    = true;
-            } 
-            */            
             // Start <effects> ausgeben
             if ($doeff)
             {
