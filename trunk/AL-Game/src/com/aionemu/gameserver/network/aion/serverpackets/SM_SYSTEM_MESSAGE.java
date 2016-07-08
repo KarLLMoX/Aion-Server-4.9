@@ -20101,6 +20101,13 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     public static SM_SYSTEM_MESSAGE STR_MSG_QUEST_LIMIT_START_WEEK(String value1, String value0) {
         return new SM_SYSTEM_MESSAGE(1400857, value1, value0);
     }
+	
+	/**
+     * Ihr könnt diese Quest in %DURATIONDAY0 ein weiteres Mal annehmen.
+     */
+    public static SM_SYSTEM_MESSAGE STR_MSG_QUEST_COOLTIME_START_LIMITED_DURATION(String value0) {
+        return new SM_SYSTEM_MESSAGE(1402676, value0);
+    }
 
     /**
      * You cannot soul bind a sealed item.
