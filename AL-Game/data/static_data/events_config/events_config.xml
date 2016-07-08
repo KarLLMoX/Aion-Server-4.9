@@ -1776,6 +1776,16 @@
                         <spot x="2674.57" y="1570.85" z="424.9262" h="90"/>
                     </spawn>
                 </spawn_map>
+                <!-- Enshar -->
+                <spawn_map map_id="220080000">
+              		<!-- Shining Capsule -->
+                    <spawn npc_id="833660" respawn_time="600">
+                        <spot x="2907.46" y="368.24" z="282.3825" h="90"/>
+                        <spot x="1095.03" y="2495.14" z="282.2027" h="90"/>
+                        <spot x="2736.1" y="2514.14" z="184.23827" h="90"/>
+                        <spot x="556.43" y="1102.92" z="230.14108" h="90"/>
+                    </spawn>
+                </spawn_map>
             </spawns>
         </event>
     </events>
