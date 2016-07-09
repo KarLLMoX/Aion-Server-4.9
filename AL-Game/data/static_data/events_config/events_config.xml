@@ -1765,6 +1765,7 @@
               		<!-- Shining Capsule -->
                     <spawn npc_id="833660" respawn_time="600">
                         <spot x="1030.86" y="1024.3" z="332.72443" h="90"/>
+                        <spot x="1130.37" y="1524.7" z="269.00623" h="90"/>
                     </spawn>
                 </spawn_map>
                 <!-- Cygnea -->
