@@ -6336,7 +6336,7 @@
 				<part name="unk" type="d">
 					<reader type="UnixDate"/>
 				</part>
-				<part name="unk" type="d"/>
+				<part name="OccupyCount" type="d"/>
 			</for>
 		</packet>
 		<packet id="0xD3" name="SM_PLAYER_SEARCH">

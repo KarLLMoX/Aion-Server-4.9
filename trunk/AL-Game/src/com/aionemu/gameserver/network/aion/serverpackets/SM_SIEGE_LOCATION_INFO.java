@@ -80,21 +80,26 @@ public class SM_SIEGE_LOCATION_INFO extends AionServerPacket {
                     log.error("Can't find or load legion with id " + legionId);
                 } else {
                     emblem = LegionService.getInstance().getLegion(legionId).getLegionEmblem();
+                    if (emblem.getEmblemType() == LegionEmblemType.DEFAULT) {
+                        writeD(emblem.getEmblemId());
+                        writeC(255);
+                        writeC(emblem.getColor_r());
+                        writeC(emblem.getColor_g());
+                        writeC(emblem.getColor_b());
+                    } else {
+                        writeD(emblem.getCustomEmblemData().length);
+                        writeC(255);
+                        writeC(emblem.getColor_r());
+                        writeC(emblem.getColor_g());
+                        writeC(emblem.getColor_b());
+                    }
                 }
-            }
-
-            if (emblem.getEmblemType() == LegionEmblemType.DEFAULT) {
-                writeD(emblem.getEmblemId());
-                writeC(255);
-                writeC(emblem.getColor_r());
-                writeC(emblem.getColor_g());
-                writeC(emblem.getColor_b());
             } else {
-                writeD(emblem.getCustomEmblemData().length);
-                writeC(255);
-                writeC(emblem.getColor_r());
-                writeC(emblem.getColor_g());
-                writeC(emblem.getColor_b());
+                writeD(0);
+                writeC(0);
+                writeC(0);
+                writeC(0);
+                writeC(0);
             }
 
             writeC(loc.getRace().getRaceId());
@@ -108,20 +113,20 @@ public class SM_SIEGE_LOCATION_INFO extends AionServerPacket {
             // Next State (0 - invulnerable, 1 - vulnerable)
             writeC(loc.getNextState());
 
-            writeH(0); // unk
-            writeH(1);
+             writeH(0); // unk
+             writeH(0);
             switch (loc.getLocationId()) {
                 case 2111: // veille timer
                 case 3111: // mastarius timer
                     writeD(SiegeService.getInstance().getRemainingSiegeTimeInSeconds(loc.getLocationId()));
                     break;
                 default:
-                    writeD(10000);
+                    writeD(0);
                     break;
             }
-            writeD(0);//unk 4.7
-            writeD(67);//unk 4.7
-            writeD(0);//unk 4.7
+            writeD(50);//unk 4.9
+            writeD(0);//unk 4.9
+            writeD(loc.getOccupyCount());//Occupy Count
         }
     }
 }
