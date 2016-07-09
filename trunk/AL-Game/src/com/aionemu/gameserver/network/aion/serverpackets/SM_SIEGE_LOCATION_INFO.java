@@ -125,7 +125,7 @@ public class SM_SIEGE_LOCATION_INFO extends AionServerPacket {
                     break;
             }
             writeD(50);//unk 4.9
-            writeD(0);//unk 4.9
+            writeD(0);//TODO some DATE and TIME
             writeD(loc.getOccupyCount());//Occupy Count
         }
     }
