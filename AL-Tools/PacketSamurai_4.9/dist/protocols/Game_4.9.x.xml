@@ -4442,7 +4442,7 @@
 		<packet id="0x8D" name="SM_INSTANCE_INFO">
 			<part name="unk" type="c"/>
 			<part name="unk (unused?)" type="d"/>
-			<part name="unk" type="c"/>
+			<part name="cooldownId" type="c"/>
 			<part name="countOfEntries" type="h" id="0"/>
 			<for id="0">
 				<part name="playerObjId" type="d"/>
@@ -4454,7 +4454,8 @@
 					<part name="MaxEntry's" type="d"/>
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
-					<part name="unk" type="c"/>
+					<part name="unk" type="d"/>
+					<part name="activ" type="c"/>
 				</for>
 				<part name="playerName (max len 0x1A)" type="S"/>
 			</for>
@@ -6332,7 +6333,9 @@
 				<part name="unk(1)" type="h"/>
 				<part name="siegeTime" type="d"/>
 				<part name="unk" type="d"/>
-				<part name="unk" type="d"/>
+				<part name="unk" type="d">
+					<reader type="UnixDate"/>
+				</part>
 				<part name="unk" type="d"/>
 			</for>
 		</packet>
