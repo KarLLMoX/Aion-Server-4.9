@@ -1274,6 +1274,33 @@ function scanClientItemTemplateFiles()
     flush();
 }
 // ----------------------------------------------------------------------------
+// spezielle Prüfungen für einige Items
+// ----------------------------------------------------------------------------
+function checkSpecialItems($key)
+{
+    global $tabTpls;
+    
+    // Items der Category=QUEST und InvenoryID=2 prüfen (Quest-Items)
+    // nicht zugelassen sind für:
+    // - armor_type    : ARMOR, ACCESSORY, ARROW
+    // - equipment_type: ARMOR
+    if (isset($tabTpls[$key]['category'])
+    &&  isset($tabTpls[$key]['extra_inventory']))
+    {
+        if ($tabTpls[$key]['category']        == "QUEST"
+        &&  $tabTpls[$key]['extra_inventory'] == "2")
+        {
+            if ($tabTpls[$key]['outarmortype']  == "ARMOR"
+            ||  $tabTpls[$key]['outarmortype']  == "ACCESSORY"
+            ||  $tabTpls[$key]['outarmortype']  == "ARROW")     
+                $tabTpls[$key]['outarmortype']   = "";
+            
+            if ($tabTpls[$key]['equipmenttype'] == "ARMOR")     
+                $tabTpls[$key]['equipmenttype']  = "";
+        }
+    }
+}
+// ----------------------------------------------------------------------------
 // fehlende Informationen ermitteln
 // ----------------------------------------------------------------------------
 function makeMissingItemTemplateData()
@@ -1338,6 +1365,9 @@ function makeMissingItemTemplateData()
         else
             if ($tabTpls[$key]['level'] == "")
                 $tabTpls[$key]['level'] = "0";
+               
+        // spezielle Behandlung für einige Items bzgl. armor_/equipment_type
+        checkSpecialItems($key); 
     }
     logLine("- verarbeitete Items",$cntitm);
 }
@@ -1451,9 +1481,13 @@ function generItemTemplates()
             
             if (stripos($line,'<item_template ') !== false)
             {
-                $key           = getKeyValue("id",$line);
-                $svnKeys[$key] = 1;
-                $tabTpls[$key]['insvn'] = true;
+                $key = getKeyValue("id",$line);
+                
+                if (isset($tabTpls[$key]))
+                {
+                    $svnKeys[$key] = 1;
+                    $tabTpls[$key]['insvn'] = true;
+                }
             }
         }
         fclose($hdlsvn);
