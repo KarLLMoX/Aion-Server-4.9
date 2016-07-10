@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Updated via PacketSamurai AionGer-Edtion - [Fri Jul 08 21:40:24 CEST 2016] -->
+<!-- Updated via PacketSamurai AionGer-Edtion - [Sun Jul 10 11:28:50 CEST 2016] -->
 <spawns>
 	<!-- Cygnea -->
 	<spawn_map map_id="210070000">
@@ -78,6 +78,7 @@
 			<spot x="732.5623" y="2402.0447" z="287.23242" h="0"/>
 			<spot x="750.15784" y="2795.005" z="276.23212" h="0"/>
 			<spot x="773.999" y="2341.93" z="294.36612" h="0"/>
+			<spot x="785.3731" y="2487.3694" z="292.36243" h="0"/>
 			<spot x="816.79205" y="3011.2388" z="274.58954" h="0"/>
 			<spot x="873.5899" y="2383.9487" z="289.25708" h="0"/>
 			<spot x="894.28723" y="2684.9382" z="269.11136" h="0"/>
