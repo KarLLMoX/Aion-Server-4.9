@@ -6483,6 +6483,10 @@
 			<part name="unk" type="h"/>
 			<part name="actionId" type="c" id="1"/>
 			<switch id="1">
+				<case id="0">
+					<part name="unk" type="c"/>
+					<part name="unk" type="d"/>
+				</case>
 				<case id="1">
 					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
@@ -6498,6 +6502,7 @@
 					<part name="z" type="f"/>
 					<part name="isVortex" type="c"/>
 					<part name="isMaster" type="c"/>
+					<part name="mapId" type="d"/>
 				</case>
 				<case id="3">
 					<part name="objectId" type="d"/>
