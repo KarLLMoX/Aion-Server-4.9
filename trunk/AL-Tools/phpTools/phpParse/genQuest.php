@@ -389,6 +389,8 @@ function getBonusLine()
                     $blev = filter_var($blev,FILTER_SANITIZE_NUMBER_INT);
                     $blev = ($blev == "") ? "0" : $blev;
                     
+                    if ($blev != "0") $blev = ltrim($blev,"0"); // führende Null entfernen
+                    
                     $ret .= '        <bonus level="'.$blev.'" type="'.$btyp.'"/>'."\n";
                     $b    = $maxBonus;
                 }    
