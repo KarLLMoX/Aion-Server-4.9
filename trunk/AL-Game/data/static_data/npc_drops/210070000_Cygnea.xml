@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 09.07.2016 10:20 aus PS-Drop-Datei: Cygnea_4.9_loot_live411154436.xml -->
+<!-- generiert am/um 11.07.2016 18:23 aus PS-Drop-Datei: Cygnea_4.9_loot_live411636610.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="220061">
         <drop_group name="BALIC_MATERIAL_COMMON_LVL50" use_category="true" race="PC_ALL">
@@ -777,6 +777,9 @@
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="235822">
+        <drop_group name="FOOD_JUNK_LVL50" use_category="true" race="PC_ALL">
+            <drop item_id="182007362" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Rare Species' Scale" />
+        </drop_group>
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182007371" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Rare Species' Membrane" />
         </drop_group>
@@ -2116,6 +2119,11 @@
             <drop item_id="182007009" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Feeler" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="235914">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="235915">
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
@@ -2198,10 +2206,14 @@
             <drop item_id="182007010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Marrowbone" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="2862" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="5177" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Talon" />
+        </drop_group>
+        <drop_group name="OTHER_ITEMS" use_category="true" race="PC_ALL">
+            <drop item_id="185000223" chance="0.001" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Aetheric Field Fragment" />
+            <drop item_id="185000243" chance="0.001" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Aetheric Field Piece" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="235940">
@@ -2748,6 +2760,7 @@
     <npc_drop npc_id="235963">
         <drop_group name="WEAPON_UNIQUE_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="100001790" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sealed Earth Sword" />
+            <drop item_id="100501348" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sealed Earth Orb" />
         </drop_group>
         <drop_group name="FLUX_COMMON_LVL60" use_category="true" race="PC_ALL">
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
@@ -2760,6 +2773,17 @@
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Talon" />
+        </drop_group>
+        <drop_group name="STONE_LEGEND_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Elegant Middle Grade Composite Manastone Bundle" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="235965">
+        <drop_group name="WEAPON_UNIQUE_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="100101380" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sealed Earth Mace" />
+        </drop_group>
+        <drop_group name="OTHER_COMMON_LVL60" use_category="true" race="PC_ALL">
+            <drop item_id="152015016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prime Abex Cut" />
         </drop_group>
         <drop_group name="STONE_LEGEND_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="188053744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Elegant Middle Grade Composite Manastone Bundle" />
@@ -2784,6 +2808,7 @@
     <npc_drop npc_id="235969">
         <drop_group name="WEAPON_UNIQUE_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="100901417" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sealed Earth Greatsword" />
+            <drop item_id="101901166" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sealed Earch Aethercannon" />
         </drop_group>
         <drop_group name="ELEMENTAL_STONES" use_category="true" race="PC_ALL">
             <drop item_id="152010325" chance="11.5" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Wispy Elemental Stone" />
@@ -2805,7 +2830,7 @@
             <drop item_id="152010322" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Sublime Rawhide" />
         </drop_group>
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
-            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="19408" no_reduce="false" eachmember="false" name="Kinah" />
+            <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="36105" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Talon" />
@@ -3077,6 +3102,11 @@
     <npc_drop npc_id="236646">
         <drop_group name="BALIC_MATERIAL_COMMON_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="152010319" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Elemental Stone" />
+        </drop_group>
+        <drop_group name="FLUX_COMMON_LVL58" use_category="true" race="PC_ALL">
+            <drop item_id="152011080" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Finest Weapon Flux" />
+            <drop item_id="152011084" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Finest Armor Flux" />
+            <drop item_id="152011088" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Finest Accessory Flux" />
         </drop_group>
         <drop_group name="OTHER_COMMON_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="160003555" chance="2.50" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Major Rally Serum" />
