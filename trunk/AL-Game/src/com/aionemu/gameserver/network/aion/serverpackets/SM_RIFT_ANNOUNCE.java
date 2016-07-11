@@ -77,7 +77,7 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket {
     protected void writeImpl(AionConnection con) {
     	switch (actionId) {
             case 0: //announce
-                writeH(0x21);//4.7 // old -->writeH(0x19); // 0x19
+                writeH(0x57);//4.7 // old -->writeH(0x19); // 0x19 // 4.9 = 57
                 writeC(actionId);
                 for (int value : rifts.values()) {
                     writeD(value);
@@ -90,7 +90,7 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket {
                 writeD(inggison);
                 break;
             case 2:
-                writeH(0x35); // 0x35 
+                writeH(0x39); // 0x39
                 writeC(actionId);
                 writeD(rift.getOwner().getObjectId());
                 writeD(rift.getMaxEntries());
@@ -102,6 +102,7 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket {
                 writeF(rift.getOwner().getZ());
                 writeC(rift.isVortex() ? 1 : 0); // red | blue
                 writeC(rift.isMaster() ? 1 : 0); // display | hide
+				writeD(rift.getOwner().getWorldId());
                 break;
             case 3:
                 writeH(0x15);
@@ -109,13 +110,15 @@ public class SM_RIFT_ANNOUNCE extends AionServerPacket {
                 writeD(rift.getOwner().getObjectId());
                 writeD(rift.getUsedEntries());
                 writeD(rift.getRemainTime());
-                writeC(rift.isVortex() ? 1 : 0);
-                writeC(rift.isMaster() ? 1 : 0);
+                writeC(rift.isVortex() ? 1 : 0); // red | blue
+                writeC(rift.isMaster() ? 1 : 0); // display | hide
                 break;
             case 4:
                 writeH(0x07);
                 writeC(actionId);
                 writeD(objectId);
+                writeC(rift.isVortex() ? 1 : 0); // red | blue
+                writeC(rift.isMaster() ? 1 : 0); // display | hide
                 break;
             case 5:
                 writeH(0x05);
