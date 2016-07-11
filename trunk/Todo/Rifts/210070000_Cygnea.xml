@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spawns>
+    <spawn_map map_id="210070000">
+        <!-- Rift -->
+		<!-- Volatile Rift ||| DirectPortal_Interactive_Start -->
+		<spawn npc_id="702723" respawn_time="295">
+			<!-- 144 Entrys, Lvl 55-65 -->
+			<spot x="2949.8804" y="2852.939" z="276.3364" h="60"/>
+		</spawn>
+		<!-- Rift ||| directportal_Start -->
+		<spawn npc_id="700137" respawn_time="295">
+			<spot x="1746.409" y="140.65057" z="542.1664" h="15"/> <!-- 5 "Crimson Hills" -->
+			<spot x="1913.0323" y="2674.0725" z="326.46585" h="90"/> <!-- 4 "Mooswald" -->
+			<spot x="2054.0703" y="1433.6185" z="428.19574" h="100"/> <!-- 3 "Tempel der Abenddämmerung" -->
+			<spot x="921.86084" y="2380.6462" z="290.72208" h="36"/> <!-- 2 "Dornenwüste" -->
+			<spot x="791.8552" y="1866.1117" z="463.74097" h="90"/> <!-- 1 "Balaur-Garten" -->
+		</spawn>
+    </spawn_map>
+
+
+
+    <spawn_map map_id="220080000">
+		<!-- Rift ||| directportal_Destination -->
+		<spawn npc_id="700138" respawn_time="295">
+			<spot x="2739.662" y="1591.5354" z="347.85513" h="0"/> <!-- 1 -->
+			<spot x="2731.43" y="973.4546" z="289.3475" h="60"/> <!-- 2 -->
+			<spot x="232.77876" y="1363.8507" z="328.36523" h="0"/> <!-- 3 -->
+			<spot x="1915.154" y="548.2501" z="262.72296" h="90"/> <!-- 4 -->
+			<spot x="954.0637" y="2551.1965" z="302.14624" h="0"/> <!-- 5 -->
+		</spawn>
+    </spawn_map>
+</spawns>
