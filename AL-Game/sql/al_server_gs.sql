@@ -1287,9 +1287,3 @@ CREATE TABLE `weddings` (
 -- ----------------------------
 -- Records of weddings
 -- ----------------------------
-
--- ----------------------------
--- View structure for `pet_feed_data`
--- ----------------------------
-DROP VIEW IF EXISTS `pet_feed_data`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pet_feed_data` AS select `al_server_gs`.`player_pets`.`player_id` AS `player_id`,`al_server_gs`.`player_pets`.`pet_id` AS `pet_id`,`al_server_gs`.`player_pets`.`name` AS `name`,`al_server_gs`.`player_pets`.`hungry_level` AS `hungry_level`,(`al_server_gs`.`player_pets`.`feed_progress` >> 24) AS `regular_count`,(((`al_server_gs`.`player_pets`.`feed_progress` & 0xfffc00) >> 10) * 4) AS `feed_points`,((`al_server_gs`.`player_pets`.`feed_progress` & 0x03f0) >> 4) AS `loved_count` from `player_pets` where (`al_server_gs`.`player_pets`.`feed_progress` <> 0) ;
