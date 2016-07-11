@@ -6484,12 +6484,24 @@
 			<part name="actionId" type="c" id="1"/>
 			<switch id="1">
 				<case id="0">
-					<part name="unk" type="c"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
 					<part name="unk" type="d"/>
 				</case>
 				<case id="1">
-					<part name="unk" type="d"/>
-					<part name="unk" type="d"/>
+					<part name="gelkmaros" type="d"/>
+					<part name="inggison" type="d"/>
 				</case>
 				<case id="2">
 					<part name="objectId" type="d"/>
