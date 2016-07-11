@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generiert am/um 08.07.2016 10:07 aus PS-Drop-Datei: Enshar_4.9_loot_live425829635.xml -->
+<!-- generiert am/um 11.07.2016 18:23 aus PS-Drop-Datei: Enshar_4.9_loot_live404551763.xml -->
 <npc_drops xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="npc_drops.xsd">
     <npc_drop npc_id="219656">
         <drop_group name="JUNK_JUNK_LVL65" use_category="true" race="PC_ALL">
@@ -715,6 +715,11 @@
             <drop item_id="182007371" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Rare Species' Membrane" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="219700">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="219701">
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182007354" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Rare Insect's Outer Skin" />
@@ -1377,6 +1382,9 @@
             <drop item_id="152015016" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Prime Abex Cut" />
             <drop item_id="160003556" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Rally Serum" />
             <drop item_id="160003562" chance="2.40" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Focus Agent" />
+        </drop_group>
+        <drop_group name="MANASTONES_LVL70" use_category="true" race="PC_ALL">
+            <drop item_id="188054205" chance="0.02" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Superior Manastone Ore" />
         </drop_group>
         <drop_group name="JUNK_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007010" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Marrowbone" />
