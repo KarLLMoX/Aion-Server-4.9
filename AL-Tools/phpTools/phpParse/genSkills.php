@@ -1364,8 +1364,14 @@ function getEffValType($efftyp,$key,$ename)
     ||  $efftyp == "statup"
     ||  $efftyp == "summontrap"
     ||  $efftyp == "movebehind"
-    ||  $efftyp == "mpshield" 
-    ||  $efftyp == "poison"    
+    ||  $efftyp == "mpshield"
+    ||  $efftyp == "petorderuseultraskill"    
+    ||  $efftyp == "poison"  
+    ||  $efftyp == "procatk_instant"  
+    ||  $efftyp == "protect"  
+    ||  $efftyp == "randommoveloc"   
+    ||  $efftyp == "reflector" 
+    ||  $efftyp == "riderobot"
     ||  $efftyp == "shield"
     ||  $efftyp == "silence")
     {
@@ -1379,7 +1385,10 @@ function getEffValType($efftyp,$key,$ename)
         $ret = getEffSpecial( "upper",getTabValue($key,$ename."reserved13","?") );
     // aus reserved 4
     elseif ($efftyp == "hide")
-        $ret = getTabValue($key,$ename."reserved4","?");  
+        $ret = getTabValue($key,$ename."reserved4","?"); 
+    // aus reserved5
+    elseif ($efftyp == "onetimeboostskillattack")
+        $ret = getEffSpecial( "upper",getTabValue($key,$ename."reserved5","?") );
     // konstant        
     elseif (substr($efftyp,0,8) == "healcast")
         $ret = "HP";
@@ -1406,7 +1415,8 @@ function getEffValValue($efftyp,$key,$ename)
     if     ($efftyp == "boostskillcost"
     ||      $efftyp == "blind"
     ||      $efftyp == "delaydamage"
-    ||      $efftyp == "flyoff")
+    ||      $efftyp == "flyoff"
+    ||      $efftyp == "procatk_instant")
     {
         $ret = getTabValue($key,$ename."reserved2","?");
     }
@@ -1431,19 +1441,27 @@ function getEffValValue($efftyp,$key,$ename)
     ||      $efftyp == "magiccounteratk"
     ||      $efftyp == "mpattackinstant"
     ||      $efftyp == "mphealinstant"
-    ||      $efftyp == "noreducespellatk")
+    ||      $efftyp == "noreducespellatk"
+    ||      $efftyp == "onetimeboostskillattack"
+    ||      $efftyp == "procdphealinstant" 
+    ||      $efftyp == "procfphealinstant"
+    ||      $efftyp == "prochealinstant" 
+    ||      $efftyp == "procmphealinstant" 
+    ||      $efftyp == "procvphealinstant" )
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","?") );
     }
     // aus reserved4
     elseif ($efftyp == "backdash"
     ||      $efftyp == "condskilllauncher"
-    ||      $efftyp == "dash")
+    ||      $efftyp == "dash"
+    ||      $efftyp == "onetimeboostskillcritical")
     {
         $ret = getTabValue($key,$ename."reserved4","?");
     }
     // aus reserved8 
-    elseif ($efftyp == "convertheal")
+    elseif ($efftyp == "convertheal"
+    ||      $efftyp == "reflector")
     {
         $ret = getTabValue($key,$ename."reserved8","?");
     }
@@ -1466,7 +1484,8 @@ function getEffValValue($efftyp,$key,$ename)
     ||      $efftyp == "fpheal"
     ||      $efftyp == "heal"
     ||      $efftyp == "mpattack"
-    ||      $efftyp == "mpheal")
+    ||      $efftyp == "mpheal"
+    ||      $efftyp == "protect")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved9","?") );
     }    
@@ -1506,6 +1525,10 @@ function getEffValDelta($efftyp,$key,$ename)
     ||      $efftyp == "healcastorontargetdead"
     ||      $efftyp == "hostileup"
     ||      $efftyp == "noreducespellatk"
+    ||      $efftyp == "procatk_instant"
+    ||      $efftyp == "procfphealinstant"
+    ||      $efftyp == "prochealinstant"
+    ||      $efftyp == "procmphealinstant"
     ||      $efftyp == "signetburst")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","?") );
@@ -1517,7 +1540,9 @@ function getEffValDelta($efftyp,$key,$ename)
         $ret = getTabValue($key,$ename."reserved3","0");
     } 
     // aus reserved7 (aber ungleich 0)
-    elseif ($efftyp == "mpshield"
+    elseif ($efftyp == "convertheal"
+    ||      $efftyp == "mpshield"
+    ||      $efftyp == "reflector"
     ||      $efftyp == "shield")
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved7","?") );
@@ -1556,6 +1581,18 @@ function getEffValSkillid($efftyp,$key,$ename)
     {
         $skill = getTabValue($key,$ename."reserved3","?");
     }
+    elseif ($efftyp == "provoker")
+    {
+        $skill = getTabValue($key,$ename."reserved17","?");
+    }
+    elseif ($efftyp == "rebirth"
+    ||      $efftyp == "resurrect"
+    ||      $efftyp == "resurrectbase"
+    ||      $efftyp == "resurrectpos")
+    {
+        $skill = getTabValue($key,$ename."reserved6","?");
+    }
+    
     if ($skill != "?")
         return getRefSkillNameId($key,$skill);
     else
@@ -1567,11 +1604,7 @@ function getEffValSkillid($efftyp,$key,$ename)
 // Zeilen für die Changes aufbereiten
 // ----------------------------------------------------------------------------
 function getChangeStats($efftyp,$key,$e,$tbneg)
-{    
-    global $protkey;
-    
-    $protkey = $key;
-    
+{        
     // Tabelle für alle Client-Felder, die STAT-Werte enthalten
     $tabstats = array(
                   //     Name         Value        Stats???
@@ -1603,7 +1636,9 @@ function getChangeStats($efftyp,$key,$e,$tbneg)
     {
         $btext = getTabValue($key,"desc","?");
         $bname = getIntSkillName($btext);
-    }    
+    } 
+    // TODO weitere Effekte einarbeiten
+    
     // spezielle Conditions vorab prüfen (Default-Changes !!!)
     switch($efftyp)
     {
@@ -1701,6 +1736,11 @@ function getChangeStats($efftyp,$key,$e,$tbneg)
         case "hide":
             if ($res2 != "?"  &&  $res2 != "100")
                 $ret .= '                <change stat="SPEED" func="PERCENT" value="'.($res2  - 100).'"/>'."\n";
+            return $ret;
+        case "onetimeboostheal":
+            $x04 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","0") );
+            if ($x04 != "?")
+                $ret .= '                <change stat="HEAL_SKILL_BOOST" func="PERCENT" value="'.$x04.'"/>'."\n";
             return $ret;
         case "skillxpboost#combine":
             if ($res2 != "?")
@@ -1827,17 +1867,34 @@ function getEffectBasicConditions($efftyp,$key,$e)
     $ename = "effect".$e."_";
     
     if ($efftyp == "paralyze"
-    ||  $efftyp == "poison")
+    ||  $efftyp == "poison"
+    ||  $efftyp == "openaerial")
     {
         $cst = getEffSpecial( "upper",getTabValue($key,$ename."cond_status","?") );
         $dir = getTabValue($key,$ename."cond_attack_dir","?");
         
         if ($cst != "?")
         {
-            $ret .= '                <conditions>'."\n".
-                    '                    <abnormal value="'.$cst.'"/>'."\n".
-                    '                </conditions>'."\n";
+            switch ($cst)
+            {
+                case "_FLYING" : 
+                    $ret .= '                <conditions>'."\n".
+                            '                    <targetflying/>'."\n".
+                            '                </conditions>'."\n";
+                    break;
+                case "_NFLYING":                
+                    $ret .= '                <conditions>'."\n".
+                            '                    <noflying/>'."\n".
+                            '                </conditions>'."\n"; 
+                    break;
+                default:
+                    $ret .= '                <conditions>'."\n".
+                            '                    <abnormal value="'.$cst.'"/>'."\n".
+                            '                </conditions>'."\n";
+                    break;
+            }
         }
+        
         if ($dir == "1")
         {
             $ret .= '                <conditions>'."\n".
@@ -1846,6 +1903,19 @@ function getEffectBasicConditions($efftyp,$key,$e)
         }
     }
     
+    return $ret;
+}
+// ----------------------------------------------------------------------------
+// Zeilen für die SubEffekte zum Effekt aufbereiten (ohne Change)
+// ----------------------------------------------------------------------------
+function getEffectBasicSubEffect($efftyp,$key,$e)
+{
+    $ret   = "";
+    $ename = "effect".$e."_";
+    
+    if ($efftyp == "procatk_instant")
+        $ret = getSubEffect($efftyp,$key,$e,"reserved14");
+        
     return $ret;
 }
 // ----------------------------------------------------------------------------
@@ -1928,7 +1998,6 @@ function getEffectBasicLine($efftyp,$key,$e)
     
     // nur bedingt relevante Werte, werden nachfolgend ermittelt
     $adist = "?";
-    $armor = "?";
     $atcnt = "?";
     $check = "?";
     $condv = "?";
@@ -1936,16 +2005,15 @@ function getEffectBasicLine($efftyp,$key,$e)
     $delay = "?";
     $distz = "?";
     $npcnt = "?";
-    $owner = "?";
     $panel = "?";
     $perct = "?"; 
     $share = "?";
     $state = "?";
-    $stset = "?";
     $time  = "?";
-    $weapn = "?";
-    // komplette Texte
-    $txt01 = "";
+    // komplette Texte    
+    $txkey = "";            // für Keys
+    $txval = "";            // für Attribute am Anfang
+    $txlst = "";            // für Atrribute am Ende
     
     // TODO  weitere Sonderfälle einarbeiten
     
@@ -1965,7 +2033,8 @@ function getEffectBasicLine($efftyp,$key,$e)
         if ($acmod == "0") $acmod = "?";
     }
     // BASICLVL = 0 ---------------------------------------
-    if ($efftyp == "curse"
+    if ($efftyp == "carvesignet"
+    ||  $efftyp == "curse"
     ||  $efftyp == "mpheal"
     ||  $efftyp == "mpshield"
     ||  $efftyp == "shield")
@@ -1990,18 +2059,12 @@ function getEffectBasicLine($efftyp,$key,$e)
     {
         $tran = getEffSpecial( "nozero",$tran);
     } 
-
     // ----------------------------------------------------
     // Hinzufügen einiger Tags
     //
     // bei einigen Effekten werden zusätzliche Angaben
     // benötigt
     // ----------------------------------------------------  
-    // ARMOR ----------------------------------------------
-    if ($efftyp == "armormastery")
-    {
-        $armor = getEffSpecial( "upper",getTabValue($key,$ename."reserved5","?") );
-    } 
     // ATTACK_COUNT und NPC_COUNT -------------------------
     if ($efftyp == "summonhoming")
     {
@@ -2034,7 +2097,8 @@ function getEffectBasicLine($efftyp,$key,$e)
         $crit2 = getTabValue($key,$ename."critical_prob_mod2","0");
         $crit2 = ($crit2 == "100") ? "?" : $crit2;
     }
-    elseif ($efftyp == "poison")
+    elseif ($efftyp == "poison"
+    ||      $efftyp == "procatk_instant")
     {
         $crit2 = getTabValue($key,$ename."critical_prob_mod2","?");
         $crit2 = ($crit2 == "100") ? "?" : $crit2;
@@ -2059,22 +2123,9 @@ function getEffectBasicLine($efftyp,$key,$e)
     {
         $adist = getTabValue($key,$ename."reserved4","?");
     }
-    // OWNER ----------------------------------------------
-    if ($efftyp == "summonfunctionalnpc")
-    {
-        $owner = getEffSpecial( "upper",getTabValue($key,$ename."reserved7","?") );
-        
-        switch($owner)
-        {
-            case "FORCE"  : $owner = "ALLIANCE"; break;
-            case "PARTY"  : $owner = "GROUP";    break;
-            case "GUILD"  : $owner = "LEGION";   break;
-            case "PRIVATE": $owner = "PRIVATE";  break;
-            default:        $owner = "?";        break;
-        }
-    }        
     // PANELID / STATE ------------------------------------
-    if ($efftyp == "shapechange")
+    if ($efftyp == "shapechange"
+    ||  $efftyp == "polymorph")
     {
         $panel = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") );
         $state = getEffSpecial( "state" ,getTabValue($key,$ename."reserved13","?") );
@@ -2108,6 +2159,12 @@ function getEffectBasicLine($efftyp,$key,$e)
     ||      $efftyp == "mphealinstant"
     ||      $efftyp == "mpshield"
     ||      $efftyp == "noreducespellatk"
+    ||      $efftyp == "procfphealinstant"
+    ||      $efftyp == "prochealinstant"
+    ||      $efftyp == "procmphealinstant"
+    ||      $efftyp == "procvphealinstant"
+    ||      $efftyp == "protect"
+    ||      $efftyp == "reflector"
     ||      $efftyp == "shield")
     {
         $perct = getTabValue($key,$ename."reserved6","0");
@@ -2119,13 +2176,6 @@ function getEffectBasicLine($efftyp,$key,$e)
         $share = getTabValue($key,$ename."reserved19","?");
         $share = ($share == "1") ? "true" : "?";
     }
-    // STATSETID ------------------------------------------
-    if ($efftyp == "absstatbuff"
-    ||  $efftyp == "absstatdebuff")
-    {
-        $sname = getTabValue($key,$ename."reserved1","?");
-        $stset = getStatSetId($sname);
-    }     
     // TIME -----------------------------------------------
     if (stripos($efftyp,"summon") !== false)
     {
@@ -2138,18 +2188,31 @@ function getEffectBasicLine($efftyp,$key,$e)
         else
             $time = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","?") ); 
     } 
-    // WEAPON ---------------------------------------------
-    if ($efftyp == "wpnmastery")
-    {
-        $weapn = getEffSpecial( "weapon",getTabValue($key,$ename."reserved5","?") );
-    } 
     // ----------------------------------------------------
     // hinzufügen einiger, kompletter Tag-Texte 
     // ----------------------------------------------------
-    // SIGNET-Texte
-    if    ($efftyp == "carvesignet")
+    // ABSSTATBUFF / ABSSTATDEBUFF ------------------------
+    if ($efftyp == "absstatbuff"
+    ||  $efftyp == "absstatdebuff")
     {
-        // signet,signetid,signetlvlstart,signetlvl
+        // statsetid
+        $x01 = getTabValue($key,$ename."reserved1","?");
+        $sid = getStatSetId($x01);
+        
+        if ($sid != "?")  $txkey .= ' statsetid="'.$sid.'"';
+    }     
+    // ARMORMASTERY ---------------------------------------
+    if ($efftyp == "armormastery")
+    {
+        // armor
+        $x05 = getEffSpecial( "upper",getTabValue($key,$ename."reserved5","?") );
+        
+        if ($x05 != "?")  $txkey .= ' armor="'.$x05.'"';
+    } 
+    // CARVESIGNET ----------------------------------------
+    elseif ($efftyp == "carvesignet")
+    {
+        // signet,signetid,signetlvlstart,signetlvl,prob,value,delta,mod
         $x02   = getTabValue($key,$ename."reserved2","?");
         $x04   = getTabValue($key,$ename."reserved4","?");
         $x10   = getTabValue($key,$ename."reserved10","0");
@@ -2159,54 +2222,46 @@ function getEffectBasicLine($efftyp,$key,$e)
         $sig   = "signet".$x13."_".$x14;
         $sid   = getRefSkillNameId($key,$sig);
         
-        $txt01 = ' signet="SYSTEM_SKILL_SIGNET'.$x13.'" signetid="'.$sid.'"';
-        if ($x10 > "1")
-            $txt01 .= ' signetlvlstart="'.$x10.'"';
-        $txt01 .= ' signetlvl="'.$x14.'"';
+        $txkey = ' signet="SYSTEM_SKILL_SIGNET'.$x13.'" signetid="'.$sid.'"';
+        
+        if ($x10 > "1")          $txval .= ' signetlvlstart="'.$x10.'"';
+            
+        $txval .= ' signetlvl="'.$x14.'"';
         
         if ($x16 > 0  && $x16 != "100")
-            $txt01 .= ' prob="'.$x16.'"';
+            $txval .= ' prob="'.$x16.'"';
         
         if ($x04 != "?")
         {
-            $txt01 .= ' value="'.$x04.'"';
+            $txval .= ' value="'.$x04.'"';
             $dta    = getTabValue($key,$ename."reserved3","?");
             $dta    = ($dta != "?" && $dta != "0") ? ' delta="'.$dta.'"' : '';
-            $txt01 .= $dta;
+            $txval .= $dta;
         }
         elseif ($x02 != "?")
-            $txt01 .= ' mode="PERCENT" value="'.$x02.'"';
+        {
+            $txval .= ' mode="PERCENT" value="'.$x02.'"';
             $dta    = getTabValue($key,$ename."reserved1","?");
             $dta    = ($dta != "?" && $dta != "0") ? ' delta="'.$dta.'"' : '';
-            $txt01 .= $dta;
-            
-        if ($blev == "0") $blev = "?";
+            $txval .= $dta;
+        }            
     }
-    elseif ($efftyp == "signetburst")
-    {
-        // signetlvl,signet,value
-        $x02   = getTabValue($key,$ename."reserved2","");
-        $x07   = getTabValue($key,$ename."reserved7","");
-        $x08   = getTabValue($key,$ename."reserved8","");
-        
-        $txt01 = ' signetlvl="'.$x08.'" signet="SYSTEM_SKILL_SIGNET'.$x07.'"'.
-                 ' value="'.$x02.'"';
-    }
-    // CONVERTHEAL-Texte
+    // CONVERTHEAL ----------------------------------------
     elseif ($efftyp == "convertheal")
     {
         // hitpercent,hitvalue
         $x02 = getTabValue($key,$ename."reserved2","0");
         $x06 = getTabValue($key,$ename."reserved6","0");
         
-        if ($x02 != "0") $txt01 = ' hitpercent="true" hitvalue="'.$x02.'"';
+        if ($x02 != "0") $txval = ' hitpercent="true" hitvalue="'.$x02.'"';
     }
-    // DISPEL...-Texte
+    // DISPEL... ------------------------------------------
     elseif ($efftyp == "dispel")
     {
+        // dispel_type
         $x01   = getEffSpecial( "upper",getTabValue($key,$ename."reserved1","?") );        
         $x01   = str_replace("_","",$x01);            
-        $txt01 = ' dispeltype="'.$x01.'"';         
+        $txval = ' dispeltype="'.$x01.'"';         
     }
     elseif ($efftyp == "dispelbuff"
     ||      $efftyp == "dispelbuffcounteratk"
@@ -2222,44 +2277,43 @@ function getEffectBasicLine($efftyp,$key,$e)
             $x08 = getTabValue($key,$ename."reserved8","0");
             $x09 = getTabValue($key,$ename."reserved9","0");
             
-            if ($x09 != "0")   $txt01 .= ' hitvalue="'.$x09.'"';
-            if ($x08 != "0")   $txt01 .= ' hitdelta="'.$x08.'"';
+            if ($x09 != "0") $txval .= ' hitvalue="'.$x09.'"';
+            if ($x08 != "0") $txval .= ' hitdelta="'.$x08.'"';
         }
         
         // dispel_level,power
         $x16 = getTabValue($key,$ename."reserved16","0");
         $x18 = getTabValue($key,$ename."reserved18","0");
         
-        if ($x16 != "0")   $txt01 .= ' dispel_level="'.$x16.'"';
-        if ($x18 != "0")   $txt01 .= ' power="'.$x18.'"';
+        if ($x16 != "0") $txval .= ' dispel_level="'.$x16.'"';
+        if ($x18 != "0") $txval .= ' power="'.$x18.'"';
         
         // dpower
         if ($efftyp == "dispeldebuffphysical")
         {
             $x17 = getTabValue($key,$ename."reserved17","0");
             
-            if ($x17 != "0") $txt01 .= ' dpower="'.$x17.'"';
+            if ($x17 != "0") $txval .= ' dpower="'.$x17.'"';
         }    
     }
-    // EVADE
+    // EVADE ----------------------------------------------
     elseif ($efftyp == "evade")
     {
+        // dispel_type
         $x01   = getEffSpecial( "upper",getTabValue($key,$ename."reserved1","?") );        
         $x01   = str_replace("_","",$x01);         
                 
-        if (stripos($x01,"TYPE") !== false)
-            $txt01 .= ' dispeltype="'.$x01.'"';
+        if (stripos($x01,"TYPE") !== false)      $txval .= ' dispeltype="'.$x01.'"';
     }
-    // FEAR
+    // FEAR -----------------------------------------------
     elseif ($efftyp == "fear")
     {
         // resistchance
         $x02 = getTabValue($key,$ename."reserved2","0");
         
-        if ($x02 != "0"  &&  $x02 != "100")
-            $txt01 = ' resistchance="'.$x02.'"';
+        if ($x02 != "0"  &&  $x02 != "100")      $txval = ' resistchance="'.$x02.'"';
     }
-    // HEALCAST...
+    // HEALCAST... ----------------------------------------
     elseif ($efftyp == "healcastoronatk"
     ||      $efftyp == "healcastorontargetdead")
     {
@@ -2267,76 +2321,204 @@ function getEffectBasicLine($efftyp,$key,$e)
         $x03 = getTabValue($key,$ename."reserved3","0");
         $x04 = getTabValue($key,$ename."reserved4","?");
         
-        if ($x04 != "?"  && $x04 != "0")
-            $txt01 = ' range="'.$x04.'.'.$x03.'"';
+        if ($x04 != "?"  && $x04 != "0")         $txval = ' range="'.$x04.'.'.$x03.'"';
     }
-    // HIDE
+    // HIDE -----------------------------------------------
     elseif ($efftyp == "hide")
     {
         // bufcount
         $x03   = getTabValue($key,$ename."reserved3","0");
         
-        if ($x03 != "0")
-            $txt01 = ' bufcount="'.$x03.'"';
+        if ($x03 != "0")                         $txval = ' bufcount="'.$x03.'"';
     }
-    // MAGICCOUNTERATK
+    // MAGICCOUNTERATK ------------------------------------
     elseif ($efftyp == "magiccounteratk")
     {
         // maxdmg
         $x05 = getTabValue($key,$ename."reserved5","?");
         
-        if ($x05 != "?"  &&  $x05 != "0")
-            $txt01 = ' maxdmg="'.$x05.'"';
+        if ($x05 != "?"  &&  $x05 != "0")        $txval = ' maxdmg="'.$x05.'"';
         
     }
-    // MOVEBEHIND
+    // MOVEBEHIND -----------------------------------------
     elseif ($efftyp == "movebehind")
     {
         // mode
         $x02   = getTabValue($key,$ename."reserved2","?");
         
-        if ($x02 != "?"  &&  $x02 != "0")
-            $txt01 =  ' mode="PERCENT"';
+        if ($x02 != "?"  &&  $x02 != "0")        $txval =  ' mode="PERCENT"';
     }
-    // MPSHIELD / SHIELD
+    // MPSHIELD / SHIELD ----------------------------------
     elseif ($efftyp == "mpshield"
     ||      $efftyp == "shield")
     {
-        // mp_value,mp_delate,hitvalue,hitdelta,hittypeprob2
+        // mp_value,mp_delate,hitvalue,hitdelta,hittype,hittypeprob2
         $x01 = getTabValue($key,$ename."reserved1","?");
         $x02 = getTabValue($key,$ename."reserved2","?");
         $x03 = getTabValue($key,$ename."reserved3","?");
         $x04 = getTabValue($key,$ename."reserved4","?");
-        $htp = getTabValue($key,$ename."reserved_cond1_prob2","?");
+        $hit = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved_cond1","?") );
+        $htp = getEffSpecial( "nozero",getTabValue($key,$ename."reserved_cond1_prob2","0") );
         
-        if ($x04 != "?" && $x04 != "0")  $txt01 .= ' mp_value="'.$x04.'"';
-        if ($x03 != "?" && $x03 != "0")  $txt01 .= ' mp_delta="'.$x03.'"';
-        if ($x02 != "?" && $x02 != "0")  $txt01 .= ' hitvalue="'.$x02.'"';
-        if ($x01 != "?" && $x01 != "0")  $txt01 .= ' hitdelta="'.$x01.'"'; 
-        if ($htp != "?" && $htp != "0")  $txt01 .= ' hittypeprob2="'.$htp.'"';          
+        if ($x04 != "?" && $x04 != "0")          $txval .= ' mp_value="'.$x04.'"';
+        if ($x03 != "?" && $x03 != "0")          $txval .= ' mp_delta="'.$x03.'"';
+        if ($x02 != "?" && $x02 != "0")          $txval .= ' hitvalue="'.$x02.'"';
+        if ($x01 != "?" && $x01 != "0")          $txval .= ' hitdelta="'.$x01.'"'; 
+        
+        if ($hit != "EVERYHIT" && $hit != "?")   $txlst .= ' hittype="'.$hit.'"';
+        if ($htp != "100"      && $htp != "?")   $txlst .= ' hittypeprob2="'.$htp.'"';     
     }
+    // ONETIME...-Texte -----------------------------------
+    elseif ($efftyp == "onetimeboostskillattack"
+    ||      $efftyp == "onetimeboostskillcritical")
+    {
+        // count
+        $x05 = getTabValue($key,$ename."reserved7","?");
+        
+        if ($x05 != "?" && $x05 != "0")          $txval = ' count="'.$x05.'"';
+    }
+    // PETORDERUSEULTRASKILL ------------------------------
+    elseif ($efftyp == "petorderuseultraskill")
+    {
+        // release
+        $x01 = getTabValue($key,$ename."reserved1","0");
+        $x02 = getTabValue($key,$ename."reserved2","0");
+        
+        $txval .= ' ultra_skill="'.$x01.'"';
+        
+        if ($x02 == "1")                         $txval .= ' release="true"';
+    }
+    // PROCVPHEALINSTANT ----------------------------------
+    elseif ($efftyp == "procvphealinstant")
+    {
+        // value2
+        $x03 = getTabValue($key,$ename."reserved3","0");
+        
+        if ($x03 != "?" && $x03 != "0")          $txval .= ' value2="'.$x03.'"';
+    }
+    // PROTECT --------------------------------------------
+    elseif ($efftyp == "protect")
+    {
+        // hitvalue, radius
+        $x02 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","0") );
+        $x05 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved5","0") );
+        
+        if ($x02 != "?")                         $txval .= ' hitvalue="'.$x02.'"';
+        if ($x05 != "?")                         $txval .= ' radius="'.$x05.'"';
+    }
+    // PROVOKER -------------------------------------------
+    elseif ($efftyp == "provoker")
+    {
+        // provoke_target,radius,hittype,hittypeprob2
+        $x14 = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved14","?") );
+        $x05 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved5","0") );
+        $hit = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved_cond1","?") );
+        $htp = getEffSpecial( "nozero",getTabValue($key,$ename."reserved_cond1_prob2","0") );
+        
+        if ($x14 != "?")                         $txval .= ' provoke_target="'.$x14.'"';
+        if ($x05 != "?")                         $txval .= ' radius="'.$x05.'"';
+        
+        if ($hit != "EVERYHIT" && $hit != "?")   $txlst .= ' hittype="'.$hit.'"';
+        if ($htp != "100"      &&  $htp != "?")  $txlst .= ' hittypeprob2="'.$htp.'"';
+    }
+    // RANDOMMOVELOC --------------------------------------
+    elseif ($efftyp == "randommoveloc")
+    {
+        // direction, distance
+        $x03 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved3","0") );
+        $x02 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","0") );
+        
+        if ($x03 != "?")                         $txval .= ' direction="'.($x03 - 1).'"';
+        if ($x02 != "?")                         $txval .= ' distance="'.$x02.'"';
+    }
+    // REBIRTH --------------------------------------------
+    elseif ($efftyp == "rebirth")
+    {
+        // resurrect_percent
+        $x02 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","0") );
+        
+        if ($x02 != "?")                         $txval .= ' resurrect_percent="'.$x02.'"';
+    }
+    // REFLECTOR ------------------------------------------
+    elseif ($efftyp == "reflector")
+    {
+        // hitvalue,hitdelta,radius,minradius,hittype,hittypeprob2
+        $x02 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","0") );
+        $x01 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","0") );
+        $x05 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved5","0") );
+        $x04 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4","0") );
+        $hit = getEffSpecial( "upper" ,getTabValue($key,$ename."reserved_cond1","?") );
+        $htp = getEffSpecial( "nozero",getTabValue($key,$ename."reserved_cond1_prob2","0") );
+        
+        if ($x02 != "?")                         $txval .= ' hitvalue="'.$x02.'"';
+        if ($x01 != "?")                         $txval .= ' hitdelta="'.$x01.'"';
+        if ($x05 != "?")                         $txval .= ' radius="'.$x05.'"';
+        if ($x04 != "?")                         $txval .= ' minradius="'.$x04.'"';
+        if ($hit != "EVERYHIT" && $hit != "?")   $txlst .= ' hittype="'.$hit.'"';
+        if ($htp != "100"      && $htp != "?")   $txlst .= ' hittypeprob2="'.$htp.'"';        
+    }
+    // ROOT -----------------------------------------------
+    elseif ($efftyp == "root")
+    {
+        // resistchance
+        $x02 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved2","0") );
+        
+        if ($x02 != "100"      &&  $x02 != "?") $txval .= ' resistchance="'.$x02.'"';  
+    }
+    // SUMMONFUNCTIONALNPC --------------------------------
+    elseif ($efftyp == "summonfunctionalnpc")
+    {
+        // owner
+        $x07 = getEffSpecial( "upper",getTabValue($key,$ename."reserved7","?") );
+        
+        switch($x07)
+        {
+            case "FORCE"  : $x07 = "ALLIANCE"; break;
+            case "PARTY"  : $x07 = "GROUP";    break;
+            case "GUILD"  : $x07 = "LEGION";   break;
+            case "PRIVATE": $x07 = "PRIVATE";  break;
+            default:        $x07 = "?";        break;
+        }
+        if ($x07 != "?")  $txkey .= ' owner="'.$x07.'"';
+    } 
+    // WPNMASTERY -----------------------------------------
+    elseif ($efftyp == "wpnmastery")
+    {
+        // weapon
+        $x05 = getEffSpecial( "weapon",getTabValue($key,$ename."reserved5","?") );
+        
+        if ($x05 != "?")  $txkey .= ' weapon="'.$x05.'"';
+    }  
+    // SIGNETBURST ----------------------------------------
+    elseif ($efftyp == "signetburst")
+    {
+        // signetlvl,signet,value
+        $x02   = getTabValue($key,$ename."reserved2","");
+        $x07   = getTabValue($key,$ename."reserved7","");
+        $x08   = getTabValue($key,$ename."reserved8","");
+        
+        $txval = ' signetlvl="'.$x08.'" signet="SYSTEM_SKILL_SIGNET'.$x07.'"'.
+                 ' value="'.$x02.'"';
+    }      
     // ----------------------------------------------------
     // Allgemeine Zeile mit allen aktiven Tags aufbereiten 
     // ----------------------------------------------------    
         
-    $ret .= $txt01.
-            getFieldText( "owner"         ,$owner ).
-            getFieldText( "weapon"        ,$weapn ).
-            getFieldText( "armor"         ,$armor ).
-            getFieldText( "statsetid"     ,$stset ).
+    $ret .= $txkey.
             getFieldText( "checktime"     ,$check ).
             getFieldText( "delay"         ,$delay ).
             getFieldText( "shared"        ,$share ).
-            getFieldText( "percent"       ,$perct ).
             getFieldText( "attack_count"  ,$atcnt ).
             getFieldText( "npc_count"     ,$npcnt ).
             getFieldText( $npctag         ,$model ).
             getFieldText( "skill_id"      ,$skid  ).
             getFieldText( "time"          ,$time  ).
             getFieldText( "type"          ,$type  ).
+            $txval.
             getFieldText( "cond_value"    ,$condv ).
             getFieldText( "state"         ,$state ).   
             getFieldText( "panelid"       ,$panel ).
+            getFieldText( "percent"       ,$perct ).
             getFieldText( "value"         ,$value ).
             getFieldText( "delta"         ,$delta ).
             getFieldText( "duration2"     ,$dura2 ).
@@ -2348,6 +2530,7 @@ function getEffectBasicLine($efftyp,$key,$e)
             getFieldText( "e"             ,$e     ).
             getFieldText( "basiclvl"      ,$blev  ).
             getFieldText( "noresist"      ,$nores ).
+            $txlst.
             getFieldText( "accmod2"       ,$acmod ).
             getFieldText( "element"       ,$elem  ).
             getFieldText( "preeffect"     ,$preff ).
@@ -2387,6 +2570,7 @@ function getEffectDefault($efftyp,$key,$e)
 {    
     $ret   = getEffectBasicLine($efftyp,$key,$e);
     $cond  = getEffectBasicConditions($efftyp,$key,$e);
+    $cond .= getEffectBasicSubEffect($efftyp,$key,$e);
     
     if ($ret != "")
     {
@@ -2626,68 +2810,37 @@ function getEffectsLines($key)
         INTEST      dispelnpcdebuff             <= aktuell nicht im Client, Ausgabe daher nicht abgleichbar        
    
         // TODO
-          name="dptransfer" type="DPTransferEffect"
-          name="drboost" type="DRBoostEffect"
-          name="evade" type="EvadeEffect"
-          name="extendedaurarange" type="ExtendAuraRangeEffect"
-          name="fpatk" type="FpAttackEffect"
-          name="fpatkinstant" type="FpAttackInstantEffect"
-          name="fpheal" type="FPHealEffect"
-          name="fphealinstant" type="FPHealInstantEffect"
-          name="heal" type="HealEffect"
-          name="healcastoronatk" type="HealCastorOnAttackedEffect"
-          name="healcastorontargetdead" type="HealCastorOnTargetDeadEffect"
-          name="healinstant" type="HealInstantEffect"
-          name="hide" type="HideEffect"
-          name="hostileup" type="HostileUpEffect"
-          name="magiccounteratk" type="MagicCounterAtkEffect"
-          name="movebehind" type="MoveBehindEffect"
-          name="mpattack" type="MpAttackEffect"
-          name="mpattackinstant" type="MpAttackInstantEffect"
-          name="mpheal" type="MPHealEffect"
-          name="mphealinstant" type="MPHealInstantEffect"
-          name="mpshield" type="MPShieldEffect"
-          name="nodeathpenalty" type="NoDeathPenaltyEffect"
-          name="nofly" type="NoFlyEffect"
-          name="nofpconsum" type="NoFPConsumEffect"
-          name="noreducespellatk" type="NoReduceSpellATKInstantEffect"
-          name="noresurrectpenalty" type="NoResurrectPenaltyEffect"
-        name="onetimeboostheal" type="OneTimeBoostHealEffect"
-        name="onetimeboostskillattack" type="OneTimeBoostSkillAttackEffect"
-        name="onetimeboostskillcritical" type="OneTimeBoostSkillCriticalEffect"
-        name="openaerial" type="OpenAerialEffect"
-          name="paralyze" type="ParalyzeEffect"
-        name="petorderuseultraskill" type="PetOrderUseUltraSkillEffect"
-          name="poison" type="PoisonEffect"
-        name="polymorph" type="PolymorphEffect"
-        name="procatk_instant" type="ProcAtkInstantEffect"
-        name="procdphealinstant" type="ProcDPHealInstantEffect"
-        name="procfphealinstant" type="ProcFPHealInstantEffect"
-        name="prochealinstant" type="ProcHealInstantEffect"
-        name="procmphealinstant" type="ProcMPHealInstantEffect"
-        name="procvphealinstant" type="ProcVPHealInstantEffect"
-        name="protect" type="ProtectEffect"
-        name="provoker" type="ProvokerEffect"
-        name="pulled" type="PulledEffect"
-        name="randommoveloc" type="RandomMoveLocEffect"
-        name="rebirth" type="RebirthEffect"
-        name="recallinstant" type="RecallInstantEffect"
-        name="reflector" type="ReflectorEffect"
-        name="resurrect" type="ResurrectEffect"
-        name="resurrectbase" type="ResurrectBaseEffect"
-        name="resurrectpos" type="ResurrectPositionalEffect"
-        name="riderobot" type="RideRobotEffect"
-        name="root" type="RootEffect"
-        name="sanctuary" type="SanctuaryEffect"
+          name="onetimeboostheal" type="OneTimeBoostHealEffect"
+          name="onetimeboostskillattack" type="OneTimeBoostSkillAttackEffect"
+          name="onetimeboostskillcritical" type="OneTimeBoostSkillCriticalEffect"
+          name="openaerial" type="OpenAerialEffect"
+          name="petorderuseultraskill" type="PetOrderUseUltraSkillEffect"
+          name="polymorph" type="PolymorphEffect"
+          name="procatk_instant" type="ProcAtkInstantEffect"
+          name="procdphealinstant" type="ProcDPHealInstantEffect"
+          name="procfphealinstant" type="ProcFPHealInstantEffect"
+          name="prochealinstant" type="ProcHealInstantEffect"
+          name="procmphealinstant" type="ProcMPHealInstantEffect"
+          name="procvphealinstant" type="ProcVPHealInstantEffect"
+          name="protect" type="ProtectEffect"
+          name="provoker" type="ProvokerEffect"
+          name="pulled" type="PulledEffect"
+          name="randommoveloc" type="RandomMoveLocEffect"
+          name="rebirth" type="RebirthEffect"
+          name="recallinstant" type="RecallInstantEffect"
+          name="reflector" type="ReflectorEffect"
+          name="resurrect" type="ResurrectEffect"
+          name="resurrectbase" type="ResurrectBaseEffect"
+          name="resurrectpos" type="ResurrectPositionalEffect"
+          name="riderobot" type="RideRobotEffect"
+          name="root" type="RootEffect"
+          name="sanctuary" type="SanctuaryEffect"
         name="search" type="SearchEffect"
-          name="shield" type="ShieldEffect"
-          name="silence" type="SilenceEffect"
         name="simpleroot" type="SimpleRootEffect"
         name="skillatk" type="SkillAttackInstantEffect"
         name="skillatkdraininstant" type="SkillAtkDrainInstantEffect"
         name="skillcooltimereset" type="SkillCooltimeResetEffect"
         name="skilllauncher" type="SkillLauncherEffect"
-          name="skillxpboost" type="SkillXPBoostEffect"
         name="slow" type="SlowEffect"
         name="spellatk" type="SpellAttackEffect"
         name="spellatkdrain" type="SpellAtkDrainEffect"
@@ -2698,9 +2851,7 @@ function getEffectsLines($key)
         name="statboost" type="StatboostEffect"
         name="stumble" type="StumbleEffect"
         name="stun" type="StunEffect"
-          name="stunalways" type="StunAlwaysEffect"
         name="subtypeboostresist" type="SubTypeBoostResistEffect"
-          name="subtypeextendduration" type="SubTypeExtendDurationEffect"
         name="switchhostile" type="SwitchHostileEffect"
         name="switchhpmp" type="SwitchHpMpEffect"
         name="targetchange" type="TargetChangeEffect"
@@ -2786,10 +2937,35 @@ function getEffectsLines($key)
             case "nofly"                     :
             case "noreducespellatk"          :
             case "noresurrectpenalty"        :
+            case "onetimeboostskillattack"   :
+            case "onetimeboostskillcritical" :
+            case "openaerial"                :
             case "paralyze"                  :
+            case "petorderuseultraskill"     :
             case "poison"                    :
+            case "polymorph"                 :
+            case "procatk_instant"           :
+            case "procdphealinstant"         :
+            case "procfphealinstant"         :
+            case "prochealinstant"           :
+            case "procmphealinstant"         :
+            case "procvphealinstant"         :
+            case "protect"                   :
+            case "provoker"                  :
+            case "pulled"                    :
+            case "randommoveloc"             :
+            case "rebirth"                   :
+            case "recallinstant"             :
+            case "reflector"                 :
+            case "resurrect"                 :
+            case "resurrectbase"             :
+            case "resurrectpos"              :
             case "return"                    :  
-            case "returnpoint"               :  
+            case "returnpoint"               : 
+            case "riderobot"                 :
+            case "root"                      :
+            case "sanctuary"                 :     
+            
             case "shapechange"               : 
             case "shield"                    :
             case "silence"                   :
@@ -2816,7 +2992,8 @@ function getEffectsLines($key)
             case "deboostheal"               :
             case "drboost"                   :  
             case "extendedaurarange"         :
-            case "hide"                      :  $ret .= getEffectDefaultChanges($efftyp,$key,$e,$tbneg0);    break;
+            case "hide"                      :
+            case "onetimeboostheal"          :  $ret .= getEffectDefaultChanges($efftyp,$key,$e,$tbneg0);    break;
 
             // DEFAULT-ZEILE MIT CHANGES und TBNEG1
             case "absoluteslow"              :  
@@ -3528,8 +3705,6 @@ $tabcharge = array();
 $tabastats = array();
 $tabeffsvn = array();
 $tabeffxsd = array();
-
-$protkey   = ""; // wird nur zu Testzwecken genutzt!
 
 echo '
    <tr>
