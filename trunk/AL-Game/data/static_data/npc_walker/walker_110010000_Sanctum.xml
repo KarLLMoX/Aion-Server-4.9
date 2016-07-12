@@ -97,7 +97,7 @@
         <routestep step="37" x="1398.45" y="1514.23" z="572.99426"/>
         <routestep step="38" x="1398.76" y="1512.24" z="572.99426"/>
     </walker_template>
-    <walker_template route_id="LC1_LC1_SUB2_NPCPATH_CHILDREN" pool="3">
+    <walker_template route_id="LC1_LC1_SUB2_NPCPATH_CHILDREN" pool="1">
         <routestep step="1" x="1576.14" y="1616.07" z="563.4386"/>
         <routestep step="2" x="1576.14" y="1614.91" z="563.4386"/>
         <routestep step="3" x="1576.24" y="1613.46" z="563.4386"/>
