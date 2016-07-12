@@ -6691,17 +6691,47 @@
 					<part name="name" type="S"/>
 					<part name="0x00" type="d"/>
 					<part name="0x00" type="d"/>
+					<part name="0x00" type="c"/>
 					<part name="abnormalEffectCount" type="h" id="1"/>
-					<for id="1">
+					<switch id="1">
+						<case id="0">
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+							<part name="unk" type="d"/>
+						</case>
+						<case id="default">
+							<for id="1">
+								<part name="effectorId" type="d"/>
+								<part name="skillId" type="h"/>
+								<part name="skillLevel" type="c"/>
+								<part name="targetSlot" type="c"/>
+								<part name="remainingTime" type="d"/>
+							</for>
+							<part name="unk" type="b" size="32"/>
+						</case>
+					</switch>
+				</case>
+				<case id="0x05" comment="MEMBER_GROUP_CHANGE">
+					<part name="name" type="S"/>
+				</case>
+				<case id="65">
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="4 or 1" type="c"/>
+					<part name="abnormalEffectCount" type="h" id="2"/>
+					<for id="2">
 						<part name="effectorId" type="d"/>
 						<part name="skillId" type="h"/>
 						<part name="skillLevel" type="c"/>
 						<part name="targetSlot" type="c"/>
 						<part name="remainingTime" type="d"/>
 					</for>
-				</case>
-				<case id="0x05" comment="MEMBER_GROUP_CHANGE">
-					<part name="name" type="S"/>
+					<part name="unk" type="b" size="32"/>
 				</case>
 				<case id="default"/>
 			</switch>
