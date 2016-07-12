@@ -3,7 +3,7 @@
     <spawn_map map_id="210070000">
         <!-- Rift -->
         <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Cygnea -->
-            <spot x="2669.0242" y="438.01553" z="576.44300" anchor="CYGNEA_AM"/>
+            <spot x="2680.2886" y="363.25845" z="573.548" h="30" anchor="CYGNEA_AM"/> <!-- not checked -->
             <spot x="1746.409" y="140.65057" z="542.1664" h="15" anchor="CYGNEA_BM"/> <!-- checked -->
             <spot x="791.8552" y="1866.1117" z="463.74097" h="90" anchor="CYGNEA_CM"/> <!-- checked -->
             <spot x="2054.0703" y="1433.6185" z="428.19574" h="100" anchor="CYGNEA_DM"/> <!-- not checked -->
