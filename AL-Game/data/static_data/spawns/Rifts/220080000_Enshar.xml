@@ -11,7 +11,7 @@
             <spot x="2415.4614" y="163.09802" z="252.86307" h="30" anchor="ENSHAR_FM"/> <!-- not checked -->
         </spawn>
         <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Enshar -->
-            <spot x="587.75305" y="2667.7040" z="182.33176" anchor="ENSHAR_AS"/>
+            <spot x="602.5796" y="2703.217" z="216.28278" anchor="ENSHAR_AS"/> <!-- not checked -->
             <spot x="954.0637" y="2551.1965" z="302.14624" anchor="ENSHAR_BS"/> <!-- checked -->
             <spot x="2739.662" y="1591.5354" z="347.85513" anchor="ENSHAR_CS"/> <!-- checked -->
             <spot x="232.77876" y="1363.8507" z="328.36523" anchor="ENSHAR_DS"/> <!-- not checked -->
