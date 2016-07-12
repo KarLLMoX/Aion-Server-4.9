@@ -8920,6 +8920,9 @@
 			<part name="objectId" type="d"/>
 			<part name="unk" type="c"/>
 		</packet>
+		<packet id="0x1DF" name="________________CM_0x1DF"> <!-- New/TODO -->
+			<part name="creatureObjectId" type="d"/>
+		</packet>
 		<!-- MISSED OPCODES
 		<packet id="0x10F" name="_CM_UNK1">
 			<part name="size" type="d" />
