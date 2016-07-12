@@ -715,9 +715,14 @@
             <drop item_id="182007371" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Rare Species' Membrane" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="219699">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="219700">
         <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
-            <drop item_id="188053716" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="219701">
