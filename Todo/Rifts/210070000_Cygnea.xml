@@ -5,8 +5,8 @@
 		<!-- Volatile Rift ||| DirectPortal_Interactive_Start -->
 		<spawn npc_id="702723" respawn_time="295">
 			<!-- 144 Entrys, Lvl 55-65 -->
-			<spot x="2949.8804" y="2852.939" z="276.3364" h="60"/>
-			<spot x="421.31644" y="880.1682" z="417.8393" h="90"/> <!-- A "Schwarzflossen" -->
+			<spot x="2949.8804" y="2852.939" z="276.3364" h="60"/> <!-- "Nebeldornwald" -->
+			<spot x="421.31644" y="880.1682" z="417.8393" h="90"/> <!-- A "Schwarzflossen-Schlucht" -->
 		</spawn>
 		<!-- Rift ||| directportal_Start -->
 		<spawn npc_id="700137" respawn_time="295">

@@ -951,6 +951,11 @@
             <drop item_id="182007364" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Beast's Bone" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="235830">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="235831">
         <drop_group name="BALIC_MATERIAL_COMMON_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="152010319" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Fine Elemental Stone" />
@@ -967,6 +972,11 @@
         <drop_group name="OTHER_JUNK_LVL50" use_category="true" race="PC_ALL">
             <drop item_id="182007358" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Ancient Elim's Sap" />
             <drop item_id="182007367" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Dusty Ancient Elim's Essence" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="235832">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="235833">
