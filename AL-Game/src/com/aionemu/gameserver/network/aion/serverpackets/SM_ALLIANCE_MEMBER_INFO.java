@@ -88,8 +88,8 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket {
         writeC(pcd.getGender().getGenderId());
         writeC(pcd.getLevel());
         writeC(this.event.getId());
-        writeH(0x00); // channel 0x01?
-        writeC(0x0);
+        writeH(0); // channel 0x01?
+        writeC(0);
         switch (this.event) {
             case LEAVE:
             case LEAVE_TIMEOUT:
@@ -107,10 +107,11 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket {
             case DEMOTE_VICE_CAPTAIN:
             case APPOINT_CAPTAIN:
                 writeS(pcd.getName());
-                writeD(0x00); // unk
-                writeD(0x00); // unk
+                writeD(0); // unk
+                writeD(0); // unk
                 if (player.isOnline()) {
                     List<Effect> abnormalEffects = player.getEffectController().getAbnormalEffects();
+					writeC(127);
                     writeH(abnormalEffects.size());
                     for (Effect effect : abnormalEffects) {
                         writeD(effect.getEffectorId());
@@ -119,16 +120,21 @@ public class SM_ALLIANCE_MEMBER_INFO extends AionServerPacket {
                         writeC(effect.getTargetSlot());
                         writeD(effect.getRemainingTime());
                     }
-                    writeD(0x00);
-                    writeD(0x00);
-                    writeD(0x00);
-                    writeD(0x00);
-                    writeD(0x00);
-                    writeD(0x00);
-                    writeD(0x00);
-                    writeD(0x00);
+                    writeB(new byte[32]);
                 } else {
-                    writeH(0);
+                    List<Effect> abnormalEffects = player.getEffectController().getAbnormalEffects();
+                    writeD(0);
+                    writeD(0);
+					writeC(0);
+                    writeH(abnormalEffects.size());
+                    for (Effect effect : abnormalEffects) {
+                        writeD(effect.getEffectorId());
+                        writeH(effect.getSkillId());
+                        writeC(effect.getSkillLevel());
+                        writeC(effect.getTargetSlot());
+                        writeD(effect.getRemainingTime());
+                    }
+                    writeB(new byte[32]);
                 }
                 break;
             case MEMBER_GROUP_CHANGE:
