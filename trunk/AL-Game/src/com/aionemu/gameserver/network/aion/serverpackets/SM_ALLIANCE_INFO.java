@@ -64,7 +64,7 @@ public class SM_ALLIANCE_INFO extends AionServerPacket {
         writeH(alliance.groupSize());
         writeD(groupid);
         writeD(leaderid);
-        writeD(player.getWorldId()); //4.3 mapid
+        writeD(player.getWorldId()); //4.9 mapid
         Collection<Integer> ids = alliance.getViceCaptainIds();
         for (Integer id : ids) {
             writeD(id);
@@ -108,6 +108,7 @@ public class SM_ALLIANCE_INFO extends AionServerPacket {
                 writeD(leagueMember.getObjectId());
                 writeD(leagueMember.getObject().size());
                 writeS(leagueMember.getObject().getLeaderObject().getName());
+				writeD(leagueMember.getObject().getLeaderObject().getWorldId());
             }
         }
     }
