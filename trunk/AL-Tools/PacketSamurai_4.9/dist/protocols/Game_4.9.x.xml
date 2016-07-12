@@ -4782,7 +4782,9 @@
 				<part name="online" type="c"/>
 				<part name="selfIntro" type="S"/>
 				<part name="nickName" type="S"/>
-				<part name="lastOnline" type="d"/>
+				<part name="lastOnline" type="d">
+					<reader type="UnixDate"/>
+				</part>
 				<part name="houseAddress" type="d"/>
 				<part name="visitPermisions" type="d">
 					<reader type="MultiValue" name="houseVisitPermisions"/>
@@ -6594,6 +6596,7 @@
 			<part name="allianceCount" type="h" id="0"/>
 			<part name="groupId" type="d"/>
 			<part name="leaderId" type="d"/>
+			<part name="worldId" type="d"/>
 			<part name="viceLeader1" type="d"/>
 			<part name="viceLeader2" type="d"/>
 			<part name="viceLeader3" type="d"/>
@@ -6608,16 +6611,52 @@
 			<part name="autodistribution" type="d"/>
 			<part name="0x02" type="d"/>
 			<part name="0x00" type="c"/>
-			<part name="0x3F" type="d"/>
-			<part name="0x00 [3.5]" type="d"/>
-			<part name="hasMoreData" type="d" id="1"/>
-			<for id="0">
-				<part name="allianceGroupNumber" type="d"/>
-				<part name="allianceId" type="d"/>
-			</for>
-			<part name="messageId" type="d"/>
-			<part name="string1 (max 0x400)" type="S"/>
-			<!-- FIXME need sniff where hasMoreData != 0 -->
+			<part name="TeamType" type="d"/>
+			<part name="SubType" type="d"/>
+			<part name="TeamId" type="d" id="1"/>
+			<switch id="1">
+				<case id="0">
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="messageId" type="d"/>
+					<part name="message" type="S"/>
+				</case>
+				<case id="default">
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="groupNum" type="d"/>
+					<part name="groupId" type="d"/>
+					<part name="MessageId" type="d"/>
+					<part name="Message" type="S"/>
+					<part name="leagueSize" type="h" id="2"/>
+					<part name="LootRule" type="d"/>
+					<part name="Autodistribution" type="d"/>
+					<part name="CommonItemAbove" type="d"/>
+					<part name="SuperiorItemAbove" type="d"/>
+					<part name="HeroicItemAbove" type="d"/>
+					<part name="FabledItemAbove" type="d"/>
+					<part name="EthernalItemAbove" type="d"/>
+					<part name="unk" type="d"/>
+					<part name="unk" type="d"/>
+					<for id="2">
+						<part name="LeaguePosition" type="d"/>
+						<part name="LegionId" type="d"/>
+						<part name="LegionSize" type="d"/>
+						<part name="LeaderName" type="S"/>
+						<part name="MapId" type="d"/>
+					</for>
+				</case>
+			</switch>
 		</packet>
 		<packet id="0xF6" name="SM_ALLIANCE_MEMBER_INFO">
 			<part name="allianceId" type="d"/>
@@ -7290,8 +7329,7 @@
 		</packet>
 
 		<packet id="0x13C" name="___________________SM_13C_LEGION_JOIN_SETTING?">
-			<part name="switch ?" type="h"/>
-			<part name="legionId" type="d"/>
+			<part name="unk" type="h"/>
 		</packet>			
 
 		<packet id="0x130" name="___________________SM_0x130"> <!-- NEW/TODO -->
