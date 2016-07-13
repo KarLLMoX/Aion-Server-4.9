@@ -22,8 +22,8 @@
         <!-- Volatile Rift -->
         <spawn npc_id="702723" handler="RIFT"> <!-- Entrys in Cygnea --> <!--  handler="VOLATILE_RIFT" -->
             <spot x="421.31644" y="880.1682" z="417.8393" h="90" anchor="CYGNEA_GM"/> <!-- ID:2176 - checked -->
-            <spot x="2911.7507" y="2899.1367" z="270.23444" anchor="CYGNEA_HM"/>
-            <spot x="1990.0380" y="1688.9974" z="195.12500" anchor="CYGNEA_IM"/>
+            <spot x="2949.8804" y="2852.939" z="276.3364" h="60" anchor="CYGNEA_HM"/> <!-- ID:2177 - checked -->
+            <spot x="2006.166" y="1736.8397" z="195.0972" h="90" anchor="CYGNEA_IM"/> <!-- ID:2178 - checked -->
         </spawn>
         <spawn npc_id="702724" handler="RIFT"> <!-- Exits in Cygnea --> <!--  handler="VOLATILE_RIFT" -->
             <spot x="213.5672" y="612.78406" z="429.9847" h="15" anchor="CYGNEA_GS"/> <!-- ID:2286 - checked -->
