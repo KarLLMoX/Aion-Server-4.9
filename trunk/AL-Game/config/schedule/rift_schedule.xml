@@ -27,7 +27,7 @@
 		<open schedule="0 0 7,16,23 ? * SAT"/>
     </rift>
 	<rift id="210070000"><!-- Cygnea -->
-		<open schedule="0 0 13,15,17,19,21,23,3,5,7,9,11 ? * *"/> <!-- every 2 hours during 1 hour -->
+		<open schedule="0 0 13,15,17,19,21,23,3,5,7,9,11 ? * *" spawn="true"/> <!-- every 2 hours during 1 hour -->
 	</rift>
 	<rift id="220020000"><!-- Morheim -->
         <open schedule="0 0 13 ? * TUE,THU"/> <!-- 4.8 -->
@@ -56,6 +56,6 @@
 		<open schedule="0 0 5,9,15 ? * SAT"/>
 	</rift>
 	<rift id="220080000"><!-- Enshar -->
-		<open schedule="0 0 14,16,18,20,22,2,4,6,8,10,12 ? * *"/> <!-- every 2 hours during 1 hour -->
+		<open schedule="0 0 14,16,18,20,22,2,4,6,8,10,12 ? * *" spawn="true"/> <!-- every 2 hours during 1 hour -->
 	</rift>
 </rift_schedule>

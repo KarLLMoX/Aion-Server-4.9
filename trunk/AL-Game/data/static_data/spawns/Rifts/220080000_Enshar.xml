@@ -30,7 +30,26 @@
             <spot x="381.94467" y="366.77304" z="191.89494" anchor="ENSHAR_HS"/>
             <spot x="1657.1338" y="995.59230" z="192.25000" anchor="ENSHAR_IS"/>
         </spawn>
-        
+
+        <!-- ENSHAR_AS -->
+        <rift_spawn id="2170">
+        </rift_spawn>
+        <!-- ENSHAR_BS -->
+        <rift_spawn id="2171">
+        </rift_spawn>
+        <!-- ENSHAR_CS -->
+        <rift_spawn id="2172">
+        </rift_spawn>
+        <!-- ENSHAR_DS -->
+        <rift_spawn id="2173">
+        </rift_spawn>
+        <!-- ENSHAR_ES -->
+        <rift_spawn id="2174">
+        </rift_spawn>
+        <!-- ENSHAR_FS -->
+        <rift_spawn id="2175">
+        </rift_spawn>
+
         <rift_spawn id="2176"> <!-- Tal der Aquaner -->
             <!-- Captain Brimas ||| DF5_DP1_GuardianHead_Da_65_Al -->
             <spawn npc_id="219887" respawn_time="295">
@@ -83,9 +102,11 @@
                 <spot x="2879.08" y="2014.6422" z="210.0575" h="0"/>
             </spawn>
         </rift_spawn>
-        <!-- <volatile_rift_spawn id="2177">
-        </volatile_rift_spawn>
-        <volatile_rift_spawn id="2178">
-        </volatile_rift_spawn> -->
+        <rift_spawn id="2177">
+        <!-- TODO -->
+        </rift_spawn>
+        <rift_spawn id="2178">
+        <!-- TODO -->
+        </rift_spawn>
     </spawn_map>
 </spawns>
