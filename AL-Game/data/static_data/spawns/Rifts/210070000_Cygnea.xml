@@ -31,6 +31,25 @@
             <spot x="1359.5742" y="2211.3206" z="186.94678" anchor="CYGNEA_IS"/>
         </spawn>
 
+        <!-- CYGNEA_AS -->
+        <rift_spawn id="2280">
+        </rift_spawn>
+        <!-- CYGNEA_BS -->
+        <rift_spawn id="2281">
+        </rift_spawn>
+        <!-- CYGNEA_CS -->
+        <rift_spawn id="2282">
+        </rift_spawn>
+        <!-- CYGNEA_DS -->
+        <rift_spawn id="2283">
+        </rift_spawn>
+        <!-- CYGNEA_ES -->
+        <rift_spawn id="2284">
+        </rift_spawn>
+        <!-- CYGNEA_FS -->
+        <rift_spawn id="2285">
+        </rift_spawn>
+
         <rift_spawn id="2286"> <!-- Schwarzflossen-Schlucht -->
             <!-- Third Ironlightian Deity General ||| LF5_P1toD_GuardianHead_Li_65_Al -->
             <spawn npc_id="236035" respawn_time="295">
@@ -91,9 +110,11 @@
                 <spot x="322.10068" y="845.98773" z="439.12503" h="0"/>
             </spawn>
         </rift_spawn>
-        <!-- <volatile_rift_spawn id="2287">
-        </volatile_rift_spawn>
-        <volatile_rift_spawn id="2288">
-        </volatile_rift_spawn> -->
+        <rift_spawn id="2287">
+        <!-- TODO -->
+        </rift_spawn>
+        <rift_spawn id="2288">
+        <!-- TODO -->
+        </rift_spawn>
     </spawn_map>
 </spawns>
