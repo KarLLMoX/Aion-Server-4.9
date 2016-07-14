@@ -27,7 +27,7 @@
         </spawn>
         <spawn npc_id="702724" handler="RIFT"> <!-- Exits in Enshar --> <!--  handler="VOLATILE_RIFT" -->
             <spot x="2855.709" y="2550.7583" z="260.3752" h="60" anchor="ENSHAR_GS"/> <!-- ID:2176 - checked -->
-            <spot <spot x="131.92842" y="366.53183" z="221.98703" anchor="ENSHAR_HS"/> <!-- ID:2177 - checked -->
+            <spot x="131.92842" y="366.53183" z="221.98703" anchor="ENSHAR_HS"/> <!-- ID:2177 - checked -->
             <spot x="1927.2534" y="1017.1204" z="187.88315" h="60" anchor="ENSHAR_IS"/> <!-- ID:2178 - checked -->
         </spawn>
 
