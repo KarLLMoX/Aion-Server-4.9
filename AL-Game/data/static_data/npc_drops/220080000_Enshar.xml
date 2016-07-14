@@ -1479,6 +1479,16 @@
             <drop item_id="182007001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Talon" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="219776">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219777">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="219778">
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007012" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Clouded Crystal" />
@@ -1513,6 +1523,16 @@
         </drop_group>
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007001" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Splintered Talon" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219787">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="219788">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="219789">
