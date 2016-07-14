@@ -2151,6 +2151,11 @@
             <drop item_id="182007014" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Relic Bits" />
         </drop_group>
     </npc_drop>
+    <npc_drop npc_id="235916">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
+        </drop_group>
+    </npc_drop>
     <npc_drop npc_id="235917">
         <drop_group name="FLUX_COMMON_LVL61" use_category="true" race="PC_ALL">
             <drop item_id="152011100" chance="1.8" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lesser Mystic Weapon Flux" />
@@ -2165,6 +2170,11 @@
         <drop_group name="OTHER_JUNK_LVL65" use_category="true" race="PC_ALL">
             <drop item_id="182007005" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Accessory Bits" />
             <drop item_id="182007014" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Pitted Relic Bits" />
+        </drop_group>
+    </npc_drop>
+    <npc_drop npc_id="235918">
+        <drop_group name="OTHER_EPIC_LVL65" use_category="true" race="PC_ALL">
+            <drop item_id="188053716" chance="100.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Volatile Rift Loot Bundle" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="235919">

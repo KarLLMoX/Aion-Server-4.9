@@ -23,7 +23,7 @@
         <spawn npc_id="702723" handler="RIFT"> <!-- Entrys in Enshar --> <!--  handler="VOLATILE_RIFT" -->
             <spot x="2866.201" y="2398.226" z="178.47922" h="45" anchor="ENSHAR_GM"/> <!-- ID:2286 - checked -->
             <spot x="104.40256" y="156.43721" z="165.69632" anchor="ENSHAR_HM"/>
-            <spot x="1742.1217" y="1212.8824" z="211.69537" anchor="ENSHAR_IM"/>
+            <spot x="1793.5022" y="1245.6637" z="222.57458" h="75" anchor="ENSHAR_IM"/> <!-- ID:2288 - checked -->
         </spawn>
         <spawn npc_id="702724" handler="RIFT"> <!-- Exits in Enshar --> <!--  handler="VOLATILE_RIFT" -->
             <spot x="2855.709" y="2550.7583" z="260.3752" h="60" anchor="ENSHAR_GS"/> <!-- ID:2176 - checked -->
@@ -105,7 +105,6 @@
         <rift_spawn id="2177">
             <!-- Captain Meriward ||| DF5_HI_GuardianHead_Da_65_Al -->
             <spawn npc_id="219906" respawn_time="295">
-                <!-- 1 Spots -->
                 <spot x="733.35925" y="260.30963" z="227.25143" h="7"/>
             </spawn>
             <!-- Awoken Jotun Worker ||| DF5_I_Nepilim1_Strong_65_Ae -->
