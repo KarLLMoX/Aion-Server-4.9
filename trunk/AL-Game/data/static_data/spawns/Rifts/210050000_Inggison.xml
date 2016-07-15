@@ -12,7 +12,7 @@
             <spot x="561.6146" y="1867.4319" z="334.2267" h="103" anchor="INGGISON_DM"/>
             <!-- id 2153 -->
         </spawn>
-        <spawn npc_id="700137" handler="RIFT"> <!-- Exits in Inggison -->
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Inggison -->
             <spot x="1085.5778" y="2027.9491" z="341.86893" h="23" anchor="INGGISON_AS"/> <!-- checked -->
             <!-- id 2270 -->
             <spot x="2687.1042" y="1638.801" z="194.29395" anchor="INGGISON_BS"/> <!-- checked -->
