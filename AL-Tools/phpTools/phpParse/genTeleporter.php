@@ -50,7 +50,11 @@ function makeTabNpcs()
     global $pathdata, $tabnpcs;
     
     $tabFiles = array( "client_npcs_npc.xml",
-                       "client_npcs_monster.xml"
+                       "client_npcs_monster.xml",
+                       "client_npcs_abyss_monster.xml",
+                       "client_npcs_std_abyss_monster.xml",
+                       "client_npcs_std_monster.xml",
+                       "client_npcs_test_monster.xml"
                      );
     $maxFiles = count($tabFiles);
     $cntnpc   = 0;
@@ -60,91 +64,95 @@ function makeTabNpcs()
     for ($f=0;$f<$maxFiles;$f++)
     {
         $fileext = formFileName($pathdata."\\Npcs\\".$tabFiles[$f]);
-        $fileext = convFileToUtf8($fileext);
         
-        $hdlext  = openInputFile($fileext);
-        
-        if (!$hdlext)
+        if (file_exists($fileext))
         {
-            logLine("Fehler openInputFile",$fileext);
-            return;
-        }
-        
-        logLine("- Eingabedatei",$fileext);
-        
-        $id     = "";
-        $air    = "";
-        $name   = "";
-        
-        flush();
-        
-        while (!feof($hdlext))
-        {
-            $line = rtrim(fgets($hdlext));
+            $fileext = convFileToUtf8($fileext);
             
-            if     (stripos($line,"<id>")            !== false)
-                $id   = getXmlValue("id",$line);
-            elseif (stripos($line,"<name>") !== false)
-                $name = strtoupper(getXmlValue("name",$line));
-            elseif (stripos($line,"<airlines_name>") !== false)
-                $air  = strtoupper(getXmlValue("airlines_name",$line));
-            elseif (stripos($line,"</npc_client>")   !== false)
-            {    
-                // ACHTUNG: der NPC 802461 ist im Client fehlerhaft definiert
-                //          und wird daher ausgeschlossen!                
-                if ($id != "" && $air != "")
-                {                    
-                    $ntab = getNpcIdNameTab($name);
-                    
-                    if (isset($ntab['nname']))
-                        $xnam = $ntab['nname'];
-                    else
-                        $xnam = "?";
-                        
-                    if (isset($tabnpcs[$air]))
-                    {
-                        $tabnpcs[$air]['id']   .= " ".$id;
-                        $tabnpcs[$air]['name'] .= ", $id = ".$xnam;
-                    }
-                    else
-                    {
-                        $tabnpcs[$air]['id']    = $id;
-                        $tabnpcs[$air]['name']  = "$id = ".$xnam;
-                    }    
-                        
-                    $cntnpc++;
-                }
-                $id = $air = $name = "";
+            $hdlext  = openInputFile($fileext);
+            
+            if (!$hdlext)
+            {
+                logLine("Fehler openInputFile",$fileext);
+                return;
             }
-        }
-        fclose($hdlext);
-        
-        unlink($fileext);
-        
-        // SONDERVERARBEITUNG
-        //
-        // einige Definitionen für Teleporter fehlen im Client und werden daher
-        // über die nachfolgende Tabelle ergänzt
-        $tabzus = array(
-                    //     Client-Airline-Name         Client-NPC-Name
-                    array("LC1_AIRPORT_ZONE_ENTRANCE","LC1_LC2_TELEPORT"),  // 730265
-                    array("LC2_AIRPORT_ZONE_ENTRANCE","LC2_LC1_TELEPORT"),  // 730266
-                    array("DC1_AIRPORT_ZONE_ENTRANCE","DC1_DC2_TELEPORT"),  // 730268
-                    array("DC2_AIRPORT_ZONE_ENTRANCE","DC2_DC1_TELEPORT")   // 730269
-                  );
-        $maxzus = count($tabzus);
-        
-        for ($z=0;$z<$maxzus;$z++)
-        {       
-            $ntab = getNpcIdNameTab($tabzus[$z][1]);
             
-            if (isset($ntab['nname']))
-                $xnam = $ntab['nname'];
-            else
-                $xnam = "?";
+            logLine("- Eingabedatei",$fileext);
+            
+            $id     = "";
+            $air    = "";
+            $name   = "";
+            
+            flush();
+            
+            while (!feof($hdlext))
+            {
+                $line = rtrim(fgets($hdlext));
                 
-            $tabnpcs[$tabzus[$z][0]]['id']   = $ntab['npcid'];
-            $tabnpcs[$tabzus[$z][0]]['name'] = $xnam;
+                if     (stripos($line,"<id>")            !== false)
+                    $id   = getXmlValue("id",$line);
+                elseif (stripos($line,"<name>") !== false)
+                    $name = strtoupper(getXmlValue("name",$line));
+                elseif (stripos($line,"<airlines_name>") !== false)
+                    $air  = strtoupper(getXmlValue("airlines_name",$line));
+                elseif (stripos($line,"</npc_client>")   !== false)
+                {    
+                    // ACHTUNG: der NPC 802461 ist im Client fehlerhaft definiert
+                    //          und wird daher ausgeschlossen!                
+                    if ($id != "" && $air != "")
+                    {                    
+                        $ntab = getNpcIdNameTab($name);
+                        
+                        if (isset($ntab['nname']))
+                            $xnam = $ntab['nname'];
+                        else
+                            $xnam = "?";
+                            
+                        if (isset($tabnpcs[$air]))
+                        {
+                            $tabnpcs[$air]['id']   .= " ".$id;
+                            $tabnpcs[$air]['name'] .= ", $id = ".$xnam;
+                        }
+                        else
+                        {
+                            $tabnpcs[$air]['id']    = $id;
+                            $tabnpcs[$air]['name']  = "$id = ".$xnam;
+                        }    
+                            
+                        $cntnpc++;
+                    }
+                    $id = $air = $name = "";
+                }
+            }
+            fclose($hdlext);
+            
+            unlink($fileext);
+            
+            // SONDERVERARBEITUNG
+            //
+            // einige Definitionen für Teleporter fehlen im Client und werden daher
+            // über die nachfolgende Tabelle ergänzt
+            $tabzus = array(
+                        //     Client-Airline-Name         Client-NPC-Name
+                        array("LC1_AIRPORT_ZONE_ENTRANCE","LC1_LC2_TELEPORT"),  // 730265
+                        array("LC2_AIRPORT_ZONE_ENTRANCE","LC2_LC1_TELEPORT"),  // 730266
+                        array("DC1_AIRPORT_ZONE_ENTRANCE","DC1_DC2_TELEPORT"),  // 730268
+                        array("DC2_AIRPORT_ZONE_ENTRANCE","DC2_DC1_TELEPORT")   // 730269
+                      );
+            $maxzus = count($tabzus);
+            
+            for ($z=0;$z<$maxzus;$z++)
+            {       
+                $ntab = getNpcIdNameTab($tabzus[$z][1]);
+                
+                if (isset($ntab['nname']))
+                    $xnam = $ntab['nname'];
+                else
+                    $xnam = "?";
+                    
+                $tabnpcs[$tabzus[$z][0]]['id']   = $ntab['npcid'];
+                $tabnpcs[$tabzus[$z][0]]['name'] = $xnam;
+            }
         }
     }
     
