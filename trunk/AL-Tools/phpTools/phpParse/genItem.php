@@ -1186,9 +1186,9 @@ function scanClientItemTemplateFiles()
 {
     global $pathdata, $tabTpls;
     
-    $tabFiles = array( "client_items_etc.xml",    // 100000001 - 190070023
-                       "client_items_armor.xml",  // 110000001 - 125300065
-                       "client_items_misc.xml"    // 141000001 - 190200001
+    $tabFiles = array( "client_items_etc.xml",      // 100000001 - 190070023
+                       "client_items_armor.xml",    // 110000001 - 125300065
+                       "client_items_misc.xml"      // 141000001 - 190200001
                      );
     $maxFiles = count($tabFiles);
     $gesitm   = 0;

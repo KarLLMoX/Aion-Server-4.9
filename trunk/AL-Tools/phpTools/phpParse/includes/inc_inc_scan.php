@@ -1102,7 +1102,11 @@ function makeIncludeNpcInfos()
     global $pathdata, $pathstring;
     
     $tabFiles = array( "client_npcs_npc.xml",
-                       "client_npcs_monster.xml"
+                       "client_npcs_monster.xml",
+                       "client_npcs_abyss_monster.xml",
+                       "client_npcs_std_abyss_monster.xml",
+                       "client_npcs_std_monster.xml",
+                       "client_npcs_test_monster.xml"
                      );
     $maxFiles = count($tabFiles);
     $tabnpcs  = array();
@@ -1125,8 +1129,7 @@ function makeIncludeNpcInfos()
     fwrite($hdlout,getIncludeFileHeader($fileout,"Info-Tabelle - NPCs/Monster Name => id","genSpawn.php")."\n");
     fwrite($hdlout,"\n\$tabNpcInfos = array(\n");
     
-    // aus client_npcs_npc.xml und client_npc_monster.xml die Daten
-    // id, name, desc filtern
+    // aus den client_npcs_....xml -Dateien die Daten zu id, name, desc filtern
     $id     = "";
     $name   = "";
     $desc   = "";
@@ -1136,53 +1139,57 @@ function makeIncludeNpcInfos()
     for ($f=0;$f<$maxFiles;$f++)
     {
         $fileext = formFileName($pathdata."\\Npcs\\".$tabFiles[$f]);
-        $fileext = convFileToUtf8($fileext);
-        $hdlext  = openInputFile($fileext);
-        $cntnpc  = 0;
         
-        logSubHead("Scanne Eingabedatei ".$fileext);
-        
-        flush();
-        
-        while (!feof($hdlext))
+        if (file_exists($fileext))
         {
-            $line = rtrim(fgets($hdlext));
-            $cntles++;
+            $fileext = convFileToUtf8($fileext);
+            $hdlext  = openInputFile($fileext);
+            $cntnpc  = 0;
             
-            if     (stripos($line,"<id>") !== false)
-                $id    = getXmlValue("id",$line);
-            elseif (stripos($line,"<name>") !== false)
-                $name = ltrim(str_replace('"','',getXmlValue("name",$line)));
-            elseif (stripos($line,"<desc") !== false)
-                $desc = strtoupper(getXmlValue("desc",$line));
+            logSubHead("Scanne Eingabedatei ".$fileext);
+            
+            flush();
+            
+            while (!feof($hdlext))
+            {
+                $line = rtrim(fgets($hdlext));
+                $cntles++;
                 
-            if ($id != "" && $name != "" && $desc != "")
-            /*
-            &&  stripos($desc,"_SENSORYAREA_") === false
-            &&  stripos($desc,"_SENSORY_Q")    === false
-            &&  stripos($desc,"_ITEMUSEAREA_") === false)
-            */
-            {                
-                if (!isset($tabnpcs[$name]))
-                {                    
-                    $tabnpcs[$name]['id']     = $id;
-                    $tabnpcs[$name]['name']   = $name;
-                    $tabnpcs[$name]['desc']   = $desc;
-                } 
-                
-                $cntnpc++;
-                
-                $id = $name = $desc = "";
+                if     (stripos($line,"<id>") !== false)
+                    $id    = getXmlValue("id",$line);
+                elseif (stripos($line,"<name>") !== false)
+                    $name = ltrim(str_replace('"','',getXmlValue("name",$line)));
+                elseif (stripos($line,"<desc") !== false)
+                    $desc = strtoupper(getXmlValue("desc",$line));
+                    
+                if ($id != "" && $name != "" && $desc != "")
+                /*
+                &&  stripos($desc,"_SENSORYAREA_") === false
+                &&  stripos($desc,"_SENSORY_Q")    === false
+                &&  stripos($desc,"_ITEMUSEAREA_") === false)
+                */
+                {                
+                    if (!isset($tabnpcs[$name]))
+                    {                    
+                        $tabnpcs[$name]['id']     = $id;
+                        $tabnpcs[$name]['name']   = $name;
+                        $tabnpcs[$name]['desc']   = $desc;
+                    } 
+                    
+                    $cntnpc++;
+                    
+                    $id = $name = $desc = "";
+                }
             }
-        }
-        fclose($hdlext);
-        
-        logLine("- Anzahl Zeilen gelesen",$cntles);
-        logLine("- Anzahl Npcs gefunden",$cntnpc);
+            fclose($hdlext);
+            
+            logLine("- Anzahl Zeilen gelesen",$cntles);
+            logLine("- Anzahl Npcs gefunden",$cntnpc);
 
-        flush();
-        
-        unlink($fileext);        
+            flush();
+            
+            unlink($fileext);        
+        }
     }
     logLine("- Anzahl Npcs Gesamt",count($tabnpcs));
     

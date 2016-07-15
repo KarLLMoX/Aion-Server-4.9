@@ -58,46 +58,50 @@ function generGoodsItemTab()
     for ($f=0;$f<$domax;$f++)
     {    
         $fileu16 = formFileName($pathdata."\\Items\\".$tabfiles[$f]);
-        $fileext = convFileToUtf8($fileu16);
         
-        flush();
-        
-        logSubHead("Scanne Datei: ".$fileu16);
-        logLine("- Eingabedatei UTF8",$fileext);
-        logFileSize("- ",$fileext);
-        
-        flush();
-        
-        $id     = "";
-        $name   = "";
-        $cntles = 0;
-        $cntitm = 0;
-        
-        $hdlext = openInputFile($fileext);
-        
-        while (!feof($hdlext))
+        if (file_exists($fileu16))
         {
-            $line = rtrim(fgets($hdlext));
-            $cntles++;
+            $fileext = convFileToUtf8($fileu16);
             
-            if (stripos($line,"<id>") !== false)
-                $id = getXmlValue("id",$line);
-            else
+            flush();
+            
+            logSubHead("Scanne Datei: ".$fileu16);
+            logLine("- Eingabedatei UTF8",$fileext);
+            logFileSize("- ",$fileext);
+            
+            flush();
+            
+            $id     = "";
+            $name   = "";
+            $cntles = 0;
+            $cntitm = 0;
+            
+            $hdlext = openInputFile($fileext);
+            
+            while (!feof($hdlext))
             {
-                if (stripos($line,"<name>") !== false)
-                    $name = strtolower(getXmlValue("name",$line));
+                $line = rtrim(fgets($hdlext));
+                $cntles++;
                 
-                if ($id != "" && $name != "")
+                if (stripos($line,"<id>") !== false)
+                    $id = getXmlValue("id",$line);
+                else
                 {
-                    $tabgoods[$name] = $id;
-                    $cntitm++;
+                    if (stripos($line,"<name>") !== false)
+                        $name = strtolower(getXmlValue("name",$line));
                     
-                    $id = $name = "";
+                    if ($id != "" && $name != "")
+                    {
+                        $tabgoods[$name] = $id;
+                        $cntitm++;
+                        
+                        $id = $name = "";
+                    }
                 }
             }
+            logLine("- Zeilen eingelesen",$cntles);
+            logLine("- selektierte Items",$cntitm);
         }
-        logLine("- Zeilen eingelesen",$cntles);
-        logLine("- selektierte Items",$cntitm);
     }
 }
 // ----------------------------------------------------------------------------
@@ -167,7 +171,7 @@ function generTradeInfoTab()
     flush();
     
     // Tabelle mit allen Trade-Infos-Xml-Tags
-    // ACHTUNG: diese Tabelle enthält alle notwendigen Sterungs-Informationen, um die
+    // ACHTUNG: diese Tabelle enthält alle notwendigen Steuerungs-Informationen, um die
     //          Verabeitung der zahlreichen Trade-XML-Tags einheitlich zu gestalten
     //          und steigert die Performance erheblich (10 statt 26 Sekunden)
     // AUFBAU : key    - das XML-Tag (ohne <>) wird als Schlüssel genutzt

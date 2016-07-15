@@ -699,7 +699,11 @@ function getNpcInfos()
     global $tabnpcs, $cntnpcs, $pathdata;
     
     $files = array( "client_npcs_npc.xml",
-                    "client_npcs_monster.xml"
+                    "client_npcs_monster.xml",
+                    "client_npcs_abyss_monster.xml",
+                    "client_npcs_std_abyss_monster.xml",
+                    "client_npcs_std_monster.xml",
+                    "client_npcs_test_monster.xml"
                    );
     $max   = count($files);
     
@@ -723,73 +727,77 @@ function getNpcInfos()
         
     for ($f=0;$f<$max;$f++)
     {
-        $fileutf16 = str_replace("\\\\","\\",$pathdata."\\Npcs\\".$files[$f]);    
-        $filename = convFileToUtf8($fileutf16);
-                        
-        $anzles   = 0;
-        $anznpc   = 0;
-        $fndnpc   = false;
-        $starttime= microtime(true);
-        
-        logHead("Ermitteln Informationen aus ".$files[$f]);
-        logLine("Eingabedatei UTF16",$fileutf16);
-        logLine("Eingabedatei UTF8 ",$filename);
-        logFileSize("",$filename);
-        
-        flush();
-        
-        if (!file_exists($filename))
-        {
-            logLine("Fehler","Datei nicht gefunden");
-            return;
-        }
-        
-        $hdlin = openInputFile($filename);
-        
-        while (!feof($hdlin))
-        {
-            $line = rtrim(fgets($hdlin));
-            $anzles++;
+        $fileutf16 = str_replace("\\\\","\\",$pathdata."\\Npcs\\".$files[$f]); 
+
+        if (file_exists($fileutf16)) 
+        {        
+            $filename = convFileToUtf8($fileutf16);
+                            
+            $anzles   = 0;
+            $anznpc   = 0;
+            $fndnpc   = false;
+            $starttime= microtime(true);
             
-            if (stripos($line,"<npc_client>") !== false)
+            logHead("Ermitteln Informationen aus ".$files[$f]);
+            logLine("Eingabedatei UTF16",$fileutf16);
+            logLine("Eingabedatei UTF8 ",$filename);
+            logFileSize("",$filename);
+            
+            flush();
+            
+            if (!file_exists($filename))
             {
-                $fndnpc = true;
-                $anznpc++;
-                
-                initNpcInTab($tabkeys,$tabnone);
+                logLine("Fehler","Datei nicht gefunden");
+                return;
             }
             
-            if (stripos($line,"</npc_client>") !== false)
-            {
-                chkNpcInfos($cntnpcs);
-                
-                // abschliessen letzten NPC - Informationen, die noch nicht vorhanden sind            
-                $fndnpc = false;
-                $cntnpcs++;
-            }
+            $hdlin = openInputFile($filename);
             
-            if ($fndnpc)
+            while (!feof($hdlin))
             {
-                for ($k=0;$k<$maxkeys;$k++)
+                $line = rtrim(fgets($hdlin));
+                $anzles++;
+                
+                if (stripos($line,"<npc_client>") !== false)
                 {
-                    if ($tabnpcs[$cntnpcs][$tabkeys[$k]] == "?"
-                    &&  stripos($line,"<".$tabkeys[$k].">") !== false)
+                    $fndnpc = true;
+                    $anznpc++;
+                    
+                    initNpcInTab($tabkeys,$tabnone);
+                }
+                
+                if (stripos($line,"</npc_client>") !== false)
+                {
+                    chkNpcInfos($cntnpcs);
+                    
+                    // abschliessen letzten NPC - Informationen, die noch nicht vorhanden sind            
+                    $fndnpc = false;
+                    $cntnpcs++;
+                }
+                
+                if ($fndnpc)
+                {
+                    for ($k=0;$k<$maxkeys;$k++)
                     {
-                        $tabnpcs[$cntnpcs][$tabkeys[$k]] = getXmlValue($tabkeys[$k],$line);
-                        $k = $maxkeys;
+                        if ($tabnpcs[$cntnpcs][$tabkeys[$k]] == "?"
+                        &&  stripos($line,"<".$tabkeys[$k].">") !== false)
+                        {
+                            $tabnpcs[$cntnpcs][$tabkeys[$k]] = getXmlValue($tabkeys[$k],$line);
+                            $k = $maxkeys;
+                        }
                     }
                 }
             }
+            fclose($hdlin);
+            
+            unlink($filename);
+            
+            $usetime = substr(microtime(true) - $starttime,0,8);
+            
+            logLine("Zeilen gelesen",$anzles);
+            logLine("gefundene NPCs",$anznpc);
+            logLine("verbrauchte Zeit",$usetime." secs");
         }
-        fclose($hdlin);
-        
-        unlink($filename);
-        
-        $usetime = substr(microtime(true) - $starttime,0,8);
-        
-        logLine("Zeilen gelesen",$anzles);
-        logLine("gefundene NPCs",$anznpc);
-        logLine("verbrauchte Zeit",$usetime." secs");
     }
     
     putNpcInclude("scan");
