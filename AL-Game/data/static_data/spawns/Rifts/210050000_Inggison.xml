@@ -3,13 +3,13 @@
     <spawn_map map_id="210050000">
         <!-- Rift -->
         <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Inggison -->
-            <spot x="2269.9521" y="1440.8226" z="202.2073" h="30" anchor="INGGISON_AM"/>
+            <spot x="2269.9521" y="1440.8226" z="202.20734" h="30" anchor="INGGISON_AM"/> <!-- checked -->
             <!-- id 2150 -->
-            <spot x="854.4329" y="1286.3925" z="428.9761" h="60" anchor="INGGISON_BM"/>
+            <spot x="854.4329" y="1286.3925" z="428.97614" h="60" anchor="INGGISON_BM"/> <!-- checked -->
             <!-- id 2151 -->
-            <spot x="2025.0779" y="2086.3252" z="298.7062" h="30" anchor="INGGISON_CM"/>
+            <spot x="2025.0779" y="2086.3252" z="298.7062" h="30" anchor="INGGISON_CM"/> <!-- checked -->
             <!-- id 2152 -->
-            <spot x="561.6146" y="1867.4319" z="334.2267" h="103" anchor="INGGISON_DM"/>
+            <spot x="561.61456" y="1867.4319" z="334.22675" h="103" anchor="INGGISON_DM"/> <!-- checked -->
             <!-- id 2153 -->
         </spawn>
         <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Inggison -->

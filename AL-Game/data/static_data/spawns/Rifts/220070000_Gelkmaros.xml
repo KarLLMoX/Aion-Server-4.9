@@ -13,13 +13,13 @@
             <!-- id 2273 -->
         </spawn>
         <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Gelkmaros -->
-            <spot x="162.2118" y="1491.9402" z="368.6624" h="30" anchor="GELKMAROS_AS"/> <!-- Todo -->
+            <spot x="90.06425" y="1900.2695" z="402.6042" anchor="GELKMAROS_AS"/> <!-- checked -->
             <!-- id 2150 -->
-            <spot x="2070.5920" y="1728.8322" z="390.4826" h="60" anchor="GELKMAROS_BS"/> <!-- Todo -->
+            <spot x="2204.3848" y="1533.182" z="378.8317" h="40" anchor="GELKMAROS_BS"/> <!-- checked -->
             <!-- id 2151 -->
-            <spot x="581.8158" y="1559.0963" z="282.3767" h="60" anchor="GELKMAROS_CS"/> <!-- Todo -->
+            <spot x="667.941" y="1553.7323" z="283.6092" h="90" anchor="GELKMAROS_CS"/> <!-- checked -->
             <!-- id 2152 -->
-            <spot x="2273.6223" y="852.7231" z="194.3370" h="70" anchor="GELKMAROS_DS"/> <!-- Todo -->
+            <spot x="2580.25" y="624.4161" z="147.17259" h="13" anchor="GELKMAROS_DS"/> <!-- checked -->
             <!-- id 2153 -->
         </spawn>
 
