@@ -4803,9 +4803,4 @@
             <drop item_id="182003744" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Shackle" />
         </drop_group>
     </npc_drop>
-    <npc_drop npc_id="700105">
-        <drop_group name="QUEST_COMMON" use_category="true" race="PC_ALL">
-            <drop item_id="182200201" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Kerub Grain Sack" />
-        </drop_group>
-    </npc_drop>
 </npc_drops>
