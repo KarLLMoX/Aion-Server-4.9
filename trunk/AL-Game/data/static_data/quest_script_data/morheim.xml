@@ -49,7 +49,7 @@
                     2333 [SCRIPT] A Ribbit out of Water
                     2334 [XML] A New Recipe
                     2340 [XML] The Munmun's Ginseng
-                    2341 [XML] Weakening the Iceclaws
+                    2341 [SCRIPT] Weakening the Iceclaws
                     2342 [XML] An Ice Claw Raid
                     2343 [SCRIPT] Ancient Ginseng
                     2344 [XML] Destroying the Mau Flag
@@ -414,10 +414,6 @@
     </monster_hunt>
     <monster_hunt id="2331" start_npc_ids="204332">
         <monster npc_ids="212653" var="0" end_var="1"/>
-    </monster_hunt>
-    <monster_hunt id="2341" start_npc_ids="204333">
-        <monster end_var="7" var="0" npc_ids="211437"/>
-        <monster end_var="19" var="1" npc_ids="211409"/>
     </monster_hunt>
     <monster_hunt id="2342" start_npc_ids="204333">
         <monster end_var="5" var="0" npc_ids="211457"/>
