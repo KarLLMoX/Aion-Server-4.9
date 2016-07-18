@@ -3706,7 +3706,7 @@
 		</spawn>
 		<!-- Kikananta -->
 		<spawn npc_id="204414" respawn_time="295">
-			<spot x="2582.39" y="400.71" z="214.21" h="120"/>
+			<spot x="2006.9166" y="499.90717" z="272.93997" h="13"/>
 		</spawn>
 		<!-- BuBu Pat -->
 		<spawn npc_id="204401" respawn_time="295">
