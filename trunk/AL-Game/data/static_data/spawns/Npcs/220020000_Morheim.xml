@@ -3757,7 +3757,7 @@
 		</spawn>
 		<!-- Olav -->
 		<spawn npc_id="205263" respawn_time="295">
-			<spot x="2795.47" y="1122.05" z="171.516" h="81"/>
+			<spot x="2797.3262" y="1121.6643" z="171.51566" h="73"/>
 		</spawn>
 		<!-- Gruntvi -->
 		<spawn npc_id="205260" respawn_time="295">
@@ -3886,6 +3886,9 @@
 		<!-- Garrison Patrol Leader -->
 		<spawn npc_id="207790" respawn_time="295">
 			<spot x="1769.3134" y="1663.8669" z="197.5401" h="6"/>
+			<spot x="2793.5613" y="1088.7556" z="171.51624" h="50"/>
+			<spot x="2806.4636" y="1098.7444" z="171.51819" h="60"/>
+			<spot x="2791.9734" y="1124.182" z="171.40002" h="80"/>
 		</spawn>
 		<!-- Garrison Patrol -->
 		<spawn npc_id="207778" respawn_time="295">
@@ -6822,6 +6825,7 @@
 		<!-- Garrison Senior Patrol -->
 		<spawn npc_id="207796" respawn_time="295">
 			<spot x="636.4" y="906.88" z="360.525" h="105" walker_id="B8B19C189B038AC40FBF5754227082396A102D03"/>
+            <spot x="2803.276" y="1083.8171" z="173.36009" h="63"/>
 		</spawn>
 		<!-- Garrison Senior Patrol -->
 		<spawn npc_id="207801" respawn_time="295">
@@ -8812,6 +8816,10 @@
 		<spawn npc_id="700258" respawn_time="295">
 			<spot x="1095.670" y="2482.170" z="240.373" h="30" static_id="107"/>
 		</spawn>
+		<!-- Mist Mane Teleport Statue -->
+		<spawn npc_id="730739" respawn_time="295">
+			<spot x="2795.181" y="1084.2498" z="172.36127" h="40" static_id="2443"/>
+		</spawn>		
 
 		<!-- MAILBOX -->
 

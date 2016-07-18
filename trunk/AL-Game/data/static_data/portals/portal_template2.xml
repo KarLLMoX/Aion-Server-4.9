@@ -710,6 +710,10 @@
     <portal_use npc_id="730046">
         <portal_path loc_id="2200207"/>
     </portal_use>
+    <!-- Mist Mane Teleport Statue -->
+    <portal_use npc_id="730739">
+        <portal_path loc_id="2200209"/>
+    </portal_use>
     <!-- Shadow Court Dungeon Elyos Entrance -->
     <portal_use npc_id="700627">
         <portal_path loc_id="3201200" player_count="6" instance="true" race="ELYOS">

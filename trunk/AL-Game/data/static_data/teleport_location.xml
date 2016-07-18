@@ -136,7 +136,7 @@
 	<teleloc_template loc_id="123" mapid="220020000" name="Kellan's Cabin" name_id="401652"/>
 	<teleloc_template loc_id="124" mapid="220020000" name="Slag Bulwark" name_id="401653"/>
 	<teleloc_template loc_id="125" mapid="220020000" name="Halabana Outpost" name_id="401654"/>
-	<teleloc_template loc_id="126" mapid="220020000" name="Morheim Observatory" name_id="401655"/>
+	<teleloc_template loc_id="126" mapid="220020000" name="Morheim Observatory" name_id="401655" posX="2795.59" posY="1121.98" posZ="171.51566" heading="6"/>
 	<teleloc_template loc_id="127" mapid="220050000" name="Edge of Torment" name_id="401656"/>
 	<teleloc_template loc_id="128" mapid="220050000" name="Iollu Overlook" name_id="401657"/>
 	<teleloc_template loc_id="129" mapid="220040000" name="Kidorun Campsite" name_id="401658"/>
@@ -211,7 +211,7 @@
 	<teleloc_template loc_id="246" mapid="210040000" name="Reaper Outpost" name_id="403618"/>
 	<teleloc_template loc_id="247" mapid="220050000" name="Kamstow's Barracks" name_id="403619"/>
 	<!-- teleport -->
-	<teleloc_template loc_id="248" mapid="220020000" name="Chaikata's Hideout" name_id="403723" posX="2223.4775" posY="1431.7113" posZ="126.23196" heading="22"/>
+	<teleloc_template loc_id="248" mapid="220020000" name="Chaikata's Hideout" name_id="403723" posX="2296.416" posY="1513.0275" posZ="120.96711" heading="0"/>
 	<teleloc_template loc_id="313" mapid="210050000" name="Inggison" name_id="403989" posX="1337.8695" posY="278.9673" posZ="589.36566" heading="78"/>
 	<teleloc_template loc_id="314" mapid="220070000" name="Gelkmaros" name_id="403990" posX="1882.6924" posY="2861.4294" posZ="554.9788" heading="6"/>
 	<teleloc_template loc_id="316" mapid="600090000" name="Hero Fall L" name_id="404261" posX="596" posY="862" posZ="168" heading="0"/>
