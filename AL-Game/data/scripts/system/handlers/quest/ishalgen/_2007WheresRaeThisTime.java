@@ -17,6 +17,8 @@
 package quest.ishalgen;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.EmotionId;
+import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.TeleportAnimation;
@@ -28,8 +30,9 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
- * @author Mr. Poke
- * @modified apozema
+ * @author MrPoke
+ * @rework apozema
+ * @rework FrozenKiller
  */
 public class _2007WheresRaeThisTime extends QuestHandler {
 
@@ -53,6 +56,7 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 	public boolean onDialogEvent(QuestEnv env) {
 		final Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		DialogAction dialog = env.getDialog();
 		if (qs == null) {
 			return false;
 		}
@@ -66,41 +70,36 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 		if (qs.getStatus() == QuestStatus.START) {
 			switch (targetId) {
 				case 203516: // Ulgorn
-					switch (env.getDialog()) {
+					switch (dialog) {
 						case QUEST_SELECT:
 							if (var == 0) {
 								return sendQuestDialog(env, 1011);
 							}
 						case SETPRO1:
 							if (var == 0) {
-								qs.setQuestVarById(0, var + 1);
-								updateQuestStatus(env);
-								closeDialogWindow(env);
-								return true;
+							return defaultCloseDialog(env, 0, 1);
 							}
 						default:
 							break;
 					}
 					break;
 				case 203519: // Nobekk
-					switch (env.getDialog()) {
+				switch (dialog) {
 						case QUEST_SELECT:
 							if (var == 1) {
+								sendEmotion(env, (Creature) env.getVisibleObject(), EmotionId.THINK, true);
 								return sendQuestDialog(env, 1352);
 							}
 						case SETPRO2:
 							if (var == 1) {
-								qs.setQuestVarById(0, var + 1);
-								updateQuestStatus(env);
-								closeDialogWindow(env);
-								return true;
+							return defaultCloseDialog(env, 1, 2);
 							}
 						default:
 							break;
 					}
 					break;
 				case 203539: // Derot
-					switch (env.getDialog()) {
+				switch (dialog) {
 						case QUEST_SELECT:
 							if (var == 2) {
 								return sendQuestDialog(env, 1693);
@@ -110,34 +109,28 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 							break;
 						case SETPRO3:
 							if (var == 2) {
-								qs.setQuestVarById(0, var + 1);
-								updateQuestStatus(env);
-								closeDialogWindow(env);
-								return true;
+							return defaultCloseDialog(env, 2, 3);
 							}
 						default:
 							break;
 					}
 					break;
 				case 203552: // Nalto
-					switch (env.getDialog()) {
+				switch (dialog) {
 						case QUEST_SELECT:
 							if (var == 3) {
 								return sendQuestDialog(env, 2034);
 							}
 						case SETPRO4:
 							if (var == 3) {
-								qs.setQuestVarById(0, var + 1);
-								updateQuestStatus(env);
-								closeDialogWindow(env);
-								return true;
+							return defaultCloseDialog(env, 3, 4);
 							}
 						default:
 							break;
 					}
 					break;
 				case 203554: // Rae
-					switch (env.getDialog()) {
+				switch (dialog) {
 						case QUEST_SELECT:
 							if (var == 4) {
 								return sendQuestDialog(env, 2375);
@@ -146,10 +139,7 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 							}
 						case SETPRO5:
 							if (var == 4) {
-								qs.setQuestVarById(0, var + 1);
-								updateQuestStatus(env);
-								sendQuestSelectionDialog(env);
-								return true;
+							return defaultCloseDialog(env, 4, 5);
 							}
 							break;
 						case SETPRO6:
@@ -185,10 +175,13 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 			
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203516) { // Ulgorn
-				if (env.getDialog() == DialogAction.USE_OBJECT) {
-					playQuestMovie(env, 58);
-					return sendQuestDialog(env, 3057);
-				} else {
+				switch (dialog) {
+					case USE_OBJECT: 
+						return sendQuestDialog(env, 3057);
+					case SELECT_QUEST_REWARD:
+						playQuestMovie(env, 58);
+						return sendQuestDialog(env, 5);
+				default:
 					return sendQuestEndDialog(env);
 				}
 			}
@@ -208,7 +201,7 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 		return defaultOnLvlUpEvent(env, quests, true);
 	}
 
-	private void destroy(final int var, final QuestEnv env) { //TODO: add Emotion for destroying generators
+	private void destroy(final int var, final QuestEnv env) {
 		final int targetObjectId = env.getVisibleObject().getObjectId();
 		final Player player = env.getPlayer();
 		ThreadPoolManager.getInstance().schedule(new Runnable() {
@@ -224,9 +217,8 @@ public class _2007WheresRaeThisTime extends QuestHandler {
 						qs.setQuestVar(var);
 						break;
 					case 8:
-						
-						qs.setQuestVar(var);
 						playQuestMovie(env, 56);
+						qs.setQuestVar(var);
 						break;
 				}
 				updateQuestStatus(env);
