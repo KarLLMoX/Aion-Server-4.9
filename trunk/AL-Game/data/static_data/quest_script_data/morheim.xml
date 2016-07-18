@@ -626,16 +626,16 @@
         <monster var="0" end_var="5" npc_ids="212533"/>
         <monster var="1" end_var="5" npc_ids="212535"/>
     </monster_hunt>
-    <monster_hunt id="26900" start_npc_ids="204301">
-        <monster var="0" npc_ids="231549 231550" end_var="10"/>
+    <monster_hunt id="26900" start_npc_ids="204301" end_dialog_id="1352">
+        <monster var="0" npc_ids="231549 231550" end_var="1"/>
     </monster_hunt>
-    <monster_hunt id="26901" start_npc_ids="204301">
+    <monster_hunt id="26901" start_npc_ids="204301" end_dialog_id="1352">
         <monster var="0" npc_ids="231552 231553" end_var="1"/>
     </monster_hunt>
      <monster_hunt id="26905" start_npc_ids="204301" end_npc_ids="204372" end_dialog_id="2375">
         <monster npc_ids="231555 231556" var="0" end_var="1"/>
     </monster_hunt>
-    <monster_hunt id="26906" start_npc_ids="204301">
+    <monster_hunt id="26906" start_npc_ids="204301" end_npc_ids="204369" end_dialog_id="2375">
         <monster var="0" npc_ids="231558 231559" end_var="1"/>
     </monster_hunt>
     <kill_in_world id="49020" end_npc_ids="204301" worlds="220020000" amount="5" invasion_world="220020000"/>
