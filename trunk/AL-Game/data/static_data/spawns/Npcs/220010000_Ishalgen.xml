@@ -1923,5 +1923,9 @@
 		<spawn npc_id="801034"  respawn_time="295">
 			<spot h="103" x="558.61487" y="2414.2043" z="278.87778"/>
 		</spawn>
+		<!-- Nowlan -->
+		<spawn npc_id="801035" respawn_time="295">
+            <spot x="560.6854" y="2413.8635" z="278.69397" h="114"/>
+		</spawn>
 	</spawn_map>
 </spawns>
