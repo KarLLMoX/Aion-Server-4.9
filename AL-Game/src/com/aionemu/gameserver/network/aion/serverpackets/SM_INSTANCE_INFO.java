@@ -66,10 +66,11 @@ public class SM_INSTANCE_INFO extends AionServerPacket {
             for (FastMap.Entry<Integer, InstanceCooltime> e = DataManager.INSTANCE_COOLTIME_DATA.getAllInstances().head(), end = DataManager.INSTANCE_COOLTIME_DATA.getAllInstances().tail(); (e = e.getNext()) != end; ) {
                 writeD(e.getValue().getId());
                 writeD(0x0);
-                if (cooldownList.getPortalCooldown(e.getValue().getWorldId()) == 0)
+                if (cooldownList.getPortalCooldown(e.getValue().getWorldId()) == 0) {
                     writeD(0x0);
-                else
+				} else {
                     writeD((int) (cooldownList.getPortalCooldown(e.getValue().getWorldId()) - System.currentTimeMillis()) / 1000);
+				}
                 writeD(DataManager.INSTANCE_COOLTIME_DATA.getInstanceEntranceCountByWorldId(e.getKey()));
                 writeD(cooldownList.getPortalCooldownItem(e.getValue().getWorldId()) != null ? cooldownList.getPortalCooldownItem(e.getValue().getWorldId()).getEntryCount() * -1 : 0);
 				writeD(0x00); // 4.9
