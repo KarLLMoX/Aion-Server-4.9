@@ -133,9 +133,9 @@ public class _1062IndratuLegion extends QuestHandler {
         final Player player = env.getPlayer();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
 		int targetId = env.getTargetId();
-		int var = qs.getQuestVarById(0);
 
 		if (qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
 			if (targetId == 700220) {
 				if (var >= 2 && var < 7) {
 					return defaultOnKillEvent(env, 700220, 2, 7);
