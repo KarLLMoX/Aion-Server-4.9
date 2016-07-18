@@ -15,7 +15,7 @@
 		</spawn>
 		<!-- Numutata -->
 		<spawn npc_id="217136" respawn_time="295">
-			<spot x="2111.5652" y="733.6982" z="244.7186" h="53"/>
+			<spot x="1956.2975" y="447.33035" z="295.9383" h="115"/>
 		</spawn>
 		<!-- Brutal Ice Claw Dark Mage -->
 		<spawn npc_id="212810" respawn_time="3600" >
@@ -3706,7 +3706,7 @@
 		</spawn>
 		<!-- Kikananta -->
 		<spawn npc_id="204414" respawn_time="295">
-			<spot x="2006.9166" y="499.90717" z="272.93997" h="13"/>
+			<spot x="2006.8873" y="499.47324" z="272.47623" h="0"/>
 		</spawn>
 		<!-- BuBu Pat -->
 		<spawn npc_id="204401" respawn_time="295">
