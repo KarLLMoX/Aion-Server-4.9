@@ -35,15 +35,15 @@
 				</spawn>
 				<!-- WorldRaid_Advent_Effect -->
 				<spawn npc_id="702549">
-					<spot x="192.61913" y="527.22363" z="196.70428" h="103"/>
+					<spot x="192.86804" y="526.93805" z="203.43486" h="119"/>
 				</spawn>
 				<!-- Warning Area -->
 				<spawn npc_id="832819">
-					<spot x="192.61913" y="527.22363" z="196.70428" h="103"/>
+					<spot x="192.86804" y="526.93805" z="203.43486" h="119"/>
 				</spawn>
 				<!-- Prime Benoid I -->
 				<spawn npc_id="219999">
-					<spot x="192.61913" y="527.22363" z="196.70428" h="103"/>
+					<spot x="192.86804" y="526.93805" z="203.43486" h="119"/>
 				</spawn>
 			</beritra_type>
 			<beritra_type bstate="PEACE">
