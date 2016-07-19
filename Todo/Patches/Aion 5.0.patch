@@ -1,0 +1,849 @@
+Index: config/administration/developer.properties
+===================================================================
+--- config/administration/developer.properties	(revision 389)
++++ config/administration/developer.properties	(working copy)
+@@ -40,7 +40,7 @@
+ # ------------------------------
+ # Display Packets Name for Developers only (Only Console Window)
+ # Default: false
+-gameserver.developer.showpackets.enable = false
++gameserver.developer.showpackets.enable = true
+ 
+ # Display Packets Name or Hex-Bytes in Chat Window
+ # Default: false
+Index: config/main/gameserver.properties
+===================================================================
+--- config/main/gameserver.properties	(revision 389)
++++ config/main/gameserver.properties	(working copy)
+@@ -19,7 +19,7 @@
+ # ============================
+ # GS Country Code (cc)
+ # Examples : KOR : 0 / NA : 1 / EU : 2 / RUS : 7
+-gameserver.country.code = 2
++gameserver.country.code = 1
+ 
+ # Custom name of the GS Developer Group (displayed in the connection credits)
+ # The real server's name (Siel, Telemachus ...) is defined by the GSid
+@@ -29,7 +29,7 @@
+ # Name of your loginserver database
+ # MySQL5AbyssRankDAO fix to exclude GM/Staff from Abyss Ranking list
+ # Default: al_server_ls
+-loginserver.database.name = al_server_ls
++loginserver.database.name = al_server_ls2
+ 
+ # Max level for players
+ # Actual : 65 (4.7)
+@@ -42,8 +42,8 @@
+ 
+ # Server Version
+ # Examples : NA : 4.7.5.1 / EU : 4.7.5.15 / KOR : 4.5.0.1 / OTHER : 4.0.0.2
+-# Default: 4.7.5.15
+-gameserver.version = 4.7.5.15
++# Default: 4.9.1
++gameserver.version = 4.9.1
+ 
+ # Server Language
+ # Languages: English, French, German, Russian, Portuguese 
+@@ -59,7 +59,7 @@
+ 
+ # Enable connection with CS (ChatServer)
+ # Default: false
+-gameserver.chatserver.enable = false
++gameserver.chatserver.enable = true
+ 
+ # ============================
+ # Character creation configs:
+@@ -68,7 +68,7 @@
+ # 0: (Default) User can only create characters inside 1 faction.
+ # 1: User can create characters of both factions on the same account.
+ # 2: (Character reservation mode) User is bound to 1 faction, can't create more than 2 characters and can't enter the game world.
+-gameserver.character.creation.mode = 0
++gameserver.character.creation.mode = 1
+ 
+ # Maximum number of characters per account (Numeric value between 0-8)
+ # Default: 5 (8 for premium)
+Index: data/scripts/system/database/mysql5/MySQL5PlayerAppearanceDAO.java
+===================================================================
+--- data/scripts/system/database/mysql5/MySQL5PlayerAppearanceDAO.java	(revision 389)
++++ data/scripts/system/database/mysql5/MySQL5PlayerAppearanceDAO.java	(working copy)
+@@ -97,7 +97,7 @@
+                 pa.setArmThickness(resultSet.getInt("arm_thickness"));
+                 pa.setArmLength(resultSet.getInt("arm_length"));
+                 pa.setHandSize(resultSet.getInt("hand_size"));
+-                pa.setLegThicnkess(resultSet.getInt("leg_thickness"));
++                pa.setLegThickness(resultSet.getInt("leg_thickness"));
+                 pa.setLegLength(resultSet.getInt("leg_length"));
+                 pa.setFootSize(resultSet.getInt("foot_size"));
+                 pa.setFacialRate(resultSet.getInt("facial_rate"));
+@@ -183,7 +183,7 @@
+                                 ps.setInt(46, pa.getArmThickness());
+                                 ps.setInt(47, pa.getArmLength());
+                                 ps.setInt(48, pa.getHandSize());
+-                                ps.setInt(49, pa.getLegThicnkess());
++                                ps.setInt(49, pa.getLegThickness());
+                                 ps.setInt(50, pa.getLegLength());
+                                 ps.setInt(51, pa.getFootSize());
+                                 ps.setInt(52, pa.getFacialRate());
+Index: data/scripts/system/handlers/admincommands/Appearance.java
+===================================================================
+--- data/scripts/system/handlers/admincommands/Appearance.java	(revision 389)
++++ data/scripts/system/handlers/admincommands/Appearance.java	(working copy)
+@@ -167,7 +167,7 @@
+         	playerAppearance.setHips(app.hips);
+         	playerAppearance.setArmThickness(app.armThickness);
+         	playerAppearance.setHandSize(app.handSize);
+-        	playerAppearance.setLegThicnkess(app.legThickness);
++        	playerAppearance.setLegThickness(app.legThickness);
+         	playerAppearance.setFootSize(app.footSize);
+         	playerAppearance.setFacialRate(app.facialRatio);
+         	//playerAppearance.setunk_0x00(app.unk2);
+Index: src/com/aionemu/gameserver/model/gameobjects/player/PlayerAppearance.java
+===================================================================
+--- src/com/aionemu/gameserver/model/gameobjects/player/PlayerAppearance.java	(revision 389)
++++ src/com/aionemu/gameserver/model/gameobjects/player/PlayerAppearance.java	(working copy)
+@@ -71,7 +71,7 @@
+     private int armThickness;
+     private int armLength;
+     private int handSize;
+-    private int legThicnkess;
++    private int legThickness;
+     private int legLength;
+     private int footSize;
+     private int facialRate;
+@@ -917,17 +917,17 @@
+      *
+      * @return leg thickness
+      */
+-    public int getLegThicnkess() {
+-        return legThicnkess;
++    public int getLegThickness() {
++        return legThickness;
+     }
+ 
+     /**
+      * Sets leg thickness
+      *
+-     * @param legThicnkess leg thickness
++     * @param legThickness leg thickness
+      */
+-    public void setLegThicnkess(int legThicnkess) {
+-        this.legThicnkess = legThicnkess;
++    public void setLegThickness(int legThickness) {
++        this.legThickness = legThickness;
+     }
+ 
+     /**
+Index: src/com/aionemu/gameserver/network/aion/clientpackets/CM_CHARACTER_EDIT.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/clientpackets/CM_CHARACTER_EDIT.java	(revision 389)
++++ src/com/aionemu/gameserver/network/aion/clientpackets/CM_CHARACTER_EDIT.java	(working copy)
+@@ -156,7 +156,7 @@
+         playerAppearance.setArmThickness(readC());
+ 
+         playerAppearance.setHandSize(readC());
+-        playerAppearance.setLegThicnkess(readC());
++        playerAppearance.setLegThickness(readC());
+ 
+         playerAppearance.setFootSize(readC());
+         playerAppearance.setFacialRate(readC());
+Index: src/com/aionemu/gameserver/network/aion/clientpackets/CM_CREATE_CHARACTER.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/clientpackets/CM_CREATE_CHARACTER.java	(revision 389)
++++ src/com/aionemu/gameserver/network/aion/clientpackets/CM_CREATE_CHARACTER.java	(working copy)
+@@ -175,7 +175,7 @@
+         playerAppearance.setArmThickness(readC());
+ 
+         playerAppearance.setHandSize(readC());
+-        playerAppearance.setLegThicnkess(readC());
++        playerAppearance.setLegThickness(readC());
+ 
+         playerAppearance.setFootSize(readC());
+         playerAppearance.setFacialRate(readC());
+Index: src/com/aionemu/gameserver/network/aion/PlayerInfo.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/PlayerInfo.java	(revision 389)
++++ src/com/aionemu/gameserver/network/aion/PlayerInfo.java	(working copy)
+@@ -53,7 +53,7 @@
+         writeD(playerAppearance.getVoice());
+         writeD(playerAppearance.getSkinRGB());
+         writeD(playerAppearance.getHairRGB());
+-        writeD(playerAppearance.getEyeRGB());
++        writeD(playerAppearance.getEyeRGB()); // TODO LEFT EYE
+         writeD(playerAppearance.getLipRGB());
+         writeC(playerAppearance.getFace());
+         writeC(playerAppearance.getHair());
+@@ -61,7 +61,11 @@
+         writeC(playerAppearance.getTattoo());
+         writeC(playerAppearance.getFaceContour());
+         writeC(playerAppearance.getExpression());
+-        writeC(4);// always 4 o0
++        writeC(0x00);// TODO PupilShape
++        writeC(0x00);// TODO RemoveMane
++		writeD(playerAppearance.getEyeRGB()); // TODO RIGHT EYE
++		writeC(0x00);// TODO EyeLashShape
++		writeC(0x06);// UNK 6
+         writeC(playerAppearance.getJawLine());
+         writeC(playerAppearance.getForehead());
+         writeC(playerAppearance.getEyeHeight());
+@@ -99,17 +103,22 @@
+         writeC(playerAppearance.getHips());
+         writeC(playerAppearance.getArmThickness());
+         writeC(playerAppearance.getHandSize());
+-        writeC(playerAppearance.getLegThicnkess());
++        writeC(playerAppearance.getLegThickness());
++		writeC(-15);// unk;
++        writeC(playerAppearance.getFacialRate());
+         writeC(playerAppearance.getFootSize());
+-        writeC(playerAppearance.getFacialRate());
+-        writeC(0x00); // 0x00
+         writeC(playerAppearance.getArmLength()); // armLength
+         writeC(playerAppearance.getLegLength()); // legLength
+         writeC(playerAppearance.getShoulders());
+         writeC(playerAppearance.getFaceShape());
+-        writeC(0x00); // always 0 may be acessLevel
+-        writeC(0x00); // always 0 - unk
+-        writeC(0x00);
++		writeC(0x00);// TODO PupilSize
++		writeC(0x00);// TODO UpperTorso
++		writeC(0x00);// TODO ForeArmThickness
++		writeC(0x00);// TODO HandSpan
++		writeC(0x00);// TODO CalfThickness
++        writeC(0x00);// always 0 may be acessLevel
++        writeC(0x00);// always 0
++        writeC(0x00);// always 0
+         writeF(playerAppearance.getHeight());
+         int raceSex = 100000 + raceId * 2 + genderId;
+         writeD(raceSex);
+Index: src/com/aionemu/gameserver/network/aion/serverpackets/SM_CHARACTER_LIST.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/serverpackets/SM_CHARACTER_LIST.java	(revision 389)
++++ src/com/aionemu/gameserver/network/aion/serverpackets/SM_CHARACTER_LIST.java	(working copy)
+@@ -57,6 +57,7 @@
+      */
+     @Override
+     protected void writeImpl(AionConnection con) {
++		writeC(2);
+     	writeD(playOk2);
+ 
+         Account account = con.getAccount();
+@@ -86,12 +87,11 @@
+ 				writeH(player.getPlayerSettings().getDisplay());//display helmet 0 show, 5 dont show
+ 				writeH(0); //unk
+ 				writeD(0); //Mail Ammount
+-				writeD(0); //Unread Mail Ammount
+ 				writeD(DAOManager.getDAO(MailDAO.class).haveUnread(pcd.getPlayerObjId()) ? 1 : 0); // mail
+ 				writeD(0); //unk
+ 				writeD(0); //unk
+ 				writeQ(BrokerService.getInstance().getCollectedMoney(pcd)); // collected money from broker
+-				writeB(new byte[122]); // unk 4.9
++				writeB(new byte[130]); // unk 5.0
+             }
+         }
+     }
+Index: src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java
+===================================================================
+--- src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java	(revision 389)
++++ src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java	(working copy)
+@@ -238,7 +238,7 @@
+ 
+         writeD(playerAppearance.getSkinRGB());
+         writeD(playerAppearance.getHairRGB());
+-        writeD(playerAppearance.getEyeRGB());
++        writeD(playerAppearance.getEyeRGB()); // TODO LEFT EYE
+         writeD(playerAppearance.getLipRGB());
+         writeC(playerAppearance.getFace());
+         writeC(playerAppearance.getHair());
+@@ -246,16 +246,17 @@
+         writeC(playerAppearance.getTattoo());
+         writeC(playerAppearance.getFaceContour());
+         writeC(playerAppearance.getExpression());
+-
++        writeC(0x00);// TODO PupilShape
++        writeC(0x00);// TODO RemoveMane
++		writeD(playerAppearance.getEyeRGB()); // TODO RIGHT EYE
++		writeC(0x00);// TODO EyeLashShape
+         if (player.getGender() == Gender.FEMALE) {
+             writeC(6);
+         } else {
+             writeC(5);
+         }
+-
+         writeC(playerAppearance.getJawLine());
+         writeC(playerAppearance.getForehead());
+-
+         writeC(playerAppearance.getEyeHeight());
+         writeC(playerAppearance.getEyeSpace());
+         writeC(playerAppearance.getEyeWidth());
+@@ -262,16 +263,13 @@
+         writeC(playerAppearance.getEyeSize());
+         writeC(playerAppearance.getEyeShape());
+         writeC(playerAppearance.getEyeAngle());
+-
+         writeC(playerAppearance.getBrowHeight());
+         writeC(playerAppearance.getBrowAngle());
+         writeC(playerAppearance.getBrowShape());
+-
+         writeC(playerAppearance.getNose());
+         writeC(playerAppearance.getNoseBridge());
+         writeC(playerAppearance.getNoseWidth());
+         writeC(playerAppearance.getNoseTip());
+-
+         writeC(playerAppearance.getCheek());
+         writeC(playerAppearance.getLipHeight());
+         writeC(playerAppearance.getMouthSize());
+@@ -282,33 +280,31 @@
+         writeC(playerAppearance.getChinJut());
+         writeC(playerAppearance.getEarShape());
+         writeC(playerAppearance.getHeadSize());
+-        // 1.5.x 0x00, shoulderSize, armLength, legLength (BYTE) after HeadSize
++		// 1.5.x 0x00, shoulderSize, armLength, legLength (BYTE) after HeadSize
+ 
+         writeC(playerAppearance.getNeck());
+         writeC(playerAppearance.getNeckLength());
+-        writeC(playerAppearance.getShoulderSize());
+-
++        writeC(playerAppearance.getShoulderSize()); // shoulderSize
+         writeC(playerAppearance.getTorso());
+-        writeC(playerAppearance.getChest()); // only woman
++        writeC(playerAppearance.getChest());
+         writeC(playerAppearance.getWaist());
+-
+         writeC(playerAppearance.getHips());
+         writeC(playerAppearance.getArmThickness());
+         writeC(playerAppearance.getHandSize());
+-        writeC(playerAppearance.getLegThicnkess());
+-
++        writeC(playerAppearance.getLegThickness());
++		writeC(-15);// unk;
++        writeC(playerAppearance.getFacialRate());
+         writeC(playerAppearance.getFootSize());
+-        writeC(playerAppearance.getFacialRate());
+-
+-        writeC(0x00); // always 0
+-        writeC(playerAppearance.getArmLength());
+-        writeC(playerAppearance.getLegLength());
++        writeC(playerAppearance.getArmLength()); // armLength
++        writeC(playerAppearance.getLegLength()); // legLength
+         writeC(playerAppearance.getShoulders());
+         writeC(playerAppearance.getFaceShape());
+-        writeC(0x00); // always 0
+-
++		writeC(0x00);// TODO PupilSize
++		writeC(0x00);// TODO UpperTorso
++		writeC(0x00);// TODO ForeArmThickness
++		writeC(0x00);// TODO HandSpan
++		writeC(0x00);// TODO CalfThickness
+         writeC(playerAppearance.getVoice());
+-
+         writeF(playerAppearance.getHeight());
+         writeF(0.25f); // scale
+         writeF(2.0f); // gravity or slide surface o_O
+@@ -373,5 +369,6 @@
+         writeC(pcdd.getConquerorBuffLevel());
+         writeC(pcdd.getProtectorBuffLevel());        
+         writeC(0x00); // 4.8
++		writeH(0x00);
+     }
+ }
+Index: src/com/aionemu/gameserver/network/Crypt.java
+===================================================================
+--- src/com/aionemu/gameserver/network/Crypt.java	(revision 389)
++++ src/com/aionemu/gameserver/network/Crypt.java	(working copy)
+@@ -35,7 +35,7 @@
+     /**
+      * Second byte of server packet must be equal to this
+      */
+-    public final static byte staticServerPacketCode = 0x56; // 4.9 || 4.7 | 4.6 | 4.5 => 0x44 | 4.3 => 0x46
++    public final static byte staticServerPacketCode = 0x54; // 4.9 => 0x56 || 4.7 | 4.6 | 4.5 => 0x44 | 4.3 => 0x46
+     /**
+      * Crypt is enabled after first server packet was send.
+      */
+@@ -68,7 +68,7 @@
+         /**
+          * false key that will be sent to aion client in SM_KEY packet
+          */
+-        return (key ^ 0xCD92E4D1) + 0x3FF2CCD7; //4.9
++        return (key ^ 0xCD92E4D3) + 0x3FF2CCD7; //5.0
+     }
+ 
+     /**
+@@ -111,6 +111,6 @@
+      * @return obfuscated opcodec
+      */
+     public static final int encodeOpcodec(int op) {
+-    	return (op + 0xD0) ^ 0xD1; //4.9
++    	return (op + 0xD3) ^ 0xD3; //5.0
+     }
+ }
+Index: src/com/aionemu/gameserver/network/EncryptionKeyPair.java
+===================================================================
+--- src/com/aionemu/gameserver/network/EncryptionKeyPair.java	(revision 389)
++++ src/com/aionemu/gameserver/network/EncryptionKeyPair.java	(working copy)
+@@ -42,7 +42,7 @@
+     /**
+      * Second byte of client packet must be equal to this
+      */
+-    private final static byte staticClientPacketCode = 0x7D; //4.3 | 4.5 | 4.6 | 4.7
++    private final static byte staticClientPacketCode = 0x7D; //4.3 | 4.5 | 4.6 | 4.7 | 4.8 | 4.9
+     /**
+      * Base key used to generate client/server keys
+      */
+Index: src/com/aionemu/gameserver/network/factories/AionPacketHandlerFactory.java
+===================================================================
+--- src/com/aionemu/gameserver/network/factories/AionPacketHandlerFactory.java	(revision 389)
++++ src/com/aionemu/gameserver/network/factories/AionPacketHandlerFactory.java	(working copy)
+@@ -45,226 +45,226 @@
+ 
+         handler = new AionPacketHandler();
+         
+-		addPacket(new CM_UI_SETTINGS(0xC4, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MOTION(0x101, State.IN_GAME)); // 4.9
+-		addPacket(new CM_WINDSTREAM(0x100, State.IN_GAME)); // 4.9
+-		addPacket(new CM_STOP_TRAINING(0x112, State.IN_GAME)); // 4.9
+-		addPacket(new CM_REVIVE(0xC3, State.IN_GAME)); // 4.9
+-		addPacket(new CM_DUEL_REQUEST(0x14C, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CRAFT(0x14B, State.IN_GAME)); // 4.9
+-		addPacket(new CM_QUESTION_RESPONSE(0x10C, State.IN_GAME)); // 4.9
+-		addPacket(new CM_OPEN_STATICDOOR(0xD1, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SPLIT_ITEM(0x15B, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CUSTOM_SETTINGS(0xCA, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PLAY_MOVIE_END(0x12F, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEVEL_READY(0xC7, State.IN_GAME)); // 4.9
+-		addPacket(new CM_ENTER_WORLD(0xC6, State.AUTHED)); // 4.9
+-		addPacket(new CM_TIME_CHECK(0xEC, State.CONNECTED, State.AUTHED, State.IN_GAME)); // 4.9
+-		addPacket(new CM_QUIT(0xDD, State.AUTHED, State.IN_GAME)); // 4.9
+-		addPacket(new CM_L2AUTH_LOGIN_CHECK(0x153, State.CONNECTED)); // 4.9
+-		addPacket(new CM_CHARACTER_LIST(0x150, State.AUTHED)); // 4.9
+-		addPacket(new CM_CREATE_CHARACTER(0x151, State.AUTHED)); // 4.9
+-		addPacket(new CM_MAC_ADDRESS(0x17B, State.CONNECTED, State.AUTHED, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHARACTER_PASSKEY(0x1AC, State.AUTHED)); // 4.9
+-		addPacket(new CM_MAY_LOGIN_INTO_GAME(0x174, State.AUTHED)); // 4.9
+-		addPacket(new CM_MOVE(0x10E, State.IN_GAME)); // 4.8
+-		addPacket(new CM_CASTSPELL(0xFF, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EMOTION(0xE5, State.IN_GAME)); // 4.9
+-		addPacket(new CM_TITLE_SET(0x145, State.IN_GAME)); // 4.9 TODO
+-		addPacket(new CM_DELETE_ITEM(0x132, State.IN_GAME)); // 4.9
+-		addPacket(new CM_QUEST_SHARE(0x162, State.IN_GAME)); // 4.9
+-		addPacket(new CM_DELETE_QUEST(0x12E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_ABYSS_RANKING_PLAYERS(0x17A, State.IN_GAME)); // 4.9
+-		addPacket(new CM_ABYSS_RANKING_LEGIONS(0x130, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PRIVATE_STORE(0x131, State.IN_GAME)); // 4.9
+-		addPacket(new CM_USE_ITEM(0xE3, State.IN_GAME)); // 4.9
+-		addPacket(new CM_TARGET_SELECT(0xD9, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SHOW_DIALOG(0x2F2, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHECK_NICKNAME(0x18F, State.AUTHED)); // 4.9
+-		addPacket(new CM_PRIVATE_STORE_NAME(0x136, State.IN_GAME)); // 4.9
+-		addPacket(new CM_DELETE_CHARACTER(0x156, State.AUTHED)); // 4.9
+-		addPacket(new CM_RESTORE_CHARACTER(0x157, State.AUTHED)); // 4.9
+-		addPacket(new CM_MACRO_CREATE(0x169, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MACRO_DELETE(0x18E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GATHER(0xED, State.IN_GAME)); // 4.9
+-		addPacket(new CM_INSTANCE_INFO(0x19E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CLIENT_COMMAND_ROLL(0x125, State.IN_GAME)); // 4.9
+-		addPacket(new CM_START_LOOT(0x154, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CLOSE_DIALOG(0x2F3, State.IN_GAME)); // 4.9
+-		addPacket(new CM_DIALOG_SELECT(0x2F0, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BUY_ITEM(0x10D, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EQUIP_ITEM(0xE0, State.IN_GAME)); // 4.9
+-		addPacket(new CM_TELEPORT_SELECT(0x152, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LOOT_ITEM(0x155, State.IN_GAME)); // 4.9
+-		addPacket(new CM_QUESTIONNAIRE(0x16F, State.IN_GAME)); // 4.9
+-		addPacket(new CM_ATTACK(0xFE, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PET(0xD0, State.IN_GAME)); // 4.9
+-		addPacket(new CM_TUNE(0x1A5, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PET_EMOTE(0xD3, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHALLENGE_LIST(0x1A6, State.IN_GAME)); // 4.9
++		 addPacket(new CM_UI_SETTINGS(0xC9, State.IN_GAME)); // 5.0
++		// addPacket(new CM_MOTION(0x101, State.IN_GAME)); // 4.9
++		// addPacket(new CM_WINDSTREAM(0x100, State.IN_GAME)); // 4.9
++		// addPacket(new CM_STOP_TRAINING(0x112, State.IN_GAME)); // 4.9
++		// addPacket(new CM_REVIVE(0xC3, State.IN_GAME)); // 4.9
++		// addPacket(new CM_DUEL_REQUEST(0x14C, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CRAFT(0x14B, State.IN_GAME)); // 4.9
++		// addPacket(new CM_QUESTION_RESPONSE(0x10C, State.IN_GAME)); // 4.9
++		// addPacket(new CM_OPEN_STATICDOOR(0xD1, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SPLIT_ITEM(0x15B, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CUSTOM_SETTINGS(0xCA, State.IN_GAME)); // 4.9
++		// addPacket(new CM_PLAY_MOVIE_END(0x12F, State.IN_GAME)); // 4.9
++		 addPacket(new CM_LEVEL_READY(0xC8, State.IN_GAME)); // 5.0
++		 addPacket(new CM_ENTER_WORLD(0xC7, State.AUTHED)); // 5.0
++		 addPacket(new CM_TIME_CHECK(0xD1, State.CONNECTED, State.AUTHED, State.IN_GAME)); // 5.0
++		 addPacket(new CM_QUIT(0xC2, State.AUTHED, State.IN_GAME)); // 5.0
++		 addPacket(new CM_L2AUTH_LOGIN_CHECK(0x154, State.CONNECTED)); // 5.0
++		 addPacket(new CM_CHARACTER_LIST(0x155, State.AUTHED)); // 5.0
++		 addPacket(new CM_CREATE_CHARACTER(0x156, State.AUTHED)); // 5.0
++		 addPacket(new CM_MAC_ADDRESS(0x19C, State.CONNECTED, State.AUTHED, State.IN_GAME)); // 5.0
++		 addPacket(new CM_CHARACTER_PASSKEY(0x191, State.AUTHED)); // 5.0
++		 addPacket(new CM_MAY_LOGIN_INTO_GAME(0x179, State.AUTHED)); // 5.0
++		 addPacket(new CM_MOVE(0x10F, State.IN_GAME)); // 5.0
++		// addPacket(new CM_CASTSPELL(0xFF, State.IN_GAME)); // 4.9
++		 addPacket(new CM_EMOTION(0xEA, State.IN_GAME)); // 5.0
++		 addPacket(new CM_TITLE_SET(0x14A, State.IN_GAME)); // 5.0
++		 addPacket(new CM_DELETE_ITEM(0x133, State.IN_GAME)); // 5.0
++		 addPacket(new CM_QUEST_SHARE(0x163, State.IN_GAME)); // 5.0
++		 addPacket(new CM_DELETE_QUEST(0x12F, State.IN_GAME)); // 5.0
++		 addPacket(new CM_ABYSS_RANKING_PLAYERS(0x17B, State.IN_GAME)); // 5.0
++		 addPacket(new CM_ABYSS_RANKING_LEGIONS(0x135, State.IN_GAME)); // 5.0
++		 addPacket(new CM_PRIVATE_STORE(0x136, State.IN_GAME)); // 5.0
++		 addPacket(new CM_USE_ITEM(0xE4, State.IN_GAME)); // 5.0
++		 addPacket(new CM_TARGET_SELECT(0xFE, State.IN_GAME)); // 5.0
++		// addPacket(new CM_SHOW_DIALOG(0x2F2, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CHECK_NICKNAME(0x18F, State.AUTHED)); // 4.9
++		// addPacket(new CM_PRIVATE_STORE_NAME(0x136, State.IN_GAME)); // 4.9
++		 addPacket(new CM_DELETE_CHARACTER(0x157, State.AUTHED)); // 5.0
++		// addPacket(new CM_RESTORE_CHARACTER(0x157, State.AUTHED)); // 4.9
++		 addPacket(new CM_MACRO_CREATE(0x18E, State.IN_GAME)); // 5.0
++		 addPacket(new CM_MACRO_DELETE(0x18F, State.IN_GAME)); // 5.0
++		// addPacket(new CM_GATHER(0xED, State.IN_GAME)); // 4.9
++		 addPacket(new CM_INSTANCE_INFO(0x19F, State.IN_GAME)); // 5.0
++		 addPacket(new CM_CLIENT_COMMAND_ROLL(0x12A, State.IN_GAME)); // 5.0
++		// addPacket(new CM_START_LOOT(0x154, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CLOSE_DIALOG(0x2F3, State.IN_GAME)); // 4.9
++		// addPacket(new CM_DIALOG_SELECT(0x2F0, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BUY_ITEM(0x10D, State.IN_GAME)); // 4.9
++		// addPacket(new CM_EQUIP_ITEM(0xE0, State.IN_GAME)); // 4.9
++		// addPacket(new CM_TELEPORT_SELECT(0x152, State.IN_GAME)); // 4.9
++		// addPacket(new CM_LOOT_ITEM(0x155, State.IN_GAME)); // 4.9
++		// addPacket(new CM_QUESTIONNAIRE(0x16F, State.IN_GAME)); // 4.9
++		// addPacket(new CM_ATTACK(0xFE, State.IN_GAME)); // 4.9
++		// addPacket(new CM_PET(0xD0, State.IN_GAME)); // 4.9
++		// addPacket(new CM_TUNE(0x1A5, State.IN_GAME)); // 4.9
++		// addPacket(new CM_PET_EMOTE(0xD3, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CHALLENGE_LIST(0x1A6, State.IN_GAME)); // 4.9
+ 
+-		// ********************(FRIEND LIST)*********************
+-		addPacket(new CM_SHOW_FRIENDLIST(0x1A0, State.IN_GAME)); // 4.9
+-		addPacket(new CM_FRIEND_ADD(0x129, State.IN_GAME)); // 4.9
+-		addPacket(new CM_FRIEND_DEL(0x14E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_FRIEND_STATUS(0x164, State.IN_GAME)); // 4.9
+-        addPacket(new CM_FRIEND_EDIT(0x1A9, State.IN_GAME)); // 4.9 (NEW)(Notiz Friendlist)	
+-		addPacket(new CM_SET_NOTE(0x2F4, State.IN_GAME)); // 4.9       	
+-		addPacket(new CM_MARK_FRIENDLIST(0x128, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SHOW_BLOCKLIST(0x158, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BLOCK_ADD(0x160, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BLOCK_DEL(0x161, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PLAYER_SEARCH(0x159, State.IN_GAME)); // 4.9
++		// // ********************(FRIEND LIST)*********************
++		 addPacket(new CM_SHOW_FRIENDLIST(0x1A5, State.IN_GAME)); // 5.0
++		// addPacket(new CM_FRIEND_ADD(0x129, State.IN_GAME)); // 4.9
++		// addPacket(new CM_FRIEND_DEL(0x14E, State.IN_GAME)); // 4.9
++		 addPacket(new CM_FRIEND_STATUS(0x169, State.IN_GAME)); // 5.0
++        // addPacket(new CM_FRIEND_EDIT(0x1A9, State.IN_GAME)); // 4.9 (NEW)(Notiz Friendlist)	
++		 addPacket(new CM_SET_NOTE(0x2F9, State.IN_GAME)); // 5.0       	
++		// addPacket(new CM_MARK_FRIENDLIST(0x128, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SHOW_BLOCKLIST(0x158, State.IN_GAME)); // 4.9
++		 addPacket(new CM_BLOCK_ADD(0x165, State.IN_GAME)); // 5.0
++		// addPacket(new CM_BLOCK_DEL(0x161, State.IN_GAME)); // 4.9
++		 addPacket(new CM_PLAYER_SEARCH(0x17E, State.IN_GAME)); // 5.0
+ 				
+-		// ********************(LEGION)*********************
+-		addPacket(new CM_LEGION(0xEB, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_WH_KINAH(0x10A, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_UPLOAD_INFO(0x17E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x17F, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_SEARCH(0x1BA, State.IN_GAME)); //4.9
+-		addPacket(new CM_LEGION_JOIN_REQUEST(0x1BB, State.IN_GAME)); //4.9
+-		addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1B8, State.IN_GAME)); //4.9
+-        addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0xEE, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_SEND_EMBLEM(0xE9, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_MODIFY_EMBLEM(0x2F5, State.IN_GAME)); // 4.9
+-		addPacket(new CM_LEGION_TABS(0x2F1, State.IN_GAME)); // 4.9
+-		addPacket(new CM_STONESPEAR_SIEGE(0xDB, State.IN_GAME)); // 4.9 TODO
++		// // ********************(LEGION)*********************
++		// addPacket(new CM_LEGION(0xEB, State.IN_GAME)); // 4.9
++		// addPacket(new CM_LEGION_WH_KINAH(0x10A, State.IN_GAME)); // 4.9
++		// addPacket(new CM_LEGION_UPLOAD_INFO(0x17E, State.IN_GAME)); // 4.9
++		// addPacket(new CM_LEGION_UPLOAD_EMBLEM(0x17F, State.IN_GAME)); // 4.9
++		 addPacket(new CM_LEGION_SEARCH(0x1BB, State.IN_GAME)); //5.0
++		// addPacket(new CM_LEGION_JOIN_REQUEST(0x1BB, State.IN_GAME)); //4.9
++		// addPacket(new CM_LEGION_JOIN_REQUEST_CANCEL(0x1B8, State.IN_GAME)); //4.9
++         addPacket(new CM_LEGION_SEND_EMBLEM_INFO(0xEF, State.IN_GAME)); // 5.0
++		// addPacket(new CM_LEGION_SEND_EMBLEM(0xE9, State.IN_GAME)); // 4.9
++		// addPacket(new CM_LEGION_MODIFY_EMBLEM(0x2F5, State.IN_GAME)); // 4.9
++		// addPacket(new CM_LEGION_TABS(0x2F1, State.IN_GAME)); // 4.9
++		// addPacket(new CM_STONESPEAR_SIEGE(0xDB, State.IN_GAME)); // 4.9 TODO
+ 		
+-		// ******************(GROUP)******************* (BUGGY)
+-		addPacket(new CM_FIND_GROUP(0x10B, State.IN_GAME)); // 4.9
+-		addPacket(new CM_AUTO_GROUP(0x186, State.IN_GAME)); // 4.9
+-		addPacket(new CM_INVITE_TO_GROUP(0x13F, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GROUP_DISTRIBUTION(0x12A, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GROUP_LOOT(0x176, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GROUP_DATA_EXCHANGE(0x109, State.IN_GAME)); //TODO find 18B
+-		addPacket(new CM_DISTRIBUTION_SETTINGS(0x177, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SHOW_BRAND(0x173, State.IN_GAME)); // 4.9 (Group Mark Target etc)
++		// // ******************(GROUP)******************* (BUGGY)
++		 addPacket(new CM_FIND_GROUP(0x12C, State.IN_GAME)); // 5.0
++		// addPacket(new CM_AUTO_GROUP(0x186, State.IN_GAME)); // 4.9
++		// addPacket(new CM_INVITE_TO_GROUP(0x13F, State.IN_GAME)); // 4.9
++		// addPacket(new CM_GROUP_DISTRIBUTION(0x12A, State.IN_GAME)); // 4.9
++		// addPacket(new CM_GROUP_LOOT(0x176, State.IN_GAME)); // 4.9
++		// addPacket(new CM_GROUP_DATA_EXCHANGE(0x109, State.IN_GAME)); //TODO find 18B
++		// addPacket(new CM_DISTRIBUTION_SETTINGS(0x177, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SHOW_BRAND(0x173, State.IN_GAME)); // 4.9 (Group Mark Target etc)
+ 		
+-		// ******************(BROKER)******************
+-		addPacket(new CM_BROKER_LIST(0x135, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BROKER_SEARCH(0x13A, State.IN_GAME)); // 4.9
+-		addPacket(new CM_REGISTER_BROKER_ITEM(0x139, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BROKER_ADD_ITEM(0x133, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BROKER_SETTLE_LIST(0x15F, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BROKER_REGISTERED(0x13B, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BUY_BROKER_ITEM(0x138, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BROKER_CANCEL_REGISTERED(0x15E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x15C, State.IN_GAME)); // 4.9
++		// // ******************(BROKER)******************
++		// addPacket(new CM_BROKER_LIST(0x135, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BROKER_SEARCH(0x13A, State.IN_GAME)); // 4.9
++		// addPacket(new CM_REGISTER_BROKER_ITEM(0x139, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BROKER_ADD_ITEM(0x133, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BROKER_SETTLE_LIST(0x15F, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BROKER_REGISTERED(0x13B, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BUY_BROKER_ITEM(0x138, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BROKER_CANCEL_REGISTERED(0x15E, State.IN_GAME)); // 4.9
++		// addPacket(new CM_BROKER_SETTLE_ACCOUNT(0x15C, State.IN_GAME)); // 4.9
+ 		
+-		// ******************(PING)******************
+-		addPacket(new CM_PING_REQUEST(0x121, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PING(0xEA, State.AUTHED, State.IN_GAME)); // 4.9
++		// // ******************(PING)******************
++		 addPacket(new CM_PING_REQUEST(0x126, State.IN_GAME)); // 5.0
++		 addPacket(new CM_PING(0xEB, State.AUTHED, State.IN_GAME)); // 5.0
+ 
+-		// ******************(SUMMON)******************
+-		addPacket(new CM_SUMMON_EMOTION(0x184, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SUMMON_ATTACK(0x185, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SUMMON_CASTSPELL(0x18B, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SUMMON_COMMAND(0x137, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SUMMON_MOVE(0x187, State.IN_GAME)); // 4.9
++		// // ******************(SUMMON)******************
++		// addPacket(new CM_SUMMON_EMOTION(0x184, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SUMMON_ATTACK(0x185, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SUMMON_CASTSPELL(0x18B, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SUMMON_COMMAND(0x137, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SUMMON_MOVE(0x187, State.IN_GAME)); // 4.9
+ 		
+-		// ******************(MAIL)******************
+-		addPacket(new CM_CHECK_MAIL_SIZE(0x143, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHECK_MAIL_SIZE2(0x193, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SEND_MAIL(0x142, State.IN_GAME)); // 4.9
+-		addPacket(new CM_READ_MAIL(0x140, State.IN_GAME)); // 4.9
+-		addPacket(new CM_READ_EXPRESS_MAIL(0x17C, State.IN_GAME)); // 4.9
+-		addPacket(new CM_DELETE_MAIL(0x147, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GET_MAIL_ATTACHMENT(0x146, State.IN_GAME)); // 4.9
++		// // ******************(MAIL)******************
++		// addPacket(new CM_CHECK_MAIL_SIZE(0x143, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CHECK_MAIL_SIZE2(0x193, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SEND_MAIL(0x142, State.IN_GAME)); // 4.9
++		// addPacket(new CM_READ_MAIL(0x140, State.IN_GAME)); // 4.9
++		// addPacket(new CM_READ_EXPRESS_MAIL(0x17C, State.IN_GAME)); // 4.9
++		// addPacket(new CM_DELETE_MAIL(0x147, State.IN_GAME)); // 4.9
++		// addPacket(new CM_GET_MAIL_ATTACHMENT(0x146, State.IN_GAME)); // 4.9
+ 		
+-		// ******************(EXCHANGE)******************
+-		addPacket(new CM_EXCHANGE_ADD_ITEM(0x11E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EXCHANGE_ADD_KINAH(0x11C, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EXCHANGE_LOCK(0x11D, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EXCHANGE_CANCEL(0x103, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EXCHANGE_OK(0x102, State.IN_GAME)); // 4.9
+-		addPacket(new CM_EXCHANGE_REQUEST(0x2F9, State.IN_GAME)); // 4.9
++		// // ******************(EXCHANGE)******************
++		// addPacket(new CM_EXCHANGE_ADD_ITEM(0x11E, State.IN_GAME)); // 4.9
++		// addPacket(new CM_EXCHANGE_ADD_KINAH(0x11C, State.IN_GAME)); // 4.9
++		// addPacket(new CM_EXCHANGE_LOCK(0x11D, State.IN_GAME)); // 4.9
++		// addPacket(new CM_EXCHANGE_CANCEL(0x103, State.IN_GAME)); // 4.9
++		// addPacket(new CM_EXCHANGE_OK(0x102, State.IN_GAME)); // 4.9
++		// addPacket(new CM_EXCHANGE_REQUEST(0x2F9, State.IN_GAME)); // 4.9
+ 
+-		// *************(HOUSE)***************************
+-		addPacket(new CM_HOUSE_OPEN_DOOR(0x1BC, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_TELEPORT_BACK(0x119, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_SCRIPT(0xD8, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_TELEPORT(0x198, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_EDIT(0x12C, State.IN_GAME)); // 4.9 TODO !
+-		addPacket(new CM_USE_HOUSE_OBJECT(0x1BE, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_SETTINGS(0x107, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_KICK(0x106, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GET_HOUSE_BIDS(0x194, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_PAY_RENT(0x199, State.IN_GAME)); // 4.9 TODO 
+-		addPacket(new CM_REGISTER_HOUSE(0x195, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PLACE_BID(0x19B, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOUSE_DECORATE(0x105, State.IN_GAME)); // 4.9
+-		addPacket(new CM_RELEASE_OBJECT(0x1BF, State.IN_GAME)); // 4.9
++		// // *************(HOUSE)***************************
++		// addPacket(new CM_HOUSE_OPEN_DOOR(0x1BC, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_TELEPORT_BACK(0x119, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_SCRIPT(0xD8, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_TELEPORT(0x198, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_EDIT(0x12C, State.IN_GAME)); // 4.9 TODO !
++		// addPacket(new CM_USE_HOUSE_OBJECT(0x1BE, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_SETTINGS(0x107, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_KICK(0x106, State.IN_GAME)); // 4.9
++		 addPacket(new CM_GET_HOUSE_BIDS(0x199, State.IN_GAME)); // 5.0
++		// addPacket(new CM_HOUSE_PAY_RENT(0x199, State.IN_GAME)); // 4.9 TODO 
++		// addPacket(new CM_REGISTER_HOUSE(0x195, State.IN_GAME)); // 4.9
++		// addPacket(new CM_PLACE_BID(0x19B, State.IN_GAME)); // 4.9
++		// addPacket(new CM_HOUSE_DECORATE(0x105, State.IN_GAME)); // 4.9
++		// addPacket(new CM_RELEASE_OBJECT(0x1BF, State.IN_GAME)); // 4.9
+ 		
+-		// ******************(OTHERS)******************
+-		addPacket(new CM_OBJECT_SEARCH(0xC5, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MOVE_IN_AIR(0x10F, State.IN_GAME)); // 4.9
+-		addPacket(new CM_VIEW_PLAYER_DETAILS(0x122, State.IN_GAME)); // 4.9
+-		addPacket(new CM_TELEPORT_DONE(0xC9, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHARACTER_EDIT(0xC1, State.AUTHED)); // 4.9
+-		addPacket(new CM_PLAYER_STATUS_INFO(0x13E, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MANASTONE(0x104, State.IN_GAME)); // 4.9
+-		addPacket(new CM_FUSION_WEAPONS(0x188, State.IN_GAME)); // 4.9
+-		addPacket(new CM_ITEM_REMODEL(0x114, State.IN_GAME)); // 4.9
+-		addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xFC, State.IN_GAME)); // 4.9
+-		addPacket(new CM_RECIPE_DELETE(0x117, State.IN_GAME)); // 4.9
+-		addPacket(new CM_REMOVE_ALTERED_STATE(0xFD, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MAY_QUIT(0xC2, State.AUTHED, State.IN_GAME)); // 4.9
+-		addPacket(new CM_REPORT_PLAYER(0x179, State.IN_GAME)); // 4.9
+-		addPacket(new CM_PLAYER_LISTENER(0xE6, State.IN_GAME)); // 4.9
+-		addPacket(new CM_BONUS_TITLE(0x1A7, State.IN_GAME)); // 4.9 TODO
+-		addPacket(new CM_BUY_TRADE_IN_TRADE(0x116, State.IN_GAME)); // 4.9 (Machtkampf aufwertung)
+-		addPacket(new CM_BREAK_WEAPONS(0x189, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHARGE_ITEM(0x108, State.IN_GAME)); // 4.9
+-		addPacket(new CM_USE_CHARGE_SKILL(0x1A4, State.IN_GAME)); // 4.9
+-		addPacket(new CM_RECONNECT_AUTH(0x171, State.AUTHED)); // 4.9
+-		addPacket(new CM_BLOCK_SET_REASON(0x18D, State.IN_GAME)); // 4.9
+-		addPacket(new CM_INSTANCE_LEAVE(0xE8, State.IN_GAME)); // 4.9
+-		addPacket(new CM_APPEARANCE(0x183, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CAPTCHA(0xC8, State.IN_GAME)); // 4.9
+-		addPacket(new CM_COMPOSITE_STONES(0x1AE, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MEGAPHONE(0x1AB, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SUBZONE_CHANGE(0x17D, State.IN_GAME)); // 4.9
+-		addPacket(new CM_MOVE_ITEM(0x15A, State.IN_GAME)); // 4.9
+-		addPacket(new CM_SELECTITEM_OK(0x1AA, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GAMEGUARD(0x126, State.IN_GAME)); // 4.9
++		// // ******************(OTHERS)******************
++		 addPacket(new CM_OBJECT_SEARCH(0xCA, State.IN_GAME)); // 5.0K
++		// addPacket(new CM_MOVE_IN_AIR(0x10F, State.IN_GAME)); // 4.9
++		 addPacket(new CM_VIEW_PLAYER_DETAILS(0x123, State.IN_GAME)); // 5.0
++		// addPacket(new CM_TELEPORT_DONE(0xC9, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CHARACTER_EDIT(0xC1, State.AUTHED)); // 4.9
++		// addPacket(new CM_PLAYER_STATUS_INFO(0x13E, State.IN_GAME)); // 4.9
++		// addPacket(new CM_MANASTONE(0x104, State.IN_GAME)); // 4.9
++		// addPacket(new CM_FUSION_WEAPONS(0x188, State.IN_GAME)); // 4.9
++		// addPacket(new CM_ITEM_REMODEL(0x114, State.IN_GAME)); // 4.9
++		// addPacket(new CM_TOGGLE_SKILL_DEACTIVATE(0xFC, State.IN_GAME)); // 4.9
++		// addPacket(new CM_RECIPE_DELETE(0x117, State.IN_GAME)); // 4.9
++		// addPacket(new CM_REMOVE_ALTERED_STATE(0xFD, State.IN_GAME)); // 4.9
++		 addPacket(new CM_MAY_QUIT(0xC3, State.AUTHED, State.IN_GAME)); // 5.0
++		// addPacket(new CM_REPORT_PLAYER(0x179, State.IN_GAME)); // 4.9
++		// addPacket(new CM_PLAYER_LISTENER(0xE6, State.IN_GAME)); // 4.9
++		 addPacket(new CM_BONUS_TITLE(0x1A8, State.IN_GAME)); // 5.0
++		// addPacket(new CM_BUY_TRADE_IN_TRADE(0x116, State.IN_GAME)); // 4.9 (Machtkampf aufwertung)
++		// addPacket(new CM_BREAK_WEAPONS(0x189, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CHARGE_ITEM(0x108, State.IN_GAME)); // 4.9
++		// addPacket(new CM_USE_CHARGE_SKILL(0x1A4, State.IN_GAME)); // 4.9
++		// addPacket(new CM_RECONNECT_AUTH(0x171, State.AUTHED)); // 4.9
++		// addPacket(new CM_BLOCK_SET_REASON(0x18D, State.IN_GAME)); // 4.9
++		// addPacket(new CM_INSTANCE_LEAVE(0xE8, State.IN_GAME)); // 4.9
++		// addPacket(new CM_APPEARANCE(0x183, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CAPTCHA(0xC8, State.IN_GAME)); // 4.9
++		// addPacket(new CM_COMPOSITE_STONES(0x1AE, State.IN_GAME)); // 4.9
++		// addPacket(new CM_MEGAPHONE(0x1AB, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SUBZONE_CHANGE(0x17D, State.IN_GAME)); // 4.9
++		// addPacket(new CM_MOVE_ITEM(0x15A, State.IN_GAME)); // 4.9
++		// addPacket(new CM_SELECTITEM_OK(0x1AA, State.IN_GAME)); // 4.9
++		// addPacket(new CM_GAMEGUARD(0x126, State.IN_GAME)); // 4.9
+ 
+-		// ******************(Fast Track Server)******************
+-		addPacket(new CM_FAST_TRACK_CHECK(0x191, State.IN_GAME)); // 4.9	
+-		addPacket(new CM_FAST_TRACK(0x196, State.IN_GAME)); // 4.9
+-		addPacket(new CM_DIRECT_ENTER_WORLD(0x191, State.IN_GAME)); // 4.9
++		// // ******************(Fast Track Server)******************
++		// addPacket(new CM_FAST_TRACK_CHECK(0x191, State.IN_GAME)); // 4.9	
++		// addPacket(new CM_FAST_TRACK(0x196, State.IN_GAME)); // 4.9
++		// addPacket(new CM_DIRECT_ENTER_WORLD(0x191, State.IN_GAME)); // 4.9
+ 						
+-		// ******************(CHAT)******************
+-		addPacket(new CM_CHAT_AUTH(0x168, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHAT_MESSAGE_PUBLIC(0xD5, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHAT_GROUP_INFO(0x2FB, State.IN_GAME)); // 4.9 
+-		addPacket(new CM_CHAT_MESSAGE_WHISPER(0xDA, State.IN_GAME)); // 4.9
+-		addPacket(new CM_CHAT_PLAYER_INFO(0xE1, State.IN_GAME)); // 4.9
++		// // ******************(CHAT)******************
++		 addPacket(new CM_CHAT_AUTH(0x18D, State.IN_GAME)); // 5.0
++		 addPacket(new CM_CHAT_MESSAGE_PUBLIC(0xDA, State.IN_GAME)); // 5.0
++		// addPacket(new CM_CHAT_GROUP_INFO(0x2FB, State.IN_GAME)); // 4.9 
++		// addPacket(new CM_CHAT_MESSAGE_WHISPER(0xDA, State.IN_GAME)); // 4.9
++		// addPacket(new CM_CHAT_PLAYER_INFO(0xE1, State.IN_GAME)); // 4.9
+ 		
+-		// ******************(CM_VERSION_CHECK)******************
+-		addPacket(new CM_VERSION_CHECK(0xDE, State.CONNECTED)); // 4.9
++		// // ******************(CM_VERSION_CHECK)******************
++		 addPacket(new CM_VERSION_CHECK(0xDF, State.CONNECTED)); // 5.0
+ 		
+-		// ******************(Emu Feature)******************		
+-		addPacket(new CM_FATIGUE_RECOVER(0x135, State.IN_GAME));
++		// // ******************(Emu Feature)******************		
++		// addPacket(new CM_FATIGUE_RECOVER(0x135, State.IN_GAME));
+ 				
+-		// /////////////////// NEW 4.7 //////////////////////
+-		addPacket(new CM_ATREIAN_PASSPORT(0x1B6, State.IN_GAME)); // 4.9
+-		addPacket(new CM_HOTSPOT_TELEPORT(0x1B2, State.IN_GAME)); // 4.9
+-		addPacket(new CM_ITEM_PURIFICATION(0x1B1, State.IN_GAME)); // 4.9
+-		addPacket(new CM_UPGRADE_ARCADE(0x1B0, State.IN_GAME)); // 4.9
+-        addPacket(new CM_FILE_VERIFY(0x2F8, State.IN_GAME)); // 4.9
++		// // /////////////////// NEW 4.7 //////////////////////
++		// addPacket(new CM_ATREIAN_PASSPORT(0x1B6, State.IN_GAME)); // 4.9
++		 addPacket(new CM_HOTSPOT_TELEPORT(0x1B3, State.IN_GAME)); // 5.0k
++		// addPacket(new CM_ITEM_PURIFICATION(0x1B1, State.IN_GAME)); // 4.9
++		 addPacket(new CM_UPGRADE_ARCADE(0x1B5, State.IN_GAME)); // 5.0
++         addPacket(new CM_FILE_VERIFY(0x11D, State.IN_GAME)); // 5.0
+         
+-        // /////////////////// NEW 4.9 //////////////////////
+-        addPacket(new CM_EXPAND_CUBE(0x1B5, State.IN_GAME)); // 4.9
+-        addPacket(new CM_INTRUDER_SCAN(0x182, State.IN_GAME)); // 4.9
++        // // /////////////////// NEW 4.9 //////////////////////
++        // addPacket(new CM_EXPAND_CUBE(0x1B5, State.IN_GAME)); // 4.9
++        // addPacket(new CM_INTRUDER_SCAN(0x182, State.IN_GAME)); // 4.9
+         
+-		// /////////////////// GM PACKET ////////////////////
+-		addPacket(new CM_GM_COMMAND_SEND(0xE4, State.IN_GAME)); // 4.9
+-		addPacket(new CM_GM_BOOKMARK(0xE7, State.IN_GAME)); // 4.9
++		// // /////////////////// GM PACKET ////////////////////
++		// addPacket(new CM_GM_COMMAND_SEND(0xE4, State.IN_GAME)); // 4.9
++		// addPacket(new CM_GM_BOOKMARK(0xE7, State.IN_GAME)); // 4.9
+ 		
+-		// /////////////////////////////////////////////////
+-		addPacket(new CM_SECURITY_TOKEN(0x1A3, State.IN_GAME)); // 4.9
+-		addPacket(new CM_11A_UNK(0x11A, State.AUTHED)); // 4.9
+-		addPacket(new CM_TUNE_RESULT(0x1A8, State.IN_GAME)); // 4.9
++		// // /////////////////////////////////////////////////
++		// addPacket(new CM_SECURITY_TOKEN(0x1A3, State.IN_GAME)); // 4.9
++		// addPacket(new CM_11A_UNK(0x11A, State.AUTHED)); // 4.9
++		// addPacket(new CM_TUNE_RESULT(0x1A8, State.IN_GAME)); // 4.9
+     }
+ 
+     public AionPacketHandler getPacketHandler() {
+Index: src/com/aionemu/gameserver/network/loginserver/serverpackets/SM_PTRANSFER_CONTROL.java
+===================================================================
+--- src/com/aionemu/gameserver/network/loginserver/serverpackets/SM_PTRANSFER_CONTROL.java	(revision 389)
++++ src/com/aionemu/gameserver/network/loginserver/serverpackets/SM_PTRANSFER_CONTROL.java	(working copy)
+@@ -162,7 +162,7 @@
+                 writeC(playerAppearance.getHips());
+                 writeC(playerAppearance.getArmThickness());
+                 writeC(playerAppearance.getHandSize());
+-                writeC(playerAppearance.getLegThicnkess());
++                writeC(playerAppearance.getLegThickness());
+                 writeC(playerAppearance.getFootSize());
+                 writeC(playerAppearance.getFacialRate());
+                 writeC(playerAppearance.getArmLength());
+Index: src/com/aionemu/gameserver/services/transfers/CMT_CHARACTER_INFORMATION.java
+===================================================================
+--- src/com/aionemu/gameserver/services/transfers/CMT_CHARACTER_INFORMATION.java	(revision 389)
++++ src/com/aionemu/gameserver/services/transfers/CMT_CHARACTER_INFORMATION.java	(working copy)
+@@ -132,7 +132,7 @@
+         playerAppearance.setHips(readC());
+         playerAppearance.setArmThickness(readC());
+         playerAppearance.setHandSize(readC());
+-        playerAppearance.setLegThicnkess(readC());
++        playerAppearance.setLegThickness(readC());
+         playerAppearance.setFootSize(readC());
+         playerAppearance.setFacialRate(readC());
+         playerAppearance.setArmLength(readC());
