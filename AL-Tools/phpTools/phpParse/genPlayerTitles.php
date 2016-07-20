@@ -220,7 +220,7 @@ function generPlayerTitlesFile()
                     // AttackDelay = * -1
                     if ($tab[0] == "ATTACK_SPEED") $tab[1] = intval($tab[1]) * -1;
                     
-                    fwrite($hdlout,'            <'.$xml.' name="'.$tab[0].'" value="'.$tab[1].'" bonus="true"/>'."\n");
+                    fwrite($hdlout,'            <'.$xml.' name="'.strtoupper($tab[0]).'" value="'.$tab[1].'" bonus="true"/>'."\n");
                     $cntout++;
                 }
                 fwrite($hdlout,'        </modifiers>'."\n");

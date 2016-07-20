@@ -102,7 +102,8 @@ function getItemAttrName($name)
 {
     global $tabitemattrs;
     
-    $such = strtoupper($name);
+    $name = strtoupper($name);
+    $such = $name;
     
     if (isset($tabitemattrs[$such]))
         return $tabitemattrs[$such];
