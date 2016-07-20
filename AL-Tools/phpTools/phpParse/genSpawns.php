@@ -402,7 +402,7 @@ function getSpawnsFromMission0File()
                 {
                     $etab = explode(",",getKeyValue("Pos",$line));
                     
-                    $tabEntity[$cntent]['sort'] = intval($etab[0]);
+                    $tabEntity[$cntent]['sort'] = $etab[0]; // Test intval($etab[0]);
                     $tabEntity[$cntent]['name'] = getKeyValue("Name",$line);
                     $tabEntity[$cntent]['id']   = getKeyValue("EntityId",$line);
                     $tabEntity[$cntent]['name'] = getKeyValue("Name",$line);
@@ -940,8 +940,50 @@ function getNpcInfosForBeritra()
 }
 // ----------------------------------------------------------------------------
 // alle relevanten NPCs gem. Vorgabe auf X-/Y-Pos prüfen für static_id
+//
+// neue Version = ohne Annäherung an die Position !!!
 // ----------------------------------------------------------------------------
 function checkForEntityId($ind,$diff)
+{
+    global $tabEntity, $tabSpawn;
+        
+    $domax = count($tabEntity);
+    $xpos  = $tabSpawn[$ind]['xpos'];
+    $ypos  = $tabSpawn[$ind]['ypos'];
+        
+    for ($e=0;$e<$domax;$e++)
+    {
+        // static_id noch nicht vergeben und X/Y stimmen überein
+        // (intval +/- 1 wegen der Rundung)
+        if ($tabEntity[$e]['done'] == 0  
+        &&  intval($tabEntity[$e]['xpos']) >= (intval($xpos) - 1)
+        &&  intval($tabEntity[$e]['xpos']) <= (intval($xpos) + 1)
+        
+        &&  intval($tabEntity[$e]['ypos']) >= (intval($ypos) - 1)
+        &&  intval($tabEntity[$e]['ypos']) <= (intval($ypos) + 1)  )
+        {                
+            $tabEntity[$e]['done'] = $ind;
+            
+            return $tabEntity[$e]['id'];
+        }
+        else
+        {
+            // nach X sortiert, also kann hier beendet werden, wenn XBIS überschritten
+            if ($tabEntity[$e]['xpos'] > $xpos)
+                $e = $domax;
+        }
+    }
+    
+    return "";
+}
+// ----------------------------------------------------------------------------
+// alle relevanten NPCs gem. Vorgabe auf X-/Y-Pos prüfen für static_id
+// ----------------------------------------------------------------------------
+/*
+   ACHTUNG: Bitte noch nicht löschen, da die neue Version (s.o.) erst geprüft
+            werden muss !!!!!!!!!!!!!!!!!!
+            
+function checkForEntityIdOld($ind,$diff)
 {
     global $tabEntity, $tabSpawn;
         
@@ -973,6 +1015,7 @@ function checkForEntityId($ind,$diff)
     
     return "";
 }
+*/
 // ----------------------------------------------------------------------------
 // Versucht die static_ids zuzuordnen
 // Reihenfolge: client_world, npcid>700000 zu mission, sourcesphere
@@ -1038,7 +1081,7 @@ function checkEntityIds()
     $domax = count($tabEntity);
     
     for ($e=0;$e<$domax;$e++)
-    {
+    {             
         if ($tabEntity[$e]['done'] == 0)
             $anzno++;
         else
