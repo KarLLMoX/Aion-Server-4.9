@@ -152,7 +152,7 @@ function makeTabWorldIds()
 {
     global $tabWNames;
     
-    include("includes/inc_worldmaps.php");
+    include("includes/auto_inc_world_infos.php");
     
     logHead("Erzeuge Tabelle der WorldIds");
     

@@ -15,7 +15,7 @@
 // Hint:  - eventuell die Z-Angabe aus den bestehenden Spawn-Files übernehmen
 // ----------------------------------------------------------------------------
 include("../includes/inc_globals.php");
-include("includes/inc_worldmaps.php");
+include("includes/auto_inc_world_infos.php");
 
 getConfData();
 
@@ -564,6 +564,10 @@ function generSpawnFile()
     logHead("Generierung der Spawn-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
+    $chtxt = checkSvnSpawnWorldFile($welt,"Gather");
+    if ($chtxt != "") 
+        logLine("<font color=magenta>neuer Dateiname</font>",$chtxt);
+        
     flush();
     
     sort($tabSpawn);
@@ -686,27 +690,6 @@ if ($submit == "J")
     {
         logHead("Generierung erfolgt zur Map: $welt");
         
-        /* entfällt, da keine Dateiauswahl
-        switch ($scan)
-        {
-            case "*":    // alle Dateien
-                getSpawnsFromMission0File();
-                getSpawnsFromSourceSphere();
-                getSpawnsFromClientWorld();
-                break;
-            case "M":    // nur Mission
-                getSpawnsFromMission0File();
-                break;
-            case "S":    // nur Sphere
-                getSpawnsFromSourceSphere();
-                break;
-            case "C":    // nur client_world
-                getSpawnsFromClientWorld();
-                break;
-            default:
-                break;
-        }
-        */
         getSpawnsFromMission0File();
         getNpcInfosForSpawns();        
         generSpawnFile();

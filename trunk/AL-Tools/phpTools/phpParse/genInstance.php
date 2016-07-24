@@ -512,7 +512,7 @@ function generInstanceExitsFile()
 //                             M  A  I  N
 // ----------------------------------------------------------------------------
 
-include("includes/inc_worldmaps.php");
+include("includes/auto_inc_world_infos.php");
 include("includes/inc_bonusattrs.php");
 
 $tabWorlds = array();

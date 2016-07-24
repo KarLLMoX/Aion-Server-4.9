@@ -20,7 +20,7 @@
 // 05/16: Z-Pos-Korrektur über SVN-Spawn-File selektiv per Vorgabe
 // ----------------------------------------------------------------------------    
 include("../includes/inc_globals.php");
-include("includes/inc_worldmaps.php");
+include("includes/auto_inc_world_infos.php");
 include("includes/inc_statics.php");
 include("includes/inc_inc_scan.php");
 
@@ -411,6 +411,7 @@ function getSpawnsFromMission0File()
                     $tabEntity[$cntent]['done'] = 0;
                     
                     $cntent++;
+                    $anzstat++;
                 }
             }
         }
@@ -862,6 +863,8 @@ function getOldZForBeritra()
     global $pathsvn, $tabBeritra, $welt, $tabWorldmaps;
         
     $oldfile = formFileName($pathsvn."\\trunk\\AL-Game\\data\static_data\\spawns\\Beritra\\".$welt."_".$tabWorldmaps[$welt]['name'].".xml");
+    $domax   = 0;
+    $anznew  = 0;
     
     if (getPosTabFromOldFile($oldfile,"<spot"))
     {            
@@ -946,7 +949,7 @@ function getNpcInfosForBeritra()
 function checkForEntityId($ind,$diff)
 {
     global $tabEntity, $tabSpawn;
-        
+          
     $domax = count($tabEntity);
     $xpos  = $tabSpawn[$ind]['xpos'];
     $ypos  = $tabSpawn[$ind]['ypos'];
@@ -1252,6 +1255,10 @@ function generSpawnFile()
     logHead("Generierung der Spawn-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
+    $chtxt = checkSvnSpawnWorldFile($welt,$wpath);
+    if ($chtxt != "") 
+        logLine("<font color=magenta>neuer Dateiname</font>",$chtxt);
+    
     flush();
     
     $hdlout  = openOutputFile($outfile);
@@ -1410,6 +1417,10 @@ function generBeritraFile()
     
     logHead("Generierung der Beritra-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
+    
+    $chtxt = checkSvnSpawnWorldFile($welt,"Beritra");
+    if ($chtxt != "") 
+        logLine("<font color=magenta>neuer Dateiname</font>",$chtxt);
     
     flush();
     
@@ -1572,6 +1583,10 @@ function generWalkerFile()
     logHead("Generierung der Walker-Datei: ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
     
+    $chtxt = checkSvnSpawnWorldFile($welt,"npc_walker");
+    if ($chtxt != "") 
+        logLine("<font color=magenta>neuer Dateiname</font>",$chtxt);
+    
     $anzwalk = 0;
     
     // Vorspann ausgeben
@@ -1715,6 +1730,12 @@ function generStaticFile()
     
     logHead("Generierung der  Statics-Datei ".basename($outfile));
     logLine("Ausgabedatei",$outfile);
+    
+    $chtxt = checkSvnSpawnWorldFile($welt,"Statics");
+    if ($chtxt != "") 
+        logLine("<font color=magenta>neuer Dateiname</font>",$chtxt);
+    
+    flush();
     
     $domax  = count($tabstats);
     $oldgrp = "";
