@@ -264,13 +264,21 @@ function getXmlKey($line)
 // ----------------------------------------------------------------------------
 // zum angegebenen XML-Key den Wert ermitteln
 // Beispiel: <key>wert</key>, soll wert zurückgeben
+// Mariella, 2016-07-24:
+// da die Zeile immer nur einen XML-Key enthalten sollte, kann nach der Prüfung
+// auf Key direkt zwischen den beiden Zeichen >value< der Wert entnommen werden 
 // ----------------------------------------------------------------------------
 function getXmlValue($key,$line)
 {    
-    $such = "<".$key.">";
-    $ret  = substr($line,stripos($line,$such) + strlen($such));
-    $ret  = substr($ret,0,stripos($ret,"<"));
-        
+    $such = "<".$key;
+    $ret  = "";
+    
+    if (stripos($line,$such) !== false)
+    {
+        $ret  = substr($line,stripos($line,">") + 1); 
+        $ret  = substr($ret,0,stripos($ret,"<"));
+    }
+    
     return $ret;
 }
 // ----------------------------------------------------------------------------
