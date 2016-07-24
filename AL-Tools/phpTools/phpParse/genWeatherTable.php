@@ -278,7 +278,7 @@ function generWeatherTableFile()
 // ----------------------------------------------------------------------------
 //                             M  A  I  N
 // ----------------------------------------------------------------------------
-include("includes/inc_worldmaps.php");
+include("includes/auto_inc_world_infos.php");
 
 $tabweather = array();
 $starttime  = microtime(true);

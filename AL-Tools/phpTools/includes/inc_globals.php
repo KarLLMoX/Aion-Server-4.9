@@ -416,6 +416,43 @@ function logFileSize($text,$filename)
         logLine($text."Dateigr&ouml;sse ca.",round(filesize($filename)/(1024),1)." KB");
 }
 // ----------------------------------------------------------------------------
+// Prüfen, ob eine World-Ausgabedatei mit anderem Namen existiert
+// ----------------------------------------------------------------------------
+function checkSvnSpawnWorldFile($world,$subpath)
+{
+    global $pathsvn, $tabWorldmaps;
+    
+    if (strtolower($subpath) != "npc_walker")
+    {
+        $chkpath = $pathsvn."\\trunk\\AL-Game\\data\\static_data\\Spawns\\".$subpath;
+        $new = $world."_".$tabWorldmaps[$world]['name'];
+    }
+    else
+    {
+        $chkpath = $pathsvn."\\trunk\\AL-Game\\data\\static_data\\".$subpath;
+        $new = "walker_".$world."_".$tabWorldmaps[$world]['name'];
+    }
+        
+    $ret     = "";
+    
+    $files = scandir($chkpath);
+    $found = false;
+    $domax = count($files);
+    
+    for ($f=0;$f<$domax;$f++)
+    {
+        if (substr($files[$f],0,strlen($world)) == $world)
+        {
+            
+            if ($files[$f] != $new)
+                $ret = "Welt <font color=magenta>$world</font> mit neuem Namen, bitte beachten!";
+                
+            $f = $domax;
+        }
+    }
+    return $ret;    
+}
+// ----------------------------------------------------------------------------
 //
 //                 E R W E I T E R U N G S - F U N K T I O N E N
 //

@@ -471,7 +471,7 @@ function generMultiReturns()
 {
     global $pathdata, $tabWorldmaps;    
     
-    include("includes/inc_worldmaps.php");
+    include("includes/auto_inc_world_infos.php");
     
     logHead("Generierung der Datei: item_multi_returns.xml");
     

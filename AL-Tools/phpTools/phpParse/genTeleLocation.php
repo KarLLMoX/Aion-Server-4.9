@@ -10,7 +10,7 @@
 include("../includes/inc_globals.php");
 include("includes/inc_getautonameids.php");
 include("includes/auto_inc_world_names.php");
-include("includes/inc_worldmaps.php");
+include("includes/auto_inc_world_infos.php");
 
 getConfData();
 
