@@ -114,7 +114,8 @@ function checkAutoIncludeFiles()
                   // 2. Info-Tabellen
                   array("auto_inc_item_infos.php"        ,"makeIncludeItemInfos"),       // neu in 4.9
                   array("auto_inc_npc_infos.php"         ,"makeIncludeNpcInfos"),        // neu in 4.9
-                  array("auto_inc_gather_infos.php"      ,"makeIncludeGatherInfos")
+                  array("auto_inc_gather_infos.php"      ,"makeIncludeGatherInfos"),
+                  array("auto_inc_world_infos.php"       ,"makeIncludeWorldInfos")       // neu in 4.9
                 );
                     
     $maxFiles = count($incFiles);
@@ -1393,18 +1394,261 @@ function makeIncludeNpcTitleNames()
 // ----------------------------------------------------------------------------
 //                               O  F  F  E  N
 // ----------------------------------------------------------------------------
-// Erzeugen Include: WorldMaps
+// WordlMapName ermitteln
+// ----------------------------------------------------------------------------
+function getWorldMapName($offi,&$tab)
+{   
+    // ohne Namen, es wird der Official-Name selbst zurück gegeben 
+    switch ($offi)
+    {
+        case "IDABPRO":
+        case "DF_PRISON":
+        case "HOUSING_BARRACK":
+        case "IDLDF5RE_TEST":
+        case "IDTOURNAMENT_LOBBY_TEST":
+        case "IDTOURNAMENT_STAGE_TEST":
+        case "LF_PRISON":
+        case "SYSTEM_BASIC":
+        case "TEST_GIANTMONSTER":
+        case "TEST_IDARENA":
+        case "TEST_INTRO":
+        case "TEST_MRT_IDZONE":
+        case "TEST_SERVER":
+        case "TEST_SERVER_ART":           return $offi; break;
+    } 
+
+    // ansonsten wird der Name gesucht    
+    $key = "STR_ZONE_NAME_".$offi; 
+    
+    if (isset($tab[$key]))
+    {
+        // zur Unterscheidung bei einigen Namen etwas anhängen
+        switch ($offi)
+        {
+            case "LDF5_UNDER_L":
+            case "LDF5_UNDER_D":
+            case "IDABPROL1":
+            case "IDABPROL2":
+            case "IDABPROL3":
+            case "IDABPROD1":
+            case "IDABPROD2":
+            case "IDABPROD3":
+                return $tab[$key]['body']."_".substr($offi,-1,1);
+            case "LF_TOWER":
+            case "DF_TOWER":
+                return $tab[$key]['body']."_".substr($offi,0,1);                
+            default:
+                return $tab[$key]['body'];
+        }
+    }  
+    
+    return "?";    
+}
+// ----------------------------------------------------------------------------
+// Erzeugen Include: WorldInfos (löst zukünftig das inc_worldmaps.php ab)
 // ----------------------------------------------------------------------------
 function makeIncludeWorldInfos()
 {
-/*  aktuell wieder zurückgestellt, 
+    global $pathdata, $pathstring;  
+    
+    $tabmaps  = array();
+    $tabdesc  = array();
+    $errdesc  = array();
+    
+	writeHinweisVorarbeiten();
+	
+    $fileout = "includes/auto_inc_world_infos.php";
+    
+	logHead("Erzeugen Include mit den World-Infos");
+    logLine("Ausgabedatei",$fileout);
+        
+    $hdlout   = openOutputFile($fileout);
+    $lastline = "";
+    $cntles   = 0;
+    $cntworld = 0;
+    
+    // Ausgabedatei: Vorspann ausgeben
+    fwrite($hdlout,getIncludeFileHeader($fileout,"Info-Tabelle - World id => name","gen[all].php")."\n");
+    fwrite($hdlout,"\n\$tabWorldmaps = array(\n");
+    
+    // aus den client_npcs_....xml -Dateien die Daten zu id, name, desc filtern
+    $id     = "";
+    $name   = "";
+    $cntles = 0;
+    $cntmap = 0;
 
-    das aktuelle Include   inc_worldmaps.php   wird noch manuell gepflegt!
-                          
-    Begründung: die Namen der Welten stimmen häufig nicht mit den verwendeten
-                Namen in der Emu überein. Da aber u.a. über diese Namen Dateien
-                im SVN gesucht werden, würde es derzeit zu Fehlern führen!
+    $fileext = formFileName($pathdata."\\World\\WorldId.xml");
+    
+    if (file_exists($fileext))
+    {
+        $fileext = convFileToUtf8($fileext);
+        $hdlext  = openInputFile($fileext);
+        $cntmap  = 0;
+        
+        logSubHead("Scanne Eingabedatei ".$fileext);
+        
+        flush();
+        
+        while (!feof($hdlext))
+        {
+            $line = rtrim(fgets($hdlext));
+            $cntles++;
+            
+            if     (stripos($line,"<data ") !== false)
+            {
+                $id    = getKeyValue("id"  ,$line);
+                $name  = getXmlValue("data",$line);
+                                
+                if (!isset($tabnpcs[$name]))
+                {                    
+                    $tabmaps[$id]['id']     = $id;
+                    $tabmaps[$id]['name']   = $name;
+                    $tabmaps[$id]['desc']   = strtoupper($name);
+                } 
                 
-    PHP-Source: Funktion lokal gesichert in inc_inc_save_worldmaps.txt 
-*/    
+                $cntmap++;
+                
+                $id = $name = "";
+            }
+        }
+        fclose($hdlext);
+        
+        logLine("- Anzahl Zeilen gelesen",$cntles);
+        logLine("- Anzahl Maps gefunden",$cntmap);
+
+        flush();
+        
+        unlink($fileext);        
+    }
+    
+    // anschliessend hierzu aus den PS/client_strings_xxx.xml die
+    // entsprechenden bodies / Ids filtern
+    $tabString = array( "client_strings_level.xml"
+                        /*
+                        "client_strings_item3.xml",
+                        "client_strings_dic_etc.xml",
+                        "client_strings_dic_place.xml"
+                        */
+                      );
+    $maxString = count($tabString);
+    $cntles    = 0;
+    $cntnpc    = 0;
+    $id        = "";
+    $desc      = "";
+    $body      = "";
+    
+    for ($f=0;$f<$maxString;$f++)
+    {
+        $fileext = formFileName($pathstring."\\".$tabString[$f]);
+        $hdlext  = openInputFile($fileext);
+        $cntstr  = 0;
+        $cntles  = 0;
+        
+        logSubHead("Scanne Eingabedatei ".$fileext);
+        
+        flush();
+        
+        while (!feof($hdlext))
+        {
+            $line = rtrim(fgets($hdlext));
+            $cntles++;
+            
+            if     (stripos($line,"<id>") !== false)
+                $id    = getXmlValue("id",$line);
+            elseif (stripos($line,"<name>") !== false)
+                $desc  = strtoupper(getXmlValue("name",$line));
+            elseif (stripos($line,"<body>") !== false)
+            {
+                $body = str_replace('"','',getXmlValue("body",$line));
+                
+                if (stripos($body,";") !== false)
+                    $body = substr($body,0,stripos($body,";"));
+            }
+            
+            if (stripos($line,"</string>") !== false)
+            {                
+                $tabdesc[$desc]['nameid'] = ($id   == "") ? "?"    : $id;
+                $tabdesc[$desc]['body']   = ($body == "") ? "NONE" : $body;
+                    
+                $cntstr++;
+                
+                $id = $desc = $body = "";
+            }    
+        }
+                
+        fclose($hdlext);
+        
+        logLine("- Anzahl Zeilen gelesen",$cntles);
+        logLine("- Anzahl Strings gefunden",$cntstr);
+        
+        flush();
+    }
+    logLine("- Anzahl Strings Gesamt",count($tabdesc));
+    
+    // Ausgabe dieser Daten in Form von:
+    // "110010000" => array( "mapid" => "110010000", "name" => "Sanctum", "offiname" => "LC1"),
+    
+    logSubHead("Erstellen der Ausgabedatei");
+    
+    $cntmap = 0;
+    $tabkeys = array_keys($tabmaps);
+    sort($tabkeys);
+    $maxkeys = count($tabkeys);
+    
+    flush();
+    
+    for ($m=0;$m<$maxkeys;$m++)
+    {
+        $key = $tabkeys[$m];
+        
+        if ($lastline != "")
+        {
+            fwrite($hdlout,$lastline.",\n");
+            $cntmap++;
+        }
+        $offi = $tabmaps[$key]['desc'];
+        $desc = getWorldMapName($offi,$tabdesc);        
+        
+        if ($desc != "?")
+        {
+            $desc = str_replace(" ","_",$desc);
+            $desc = str_replace("'","",$desc);
+            $desc = str_replace("(","",$desc);
+            $desc = str_replace(")","",$desc);
+            
+            $desc = strtoupper(substr($desc,0,1)).strtolower(substr($desc,1));
+            
+            $lastline = '                  "'.$tabmaps[$key]['id'].'" => array( "mapid" => "'.$tabmaps[$key]['id'].'"'.
+                        ', "name" => "'.$desc.'", "offiname" => "'.$tabmaps[$key]['name'].'")';
+        }
+        else
+        {
+            if (!isset($errdesc[$offi]))
+                $errdesc[$offi] = 1;
+                
+            $lastline = "";
+        }
+    }
+    if ($lastline != "")
+    {
+        fwrite($hdlout,$lastline."\n");
+        $cntnpc++;
+    }
+    // Nachspann ausgeben
+    fwrite($hdlout,"               );\n");
+    fwrite($hdlout,"?>");
+    fclose($hdlout);
+    
+    $errkeys = array_keys($errdesc);
+    sort($errkeys);
+    $domax = count($errkeys);
+    
+    for ($e=0;$e<$domax;$e++)
+    {
+        logLine("- <font color=red>Eintrag fehlt zu</font>",$errkeys[$e]);
+    }
+    
+    logLine("- Anzahl Maps ausgegeben",$cntmap);
+    
+    flush();
 }
