@@ -1403,7 +1403,8 @@ function getEffValCritPM2($efftyp,$key,$ename)
     ||      $efftyp == "procatk_instant"
     ||      $efftyp == "skillatk" 
     ||      $efftyp == "skillatkdraininstant"   
-    ||      $efftyp == "spellatk"  )
+    ||      $efftyp == "spellatk" 
+    ||      $efftyp == "spellatkinstant"  )
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."critical_prob_mod2","?") );
         $ret = ($ret == "100") ? "?" : $ret;
@@ -1436,7 +1437,8 @@ function getEffValDelta($efftyp,$key,$ename)
     ||      $efftyp == "prochealinstant"
     ||      $efftyp == "procmphealinstant"
     ||      $efftyp == "signetburst" 
-    ||      $efftyp == "spellatkdraininstant"    )
+    ||      $efftyp == "spellatkdraininstant" 
+    ||      $efftyp == "spellatkinstant"   )
     {
         $ret = getEffSpecial( "nozero",getTabValue($key,$ename."reserved1","?") );
     }
@@ -1565,7 +1567,8 @@ function getEffValMode($efftyp,$key,$ename)
         if ($x02 != "?")                   $ret = true;
     }
     // SPELLATKDRAININSTANT
-    elseif ($efftyp == "spellatkdraininstant")
+    elseif ($efftyp == "spellatkdraininstant"
+    ||      $efftyp == "spellatkinstant")
     {
         // wenn reserved6 = "1" gesetzt ist
         $x06 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved6","?") );
@@ -1608,7 +1611,7 @@ function getEffValPercent($efftyp,$key,$ename)
     ||      $efftyp == "procvphealinstant"
     ||      $efftyp == "protect"
     ||      $efftyp == "reflector"
-    ||      $efftyp == "shield")
+    ||      $efftyp == "shield" )
     {
         $ret = getTabValue($key,$ename."reserved6","0");
         $ret = ($ret == "1") ? "true" : "?";
@@ -1757,7 +1760,7 @@ function getEffValType($efftyp,$key,$ename)
     ||  $efftyp == "spellatk" 
     ||  $efftyp == "spellatkdrain"
     ||  $efftyp == "spellatkdraininstant"
-    ||  $efftyp == "spellatkintant"
+    ||  $efftyp == "spellatkinstant"
     ||  $efftyp == "statup"
     ||  $efftyp == "stun"
     ||  $efftyp == "summontrap"  )
@@ -1837,6 +1840,7 @@ function getEffValValue($efftyp,$key,$ename)
     ||      $efftyp == "procvphealinstant"
     ||      $efftyp == "skilllauncher"
     ||      $efftyp == "spellatkdraininstant"
+    ||      $efftyp == "spellatkinstant"
     ||      $efftyp == "stumble" 
     ||      $efftyp == "stun"   )
     {
@@ -2288,7 +2292,7 @@ function getEffValAddText($efftyp,$key,$ename,  &$txkey,  &$txval,  &$txlst)
         }
     }
     // SPELLATKDRAININSTANT -------------------------------
-    elseif ($efftyp == "spellatkdraininstant")
+    elseif ($efftyp == "spellatkdraininstant" )
     {
         $x15 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved15","?") );
         $x17 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved17","?") );
@@ -2296,6 +2300,15 @@ function getEffValAddText($efftyp,$key,$ename,  &$txkey,  &$txval,  &$txlst)
         
         if ($x15 != "?")      $txval .= ' hp_percent="'.$x15.'"';
         if ($x17 != "?")      $txval .= ' mp_percent="'.$x17.'"';
+        if ($x04 == "ADDDMG") $txval .= ' shared="true"'; 
+        
+        $txval .= getEffValMode($efftyp,$key,$ename); 
+    }
+    // SPELLATKDRAININSTANT -------------------------------
+    elseif ($efftyp == "spellatkinstant" )
+    {
+        $x04 = getEffSpecial( "nozero",getTabValue($key,$ename."reserved4" ,"?") );
+        
         if ($x04 == "ADDDMG") $txval .= ' shared="true"'; 
         
         $txval .= getEffValMode($efftyp,$key,$ename); 
@@ -2372,7 +2385,6 @@ function getChangeStats($efftyp,$key,$e,$tbneg)
         $btext = getTabValue($key,"desc","?");
         $bname = getIntSkillName($btext);
     } 
-    // TODO weitere Effekte einarbeiten
     
     // spezielle Conditions vorab prüfen (Default-Changes !!!)
     switch($efftyp)
@@ -2706,6 +2718,7 @@ function getModifiers($efftyp,$key,$e,$field)
     $ename  = "effect".$e."_";
     $mod    = getEffSpecial( "upper",getTabValue($key,$ename.$field,"?") );
     $dta    = "";
+        
     if ($mod != "?")
     {
         $mode = getEffValMode($efftyp,$key,$ename); 
@@ -2717,7 +2730,8 @@ function getModifiers($efftyp,$key,$e,$field)
             $x09  = getEffSpecial( "nozero",getTabValue($key,$ename."reserved9","?") );
             $dta  = ($x09 != "?") ? ' delta="'.$x09.'"' : "";
         }
-        elseif ($efftyp == "spellatkdraininstant")
+        elseif ($efftyp == "spellatkdraininstant" 
+        ||      $efftyp == "spellatkinstant")
         {
             $val  = getTabValue($key,$ename."reserved9","?");
             $x08  = getEffSpecial( "nozero",getTabValue($key,$ename."reserved8","?") );
@@ -2729,7 +2743,7 @@ function getModifiers($efftyp,$key,$e,$field)
                 
         for ($s=0;$s<$smax;$s++)
         {
-            if ($val !== "?")
+            if ($val != "?")
             {
                 $stab[$s] = trim($stab[$s]);
                 
@@ -2882,6 +2896,8 @@ function getEffectBasicSubEffect($efftyp,$key,$e)
         $ret = getSubEffect($efftyp,$key,$e,"reserved14");
     elseif ($efftyp == "skillatk")
         $ret = getSubEffect($efftyp,$key,$e,"reserved14");
+    elseif ($efftyp == "spellatkinstant")
+        $ret = getSubEffect($efftyp,$key,$e,"reserved14");
         
     return $ret;
 }
@@ -2891,13 +2907,14 @@ function getEffectBasicSubEffect($efftyp,$key,$e)
 function getEffectBasicModifiers($efftyp,$key,$e)
 {
     $ret   = "";
-    $ename = "effect".$e."_";
+    $ename = "effect".$e."_";    
     
-    if ($efftyp == "skillatk")
+    if ($efftyp == "skillatk"
+    ||  $efftyp == "spellatkinstant")
         $ret = getModifiers($efftyp,$key,$e,"reserved16");
     elseif ($efftyp == "spellatkdraininstant")
         $ret = getModifiers($efftyp,$key,$e,"reserved7");
-        
+            
     return $ret;
 }
 // ----------------------------------------------------------------------------
@@ -3430,33 +3447,6 @@ function getEffectsLines($key)
         INTEST      dptransfer                  <= aktuell nicht im Client, Ausgabe daher nicht abgleichbar     
         INTEST      dispelnpcdebuff             <= aktuell nicht im Client, Ausgabe daher nicht abgleichbar 
         INTEST      dispelallcounterakt         <= siehe oben        
-   
-        // TODO
-          name="search" type="SearchEffect"
-          name="simpleroot" type="SimpleRootEffect"
-          name="skillatk" type="SkillAttackInstantEffect"
-          name="skillatkdraininstant" type="SkillAtkDrainInstantEffect"
-          name="skillcooltimereset" type="SkillCooltimeResetEffect"
-          name="skilllauncher" type="SkillLauncherEffect"
-          name="slow" type="SlowEffect"
-          name="spellatk" type="SpellAttackEffect"
-          name="spellatkdrain" type="SpellAtkDrainEffect"
-        name="spellatkdraininstant" type="SpellAtkDrainInstantEffect"
-        name="spellatkinstant" type="SpellAttackInstantEffect"
-          name="spin" type="SpinEffect"
-          name="stagger" type="StaggerEffect"
-          name="statboost" type="StatboostEffect"
-          name="stumble" type="StumbleEffect"
-          name="stun" type="StunEffect"
-          name="subtypeboostresist" type="SubTypeBoostResistEffect"
-          name="switchhostile" type="SwitchHostileEffect"
-          name="switchhpmp" type="SwitchHpMpEffect"
-          name="targetchange" type="TargetChangeEffect"
-          name="targetteleport" type="TargetTeleportEffect"
-          name="weaponstatboost" type="WeaponStatboostEffect"
-          name="weaponstatup" type="WeaponStatupEffect"
-          name="wpndual" type="WeaponDualEffect"
-          name="xpboost" type="XPBoostEffect"
     */
     // die verschiedenen Tabellen für negierte Werte aufbereiten
     $tbneg0 = array();                      // keine negierten Werte
@@ -3575,6 +3565,7 @@ function getEffectsLines($key)
             case "spellatk"                  :
             case "spellatkdrain"             :
             case "spellatkdraininstant"      :
+            case "spellatkinstant"           :
             case "spin"                      :
             case "stagger"                   :
             case "stumble"                   :
