@@ -29,6 +29,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author Balthazar
+ * @rework FrozenKiller
  */
 public class _1482ATeleportationAdventure extends QuestHandler {
 
@@ -49,11 +50,8 @@ public class _1482ATeleportationAdventure extends QuestHandler {
     public boolean onDialogEvent(QuestEnv env) {
         final Player player = env.getPlayer();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-
-        int targetId = 0;
-        if (env.getVisibleObject() instanceof Npc) {
-            targetId = ((Npc) env.getVisibleObject()).getNpcId();
-        }
+		int targetId = env.getTargetId();
+		DialogAction dialog = env.getDialog();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 203919) {
@@ -63,65 +61,58 @@ public class _1482ATeleportationAdventure extends QuestHandler {
                     return sendQuestStartDialog(env);
                 }
             }
-        }
-        if (qs == null) {
-            return false;
-        }
-
-        if (qs.getStatus() == QuestStatus.START) {
-            switch (targetId) {
-                case 203337: {
-                    switch (env.getDialog()) {
-                        case QUEST_SELECT: {
-                            switch (qs.getQuestVarById(0)) {
-                                case 0: {
-                                    return sendQuestDialog(env, 1011);
-                                }
-                                case 1: {
-                                    long itemCount1 = player.getInventory().getItemCountByItemId(182201399);
-                                    if (itemCount1 >= 3) {
-                                        qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-                                        updateQuestStatus(env);
-                                        return sendQuestDialog(env, 1693); // 1352);
-                                    } else {
-                                        return sendQuestDialog(env, 10001);
-                                    }
-                                }
-                                case 2: {
-								/*
-                                    return sendQuestDialog(env, 1693);
-                                }
-                                case 3: {
-								*/
-                                    return sendQuestDialog(env, 10002);
-                                }
-                            }
-                        }
-                        case SETPRO1: {
-                            qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-                            updateQuestStatus(env);
-                            PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-                            return true;
-                        }
-                        case SETPRO3: {
-                            qs.setQuestVar(3);
-                            qs.setStatus(QuestStatus.REWARD);
-                            updateQuestStatus(env);
-                            TeleportService2.teleportTo(player, 220020000, 1, 117, 2212, 589, (byte) 11);
-                            return true;
-                        }
-                        default:
-                            return sendQuestStartDialog(env);
+        } else if (qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
+            if (targetId == 203337) {
+				switch (dialog) {
+                    case QUEST_SELECT: {
+						if (var == 0) {
+                            return sendQuestDialog(env, 1011);
+						} else if (var == 1) {
+							return sendQuestDialog(env, 1352);
+						} else if (var == 2) {
+							return sendQuestDialog(env, 1693);
+						}
+					}	
+					case CHECK_USER_HAS_QUEST_ITEM: {
+                        if (player.getInventory().getItemCountByItemId(182201399) >= 3) {
+							qs.setQuestVar(2);
+							updateQuestStatus(env);
+							removeQuestItem(env, 182201399, 3);
+							return sendQuestDialog(env, 10000);
+						} else {
+							return sendQuestDialog(env, 10001);
+						}
+					}
+                    case SETPRO1: {
+                        qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
+                        updateQuestStatus(env);
+                        return closeDialogWindow(env);
                     }
-                }
-            }
+                    case SETPRO3: {
+                        qs.setQuestVar(3);
+                        qs.setStatus(QuestStatus.REWARD);
+                        updateQuestStatus(env);
+                        TeleportService2.teleportTo(player, 220020000, 1, 117, 2212, 589, (byte) 11);
+                        return closeDialogWindow(env);
+                    }
+                    default:
+						return sendQuestStartDialog(env);
+				}
+			}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
             if (targetId == 203337) {
-                if (env.getDialogId() == DialogAction.SELECT_QUEST_REWARD.id()) {
-                    return sendQuestDialog(env, 5);
-                } else {
-                    return sendQuestEndDialog(env);
-                }
+				switch (dialog) {
+					case USE_OBJECT: {
+						return sendQuestDialog(env, 10002);
+						
+					}
+					case SELECT_QUEST_REWARD: {
+						return sendQuestDialog(env, 5);
+					}
+					default:
+						return sendQuestEndDialog(env);
+				}
             }
         }
         return false;

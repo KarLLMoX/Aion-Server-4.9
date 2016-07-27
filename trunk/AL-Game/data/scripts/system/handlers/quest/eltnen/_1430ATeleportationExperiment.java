@@ -71,6 +71,7 @@ public class _1430ATeleportationExperiment extends QuestHandler {
                     updateQuestStatus(env);
                     qs.setStatus(QuestStatus.REWARD);
                     TeleportService2.teleportTo(player, 220020000, 1, 638, 2337, 425, (byte) 20);
+					return closeDialogWindow(env);
                 } else {
                     return sendQuestStartDialog(env);
                 }
