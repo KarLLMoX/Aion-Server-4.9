@@ -37,11 +37,11 @@ import com.aionemu.gameserver.world.WorldMapInstance;
 /**
  * @author kecimis
  * @modified apozema
+ * @rework FrozenKiller
  */
 public class _3200PriceOfGoodwill extends QuestHandler {
 
 	private final static int questId = 3200;
-	private final static int[] npc_ids = { 204658, 798332, 700522, 279006, 798322 };
 
 	public _3200PriceOfGoodwill() {
 		super(questId);
@@ -51,9 +51,11 @@ public class _3200PriceOfGoodwill extends QuestHandler {
 	public void register() {
 		qe.registerQuestNpc(204658).addOnQuestStart(questId);
 		qe.registerQuestItem(182209082, questId);
-		for (int npc_id : npc_ids) {
-			qe.registerQuestNpc(npc_id).addOnTalkEvent(questId);
-		}
+		qe.registerQuestNpc(204658).addOnTalkEvent(questId); //Roikinerk
+		qe.registerQuestNpc(798332).addOnTalkEvent(questId); //Haorunerk
+		qe.registerQuestNpc(700522).addOnTalkEvent(questId); //Haorunerks Bag
+		qe.registerQuestNpc(278651).addOnTalkEvent(questId); //Aurunerk
+		qe.registerQuestNpc(805832).addOnTalkEvent(questId); //Tramine
 	}
 
 	@Override
@@ -73,26 +75,9 @@ public class _3200PriceOfGoodwill extends QuestHandler {
 				} else {
 					return sendQuestStartDialog(env);
 				}
-
 			}
-			return false;
-		}
-
-		int var = qs.getQuestVarById(0);
-
-		if (qs.getStatus() == QuestStatus.REWARD) {
-			if (targetId == 798322) { // Kuruminerk
-				if (env.getDialog() == DialogAction.USE_OBJECT) {
-					return sendQuestDialog(env, 10002);
-				} else if (env.getDialogId() == DialogAction.SELECT_QUEST_REWARD.id()) {
-					return sendQuestDialog(env, 5);
-				} else {
-					return sendQuestEndDialog(env);
-				}
-			}
-			return false;
-
 		} else if (qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
 			if (targetId == 204658) { // Roikinerk
 				switch (env.getDialog()) {
 					case QUEST_SELECT:
@@ -109,42 +94,43 @@ public class _3200PriceOfGoodwill extends QuestHandler {
 					default:
 						break;
 				}
-			}
-
-		} else if (targetId == 798332 && var == 1) { // Haorunerk
-			switch (env.getDialog()) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 1352);
-				case SELECT_ACTION_1353:
-					playQuestMovie(env, 431);
-					break;
-				case SETPRO2:
-					qs.setQuestVarById(0, var + 1);
-					updateQuestStatus(env);
-					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					return true;
-				default:
-					break;
-			}
-		} else if (targetId == 700522 && var == 2) { // Haorunerks Bag
-			ThreadPoolManager.getInstance().schedule(new Runnable() {
-				@Override
-				public void run() {
-					updateQuestStatus(env);
+			} else if (targetId == 798332 && var == 1) { // Haorunerk
+				switch (env.getDialog()) {
+					case QUEST_SELECT:
+						return sendQuestDialog(env, 1352);
+					case SELECT_ACTION_1353:
+						playQuestMovie(env, 431);
+						break;
+					case SETPRO2:
+						qs.setQuestVarById(0, var + 1);
+						updateQuestStatus(env);
+						return closeDialogWindow(env);
+					default:
+						break;
 				}
-			}, 3000);
-			return true;
-		} else if (targetId == 279006 && var == 3) { // Garkbinerk
-			switch (env.getDialog()) {
-				case QUEST_SELECT:
-					return sendQuestDialog(env, 2034);
-				case SET_SUCCEED:
-					PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-					qs.setStatus(QuestStatus.REWARD);
-					updateQuestStatus(env);
-					return true;
-				default:
-					break;
+			} else if (targetId == 700522 && var == 2) { // Haorunerks Bag
+				return true;
+			} else if (targetId == 278651 && var == 3) { // Aurunerk
+				switch (env.getDialog()) {
+					case QUEST_SELECT:
+						return sendQuestDialog(env, 2034);
+					case SET_SUCCEED:
+						qs.setStatus(QuestStatus.REWARD);
+						updateQuestStatus(env);
+						return closeDialogWindow(env);
+					default:
+						break;
+				}
+			}
+		} else if (qs.getStatus() == QuestStatus.REWARD) {
+			if (targetId == 805832) { // Tramine
+				if (env.getDialog() == DialogAction.USE_OBJECT) {
+					return sendQuestDialog(env, 10002);
+				} else if (env.getDialogId() == DialogAction.SELECT_QUEST_REWARD.id()) {
+					return sendQuestDialog(env, 5);
+				} else {
+					return sendQuestEndDialog(env);
+				}
 			}
 		}
 		return false;
@@ -167,7 +153,7 @@ public class _3200PriceOfGoodwill extends QuestHandler {
 			public void run() {
 				PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjId, id, 0, 1, 0), true);
 				removeQuestItem(env, 182209082, 1);
-				TeleportService2.teleportTo(player, 400010000, 3411.0608f, 2419.0928f, 2763.1975f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
+				TeleportService2.teleportTo(player, 400010000, 2889.0369f, 994.6484f, 1527.9968f, (byte) 0, TeleportAnimation.BEAM_ANIMATION);
 				qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
 				updateQuestStatus(env);
 			}
