@@ -91,13 +91,13 @@ public class _10503GuardDownSecretsOut extends QuestHandler {
 
 					case CHECK_USER_HAS_QUEST_ITEM:
 						if (QuestService.collectItemCheck(env, true)) {	
-							giveQuestItem(env, 182215604, 1);
 							changeQuestStep(env, 2, 3, false);
 							return sendQuestDialog(env, 10000);
 						} else {
 							return sendQuestDialog(env, 10001);
 						}
 					case SETPRO4:
+						giveQuestItem(env, 182215604, 1);
 						changeQuestStep(env, 3, 4, false); 
 						return closeDialogWindow(env);
 					case SETPRO6:
