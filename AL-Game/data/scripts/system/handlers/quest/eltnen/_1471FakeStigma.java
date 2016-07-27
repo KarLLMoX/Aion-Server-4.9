@@ -28,6 +28,7 @@ import com.aionemu.gameserver.utils.PacketSendUtility;
 
 /**
  * @author MrPoke remod By Xitanium
+ * @rework FrozenKiller
  */
 public class _1471FakeStigma extends QuestHandler {
 
@@ -42,82 +43,73 @@ public class _1471FakeStigma extends QuestHandler {
         qe.registerQuestNpc(203991).addOnQuestStart(questId); // Dionera
         qe.registerQuestNpc(203991).addOnTalkEvent(questId); // Dionera
         qe.registerQuestNpc(203703).addOnTalkEvent(questId); // Likesan
-        qe.registerQuestNpc(798048).addOnTalkEvent(questId);// Kierunerk
-        qe.registerQuestNpc(798024).addOnTalkEvent(questId); // Chicorinerk
+        qe.registerQuestNpc(798024).addOnTalkEvent(questId); // Kierunerk
+        qe.registerQuestNpc(798321).addOnTalkEvent(questId); // Koruchinerk
     }
 
     @Override
     public boolean onDialogEvent(QuestEnv env) {
-        final Player player = env.getPlayer();
-        int targetId = 0;
-        if (env.getVisibleObject() instanceof Npc) {
-            targetId = ((Npc) env.getVisibleObject()).getNpcId();
-        }
-        QuestState qs = player.getQuestStateList().getQuestState(questId);
-        if (targetId == 203991) // Dionera
-        {
-            if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1011);
-                } else {
-                    return sendQuestStartDialog(env);
+        Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		int targetId = env.getTargetId();
+		DialogAction dialog = env.getDialog();
+		
+        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+			if (targetId == 203991) {// Dionera
+				if (env.getDialog() == DialogAction.QUEST_SELECT) {
+					return sendQuestDialog(env, 1011);
+				} else {
+					return sendQuestStartDialog(env);
                 }
             }
-
-        } else if (targetId == 203703) {
-            if (qs != null && qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 0) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1352);
-                } else if (env.getDialog() == DialogAction.SETPRO1) {
-                    qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-                    updateQuestStatus(env);
-                    PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-                    return true;
-                } else {
-                    return sendQuestStartDialog(env);
-                }
-            } else if (qs != null && qs.getStatus() == QuestStatus.START) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 2375);
-                } else if (env.getDialogId() == DialogAction.SELECT_QUEST_REWARD.id()) {
-                    qs.setQuestVar(3);
-                    qs.setStatus(QuestStatus.REWARD);
-                    updateQuestStatus(env);
-                    return sendQuestEndDialog(env);
-                } else {
-                    return sendQuestEndDialog(env);
-                }
-            } else if (qs != null && qs.getStatus() == QuestStatus.REWARD) {
-                return sendQuestEndDialog(env);
-            }
-        } else if (targetId == 798024) {
-            if (qs != null && qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 1) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1693);
-                } else if (env.getDialog() == DialogAction.SETPRO2) {
-                    qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-                    updateQuestStatus(env);
-                    PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-                    return true;
-                } else {
-                    return sendQuestStartDialog(env);
-                }
-            }
-        } else if (targetId == 798048) {
-            if (qs != null && qs.getStatus() == QuestStatus.START && qs.getQuestVarById(0) == 2) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 2034);
-                } else if (env.getDialog() == DialogAction.SETPRO3) {
-                    qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-                    updateQuestStatus(env);
-                    PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 10));
-                    return true;
-                } else {
-                    return sendQuestStartDialog(env);
-                }
-            }
-        }
-
-        return false;
-    }
+		} else if (qs.getStatus() == QuestStatus.START) {
+			int var = qs.getQuestVarById(0);
+			if (targetId == 203703) { //Likesan
+				switch (dialog) {
+					case QUEST_SELECT: {
+						if (var == 0) {
+							return sendQuestDialog(env, 1352);
+						} else if (var == 3) {
+							return sendQuestDialog(env, 2375);
+						}
+					}
+					case SETPRO1: {
+						return defaultCloseDialog(env, 0, 1);
+					}
+					case SELECT_QUEST_REWARD: {
+						qs.setStatus(QuestStatus.REWARD);
+						updateQuestStatus(env);
+						return sendQuestEndDialog(env);
+					}
+					default:
+						break;
+				}
+            } else if (targetId == 798024) { //Kierunerk
+				switch (dialog) {
+					case QUEST_SELECT: {
+						return sendQuestDialog(env, 1693);
+					}
+					case SETPRO2: {
+						return defaultCloseDialog(env, 1, 2);
+					}
+					default:
+						break;
+				}
+			} else if (targetId == 798321) { //Koruchinerk
+				switch (dialog) {
+					case QUEST_SELECT: {
+						return sendQuestDialog(env, 2034);
+					}
+					case SETPRO3: {
+						return defaultCloseDialog(env, 2, 3);
+					}
+					default:
+						break;
+				}
+			} 
+		} else if (qs.getStatus() == QuestStatus.REWARD) {
+			return sendQuestEndDialog(env);
+		}
+		return false;
+	}
 }
