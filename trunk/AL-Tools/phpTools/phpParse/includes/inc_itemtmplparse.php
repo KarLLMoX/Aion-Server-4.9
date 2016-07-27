@@ -445,7 +445,6 @@ function getArmorType($key)
         switch (strtoupper($tabTpls[$key]['armor_type']))
         {
             case "CHAIN":
-            case "CLOTHES":
             case "LEATHER":
             case "PLATE":
             case "ROBE":
@@ -455,6 +454,13 @@ function getArmorType($key)
             case "PLUME":
                 return strtoupper($tabTpls[$key]['armor_type']);
                 break;
+            case "CLOTHES":
+                // 5.0 - Client-Fehleintrag zu den Flügeln abfangen
+                if (stripos($tabTpls[$key]['desc'],"_WING_") !== false)
+                    return "WING";
+                else
+                    return strtoupper($tabTpls[$key]['armor_type']);
+                break;    
             default:
                 break;
         }
