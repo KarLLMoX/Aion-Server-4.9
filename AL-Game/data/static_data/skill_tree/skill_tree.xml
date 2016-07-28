@@ -4610,10 +4610,10 @@
 	<skill minLevel="56" race="PC_ALL" stigma="true" name="Arcane Thunderbolt" skillLevel="1" skillId="4603" classId="SORCERER" />
 	<skill minLevel="62" race="PC_ALL" stigma="true" name="Arcane Thunderbolt" skillLevel="1" skillId="4604" classId="SORCERER" />
 	<skill minLevel="1" race="PC_ALL" autolearn="true" name="Basic Leather Armor Proficiency" skillLevel="1" skillId="41" classId="ENGINEER" />
-	<!-- <skill minLevel="20" race="PC_ALL" stigma="true" name="Stigma Healing Light II" skillLevel="1" skillId="11504" classId="ALL" />
+	<skill minLevel="20" race="PC_ALL" stigma="true" name="Stigma Healing Light II" skillLevel="1" skillId="11504" classId="ALL" />
 	<skill minLevel="20" race="PC_ALL" stigma="true" name="Stigma Flame Cage I" skillLevel="1" skillId="11505" classId="ALL" />
 	<skill minLevel="20" race="PC_ALL" stigma="true" name="Stigma: Ferocious Strike III" skillLevel="1" skillId="11506" classId="ALL" />
-	<skill minLevel="20" race="PC_ALL" stigma="true" name="Stigma Hydro Eruption II" skillLevel="1" skillId="11507" classId="ALL" /> -->
+	<skill minLevel="20" race="PC_ALL" stigma="true" name="Stigma Hydro Eruption II" skillLevel="1" skillId="11507" classId="ALL" />
 	<skill minLevel="20" race="PC_ALL" stigma="true" name="Leaping Flash" skillLevel="1" skillId="4615" classId="CHANTER" />
 	<skill minLevel="26" race="PC_ALL" stigma="true" name="Leaping Flash" skillLevel="1" skillId="4617" classId="CHANTER" />
 	<skill minLevel="32" race="PC_ALL" stigma="true" name="Leaping Flash" skillLevel="1" skillId="4619" classId="CHANTER" />
@@ -4657,7 +4657,7 @@
 	<skill minLevel="51" race="PC_ALL" autolearn="true" name="Backdraft" skillLevel="1" skillId="4663" classId="SPIRIT_MASTER" />
 	<skill minLevel="56" race="PC_ALL" autolearn="true" name="Backdraft" skillLevel="1" skillId="4664" classId="SPIRIT_MASTER" />
 	<skill minLevel="61" race="PC_ALL" autolearn="true" name="Backdraft" skillLevel="1" skillId="4665" classId="SPIRIT_MASTER" />
-	<!-- <skill minLevel="47" race="PC_ALL" autolearn="true" name="Counter Leech" skillLevel="1" skillId="4670" classId="GLADIATOR" />
+	<skill minLevel="47" race="PC_ALL" autolearn="true" name="Counter Leech" skillLevel="1" skillId="4670" classId="GLADIATOR" />
 	<skill minLevel="52" race="PC_ALL" autolearn="true" name="Counter Leech" skillLevel="1" skillId="4671" classId="GLADIATOR" />
 	<skill minLevel="26" race="PC_ALL" autolearn="true" name="Blood Pact" skillLevel="1" skillId="4672" classId="TEMPLAR" />
 	<skill minLevel="31" race="PC_ALL" autolearn="true" name="Blood Pact" skillLevel="1" skillId="4673" classId="TEMPLAR" />
@@ -4676,5 +4676,5 @@
 	<skill minLevel="49" race="PC_ALL" autolearn="true" name="Spinning Fire " skillLevel="1" skillId="4686" classId="GUNNER" />
 	<skill minLevel="54" race="PC_ALL" autolearn="true" name="Spinning Fire " skillLevel="1" skillId="4687" classId="GUNNER" />
 	<skill minLevel="48" race="PC_ALL" autolearn="true" name="Cyclone Slash" skillLevel="1" skillId="4688" classId="ASSASSIN" />
-	<skill minLevel="49" race="PC_ALL" autolearn="true" name="Flash of Healing" skillLevel="1" skillId="4689" classId="PRIEST" /> -->
+	<skill minLevel="49" race="PC_ALL" autolearn="true" name="Flash of Healing" skillLevel="1" skillId="4689" classId="CLERIC" />
 </skill_tree>
