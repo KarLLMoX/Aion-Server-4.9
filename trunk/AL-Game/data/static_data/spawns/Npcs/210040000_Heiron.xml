@@ -9830,13 +9830,37 @@
 		<spawn npc_id="800397" respawn_time="295">
 			<spot x="759.435" y="2884.16" z="107.208" h="93"/>
 		</spawn>
+		<!-- Protectors Captain Sherylin ||| event_Cherylin -->
+		<spawn npc_id="831833" respawn_time="295">
+			<spot x="2465.7" y="353.1" z="411.01874" h="9"/>
+		</spawn>
+		<!-- Protectors Captain Asif ||| event_Asif -->
+		<spawn npc_id="831834" respawn_time="295">
+			<spot x="2466.6" y="352.4" z="410.9625" h="22"/>
+		</spawn>
 		<!-- Protector Siz ||| event_guard_Siz -->
 		<spawn npc_id="831837" respawn_time="295">
 			<spot x="2047.5381" y="1432.8813" z="125.29005" h="2"/>
+			<spot x="2465.1" y="354.4" z="411.04248" h="12"/>
+			<spot x="2541.3" y="2671.1" z="158.21687" h="36"/>
+		</spawn>
+		<!-- Protector Jacques ||| event_guard_Zac -->
+		<spawn npc_id="831838" respawn_time="295">
+			<spot x="2464.8" y="357.4" z="411.025" h="0"/>
+		</spawn>
+		<!-- Protector Paulcoes ||| event_guard_Phayze -->
+		<spawn npc_id="831839" respawn_time="295">
+			<spot x="2464.5" y="355.4" z="411.07187" h="8"/>
 		</spawn>
 		<!-- Protector Mosswing ||| event_guard_Fermat -->
 		<spawn npc_id="831844" respawn_time="295">
 			<spot x="2017.3469" y="1461.9203" z="126.69922" h="21"/>
+			<spot x="2464.4" y="356.3" z="411.075" h="4"/>
+		</spawn>
+		<!-- Protector Kentro ||| event_guard_Kentro -->
+		<spawn npc_id="831840" respawn_time="295">
+			<spot x="2465.4" y="358.8" z="410.945" h="113"/>
+			<spot x="2543.2" y="2672.7" z="158.15125" h="46"/>
 		</spawn>
 		<!-- Elyos Gazing Ashulagen ||| Directportal_AttackTower_Li -->
 		<spawn npc_id="219618" respawn_time="295">
@@ -10002,7 +10026,7 @@
 		</spawn>
 		<!-- Anaxa ||| LF3_Anaxa_E -->
 		<spawn npc_id="832824" respawn_time="295">
-			<spot x="2536.2341" y="2673.9565" z="158.00815" h="39"/>
+			<spot x="2536.3115" y="2679.432" z="156.7949" h="40"/>
 		</spawn>
 		<!-- Tramine ||| LF3_Traming_E -->
 		<spawn npc_id="805832" respawn_time="295">
