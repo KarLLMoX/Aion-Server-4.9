@@ -7861,12 +7861,8 @@
 			<spot x="460.1033" y="2027.9733" z="287.599" static_id="616"/>
 		</spawn>
 		<!-- Obelisk -->
-		<spawn npc_id="730237" respawn_time="295">
-			<spot x="1386.18" y="308.912" z="589.479" h="71"/>
-		</spawn>
-		<!-- Obelisk -->
 		<spawn npc_id="730235" respawn_time="295">
-			<spot x="1889.937" y="1748.712" z="328.406" static_id="1308"/>
+			<spot x="1386.2183" y="308.9132" z="589.47925" static_id="458"/>
 		</spawn>
 		<!-- Obelisk -->
 		<spawn npc_id="730236" respawn_time="295">
@@ -7876,6 +7872,7 @@
 		<spawn npc_id="730281" respawn_time="295">
 			<spot x="379.33493" y="952.23126" z="461.39877" static_id="46"/>
 		</spawn>
+		<!-- Obelisk -->
         <spawn npc_id="730282" respawn_time="295">
             <spot x="1889.9365" y="1748.7122" z="328.40558" static_id="1308"/>
         </spawn>				
