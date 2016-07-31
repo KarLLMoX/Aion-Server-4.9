@@ -201,6 +201,18 @@
             <xs:enumeration value="BOOST_RESIST_DEBUFF"/>
             <!-- 3.5 -->
             <xs:enumeration value="ELEMENTAL_FIRE"/>
+
+            <!-- AP & Drop Boost -->
+            <xs:enumeration value="AP_BOOST"/>
+            <xs:enumeration value="DR_BOOST"/>
+            <!-- 4.8/4.9 -->
+            <xs:enumeration value="AP_REDUCE_RATE"/>
+            <xs:enumeration value="ENCHANT_BOOST"/>
+            <xs:enumeration value="AUTHORIZE_BOOST"/>
+            <xs:enumeration value="INDUN_DROP_BOOST"/>
+            <xs:enumeration value="DEATH_PENALTY_REDUCE"/>
+            <xs:enumeration value="ENCHANT_OPTION_BOOST"/>
+
             <!-- PvP and PvE -->
 	   <xs:enumeration value="PVP_PHYSICAL_ATTACK"/>
             <xs:enumeration value="PVP_PHYSICAL_DEFEND"/>

@@ -219,6 +219,10 @@ public class StaticData {
     public WorldBuffData buffData;
 	@XmlElement(name = "players")
 	public PlayersAppearanceData playerAppearance;
+    @XmlElement(name = "service_bonusattrs")
+    public ServiceBuffData serviceBuffData;
+    @XmlElement(name = "players_service_bonusattrs")
+    public PlayersBonusData playersBonusData;
 
     // JAXB callback
     @SuppressWarnings("unused")
@@ -317,5 +321,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + hiddenStigmas.size() + " hidden stigmas entries");
 		DataManager.log.info("[DataManager] Loaded " + buffData.size() + " world buff map entries");
 		//DataManager.log.info("[DataManager] Loaded " + playerAppearance.size() + " Player Appearances");
+        DataManager.log.info("Loaded " + serviceBuffData.size() + " Service Bonus");
+        DataManager.log.info("Loaded " + playersBonusData.size() + " Player Bonus");
     }
 }

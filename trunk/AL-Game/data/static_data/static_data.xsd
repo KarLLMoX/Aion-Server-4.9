@@ -93,6 +93,8 @@
     <xs:include schemaLocation="arcadelist.xsd"/> 
 	<xs:include schemaLocation="hidden_stigma_tree/hidden_stigma_tree.xsd"/>
 	<xs:include schemaLocation="world_buff/world_buffs.xsd"/>
+    <xs:include schemaLocation="service_bonusattr/service_bonusattr.xsd"/>
+    <xs:include schemaLocation="service_bonusattr/players_bonus.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -190,6 +192,8 @@
                 <xs:element ref="arcadelist" minOccurs="0"/>       
 				<xs:element ref="hidden_stigma_tree" minOccurs="0"/>
                 <xs:element ref="world_buffs" minOccurs="0"/>
+                <xs:element ref="service_bonusattrs" minOccurs="0"/>
+                <xs:element ref="players_service_bonusattrs" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

@@ -70,7 +70,7 @@ public class AccountService {
      * @return Account
      */
     public static Account getAccount(int accountId, String accountName, AccountTime accountTime, byte accessLevel,
-                                     byte membership, long toll) {
+                                     byte membership, long toll, byte isReturn) {
         log.debug("[AS] request for account: " + accountId);
 
         Account account = accountsMap.get(accountId);
@@ -85,6 +85,7 @@ public class AccountService {
         account.setAccessLevel(accessLevel);
         account.setMembership(membership);
         account.setToll(toll);
+        account.setIsReturn(isReturn);
         removeDeletedCharacters(account);
         return account;
     }

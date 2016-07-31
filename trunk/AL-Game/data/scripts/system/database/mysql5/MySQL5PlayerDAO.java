@@ -216,7 +216,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
         try {
             con = DatabaseFactory.getConnection();
             PreparedStatement preparedStatement = con.prepareStatement("INSERT INTO players(id, `name`, account_id, account_name, x, y, z, heading, world_id, gender, race, player_class , cube_expands, warehouse_size, bonus_type, online) "
-                            + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)");
 
             log.debug("[DAO: MySQL5PlayerDAO] saving new player: " + pcd.getPlayerObjId() + " " + pcd.getName());
 
@@ -366,7 +366,7 @@ public class MySQL5PlayerDAO extends PlayerDAO {
                 cd.setLastStamp(resultSet.getTimestamp("last_stamp"));
                 cd.setJoinRequestLegionId(resultSet.getInt("joinRequestLegionId"));
                 cd.setJoinRequestState(LegionJoinRequestState.valueOf(resultSet.getString("joinRequestState")));
-                
+
                 PlayerUpgradeArcade pua = new PlayerUpgradeArcade();
                 pua.setFrenzyPoints(resultSet.getInt("frenzy_points"));
                 pua.setFrenzyCount(resultSet.getInt("frenzy_count"));
@@ -785,76 +785,76 @@ public class MySQL5PlayerDAO extends PlayerDAO {
     }
 
     @Override
-	public Timestamp getCharacterCreationDateId(final int obj) {
-		Connection con = null;
-		Timestamp creationDate;
-		try {
-			con = DatabaseFactory.getConnection();
-			PreparedStatement s = con.prepareStatement("SELECT `creation_date` FROM `players` WHERE `id` = ?");
-			s.setInt(1, obj);
-			ResultSet rs = s.executeQuery();
-			rs.next();
-			creationDate = rs.getTimestamp("creation_date");
-			rs.close();
-			s.close();
-		}
-		catch (Exception e) {
-			return null;
-		}
-		finally {
-			DatabaseFactory.close(con);
-		}
-		return creationDate;
-	}
-    
+    public Timestamp getCharacterCreationDateId(final int obj) {
+        Connection con = null;
+        Timestamp creationDate;
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement s = con.prepareStatement("SELECT `creation_date` FROM `players` WHERE `id` = ?");
+            s.setInt(1, obj);
+            ResultSet rs = s.executeQuery();
+            rs.next();
+            creationDate = rs.getTimestamp("creation_date");
+            rs.close();
+            s.close();
+        }
+        catch (Exception e) {
+            return null;
+        }
+        finally {
+            DatabaseFactory.close(con);
+        }
+        return creationDate;
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
-    public void updateLegionJoinRequestState(final int playerId, final LegionJoinRequestState state) 
+    public void updateLegionJoinRequestState(final int playerId, final LegionJoinRequestState state)
     {
-    	DB.insertUpdate("UPDATE players SET joinRequestState=? WHERE id=?", new IUStH() 
+        DB.insertUpdate("UPDATE players SET joinRequestState=? WHERE id=?", new IUStH()
         {
             @Override
-            public void handleInsertUpdate(PreparedStatement stmt) throws SQLException 
+            public void handleInsertUpdate(PreparedStatement stmt) throws SQLException
             {
-            	log.debug("[DAO: MySQL5PlayerDAO] Update joinRequestState for player " + playerId + " to : "+state.name());
+                log.debug("[DAO: MySQL5PlayerDAO] Update joinRequestState for player " + playerId + " to : "+state.name());
 
                 stmt.setString(1, state.name());
                 stmt.setInt(2, playerId);
                 stmt.execute();
             }
-        });        
+        });
     }
-    
+
     /**
      * {@inheritDoc}
      */
     @Override
     public void clearJoinRequest(final int playerId) {
         Connection con = null;
-        try 
+        try
         {
             con = DatabaseFactory.getConnection();
             PreparedStatement stmt = con
                     .prepareStatement("UPDATE players SET joinRequestLegionId=?, joinRequestState=? WHERE id=?");
 
             log.debug("[DAO: MySQL5PlayerDAO] Cleared LegionJoinRequest for player " + playerId);
- 
+
             stmt.setInt(1, 0);
             stmt.setString(2, "NONE");
             stmt.setInt(3, playerId);
-		}
-		catch (Exception e) 
+        }
+        catch (Exception e)
         {
 
-		}
-		finally 
-		{
-			DatabaseFactory.close(con);
-		}
+        }
+        finally
+        {
+            DatabaseFactory.close(con);
+        }
     }
-    
+
     /**
      * {@inheritDoc}
      */
@@ -869,13 +869,13 @@ public class MySQL5PlayerDAO extends PlayerDAO {
             }
 
             @Override
-            public void handleRead(ResultSet rset) throws SQLException 
+            public void handleRead(ResultSet rset) throws SQLException
             {
-            	if (rset.next()) 
-            	{
-            		//log.info(" State: "+LegionJoinRequestState.valueOf(rset.getString("joinRequestState")).name());
-            		player.getCommonData().setJoinRequestState(LegionJoinRequestState.valueOf(rset.getString("joinRequestState")));            
-            	}
+                if (rset.next())
+                {
+                    //log.info(" State: "+LegionJoinRequestState.valueOf(rset.getString("joinRequestState")).name());
+                    player.getCommonData().setJoinRequestState(LegionJoinRequestState.valueOf(rset.getString("joinRequestState")));
+                }
             }
         });
     }

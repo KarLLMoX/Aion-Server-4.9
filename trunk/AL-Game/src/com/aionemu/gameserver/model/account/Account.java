@@ -61,6 +61,7 @@ public class Account implements Iterable<PlayerAccountData> {
     private int numberOfElyos = 0;
     private CharacterPasskey characterPasskey;
     private String securityToken = "";
+    private byte isReturn;
 
     public Account(int id) {
         this.id = id;
@@ -111,11 +112,26 @@ public class Account implements Iterable<PlayerAccountData> {
         return membership;
     }
 
+
+
     /**
      * @param membership the membership to set
      */
     public void setMembership(byte membership) {
         this.membership = membership;
+    }
+
+    public byte getIsReturn() {
+        return isReturn;
+    }
+
+
+
+    /**
+     * @param membership the membership to set
+     */
+    public void setIsReturn(byte isReturn) {
+        this.isReturn = isReturn;
     }
 
     @Override

@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.dao;
 
 import com.aionemu.gameserver.model.Race;
+import com.aionemu.gameserver.model.account.Account;
 import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
