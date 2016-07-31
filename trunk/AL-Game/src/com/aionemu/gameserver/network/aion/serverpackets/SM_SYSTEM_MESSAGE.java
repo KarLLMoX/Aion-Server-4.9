@@ -21784,7 +21784,33 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
 	{
 		return new SM_SYSTEM_MESSAGE(1403138, "[item:" + itemId + "]", count);
 	}
-	
+
+    /**
+     * [Abyss Logon] 4.9
+     */
+
+    //Asmodian Governor %0% has graced Atreia.
+    public static SM_SYSTEM_MESSAGE STR_MSG_ASMO_GOUV_ENTERWORLD(String name) {
+        return new SM_SYSTEM_MESSAGE(1403135, name);
+    }
+
+    //Elyos Governor %0% has graced Atreia.
+    public static SM_SYSTEM_MESSAGE STR_MSG_ELYOS_GOUV_ENTERWORLD(String name) {
+        return new SM_SYSTEM_MESSAGE(1403134, name);
+    }
+
+    /**
+     * Gp Delete Daily
+     */
+    /**
+     * You loose %num0 Daily Glory Points.
+     */
+    public static final SM_SYSTEM_MESSAGE STR_MSG_GLORY_POINT_LOSE_COMMON = new SM_SYSTEM_MESSAGE(1402082);
+
+    public static SM_SYSTEM_MESSAGE STR_MSG_GLORY_POINT_LOSE_PERSONAL(String name, int num0) {
+        return new SM_SYSTEM_MESSAGE(1402209, name, num0);
+    }
+
     /**
 	 * [Beritra Invasion] 4.7
 	 */
