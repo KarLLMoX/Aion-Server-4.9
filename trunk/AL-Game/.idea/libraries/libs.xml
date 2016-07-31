@@ -1,0 +1,34 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/mysql-connector-java-5.1.33.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/junit-4.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jsr166-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jsr305-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/objenesis-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/slf4j-api-1.6.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/quartz-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/guava-13.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/al-commons.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/c3p0-0.9.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javassist-3.15.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/bonecp-0.7.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/lambdaj-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/hamcrest-all-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/logback-core-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/logback-classic-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javolution-5.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/trove4j-3.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/javac-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/cglib-nodep-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/xercesImpl-2.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jsr166-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/joda-time-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/apache-commons-net.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-lang-2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
