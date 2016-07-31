@@ -119,7 +119,7 @@ public class ArcadeUpgradeService {
             return;
         }
         
-        PlayerUpgradeArcade arcade = player.getUpgradeArcade();
+        final PlayerUpgradeArcade arcade = player.getUpgradeArcade();
         Storage localStorage = player.getInventory();
         
         if (localStorage.getFreeSlots() < 1)
@@ -189,18 +189,21 @@ public class ArcadeUpgradeService {
         	//GameServer.log.info("[ArcadeUpgrade] Sucess ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
 
         	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, true, arcade.getFrenzyPoints()));
-            PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 4, arcade.getFrenzyLevel()));            
+            ThreadPoolManager.getInstance().schedule(new Runnable() {
+                @Override
+                public void run() {
+                    PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 4, arcade.getFrenzyLevel()));
+                }
+            }, 3000);
         } 
         else 
         {            
             //when Level is under 6, player can't resume and gets a reward of the lowest level.
         	//GameServer.log.info("[ArcadeUpgrade] Failed ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
 
-
-                        
         	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, false, arcade.getFrenzyPoints()));
             PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
-        	
+
             if (arcade.getFrenzyLevel() < 6 && !arcade.isReTry())
         		arcade.setFrenzyLevel(1);
         	else 
@@ -211,6 +214,7 @@ public class ArcadeUpgradeService {
             PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
             arcade.setFailed(true);
         }
+
     }
 
     public void getReward(Player player)
