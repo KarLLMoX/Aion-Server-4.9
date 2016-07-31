@@ -236,7 +236,7 @@ public class NpcSpawnExporter {
 				for (SpawnSpot spot :spawn.spots)
 				{
 					spots++;
-					template_sb.append("\t\t\t<spot x=\""+spot.x+"\" y=\""+spot.y+"\" z=\""+spot.z+"\" h=\""+spot.h+"\""+ (spot.spawnStaticId != 0 ?  " walker_id=\""+spot.objectId+"\"" : "")+"/>\r\n");
+					template_sb.append("\t\t\t<spot x=\""+spot.x+"\" y=\""+spot.y+"\" z=\""+spot.z+"\" h=\""+spot.h+"\""+ (spot.spawnStaticId != 0 ?  " static_id=\""+spot.spawnStaticId+"\"" : "")+"/>\r\n");
 				}
 				template_sb.append("\t\t</spawn>\r\n");
 			}
