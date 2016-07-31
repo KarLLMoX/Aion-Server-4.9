@@ -221,14 +221,14 @@ public class LoginServer {
      * @param accountTime
      */
     public void accountAuthenticationResponse(int accountId, String accountName, boolean result, AccountTime accountTime,
-                                              byte accessLevel, byte membership, long toll) {
+                                              byte accessLevel, byte membership, long toll, byte isReturn) {
         AionConnection client = loginRequests.remove(accountId);
 
         if (client == null) {
             return;
         }
 
-        Account account = AccountService.getAccount(accountId, accountName, accountTime, accessLevel, membership, toll);
+        Account account = AccountService.getAccount(accountId, accountName, accountTime, accessLevel, membership, toll, isReturn);
         if (!validateAccount(account)) {
             log.info("[LoginServer] Illegal account auth detected: " + accountId);
             client.close(new SM_L2AUTH_LOGIN_CHECK(false, accountName), true);

@@ -56,6 +56,8 @@ public class SM_ACCOUNT_AUTH_RESPONSE extends GsServerPacket {
      */
     private final long toll;
 
+    private final byte isReturn;
+
     /**
      * Constructor.
      *
@@ -66,13 +68,14 @@ public class SM_ACCOUNT_AUTH_RESPONSE extends GsServerPacket {
      * @param membership
      * @param toll
      */
-    public SM_ACCOUNT_AUTH_RESPONSE(int accountId, boolean ok, String accountName, byte accessLevel, byte membership, long toll) {
+    public SM_ACCOUNT_AUTH_RESPONSE(int accountId, boolean ok, String accountName, byte accessLevel, byte membership, long toll, byte isReturn) {
         this.accountId = accountId;
         this.ok = ok;
         this.accountName = accountName;
         this.accessLevel = accessLevel;
         this.membership = membership;
         this.toll = toll;
+        this.isReturn = isReturn;
     }
 
     /**
@@ -94,6 +97,7 @@ public class SM_ACCOUNT_AUTH_RESPONSE extends GsServerPacket {
             writeC(accessLevel);
             writeC(membership);
             writeQ(toll);
+            writeC(isReturn);
         }
     }
 }

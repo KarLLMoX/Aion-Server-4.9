@@ -55,6 +55,7 @@ public class AccountTimeController {
 
         int lastLoginDay = getDays(accountTime.getLastLoginTime().getTime());
         int currentDay = getDays(System.currentTimeMillis());
+        int returnday = getDays(accountTime.getLastLoginTime().getTime() + + 30L * 24 * 60 * 60 * 1000);
 
         /**
          * The character from that account was online not today, so it's account
@@ -74,6 +75,16 @@ public class AccountTimeController {
 
         DAOManager.getDAO(AccountTimeDAO.class).updateAccountTime(account.getId(), accountTime);
         account.setAccountTime(accountTime);
+
+        if (currentDay >= returnday && account.getReturn() == 0){
+            account.setReturn((byte) 1);
+            account.setReturnEnd(new Timestamp(System.currentTimeMillis() + 30L * 24 * 60 * 60 * 1000));
+        }
+
+        if (currentDay >= account.getReturnEnd().getTime()) {
+            account.setReturn((byte) 0);
+        }
+
     }
 
     /**

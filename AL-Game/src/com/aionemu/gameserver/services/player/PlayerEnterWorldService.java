@@ -799,9 +799,11 @@ public final class PlayerEnterWorldService {
         DAOManager.getDAO(PlayerDAO.class).onlinePlayer(player, true);
         player.onLoggedIn();
         player.setOnlineTime();
-        
+
+        PlayerBuffService.getInstance().enterWorld(player);
+
         //start Abbey Return Entrys
-        player.setBonusTime(player.getCommonData().getBonusTime());
+        /*player.setBonusTime(player.getCommonData().getBonusTime());
         player.setBonusTimeStatus();
 
         if (player.getLevel() >= 10 && player.getRace() == Race.ASMODIANS && player.getBonusTime().getStatus() == PlayerBonusTimeStatus.RETURN) {
@@ -815,7 +817,7 @@ public final class PlayerEnterWorldService {
 				return;
 			}
         	ItemService.addItem(player, 164000335, 1); //Abbey Return Stone (30 days)
-        }
+        }*/
     }
 
     private static void showPremiumAccountInfo(AionConnection client, Account account) {

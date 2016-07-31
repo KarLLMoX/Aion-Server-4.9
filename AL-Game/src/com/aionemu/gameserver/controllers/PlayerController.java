@@ -23,6 +23,7 @@ import java.util.concurrent.Future;
 
 import javax.annotation.Nonnull;
 
+import com.aionemu.gameserver.services.player.PlayerBuffService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -726,6 +727,9 @@ public class PlayerController extends CreatureController<Player> {
         }
         player.getNpcFactions().onLevelUp();
         PacketSendUtility.sendPacket(player, new SM_STATS_INFO(player));
+
+        //AbbeyReturnStone
+        PlayerBuffService.getInstance().addReturnStone(player);
     }
 
     /**

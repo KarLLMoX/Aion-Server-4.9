@@ -287,6 +287,10 @@ public class Player extends Creature {
     private PlayerBonusTime bonusTime;
     private boolean newPlayer = false;
     private long creationDay;
+
+    private int playersBonusId = 0;
+    private boolean hasBonus;
+    private int bonusId = 0;
     
     /**
      * Used for JUnit tests
@@ -2649,6 +2653,29 @@ public class Player extends Creature {
 	}
 
     /**
+     * 4.7 Buff System
+     */
+    public void setBonus(boolean hasBonus) {
+        this.hasBonus = hasBonus;
+    }
+
+    public int getBonusId() {
+        return bonusId;
+    }
+
+    public void setBonusId(int id) {
+        bonusId = id;
+    }
+
+    public int getPlayersBonusId() {
+        return playersBonusId;
+    }
+
+    public void setPlayersBonusId(int id) {
+        playersBonusId = id;
+    }
+
+    /**
      * @return the New User Bonus Time
      */
     public void setNew(boolean b) {
@@ -2702,11 +2729,27 @@ public class Player extends Creature {
 
         if (t <= 30L) {
             getBonusTime().setStatus(PlayerBonusTimeStatus.NEW);
-        } else if (lastOnlineTimeDay >= 30L) {
+        } /*else if (lastOnlineTimeDay >= 30L) {
             getBonusTime().setStatus(PlayerBonusTimeStatus.RETURN);
             getBonusTime().setTime(new Timestamp(System.currentTimeMillis() + 30L * 24 * 60 * 60 * 1000));
-        } else {
+        }*/ else {
             getBonusTime().setStatus(PlayerBonusTimeStatus.NORMAL);
         }
+
+        if(getClientConnection().getAccount().getIsReturn() == 1) {
+            getBonusTime().setStatus(PlayerBonusTimeStatus.RETURN);
+            getBonusTime().setTime(new Timestamp(System.currentTimeMillis() + 30L * 24 * 60 * 60 * 1000));
+        }
+    }
+
+    /**
+     * Membership of this player
+     * @return
+     */
+    public byte getMembership() {
+        if (playerAccount == null) {
+            return 0x00;
+        }
+        return playerAccount.getMembership();
     }
 }
