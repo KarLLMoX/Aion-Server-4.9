@@ -31,6 +31,7 @@ import com.aionemu.gameserver.model.account.PlayerAccountData;
 import com.aionemu.gameserver.model.gameobjects.HouseObject;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
+import com.aionemu.gameserver.model.gameobjects.player.AbyssRank;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerBonusTimeStatus;
 import com.aionemu.gameserver.model.gameobjects.player.PlayerCommonData;
@@ -71,8 +72,10 @@ import com.aionemu.gameserver.utils.collections.ListSplitter;
 import com.aionemu.gameserver.utils.i18n.CustomMessageId;
 import com.aionemu.gameserver.utils.i18n.LanguageHandler;
 import com.aionemu.gameserver.utils.rates.Rates;
+import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.world.World;
 
+import com.aionemu.gameserver.world.knownlist.Visitor;
 import javolution.util.FastList;
 
 import org.slf4j.Logger;
@@ -653,6 +656,11 @@ public final class PlayerEnterWorldService {
                 }
             }
 
+            //Abyss 4.9 Logon and Daily lost GP Announce
+            abyssLightLogon(player);
+            abyssDarkLogon(player);
+            gpAnnounce(player);
+
             /**
              * Trigger restore services on login.
              */
@@ -823,6 +831,39 @@ public final class PlayerEnterWorldService {
                     break;
             }
             client.sendPacket(new SM_MESSAGE(0, null, "Your account is " + accountType, ChatType.GOLDEN_YELLOW));
+        }
+    }
+
+    /**
+     * [Abyss Logon] 4.9
+     */
+    public static final void abyssLightLogon(final Player player) {
+        if (player.getAbyssRank().getRank().getId() == AbyssRankEnum.SUPREME_COMMANDER.getId()) {
+            World.getInstance().doOnAllPlayers(new Visitor<Player>() {
+                @Override
+                public void visit(Player pl) {
+                    PacketSendUtility.sendPacket(pl, SM_SYSTEM_MESSAGE.STR_MSG_ELYOS_GOUV_ENTERWORLD(player.getName()));
+                }
+            });
+        }
+    }
+    public static final void abyssDarkLogon(final Player player) {
+        if (player.getAbyssRank().getRank().getId() == AbyssRankEnum.SUPREME_COMMANDER.getId()) {
+            World.getInstance().doOnAllPlayers(new Visitor<Player>() {
+                @Override
+                public void visit(Player pl) {
+                    PacketSendUtility.sendPacket(pl, SM_SYSTEM_MESSAGE.STR_MSG_ASMO_GOUV_ENTERWORLD(player.getName()));
+                }
+            });
+        }
+    }
+
+    private static void gpAnnounce (Player player) {
+        AbyssRank abyssRank = player.getAbyssRank();
+        if (abyssRank.getRank().getId() >= AbyssRankEnum.STAR1_OFFICER.getId()) {
+            int gp = player.getAbyssRank().getRank().getDailyReduceGp();
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GLORY_POINT_LOSE_COMMON);
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GLORY_POINT_LOSE_PERSONAL(player.getName(), gp));
         }
     }
 }
