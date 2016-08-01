@@ -1,3 +1,19 @@
+/**
+ * This file is part of Aion-Lightning <aion-lightning.org>.
+ *
+ *  Aion-Lightning is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Aion-Lightning is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details. *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Aion-Lightning.
+ *  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.aionemu.gameserver.services.player;
 
 import com.aionemu.gameserver.model.Race;
@@ -39,7 +55,7 @@ public class PlayerBuffService {
         if (player.isNewPlayer()){
             playersBonus = new PlayersBonus(2);
             playersBonus.applyEffect(player, 2);
-            log.info("Player " + player.getName() + " Receved Ascension Boost");
+            log.info("Player " + player.getName() + " Received Ascension Boost");
         } else {
             playersBonus = new PlayersBonus(1);
             playersBonus.endEffect(player, 1);
@@ -51,7 +67,7 @@ public class PlayerBuffService {
             playersBonus = new PlayersBonus(3);
             playersBonus.applyEffect(player, 3);
             player.setPlayersBonusId(3);
-            log.info("Player " + player.getName() + " Receved Return Boost");
+            log.info("Player " + player.getName() + " Received Return Boost");
         } else {
             playersBonus = new PlayersBonus(1);
             playersBonus.endEffect(player, 1);

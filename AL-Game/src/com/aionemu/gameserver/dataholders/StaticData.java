@@ -321,7 +321,7 @@ public class StaticData {
 		DataManager.log.info("[DataManager] Loaded " + hiddenStigmas.size() + " hidden stigmas entries");
 		DataManager.log.info("[DataManager] Loaded " + buffData.size() + " world buff map entries");
 		//DataManager.log.info("[DataManager] Loaded " + playerAppearance.size() + " Player Appearances");
-        DataManager.log.info("Loaded " + serviceBuffData.size() + " Service Bonus");
-        DataManager.log.info("Loaded " + playersBonusData.size() + " Player Bonus");
+        DataManager.log.info("[DataManager] Loaded " + serviceBuffData.size() + " service bonus entries");
+        DataManager.log.info("[DataManager] Loaded " + playersBonusData.size() + " player bonus entries");
     }
 }
