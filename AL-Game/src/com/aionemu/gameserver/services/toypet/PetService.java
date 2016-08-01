@@ -24,6 +24,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Pet;
 import com.aionemu.gameserver.model.gameobjects.player.PetCommonData;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.model.pets.PetBuff;
 import com.aionemu.gameserver.model.team2.common.legacy.LootRuleType;
 import com.aionemu.gameserver.model.templates.item.ItemUseLimits;
 import com.aionemu.gameserver.model.templates.item.actions.AbstractItemAction;
@@ -37,6 +38,8 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -45,6 +48,11 @@ import java.util.List;
  * @author M@xx, IlBuono, xTz, Rolandas
  */
 public class PetService {
+
+    Logger log = LoggerFactory.getLogger(PetService.class);
+    private PetBuff PetBuff;
+    private boolean autoSeel = false;
+    private boolean autoBuff = false;
 
     public static final PetService getInstance() {
         return SingletonHolder.instance;
@@ -262,6 +270,52 @@ public class PetService {
         }
         player.getPet().getCommonData().setIsLooting(activate);
         PacketSendUtility.sendPacket(player, new SM_PET(activate));
+    }
+
+    public void activateBuff(final Player player, final boolean activate) {
+        Pet pet = player.getPet();
+        PetTemplate petTemp = DataManager.PET_DATA.getPetTemplate(pet.getPetId());
+        PetBonusAttr petBuff = DataManager.PET_BUFF_DATA.getPetBonusattr(petTemp.getPetFunction(PetFunctionType.BUFF).getId());
+        if (player.getPet() == null) {
+            return;
+        } if (activate && player.getInventory().getItemCountByItemId(182007162) < petBuff.getFoodCount()) {//Aether Cherry
+            PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_BUFF_PET_USE_STOP_MESSAGE_03);
+            return;
+        } if (activate) {
+            autoBuff = true;
+            PetBuff = new PetBuff(petBuff.getBuffId());
+            PetBuff.applyEffect(player, 300000);
+            player.getInventory().decreaseByItemId(182007162, petBuff.getFoodCount());
+        } else {
+            autoBuff = false;
+            PetBuff.endEffect(player);
+        }
+    }
+
+    public void activeAutoSell(Player player, boolean activate) {
+        Pet pet = player.getPet();
+        PetTemplate petTemp = DataManager.PET_DATA.getPetTemplate(pet.getPetId());
+        PetMerchandEntry merchand = DataManager.PET_MERCHAND_DATA.getMerchandTemplate(petTemp.getPetFunction(PetFunctionType.MERCHANT).getId());
+        if (player.getPet() == null)
+            return;
+        if (activate) {
+            autoSeel = true;
+            pet.getCommonData().setIsSeller(true);
+            log.info("auto sell activated. merchand id "+merchand.getId()+" rate "+merchand.getRatePrice());
+        } else {
+            autoSeel = false;
+            pet.getCommonData().setIsSeller(false);
+            log.info("auto sell deactivated");
+        }
+    }
+
+    public void onPlayerLogout(Player player){
+        if(autoBuff) {
+            activateBuff(player, false);
+        }
+        if(autoSeel) {
+            activeAutoSell(player, false);
+        }
     }
 
     @SuppressWarnings("synthetic-access")

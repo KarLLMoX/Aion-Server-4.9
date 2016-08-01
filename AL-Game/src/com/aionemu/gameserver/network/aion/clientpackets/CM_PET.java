@@ -65,6 +65,16 @@ public class CM_PET extends AionClientPacket {
     @SuppressWarnings("unused")
     private int unk6;
 
+    //Buff
+    private int activateCheering;
+    private int unkCheer2;
+    private int unkCheer3;
+
+    //Merchand
+    private int activateAutoSell;
+    private int unkMerchand2;
+    private int unkMerchand3;
+
     public CM_PET(int opcode, State state, State... restStates) {
         super(opcode, state, restStates);
     }
@@ -108,6 +118,14 @@ public class CM_PET extends AionClientPacket {
                         dopingItemId = readD();
                         dopingSlot1 = readD();
                     }
+                } else if (actionType == 4) {
+                    activateAutoSell = readD();
+                    unkMerchand2 = readD();
+                    unkMerchand3 = readD();
+                } else if (actionType == 5) {
+                    activateCheering = readD();
+                    unkCheer2 = readD();
+                    unkCheer3 = readD();
                 } else {
                     objectId = readD();
                     count = readD();
@@ -162,6 +180,18 @@ public class CM_PET extends AionClientPacket {
                 } else if (actionType == 3) {
                     // Pet looting
                     PetService.getInstance().activateLoot(player, activateLoot != 0);
+                } else if (actionType == 4) {
+                    if (activateAutoSell == 1) {
+                        PetService.getInstance().activeAutoSell(player, true);
+                    } else if (activateAutoSell == 0) {
+                        PetService.getInstance().activeAutoSell(player, false);
+                    }
+                } else if (actionType == 5) {
+                    if (activateCheering == 1) {
+                        PetService.getInstance().activateBuff(player, true);
+                    } else if (activateCheering == 0) {
+                        PetService.getInstance().activateBuff(player, false);
+                    }
                 } else if (pet != null) {
                     if (objectId == 0) {
                         pet.getCommonData().setCancelFeed(true);

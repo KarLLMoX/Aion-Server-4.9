@@ -183,4 +183,10 @@
 	<import file="world_buff/world_buffs.xml"/>
     <import file="service_bonusattr/service_bonusattr.xml"/>
     <import file="service_bonusattr/players_bonus.xml"/>
+    <pet_bonusattrs>
+        <import file="pets/pet_buff.xml" skipRoot="true"/>
+    </pet_bonusattrs>
+    <merchants>
+        <import file="pets/pet_merchant.xml" skipRoot="true"/>
+    </merchants>
 </ae_static_data>

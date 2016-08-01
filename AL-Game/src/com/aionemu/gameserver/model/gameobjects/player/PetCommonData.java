@@ -59,6 +59,7 @@ public class PetCommonData extends VisibleObjectTemplate implements IExpirable {
     private Timestamp despawnTime;
     private boolean isLooting = false;
     private boolean isBuffing = false;
+    private boolean isSeller = false;
 
     public PetCommonData(int petId, int masterObjectId, int expireTime) {
         this.petObjectId = IDFactory.getInstance().nextId();
@@ -321,6 +322,14 @@ public class PetCommonData extends VisibleObjectTemplate implements IExpirable {
 
     public boolean isBuffing() {
         return this.isBuffing;
+    }
+
+    public void setIsSeller(boolean isSeller){
+        this.isSeller = isSeller;
+    }
+
+    public boolean isSeller() {
+        return this.isSeller;
     }
 
     //pet id is not unique for adopt action, this not explicit

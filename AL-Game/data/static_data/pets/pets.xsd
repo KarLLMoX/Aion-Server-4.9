@@ -39,8 +39,8 @@
             <xs:enumeration value="WING"/>
             <xs:enumeration value="LOOT"/>
             <xs:enumeration value="DOPING"/>
-			<!--<xs:enumeration value="BUFF"/> Keine Funktion! -->
-			<!--<xs:enumeration value="MERCHANT"/> Keine Funktion! -->
+			<xs:enumeration value="BUFF"/>
+			<xs:enumeration value="MERCHANT"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>

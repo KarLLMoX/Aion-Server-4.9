@@ -150,18 +150,13 @@ public class SM_STATS_INFO extends AionServerPacket {
         writeD(0);// [unk]
         writeD(pcd.getPlayerClass().getClassId());// [Player Class id]
 
-        writeH(0);// unk 3.0
-        writeH(0);// unk 3.0
-        writeH(0); // [unk 3.5]
-        writeH(0); // [unk 3.5]
+        writeQ(0); //Unk 3.5
+
         writeQ(pcd.getCurrentReposteEnergy());
         writeQ(pcd.getMaxReposteEnergy());
         writeQ(pcd.getCurrentSalvationPercent());
 
-        writeH(0); //4.3 NA
-        writeH(0); //4.3 NA
-        writeH(0); //4.3 NA
-        writeH(0); //4.3 NA
+        writeQ(0); //4.3 NA
 
         writeQ(pcd.getCurrentEventExp());
 

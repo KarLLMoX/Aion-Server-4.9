@@ -250,7 +250,7 @@ public class DropRegistrationService {
                 return;
             }
         }
-		
+
 		Set<DropItem> drops = getCurrentDropMap().get(npcObjId);
 		
 		if (drops == null || drops.size() == 0) {
