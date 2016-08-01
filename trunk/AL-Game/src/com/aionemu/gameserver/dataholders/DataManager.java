@@ -128,6 +128,8 @@ public final class DataManager {
 	public static PlayersAppearanceData PLAYER_APPEARANCE_DATA;
     public static ServiceBuffData SERVICE_BUFF_DATA;
     public static PlayersBonusData PLAYERS_BONUS_DATA;
+    public static PetBuffData PET_BUFF_DATA;
+    public static PetMerchandData PET_MERCHAND_DATA;
 
     private XmlDataLoader loader;
 
@@ -244,6 +246,8 @@ public final class DataManager {
         PLAYER_APPEARANCE_DATA = data.playerAppearance;
         SERVICE_BUFF_DATA = data.serviceBuffData;
         PLAYERS_BONUS_DATA = data.playersBonusData;
+        PET_BUFF_DATA = data.petBuffData;
+        PET_MERCHAND_DATA = data.petMerchandData;
         ITEM_DATA.cleanup();
 
         // some sexy time message

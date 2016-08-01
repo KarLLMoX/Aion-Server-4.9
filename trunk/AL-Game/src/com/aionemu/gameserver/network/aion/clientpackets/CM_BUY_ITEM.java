@@ -95,6 +95,9 @@ public class CM_BUY_ITEM extends AionClientPacket {
                 case 15://buy from reward shop
                     tradeList.addBuyItem(itemId, count);
                     break;
+                case 17://sell from Miol
+                    tradeList.addSellItem(itemId, count);
+                    break;
             }
         }
     }
@@ -175,6 +178,9 @@ public class CM_BUY_ITEM extends AionClientPacket {
                     if (tlist != null && tlist.getTradeNpcType() == TradeNpcType.REWARD) {
                         TradeService.performBuyFromRewardShop(npc, player, tradeList);
                     }
+                    break;
+                case 17://sell from Miol
+                    TradeService.performSellForKinahToShop(player, tradeList, purchaseTemplate);
                     break;
                 default:
                     log.info(String.format("Unhandle shop action unk1: %d", tradeActionId));

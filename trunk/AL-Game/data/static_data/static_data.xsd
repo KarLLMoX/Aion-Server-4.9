@@ -95,6 +95,8 @@
 	<xs:include schemaLocation="world_buff/world_buffs.xsd"/>
     <xs:include schemaLocation="service_bonusattr/service_bonusattr.xsd"/>
     <xs:include schemaLocation="service_bonusattr/players_bonus.xsd"/>
+    <xs:include schemaLocation="pets/pet_buff.xsd"/>
+    <xs:include schemaLocation="pets/pet_merchant.xsd"/>
     <xs:element name="ae_static_data">
         <xs:complexType>
             <xs:sequence>
@@ -194,6 +196,8 @@
                 <xs:element ref="world_buffs" minOccurs="0"/>
                 <xs:element ref="service_bonusattrs" minOccurs="0"/>
                 <xs:element ref="players_service_bonusattrs" minOccurs="0"/>
+                <xs:element ref="pet_bonusattrs" minOccurs="0"/>
+                <xs:element ref="merchants" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

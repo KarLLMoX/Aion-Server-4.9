@@ -223,6 +223,10 @@ public class StaticData {
     public ServiceBuffData serviceBuffData;
     @XmlElement(name = "players_service_bonusattrs")
     public PlayersBonusData playersBonusData;
+    @XmlElement(name = "pet_bonusattrs")
+    public PetBuffData petBuffData;
+    @XmlElement(name = "merchants")
+    public PetMerchandData petMerchandData;
 
     // JAXB callback
     @SuppressWarnings("unused")
@@ -323,5 +327,7 @@ public class StaticData {
 		//DataManager.log.info("[DataManager] Loaded " + playerAppearance.size() + " Player Appearances");
         DataManager.log.info("[DataManager] Loaded " + serviceBuffData.size() + " service bonus entries");
         DataManager.log.info("[DataManager] Loaded " + playersBonusData.size() + " player bonus entries");
+        DataManager.log.info("[DataManager] Loaded " + petBuffData.size() + " Pets Buff entries");
+        DataManager.log.info("[DataManager] Loaded " + petMerchandData.size() + " Pets Merchant entries");
     }
 }

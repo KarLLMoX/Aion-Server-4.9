@@ -22,27 +22,102 @@
     <favorites_list name="AL-Game" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PlayerBuffService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerBuffService.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PetService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/toypet/PetService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49774775">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.6599099">
+              <caret line="306" column="49" selection-start-line="306" selection-start-column="49" selection-end-line="306" selection-end-column="49" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2927#2928#0" expanded="true" />
-                <element signature="e#2974#2975#0" expanded="true" />
+                <element signature="e#4054#4294#0" expanded="true" />
+                <element signature="e#4293#4294#0" expanded="true" />
+                <element signature="e#14653#14690#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/Player.java">
+      <file leaf-file-name="PlayerLeaveWorldService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerLeaveWorldService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2740" column="12" selection-start-line="2740" selection-start-column="12" selection-end-line="2740" selection-end-column="12" />
+              <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CM_BUY_ITEM.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="182" column="20" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
+              <folding>
+                <element signature="e#2203#2204#0" expanded="true" />
+                <element signature="e#2251#2252#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/TradeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="652" column="5" selection-start-line="652" selection-start-column="5" selection-end-line="652" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/Pet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropRegistrationService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/drop/DropRegistrationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.793103">
+              <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DropService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/drop/DropService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="304" column="55" selection-start-line="304" selection-start-column="55" selection-end-line="304" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PetCommonData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/PetCommonData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.034483">
+              <caret line="330" column="31" selection-start-line="330" selection-start-column="31" selection-end-line="330" selection-end-column="31" />
+              <folding>
+                <element signature="e#8584#8585#0" expanded="true" />
+                <element signature="e#8626#8627#0" expanded="true" />
+                <element signature="e#8660#8661#0" expanded="true" />
+                <element signature="e#8697#8698#0" expanded="true" />
+                <element signature="e#8822#8823#0" expanded="true" />
+                <element signature="e#8864#8865#0" expanded="true" />
+                <element signature="e#8898#8899#0" expanded="true" />
+                <element signature="e#8935#8936#0" expanded="true" />
+                <element signature="e#8983#8984#0" expanded="true" />
+                <element signature="e#9023#9024#0" expanded="true" />
+                <element signature="e#9092#9093#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,38 +126,22 @@
         <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="354" column="40" selection-start-line="354" selection-start-column="37" selection-end-line="354" selection-end-column="44" />
+              <caret line="358" column="40" selection-start-line="358" selection-start-column="40" selection-end-line="358" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/AccountService.java">
+      <file leaf-file-name="PetBuff.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/pets/PetBuff.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/account/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="19" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="27" />
+              <caret line="88" column="52" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="62" />
               <folding>
-                <element signature="e#2920#2921#0" expanded="true" />
-                <element signature="e#2953#2954#0" expanded="true" />
-                <element signature="e#3068#3069#0" expanded="true" />
-                <element signature="e#3112#3113#0" expanded="true" />
-                <element signature="e#3145#3146#0" expanded="true" />
-                <element signature="e#3176#3177#0" expanded="true" />
-                <element signature="e#3287#3288#0" expanded="true" />
-                <element signature="e#3327#3328#0" expanded="true" />
-                <element signature="e#3639#3640#0" expanded="true" />
-                <element signature="e#3664#3665#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2096#2111#0" expanded="true" />
+                <element signature="e#5051#5052#0" expanded="true" />
+                <element signature="e#5104#5105#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,25 +164,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_SYSTEM_MESSAGE.java" />
-        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/utils/stats/AbyssRankEnum.java" />
-        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/bonus_service/aaa.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/BonusPenaltyAttr.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/BonusServiceAttr.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/PlayersBonusPenaltyAttr.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/PlayersBonusServiceAttr.java" />
-        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/DataManager.java" />
-        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/StaticData.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/PlayersBonusData.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/ServiceBuffData.java" />
-        <option value="$PROJECT_DIR$/data/static_data/static_data.xml" />
-        <option value="$PROJECT_DIR$/data/static_data/static_data.xsd" />
         <option value="$PROJECT_DIR$/data/static_data/service_bonusattr/players_bonus.xml" />
         <option value="$PROJECT_DIR$/data/static_data/service_bonusattr/service_bonusattr.xml" />
         <option value="$PROJECT_DIR$/data/static_data/modifiers.xsd" />
-        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/controllers/PlayerController.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/loginserver/LoginServer.java" />
@@ -134,6 +185,36 @@
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dao/PlayerDAO.java" />
         <option value="$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5PlayerDAO.java" />
         <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerBuffService.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/ArcadeUpgradeService.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetBonusAttr.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetPenaltyAttr.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/PetBuffData.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_SYSTEM_MESSAGE.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/pets/PetBuff.java" />
+        <option value="$PROJECT_DIR$/data/static_data/pets/pet_buff.xml" />
+        <option value="$PROJECT_DIR$/data/static_data/pets/pet_buff.xsd" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetFunctionType.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_PET.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_PET.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetMerchandEntry.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/DataManager.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/StaticData.java" />
+        <option value="$PROJECT_DIR$/data/static_data/pets/pet_merchant.xsd" />
+        <option value="$PROJECT_DIR$/data/static_data/pets/pet_merchant.xml" />
+        <option value="$PROJECT_DIR$/data/static_data/pets/pets.xsd" />
+        <option value="$PROJECT_DIR$/data/static_data/pets/pets.xml" />
+        <option value="$PROJECT_DIR$/data/static_data/static_data.xml" />
+        <option value="$PROJECT_DIR$/data/static_data/static_data.xsd" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerLeaveWorldService.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/PetMerchandData.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_STATS_INFO.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/PetCommonData.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/drop/DropService.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/drop/DropRegistrationService.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/TradeService.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java" />
+        <option value="$PROJECT_DIR$/src/com/aionemu/gameserver/services/toypet/PetService.java" />
       </list>
     </option>
   </component>
@@ -173,8 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -229,7 +308,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,79 +322,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AL-Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AL-Game" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="gameserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AL-Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AL-Game" />
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AL-Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AL-Game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="drop" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -719,6 +746,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -745,40 +777,49 @@
       <created>1469973534098</created>
       <option name="number" value="Default" />
       <updated>1469973534098</updated>
-      <workItem from="1469973537423" duration="14250000" />
+      <workItem from="1469973537423" duration="17594000" />
+      <workItem from="1470041814929" duration="18298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14250000" />
+    <option name="totallyTimeSpent" value="35892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2029762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17738095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -788,451 +829,370 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_SYSTEM_MESSAGE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7646396">
-          <caret line="21811" column="5" selection-start-line="21811" selection-start-column="5" selection-end-line="21811" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/utils/stats/AbyssRankEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5022523">
-          <caret line="126" column="20" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="31" />
-          <folding>
-            <element signature="e#3641#3642#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3782#3783#0" expanded="true" />
-            <element signature="e#3837#3838#0" expanded="true" />
-            <element signature="e#4033#4034#0" expanded="true" />
-            <element signature="e#4060#4061#0" expanded="true" />
-            <element signature="e#4095#4096#0" expanded="true" />
-            <element signature="e#4123#4124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/AbyssRank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="214" column="18" selection-start-line="214" selection-start-column="11" selection-end-line="214" selection-end-column="24" />
-          <folding>
-            <element signature="e#5682#5683#0" expanded="false" />
-            <element signature="e#5709#5710#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/PlayersBonusServiceAttr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076576576">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/PlayersBonusPenaltyAttr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042792793">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/BonusServiceAttr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076576576">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/bonus_service/BonusPenaltyAttr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15315315">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1085#1086#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/StaticData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="324" column="84" selection-start-line="324" selection-start-column="84" selection-end-line="324" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8040541">
-          <caret line="245" column="51" selection-start-line="245" selection-start-column="51" selection-end-line="245" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15315315">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerSecurityTokenService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="5" selection-start-line="72" selection-start-column="4" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <element signature="e#2782#2783#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/static_data.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8422274">
-          <caret line="195" column="76" selection-start-line="195" selection-start-column="76" selection-end-line="195" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/static_data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88167053">
-          <caret line="184" column="56" selection-start-line="184" selection-start-column="56" selection-end-line="184" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/service_bonusattr/players_bonus.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019721577">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/service_bonusattr/players_bonus.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/service_bonusattr/service_bonusattr.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/modifiers.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6960557">
-          <caret line="214" column="12" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/static_data/service_bonusattr/service_bonusattr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.512761">
-          <caret line="349" column="30" selection-start-line="349" selection-start-column="26" selection-end-line="349" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/AtreianPassportService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.518018">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/PlayersBonusData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#726#751#0" expanded="true" />
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTimeStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.134009">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/ServiceBuffData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.134009">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#674#692#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/PlayerBonusTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="26" />
-          <folding>
-            <element signature="e#1421#1422#0" expanded="false" />
-            <element signature="e#1465#1466#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/bonus_service/ServiceBuff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1126#1141#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerEnterWorldService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.448277">
-          <caret line="819" column="9" selection-start-line="808" selection-start-column="7" selection-end-line="819" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/bonus_service/PlayersBonus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="15" selection-start-line="47" selection-start-column="15" selection-end-line="47" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1017#1032#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/loginserver/serverpackets/SM_ACCOUNT_AUTH.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_UPGRADE_ARCADE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0045045046">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_STONESPEAR_SIEGE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="40" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_STONESPEAR_SIEGE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="63" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1222#1223#0" expanded="false" />
+            <element signature="e#1270#1271#0" expanded="false" />
+            <element signature="e#1317#1318#0" expanded="false" />
+            <element signature="e#1354#1355#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/scripts/system/handlers/admincommands/LegionCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9662162">
+          <caret line="345" column="47" selection-start-line="345" selection-start-column="47" selection-end-line="345" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/territory/TerritoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.948198">
+          <caret line="177" column="24" selection-start-line="177" selection-start-column="16" selection-end-line="177" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#9549#9550#0" expanded="false" />
+            <element signature="e#9583#9584#0" expanded="false" />
+            <element signature="e#9643#9644#0" expanded="false" />
+            <element signature="e#9707#9708#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_INTRUDER_SCAN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15315315">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/loginserver/serverpackets/SM_GS_AUTH.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/configs/main/EventsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21058558">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.8468468">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/loginserver/serverpackets/SM_LS_CONTROL.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerBuffService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_UPGRADE_ARCADE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9718468">
+          <caret line="75" column="11" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_TERRITORY_LIST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1722973">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_RIFT_ANNOUNCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9189189">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_INSTANCE_SCORE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4403153">
+          <caret line="714" column="21" selection-start-line="714" selection-start-column="16" selection-end-line="714" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/instance/instancereward/ArgentManorReward.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15315315">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/scripts/system/handlers/instance/ArgentManorInstance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.743243">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/ArcadeUpgradeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.7702703">
+          <caret line="183" column="23" selection-start-line="177" selection-start-column="8" selection-end-line="192" selection-end-column="17" />
           <folding>
-            <element signature="e#6560#7089#0" expanded="false" />
-            <element signature="e#7088#7089#0" expanded="false" />
+            <element signature="e#6644#6871#0" expanded="true" />
+            <element signature="e#6870#6871#0" expanded="true" />
+            <element signature="e#7486#8176#0" expanded="true" />
+            <element signature="e#8175#8176#0" expanded="true" />
+            <element signature="e#8960#9412#0" expanded="true" />
+            <element signature="e#9411#9412#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/loginserver/LoginServer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetPenaltyAttr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="230" column="46" selection-start-line="230" selection-start-column="41" selection-end-line="230" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/controllers/PlayerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.02365">
-          <caret line="873" column="14" selection-start-line="873" selection-start-column="14" selection-end-line="873" selection-end-column="14" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+            <element signature="e#1717#1718#0" expanded="true" />
+            <element signature="e#1745#1746#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/scripts/system/handlers/admincommands/Repair.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetBonusAttr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2195946">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5AbyssRankDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08896396">
-          <caret line="59" column="414" selection-start-line="59" selection-start-column="402" selection-end-line="59" selection-end-column="420" />
+        <state vertical-scroll-proportion="0.21058558">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
-            <marker date="1469972293865" expanded="true" signature="2207:2404" placeholder="SELECT daily..abyss_rank..." />
-            <marker date="1469972293865" expanded="true" signature="2454:2703" placeholder="INSERT INTO abyss_rank..." />
-            <marker date="1469972293865" expanded="true" signature="2753:3014" placeholder="UPDATE abyss..." />
-            <marker date="1469972293865" expanded="true" signature="3074:3732" placeholder="SELECT abyss..abyss_rank..." />
-            <marker date="1469972293865" expanded="true" signature="3804:4548" placeholder="SELECT abyss..abyss_rank..." />
-            <marker date="1469972293865" expanded="true" signature="6031:6099" placeholder="UPDATE abyss..." />
-            <marker date="1469972293865" expanded="true" signature="6291:6522" placeholder="UPDATE abyss..." />
-            <marker date="1469972293865" expanded="true" signature="6718:7035" placeholder="UPDATE abyss..." />
-            <marker date="1469972293865" expanded="true" signature="7219:7557" placeholder="UPDATE legio..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1856#1857#0" expanded="true" />
+            <element signature="e#1888#1889#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/loginserver/clientpackets/CM_ACOUNT_AUTH_RESPONSE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.474099">
-          <caret line="96" column="148" selection-start-line="96" selection-start-column="148" selection-end-line="96" selection-end-column="148" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dao/PlayerDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/PetBuffData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="207" column="60" selection-start-line="207" selection-start-column="60" selection-end-line="207" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scripts/system/database/mysql5/MySQL5PlayerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9617117">
-          <caret line="890" column="0" selection-start-line="890" selection-start-column="0" selection-end-line="890" selection-end-column="0" />
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#19570#19579#0" expanded="true" />
-            <element signature="e#21114#21440#0" expanded="true" />
-            <element signature="e#21439#21440#0" expanded="true" />
-            <element signature="e#21664#21990#0" expanded="true" />
-            <element signature="e#21989#21990#0" expanded="true" />
-            <element signature="e#22175#22499#0" expanded="true" />
-            <element signature="e#22498#22499#0" expanded="true" />
-            <element signature="e#23511#23906#0" expanded="true" />
-            <element signature="e#23905#23906#0" expanded="true" />
-            <element signature="e#24091#24315#0" expanded="true" />
-            <element signature="e#24314#24315#0" expanded="true" />
-            <element signature="e#31348#31609#0" expanded="true" />
-            <element signature="e#31608#31609#0" expanded="true" />
-            <element signature="e#31849#32113#0" expanded="true" />
-            <element signature="e#32112#32113#0" expanded="true" />
-            <element signature="e#33061#33477#0" expanded="true" />
-            <element signature="e#33476#33477#0" expanded="true" />
-            <element signature="e#35166#35167#0" expanded="true" />
-            <element signature="e#35222#35223#0" expanded="true" />
-            <marker date="1469988483798" expanded="true" signature="4660:4702" placeholder="UPDATE playe..." />
-            <marker date="1469988483798" expanded="true" signature="5314:5896" placeholder="UPDATE playe..." />
-            <marker date="1469988483798" expanded="true" signature="9840:10085" placeholder="INSERT INTO players..." />
-            <marker date="1469988483798" expanded="true" signature="12312:12349" placeholder="SELECT id FR..players..." />
-            <marker date="1469988483798" expanded="true" signature="13529:13563" placeholder="SELECT * FRO..players..." />
-            <marker date="1469988483798" expanded="true" signature="25801:25852" placeholder="SELECT `acco..players..." />
-            <marker date="1469988483798" expanded="true" signature="26493:26529" placeholder="UPDATE playe..." />
-            <marker date="1469988483798" expanded="true" signature="27422:27563" placeholder="SELECT COUNT..players..." />
-            <marker date="1469988483798" expanded="true" signature="28181:28277" placeholder="SELECT COUNT..players..." />
-            <marker date="1469988483798" expanded="true" signature="28993:29053" placeholder="SELECT COUNT..players..." />
-            <marker date="1469988483798" expanded="true" signature="32386:32438" placeholder="SELECT `crea..players..." />
-            <marker date="1469988483798" expanded="true" signature="33777:33848" placeholder="UPDATE playe..." />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1616#1630#0" expanded="true" />
+            <element signature="e#1964#1965#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2102#2103#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2196#2197#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/account/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/siege/AbyssRaceBuff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4403153">
+          <caret line="52" column="87" selection-start-line="52" selection-start-column="87" selection-end-line="52" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_SYSTEM_MESSAGE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42454955">
+          <caret line="21814" column="16" selection-start-line="21814" selection-start-column="16" selection-end-line="21814" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/pets/pet_buff.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="113" selection-start-line="1" selection-start-column="113" selection-end-line="1" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/pets/pet_buff.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_HOTSPOT_TELEPORT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="19" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="27" />
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/teleport/TeleportService2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="57" selection-start-line="131" selection-start-column="57" selection-end-line="131" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_PET.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="172" column="41" selection-start-line="172" selection-start-column="41" selection-end-line="172" selection-end-column="41" />
           <folding>
-            <element signature="e#2920#2921#0" expanded="true" />
-            <element signature="e#2953#2954#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3112#3113#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3176#3177#0" expanded="true" />
-            <element signature="e#3287#3288#0" expanded="true" />
-            <element signature="e#3327#3328#0" expanded="true" />
-            <element signature="e#3639#3640#0" expanded="true" />
-            <element signature="e#3664#3665#0" expanded="true" />
+            <element signature="e#2141#2142#0" expanded="true" />
+            <element signature="e#2181#2182#0" expanded="true" />
+            <element signature="e#2225#2226#0" expanded="true" />
+            <element signature="e#2269#2270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_PET.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="184" column="54" selection-start-line="184" selection-start-column="49" selection-end-line="184" selection-end-column="63" />
+          <folding>
+            <element signature="e#2822#2823#0" expanded="true" />
+            <element signature="e#2870#2871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetMerchandEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.076576576">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding>
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/templates/pet/PetFunctionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28716215">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/StaticData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8468468">
+          <caret line="330" column="50" selection-start-line="330" selection-start-column="50" selection-end-line="330" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/pets/pet_merchant.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/pets/pets.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5636363">
+          <caret line="1051" column="36" selection-start-line="1051" selection-start-column="27" selection-end-line="1051" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/pets/pets.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.461538">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/static_data.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8225058">
+          <caret line="199" column="59" selection-start-line="199" selection-start-column="59" selection-end-line="199" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/static_data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9315545">
+          <caret line="190" column="4" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/static_data/pets/pet_merchant.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="112" selection-start-line="2" selection-start-column="112" selection-end-line="2" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/DataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="249" column="49" selection-start-line="249" selection-start-column="49" selection-end-line="249" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/dataholders/PetMerchandData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1523#1541#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1240,27 +1200,135 @@
     <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_PLAYER_INFO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="354" column="40" selection-start-line="354" selection-start-column="37" selection-end-line="354" selection-end-column="44" />
+          <caret line="358" column="40" selection-start-line="358" selection-start-column="40" selection-end-line="358" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/serverpackets/SM_STATS_INFO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6554054">
+          <caret line="203" column="12" selection-start-line="203" selection-start-column="8" selection-end-line="203" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/pets/PetBuff.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2740" column="12" selection-start-line="2740" selection-start-column="12" selection-end-line="2740" selection-end-column="12" />
+          <caret line="88" column="52" selection-start-line="88" selection-start-column="49" selection-end-line="88" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2096#2111#0" expanded="true" />
+            <element signature="e#5051#5052#0" expanded="true" />
+            <element signature="e#5104#5105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/PetAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15315315">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerBuffService.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/Pet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49774775">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/restrictions/RestrictionsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="309" column="26" selection-start-line="309" selection-start-column="26" selection-end-line="309" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/trade/TradeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.661036">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/model/gameobjects/player/PetCommonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.034483">
+          <caret line="330" column="31" selection-start-line="330" selection-start-column="31" selection-end-line="330" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2927#2928#0" expanded="true" />
-            <element signature="e#2974#2975#0" expanded="true" />
+            <element signature="e#8584#8585#0" expanded="true" />
+            <element signature="e#8626#8627#0" expanded="true" />
+            <element signature="e#8660#8661#0" expanded="true" />
+            <element signature="e#8697#8698#0" expanded="true" />
+            <element signature="e#8822#8823#0" expanded="true" />
+            <element signature="e#8864#8865#0" expanded="true" />
+            <element signature="e#8898#8899#0" expanded="true" />
+            <element signature="e#8935#8936#0" expanded="true" />
+            <element signature="e#8983#8984#0" expanded="true" />
+            <element signature="e#9023#9024#0" expanded="true" />
+            <element signature="e#9092#9093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/drop/DropService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="304" column="55" selection-start-line="304" selection-start-column="55" selection-end-line="304" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/drop/DropRegistrationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.793103">
+          <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/TradeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="652" column="5" selection-start-line="652" selection-start-column="5" selection-end-line="652" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/network/aion/clientpackets/CM_BUY_ITEM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="182" column="20" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
+          <folding>
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/player/PlayerLeaveWorldService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aionemu/gameserver/services/toypet/PetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6599099">
+          <caret line="306" column="49" selection-start-line="306" selection-start-column="49" selection-end-line="306" selection-end-column="49" />
+          <folding>
+            <element signature="e#4054#4294#0" expanded="true" />
+            <element signature="e#4293#4294#0" expanded="true" />
+            <element signature="e#14653#14690#0" expanded="true" />
           </folding>
         </state>
       </provider>

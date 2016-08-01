@@ -27,6 +27,8 @@ public enum PetFunctionType {
     LOOT(3, 8),
     APPEARANCE(1),
     NONE(4, true),
+    BUFF(5),
+    MERCHANT(6),
     // non writable to packets
     BAG(-1),
     WING(-2);

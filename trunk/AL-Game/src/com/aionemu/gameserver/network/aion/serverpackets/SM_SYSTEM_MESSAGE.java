@@ -21812,6 +21812,13 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     }
 
     /**
+     * Pets Buff 4.8
+     */
+    public static final SM_SYSTEM_MESSAGE STR_MSG_BUFF_PET_USE_START_MESSAGE = new SM_SYSTEM_MESSAGE(1402606);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_BUFF_PET_USE_STOP_MESSAGE = new SM_SYSTEM_MESSAGE(1402607);
+    public static final SM_SYSTEM_MESSAGE STR_MSG_BUFF_PET_USE_STOP_MESSAGE_03 = new SM_SYSTEM_MESSAGE(1402672);
+
+    /**
 	 * [Beritra Invasion] 4.7
 	 */
 	public static final SM_SYSTEM_MESSAGE STR_MSG_WORLDRAID_INVADE_VRITRA = new SM_SYSTEM_MESSAGE(1402459);

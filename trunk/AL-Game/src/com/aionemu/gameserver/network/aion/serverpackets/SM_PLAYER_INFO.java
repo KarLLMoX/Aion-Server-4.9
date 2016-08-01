@@ -356,7 +356,7 @@ public class SM_PLAYER_INFO extends AionServerPacket {
         writeC(player.isMentor() ? 1 : 0);
         writeD(player.getHouseOwnerId()); // 3.0
         writeD(player.getBonusTime().getStatus().getId()); // Abbey Return Buff ID 1 -Normal, 2 - New, 3 Return
-        writeD(0x00);//unk 0x00 4.7 //TODO need to figure out
+        writeD(0x01);//unk 0x00 4.7 //TODO need to figure out
         writeC(raceId == 0 ? 3 : 5); // language asmo:3 ely:5
         /**
          * === Conqueror ===

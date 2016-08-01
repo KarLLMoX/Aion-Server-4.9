@@ -651,6 +651,7 @@ public class TradeService {
 		}
 		return true;
 	}
+
 	/**
 	 * @return the tradeListData
 	 */

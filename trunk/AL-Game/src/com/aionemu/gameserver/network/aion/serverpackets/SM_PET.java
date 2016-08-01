@@ -87,6 +87,12 @@ public class SM_PET extends AionServerPacket {
         dopeSlot = slot;
     }
 
+    public SM_PET(boolean isBuffing, int what, int wahtwaht) {
+        this.actionId = 13;
+        this.isActing = isBuffing;
+        this.subType = 5;
+    }
+
     /**
      * For mood only
      *
@@ -151,6 +157,19 @@ public class SM_PET extends AionServerPacket {
                     if (petTemplate.ContainsFunction(PetFunctionType.LOOT)) {
                         writeH(PetFunctionType.LOOT.getId());
                         writeC(0);
+                        specialtyCount++;
+                    }
+                    if (petTemplate.ContainsFunction(PetFunctionType.BUFF)) {
+                        writeH(PetFunctionType.BUFF.getId());
+                        short buff = (short) petTemplate.getPetFunction(PetFunctionType.BUFF).getId();
+                        writeH(buff);
+                        specialtyCount++;
+                    }
+                    if (petTemplate.ContainsFunction(PetFunctionType.MERCHANT)) {
+                        writeH(PetFunctionType.MERCHANT.getId());
+                        short merchant = (short) petTemplate.getPetFunction(PetFunctionType.MERCHANT).getId();
+                        writeH(merchant);
+                        writeC(0x00);
                         specialtyCount++;
                     }
                     if (petTemplate.ContainsFunction(PetFunctionType.DOPING)) {
@@ -409,6 +428,11 @@ public class SM_PET extends AionServerPacket {
                         writeC(0);
                         writeC(isActing ? 1 : 0);
                     }
+                } else if (subType == 4) {
+                    writeC(0);
+                    writeC(isActing ? 1 : 0);
+                } else if (subType == 5) {
+                    writeC(isActing ? 0 : 1);
                 }
                 break;
             default:
