@@ -25,12 +25,12 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author Cheatkiller
- *
+ * @rework FrozenKiller
  */
 public class _30711TheDarkDagger extends QuestHandler {
 
     private final static int questId = 30711;
-    private final static int npcs[] = {730701, 205987, 205892};
+    private final static int npcs[] = {730701, 804868, 804870};
 
     public _30711TheDarkDagger() {
         super(questId);
@@ -53,32 +53,46 @@ public class _30711TheDarkDagger extends QuestHandler {
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 730701) {
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1011);
-                } else {
-                    return sendQuestStartDialog(env);
+				switch (dialog) {
+					case QUEST_SELECT: {
+						return sendQuestDialog(env, 1011);
+					}
+					default:
+						return sendQuestStartDialog(env);
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if (targetId == 205987) {
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1352);
-                } else if (dialog == DialogAction.SETPRO1) {
-                    return defaultCloseDialog(env, 0, 1);
-                }
-            } else if (targetId == 205892) {
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 2375);
-                } else if (dialog == DialogAction.SELECT_QUEST_REWARD) {
-                    return defaultCloseDialog(env, 1, 1, true, true);
-                }
+            if (targetId == 804868) {
+				switch (dialog) {
+					case QUEST_SELECT: {
+						return sendQuestDialog(env, 1352);
+					}
+					case SETPRO1: {
+						return defaultCloseDialog(env, 0, 1);
+					}
+					default:
+						break;
+				}
+            } else if (targetId == 804870) {
+                switch (dialog) {
+					case QUEST_SELECT: {
+						return sendQuestDialog(env, 2375);
+					} 
+					case SELECT_QUEST_REWARD: {
+						return defaultCloseDialog(env, 1, 1, true, true);
+					}
+					default:
+						break;
+				}
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 205892) {
-                if (dialog == DialogAction.USE_OBJECT) {
-                    return sendQuestDialog(env, 2375);
-                } else {
-                    return sendQuestEndDialog(env);
+            if (targetId == 804870) {
+                switch (dialog) {
+					case USE_OBJECT: {
+						return sendQuestDialog(env, 2375);
+					} 
+					default:
+						return sendQuestEndDialog(env);
                 }
             }
         }
