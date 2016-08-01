@@ -119,7 +119,7 @@ public class ArcadeUpgradeService {
             return;
         }
         
-        final PlayerUpgradeArcade arcade = player.getUpgradeArcade();
+        PlayerUpgradeArcade arcade = player.getUpgradeArcade();
         Storage localStorage = player.getInventory();
         
         if (localStorage.getFreeSlots() < 1)
@@ -148,73 +148,82 @@ public class ArcadeUpgradeService {
         	arcade.setFailed(false);
         }
         	        
-        if (arcade.getFrenzyPoints() >= 100 && !arcade.isFrenzy())
-        {  
-        	if (arcade.getFrenzyCount() < 4)
-            	arcade.setFrenzyCount(arcade.getFrenzyCount() + 1);
-        	            
-        	// User gets a random rewardItem of highest rewardLevel for 4 times Frenzy 
-        	if (arcade.getFrenzyCount() == 4)
-        		getSpecialRewardItem(player); //if this is called before arcade.setFrenzy(true) Player didn't have the chance to get a frenzy_item of highest level.
-
-        	arcade.setFrenzy(true);
-        	PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVERTIME_START);
-
-        	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, frenzyTime, arcade.getFrenzyCount()));       	            
-        	
-        	ThreadPoolManager.getInstance().schedule(new Runnable() 
-            {
-                @Override
-                public void run() 
-                {
-                	PlayerUpgradeArcade arcade = player.getUpgradeArcade();
-                	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, 0, arcade.getFrenzyCount()));              	
-                	player.getUpgradeArcade().setFrenzy(false);
-                	
-                	if (arcade.getFrenzyCount() >= 4)
-                		arcade.setFrenzyCount(0);
-                	
-                }
-            }, frenzyTime * 1000); // offi 90 seconds timer
-            player.getUpgradeArcade().setFrenzyPoints(0);
-
-            if (arcade.getFrenzyCount() == 4)
-           		arcade.setFrenzyCount(0);
-
+        if (arcade.getFrenzyPoints() >= 100 && !arcade.isFrenzy()) {
+            getFrenzyArcade(player, arcade);
         }
-        
-        if (Rnd.chance(EventsConfig.EVENT_ARCADE_CHANCE)) 
-        {            	
-        	arcade.setFrenzyLevel(arcade.getFrenzyLevel() + 1);
-        	//GameServer.log.info("[ArcadeUpgrade] Sucess ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
 
-        	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, true, arcade.getFrenzyPoints()));
+        if (Rnd.chance(EventsConfig.EVENT_ARCADE_CHANCE)) {
+            getPlaySuccesArcade(player, arcade);
+        } else {
+            getPlayFailedArcade(player, arcade);
+        }
+
+    }
+
+    public void getPlaySuccesArcade (final Player player, final PlayerUpgradeArcade arcade){
+            arcade.setFrenzyLevel(arcade.getFrenzyLevel() + 1);
+            //GameServer.log.info("[ArcadeUpgrade] Sucess ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
+            PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, true, arcade.getFrenzyPoints()));
             ThreadPoolManager.getInstance().schedule(new Runnable() {
                 @Override
                 public void run() {
                     PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 4, arcade.getFrenzyLevel()));
                 }
             }, 3000);
-        } 
-        else 
-        {            
-            //when Level is under 6, player can't resume and gets a reward of the lowest level.
-        	//GameServer.log.info("[ArcadeUpgrade] Failed ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
+    }
 
-        	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, false, arcade.getFrenzyPoints()));
-            PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
+    public void getPlayFailedArcade (final Player player, final PlayerUpgradeArcade arcade){
+        //when Level is under 6, player can't resume and gets a reward of the lowest level.
+        //GameServer.log.info("[ArcadeUpgrade] Failed ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
+        PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, false, arcade.getFrenzyPoints()));
+        ThreadPoolManager.getInstance().schedule(new Runnable() {
+            @Override
+            public void run() {
+                PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
+                if (arcade.getFrenzyLevel() < 6 && !arcade.isReTry())
+                    arcade.setFrenzyLevel(1);
+                else
+                {
+                    arcade.setReTry(true);
+                    arcade.setFailedLevel(arcade.getFrenzyLevel());
+                }
+                PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
+                arcade.setFailed(true);
+            }
+        }, 3000);
+    }
 
-            if (arcade.getFrenzyLevel() < 6 && !arcade.isReTry())
-        		arcade.setFrenzyLevel(1);
-        	else 
-        	{
-        		arcade.setReTry(true);
-        		arcade.setFailedLevel(arcade.getFrenzyLevel());
-        	}
-            PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
-            arcade.setFailed(true);
-        }
+    public void getFrenzyArcade(final Player player, final PlayerUpgradeArcade arcade){
+        if (arcade.getFrenzyCount() < 4)
+            arcade.setFrenzyCount(arcade.getFrenzyCount() + 1);
 
+        // User gets a random rewardItem of highest rewardLevel for 4 times Frenzy
+        if (arcade.getFrenzyCount() == 4)
+            getSpecialRewardItem(player); //if this is called before arcade.setFrenzy(true) Player didn't have the chance to get a frenzy_item of highest level.
+
+        arcade.setFrenzy(true);
+        PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVERTIME_START);
+
+        PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, frenzyTime, arcade.getFrenzyCount()));
+
+        ThreadPoolManager.getInstance().schedule(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                PlayerUpgradeArcade arcade = player.getUpgradeArcade();
+                PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, 0, arcade.getFrenzyCount()));
+                player.getUpgradeArcade().setFrenzy(false);
+
+                if (arcade.getFrenzyCount() >= 4)
+                    arcade.setFrenzyCount(0);
+
+            }
+        }, frenzyTime * 1000); // offi 90 seconds timer
+        player.getUpgradeArcade().setFrenzyPoints(0);
+
+        if (arcade.getFrenzyCount() == 4)
+            arcade.setFrenzyCount(0);
     }
 
     public void getReward(Player player)
