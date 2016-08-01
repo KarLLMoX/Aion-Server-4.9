@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <players_service_bonusattrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="players_bonus.xsd">
 	<players_service_bonusattr buff_id="1"/>
 	<!-- Ascension Boost -->
