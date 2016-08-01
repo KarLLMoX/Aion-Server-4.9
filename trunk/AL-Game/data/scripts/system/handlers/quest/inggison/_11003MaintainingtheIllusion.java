@@ -26,6 +26,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author Gigi
+ * @rework FrozenKiller
  */
 public class _11003MaintainingtheIllusion extends QuestHandler {
 
@@ -66,9 +67,9 @@ public class _11003MaintainingtheIllusion extends QuestHandler {
                         case QUEST_SELECT: {
                             long itemCount1 = player.getInventory().getItemCountByItemId(182206701);
                             long itemCount2 = player.getInventory().getItemCountByItemId(182206702);
-                            if (itemCount1 > 11 && itemCount2 > 9) {
-                                removeQuestItem(env, 182206701, 12);
-                                removeQuestItem(env, 182206702, 10);
+                            if (itemCount1 > 5 && itemCount2 > 3) {
+                                removeQuestItem(env, 182206701, 6);
+                                removeQuestItem(env, 182206702, 4);
                                 qs.setStatus(QuestStatus.REWARD);
                                 updateQuestStatus(env);
                                 return sendQuestDialog(env, 2375);
