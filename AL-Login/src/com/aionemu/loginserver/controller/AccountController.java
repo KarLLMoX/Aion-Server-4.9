@@ -18,6 +18,7 @@
 
 package com.aionemu.loginserver.controller;
 
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -306,6 +307,8 @@ public class AccountController {
         account.setAccessLevel((byte) 0);
         account.setMembership((byte) 0);
         account.setActivated((byte) 1);
+        account.setReturn((byte)0);
+        account.setReturnEnd(new Timestamp(System.currentTimeMillis()));
 
         if (getAccountDAO().insertAccount(account)) {
             return account;
