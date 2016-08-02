@@ -48,6 +48,7 @@ $tabitemattrs  = array(
                         "DODGE" => "EVASION",
                         "FEAR_ARP" => "FEAR_RESISTANCE_PENETRATION",
                         "FLY_SPEED" => "FLY_SPEED",
+                        "FLYBOOST_SPEED" => "FLYBOOST_SPEED",    // für 5.0 ergänzt
                         "HEAL_SKILL_BOOST" => "HEAL_BOOST",
                         "HIT_ACCURACY" => "PHYSICAL_ACCURACY",
                         "MAGICAL_CRITICAL_REDUCE_RATE" => "MAGICAL_CRITICAL_RESIST",
