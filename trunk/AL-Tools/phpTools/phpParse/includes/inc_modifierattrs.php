@@ -104,7 +104,16 @@ $tabmodifierattrs  = array(
                         "SPIN_ARP" => "SPIN_RESISTANCE_PENETRATION",
                         "STAGGER_ARP" => "STAGGER_RESISTANCE_PENETRATION",
                         "STUMBLE_ARP" => "STUMBLE_RESISTANCE_PENETRATION",
-                        "STUN_ARP" => "STUN_RESISTANCE_PENETRATION"
+                        "STUN_ARP" => "STUN_RESISTANCE_PENETRATION",
+                        
+                        // Ergänzungen für Client 5.0
+                        
+                        "HAGI" => "PRECISION",
+                        "HDEX" => "AGILITY",
+                        "HKNO" => "KNOWLEDGE",
+                        "HSTR" => "POWER",
+                        "HVIT" => "MAXHP",
+                        "HWIL" => "WILL"
                       ); 
 $tabMissedModifierAttr = array();                      
 // ----------------------------------------------------------------------------
@@ -127,7 +136,7 @@ function getModifierAttrName($name)
             logLine("Modifier-Attribut fehlt",$such);
             $tabMissedModifierAttr[$such] = 1;
         }
-        return $name;
+        return $such;
     }
 }
 ?>

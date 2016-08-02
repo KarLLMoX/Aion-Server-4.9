@@ -1080,6 +1080,8 @@ function getItemTemplateLines($key)
 }
 // ----------------------------------------------------------------------------
 // Ausgabezeilen aufbereiten zu: modifiers 
+//
+// Ergänzungen für 5.0: Value = "X" ignorieren
 // ----------------------------------------------------------------------------
 function getModifierLines($key)
 {
@@ -1099,6 +1101,7 @@ function getModifierLines($key)
         if (isset($tabTpls[$key][$tabTags[$t]]))
         {
             if ($tabTpls[$key][$tabTags[$t]] != "0"
+            &&  $tabTpls[$key][$tabTags[$t]] != "X"   // speziell für 5.0 eingebaut!
             &&  $tabTpls[$key][$tabTags[$t]] != "")
             {
                 $xml = "add";
@@ -1128,10 +1131,15 @@ function getModifierLines($key)
             $aktval = getTabTplsValue($key,$aval);
             $xml    = "add";
             
-            if (stripos($aktval,"%") !== false) $xml = "rate";
+            if (stripos($aktval,"%") !== false) 
+            {
+                $xml = "rate";
+                $aktval = trim(str_replace("%","",$aktval));
+            }
             
-            $ret .= '            <'.$xml.' name="'.getModifierAttrName($aktkey).'" value="'.
-                    $aktval.'" bonus="true"/>'."\n";
+            if ($aktval != "X")
+                $ret .= '            <'.$xml.' name="'.getModifierAttrName($aktkey).'" value="'.
+                        $aktval.'" bonus="true"/>'."\n";
         }
     }
     // bonus_attr
@@ -1154,14 +1162,16 @@ function getModifierLines($key)
                 $tab = explode(" ",str_replace("  "," ",$tabTpls[$key][$akey]));
                 $xml = "add";
                 
-                if ($tab[1] != "0" && $tab[1] != "")
+                if (stripos($tab[1],"%") !== false)
                 {
-                    if (stripos($tab[1],"%") !== false)
-                    {
-                        $xml    = "rate";
-                        $tab[1] = trim(str_replace("%","",$tab[1]));
-                        if (strtolower($tab[0]) == "attackdelay") $tab[1] *= -1;
-                    }
+                    $xml    = "rate";
+                    $tab[1] = trim(str_replace("%","",$tab[1]));
+                }
+                
+                if ($tab[1] != "0" && $tab[1] != "" && $tab[1] != "X")
+                {
+                    if (strtolower($tab[0]) == "attackdelay") $tab[1] *= -1;
+                    
                     if ($cond != "")
                         $ret .= '            <'.$xml.' name="'.getModifierAttrName($tab[0]).'" value="'.
                                 $tab[1].'" bonus="true"'.$cond.'            </'.$xml.">\n";
@@ -1199,15 +1209,16 @@ function getModifierLines($key)
                 $tab = explode(" ",str_replace("  "," ",$tabTpls[$key][$akey]));
                 $xml = "add";
                 
-                if ($tab[1] != "0" && $tab[1] != "")
+                if (stripos($tab[1],"%") !== false)
                 {
-                    if (stripos($tab[1],"%") !== false)
-                    {
-                        $xml = "rate";
-                        $tab[1] = trim(str_replace("%","",$tab[1]));
-                        if (strtolower($tab[0]) == "attackdelay") $tab[1] *= -1;
-
-                    }
+                    $xml = "rate";
+                    $tab[1] = trim(str_replace("%","",$tab[1]));
+                }
+                
+                if ($tab[1] != "0" && $tab[1] != "" && $tab[1] != "X")
+                {
+                    if (strtolower($tab[0]) == "attackdelay") $tab[1] *= -1;
+                    
                     if ($cond != "")
                         $ret .= '            <'.$xml.' name="'.getModifierAttrName($tab[0]).'" value="'.
                                 $tab[1].'" bonus="true"'.$cond.'            </'.$xml.">\n";
@@ -1244,15 +1255,17 @@ function getModifierLines($key)
             {
                 $tab = explode(" ",str_replace("  "," ",$tabTpls[$key][$akey]));
                 $xml = "add";
-            
-                if ($tab[1] != "0" && $tab[1] != "")
+                
+                if (stripos($tab[1],"%") !== false)
                 {
-                    if (stripos($tab[1],"%") !== false)
-                    {
-                        $xml = "rate";
-                        $tab[1] = trim(str_replace("%","",$tab[1]));
-                        if (strtolower($tab[0]) == "attackdelay") $tab[1] *= -1;
-                    }
+                    $xml = "rate";
+                    $tab[1] = trim(str_replace("%","",$tab[1]));
+                }
+            
+                if ($tab[1] != "0" && $tab[1] != "" && $tab[1] != "X")
+                {
+                    if (strtolower($tab[0]) == "attackdelay") $tab[1] *= -1;
+                    
                     if ($cond != "")
                         $ret .= '            <'.$xml.' name="'.getModifierAttrName($tab[0]).'" value="'.
                                 $tab[1].'" bonus="true"'.$cond.'            </'.$xml.">\n";
@@ -2016,14 +2029,23 @@ function getDispositionLines($key)
     $itemid = isset($tabTpls[$key]['disposable_trade_item']) ? $tabTpls[$key]['disposable_trade_item'] : "";
     $itmcnt = isset($tabTpls[$key]['disposable_trade_item_count']) ? $tabTpls[$key]['disposable_trade_item_count'] : "";
     
-    if ($itemid != "" || $itmcnt != "")
+    if ($itmcnt == "")
+        $itmcnt = "1";
+        
+    if (($itemid != "" && $itemid != "0") || $itmcnt != "")
     {
-        $ret = '        <disposition';
+        // Anpassung für 5.0: wenn kein Item-Name vorgegeben wurde, dann Zeile ignorieren
+        $itm = getClientItemId($itemid);
         
-        if ($itemid != "") $ret .= ' id="'.getClientItemId($itemid).'"';
-        if ($itmcnt != "") $ret .= ' count="'.$itmcnt.'"';
-        
-        $ret .= '/>';
+        if ($itm != "000000000")
+        {
+            $ret = '        <disposition';
+            
+            if ($itemid != "") $ret .= ' id="'.getClientItemId($itemid).'"';
+            if ($itmcnt != "") $ret .= ' count="'.$itmcnt.'"';
+            
+            $ret .= '/>';
+        }
     }
     return $ret;
 }
