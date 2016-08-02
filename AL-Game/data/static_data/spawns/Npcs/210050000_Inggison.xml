@@ -2407,7 +2407,7 @@
 		</spawn>
 		<!-- Agent Greenlake -->
 		<spawn npc_id="216631" respawn_time="295">
-			<spot x="971.191" y="1870.23" z="329.015" h="87"/>
+			<spot x="971.1911" y="1870.2346" z="329.01465" h="96"/>
 		</spawn>
 		<!-- Apostate Monk -->
 		<spawn npc_id="215675" respawn_time="295">
@@ -5584,7 +5584,7 @@
 		</spawn>
 		<!-- Hot Crater -->
 		<spawn npc_id="700913" respawn_time="295">
-			<spot x="915.10657" y="1729.1151" z="329.59494" static_id="2392"/>
+			<spot x="893.278" y="1774.0514" z="326.25" static_id="3719"/>
 		</spawn>
 		<!-- Soggy Crater -->
 		<spawn npc_id="700912" respawn_time="295">
@@ -8493,5 +8493,22 @@
 		<spawn npc_id="805334" respawn_time="295">
             <spot x="2157.0" y="277.8" z="489.77045" h="40"/>
         </spawn>
+
+		<!-- Izerrunerk ||| LF4_Rotation_Teleporter_1 -->
+		<spawn npc_id="702727" respawn_time="295">
+			<spot x="463.77988" y="195.59648" z="459.5888"/>
+		</spawn>
+		<!-- Zeirunerk ||| LF4_Rotation_Teleporter_2 -->
+		<spawn npc_id="702743" respawn_time="295">
+			<spot x="2094.8428" y="1195.9551" z="265.0"/>
+		</spawn>
+		<!-- Chubarunerk ||| LF4_Rotation_Teleporter_3 -->
+		<spawn npc_id="702744" respawn_time="295">
+			<spot x="2378.5332" y="274.28674" z="458.75"/>
+		</spawn>
+		<!-- Danirunerk ||| LF4_Rotation_Teleporter_4 -->
+		<spawn npc_id="702745" respawn_time="295">
+			<spot x="690.7653" y="1565.1354" z="337.5751"/>
+		</spawn>
 	</spawn_map>
 </spawns>
