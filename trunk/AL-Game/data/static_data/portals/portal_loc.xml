@@ -123,11 +123,44 @@
     <portal_loc world_id="210050000" loc_id="2100516" x="1269.26" y="2178.2" z="357.3"/>
     <!-- Inggison Outpost Teleport -->
     <portal_loc world_id="210050000" loc_id="2100517" x="1080.1464" y="1519.1409" z="405.72308"/>
+    
     <!-- Inggison Gadarunerk Teleport -->
-    <portal_loc world_id="210050000" loc_id="2100518" x="2360.8281" y="372.30887" z="471.02844" h="0"/>
-    <portal_loc world_id="210050000" loc_id="2100519" x="2102.071" y="1951.1805" z="310.5" h="0"/>
-    <portal_loc world_id="210050000" loc_id="2100520" x="456.83377" y="159.83083" z="459.6144" h="0"/>
-    <portal_loc world_id="210050000" loc_id="2100521" x="1745.573" y="1233.7043" z="379.47025" h="0"/>     
+    <!-- Gadarunerk Teleport to Phanoe-Tal -->
+    <portal_loc world_id="210050000" loc_id="2100518" x="2360.8281" y="372.30887" z="471.02844"/>
+    <!-- Gadarunerk Teleport to Harnakand -->
+    <portal_loc world_id="210050000" loc_id="2100519" x="2102.071" y="1951.1805" z="310.5"/>
+    <!-- Gadarunerk Teleport to Dimaia-Urquell -->
+    <portal_loc world_id="210050000" loc_id="2100520" x="456.83377" y="159.83083" z="459.6144"/>
+    <!-- Gadarunerk Teleport to Garten des Elends -->
+    <portal_loc world_id="210050000" loc_id="2100521" x="1745.573" y="1233.7043" z="379.47025"/>
+    <!-- Inggison Chubarunerk Teleport -->
+    <!-- Chubarunerk Teleport to Inggison-Illusionsfestung -->
+    <portal_loc world_id="210050000" loc_id="2100522" x="1318.2023" y="295.06198" z="589.7862"/>
+    <!-- Chubarunerk Teleport to Harnakand -->
+    <portal_loc world_id="210050000" loc_id="2100519" x="2102.071" y="1951.1805" z="310.5"/>
+    <!-- Chubarunerk Teleport to Dimaia-Urquell -->
+    <portal_loc world_id="210050000" loc_id="2100520" x="456.83377" y="159.83083" z="459.6144"/>
+    <!-- Chubarunerk Teleport to Garten des Elends -->
+    <portal_loc world_id="210050000" loc_id="2100521" x="1745.573" y="1233.7043" z="379.47025"/>
+    <!-- Inggison Izerrunerk Teleport -->
+    <!-- Izerrunerk Teleport to Inggison-Illusionsfestung -->
+    <portal_loc world_id="210050000" loc_id="2100522" x="1318.2023" y="295.06198" z="589.7862"/>
+    <!-- Izerrunerk Teleport to Phanoe-Tal -->
+    <portal_loc world_id="210050000" loc_id="2100518" x="2360.8281" y="372.30887" z="471.02844"/>
+    <!-- Izerrunerk Teleport to Harnakand -->
+    <portal_loc world_id="210050000" loc_id="2100519" x="2102.071" y="1951.1805" z="310.5"/>
+    <!-- Izerrunerk Teleport to Garten des Elends -->
+    <portal_loc world_id="210050000" loc_id="2100521" x="1745.573" y="1233.7043" z="379.47025"/>
+    <!-- Inggison Zeirunerk Teleport -->
+    <!-- Zeirunerk Teleport to Inggison-Illusionsfestung -->
+    <portal_loc world_id="210050000" loc_id="2100522" x="1318.2023" y="295.06198" z="589.7862"/>
+    <!-- Zeirunerk Teleport to Phanoe-Tal -->
+    <portal_loc world_id="210050000" loc_id="2100518" x="2360.8281" y="372.30887" z="471.02844"/>
+    <!-- Zeirunerk Teleport to Harnakand -->
+    <portal_loc world_id="210050000" loc_id="2100519" x="2102.071" y="1951.1805" z="310.5"/>
+    <!-- Zeirunerk Teleport to Dimaia-Urquell -->
+    <portal_loc world_id="210050000" loc_id="2100520" x="456.83377" y="159.83083" z="459.6144"/>
+
     <!-- Theobomos -->
     <portal_loc world_id="210060000" loc_id="2100600" x="2235.0037" y="2284.2185" z="50.1719"/>
     <!-- Scroll -->

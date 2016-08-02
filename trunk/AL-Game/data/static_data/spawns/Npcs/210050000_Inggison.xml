@@ -7927,15 +7927,11 @@
         <spawn npc_id="731542" respawn_time="295">
             <spot x="1327.9303" y="276.64633" z="589.42126" h="10"/>
         </spawn>
-        <!-- Gadarunerk CM -->
-        <spawn npc_id="702725" respawn_time="295">
-            <spot x="1330.6246" y="280.59515" z="589.42096" h="105"/>
-        </spawn>
-        <!-- Adrinne CM -->
+        <!-- Adrinne ||| LF4_OP_L_Seller_namedcoin_01 -->
         <spawn npc_id="833005" respawn_time="295">
             <spot x="1324.1531" y="297.38074" z="589.8096" h="36"/>
         </spawn>
-        <!-- Lenard CM -->
+        <!-- Lenard ||| LF4_OP_L_exchange_namedcoin_01 -->
         <spawn npc_id="833006" respawn_time="295">
             <spot x="1320.7723" y="295.70062" z="589.7872" h="36"/>
         </spawn>                
@@ -8494,6 +8490,10 @@
             <spot x="2157.0" y="277.8" z="489.77045" h="40"/>
         </spawn>
 
+        <!-- Gadarunerk ||| LF4_Rotation_Teleporter_OP_1 -->
+        <spawn npc_id="702725" respawn_time="295">
+            <spot x="1330.6246" y="280.59515" z="589.42096" h="105"/>
+        </spawn>
 		<!-- Izerrunerk ||| LF4_Rotation_Teleporter_1 -->
 		<spawn npc_id="702727" respawn_time="295">
 			<spot x="463.77988" y="195.59648" z="459.5888"/>
