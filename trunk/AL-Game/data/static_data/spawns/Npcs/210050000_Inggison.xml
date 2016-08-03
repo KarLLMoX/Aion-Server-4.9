@@ -1,6 +1,413 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spawns>
 	<spawn_map map_id="210050000">
+        <!-- Start Objects -->
+		<!-- Huge Egg -->
+		<spawn npc_id="217095" respawn_time="550">
+			<spot x="911.1558" y="1582.8119" z="240.0000" static_id="2333"/>
+		</spawn>
+		<!-- Inggison Coin Fountain -->
+		<spawn npc_id="730241" respawn_time="295">
+			<spot x="1355.5326" y="332.65009" z="588.12" static_id="268"/>
+		</spawn>
+		<!-- Udas Temple Entrance 4.2 Update -->
+		<spawn npc_id="730277" respawn_time="295">
+			<spot x="210.791" y="1393.38" z="266.695" h="75" static_id="127"/>
+		</spawn>
+		<!-- Lower Udas Temple Entrance -->
+		<spawn npc_id="730279" respawn_time="295">
+			<spot x="343.78" y="1349.81" z="262.265" h="48" static_id="443"/>
+		</spawn>
+		<!-- Drakan Stone Statue -->
+		<spawn npc_id="730295" respawn_time="295">
+			<spot x="344.47" y="1374.34" z="336.433" static_id="204"/>
+		</spawn>
+		<!-- Gate -->
+		<spawn npc_id="730296" respawn_time="295">
+			<spot x="2509.3806" y="814.07776" z="415.8327" h="73" static_id="1500"/>
+		</spawn>
+		<!-- Gate -->
+		<spawn npc_id="730297" respawn_time="295">
+			<spot x="2512.5479" y="818.45026" z="415.8327" h="73" static_id="1425"/>
+		</spawn>
+		<!-- Gate -->
+		<spawn npc_id="730298" respawn_time="295">
+			<spot x="537.948" y="707.773" z="484.049" h="73" static_id="203"/>
+		</spawn>
+		<!-- Gate -->
+		<spawn npc_id="730299" respawn_time="295">
+			<spot x="541.425" y="712.288" z="484.049" h="73" static_id="16"/>
+		</spawn>
+		<!-- Medicine Box -->
+		<spawn npc_id="730323" respawn_time="295">
+			<spot x="1436.17" y="323.363" z="549.25" static_id="2343"/>
+		</spawn>
+		<!-- Padmarashkas Cave Entrance -->
+		<spawn npc_id="730485" respawn_time="295">
+			<spot x="136.981" y="2006.66" z="434.292" h="93" static_id="1315"/>
+		</spawn>
+		<!-- Southern Petrified Mass -->
+		<spawn npc_id="730228" respawn_time="295">
+			<spot x="2938.32" y="1211.81" z="356.422" static_id="611"/>
+		</spawn>
+		<!-- Eastern Petrified Mass -->
+		<spawn npc_id="730227" respawn_time="295">
+			<spot x="2814.99" y="1245.66" z="351.684" static_id="613"/>
+		</spawn>
+		<!-- Western Petrified Mass -->
+		<spawn npc_id="730226" respawn_time="295">
+			<spot x="2843.79" y="1129.2" z="343.789" static_id="612"/>
+		</spawn>
+		<!-- Deteriorated Obelisk -->
+		<spawn npc_id="730225" respawn_time="295">
+			<spot x="2299.38" y="256" z="465.639" static_id="163"/>
+		</spawn>
+		<!-- Overheated Obelisk -->
+		<spawn npc_id="730224" respawn_time="295">
+			<spot x="1700.34" y="186.64" z="531.244" static_id="164"/>
+		</spawn>
+		<!-- Stopped Obelisk -->
+		<spawn npc_id="730223" respawn_time="295">
+			<spot x="884.48" y="295.33" z="535.77" static_id="168"/>
+		</spawn>
+		<!-- Aerolink to Sanctum -->
+		<spawn npc_id="730220" respawn_time="295">
+			<spot x="1375.89" y="367.848" z="589.6" h="73" static_id="1314"/>
+		</spawn>
+		<!-- Creatures of the Dawning Era -->
+		<spawn npc_id="748004" respawn_time="295">
+			<spot x="1362.01" y="370.872" z="558.345" static_id="1216"/>
+		</spawn>
+		<!-- Blue Aerial Aether Searcher -->
+		<spawn npc_id="700611" respawn_time="295">
+			<spot x="2825.6272" y="480.8731" z="350.0097" static_id="528"/>
+		</spawn>
+		<!-- Shining Aerial Aether Searcher -->
+		<spawn npc_id="700612" respawn_time="295">
+			<spot x="2761.9902" y="375.8928" z="354.3210" static_id="525"/>
+		</spawn>
+		<!-- Old Aerial Aether Searcher -->
+		<spawn npc_id="700613" respawn_time="295">
+			<spot x="2923.7295" y="362.0702" z="362.0" static_id="527"/>
+		</spawn>
+		<!-- Light Aerial Aether Searcher -->
+		<spawn npc_id="700614" respawn_time="295">
+			<spot x="2819.3884" y="275.13474" z="355.72525" static_id="649"/>
+		</spawn>
+		<!-- Pucas Sack -->
+		<spawn npc_id="700615" respawn_time="295">
+			<spot x="2084.178" y="1214.0149" z="265.0" static_id="1238"/>
+			<spot x="2079.0962" y="1148.1893" z="266.5565" static_id="80"/>
+			<spot x="2101.891" y="1108.166" z="266.125" static_id="79"/>
+			<spot x="2199.5935" y="1128.6173" z="274.125" static_id="81"/>
+			<spot x="2272.6472" y="1116.2344" z="283.3016" static_id="125"/>
+			<spot x="2210.4373" y="1197.3256" z="227.33792" static_id="134"/>
+			<spot x="2190.2053" y="1243.5565" z="230.40036" static_id="83"/>
+			<spot x="2241.512" y="1270.8743" z="277.76572" static_id="133"/>
+			<spot x="2124.23" y="1266.4692" z="268.38666" static_id="77"/>
+			<spot x="2139.5713" y="1314.7378" z="259.82904" static_id="136"/>
+			<spot x="2223.3528" y="1330.9337" z="256.8677" static_id="132"/>
+			<spot x="2172.7527" y="1363.1792" z="233.54822" static_id="130"/>
+			<spot x="2195.5286" y="1437.4159" z="207.89587" static_id="120"/>
+			<spot x="2132.597" y="1462.6294" z="241.77557" static_id="131"/>
+			<spot x="2072.6946" y="1469.6135" z="233.19083" static_id="86"/>
+			<spot x="2182.332" y="1512.6718" z="209.5" static_id="52"/>
+			<spot x="2127.7942" y="1578.1335" z="232.48262" static_id="85"/>
+			<spot x="2184.5757" y="1558.7932" z="240.59666" static_id="51"/>
+			<spot x="2285.7617" y="1418.8473" z="237.25" static_id="124"/>
+			<spot x="2336.7969" y="1269.6307" z="249.25" static_id="82"/>
+			<spot x="2537.27" y="1211.83" z="247.87212" static_id="76"/>
+			<spot x="2574.0647" y="1224.792" z="245.5" static_id="84"/>
+			<spot x="2461.2302" y="1207.686" z="237.12602" static_id="852"/>
+			<spot x="2457.5247" y="1152.5315" z="233.38205" static_id="129"/>
+			<spot x="2424.3958" y="1165.6931" z="232.89594" static_id="137"/>
+			<spot x="2455.4004" y="1072.996" z="260.03748" static_id="128"/>
+			<spot x="2494.6357" y="1015.2206" z="256.15823" static_id="138"/>
+			<spot x="2385.8408" y="1090.6034" z="239.17271" static_id="75"/>
+			<spot x="2371.2776" y="1002.4" z="251.77777" static_id="213"/>
+			<spot x="2258.5498" y="986.4807" z="280.4617" static_id="126"/>
+		</spawn>
+		<!-- Thick Silk Pouch -->
+		<spawn npc_id="700609" respawn_time="295">
+			<spot x="1085.2103" y="587.356" z="512.27924" static_id="523"/>
+			<spot x="1043.59" y="636.49" z="515.09937" static_id="157"/>
+			<spot x="1034.9347" y="539.36774" z="524.19714" static_id="167"/>
+			<spot x="997.0784" y="519.0164" z="525.7304" static_id="524"/>
+			<spot x="974.5939" y="493.37686" z="529.0724" static_id="619"/>
+			<spot x="916.74536" y="558.6251" z="524.9214" static_id="161"/>
+			<spot x="956.6608" y="431.9072" z="531.7913" static_id="620"/>
+			<spot x="942.921" y="417.8273" z="531.75" static_id="516"/>
+			<spot x="902.03" y="431.16" z="527.6964" static_id="520"/>
+			<spot x="882.86316" y="548.59344" z="539.74115" static_id="3576"/>
+			<spot x="864.67" y="541.74" z="538.6142" static_id="153"/>
+			<spot x="846.1758" y="482.00748" z="527.75" static_id="155"/>
+			<spot x="851.9922" y="443.30893" z="537.168" static_id="162"/>
+			<spot x="912.77466" y="353.53836" z="528.0596" static_id="518"/>
+			<spot x="958.90686" y="340.91437" z="534.24646" static_id="517"/>
+			<spot x="977.9676" y="256.59418" z="527.92346" static_id="510"/>
+			<spot x="875.2173" y="279.8123" z="540.4376" static_id="513"/>
+			<spot x="915.6453" y="222.28432" z="533.0" static_id="160"/>
+			<spot x="890.4002" y="208.10057" z="533.1" static_id="511"/>
+			<spot x="773.35284" y="228.97049" z="540.12866" static_id="521"/>
+			<spot x="793.43823" y="283.20447" z="531.025" static_id="514"/>
+			<spot x="751.74554" y="289.22537" z="533.28613" static_id="158"/>
+			<spot x="703.0824" y="244.61423" z="533.875" static_id="618"/>
+			<spot x="644.8822" y="227.17566" z="532.1845" static_id="169"/>
+			<spot x="705.13367" y="316.8855" z="529.1564" static_id="526"/>
+			<spot x="775.3545" y="387.0671" z="530.55273" static_id="166"/>
+			<spot x="824.7222" y="311.03784" z="531.58356" static_id="522"/>
+			<spot x="835.9812" y="415.3061" z="539.5453" static_id="515"/>
+			<spot x="835.64343" y="516.41034" z="529.3001" static_id="152"/>
+			<spot x="875.71826" y="605.06116" z="537.95123" static_id="530"/>
+		</spawn>
+		<!-- Wet Parchment Book -->
+		<spawn npc_id="700610" respawn_time="295">
+			<spot x="369.99" y="558.14" z="459.6069" static_id="529"/>
+		</spawn>
+		<!-- Eastern Obelisk Support -->
+		<spawn npc_id="700628" respawn_time="295">
+			<spot x="457.55" y="513.11" z="461.76376" static_id="159"/>
+		</spawn>
+		<!-- Western Obelisk Support -->
+		<spawn npc_id="700629" respawn_time="295">
+			<spot x="390.12" y="104.3" z="464.5" static_id="165"/>
+		</spawn>
+		<!-- Northern Obelisk Support -->
+		<spawn npc_id="700630" respawn_time="295">
+			<spot x="176.88803" y="62.911697" z="531.375" static_id="156"/>
+		</spawn>
+		<!-- Small Jewel Box -->
+		<spawn npc_id="700631" respawn_time="295">
+			<spot x="2947.2947" y="324.69305" z="346.64026" static_id="44"/>
+		</spawn>
+		<!-- 1221_Temporary Door -->
+		<spawn npc_id="700545" respawn_time="295">
+			<spot x="978.14886" y="1018.7421" z="335.3947" h="33" static_id="2312"/>
+			<spot x="1454.7737" y="1526.7189" z="361.3548" h="33" static_id="2310"/>
+			<spot x="1633.2354" y="1623.5104" z="172.0" h="33" static_id="756"/>
+		</spawn>
+		<!-- Inggison Drana -->
+		<spawn npc_id="700601" respawn_time="295">
+			<spot x="1221.2534" y="1411.4414" z="410.68146" static_id="87"/>
+			<spot x="1190.3081" y="1381.069" z="413.07574" static_id="73"/>
+			<spot x="1182.1211" y="1254.8142" z="422.25" static_id="72"/>
+			<spot x="1183.2256" y="1283.4565" z="419.98428" static_id="174"/>
+			<spot x="1202.155" y="1196.2064" z="423.75" static_id="71"/>
+			<spot x="1285.9797" y="963.373" z="452.25507" static_id="101"/>
+			<spot x="1214.4491" y="1242.9008" z="424.125" static_id="109"/>
+			<spot x="1271.4103" y="1367.1229" z="415.73465" static_id="1213"/>
+			<spot x="1282.2493" y="1290.304" z="418.76556" static_id="68"/>
+			<spot x="1283.0553" y="1264.9924" z="422.375" static_id="69"/>
+			<spot x="1246.8286" y="1213.5391" z="423.25" static_id="102"/>
+			<spot x="1292.5687" y="1223.2518" z="427.2633" static_id="108"/>
+			<spot x="1309.2285" y="1350.688" z="417.75" static_id="67"/>
+			<spot x="1349.1099" y="1363.4711" z="397.125" static_id="74"/>
+			<spot x="1329.3147" y="1388.9146" z="395.25" static_id="88"/>
+			<spot x="1377.8816" y="1254.6254" z="397.0" static_id="59"/>
+			<spot x="1383.7089" y="1202.342" z="405.24988" static_id="508"/>
+			<spot x="1279.7035" y="1083.71" z="447.75" static_id="99"/>
+			<spot x="1382.7766" y="1015.1848" z="451.875" static_id="98"/>
+			<spot x="1361.398" y="1089.9314" z="450.24573" static_id="100"/>
+			<spot x="1415.4982" y="1050.8446" z="452.8209" static_id="90"/>
+			<spot x="1502.2665" y="1232.7097" z="393.75" static_id="507"/>
+			<spot x="1413.8735" y="1264.374" z="394.53918" static_id="60"/>
+			<spot x="1453.7644" y="1263.7692" z="394.3897" static_id="61"/>
+			<spot x="1379.8737" y="1363.4132" z="396.26578" static_id="65"/>
+			<spot x="1435.8916" y="1373.6251" z="391.39716" static_id="94"/>
+			<spot x="1424.4675" y="1426.8973" z="392.30844" static_id="64"/>
+			<spot x="1261.9104" y="1402.0668" z="414.50418" static_id="256"/>
+			<spot x="1498.8585" y="1333.8096" z="393.67865" static_id="89"/>
+			<spot x="1485.2949" y="1272.4525" z="394.375" static_id="62"/>
+		</spawn>
+		<!-- Parchment Map -->
+		<spawn npc_id="700605" respawn_time="295">
+			<spot x="1518.9492" y="1312.899" z="398.2412" static_id="246"/>
+		</spawn>
+		<!-- Wriggling Klaw Egg -->
+		<spawn npc_id="700910" respawn_time="295">
+			<spot x="1092.6836" y="1034.002" z="433.3895" static_id="2368"/>
+			<spot x="1138.0342" y="1039.2455" z="435.2701" static_id="2375"/>
+			<spot x="1110.311" y="915.13586" z="415.77463" static_id="2367"/>
+			<spot x="1054.4723" y="923.71246" z="416.66367" static_id="2383"/>
+			<spot x="1202.7109" y="964.7933" z="408.80905" static_id="2378"/>
+			<spot x="1029.9849" y="944.90765" z="415.892" static_id="2384"/>
+			<spot x="1075.9515" y="899.8311" z="415.41138" static_id="2365"/>
+			<spot x="1176.5807" y="913.6892" z="408.6356" static_id="2380"/>
+			<spot x="1119.1676" y="884.70123" z="413.59283" static_id="2370"/>
+			<spot x="1090.8226" y="872.315" z="415.83347" static_id="2366"/>
+			<spot x="1022.8236" y="902.6667" z="415.8012" static_id="2382"/>
+			<spot x="1128.7255" y="838.76514" z="408.49323" static_id="2381"/>
+			<spot x="1100.8214" y="814.7624" z="406.82935" static_id="2376"/>
+			<spot x="1076.7615" y="797.5252" z="406.8389" static_id="2377"/>
+			<spot x="1174.1373" y="801.0411" z="390.37497" static_id="2372"/>
+			<spot x="1200.9713" y="804.2636" z="389.2446" static_id="2373"/>
+			<spot x="1214.1781" y="782.39264" z="388.80975" static_id="2374"/>
+			<spot x="1252.2928" y="880.58246" z="409.2326" static_id="2369"/>
+			<spot x="1218.465" y="931.00775" z="410.436" static_id="2379"/>
+			<spot x="1256.9706" y="898.44836" z="408.94763" static_id="2371"/>
+		</spawn>
+		<!-- Air Line -->
+		<spawn npc_id="799057" respawn_time="295">
+			<spot x="398.9663" y="949.84705" z="460.5389" static_id="202"/>
+		</spawn>
+		<!-- Air Line -->
+		<spawn npc_id="798901" respawn_time="295">
+			<spot x="1333.9467" y="273.9589" z="589.49347" static_id="621"/>
+		</spawn>
+		<!-- Baby Basket -->
+		<spawn npc_id="700909" respawn_time="295">
+			<spot x="1473.9398" y="1360.486" z="392.3428" static_id="2359"/>
+		</spawn>
+		<!-- Unknown Book -->
+		<spawn npc_id="700616" respawn_time="295">
+			<spot x="62.184353" y="916.74963" z="358.30826" static_id="139"/>
+		</spawn>
+		<!-- Song of Three Sages -->
+		<spawn npc_id="748009" respawn_time="295">
+			<spot x="361.50354" y="942.0997" z="460.73312" h="33" static_id="1215"/>
+		</spawn>
+		<!-- Red Wind Mushroom -->
+		<spawn npc_id="700917" respawn_time="295">
+			<spot x="1160.1594" y="1630.1019" z="235.65338" static_id="2387"/>
+		</spawn>
+		<!-- Poisonous Wind Mushroom -->
+		<spawn npc_id="700916" respawn_time="295">
+			<spot x="1059.9415" y="1729.9016" z="246.46027" static_id="2386"/>
+		</spawn>
+		<!-- Rough Wind Mushroom -->
+		<spawn npc_id="700915" respawn_time="295">
+			<spot x="963.45135" y="1563.2386" z="315.0337" static_id="2385"/>
+		</spawn>
+		<!-- Dry Crater -->
+		<spawn npc_id="700914" respawn_time="295">
+			<spot x="947.9281" y="1814.0986" z="326.25" static_id="2393"/>
+		</spawn>
+		<!-- Hot Crater -->
+		<spawn npc_id="700913" respawn_time="295">
+			<spot x="893.278" y="1774.0514" z="326.25" static_id="3719"/>
+		</spawn>
+		<!-- Soggy Crater -->
+		<spawn npc_id="700912" respawn_time="295">
+			<spot x="775.9929" y="1797.2437" z="322.125" static_id="2391"/>
+		</spawn>
+		<!-- Hardened Crater -->
+		<spawn npc_id="700911" respawn_time="295">
+			<spot x="712.82715" y="1866.3936" z="322.125" static_id="2390"/>
+		</spawn>
+		<!-- Air Line -->
+		<spawn npc_id="798962" respawn_time="295">
+			<spot x="2719.124" y="1424.8901" z="384.87866" static_id="1202"/>
+		</spawn>
+		<!-- Beritra Monument -->
+		<spawn npc_id="700748" respawn_time="295">
+			<spot x="645.577" y="1647.31" z="334.266" h="20" static_id="1198"/>
+		</spawn>
+		<!-- Ereshkigal Monument -->
+		<spawn npc_id="700747" respawn_time="295">
+			<spot x="2099.07" y="1879.6" z="316.242" h="35" static_id="206"/>
+		</spawn>
+		<!-- Fregion Monument -->
+		<spawn npc_id="700745" respawn_time="295">
+			<spot x="903.147" y="1639.72" z="338.273" h="46" static_id="1199"/>
+		</spawn>
+		<!-- Taloc's Root Herb -->
+		<spawn npc_id="700908" respawn_time="295">
+			<spot x="2754.7336" y="362.61728" z="342.57715" static_id="2345"/>
+			<spot x="2785.144" y="426.77908" z="339.0" static_id="2357"/>
+			<spot x="2789.2395" y="358.86337" z="348.7928" static_id="2360"/>
+			<spot x="2797.8645" y="455.8243" z="339.3775" static_id="2355"/>
+			<spot x="2835.8281" y="510.4403" z="339.96173" static_id="2356"/>
+			<spot x="2860.2434" y="512.28516" z="340.03152" static_id="2364"/>
+			<spot x="2927.7874" y="480.08865" z="340.60617" static_id="2351"/>
+			<spot x="2927.3618" y="436.35513" z="340.72778" static_id="2350"/>
+			<spot x="2897.4905" y="445.84433" z="327.5" static_id="2352"/>
+			<spot x="2874.9883" y="465.9828" z="327.74945" static_id="2353"/>
+			<spot x="2909.6494" y="379.3006" z="347.25516" static_id="2363"/>
+			<spot x="2904.69" y="335.69342" z="339.07794" static_id="2349"/>
+			<spot x="2883.1758" y="325.21625" z="348.8538" static_id="2362"/>
+			<spot x="2870.13" y="305.53018" z="346.15512" static_id="2348"/>
+			<spot x="2787.0225" y="287.20795" z="342.83923" static_id="2344"/>
+			<spot x="2810.5977" y="304.8549" z="345.03833" static_id="2346"/>
+			<spot x="2770.9312" y="333.67346" z="339.7099" static_id="2358"/>
+			<spot x="2834.718" y="292.4097" z="338.39734" static_id="2347"/>
+			<spot x="2852.338" y="461.98816" z="335.33484" static_id="2354"/>
+			<spot x="2839.8948" y="314.36948" z="352.12085" static_id="2361"/>
+		</spawn>
+		<!-- Obelisk -->
+		<spawn npc_id="730235" respawn_time="295">
+			<spot x="1386.2183" y="308.9132" z="589.47925" static_id="458"/>
+		</spawn>
+		<!-- Obelisk -->
+		<spawn npc_id="730236" respawn_time="295">
+			<spot x="2714.7075" y="1482.3495" z="384.63663" static_id="552"/>
+		</spawn>
+		<!-- Obelisk -->
+		<spawn npc_id="730281" respawn_time="295">
+			<spot x="379.33493" y="952.23126" z="461.39877" static_id="46"/>
+		</spawn>
+		<!-- Obelisk -->
+        <spawn npc_id="730282" respawn_time="295">
+            <spot x="1889.9365" y="1748.7122" z="328.40558" static_id="1308"/>
+        </spawn>
+        <!-- Silentera Westgate -->
+        <spawn npc_id="730256" respawn_time="295">
+            <spot x="1362.7719" y="2302.2793" z="296.6737" h="90" static_id="1200"/>
+        </spawn>
+        <!-- Balaur Prison Entrance -->
+        <spawn npc_id="700743" respawn_time="295">
+            <spot x="2372.6287" y="2042.4458" z="250.63559" static_id="509"/>
+        </spawn>
+        <!-- Meslamtaeda Monument -->
+        <spawn npc_id="700746" respawn_time="295">
+            <spot x="2381.6648" y="1824.5135" z="237.98756" static_id="205"/>
+        </spawn>
+        <!-- Northern Star -->
+        <spawn npc_id="700627" respawn_time="295">
+            <spot x="2431.0928" y="1848.3674" z="235.0" static_id="143"/>
+        </spawn>
+        <!-- Eastern Star -->
+        <spawn npc_id="700624" respawn_time="295">
+            <spot x="2472.5986" y="1886.5056" z="234.90295" static_id="140"/>
+        </spawn>
+        <!-- Southern Star -->
+        <spawn npc_id="700626" respawn_time="295">
+            <spot x="2509.4077" y="1844.3604" z="235.0" static_id="141"/>
+        </spawn>
+        <!-- Western Star -->
+        <spawn npc_id="700625" respawn_time="295">
+            <spot x="2467.3418" y="1807.2083" z="235.0" static_id="142"/>
+        </spawn>
+        <!-- Mystical Cell -->
+        <spawn npc_id="217106" respawn_time="295">
+            <spot x="2312.475" y="1673.8474" z="273.7846" static_id="1782"/>
+        </spawn>
+        <!-- Mailbox / SPLF4_NPC_SPG307 -->
+        <spawn npc_id="700000" respawn_time="295">
+			<spot x="1379.3145" y="256.25974" z="589.78955" h="46"/>
+			<spot x="2764.66" y="1439.58" z="384.6456" h="60" static_id="564"/>
+        </spawn>
+		<!-- Membrane ||| LF4_FOBJ_Q11128 -->
+		<spawn npc_id="700617" respawn_time="295">
+			<spot x="1219.426" y="927.53326" z="410.70795" static_id="345"/>
+		</spawn>
+        <!-- Old Sack / LF4_FOBJ_Q11211A -->
+        <spawn npc_id="700620" respawn_time="295">
+			<spot x="460.13" y="2027.99" z="287.599" h="119" static_id="616"/>
+        </spawn>
+        <!-- Extra Clothing / LF4_FOBJ_Q11211B -->
+        <spawn npc_id="700621" respawn_time="295">
+			<spot x="488.73999" y="1881.75" z="282" h="119" static_id="617"/>
+        </spawn>
+        <!-- Leather Notebook / LF4_FOBJ_Q11211C -->
+        <spawn npc_id="700622" respawn_time="295">
+			<spot x="354.7403" y="1686.1062" z="290" h="119" static_id="615"/>
+        </spawn>
+        <!-- Emergency Potion / LF4_FOBJ_Q11211D -->
+        <spawn npc_id="700623" respawn_time="295">
+			<spot x="487.19287" y="1607.9493" z="290.6557" h="119" static_id="614"/>
+        </spawn>
+        <!-- End Objects -->
+        <!-- Start NPCs -->
 		<!-- Baydeeafa -->
 		<spawn npc_id="216521" respawn_time="7200" >
 			<spot x="2131.13" y="1900.21" z="309" h="104"/>
@@ -18,10 +425,6 @@
 			<spot x="435.098" y="1221.96" z="310.375" h="65"/>
 			<spot x="401.569" y="1034.95" z="361.385" h="117"/>
 			<spot x="216.113" y="1167.02" z="270.559" h="83"/>
-		</spawn>
-		<!-- Huge Egg -->
-		<spawn npc_id="217095" respawn_time="550">
-			<spot x="911.1558" y="1582.8119" z="240.0000" static_id="2333"/>
 		</spawn>
 		<!-- Skar -->
 		<spawn npc_id="216510" respawn_time="7200" >
@@ -53,10 +456,6 @@
 			<spot x="2823.99" y="67.399" z="348.625" h="38"/>
 			<spot x="2913.88" y="596.966" z="345.75" h="63"/>
 		</spawn>
-		<!-- Gate -->
-		<spawn npc_id="730298" respawn_time="295">
-			<spot x="537.948" y="707.773" z="484.049" h="73" static_id="203"/>
-		</spawn>
 		<!-- Shulack Necksnapper -->
 		<spawn npc_id="215555" respawn_time="295">
 			<spot x="211.468" y="658.038" z="619.135" h="12"/>
@@ -66,10 +465,6 @@
 		<spawn npc_id="216655" respawn_time="295">
 			<spot x="322.254" y="410.715" z="571.92" h="44"/>
 			<spot x="335.891" y="440.116" z="572.125" h="48"/>
-		</spawn>
-		<!-- Gate -->
-		<spawn npc_id="730299" respawn_time="295">
-			<spot x="541.425" y="712.288" z="484.049" h="73" static_id="16"/>
 		</spawn>
 		<!-- Shulack Necksnapper -->
 		<spawn npc_id="215554" respawn_time="295">
@@ -82,10 +477,6 @@
 			<spot x="2359.47" y="576.739" z="425.105" h="90"/>
 			<spot x="2114.93" y="469.186" z="435.811" h="98"/>
 			<spot x="2362.12" y="598.041" z="420.11" h="69"/>
-		</spawn>
-		<!-- Gate -->
-		<spawn npc_id="730296" respawn_time="295">
-			<spot x="2509.3806" y="814.07776" z="415.8327" h="73" static_id="1500"/>
 		</spawn>
 		<!-- Shulack Necksnapper -->
 		<spawn npc_id="215553" respawn_time="295">
@@ -108,10 +499,6 @@
 			<spot x="2104.2" y="500.121" z="432.25" h="103"/>
 			<spot x="2327.69" y="682.543" z="417.34" h="24"/>
 			<spot x="2326.47" y="684.044" z="416.992" h="109"/>
-		</spawn>
-		<!-- Gate -->
-		<spawn npc_id="730297" respawn_time="295">
-			<spot x="2512.5479" y="818.45026" z="415.8327" h="73" static_id="1425"/>
 		</spawn>
 		<!-- Shulack Necksnapper -->
 		<spawn npc_id="215552" respawn_time="295">
@@ -244,10 +631,6 @@
 			<spot x="286.217" y="252.5" z="582.951" h="117"/>
 			<spot x="239.431" y="385.6" z="573.822" h="109"/>
 		</spawn>
-		<!-- Padmarashkas Cave Entrance -->
-		<spawn npc_id="730485" respawn_time="295">
-			<spot x="136.981" y="2006.66" z="434.292" h="93" static_id="1315"/>
-		</spawn>
 		<!-- Jamia -->
 		<spawn npc_id="799092" respawn_time="295">
 			<spot x="144.4453" y="1996.6343" z="433.7184" h="83"/>
@@ -266,10 +649,6 @@
 			<spot x="167.092" y="434.813" z="589.262" h="112"/>
 			<spot x="93.9696" y="592.438" z="620.834" h="38"/>
 			<spot x="130.786" y="564.698" z="591.419" h="110"/>
-		</spawn>
-		<!-- Drakan Stone Statue -->
-		<spawn npc_id="730295" respawn_time="295">
-			<spot x="344.47" y="1374.34" z="336.433" static_id="204"/>
 		</spawn>
 		<!-- Shulack Shaman -->
 		<spawn npc_id="215566" respawn_time="295">
@@ -490,10 +869,6 @@
 			<spot x="435.594" y="577.934" z="458.25" h="68" random_walk="9"/>
 			<spot x="372.794" y="562.517" z="458.759" h="65" random_walk="9"/>
 		</spawn>
-		<!-- Lower Udas Temple Entrance -->
-		<spawn npc_id="730279" respawn_time="295">
-			<spot x="343.78" y="1349.81" z="262.265" h="48" static_id="443"/>
-		</spawn>
 		<!-- Shulack Shaman -->
 		<spawn npc_id="216658" respawn_time="295">
 			<spot x="110.035" y="305.25" z="583.373" h="24"/>
@@ -504,10 +879,6 @@
 		<!-- Shulack Herbalist -->
 		<spawn npc_id="216659" respawn_time="295">
 			<spot x="323.444" y="360.521" z="574.831" h="99"/>
-		</spawn>
-		<!-- Udas Temple Entrance 4.2 Update -->
-		<spawn npc_id="730277" respawn_time="295">
-			<spot x="210.791" y="1393.38" z="266.695" h="75" static_id="127"/>
 		</spawn>
 		<!-- Shulack Necksnapper -->
 		<spawn npc_id="216656" respawn_time="295">
@@ -1261,10 +1632,7 @@
 			<spot x="2073.39" y="1358.72" z="382.277" h="96" random_walk="9"/>
 			<spot x="1613.97" y="982.027" z="404.121" h="65" random_walk="6"/>
 		</spawn>
-		<!-- Inggison Coin Fountain -->
-		<spawn npc_id="730241" respawn_time="295">
-			<spot x="1355.5326" y="332.65009" z="588.12" static_id="268"/>
-		</spawn>
+
 		<!-- Basrasa Ambusher -->
 		<spawn npc_id="216692" respawn_time="295">
 			<spot x="2361.23" y="521.096" z="434.356" h="90"/>
@@ -2199,10 +2567,7 @@
 			<spot x="895.323" y="936.503" z="361.364" h="34" random_walk="6"/>
 			<spot x="557.869" y="1252.65" z="393.653" h="7" random_walk="9"/>
 		</spawn>
-		<!-- Medicine Box -->
-		<spawn npc_id="730323" respawn_time="295">
-			<spot x="1436.17" y="323.363" z="549.25" static_id="2343"/>
-		</spawn>
+
 		<!-- Highland Caprex -->
 		<spawn npc_id="215658" respawn_time="295">
 			<spot x="601.374" y="970.042" z="454.992" h="75" random_walk="6"/>
@@ -3557,28 +3922,7 @@
 		<spawn npc_id="216706" respawn_time="295">
 			<spot x="246.369" y="263.824" z="583.5" h="50"/>
 		</spawn>
-		<!-- Klaw Egg -->
-		<spawn npc_id="730230" respawn_time="295">
-			<spot x="1219.46" y="930.735" z="410.168" static_id="2379"/>
-			<spot x="1127.8" y="838.037" z="408.113" static_id="2381"/>
-			<spot x="1173.2" y="801.975" z="390.283" static_id="2372"/>
-			<spot x="1091.35" y="1033.86" z="433.135" static_id="2368"/>
-			<spot x="1023.1" y="901.339" z="415.663" static_id="2382"/>
-			<spot x="1120.63" y="884.857" z="413.594" static_id="2370"/>
-			<spot x="1201.84" y="803.337" z="389.012" static_id="2373"/>
-			<spot x="1177.05" y="912.614" z="408.286" static_id="2380"/>
-			<spot x="1203.53" y="964.234" z="408.548" static_id="2378"/>
-			<spot x="1101.91" y="814.401" z="406.577" static_id="2376"/>
-			<spot x="1138.92" y="1038.3" z="435.248" static_id="2375"/>
-			<spot x="1090.4" y="870.866" z="415.527" static_id="2366"/>
-			<spot x="1055.77" y="923.675" z="416.411" static_id="2383"/>
-			<spot x="1111.93" y="915.609" z="415.888" static_id="2367"/>
-			<spot x="1251.76" y="879.318" z="409.074" static_id="2369"/>
-			<spot x="1030.14" y="946.352" z="415.641" static_id="2384"/>
-			<spot x="1076.71" y="796.417" z="388.707" static_id="2377"/>
-			<spot x="1215.58" y="782.124" z="388.707" static_id="2374"/>
-			<spot x="1257.92" y="899.514" z="408.683" static_id="2371"/>
-		</spawn>
+
 		<!-- Basrasa Watcher -->
 		<spawn npc_id="215759" respawn_time="295">
 			<spot x="2001.84" y="2156.59" z="297.966" h="111"/>
@@ -3607,10 +3951,6 @@
 			<spot x="101.931" y="335.632" z="583.375" h="86"/>
 			<spot x="88.6964" y="359.616" z="583.423" h="71"/>
 		</spawn>
-		<!-- Southern Petrified Mass -->
-		<spawn npc_id="730228" respawn_time="295">
-			<spot x="2938.32" y="1211.81" z="356.422" static_id="611"/>
-		</spawn>
 		<!-- Basrasa Curatus -->
 		<spawn npc_id="215757" respawn_time="295">
 			<spot x="153.54" y="1796.42" z="384.216" h="67"/>
@@ -3625,10 +3965,6 @@
 		<!-- Shulack Necksnapper -->
 		<spawn npc_id="216705" respawn_time="295">
 			<spot x="317.784" y="362.617" z="574.468" h="59"/>
-		</spawn>
-		<!-- Eastern Petrified Mass -->
-		<spawn npc_id="730227" respawn_time="295">
-			<spot x="2814.99" y="1245.66" z="351.684" static_id="613"/>
 		</spawn>
 		<!-- Basrasa Captain -->
 		<spawn npc_id="215754" respawn_time="295">
@@ -3650,10 +3986,6 @@
 			<spot x="309.215" y="518.975" z="573.569" h="26"/>
 			<spot x="327.224" y="505.712" z="572.827" h="71"/>
 		</spawn>
-		<!-- Western Petrified Mass -->
-		<spawn npc_id="730226" respawn_time="295">
-			<spot x="2843.79" y="1129.2" z="343.789" static_id="612"/>
-		</spawn>
 		<!-- Basrasa Triaris -->
 		<spawn npc_id="215755" respawn_time="295">
 			<spot x="106.531" y="1667.33" z="361.833" h="28"/>
@@ -3667,10 +3999,6 @@
 		<spawn npc_id="216711" respawn_time="295">
 			<spot x="357.495" y="370.616" z="589.849" h="6"/>
 		</spawn>
-		<!-- Deteriorated Obelisk -->
-		<spawn npc_id="730225" respawn_time="295">
-			<spot x="2299.38" y="256" z="465.639" static_id="163"/>
-		</spawn>
 		<!-- Basrasa Supervisor -->
 		<spawn npc_id="215752" respawn_time="295">
 			<spot x="308.531" y="1803.03" z="300.861" h="33"/>
@@ -3683,10 +4011,6 @@
 			<spot x="134.431" y="443.581" z="585.829" h="113"/>
 			<spot x="169.681" y="410.115" z="594.904" h="17"/>
 			<spot x="109.092" y="300.47" z="583.434" h="16"/>
-		</spawn>
-		<!-- Overheated Obelisk -->
-		<spawn npc_id="730224" respawn_time="295">
-			<spot x="1700.34" y="186.64" z="531.244" static_id="164"/>
 		</spawn>
 		<!-- Basrasa Legatus -->
 		<spawn npc_id="215753" respawn_time="295">
@@ -3891,17 +4215,9 @@
 		<spawn npc_id="216731" respawn_time="295">
 			<spot x="1244.46" y="1586.47" z="368.391" h="78"/>
 		</spawn>
-		<!-- Stopped Obelisk -->
-		<spawn npc_id="730223" respawn_time="295">
-			<spot x="884.48" y="295.33" z="535.77" static_id="168"/>
-		</spawn>
 		<!-- Basrasa Infantry -->
 		<spawn npc_id="216730" respawn_time="295">
 			<spot x="1243.81" y="1577.49" z="368.447" h="57"/>
-		</spawn>
-		<!-- Aerolink to Sanctum -->
-		<spawn npc_id="730220" respawn_time="295">
-			<spot x="1375.89" y="367.848" z="589.6" h="73" static_id="1314"/>
 		</spawn>
 		<!-- Basrasa Investigator -->
 		<spawn npc_id="216729" respawn_time="295">
@@ -4188,10 +4504,6 @@
 		<!-- Forest of Antiquity Relics -->
 		<spawn npc_id="206136" respawn_time="295">
 			<spot x="243.78" y="1868.41" z="326.519" h="110"/>
-		</spawn>
-		<!-- Creatures of the Dawning Era -->
-		<spawn npc_id="748004" respawn_time="295">
-			<spot x="1362.01" y="370.872" z="558.345" static_id="1216"/>
 		</spawn>
 		<!-- Rokoros Village Entrance -->
 		<spawn npc_id="206132" respawn_time="295">
@@ -4628,10 +4940,6 @@
 		<spawn npc_id="206156" respawn_time="295">
 			<spot x="1010.85" y="1681.88" z="182.423" h="107"/>
 		</spawn>
-		<!-- Sulfur Geyser -->
-		<spawn npc_id="206155" respawn_time="295">
-			<spot x="1782.72" y="1417.75" z="179.017" static_id="604"/>
-		</spawn>
 		<!-- Jotun Artificer -->
 		<spawn npc_id="217040" respawn_time="295">
 			<spot x="1520.69" y="1218.82" z="334.261" h="106"/>
@@ -4964,112 +5272,6 @@
             <spot h="43" x="2696.4446" y="1409.6885" z="370.23053"/>
             <spot h="23" x="2719.638" y="1438.6438" z="384.7068"/>
         </spawn>		
-		<!-- Needlehorn -->
-		<spawn npc_id="217007" respawn_time="295">
-			<spot x="1629.53" y="673.31" z="449.75" random_walk="9"/>
-		</spawn>
-		<!-- Blue Aerial Aether Searcher -->
-		<spawn npc_id="700611" respawn_time="295">
-			<spot x="2825.6272" y="480.8731" z="350.0097" static_id="528"/>
-		</spawn>
-		<!-- Shining Aerial Aether Searcher -->
-		<spawn npc_id="700612" respawn_time="295">
-			<spot x="2761.9902" y="375.8928" z="354.3210" static_id="525"/>
-		</spawn>
-		<!-- Old Aerial Aether Searcher -->
-		<spawn npc_id="700613" respawn_time="295">
-			<spot x="2923.7295" y="362.0702" z="362.0" static_id="527"/>
-		</spawn>
-		<!-- Light Aerial Aether Searcher -->
-		<spawn npc_id="700614" respawn_time="295">
-			<spot x="2819.3884" y="275.1347" z="355.7253" static_id="622"/>
-		</spawn>
-		<!-- Pucas Sack -->
-		<spawn npc_id="700615" respawn_time="295">
-			<spot x="2258.55" y="986.481" z="280.462" static_id="126"/>
-			<spot x="2371.28" y="1002.4" z="251.778" static_id="127"/>
-			<spot x="2494.64" y="1015.22" z="256.158" static_id="138"/>
-			<spot x="2210.44" y="1197.33" z="227.338" static_id="134"/>
-			<spot x="2084.18" y="1214.01" z="265" static_id="135"/>
-			<spot x="2101.89" y="1108.17" z="266.125" static_id="79"/>
-			<spot x="2199.59" y="1128.62" z="274.125" static_id="81"/>
-			<spot x="2272.65" y="1116.23" z="283.302" static_id="125"/>
-			<spot x="2194.43" y="1437.55" z="207.951" static_id="120"/>
-			<spot x="2184.58" y="1558.85" z="240.408" static_id="51"/>
-			<spot x="2079.1" y="1148.19" z="266.556" static_id="80"/>
-			<spot x="2124.23" y="1266.47" z="268.387" static_id="77"/>
-			<spot x="2182.82" y="1512.44" z="209.5" static_id="52"/>
-			<spot x="2461.23" y="1207.69" z="237.126" static_id="83"/>
-			<spot x="2385.84" y="1090.6" z="239.173" static_id="75"/>
-			<spot x="2457.52" y="1152.53" z="233.382" static_id="129"/>
-			<spot x="2424.4" y="1165.69" z="232.896" static_id="137"/>
-			<spot x="2574.06" y="1224.79" z="245.5" static_id="84"/>
-			<spot x="2127.86" y="1577.97" z="232.48" static_id="85"/>
-			<spot x="2336.8" y="1269.63" z="249.25" static_id="82"/>
-			<spot x="2537.27" y="1211.83" z="247.872" static_id="76"/>
-			<spot x="2285.76" y="1418.85" z="237.25" static_id="124"/>
-			<spot x="2223.35" y="1330.93" z="256.868" static_id="132"/>
-			<spot x="2127.86" y="1469.67" z="233.14" static_id="86"/>
-			<spot x="2131.94" y="1463.02" z="241.637" static_id="131"/>
-			<spot x="2139.57" y="1314.74" z="259.829" static_id="136"/>
-			<spot x="2190.21" y="1243.56" z="230.4" static_id="78"/>
-			<spot x="2172.75" y="1363.18" z="233.548" static_id="130"/>
-			<spot x="2241.51" y="1270.87" z="277.766" static_id="133"/>
-			<spot x="2455.4" y="1073" z="260.037" static_id="128"/>
-		</spawn>
-		<!-- Thick Silk Pouch -->
-		<spawn npc_id="700609" respawn_time="295">
-			<spot x="824.722" y="311.038" z="531.584" static_id="522"/>
-			<spot x="775.354" y="387.067" z="530.553" static_id="166"/>
-			<spot x="793.438" y="283.204" z="531.025" static_id="514"/>
-			<spot x="912.775" y="353.538" z="528.06" static_id="518"/>
-			<spot x="958.907" y="340.914" z="534.246" static_id="517"/>
-			<spot x="875.217" y="279.812" z="540.438" static_id="513"/>
-			<spot x="915.645" y="222.284" z="533" static_id="160"/>
-			<spot x="977.968" y="256.594" z="527.923" static_id="510"/>
-			<spot x="773.353" y="228.97" z="540.129" static_id="521"/>
-			<spot x="890.4" y="208.101" z="533.1" static_id="511"/>
-			<spot x="751.746" y="289.225" z="533.286" static_id="158"/>
-			<spot x="703.082" y="244.614" z="533.875" static_id="618"/>
-			<spot x="705.134" y="316.885" z="529.156" static_id="526"/>
-			<spot x="644.882" y="227.176" z="532.185" static_id="169"/>
-			<spot x="1085.21" y="587.356" z="512.279" static_id="523"/>
-			<spot x="1043.59" y="636.49" z="515.099" static_id="157"/>
-			<spot x="1034.93" y="539.368" z="524.197" static_id="167"/>
-			<spot x="997.078" y="519.016" z="525.73" static_id="524"/>
-			<spot x="974.594" y="493.377" z="529.072" static_id="619"/>
-			<spot x="916.745" y="558.625" z="524.921" static_id="161"/>
-			<spot x="882.863" y="548.593" z="539.741" static_id="1197"/>
-			<spot x="864.67" y="541.74" z="538.614" static_id="153"/>
-			<spot x="875.718" y="605.061" z="537.951" static_id="530"/>
-			<spot x="835.643" y="516.41" z="529.3" static_id="152"/>
-			<spot x="846.176" y="482.007" z="527.75" static_id="155"/>
-			<spot x="942.921" y="417.827" z="531.75" static_id="516"/>
-			<spot x="956.661" y="431.907" z="531.791" static_id="620"/>
-			<spot x="851.992" y="443.309" z="537.168" static_id="162"/>
-			<spot x="902.03" y="431.16" z="527.696" static_id="520"/>
-			<spot x="835.981" y="415.306" z="539.545" static_id="515"/>
-		</spawn>
-		<!-- Wet Parchment Book -->
-		<spawn npc_id="700610" respawn_time="295">
-			<spot x="370" y="558" z="459.64133" static_id="529"/>
-		</spawn>
-		<!-- Eastern Obelisk Support -->
-		<spawn npc_id="700628" respawn_time="295">
-			<spot x="458" y="514" z="460.362" static_id="159"/>
-		</spawn>
-		<!-- Western Obelisk Support -->
-		<spawn npc_id="700629" respawn_time="295">
-			<spot x="389.799" y="104.065" z="463.433" static_id="165"/>
-		</spawn>
-		<!-- Northern Obelisk Support -->
-		<spawn npc_id="700630" respawn_time="295">
-			<spot x="177.021" y="63.0992" z="530.093" static_id="156"/>
-		</spawn>
-		<!-- Small Jewel Box -->
-		<spawn npc_id="700631" respawn_time="295">
-			<spot x="2947.29" y="324.693" z="346.64" static_id="27"/>
-		</spawn>
 		<!-- BLDF4_DramataMessageControl_n -->
 		<spawn npc_id="282135" respawn_time="295">
 			<spot x="142.088" y="2139.93" z="440" h="89"/>
@@ -5162,12 +5364,6 @@
 			<spot x="2308.17" y="1438.68" z="206.38" h="113" random_walk="5"/>
 			<spot x="2093.75" y="1509.16" z="232.88" h="115"/>
 		</spawn>
-		<!-- 1221_Temporary Door -->
-		<spawn npc_id="700545" respawn_time="295">
-			<spot x="1633.24" y="1623.51" z="172" h="33" static_id="756"/>
-			<spot x="978.149" y="1018.74" z="335.395" h="33" static_id="2312"/>
-			<spot x="1745.53" y="1716.73" z="226.582" h="33" static_id="1039"/>
-		</spawn>
 		<!-- Training Dummy -->
 		<spawn npc_id="700574" respawn_time="295">
 			<spot x="1332.909" y="417.785" z="549.000" h="100"/>
@@ -5184,66 +5380,6 @@
 			<spot x="1301.577" y="398.924" z="548.875" h="96"/>
 			<spot x="1328.154" y="414.285" z="549.000" h="100"/>
 			<spot x="1371.627" y="448.873" z="548.235" h="76"/>
-		</spawn>
-		<!-- Inggison Drana -->
-		<spawn npc_id="700601" respawn_time="295">
-			<spot x="1383.2997" y="1201.9624" z="405.33823" static_id="508"/>
-			<spot x="1502.3407" y="1232.6688" z="393.75" static_id="507"/>
-			<spot x="1262.1099" y="1402.1119" z="414.50699" static_id="256"/>
-			<spot x="1214.53" y="1242.8219" z="424.08264" static_id="109"/>
-			<spot x="1293.2195" y="1225.5698" z="427.21173" static_id="108"/>
-			<spot x="1246.8448" y="1213.5446" z="423.25" static_id="102"/>
-			<spot x="1286.1587" y="963.40912" z="452.23715" static_id="101"/>
-			<spot x="1361.4939" y="1089.9641" z="450.24774" static_id="100"/>
-			<spot x="1279.9253" y="1083.728" z="447.75" static_id="99"/>
-			<spot x="1382.8625" y="1015.0601" z="451.875" static_id="98"/>
-			<spot x="1415.6104" y="1050.7789" z="452.81354" static_id="90"/>
-			<spot x="1499.2046" y="1334.0011" z="393.70029" static_id="89"/>
-			<spot x="1329.4475" y="1388.8782" z="395.25" static_id="88"/>
-			<spot x="1221.7316" y="1412.098" z="410.73935" static_id="87"/>
-			<spot x="1271.7354" y="1367.5244" z="415.68445" static_id="74"/>
-			<spot x="1190.5702" y="1381.5093" z="413.10309" static_id="73"/>
-			<spot x="1182.3318" y="1255.2074" z="422.25" static_id="72"/>
-			<spot x="1202.2207" y="1196.2413" z="423.75" static_id="71"/>
-			<spot x="1183.3053" y="1283.464" z="419.99179" static_id="70"/>
-			<spot x="1283.1456" y="1265.0276" z="422.375" static_id="69"/>
-			<spot x="1282.4819" y="1290.3621" z="418.73996" static_id="68"/>
-			<spot x="1309.2809" y="1350.7841" z="417.72522" static_id="67"/>
-			<spot x="1349.2905" y="1363.5148" z="397.08289" static_id="66"/>
-			<spot x="1380.8473" y="1363.8428" z="396.19705" static_id="65"/>
-			<spot x="1424.545" y="1426.9105" z="392.31812" static_id="64"/>
-			<spot x="1435.9932" y="1373.4781" z="391.4075" static_id="63"/>
-			<spot x="1485.3755" y="1272.4258" z="394.35428" static_id="62"/>
-			<spot x="1453.6958" y="1263.7296" z="394.39401" static_id="61"/>
-			<spot x="1413.782" y="1264.3466" z="394.54892" static_id="60"/>
-			<spot x="1378.0293" y="1254.6449" z="396.91553" static_id="59"/>
-		</spawn>
-		<!-- Parchment Map -->
-		<spawn npc_id="700605" respawn_time="295">
-			<spot x="1518.82" y="1313.11" z="398.168" static_id="246"/>
-		</spawn>
-		<!-- Wriggling Klaw Egg -->
-		<spawn npc_id="700910" respawn_time="295">
-			<spot x="1203.5254" y="964.23444" z="408.54825" static_id="2378"/>
-			<spot x="1090.4008" y="870.86572" z="415.5267" static_id="2366"/>
-			<spot x="1138.921" y="1038.2955" z="435.24762" static_id="2375"/>
-			<spot x="1101.9111" y="814.40057" z="406.577" static_id="2376"/>
-			<spot x="1177.0483" y="912.61401" z="408.28561" static_id="2380"/>
-			<spot x="1201.8378" y="803.33704" z="389.01169" static_id="2373"/>
-			<spot x="1120.6304" y="884.85736" z="413.59421" static_id="2370"/>
-			<spot x="1023.0985" y="901.33862" z="415.66333" static_id="2382"/>
-			<spot x="1074.8907" y="900.21759" z="415.25171" static_id="2365"/>
-			<spot x="1173.2013" y="801.97516" z="390.28323" static_id="2372"/>
-			<spot x="1091.3461" y="1033.8612" z="433.13489" static_id="2368"/>
-			<spot x="1219.4552" y="930.7348" z="410.1676" static_id="2379"/>
-			<spot x="1127.8036" y="838.03723" z="408.11255" static_id="2381"/>
-			<spot x="1257.9177" y="899.51416" z="408.68262" static_id="2371"/>
-			<spot x="1215.5809" y="782.12427" z="388.70673" static_id="2374"/>
-			<spot x="1076.7119" y="796.41675" z="406.66592" static_id="2377"/>
-			<spot x="1030.1354" y="946.35199" z="415.64133" static_id="2384"/>
-			<spot x="1251.7596" y="879.31836" z="409.07425" static_id="2369"/>
-			<spot x="1111.9307" y="915.60931" z="415.88763" static_id="2367"/>
-			<spot x="1055.7737" y="923.67462" z="416.41064" static_id="2383"/>
 		</spawn>
 		<!-- Laestrygos -->
 		<spawn npc_id="799038" respawn_time="295">
@@ -5485,10 +5621,6 @@
 		<spawn npc_id="799070" respawn_time="295">
 			<spot x="2052.644" y="196.58794" z="492.16174" h="30"/>
 		</spawn>
-		<!-- Air Line -->
-		<spawn npc_id="799057" respawn_time="295">
-			<spot x="398.9663" y="949.84705" z="460.5389" static_id="202"/>
-		</spawn>
 		<!-- Bukurunerk -->
 		<spawn npc_id="799056" respawn_time="295">
 			<spot x="1290.55" y="325.459" z="590.084" h="76"/>
@@ -5549,50 +5681,6 @@
 		<!-- Matias -->
 		<spawn npc_id="798900" respawn_time="295">
 			<spot x="1385.6" y="306.593" z="588.872" h="68"/>
-		</spawn>
-		<!-- Air Line -->
-		<spawn npc_id="798901" respawn_time="295">
-			<spot h="0" static_id="621" x="1333.9467" y="273.9589" z="589.49347"/>
-		</spawn>
-		<!-- Baby Basket -->
-		<spawn npc_id="700909" respawn_time="295">
-			<spot x="1473.9398" y="1360.486" z="392.3428" static_id="2359"/>
-		</spawn>
-		<!-- Unknown Book -->
-		<spawn npc_id="700616" respawn_time="295">
-			<spot x="62.184353" y="916.74963" z="358.30826" static_id="139"/>
-		</spawn>
-		<!-- Song of Three Sages -->
-		<spawn npc_id="748009" respawn_time="295">
-			<spot x="361.50354" y="942.0997" z="460.73312" h="33" static_id="1215"/>
-		</spawn>
-		<!-- Red Wind Mushroom -->
-		<spawn npc_id="700917" respawn_time="295">
-			<spot x="1160.1594" y="1630.1019" z="235.65338" static_id="2387"/>
-		</spawn>
-		<!-- Poisonous Wind Mushroom -->
-		<spawn npc_id="700916" respawn_time="295">
-			<spot x="1059.9415" y="1729.9016" z="246.46027" static_id="2386"/>
-		</spawn>
-		<!-- Rough Wind Mushroom -->
-		<spawn npc_id="700915" respawn_time="295">
-			<spot x="963.45135" y="1563.2386" z="315.0337" static_id="2385"/>
-		</spawn>
-		<!-- Dry Crater -->
-		<spawn npc_id="700914" respawn_time="295">
-			<spot x="947.9281" y="1814.0986" z="326.25" static_id="2393"/>
-		</spawn>
-		<!-- Hot Crater -->
-		<spawn npc_id="700913" respawn_time="295">
-			<spot x="893.278" y="1774.0514" z="326.25" static_id="3719"/>
-		</spawn>
-		<!-- Soggy Crater -->
-		<spawn npc_id="700912" respawn_time="295">
-			<spot x="775.9929" y="1797.2437" z="322.125" static_id="2391"/>
-		</spawn>
-		<!-- Hardened Crater -->
-		<spawn npc_id="700911" respawn_time="295">
-			<spot x="712.82715" y="1866.3936" z="322.125" static_id="2390"/>
 		</spawn>
 		<!-- Drenia -->
 		<spawn npc_id="798903" respawn_time="295">
@@ -5702,10 +5790,6 @@
 		<!-- Dolabella -->
 		<spawn npc_id="798961" respawn_time="295">
 			<spot x="2716.8137" y="1481.2267" z="383.9637" h="83"/>
-		</spawn>
-		<!-- Air Line -->
-		<spawn npc_id="798962" respawn_time="295">
-			<spot x="2719.124" y="1424.8901" z="384.87866" static_id="1202"/>
 		</spawn>
 		<!-- Cinisca -->
 		<spawn npc_id="798963" respawn_time="295">
@@ -5931,26 +6015,6 @@
 			<spot x="1725.66" y="775.145" z="449.25" h="65" random_walk="4"/>
 			<spot x="1664.06" y="863.635" z="449.531" h="55" random_walk="4"/>
 			<spot x="1716.82" y="792.043" z="449.25" h="109" random_walk="4"/>
-		</spawn>
-		<!-- Beritra Monument -->
-		<spawn npc_id="700748" respawn_time="295">
-			<spot x="645.577" y="1647.31" z="334.266" h="20" static_id="1198"/>
-		</spawn>
-		<!-- Meslamtaeda Monument -->
-		<spawn npc_id="700746" respawn_time="295">
-			<spot x="2381.29" y="1823.94" z="238.139" h="19" static_id="205"/>
-		</spawn>
-		<!-- Vulkan -->
-		<spawn npc_id="217098" respawn_time="295">
-			<spot x="1389.57" y="1222.26" z="331.933" h="57" random_walk="65"/>
-		</spawn>
-		<!-- Ereshkigal Monument -->
-		<spawn npc_id="700747" respawn_time="295">
-			<spot x="2099.07" y="1879.6" z="316.242" h="35" static_id="206"/>
-		</spawn>
-		<!-- Fregion Monument -->
-		<spawn npc_id="700745" respawn_time="295">
-			<spot x="903.147" y="1639.72" z="338.273" h="46" static_id="1199"/>
 		</spawn>
 		<!-- Cadir -->
 		<spawn npc_id="799819" respawn_time="295">
@@ -7817,29 +7881,6 @@
 		<spawn npc_id="209062" respawn_time="295">
 			<spot x="399.9065" y="930.4351" z="456.7287" h="107"/>
 		</spawn>
-		<!-- Taloc's Root Herb -->
-		<spawn npc_id="700908" respawn_time="-1">
-			<spot x="2754.7336" y="362.6173" z="342.5771" static_id="2345"/>
-			<spot x="2770.9312" y="333.6735" z="339.7099" static_id="2358"/>
-			<spot x="2789.2395" y="358.8634" z="348.7928" static_id="2360"/>
-			<spot x="2810.5977" y="304.8549" z="345.0383" static_id="2346"/>
-			<spot x="2787.0225" y="287.2079" z="342.8392" static_id="2344"/>
-			<spot x="2839.8948" y="314.3695" z="352.1208" static_id="2361"/>
-			<spot x="2834.7180" y="292.4097" z="338.3973" static_id="2347"/>
-			<spot x="2870.1299" y="305.5302" z="346.1551" static_id="2348"/>
-			<spot x="2883.1758" y="325.2162" z="348.8538" static_id="2362"/>
-			<spot x="2904.6899" y="335.6934" z="339.0779" static_id="2349"/>
-			<spot x="2909.6494" y="379.3006" z="347.2552" static_id="2363"/>
-			<spot x="2897.4905" y="445.8443" z="327.5000" static_id="2352"/>
-			<spot x="2927.3618" y="436.3551" z="340.7278" static_id="2350"/>
-			<spot x="2874.9883" y="465.9828" z="327.7495" static_id="2353"/>
-			<spot x="2852.3379" y="461.9882" z="335.3348" static_id="2354"/>
-			<spot x="2927.7874" y="480.0887" z="340.6062" static_id="2351"/>
-			<spot x="2835.8281" y="510.4403" z="339.9617" static_id="2356"/>
-			<spot x="2860.2434" y="512.2852" z="340.0315" static_id="2364"/>
-			<spot x="2785.1440" y="426.7791" z="339.0000" static_id="2357"/>
-			<spot x="2797.8645" y="455.8243" z="339.3775" static_id="2355"/>
-		</spawn>
 		<!-- Elyos Gazing Ashulagen -->
 		<spawn npc_id="219618" respawn_time="4540">
 			<spot x="2602.9395" y="1343.7429" z="330.9573" h="23"/>
@@ -7855,32 +7896,7 @@
 			<spot x="2082.6292" y="1934.5090" z="315.7793" h="31"/>
 			<spot x="1124.7916" y="1846.5120" z="328.6878" h="44"/>
 			<spot x="2702.6909" y="925.8267" z="389.0757" h="46"/>
-		</spawn>
-		<!-- Traveller's Bag -->
-		<spawn npc_id="730229" respawn_time="295">
-			<spot x="460.1033" y="2027.9733" z="287.599" static_id="616"/>
-		</spawn>
-		<!-- Obelisk -->
-		<spawn npc_id="730235" respawn_time="295">
-			<spot x="1386.2183" y="308.9132" z="589.47925" static_id="458"/>
-		</spawn>
-		<!-- Obelisk -->
-		<spawn npc_id="730236" respawn_time="295">
-			<spot x="2714.7075" y="1482.3495" z="384.63663" static_id="552"/>
-		</spawn>
-		<!-- Obelisk -->
-		<spawn npc_id="730281" respawn_time="295">
-			<spot x="379.33493" y="952.23126" z="461.39877" static_id="46"/>
-		</spawn>
-		<!-- Obelisk -->
-        <spawn npc_id="730282" respawn_time="295">
-            <spot x="1889.9365" y="1748.7122" z="328.40558" static_id="1308"/>
-        </spawn>				
-		<!-- Mailbox -->
-		<spawn npc_id="700000" respawn_time="295">
-			<spot x="1379.314" y="256.260" z="589.790" h="46"/>
-			<spot x="2764.66" y="1439.58" z="384.6456" h="60"/>
-		</spawn>
+		</spawn>				
 		<spawn npc_id="799091" respawn_time="295">
 			<spot h="46" x="1373.4363" y="246.87253" z="589.78723"/>
 		</spawn>
@@ -7939,10 +7955,6 @@
         <!-- Canyon Entry Controller -->
         <spawn npc_id="702663" respawn_time="295">
             <spot x="1375.3484" y="2298.869" z="296.74115" h="90"/>
-        </spawn>
-        <!-- Silentera Westgate -->
-        <spawn npc_id="730256" respawn_time="295">
-            <spot x="1362.7719" y="2302.2793" z="296.6737" h="90" static_id="1200"/>
         </spawn>
 		<!-- Hanarkand Quartermaster -->
 		<spawn npc_id="216436" respawn_time="295">
@@ -8455,34 +8467,6 @@
         <!-- Alphecca -->
         <spawn npc_id="799078" respawn_time="295">
             <spot x="2296.414" y="1685.2998" z="273.78452" h="106"/>
-        </spawn>
-        <!-- Balaur Prison Entrance -->
-        <spawn npc_id="700743" respawn_time="295">
-            <spot x="2372.6287" y="2042.4458" z="250.63559" static_id="509"/>
-        </spawn>
-        <!-- Meslamtaeda Monument -->
-        <spawn npc_id="700746" respawn_time="295">
-            <spot x="2381.6648" y="1824.5135" z="237.98756" static_id="205"/>
-        </spawn>
-        <!-- Northern Star -->
-        <spawn npc_id="700627" respawn_time="295">
-            <spot x="2431.0928" y="1848.3674" z="235.0" static_id="143"/>
-        </spawn>
-        <!-- Eastern Star -->
-        <spawn npc_id="700624" respawn_time="295">
-            <spot x="2472.5986" y="1886.5056" z="234.90295" static_id="140"/>
-        </spawn>
-        <!-- Southern Star -->
-        <spawn npc_id="700626" respawn_time="295">
-            <spot x="2509.4077" y="1844.3604" z="235.0" static_id="141"/>
-        </spawn>
-        <!-- Western Star -->
-        <spawn npc_id="700625" respawn_time="295">
-            <spot x="2467.3418" y="1807.2083" z="235.0" static_id="142"/>
-        </spawn>
-        <!-- Mystical Cell -->
-        <spawn npc_id="217106" respawn_time="295">
-            <spot x="2312.475" y="1673.8474" z="273.7846" static_id="1782"/>
         </spawn>
         <!-- Hanarkand 4.8 End -->
 		<!-- Somation || LF4_Somation_E -->
