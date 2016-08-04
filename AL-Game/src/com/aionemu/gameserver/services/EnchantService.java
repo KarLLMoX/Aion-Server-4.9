@@ -873,22 +873,22 @@ public class EnchantService {
                     int id = item.getItemTemplate().getAuthorizeName();
                     switch (id) {
 	                    case 52:
-	                    case 10063:
+	                    case 10051:
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_ATTACK, 0));
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 	                        break;
 	                    case 53:
-	                    case 10064:
+	                    case 10052:
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.BOOST_MAGICAL_SKILL, 0));
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 	                        break;
 	                    case 57: //4.9
-	                    case 10065: //4.9
+	                    case 10056: //4.9
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.PHYSICAL_CRITICAL, 0));
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 	                        break;
 	                    case 58: //4.9
-	                    case 10066: //4.9
+	                    case 10057: //4.9
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.MAGICAL_ACCURACY, 0));
 	                        modifiers.add(new StatEnchantFunction(item, StatEnum.MAXHP, 0));
 	                        break;
