@@ -53,13 +53,16 @@
        <a href="genGoodlist.php" target="_self"><input type="button" value="Generieren Trade-Dateien ..."  style="width:220px"></a><br><br>
        <a href="genHousing.php"  target="_self"><input type="button" value="Generieren Housing-Dateien ..." style="width:220px"></a><br><br>
        <a href="genInstance.php" target="_self"><input type="button" value="Generieren Instance-Dateien ..." style="width:220px"></a><br><br>
-       <a href="genPets.php"     target="_self"><input type="button" value="Generieren Pets-Dateien ..." style="width:220px"></a><br><br>
-       <a href="genSkills.php"   target="_self"><input type="button" value="Generieren Skill-Dateien ..." style="width:220px"></a>
+       <a href="genPets.php"     target="_self"><input type="button" value="Generieren Pets-Dateien ..." style="width:220px"></a>
        </center>
      </td>
      <td valign="top">
        <center>
-       <span style="font-size:18px;line-height:27px;color:cyan;">sonstige Datei-Generierungen</span><br><br>
+       <a href="genSkills.php"   target="_self"><input type="button" value="Generieren Skill-Dateien ..." style="width:220px"></a><br><br>
+       <a href="genService.php"   target="_self"><input type="button" value="Generieren Service-Dateien ..." style="width:220px"></a>
+       <br><br><br><br><br><br><br><br><br><br>
+       <span style="font-size:5px;line-height:26px"></span>
+       <span style="font-size:18px;line-height:31px;color:cyan;margin-top:12px;border-top:1px solid cyan;border-bottom:1px solid cyan">sonstige Datei-Generierungen</span><br><br>
        <select name="phpscript" onchange="callPhpScript();" style="width:220px">
 <?PHP
     $tabPhp = array(
