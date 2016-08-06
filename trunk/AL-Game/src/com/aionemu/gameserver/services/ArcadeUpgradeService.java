@@ -49,7 +49,7 @@ public class ArcadeUpgradeService {
     	boolean isFrenzy = arcade.isFrenzy();    	
     	int rewardLevel = 0;
     	
-		if (frenzyLevel < 4) {							// 1-3 RewardLevel 1
+		if (frenzyLevel < 3) {							// 1-3 RewardLevel 1
     		rewardLevel  = 1;
 		} else if (frenzyLevel >= 4 && frenzyLevel < 6) { // 4-5 RewardLevel 2
     		rewardLevel = 2;
@@ -61,24 +61,26 @@ public class ArcadeUpgradeService {
     	    	
     	List<ArcadeTabItem> items = DataManager.ARCADE_UPGRADE_DATA.getArcadeTabById(rewardLevel);
     	int count = (items.size()-1) - (isFrenzy ? 0 : 2); //only provide full itemlist if isFrenzy else don't provide the last two items of the list  
-    	ArcadeTabItem itemReward = null;
-    	if (Rnd.chance(50)) //extraChance to get Only FrenzyItems
-    		itemReward = items.get(Rnd.get(count-2, count));    	
-    	else itemReward = items.get(Rnd.get(0, count));
+//        ArcadeTabItem itemReward = null;
+//        if (Rnd.chance(50)) //extraChance to get Only FrenzyItems
+//            itemReward = items.get(Rnd.get(count-2, count));
+//        else itemReward = items.get(Rnd.get(0, count));
     	
-    	return itemReward;    	
+    	return items.get(Rnd.get(0, count));    	
     }
     
     public static void getSpecialRewardItem(Player player) {	  	    	
     	PlayerUpgradeArcade arcade = player.getUpgradeArcade();
     	List<ArcadeTabItem> items = DataManager.ARCADE_UPGRADE_DATA.getArcadeTabById(4);
-    	int count = (items.size()-1) - (arcade.isFrenzy() ? 0 : 2); 
-    	ArcadeTabItem item = items.get(Rnd.get(0, count));
-    	int itemCount = arcade.isFrenzy() ? item.getNormalCount() : item.getFrenzyCount();    	
-      	
+    	ArcadeTabItem item = items.get(Rnd.get(0, items.size()));
+    	int itemCount = arcade.isFrenzy() ? item.getNormalCount() : item.getFrenzyCount();
+    	if (itemCount == 0) {
+    		itemCount = item.getFrenzyCount();
+    	}
     	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(11));
     	PacketSendUtility.sendPacket(player, itemCount > 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD(item.getItemId()));
       	ItemService.addItem(player, item.getItemId(), itemCount);
+      	arcade.setFrenzy(false);
     }
 
     public static ArcadeUpgradeService getInstance() {
@@ -189,10 +191,10 @@ public class ArcadeUpgradeService {
         
         // User gets a random rewardItem of highest rewardLevel for 4 times Frenzy
         if (arcade.getFrenzyCount() == 4) {
+            arcade.setFrenzy(true);
             getSpecialRewardItem(player); //if this is called before arcade.setFrenzy(true) Player didn't have the chance to get a frenzy_item of highest level.
         }
         
-        arcade.setFrenzy(true);
         PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVERTIME_START);
 
         PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, frenzyTime, arcade.getFrenzyCount()));
@@ -209,7 +211,7 @@ public class ArcadeUpgradeService {
                 }
 
             }
-        }, frenzyTime * 1000); // offi 90 seconds timer
+        }, 5000);//frenzyTime * 1000); // offi 90 seconds timer
         player.getUpgradeArcade().setFrenzyPoints(0);
 
         if (arcade.getFrenzyCount() == 4) {
@@ -228,12 +230,17 @@ public class ArcadeUpgradeService {
     	int itemCount = arcade.isFrenzy() ? item.getNormalCount() : item.getFrenzyCount();
     	    	
     	if (arcade.isFrenzy()) {
-    		PacketSendUtility.sendPacket(player, itemCount > 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD(item.getItemId()));
+    		PacketSendUtility.sendPacket(player, itemCount >= 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD(item.getItemId()));
     	} else {
-    		PacketSendUtility.sendPacket(player, itemCount > 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD(item.getItemId()));
+    		PacketSendUtility.sendPacket(player, itemCount >= 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD(item.getItemId()));
     	}
-
-    	ItemService.addItem(player, item.getItemId(), itemCount);
+    	
+    	if (itemCount == 0 ) {
+    		ItemService.addItem(player, item.getItemId(), item.getFrenzyCount());
+    	} else {
+    		ItemService.addItem(player, item.getItemId(), itemCount);
+    	}
+    	
     	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(6, item));
         arcade.reset();
     }
