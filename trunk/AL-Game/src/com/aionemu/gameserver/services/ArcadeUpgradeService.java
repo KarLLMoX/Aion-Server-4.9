@@ -211,7 +211,7 @@ public class ArcadeUpgradeService {
                 }
 
             }
-        }, 5000);//frenzyTime * 1000); // offi 90 seconds timer
+        }, frenzyTime * 1000); // offi 90 seconds timer
         player.getUpgradeArcade().setFrenzyPoints(0);
 
         if (arcade.getFrenzyCount() == 4) {
