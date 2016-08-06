@@ -43,21 +43,21 @@ public class ArcadeUpgradeService {
     public ArcadeUpgradeService() {
     }
     
-    public static ArcadeTabItem getRewardItem(Player player)
-    {	
+    public static ArcadeTabItem getRewardItem(Player player) {	
     	PlayerUpgradeArcade arcade = player.getUpgradeArcade();
     	int frenzyLevel = arcade.getFrenzyLevel();
     	boolean isFrenzy = arcade.isFrenzy();    	
     	int rewardLevel = 0;
     	
-		if (frenzyLevel < 4) 							// 1-3 RewardLevel 1
+		if (frenzyLevel < 4) {							// 1-3 RewardLevel 1
     		rewardLevel  = 1;
-    	else if (frenzyLevel >= 4 && frenzyLevel < 6 ) 	// 4-5 RewardLevel 2
+		} else if (frenzyLevel >= 4 && frenzyLevel < 6) { // 4-5 RewardLevel 2
     		rewardLevel = 2;
-    	else if (frenzyLevel >= 6 && frenzyLevel < 8) 	// 6-7 RewardLevel 3
+		} else if (frenzyLevel >= 6 && frenzyLevel < 8) { 	// 6-7 RewardLevel 3
     		rewardLevel = 3;
-    	else if (frenzyLevel >= 8) 						//  8  RewardLevel 4
+		} else if (frenzyLevel >= 8) { 						//  8  RewardLevel 4
     		rewardLevel = 4;
+		}
     	    	
     	List<ArcadeTabItem> items = DataManager.ARCADE_UPGRADE_DATA.getArcadeTabById(rewardLevel);
     	int count = (items.size()-1) - (isFrenzy ? 0 : 2); //only provide full itemlist if isFrenzy else don't provide the last two items of the list  
@@ -69,8 +69,7 @@ public class ArcadeUpgradeService {
     	return itemReward;    	
     }
     
-    public static void getSpecialRewardItem(Player player)
-    {	  	    	
+    public static void getSpecialRewardItem(Player player) {	  	    	
     	PlayerUpgradeArcade arcade = player.getUpgradeArcade();
     	List<ArcadeTabItem> items = DataManager.ARCADE_UPGRADE_DATA.getArcadeTabById(4);
     	int count = (items.size()-1) - (arcade.isFrenzy() ? 0 : 2); 
@@ -82,68 +81,59 @@ public class ArcadeUpgradeService {
       	ItemService.addItem(player, item.getItemId(), itemCount);
     }
 
-    public static ArcadeUpgradeService getInstance()
-    {
+    public static ArcadeUpgradeService getInstance() {
         return SingletonHolder.instance;
     }
 
-    public void closeWindow(Player player)
-    {
+    public void closeWindow(Player player) {
         PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(2));
     }
 
-    public void startArcadeUpgrade(Player player)
-    {
+    public void startArcadeUpgrade(Player player) {
     	PlayerUpgradeArcade arcade = player.getUpgradeArcade();
     	
-    	if (arcade == null)
+    	if (arcade == null) {
     		arcade = new PlayerUpgradeArcade();
-    	
+    	}
     	arcade.reset();
     	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(arcade.getFrenzyPoints(), arcade.getFrenzyCount()));
     }
 
-    public void showRewardList(Player player)
-    {
+    public void showRewardList(Player player) {
         PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(10));
     }
 
-    public List<ArcadeTab> getTabs()
-    {
+    public List<ArcadeTab> getTabs() {
         return DataManager.ARCADE_UPGRADE_DATA.getArcadeTabs();
     }
 
-    public void tryArcadeUpgrade(final Player player) 
-    {
-        if (!EventsConfig.ENABLE_EVENT_ARCADE) {
+    public void tryArcadeUpgrade(final Player player) {
+    	if (!EventsConfig.ENABLE_EVENT_ARCADE) {
             return;
         }
         
         PlayerUpgradeArcade arcade = player.getUpgradeArcade();
         Storage localStorage = player.getInventory();
         
-        if (localStorage.getFreeSlots() < 1)
-        {
+        if (localStorage.getFreeSlots() < 1) {
         	PacketSendUtility.sendMessage(player, "Your Inventory is full. You need at least 1 free Slot to play Upgrade Arcade..");
         	return;
         }
         
-        if ((arcade.getFrenzyLevel() == 1) && (!localStorage.decreaseByItemId(186000389, 1L)))
-        {
+        if ((arcade.getFrenzyLevel() == 1) && (!localStorage.decreaseByItemId(186000389, 1L))) {
         	PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_CHECK);
         	return;
         }
             
         
-        if (arcade.isReTry() && (!localStorage.decreaseByItemId(186000389, 2L)))
-        {
+        if (arcade.isReTry() && (!localStorage.decreaseByItemId(186000389, 2L))) {
         	PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_CHECK);
         	return;
         }
 
                 
-        if (arcade.isFailed() || arcade.getFrenzyLevel() == 1)
-        {
+        if (arcade.isFailed() || arcade.getFrenzyLevel() == 1) {
+        	
         	arcade.setFrenzyPoints(arcade.getFrenzyPoints() + 8);
         	arcade.setFailed(false);
         }
@@ -160,7 +150,7 @@ public class ArcadeUpgradeService {
 
     }
 
-    public void getPlaySuccesArcade (final Player player, final PlayerUpgradeArcade arcade){
+    public void getPlaySuccesArcade (final Player player, final PlayerUpgradeArcade arcade) {
             arcade.setFrenzyLevel(arcade.getFrenzyLevel() + 1);
             //GameServer.log.info("[ArcadeUpgrade] Sucess ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
             PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, true, arcade.getFrenzyPoints()));
@@ -172,7 +162,7 @@ public class ArcadeUpgradeService {
             }, 3000);
     }
 
-    public void getPlayFailedArcade (final Player player, final PlayerUpgradeArcade arcade){
+    public void getPlayFailedArcade (final Player player, final PlayerUpgradeArcade arcade) {
         //when Level is under 6, player can't resume and gets a reward of the lowest level.
         //GameServer.log.info("[ArcadeUpgrade] Failed ! Player "+player.getName()+" tries ArcadeUpgrade Points: " +arcade.getFrenzyPoints()+ " FrenzyLevel: " +arcade.getFrenzyLevel()+ " isReTry: "+arcade.isReTry() + " frenzyCount : "+arcade.getFrenzyCount());
         PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(3, false, arcade.getFrenzyPoints()));
@@ -180,10 +170,9 @@ public class ArcadeUpgradeService {
             @Override
             public void run() {
                 PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(player, 5, arcade.isReTry() ? arcade.getFailedLevel() : 1));
-                if (arcade.getFrenzyLevel() < 6 && !arcade.isReTry())
+                if (arcade.getFrenzyLevel() < 6 && !arcade.isReTry()) {
                     arcade.setFrenzyLevel(1);
-                else
-                {
+                } else {
                     arcade.setReTry(true);
                     arcade.setFailedLevel(arcade.getFrenzyLevel());
                 }
@@ -193,60 +182,63 @@ public class ArcadeUpgradeService {
         }, 3000);
     }
 
-    public void getFrenzyArcade(final Player player, final PlayerUpgradeArcade arcade){
-        if (arcade.getFrenzyCount() < 4)
+    public void getFrenzyArcade(final Player player, final PlayerUpgradeArcade arcade) {
+        if (arcade.getFrenzyCount() < 4) {
             arcade.setFrenzyCount(arcade.getFrenzyCount() + 1);
-
+        }
+        
         // User gets a random rewardItem of highest rewardLevel for 4 times Frenzy
-        if (arcade.getFrenzyCount() == 4)
+        if (arcade.getFrenzyCount() == 4) {
             getSpecialRewardItem(player); //if this is called before arcade.setFrenzy(true) Player didn't have the chance to get a frenzy_item of highest level.
-
+        }
+        
         arcade.setFrenzy(true);
         PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVERTIME_START);
 
         PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, frenzyTime, arcade.getFrenzyCount()));
 
-        ThreadPoolManager.getInstance().schedule(new Runnable()
-        {
+        ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
-            public void run()
-            {
+            public void run() {
                 PlayerUpgradeArcade arcade = player.getUpgradeArcade();
                 PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(7, 0, arcade.getFrenzyCount()));
                 player.getUpgradeArcade().setFrenzy(false);
 
-                if (arcade.getFrenzyCount() >= 4)
+                if (arcade.getFrenzyCount() >= 4) {
                     arcade.setFrenzyCount(0);
+                }
 
             }
         }, frenzyTime * 1000); // offi 90 seconds timer
         player.getUpgradeArcade().setFrenzyPoints(0);
 
-        if (arcade.getFrenzyCount() == 4)
+        if (arcade.getFrenzyCount() == 4) {
             arcade.setFrenzyCount(0);
+        }
     }
 
-    public void getReward(Player player)
-    {
-        if (!EventsConfig.ENABLE_EVENT_ARCADE)
+    public void getReward(Player player) {
+        if (!EventsConfig.ENABLE_EVENT_ARCADE) {
             return;
+        }
         
         PlayerUpgradeArcade arcade = player.getUpgradeArcade();
                
         ArcadeTabItem item = getRewardItem(player);
     	int itemCount = arcade.isFrenzy() ? item.getNormalCount() : item.getFrenzyCount();
     	    	
-    	if (arcade.isFrenzy())
+    	if (arcade.isFrenzy()) {
     		PacketSendUtility.sendPacket(player, itemCount > 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_FEVER_ITEM_REWARD(item.getItemId()));
-    	else PacketSendUtility.sendPacket(player, itemCount > 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD(item.getItemId()));
+    	} else {
+    		PacketSendUtility.sendPacket(player, itemCount > 1 ? SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD_MULTI(item.getItemId(), itemCount) : SM_SYSTEM_MESSAGE.STR_MSG_GACHA_ITEM_REWARD(item.getItemId()));
+    	}
 
-    	ItemService.dropItemToInventory(player, item.getItemId());
+    	ItemService.addItem(player, item.getItemId(), itemCount);
     	PacketSendUtility.sendPacket(player, new SM_UPGRADE_ARCADE(6, item));
         arcade.reset();
     }
 
-    private static class SingletonHolder
-    {
+    private static class SingletonHolder {
         protected static final ArcadeUpgradeService instance = new ArcadeUpgradeService();
     }
 }
