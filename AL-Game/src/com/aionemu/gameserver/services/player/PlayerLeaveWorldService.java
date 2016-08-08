@@ -19,6 +19,7 @@ package com.aionemu.gameserver.services.player;
 import com.aionemu.commons.database.dao.DAOManager;
 import com.aionemu.gameserver.configs.main.AutoGroupConfig;
 import com.aionemu.gameserver.configs.main.GSConfig;
+import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.dao.EventItemsDAO;
 import com.aionemu.gameserver.dao.HouseObjectCooldownsDAO;
 import com.aionemu.gameserver.dao.ItemCooldownsDAO;
@@ -101,6 +102,7 @@ public class PlayerLeaveWorldService {
      */
     public static final void startLeaveWorld(Player player) {
         
+		if (CustomConfig.ENABLE_STORE_BINDPOINT) {
         // Store binding point before player logged out
         // Added by petruknisme
         
@@ -109,6 +111,7 @@ public class PlayerLeaveWorldService {
         
         // just for logging
         log.info("Store binding point before logged out " + player.getName() + " x " + player.getX() + " y " + player.getY() + " z " + player.getZ() + " heading " + player.getHeading());
+		}
         
         log.info("Player logged out: " + player.getName() + " Account: " + (player.getClientConnection() != null ? player.getClientConnection().getAccount().getName() : "disconnected"));
         FindGroupService.getInstance().removeFindGroup(player.getRace(), 0x00, player.getObjectId());

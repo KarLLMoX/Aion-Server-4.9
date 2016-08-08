@@ -316,5 +316,11 @@ public class CustomConfig {
     public static String ANTI_ZERG_MAP;
     @Property(key = "gameserver.antizerg.playercount", defaultValue = "3")
     public static int ANTI_ZERG_COUNT;
+	
+	/**
+     * Store Bind Point before Logout 
+     */
+    @Property(key = "gameserver.storebindpoint.enable", defaultValue = "false")
+    public static boolean ENABLE_STORE_BINDPOINT;
 
 }
