@@ -669,9 +669,9 @@
         <spawn npc_id="203868" respawn_time="295">
 			<spot x="1655.87" y="1649.89" z="548.734253" h="90" walker_id="LC1_LC1_SUB3_NPCPATH_LUSTIENA"/>
         </spawn>
-        <!-- Hether / SPLC1_NPC_SPG219 -->
+        <!-- Hether / eris -->
         <spawn npc_id="203869" respawn_time="295">
-			<spot x="1918.9177" y="1511.5715" z="590.011047" h="60"/>
+			<spot x="1919.03" y="1511.48" z="590.011047" h="90" walker_id="LC1_LC1_SUB5_NPCPATH_ERIS"/>
         </spawn>
         <!-- Libitina / libitina -->
         <spawn npc_id="203870" respawn_time="295">
