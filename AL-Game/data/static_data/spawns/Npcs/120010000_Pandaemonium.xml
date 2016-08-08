@@ -357,9 +357,9 @@
         <spawn npc_id="204136" respawn_time="295">
 			<spot x="1119.7423" y="1498.0488" z="213.834" h="78"/>
         </spawn>
-        <!-- Kadisa / SPDC1_NPC_lsh94 -->
+        <!-- Kadisa / kadisa -->
         <spawn npc_id="204137" respawn_time="295">
-			<spot x="916.86914" y="1416.4594" z="212.8562" h="109"/>
+			<spot x="917.12" y="1416.53" z="212.8562" h="90" walker_id="DC1_DC1_D_NPCPATH_KADISA"/>
         </spawn>
         <!-- Lusena / lusena -->
         <spawn npc_id="204138" respawn_time="295">
@@ -521,13 +521,13 @@
         <spawn npc_id="204177" respawn_time="295">
 			<spot x="1400.7245" y="1196.0847" z="209.419" h="48"/>
         </spawn>
-        <!-- Gwendag / SPDC1_NPC1 -->
+        <!-- Gwendag / gwendag -->
         <spawn npc_id="204178" respawn_time="295">
-			<spot x="1587.9429" y="1411.3473" z="192.35626" h="30"/>
+			<spot x="1588.17" y="1411.16" z="197.80" h="90" walker_id="DC1_DC1_A_NPCPATH_GWENDAG"/>
         </spawn>
-        <!-- Hebennjot / SPDC1_NPC5 -->
+        <!-- Hebennjot / hebennjot -->
         <spawn npc_id="204179" respawn_time="295">
-			<spot x="1540.9148" y="1403.0751" z="201.68068" h="3"/>
+			<spot x="1541.22" y="1403.00" z="212.80" h="90" walker_id="DC1_DC1_A_NPCPATH_HEBENNJOT"/>
         </spawn>
         <!-- Hiyask / hiyask -->
         <spawn npc_id="204180" respawn_time="295">
@@ -561,9 +561,9 @@
         <spawn npc_id="204188" respawn_time="295">
 			<spot x="1211.15" y="1397.55" z="208.125" h="90" walker_id="DC1_DC1_C_NPCPATH_SEHMAN"/>
         </spawn>
-        <!-- Lasesbini / STR_NPC_LASESBINI -->
+        <!-- Lasesbini / lasesbini -->
         <spawn npc_id="204189" respawn_time="295">
-			<spot x="1210.161621" y="1395.555664" z="208.125" h="60"/>
+			<spot x="1211.15" y="1397.55" z="208.125" h="90" walker_id="DC1_DC1_C_NPCPATH_SEHMAN"/>
         </spawn>
         <!-- Lindhelm / SPDC1_NPC_SPG81 -->
         <spawn npc_id="204190" respawn_time="295">
@@ -1113,6 +1113,7 @@
         <!-- Shugo Porter / shugo_dc1_14 -->
         <spawn npc_id="798120" respawn_time="295">
 			<spot x="1077.86" y="1069.70" z="201.524887" h="90" walker_id="DC1_DC1_H_SHUGO_DC1_14_2"/>
+			<spot x="1078.16" y="1072.41" z="201.520813" h="90" walker_id="DC1_DC1_H_NPCPATH_SHUGO_DC1_14"/>
         </spawn>
         <!-- Lyeikunerk / SPDC1_NPC45 -->
         <spawn npc_id="798153" respawn_time="295">
