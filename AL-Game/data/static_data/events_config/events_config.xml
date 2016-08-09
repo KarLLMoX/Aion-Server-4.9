@@ -1378,7 +1378,7 @@
                 <spawn_map map_id="120010000">
 					<!-- Picnic Decor -->
 					<spawn npc_id="833500" respawn_time="295">
-					    <spot x="1209.54" y="1404.5475" z="208.22072" h="62"/>
+					    <spot x="1200.7" y="1400.0" z="208.125" h="65"/>
 					</spawn>
                     <!-- Shimmering Fountain -->
                     <spawn npc_id="833501" respawn_time="295">
