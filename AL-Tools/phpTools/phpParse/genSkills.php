@@ -2589,7 +2589,7 @@ function getChangeStats($efftyp,$key,$e,$tbneg)
                 $stab = explode(",", getStatNames($x13) );
                 $smax = count($stab);
                 
-                if ($x05 != "?" && $x05 != "")
+                if ($x05 != "?" && $x05 != "" && $x05 != "ALLWP")
                     $cend = ">\n".
                             '                    <conditions>'."\n".
                             '                        <weapon weapon="'.getEffectWeaponType($x05).'"/>'."\n".
