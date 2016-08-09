@@ -1,1 +1,0 @@
-del output.txt
