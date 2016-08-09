@@ -9,10 +9,10 @@
         <spawn npc_id="284749" respawn_time="295">
             <spot h="33" x="388.79575" y="1171.5786" z="58.801796"/>
         </spawn>
-        <!-- Alkatron -->
+        <!-- Alkatron
         <spawn npc_id="804862" respawn_time="295">
             <spot h="33" x="402.55734" y="1169.1189" z="55.263813"/>
-        </spawn>
+        </spawn> -->
         <!-- Danuar Sanctuary Worker -->
         <spawn npc_id="235614" respawn_time="295">
             <spot h="46" x="1021.0842" y="393.07312" z="297.8753"/>
@@ -308,9 +308,9 @@
         <spawn npc_id="284754" respawn_time="295">
             <spot x="1064.9313" y="670.46515" z="290.14029" h="61"/>
         </spawn>
-        <!--"IDLDF5_Under_02_E_Dintanum_E"-->
+        <!--"IDLDF5_Under_02_E_Dintanum_E"
         <spawn npc_id="804863" respawn_time="295">
             <spot x="375.02567" y="1168.3021" z="63.25782" h="34"/>
-        </spawn>                                                              
+        </spawn> -->
     </spawn_map>
 </spawns>
