@@ -78,6 +78,7 @@
                 array("genNpcFactions.php","Npc-Factions"),
                 array("genPetSkills.php","Pet-Skills"),
                 array("genPlayerTitles.php","Player-Titles"),
+                array("genRecipes.php","Recipe-Templates"),
                 array("genRide.php","Ride"),
                 array("genRobot.php","Robot"),
                 array("genWeatherTable.php","Weather-Table")
