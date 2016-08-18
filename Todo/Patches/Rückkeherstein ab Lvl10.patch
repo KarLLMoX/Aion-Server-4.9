@@ -1,0 +1,28 @@
+Index: PlayerController.java
+===================================================================
+--- PlayerController.java	(revision 277)
++++ PlayerController.java	(working copy)
+@@ -716,6 +716,23 @@
+         // add recipe for morph
+         if (level == 10) {
+             CraftSkillUpdateService.getInstance().setMorphRecipe(player);
++
++            //TODO
++            //Derzeit wird der Stein für jeden char mit erreichen der Stufe 10 ausgegeben
++            //Hier sollte noch gecheckt werden wie lange der Account offline war (offiziel 30Tage)
++            //Sollte der Account diese 30 Tage oder mehr offline gewesen sein dann erhält er beim einloggen diesen Stein!
++			if (player.getRace() == Race.ASMODIANS) {
++                int derived = 164000336;
++                long derived_q = 1;
++                ItemService.addItem(player, derived, derived_q);
++                //PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.);	//TODO Message Asmodians
++			}
++			if (player.getRace() == Race.ELYOS){
++                int derived1 = 164000335;
++                long derived_q1 = 1;
++                ItemService.addItem(player, derived1, derived_q1);
++                //PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.);	//TODO Message Elyos
++			}
+         }
+ 
+         if (player.isInTeam()) {

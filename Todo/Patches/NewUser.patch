@@ -1,0 +1,178 @@
+Index: src/com/aionemu/gameserver/GameServer.java
+===================================================================
+--- src/com/aionemu/gameserver/GameServer.java	(revision 281)
++++ src/com/aionemu/gameserver/GameServer.java	(working copy)
+@@ -51,6 +51,7 @@
+ import com.aionemu.gameserver.services.gc.GarbageCollector;
+ import com.aionemu.gameserver.services.instance.*;
+ import com.aionemu.gameserver.services.player.FatigueService;
++import com.aionemu.gameserver.services.player.NewUserService;
+ import com.aionemu.gameserver.services.player.PlayerEventService;
+ import com.aionemu.gameserver.services.player.PlayerLimitService;
+ import com.aionemu.gameserver.services.reward.OnlineBonus;
+@@ -206,6 +207,7 @@
+         RiftService.getInstance().initRiftLocations();
+ 		Util.printSection(" ### Spawns ### ");
+ 		SpawnEngine.spawnAll();
++		NewUserService.getInstance(); 
+         if (EventsConfig.EVENT_ENABLED) {
+             PlayerEventService.getInstance();
+         }
+Index: src/com/aionemu/gameserver/model/account/Account.java
+===================================================================
+--- src/com/aionemu/gameserver/model/account/Account.java	(revision 281)
++++ src/com/aionemu/gameserver/model/account/Account.java	(working copy)
+@@ -54,6 +54,7 @@
+      * Membership of this account
+      */
+     private byte membership;
++    private byte newuser;
+     private AccountTime accountTime;
+     private Map<Integer, PlayerAccountData> players = new HashMap<Integer, PlayerAccountData>();
+     private Storage accountWarehouse;
+@@ -117,7 +118,18 @@
+     public void setMembership(byte membership) {
+         this.membership = membership;
+     }
++	
++    /**
++     * @return the new user
++     */
++    public byte getnewuser() {
++        return newuser;
++    }
+ 
++    public void setnewuser(byte newuser) {
++        this.newuser = newuser;
++    }
++
+     @Override
+     public boolean equals(Object o) {
+         if (this == o) {
+Index: src/com/aionemu/gameserver/network/loginserver/clientpackets/CM_ACOUNT_AUTH_RESPONSE.java
+===================================================================
+--- src/com/aionemu/gameserver/network/loginserver/clientpackets/CM_ACOUNT_AUTH_RESPONSE.java	(revision 281)
++++ src/com/aionemu/gameserver/network/loginserver/clientpackets/CM_ACOUNT_AUTH_RESPONSE.java	(working copy)
+@@ -58,6 +58,10 @@
+      */
+     private byte membership;
+     /**
++     * NewUser
++     */
++    private byte newuser;
++    /**
+      * Toll
+      */
+     private long toll;
+@@ -79,6 +83,7 @@
+ 
+             accessLevel = (byte) readC();
+             membership = (byte) readC();
++            newuser = (byte) readC();
+             toll = readQ();
+         }
+     }
+@@ -88,6 +93,6 @@
+      */
+     @Override
+     public void runImpl() {
+-        LoginServer.getInstance().accountAuthenticationResponse(accountId, accountName, result, accountTime, accessLevel, membership, toll);
++        LoginServer.getInstance().accountAuthenticationResponse(accountId, accountName, result, accountTime, accessLevel, membership, newuser, toll);
+     }
+ }
+Index: src/com/aionemu/gameserver/network/loginserver/LoginServer.java
+===================================================================
+--- src/com/aionemu/gameserver/network/loginserver/LoginServer.java	(revision 281)
++++ src/com/aionemu/gameserver/network/loginserver/LoginServer.java	(working copy)
+@@ -221,7 +221,7 @@
+      * @param accountTime
+      */
+     public void accountAuthenticationResponse(int accountId, String accountName, boolean result, AccountTime accountTime,
+-                                              byte accessLevel, byte membership, long toll) {
++                                              byte accessLevel, byte membership, byte newuser, long toll) {
+         AionConnection client = loginRequests.remove(accountId);
+ 
+         if (client == null) {
+@@ -228,7 +228,7 @@
+             return;
+         }
+ 
+-        Account account = AccountService.getAccount(accountId, accountName, accountTime, accessLevel, membership, toll);
++        Account account = AccountService.getAccount(accountId, accountName, accountTime, accessLevel, membership, newuser, toll);
+         if (!validateAccount(account)) {
+             log.info("[LoginServer] Illegal account auth detected: " + accountId);
+             client.close(new SM_L2AUTH_LOGIN_CHECK(false, accountName), true);
+Index: src/com/aionemu/gameserver/services/AccountService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/AccountService.java	(revision 281)
++++ src/com/aionemu/gameserver/services/AccountService.java	(working copy)
+@@ -70,7 +70,7 @@
+      * @return Account
+      */
+     public static Account getAccount(int accountId, String accountName, AccountTime accountTime, byte accessLevel,
+-                                     byte membership, long toll) {
++                                     byte membership, byte newuser, long toll) {
+         log.debug("[AS] request for account: " + accountId);
+ 
+         Account account = accountsMap.get(accountId);
+@@ -84,6 +84,7 @@
+         account.setAccountTime(accountTime);
+         account.setAccessLevel(accessLevel);
+         account.setMembership(membership);
++        account.setnewuser(newuser);
+         account.setToll(toll);
+         removeDeletedCharacters(account);
+         return account;
+Index: src/com/aionemu/gameserver/services/player/NewUserService.java
+===================================================================
+--- src/com/aionemu/gameserver/services/player/NewUserService.java	(nonexistent)
++++ src/com/aionemu/gameserver/services/player/NewUserService.java	(working copy)
+@@ -0,0 +1,48 @@
++/**
++ * This file is part of Aion-Lightning <aion-lightning.org>.
++ *
++ *  Aion-Lightning is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 3 of the License, or
++ *  (at your option) any later version.
++ *
++ *  Aion-Lightning is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details. *
++ *  You should have received a copy of the GNU General Public License
++ *  along with Aion-Lightning.
++ *  If not, see <http://www.gnu.org/licenses/>.
++ */
++package com.aionemu.gameserver.services.player;
++
++import com.aionemu.gameserver.model.gameobjects.player.Player;
++import com.aionemu.gameserver.utils.ThreadPoolManager;
++import com.aionemu.gameserver.world.World;
++import com.aionemu.gameserver.world.knownlist.Visitor;
++
++public class NewUserService {
++
++	protected Visitor<Player> visitor;
++	String playerName = "";
++
++    private NewUserService() {
++        ThreadPoolManager.getInstance().scheduleAtFixedRate(new Runnable() {
++            @Override
++            public void run() {
++                World.getInstance().doOnAllPlayers(visitor);
++				playerName = ("\uE023" + " "); //TODO TAG
++                //player.setNewUserText(text);
++            }
++        }, 60000, 0);
++    }
++
++    public static NewUserService getInstance() {
++        return SingletonHolder.instance;
++    }
++
++    private static class SingletonHolder {
++
++        protected static final NewUserService instance = new NewUserService();
++    }
++}

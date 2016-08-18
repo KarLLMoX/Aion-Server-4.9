@@ -1,0 +1,52 @@
+Index: aion/clientpackets/CM_11A_UNK.java
+===================================================================
+--- aion/clientpackets/CM_11A_UNK.java	(revision 277)
++++ aion/clientpackets/CM_11A_UNK.java	(working copy)
+@@ -39,6 +39,6 @@
+     protected void runImpl() {
+         // Dummy
+     	if (getConnection().getActivePlayer() != null)
+-    		PacketSendUtility.sendPacket(getConnection().getActivePlayer(), new SM_98_UNK());
++    		PacketSendUtility.sendPacket(getConnection().getActivePlayer(), new SM_98_UNK(0, 0, null, 0));
+     }
+ }
+Index: aion/serverpackets/SM_98_UNK.java
+===================================================================
+--- aion/serverpackets/SM_98_UNK.java	(revision 277)
++++ aion/serverpackets/SM_98_UNK.java	(working copy)
+@@ -19,18 +19,29 @@
+ import com.aionemu.gameserver.network.aion.AionConnection;
+ import com.aionemu.gameserver.network.aion.AionServerPacket;
+ 
+-
+ /**
+  * @author CoolyT
+  */
+ public class SM_98_UNK extends AionServerPacket {
+ 
++    private final int unk3;
++
++    private final String text;
++    private final int unk1;
++    private final int unk2;
++
++    public SM_98_UNK(int unk1, int unk2, String text, int unk3) {
++        this.unk1 = unk1;
++        this.unk2 = unk2;
++        this.text = text;
++        this.unk3 = unk3;
++    }
++
+     @Override
+     protected void writeImpl(AionConnection con) {
+-    	writeC(2);
+-        writeD(0);
+-        writeD(0);
+-        writeD(0);
+-        writeD(0);
++        writeC(unk1);//action
++        writeD(unk2);//pObjId
++        writeS(text);//name
++        writeH(unk3);//adminObjId
+     }
+ }
