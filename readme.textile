@@ -5,7 +5,6 @@ h1. AionNA 4.9 TODO Liste
 
 h2. High Priority:
 * add "occupy_count" to Siege System
-* add new Pet Functions - Buff and Merchant
 * for Aion 4.9.1:
   - CM_Landing_Reinforcement
   - SM_Landing_Reinforcement
@@ -24,35 +23,11 @@ h2. High Priority:
 
 
 h3. Middle Priority:
-* update Conquest Spawns
 * check and update Quest Scripts
-* test the Reshanta Artifact/Base Spawns 
+* test the Reshanta Artifact/Base Spawns
+* rework Eltnen/Morheim and Heiron/Beluslan Rifts
 
 
 h3. Low Priority:
 * update Dropfiles with new Drops, delete old drops
 * create new Dropfiles for all old Maps
-
-
-h3. Updatet Static Data:
-* abyss_race_bonus.xml -> 4.9.1 (by Mariella/PhpParser)
-* cosmetic_items.xml -> 4.9.1 (by Mariella/PhpParser)
-* login_events.xml -> 4.9.1 (by Mariella/PhpParser)
-* gather_templates.xml -> 4.9.1 (by Mariella/PhpParser)
-* goodslists.xml -> 4.9.1 (by Mariella/PhpParser)
-* assembly_items.xml -> 4.9.1 (by Mariella/PhpParser)
-* item_sets.xml -> 4.9.1 (by Mariella/PhpParser)
-* material_templates -> 4.9.1 (by Mariella/PhpParser)
-* npc_factions.xml -> 4.9.1 (by Mariella/PhpParser)
-* challenge_tasks.xml - 4.9.1 (by Mariella/PhpParser)
-* quest_data.xml -> 4.9.1 (by Mariella/PhpParser)
-* ride.xml -> 4.9.1 (by Mariella/PhpParser)
-* tribe_relations.xml + TribeClass.java + global_types.xsd -> 4.9.1 (by Mariella/PhpParser/Manually)
-* flypath_template.xml -> 4.9.1 (by Mariella/PhpParser)
-* npc_teleporter.xml -> 4.9.1 (by Mariella/PhpParser)
-* npc_trade_list.xml -> 4.9.1 (by Mariella/PhpParser)
-* player_titles.xml -> 4.9.1 (by Mariella/PhpParser)
-* weather_table.xml -> 4.9.1 (by Mariella/PhpParser)
-* npc_template.xml -> 4.9.1 (by Mariella/PhpParser)
-* item_templates.xml -> 4.9.1 (by Mariella/PhpParser)
-* teleport_location.xml -> 4.9.1 (by Manually)
