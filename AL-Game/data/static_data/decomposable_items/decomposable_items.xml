@@ -42030,8 +42030,26 @@
             <item id="186000237" name="Ancient Coin" rnd_min="1" rnd_max="20"/>
         </items>
     </decomposable>
-	<decomposable item_id="188054400" decomposable_name="[Event] Lunatic Modor's Mythic Armor Box"/> <!-- NEW -->
-	<decomposable item_id="188054405" decomposable_name="[Jakurerk] Vial for Secret Remedy of Miraculous Growth (21-day)"/> <!-- NEW -->
+	<decomposable item_id="188054400" decomposable_name="[Event] Lunatic Modor's Mythic Armor Box">
+        <items>
+            <item id="188054410" name="[Jakunerk] Mad Grendal's Armour Chest (Templar)" player_class="TEMPLAR"/>
+            <item id="188054411" name="[Jakunerk] Mad Grendal's Armour Chest (Gladiator)" player_class="GLADIATOR"/>
+            <item id="188054412" name="[Jakunerk] Mad Grendal's Armour Chest (Leather)" player_class="ASSASSIN"/>
+            <item id="188054412" name="[Jakunerk] Mad Grendal's Armour Chest (Leather)" player_class="RANGER"/>
+            <item id="188054413" name="[Jakunerk] Mad Grendal's Armour Chest (Cloth)" player_class="SORCERER"/>
+            <item id="188054413" name="[Jakunerk] Mad Grendal's Armour Chest (Cloth)" player_class="SPIRIT_MASTER"/>
+            <item id="188054414" name="[Jakunerk] Mad Grendal's Armour Chest (Cleric)" player_class="CLERIC"/>
+            <item id="188054415" name="[Jakunerk] Mad Grendal's Armour Chest (Chanter)" player_class="CHANTER"/>
+            <item id="188054416" name="[Jakunerk] Mad Grendal's Armour Chest (Gunner)" player_class="GUNNER"/>
+            <item id="188054417" name="[Jakunerk] Mad Grendal's Armour Chest (Bard)" player_class="BARD"/>
+            <item id="188054418" name="[Jakunerk] Mad Grendal's Armour Chest (Aethertech)" player_class="RIDER"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188054405" decomposable_name="[Jakurerk] Vial for Secret Remedy of Miraculous Growth (21-day)">
+        <items>
+            <item id="188900024" name="[Jakunerk] Miracle Growth Serum"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188054406" decomposable_name="[Event] Wholehearted Fuzzball New Support Bundle">
         <items>
             <item id="188054402" name="[Event] Wholehearted Fuzzball Transformation Candy Box"/>
@@ -42245,20 +42263,10 @@
 	<decomposable item_id="188054419" decomposable_name="[Jakurerk] Celebratory Box for Rotund Reaching Level 65 (30-day)">
         <items>
             <item id="188054400" name="[Event] Lunatic Modor's Mythic Armor Box"/>
-		</items>
-		<items>
             <item id="188054401" name="[Event] Lunatic Modor's Mythic Weapon Box"/>
-		</items>
-		<items>
             <item id="187000121" name="Hyperion Wings"/>
-		</items>
-		<items>
             <item id="188054486" name="[Jakurerk] Conqueror's Accessory Box of Mirage"/>
-		</items>
-		<items>
             <item id="166030013" name="[Event] Tempering Solution"/>
-		</items>
-		<items>
             <item id="188054409" name="[Event] Wholehearted Ayas Ancient Manastone Box"/>
         </items>
     </decomposable>
