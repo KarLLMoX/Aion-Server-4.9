@@ -844,4 +844,9 @@
     <!-- 5. South Balaurea Portal to Beluslan -->
     <portal_loc world_id="220040000" loc_id="1400123" x="330.0" y="367.4" z="229.17665" h="0"/>
     <!-- Fatebound Abbey Portals Elyos End -->
+
+	<!-- Cygnea Portal Scroll -->
+    <portal_loc world_id="210070000" loc_id="2100700" x="2943.1846" y="851.70856" z="571.61444" h="75"/>
+	<!-- Enshar Portal Scroll -->
+    <portal_loc world_id="220080000" loc_id="2200800" x="430.32202" y="2232.8914" z="219.94165" h="25"/>
 </portal_locs>

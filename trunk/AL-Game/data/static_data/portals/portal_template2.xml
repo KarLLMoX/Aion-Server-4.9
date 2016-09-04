@@ -2580,6 +2580,9 @@
     <portal_scroll name="HLFP_BINDING_ALIAS_1">
         <portal_path loc_id="7000101" race="ELYOS"/>
     </portal_scroll>
+    <portal_scroll name="LF5_RETURN_AREA_1">
+        <portal_path loc_id="2100700" race="ELYOS"/>
+    </portal_scroll>
     <!-- SCROLL TELEPORTS ASMODIANS -->
     <portal_scroll name="DC1_RETURN_AREA_1">
         <portal_path loc_id="1200100" race="ASMODIANS"/>
@@ -2607,6 +2610,9 @@
     </portal_scroll>
     <portal_scroll name="HDFP_BINDING_ALIAS_1">
         <portal_path loc_id="7100100" race="ASMODIANS"/>
+    </portal_scroll>
+    <portal_scroll name="DF5_RETURN_AREA_1">
+        <portal_path loc_id="2200800" race="ASMODIANS"/>
     </portal_scroll>
 
     <!-- SCROLL TELEPORTS ALL -->
