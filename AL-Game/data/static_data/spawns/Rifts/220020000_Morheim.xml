@@ -2,137 +2,45 @@
 <spawns>
     <spawn_map map_id="220020000">
         <!-- Rift -->
-        <spawn npc_id="700137" handler="RIFT">
-            <spot x="450" y="2350" z="439" anchor="MORHEIM_AM"/>
-            <!-- id 2220 -->
-            <spot x="750" y="920" z="329.25" anchor="MORHEIM_BM"/>
-            <!-- id 2221 -->
-            <spot x="250" y="500" z="436.25" anchor="MORHEIM_CM"/>
-            <!-- id 2222 -->
-            <spot x="1650" y="1400" z="124" anchor="MORHEIM_DM"/>
-            <!-- id 2223 -->
-            <spot x="1624.59" y="1119.29" z="187.13" anchor="MORHEIM_EM"/>
-            <!-- id 2224 -->
-            <spot x="2400" y="2300" z="108" anchor="MORHEIM_FM"/>
-            <!-- id 2225 -->
-            <spot x="3020.912" y="883.3438" z="362.875" anchor="MORHEIM_GM"/>
-            <!-- id 2226 -->
-            <spot x="745.42" y="1872.32" z="364.746" anchor="MORHEIM_AS"/>
-            <!-- id 2120 -->
-            <spot x="1364.66" y="1334.97" z="238.177" anchor="MORHEIM_BS"/>
-            <!-- id 2121 -->
-            <spot x="617.477" y="209.07" z="518.337" anchor="MORHEIM_CS"/>
-            <!-- id 2122 -->
-            <spot x="1820.14" y="1309.38" z="21.6041" anchor="MORHEIM_DS"/>
-            <!-- id 2123 -->
-            <spot x="1559.14" y="2757.69" z="358.771" anchor="MORHEIM_ES"/>
-            <!-- id 2124 -->
-            <spot x="2613.38" y="2235.68" z="95.959" anchor="MORHEIM_FS"/>
-            <!-- id 2125 -->
-            <spot x="2930.68" y="879.49" z="370.009" anchor="MORHEIM_GS"/>
-            <!-- id 2126 -->
+        <spawn npc_id="700137" handler="RIFT"> <!-- Entrys in Morheim -->
+            <spot x="453.8749" y="2308.0735" z="440.05774" h="50" anchor="MORHEIM_AM"/>
+            <spot x="771.07043" y="912.6148" z="330.0" h="50" anchor="MORHEIM_BM"/>
+            <spot x="227.90245" y="488.45413" z="438.0" h="23" anchor="MORHEIM_CM"/>
+            <spot x="1668.3763" y="1462.5992" z="165.0" h="30" anchor="MORHEIM_DM"/>
+            <spot x="1729.7098" y="1067.3568" z="124.0" h="40" anchor="MORHEIM_EM"/>
+            <spot x="2356.1938" y="2336.7283" z="115.1" h="113" anchor="MORHEIM_FM"/>
+            <spot x="2488.9436" y="657.68195" z="260.0" h="103" anchor="MORHEIM_GM"/>
         </spawn>
-        <!-- MORHEIM_AM -->
-        <rift_spawn id="2220">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
-        <!-- MORHEIM_BM -->
-        <rift_spawn id="2221">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
-        <!-- MORHEIM_CM -->
-        <rift_spawn id="2222">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
-        <!-- MORHEIM_DM -->
-        <rift_spawn id="2223">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
-        <!-- MORHEIM_EM -->
-        <rift_spawn id="2224">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
-        <!-- MORHEIM_FM -->
-        <rift_spawn id="2225">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
-        <!-- MORHEIM_GM -->
-        <rift_spawn id="2226">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
-        </rift_spawn>
+        <spawn npc_id="700138" handler="RIFT"> <!-- Exits in Morheim -->
+            <spot x="2320.1042" y="2844.4465" z="230.0" h="50" anchor="MORHEIM_AS"/>
+            <spot x="2579.92" y="2045.5675" z="121.00103" h="36" anchor="MORHEIM_BS"/>
+            <spot x="3022.943" y="881.2537" z="363.99762" h="90" anchor="MORHEIM_CS"/>
+            <spot x="1527.4956" y="1130.1305" z="155.0" h="113" anchor="MORHEIM_DS"/>
+            <spot x="563.9646" y="1910.2792" z="430.0" h="73" anchor="MORHEIM_ES"/>
+            <spot x="2303.2908" y="2623.705" z="211.49734" h="73" anchor="MORHEIM_FS"/>
+            <spot x="764.3181" y="1887.3486" z="366.0" h="36" anchor="MORHEIM_GS"/>
+        </spawn>
+
         <!-- MORHEIM_AS -->
         <rift_spawn id="2120">
-            <!-- Test spawn -->
-            <spawn npc_id="211680" respawn_time="30">
-                <spot x="747.42" y="1875.32" z="364.746" h="25"/>
-            </spawn>
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
         <!-- MORHEIM_BS -->
         <rift_spawn id="2121">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
         <!-- MORHEIM_CS -->
         <rift_spawn id="2122">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
         <!-- MORHEIM_DS -->
         <rift_spawn id="2123">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
         <!-- MORHEIM_ES -->
         <rift_spawn id="2124">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
         <!-- MORHEIM_FS -->
         <rift_spawn id="2125">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
         <!-- MORHEIM_GS -->
         <rift_spawn id="2126">
-            <!-- someone to spawn -->
-            <!-- <spawn npc_id="000" respawn_time="000">
-                    <spot x="000.000" y="000.000" z="000.000"/>
-            </spawn> -->
         </rift_spawn>
     </spawn_map>
 </spawns>
