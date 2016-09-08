@@ -18,7 +18,7 @@ package com.aionemu.gameserver.skillengine.effect;
 
 import com.aionemu.gameserver.skillengine.model.Effect;
 
-public class NoDeathPenaltyEffect extends BufEffect {
+public class NoDeathPenaltyEffect extends BuffEffect {
 
     @Override
     public void calculate(Effect effect) {

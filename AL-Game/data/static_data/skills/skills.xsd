@@ -462,7 +462,7 @@
 	</xs:complexType>
 	<xs:complexType name="AbsoluteSnareEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="SlowEffect">
@@ -472,7 +472,7 @@
 	</xs:complexType>
 	<xs:complexType name="AbsoluteSlowEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="StumbleEffect">
@@ -565,7 +565,7 @@
 			<xs:extension base="AbstractOverTimeEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="BufEffect" abstract="true">
+	<xs:complexType name="BuffEffect" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="Effect">
 				<xs:attribute name="maxstat" type="xs:boolean"/>
@@ -574,53 +574,53 @@
 	</xs:complexType>
 	<xs:complexType name="StatupEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="StatboostEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="WeaponStatboostEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="WeaponStatupEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="BoostSkillCastingTimeEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="BoostHealEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="WeaponMasteryEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 				<xs:attribute name="weapon" type="weaponType"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ArmorMasteryEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 				<xs:attribute name="armor" type="armorType"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="StatdownEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="TransformEffect" abstract="true">
@@ -789,7 +789,7 @@
 	</xs:complexType>
 	<xs:complexType name="CurseEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="BlindEffect">
@@ -805,7 +805,7 @@
 	</xs:complexType>
 	<xs:complexType name="BoostHateEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -1041,7 +1041,7 @@
 	</xs:complexType>
 	<xs:complexType name="OneTimeBoostSkillCriticalEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 				<xs:attribute name="count" type="xs:int"/>
 				<xs:attribute name="percent" type="xs:boolean"/>
 			</xs:extension>
@@ -1106,13 +1106,13 @@
 	</xs:complexType>
 	<xs:complexType name="DeboostHealEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="OneTimeBoostHealEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -1159,13 +1159,13 @@
 	</xs:complexType>
 	<xs:complexType name="WeaponDualEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ShieldMasteryEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -1273,12 +1273,12 @@
 	</xs:complexType>
 	<xs:complexType name="BoostSpellAttackEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="SwitchHostileEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ConvertHealEffect">
@@ -1296,12 +1296,12 @@
 	</xs:complexType>
 	<xs:complexType name="SubTypeExtendDurationEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="SubTypeBoostResistEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="DispelNpcBuffEffect">
@@ -1336,19 +1336,19 @@
 	</xs:complexType>
 	<xs:complexType name="DRBoostEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="APBoostEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="SkillXPBoostEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect">
+			<xs:extension base="BuffEffect">
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -1363,32 +1363,32 @@
 	</xs:complexType>
 	<xs:complexType name="XPBoostEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="BoostDropRateEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="ExtendAuraRangeEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="NoDeathPenaltyEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="NoResurrectPenaltyEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="HiPassEffect">
 		<xs:complexContent>
-			<xs:extension base="BufEffect"/>
+			<xs:extension base="BuffEffect"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="CaseHealEffect">

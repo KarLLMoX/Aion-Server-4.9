@@ -30,7 +30,7 @@ public class Effects {
 
     @XmlElements({
             @XmlElement(name = "root", type = RootEffect.class),
-            @XmlElement(name = "buf", type = BufEffect.class),
+            @XmlElement(name = "buff", type = BuffEffect.class),
             @XmlElement(name = "spellatk", type = SpellAttackEffect.class),
             @XmlElement(name = "deform", type = DeformEffect.class),
             @XmlElement(name = "shapechange", type = ShapeChangeEffect.class),

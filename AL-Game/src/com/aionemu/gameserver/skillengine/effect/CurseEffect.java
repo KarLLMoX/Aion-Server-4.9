@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CurseEffect")
-public class CurseEffect extends BufEffect {
+public class CurseEffect extends BuffEffect {
 
     @Override
     public void calculate(Effect effect) {

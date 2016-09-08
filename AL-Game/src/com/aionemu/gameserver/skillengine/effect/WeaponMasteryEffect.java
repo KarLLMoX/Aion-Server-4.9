@@ -34,7 +34,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "WeaponMasteryEffect")
-public class WeaponMasteryEffect extends BufEffect {
+public class WeaponMasteryEffect extends BuffEffect {
 
     @XmlAttribute(name = "weapon")
     private WeaponType weaponType;

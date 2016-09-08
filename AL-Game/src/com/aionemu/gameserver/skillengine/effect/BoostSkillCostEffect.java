@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BoostSkillCostEffect")
-public class BoostSkillCostEffect extends BufEffect {
+public class BoostSkillCostEffect extends BuffEffect {
 
     @XmlAttribute
     protected boolean percent;
