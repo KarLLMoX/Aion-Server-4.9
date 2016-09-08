@@ -25,5 +25,5 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BoostSkillCastingTimeEffect")
-public class BoostSkillCastingTimeEffect extends BufEffect {
+public class BoostSkillCastingTimeEffect extends BuffEffect {
 }

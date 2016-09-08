@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SlowEffect")
-public class SlowEffect extends BufEffect {
+public class SlowEffect extends BuffEffect {
 
     @Override
     public void applyEffect(Effect effect) {

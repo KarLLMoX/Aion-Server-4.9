@@ -25,5 +25,5 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OneTimeBoostHealEffect")
-public class OneTimeBoostHealEffect extends BufEffect {
+public class OneTimeBoostHealEffect extends BuffEffect {
 }

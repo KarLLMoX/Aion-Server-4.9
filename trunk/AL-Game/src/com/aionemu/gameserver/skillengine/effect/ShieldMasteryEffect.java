@@ -31,7 +31,7 @@ import java.util.List;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ShieldMasteryEffect")
-public class ShieldMasteryEffect extends BufEffect {
+public class ShieldMasteryEffect extends BuffEffect {
 
     @Override
     public void startEffect(Effect effect) {

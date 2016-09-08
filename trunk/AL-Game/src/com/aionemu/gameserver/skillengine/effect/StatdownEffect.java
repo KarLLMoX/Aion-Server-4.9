@@ -25,6 +25,6 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "StatdownEffect")
-public class StatdownEffect extends BufEffect {
+public class StatdownEffect extends BuffEffect {
     //TODO bosses are resistent to this?
 }

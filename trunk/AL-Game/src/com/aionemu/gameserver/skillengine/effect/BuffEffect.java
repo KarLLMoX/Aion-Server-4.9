@@ -40,12 +40,12 @@ import java.util.List;
  * @author ATracer
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "BufEffect")
-public abstract class BufEffect extends EffectTemplate {
+@XmlType(name = "BuffEffect")
+public abstract class BuffEffect extends EffectTemplate {
 
     @XmlAttribute
     protected boolean maxstat;
-    private static final Logger log = LoggerFactory.getLogger(BufEffect.class);
+    private static final Logger log = LoggerFactory.getLogger(BuffEffect.class);
 
     @Override
     public void applyEffect(Effect effect) {

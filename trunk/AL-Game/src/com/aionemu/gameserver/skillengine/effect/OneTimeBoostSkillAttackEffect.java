@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OneTimeBoostSkillAttackEffect")
-public class OneTimeBoostSkillAttackEffect extends BufEffect {
+public class OneTimeBoostSkillAttackEffect extends BuffEffect {
 
     @XmlAttribute
     private int count;

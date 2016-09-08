@@ -18,7 +18,7 @@ package com.aionemu.gameserver.skillengine.effect;
 
 import com.aionemu.gameserver.skillengine.model.Effect;
 
-public class HiPassEffect extends BufEffect {
+public class HiPassEffect extends BuffEffect {
 
     @Override
     public void calculate(Effect effect) {

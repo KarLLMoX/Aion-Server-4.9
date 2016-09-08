@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "HideEffect")
-public class HideEffect extends BufEffect {
+public class HideEffect extends BuffEffect {
 
     @XmlAttribute
     protected CreatureVisualState state;
