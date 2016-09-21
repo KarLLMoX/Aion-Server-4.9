@@ -29,6 +29,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_LEGION_EDIT;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
+import com.aionemu.gameserver.world.World;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -151,15 +152,28 @@ public class AbyssPointsService {
      * @param oldGloryRank
      * @param newGloryRank
      */
-    public static void checkRankGpChanged(Player player, AbyssRankEnum oldGloryRank, AbyssRankEnum newGloryRank) {
+public static void checkRankGpChanged(Player player, AbyssRankEnum oldGloryRank, AbyssRankEnum newGloryRank) {
         if (oldGloryRank == newGloryRank) {
             return;
         }
+        
+        Player onlinePlayer = World.getInstance().findPlayer( player.getName() );
+        
+        if (onlinePlayer != null){
+             AbyssRank abyssRank = onlinePlayer.getAbyssRank();
+            
+            // Don't update Rank if Governor, it will become auto governor
+            if( abyssRank.getGp() >= AbyssRankEnum.SUPREME_COMMANDER.getRequiredGp() )
+            {
+                log.error("Player " + player.getName() + " GP more than GP in abyssRankGP =  " + abyssRank.getGp() );
+            }
+            else{
+                PacketSendUtility.broadcastPacketAndReceive(player, new SM_ABYSS_RANK_UPDATE(0, player));
 
-        PacketSendUtility.broadcastPacketAndReceive(player, new SM_ABYSS_RANK_UPDATE(0, player));
-
-        player.getEquipment().checkRankLimitItems();
-        AbyssSkillService.updateSkills(player);
+                player.getEquipment().checkRankLimitItems();
+                AbyssSkillService.updateSkills(player);
+            }
+        }
     }
 
     @SuppressWarnings("rawtypes")

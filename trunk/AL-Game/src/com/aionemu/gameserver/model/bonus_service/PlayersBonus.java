@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.stats.calc.functions.StatRateFunction;
 import com.aionemu.gameserver.model.templates.bonus_service.PlayersBonusPenaltyAttr;
 import com.aionemu.gameserver.model.templates.bonus_service.PlayersBonusServiceAttr;
 import com.aionemu.gameserver.skillengine.change.Func;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +38,8 @@ import java.util.List;
  */
 public class PlayersBonus implements StatOwner
 {
-    private static final Logger log = LoggerFactory.getLogger(PlayersBonus.class);
+    @SuppressWarnings("unused")
+	private static final Logger log = LoggerFactory.getLogger(PlayersBonus.class);
     private List<IStatFunction> functions = new ArrayList<IStatFunction>();
     private PlayersBonusServiceAttr playersServiceBonusattr;
 
