@@ -161,7 +161,12 @@ public final class AbyssRank {
         }
 
         AbyssRankEnum newRank = AbyssRankEnum.getRankForGp(currentGp);
-        if (newRank.getId() <= 18 && newRank.getId() > 9) {
+        
+        // Please don't set rank for SUPREME_COMMANDER, it will become auto Governor
+        // Let Abyss Rank do this
+        // by Petruknisme
+        
+        if (newRank.getId() < 18 && newRank.getId() > 9) {
             setRank(newRank);
         }
         setPersistentState(PersistentState.UPDATE_REQUIRED);

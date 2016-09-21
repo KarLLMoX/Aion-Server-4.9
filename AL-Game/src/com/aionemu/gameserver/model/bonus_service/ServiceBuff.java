@@ -27,6 +27,7 @@ import com.aionemu.gameserver.model.templates.bonus_service.BonusServiceAttr;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ICON_INFO;
 import com.aionemu.gameserver.skillengine.change.Func;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,7 +39,8 @@ import java.util.List;
  */
 public class ServiceBuff implements StatOwner
 {
-    private static final Logger log = LoggerFactory.getLogger(ServiceBuff.class);
+    @SuppressWarnings("unused")
+	private static final Logger log = LoggerFactory.getLogger(ServiceBuff.class);
     private List<IStatFunction> functions = new ArrayList<IStatFunction>();
     private BonusServiceAttr serviceBonusAttr;
 
