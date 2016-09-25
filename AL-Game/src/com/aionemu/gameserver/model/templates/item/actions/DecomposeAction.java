@@ -79,7 +79,7 @@ public class DecomposeAction extends AbstractItemAction {
     public boolean isSelect;
 
     private static final Logger log = LoggerFactory.getLogger(DecomposeAction.class);
-    private static final int USAGE_DELAY = 3000;
+    private static final int USAGE_DELAY = 1500;
     private static Map<Race, int[]> chunkEarth = new HashMap<Race, int[]>();
 
     static {
@@ -150,7 +150,7 @@ public class DecomposeAction extends AbstractItemAction {
 
     @Override
     public void act(final Player player, final Item parentItem, final Item targetItem) {
-        player.getController().cancelUseItem();
+        // player.getController().cancelUseItem();
 
         if (this.isSelect) {
             SelectItems selectItems = DataManager.DECOMPOSABLE_SELECT_ITEM_DATA.getSelectItem(player.getPlayerClass(), player.getRace(), parentItem.getItemId());
