@@ -2138,10 +2138,10 @@
         <staticdoor doorid="4" x="511.356262" y="585.1415" z="222.145554" mesh="arenacage_door.cga" state="0x2">
             <box x1="507.4096" y1="584.858337" z1="221.44458" x2="515.47876" y2="585.4988" z2="235.766479"/>
         </staticdoor>
-        <staticdoor keyid="185000011" doorid="5" x="511.23114" y="523.2324" z="222.145554" mesh="arenacage_door.cga" state="0x2">
+        <staticdoor doorid="5" x="511.23114" y="523.2324" z="222.145554" mesh="arenacage_door.cga" state="0x2">
             <box x1="507.2845" y1="522.9493" z1="221.44458" x2="515.353638" y2="523.5897" z2="235.766479"/>
         </staticdoor>
-        <staticdoor keyid="185000012" doorid="10" x="448.1349" y="554.275757" z="225.390549" mesh="arenacage_door.cga" state="0x2">
+        <staticdoor keyid="185000011" doorid="10" x="448.1349" y="554.275757" z="225.390549" mesh="arenacage_door.cga" state="0x2">
             <box x1="447.8517" y1="550.153259" z1="224.689575" x2="448.4922" y2="558.2224" z2="239.011475"/>
         </staticdoor>
         <staticdoor doorid="27" x="622.180542" y="450.39447" z="202.641571" mesh="arenacage_door.cga" state="0x6">
@@ -2150,16 +2150,16 @@
         <staticdoor doorid="28" x="560.2715" y="450.425354" z="202.641571" mesh="arenacage_door.cga" state="0x2">
             <box x1="559.988342" y1="446.302856" z1="201.9406" x2="560.6288" y2="454.372" z2="216.2625"/>
         </staticdoor>
-        <staticdoor keyid="185000013" doorid="53" x="432.91745" y="554.2609" z="225.553" mesh="door_lp.cga" state="0x2">
+        <staticdoor doorid="53" x="432.91745" y="554.2609" z="225.553" mesh="door_lp.cga" state="0x2">
             <box x1="432.424744" y1="551.7299" z1="225.553" x2="433.410126" y2="556.7306" z2="232.5409"/>
         </staticdoor>
-        <staticdoor keyid="185000009" doorid="54" x="438.367859" y="474.219849" z="241.705185" mesh="arenacage_door.cga" state="0x2">
+        <staticdoor doorid="54" x="438.367859" y="474.219849" z="241.705185" mesh="arenacage_door.cga" state="0x2">
             <box x1="438.010559" y1="470.2732" z1="241.004211" x2="438.651" y2="478.342346" z2="255.326111"/>
         </staticdoor>
-        <staticdoor keyid="185000008" doorid="55" x="376.483643" y="474.2426" z="241.705185" mesh="arenacage_door.cga" state="0x2">
+        <staticdoor doorid="55" x="376.483643" y="474.2426" z="241.705185" mesh="arenacage_door.cga" state="0x2">
             <box x1="376.126343" y1="470.295959" z1="241.004211" x2="376.766785" y2="478.3651" z2="255.326111"/>
         </staticdoor>
-        <staticdoor keyid="185000010" doorid="60" x="407.391846" y="411.078979" z="244.95018" mesh="arenacage_door.cga" state="0x2">
+        <staticdoor keyid="185000008" doorid="60" x="407.391846" y="411.078979" z="244.95018" mesh="arenacage_door.cga" state="0x2">
             <box x1="403.4452" y1="410.7958" z1="244.2492" x2="411.514343" y2="411.436249" z2="258.5711"/>
         </staticdoor>
     </world>
