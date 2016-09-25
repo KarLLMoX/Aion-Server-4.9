@@ -50,6 +50,12 @@ public class _24046TheShadowCalls extends QuestHandler {
         qe.registerOnLeaveZone(ZoneName.get("BALTASAR_HILL_VILLAGE_220050000"), questId);
         qe.registerOnDie(questId);
         qe.registerOnEnterWorld(questId);
+		qe.addHandlerSideQuestDrop(questId, 214531, 185000008, 1, 100);
+		qe.addHandlerSideQuestDrop(questId, 253646, 185000008, 1, 100);
+		qe.addHandlerSideQuestDrop(questId, 214349, 185000011, 1, 100);
+		qe.addHandlerSideQuestDrop(questId, 214348, 185000011, 1, 100);
+		qe.addHandlerSideQuestDrop(questId, 214346, 185000014, 1, 100);
+		qe.addHandlerSideQuestDrop(questId, 214347, 185000014, 1, 100);
     }
 
     @Override
