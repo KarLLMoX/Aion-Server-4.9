@@ -93,7 +93,6 @@ public class SM_ITEM_USAGE_ANIMATION extends AionServerPacket {
         writeC(0); // unk
         writeC(1);
         writeC(0); // unk 4.9
-        writeH(unk);
-        writeH(0);//unk
+        writeD(unk);
     }
 }
