@@ -1525,7 +1525,7 @@
             <spot x="1715.3292" y="2183.5945" z="1533.2579" h="37"/>
         </spawn>
         <!-- Menotios -->
-        <spawn npc_id="251001" respawn_time="7200">
+        <spawn npc_id="251001" respawn_time="100800">
             <spot x="1881.943" y="1714.3511" z="1550.4867" h="60"/>
         </spawn>
         <!-- Hamate Isle Storeroom Entrance -->
@@ -1668,15 +1668,15 @@
 		</spawn>
 		<!-- Enno ||| Enno -->
 		<spawn npc_id="278032" respawn_time="295">
-			<spot x="925.2395" y="2980.4175" z="1646.3983" h="44"/>
+			<spot x="936.65" y="2967.84" z="1646.3984" walker_id="379B7AF499BDAFF6645C90E2510BD88FCCD7FB95"/>
 		</spawn>
 		<!-- Erik ||| Erik -->
 		<spawn npc_id="278033" respawn_time="295">
-			<spot x="944.2791" y="2994.0593" z="1646.3984" h="106"/>
+			<spot x="958.68" y="2989.57" z="1646.3984" walker_id="9B237FC171A8B81D01A04E03D607384D240B999C"/>
 		</spawn>
 		<!-- Holm ||| Holm -->
 		<spawn npc_id="278034" respawn_time="295">
-			<spot x="965.32605" y="2960.2441" z="1646.5421" h="44"/>
+			<spot x="1075.98" y="2841.05" z="1636.0677" walker_id="7B37A6C85ADC8A4B9E135943CE910D859BA830DA"/>
 		</spawn>
 		<!-- Konto ||| Konto -->
 		<spawn npc_id="278035" respawn_time="295">
@@ -1724,7 +1724,7 @@
 		</spawn>
 		<!-- Bokbor ||| Bokbor -->
 		<spawn npc_id="278046" respawn_time="295">
-			<spot x="1020.23474" y="2989.2493" z="1642.347" h="94"/>
+			<spot x="1002.79" y="2940.84" z="1642.3374" walker_id="D853FF9F262DAEA30619CC4ACA8F05DA8B5737AA"/>
 		</spawn>
 		<!-- Bord ||| Bord -->
 		<spawn npc_id="278047" respawn_time="295">
@@ -1744,11 +1744,11 @@
 		</spawn>
 		<!-- Vis ||| Vis -->
 		<spawn npc_id="278051" respawn_time="295">
-			<spot x="1005.9302" y="2841.265" z="1641.1785" h="64"/>
+			<spot x="1036.3" y="2845.82" z="1635.9048" walker_id="5F516E784FF47867DA8C416A3F8F31D782BCE9A1"/>
 		</spawn>
 		<!-- Mavn ||| Mavn -->
 		<spawn npc_id="278052" respawn_time="295">
-			<spot x="1002.7852" y="2922.5261" z="1642.2198" h="44"/>
+			<spot x="1046.22" y="2874.97" z="1636.069" walker_id="63F633265F39E354344A50E8A408B26BFB03CF19"/>
 		</spawn>
 		<!-- Dort ||| Dort -->
 		<spawn npc_id="278053" respawn_time="295">
@@ -2187,7 +2187,7 @@
 		</spawn>
 		<!-- Terita ||| Terita -->
 		<spawn npc_id="278534" respawn_time="295">
-			<spot x="2967.5713" y="922.24976" z="1538.9124" h="103"/>
+			<spot x="2865.29" y="1033.75" z="1527.9968" walker_id="A9C5A78C0BE9E32CBD86F857E0E7A1FB2F8BAEBC"/>
 		</spawn>
 		<!-- Maius ||| Maius -->
 		<spawn npc_id="278535" respawn_time="295">
@@ -2231,11 +2231,11 @@
 		</spawn>
 		<!-- Amos ||| Amos -->
 		<spawn npc_id="278545" respawn_time="295">
-			<spot x="2917.1125" y="943.90533" z="1539.6615" h="26"/>
+			<spot x="2918.28" y="947.35" z="1539.6614" walker_id="76E1A64741A2D896C206CB9DDBA759E883307955"/>
 		</spawn>
 		<!-- Anika ||| Anika -->
 		<spawn npc_id="278546" respawn_time="295">
-			<spot x="2936.14" y="969.52" z="1538.1676" h="71"/>
+			<spot x="2946.15" y="975.12" z="1539.6614" walker_id="974D371BF98BD35D465794E1AFE211F282CBFFB4"/>
 		</spawn>
 		<!-- Rastin ||| Rastin -->
 		<spawn npc_id="278547" respawn_time="295">
@@ -2255,15 +2255,15 @@
 		</spawn>
 		<!-- Bonitra ||| Bonitra -->
 		<spawn npc_id="278551" respawn_time="295">
-			<spot x="2865.1423" y="979.37915" z="1531.3395" h="28"/>
+			<spot x="2866.55" y="1000.02" z="1527.9968" walker_id="5999992E7379FED230F386865940463BB834EBDE"/>
 		</spawn>
 		<!-- Siunatu ||| Bliss -->
 		<spawn npc_id="278552" respawn_time="295">
-			<spot x="2900.4688" y="1025.4321" z="1527.9966" h="62"/>
+			<spot x="2900.65" y="1024.92" z="1527.9968" walker_id="4889F38E3842C6AC84833687CB1280383F3962A2"/>
 		</spawn>
 		<!-- Caranos ||| Caranos -->
 		<spawn npc_id="278553" respawn_time="295">
-			<spot x="2927.2876" y="967.0856" z="1538.1674" h="44"/>
+			<spot x="2880.41" y="1019.28" z="1528.0457" walker_id="7AEFB65BA276965C250796673C13EAF9C25E7332"/>
 		</spawn>
 		<!-- Claudia ||| Claudia -->
 		<spawn npc_id="278554" respawn_time="295">
