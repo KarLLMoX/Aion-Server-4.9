@@ -11134,4 +11134,7 @@
     <purchase_template npc_id="833800" buy_price_rate="1000000">
         <tradelist id="171"/>
     </purchase_template>
+	<purchase_template npc_id="279059" buy_price_rate="1500" npc_type="ABYSS">
+        <tradelist id="60"/>
+    </purchase_template>
 </npc_trade_list>
