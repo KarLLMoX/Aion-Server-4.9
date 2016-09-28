@@ -295,6 +295,7 @@ public class ServerPacketsOpcodes {
         addPacketOpcode(SM_134_UNK.class, 0x134, idSet); // TODO
         addPacketOpcode(SM_STONESPEAR_SIEGE.class, 0x12E, idSet); // TODO
         addPacketOpcode(SM_TUNE_RESULT.class, 0x120, idSet); // TODO
+        addPacketOpcode(SM_LANDING_REINFORCEMENT.class, 0x13B, idSet); // TODO
         //--------------------UNKNOWN PACKETS-----------------------//
     }
 

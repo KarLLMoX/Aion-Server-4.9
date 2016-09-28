@@ -256,6 +256,7 @@ public class AionPacketHandlerFactory {
         // /////////////////// NEW 4.9 //////////////////////
         addPacket(new CM_EXPAND_CUBE(0x1B5, State.IN_GAME)); // 4.9
         addPacket(new CM_INTRUDER_SCAN(0x182, State.IN_GAME)); // 4.9
+        addPacket(new CM_LANDING_REINFORCEMENT(0x106, State.IN_GAME)); // 4.9
         
 		// /////////////////// GM PACKET ////////////////////
 		addPacket(new CM_GM_COMMAND_SEND(0xE4, State.IN_GAME)); // 4.9
