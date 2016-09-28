@@ -288,11 +288,11 @@
     <!-- Cygnea to Reshanta Magos Landing Site -->
     <portal_loc world_id="400010000" loc_id="4000116" x="2393.0" y="376.0" z="2938.0315" h="0"/>
     <!-- Reshanta Magos Landing Site to Cygnea -->
-    <portal_loc world_id="400010000" loc_id="4000117" x="2905.0" y="803.0" z="569.52704" h="0"/>
+    <portal_loc world_id="210070000" loc_id="4000117" x="2905.0" y="803.0" z="569.52704" h="0"/>
     <!-- Enshar to Reshanta Tokanu Landing Site -->
     <portal_loc world_id="400010000" loc_id="4000118" x="1304.0" y="3134.0" z="3033.7405" h="0"/>
     <!-- Reshanta Tokanu Landing Site to Enshar -->
-    <portal_loc world_id="400010000" loc_id="4000119" x="446.0" y="2260.0" z="220.04858" h="0"/>    
+    <portal_loc world_id="220080000" loc_id="4000119" x="446.0" y="2260.0" z="220.04858" h="0"/>    
     <!-- Reshanta Magos Landing Site -->
     <portal_loc world_id="400010000" loc_id="4000120" x="2405.2537" y="388.64554" z="2938.3572" h="93"/>
     <portal_loc world_id="400010000" loc_id="4000121" x="2403.1091" y="401.06967" z="2938.315" h="33"/>
