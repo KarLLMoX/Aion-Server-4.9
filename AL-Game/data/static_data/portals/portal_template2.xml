@@ -2521,19 +2521,19 @@
 
     <!-- Cygnea to Reshanta Magos Landing Site -->
     <portal_dialog npc_id="805605">
-        <portal_path dialog="1011" loc_id="4000116" race="ELYOS"/>
+        <portal_path dialog="104" loc_id="4000116" race="ELYOS"/>
     </portal_dialog>
     <!-- Reshanta Magos Landing Site to Cygnea -->
     <portal_dialog npc_id="805604">
-        <portal_path dialog="1011" loc_id="4000117" race="ELYOS"/>
+        <portal_path dialog="104" loc_id="4000117" race="ELYOS"/>
     </portal_dialog>
     <!-- Enshar to Reshanta Tokanu Landing Site -->
     <portal_dialog npc_id="805619">
-        <portal_path dialog="1011" loc_id="4000118" race="ASMODIANS"/>
+        <portal_path dialog="104" loc_id="4000118" race="ASMODIANS"/>
     </portal_dialog>
     <!-- Reshanta Tokanu Landing Site to Enshar -->
     <portal_dialog npc_id="805618">
-        <portal_path dialog="1011" loc_id="4000119" race="ASMODIANS"/>
+        <portal_path dialog="104" loc_id="4000119" race="ASMODIANS"/>
     </portal_dialog>
 
     <!-- Cygnea - Taking Arms Quest (Elyos) -->
