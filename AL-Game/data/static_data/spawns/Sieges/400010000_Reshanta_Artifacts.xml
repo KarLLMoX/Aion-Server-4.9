@@ -780,12 +780,12 @@
             </siege_race>
         </siege_spawn>
 
-		
+		<!-- Update 56. Base/Artefact with Asmodians,Elyos and Balaur Quest Spawns - 29.09.16 -->
         <siege_spawn siege_id="1224">
             <siege_race race="ASMODIANS">
                 <siege_mod mod="PEACE">
-                    <!-- BOSS - High Protector -->
-                    <spawn npc_id="268710" respawn_time="295">
+                    <!-- BOSS -->
+                    <spawn npc_id="268706" respawn_time="295">
                         <spot x="2145.168" y="1940.198" z="3104.113" h="60"/>
                     </spawn>
                     <!-- (A): Hellfire Array -->
@@ -827,14 +827,51 @@
                         <spot x="2152.7483" y="1958.3007" z="3101.983" h="62"/>
                         <spot x="2125.542" y="1939.8352" z="3100.4375" h="103"/>
                     </spawn>
+
+                    <spawn npc_id="883555" respawn_time="295">
+                        <spot x="2174.3718" y="1998.9645" z="3094.4934" h="20"/>
+                        <spot x="2147.393" y="2016.4629" z="3096.5483" h="34"/>
+                        <spot x="2221.9373" y="1950.67" z="3095.2698" h="25"/>
+                        <spot x="2193.1604" y="2005.4938" z="3093.723" h="50"/>
+                    </spawn>
+                    <spawn npc_id="883556" respawn_time="295">
+                        <spot x="2118.098" y="1993.3672" z="3098.4192" h="37"/>
+                    </spawn>
+                    <spawn npc_id="883557" respawn_time="295">
+                        <spot x="2205.671" y="1988.4971" z="3093.3394" h="7"/>
+                    </spawn>
+                    <spawn npc_id="883558" respawn_time="295">
+                        <spot x="2132.1763" y="2010.6173" z="3098.061" h="34"/>
+                    </spawn>
+                    <spawn npc_id="883559" respawn_time="295">
+                        <spot x="2217.1973" y="1976.4095" z="3095.1992" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883561" respawn_time="295">
+                        <spot x="2091.7112" y="1902.0244" z="3097.0444" h="0"/>
+                        <spot x="2077.171" y="1924.0044" z="3097.953" h="68"/>
+                        <spot x="2161.3938" y="1872.0892" z="3092.1912" h="1"/>
+                        <spot x="2181.902" y="1873.6714" z="3094.1812" h="25"/>
+                    </spawn>
+                    <spawn npc_id="883562" respawn_time="295">
+                        <spot x="2109.249" y="1864.9137" z="3098.1045" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883563" respawn_time="295">
+                        <spot x="2105.1218" y="1884.0385" z="3097.7932" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883564" respawn_time="295">
+                        <spot x="2125.6404" y="1869.0411" z="3096.1782" h="87"/>
+                    </spawn>
+                    <spawn npc_id="883565" respawn_time="295">
+                        <spot x="2142.6375" y="1870.8519" z="3094.1833" h="111"/>
+                    </spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
             </siege_race>
             <siege_race race="BALAUR">
                 <siege_mod mod="PEACE">
-                    <!-- BOSS - Initiate Protector -->
-                    <spawn npc_id="268712" respawn_time="295">
+                    <!-- BOSS -->
+                    <spawn npc_id="268711" respawn_time="295">
                         <spot x="2145.168" y="1940.198" z="3104.113"/>
                     </spawn>
                     <!-- (B): Hellfire Array -->
@@ -863,14 +900,43 @@
                         <spot x="2125.542" y="1939.8352" z="3100.4375" h="60"/>
                         <spot x="2152.5996" y="1925.3645" z="3103.4583" h="90"/>
                         <spot x="2180.217" y="1940.3362" z="3096.5947" h="13"/>
-                    </spawn>                    
+                    </spawn>
+
+                    <spawn npc_id="883669" respawn_time="295">
+                        <spot x="2093.0718" y="1907.1102" z="3097.1653" h="106"/>
+                        <spot x="2082.47" y="1924.0398" z="3097.1628" h="108"/>
+                        <spot x="2160.2437" y="1867.6797" z="3092.2341" h="70"/>
+                        <spot x="2179.54" y="1868.0631" z="3093.8777" h="94"/>
+                    </spawn>
+                    <spawn npc_id="883849" respawn_time="295">
+                        <spot x="2153.3499" y="2014.9078" z="3096.1567" h="31"/>
+                        <spot x="2176.005" y="1996.3433" z="3094.1821" h="66"/>
+                        <spot x="2220.7073" y="1938.3099" z="3094.1672" h="100"/>
+                        <spot x="2190.6409" y="1999.8126" z="3093.7097" h="40"/>
+                    </spawn>
+                    <spawn npc_id="883850" respawn_time="295">
+                        <spot x="2115.46" y="1988.5651" z="3098.0596" h="97"/>
+                        <spot x="2110.2393" y="1860.131" z="3097.961" h="102"/>
+                    </spawn>
+                    <spawn npc_id="883851" respawn_time="295">
+                        <spot x="2099.9338" y="1884.9565" z="3097.7427" h="10"/>
+                        <spot x="2204.6409" y="1986.4171" z="3093.6858" h="72"/>
+                    </spawn>
+                    <spawn npc_id="883852" respawn_time="295">
+                        <spot x="2124.1418" y="1875.8872" z="3096.6995" h="75"/>
+                        <spot x="2134.0544" y="2009.8104" z="3098.06" h="4"/>
+                    </spawn>
+                    <spawn npc_id="883853" respawn_time="295">
+                        <spot x="2139.9062" y="1871.697" z="3094.6543" h="102"/>
+                        <spot x="2216.5652" y="1970.7771" z="3095.4258" h="64"/>
+                    </spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
                 </siege_mod>
             </siege_race>
             <siege_race race="ELYOS">
                 <siege_mod mod="PEACE">
-                    <!-- BOSS - Initiate Protector -->
+                    <!-- BOSS -->
                     <spawn npc_id="268701" respawn_time="295">
                         <spot x="2145.168" y="1940.198" z="3104.113"/>
                     </spawn>
@@ -911,6 +977,41 @@
                         <spot x="2125.542" y="1939.8352" z="3100.4375" h="60"/>
                         <spot x="2179.6665" y="1939.9413" z="3096.877" h="74"/>
                         <spot x="2152.5996" y="1925.3645" z="3103.4583" h="90"/>
+                    </spawn>
+
+                    <spawn npc_id="883555" respawn_time="295">
+                        <spot x="2169.9253" y="1996.9432" z="3094.8057" h="0"/>
+                        <spot x="2150.6318" y="2014.7413" z="3096.3538" h="99"/>
+                        <spot x="2115.4084" y="1996.0436" z="3098.3323" h="0"/>
+                        <spot x="2192.2163" y="2000.9568" z="3093.6753" h="113"/>
+                        <spot x="2219.1516" y="1946.6221" z="3094.8682" h="88"/>
+                    </spawn>
+                    <spawn npc_id="883557" respawn_time="295">
+                        <spot x="2204.8127" y="1988.2155" z="3093.3772" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883558" respawn_time="295">
+                        <spot x="2136.9507" y="2000.928" z="3098.4365" h="77"/>
+                    </spawn>
+                    <spawn npc_id="883559" respawn_time="295">
+                        <spot x="2219.0894" y="1976.0073" z="3094.9695" h="116"/>
+                    </spawn>
+                    <spawn npc_id="883567" respawn_time="295">
+                        <spot x="2092.2952" y="1902.9706" z="3097.0586" h="57"/>
+                        <spot x="2155.312" y="1870.8523" z="3092.7437" h="61"/>
+                        <spot x="2082.2415" y="1923.1339" z="3097.2954" h="0"/>
+                        <spot x="2176.864" y="1867.2524" z="3093.5264" h="65"/>
+                    </spawn>
+                    <spawn npc_id="883568" respawn_time="295">
+                        <spot x="2109.249" y="1864.9137" z="3098.1045" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883569" respawn_time="295">
+                        <spot x="2105.1218" y="1884.0385" z="3097.7932" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883570" respawn_time="295">
+                        <spot x="2126.5234" y="1870.0583" z="3096.1301" h="0"/>
+                    </spawn>
+                    <spawn npc_id="883571" respawn_time="295">
+                        <spot x="2140.8328" y="1871.5446" z="3094.513" h="0"/>
                     </spawn>
                 </siege_mod>
                 <siege_mod mod="SIEGE">
