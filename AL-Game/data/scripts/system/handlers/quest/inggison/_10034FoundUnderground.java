@@ -52,7 +52,7 @@ public class _10034FoundUnderground extends QuestHandler {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(216531).addOnKillEvent(questId);
 		qe.registerQuestItem(182215628, questId);
-		qe.addHandlerSideQuestDrop(questId, 730229, 182215628, 1, 100);
+		// qe.addHandlerSideQuestDrop(questId, 730229, 182215628, 1, 100);
 		qe.registerGetingItem(182215628, questId);
 		for (int npc : npcs) {
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
@@ -181,9 +181,8 @@ public class _10034FoundUnderground extends QuestHandler {
 				case 730229: {
 					if (var == 6) {
 						switch (dialog) {
-							case USE_OBJECT: {
-								sendQuestDialog(env, 3057);
-								return false;
+							case USE_OBJECT: { // Handled by QuestItemNpcAI2
+								return true;
 							}
 							case SETPRO7: {
 								giveQuestItem(env, 182215628, 1);
