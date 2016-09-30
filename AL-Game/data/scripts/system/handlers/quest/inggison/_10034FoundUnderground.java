@@ -52,7 +52,6 @@ public class _10034FoundUnderground extends QuestHandler {
 		qe.registerOnLevelUp(questId);
 		qe.registerQuestNpc(216531).addOnKillEvent(questId);
 		qe.registerQuestItem(182215628, questId);
-		// qe.addHandlerSideQuestDrop(questId, 730229, 182215628, 1, 100);
 		qe.registerGetingItem(182215628, questId);
 		for (int npc : npcs) {
 			qe.registerQuestNpc(npc).addOnTalkEvent(questId);
