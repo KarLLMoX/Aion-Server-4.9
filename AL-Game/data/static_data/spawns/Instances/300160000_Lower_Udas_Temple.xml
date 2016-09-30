@@ -57,7 +57,7 @@
         </spawn>
         <!-- Hidden Switch -->
         <spawn npc_id="700604">
-            <spot x="806.212" y="886.731" z="152" h="60"/>
+            <spot x="806.212" y="886.731" z="149.53252" h="60"/>
         </spawn>
         <!-- Jotun Artisan -->
         <spawn npc_id="215838">
