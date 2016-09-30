@@ -111,6 +111,7 @@ public class FortressSiege extends Siege<FortressLocation> {
     	//unregisterSiegeBossListeners();
     	getSiegeLocation().setRace(SiegeRace.BALAUR);
     	getSiegeLocation().setLegionId(0);
+		getArtifact().setLegionId(0);
     	getSiegeLocation().setOccupyCount(0);
     	DAOManager.getDAO(SiegeDAO.class).updateLocation(getSiegeLocation());
     	broadcastUpdate(getSiegeLocation());
@@ -157,6 +158,7 @@ public class FortressSiege extends Siege<FortressLocation> {
             broadcastUpdate(getSiegeLocation());
         } else {
         	getSiegeLocation().setOccupyCount(getSiegeLocation().getOccupyCount() +1);
+			broadcastUpdate(getSiegeLocation());
             broadcastState(getSiegeLocation());
         }
 

@@ -86,8 +86,8 @@ public class MySQL5SiegeDAO extends SiegeDAO {
             stmt = con.prepareStatement(UPDATE_QUERY);
             stmt.setString(1, siegeLocation.getRace().toString());
             stmt.setInt(2, siegeLocation.getLegionId());
-            stmt.setInt(3, siegeLocation.getLocationId());
-            stmt.setInt(4, siegeLocation.getOccupyCount());
+            stmt.setInt(3, siegeLocation.getOccupyCount());
+            stmt.setInt(4, siegeLocation.getLocationId());
             stmt.execute();
         } catch (Exception e) {
             log.error("Error update Siege Location: " + siegeLocation.getLocationId() + " to race: "
