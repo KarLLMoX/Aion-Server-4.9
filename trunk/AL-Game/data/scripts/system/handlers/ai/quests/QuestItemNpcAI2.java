@@ -55,6 +55,12 @@ public class QuestItemNpcAI2 extends ActionItemNpcAI2 {
     @Override
     protected void handleUseItemFinish(Player player) {
         SelectDialogResult dialogResult = AI2Actions.selectDialog(this, player, 0, -1);
+        if (getNpcId() == 730229) {
+        	if (dialogResult.isSuccess()) {
+        		PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 3057, 10034));
+        	}
+        }
+		
         if (!dialogResult.isSuccess()) {
             if (isDialogNpc()) {
                 // show default dialog
