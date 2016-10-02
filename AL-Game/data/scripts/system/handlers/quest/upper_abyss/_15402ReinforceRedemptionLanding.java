@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author Phantom_KNA
+ * @rework FrozenKiller
  */
 public class _15402ReinforceRedemptionLanding extends QuestHandler {
 
@@ -41,39 +42,76 @@ public class _15402ReinforceRedemptionLanding extends QuestHandler {
 
     @Override
     public void register() {
-		qe.registerQuestNpc(805356).addOnQuestStart(questId);
-        qe.registerQuestNpc(805352).addOnTalkEvent(questId);
-		qe.registerQuestNpc(805352).addOnTalkEvent(questId); ;
+		qe.registerQuestNpc(805351).addOnQuestStart(questId); //Jiskur
+        qe.registerQuestNpc(805352).addOnTalkEvent(questId); //Kirwa
+		qe.registerQuestNpc(805381).addOnTalkEvent(questId); //Desmirai
+		qe.registerQuestNpc(805382).addOnTalkEvent(questId); //Madalenne
     }
 
-@Override
+    @Override
     public boolean onDialogEvent(QuestEnv env) {
         Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
+        DialogAction dialog = env.getDialog();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
-            if (targetId == 805352) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
+            if (targetId == 805351) { //Jiskur
+                if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);
                 } else {
                     return sendQuestStartDialog(env);
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if (targetId == 805352) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 10002);
-                } else if (env.getDialog() == DialogAction.SELECT_QUEST_REWARD) {
-                    changeQuestStep(env, 0, 0, true);
-                    return sendQuestDialog(env, 5);
-                }
-            }
+        	switch (targetId) {
+        		case 805352: { //Kirwa
+        			switch (dialog) {
+        				case QUEST_SELECT: {
+        					return sendQuestDialog(env, 1352);
+        				}
+        				case SETPRO2: {
+                            changeQuestStep(env, 0, 1, false);
+        					return closeDialogWindow(env);
+        				}
+					default:
+						break;
+        			}
+        		}
+        		case 805381: { //Desmirai
+        			switch (dialog) {
+        				case QUEST_SELECT: {
+        					return sendQuestDialog(env, 1693);
+        				}
+        				case SET_SUCCEED: {
+                            changeQuestStep(env, 1, 2, false);
+        					return closeDialogWindow(env);
+        				}
+					default:
+						break;
+        			}
+        		}
+        		case 805382: { //Madalenne
+        			switch (dialog) {
+    					case QUEST_SELECT: {
+    						return sendQuestDialog(env, 10002);
+    					}
+    					case SELECT_QUEST_REWARD: {
+    						changeQuestStep(env, 2, 3, false);
+                        	qs.setStatus(QuestStatus.REWARD);
+    	                    updateQuestStatus(env);
+    						return sendQuestDialog(env, 5);
+    					}
+    					default:
+    						break;
+        			}
+        		}
+        	}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 805352) {
-                return sendQuestEndDialog(env);
-            }
+        	if (targetId == 805382) {
+        		return sendQuestEndDialog(env);
+        	}
         } 
-        return false;
+		return false;
     }
 }
