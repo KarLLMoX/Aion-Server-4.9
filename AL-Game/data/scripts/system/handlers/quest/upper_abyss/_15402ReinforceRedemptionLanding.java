@@ -68,9 +68,9 @@ public class _15402ReinforceRedemptionLanding extends QuestHandler {
         		case 805352: { //Kirwa
         			switch (dialog) {
         				case QUEST_SELECT: {
-        					return sendQuestDialog(env, 1352);
+        					return sendQuestDialog(env, 1011);
         				}
-        				case SETPRO2: {
+        				case SETPRO1: {
                             changeQuestStep(env, 0, 1, false);
         					return closeDialogWindow(env);
         				}
@@ -81,9 +81,9 @@ public class _15402ReinforceRedemptionLanding extends QuestHandler {
         		case 805381: { //Desmirai
         			switch (dialog) {
         				case QUEST_SELECT: {
-        					return sendQuestDialog(env, 1693);
+        					return sendQuestDialog(env, 1352);
         				}
-        				case SET_SUCCEED: {
+        				case SETPRO2: {
                             changeQuestStep(env, 1, 2, false);
         					return closeDialogWindow(env);
         				}
@@ -94,24 +94,33 @@ public class _15402ReinforceRedemptionLanding extends QuestHandler {
         		case 805382: { //Madalenne
         			switch (dialog) {
     					case QUEST_SELECT: {
-    						return sendQuestDialog(env, 10002);
+    						return sendQuestDialog(env, 1693);
     					}
-    					case SELECT_QUEST_REWARD: {
+    					case SET_SUCCEED: {
     						changeQuestStep(env, 2, 3, false);
                         	qs.setStatus(QuestStatus.REWARD);
     	                    updateQuestStatus(env);
-    						return sendQuestDialog(env, 5);
+    	                    return closeDialogWindow(env);
     					}
-    					default:
-    						break;
+    				default:
+    					break;
         			}
         		}
         	}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-        	if (targetId == 805382) {
-        		return sendQuestEndDialog(env);
+        	if (targetId == 805352) { //Kirwa
+        		switch (dialog) {
+    				case USE_OBJECT: {
+    					return sendQuestDialog(env, 10002);
+    				} 
+    				case SELECT_QUEST_REWARD: {
+    					return sendQuestDialog(env, 5);
+    				}
+				default:
+					return sendQuestEndDialog(env);
+        		}
         	}
-        } 
+        }
 		return false;
     }
-}
+}        		

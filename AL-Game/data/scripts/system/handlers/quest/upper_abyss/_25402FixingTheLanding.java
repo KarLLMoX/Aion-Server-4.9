@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author Phantom_KNA
+ * @rework FrozenKiller
  */
 public class _25402FixingTheLanding extends QuestHandler {
 
@@ -41,39 +42,85 @@ public class _25402FixingTheLanding extends QuestHandler {
 
     @Override
     public void register() {
-		qe.registerQuestNpc(805356).addOnQuestStart(questId);
-        qe.registerQuestNpc(805356).addOnTalkEvent(questId);
-		qe.registerQuestNpc(805357).addOnTalkEvent(questId); 
+		qe.registerQuestNpc(805356).addOnQuestStart(questId); //Pontekai
+		qe.registerQuestNpc(805357).addOnTalkEvent(questId); //Damian
+		qe.registerQuestNpc(805404).addOnTalkEvent(questId); //Otar
+		qe.registerQuestNpc(805405).addOnTalkEvent(questId); //Kroaz
     }
 
-@Override
+    @Override
     public boolean onDialogEvent(QuestEnv env) {
         Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
+        DialogAction dialog = env.getDialog();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
-            if (targetId == 805356) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
+            if (targetId == 805356) { //Pontekai
+                if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);
                 } else {
                     return sendQuestStartDialog(env);
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if (targetId == 805357) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 10002);
-                } else if (env.getDialog() == DialogAction.SELECT_QUEST_REWARD) {
-                    changeQuestStep(env, 0, 0, true);
-                    return sendQuestDialog(env, 5);
-                }
-            }
+        	switch (targetId) {
+        		case 805357: { //Damian
+        			switch (dialog) {
+        				case QUEST_SELECT: {
+       						return sendQuestDialog(env, 1011);
+        				}
+        				case SETPRO1: {
+                            changeQuestStep(env, 0, 1, false);
+        					return closeDialogWindow(env);
+        				}
+					default:
+						break;
+        			}
+        		}
+        		case 805404: { //Otar
+        			switch (dialog) {
+        				case QUEST_SELECT: {
+        					return sendQuestDialog(env, 1352);
+        				}
+        				case SETPRO2: {
+                            changeQuestStep(env, 1, 2, false);
+        					return closeDialogWindow(env);
+        				}
+					default:
+						break;
+        			}
+        		}
+        		case 805405: { //Kroaz
+        			switch (dialog) {
+    					case QUEST_SELECT: {
+    						return sendQuestDialog(env, 1693);
+    					}
+    					case SET_SUCCEED: {
+    						changeQuestStep(env, 2, 3, false);
+    						qs.setStatus(QuestStatus.REWARD);
+    						updateQuestStatus(env);
+        					return closeDialogWindow(env);
+    					}
+    				default:
+    					break;
+        			}
+        		}
+        	}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 805357) {
-                return sendQuestEndDialog(env);
-            }
+        	if (targetId == 805357) { //Damian
+        		switch (dialog) {
+        			case USE_OBJECT: {
+        				return sendQuestDialog(env, 10002);
+        			} 
+        			case SELECT_QUEST_REWARD: {
+						return sendQuestDialog(env, 5);
+					}
+        		default:
+        			return sendQuestEndDialog(env);
+        		}
+        	}
         } 
-        return false;
+		return false;
     }
 }
