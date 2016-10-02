@@ -4547,20 +4547,20 @@
 		<spawn npc_id="702830" respawn_time="295">
 			<!-- 2 Spots -->
 			<spot x="2717.3792" y="769.9473" z="2872.3818" h="0" static_id="51"/>
-			<spot x="2750.9766" y="833.9174" z="2872.3818" h="0" static_id="51"/>
+			<spot x="2750.9766" y="833.9174" z="2872.3818" h="0" static_id="941"/>
 		</spawn>
 		<!-- Destroyed Gate Reinforcer ||| AB1_FOBJ_Broken_Slate_Q15400 -->
 		<spawn npc_id="702831" respawn_time="295">
 			<!-- 2 Spots -->
-			<spot x="2749.2356" y="802.96844" z="2873.36" h="0" static_id="206"/>
+			<spot x="2749.2356" y="802.96844" z="2873.36" h="0" static_id="207"/>
 			<spot x="2719.2844" y="798.4818" z="2873.3582" h="0" static_id="206"/>
 		</spawn>
 		<!-- Heavy Bomb Box ||| AB1_FOBJ_Ereshkigal_Box_Q15400 -->
 		<spawn npc_id="702832" respawn_time="295">
 			<!-- 4 Spots -->
-			<spot x="2755.2075" y="800.1916" z="2872.4524" h="0" static_id="104"/>
-			<spot x="2756.124" y="816.31116" z="2872.0623" h="0" static_id="104"/>
-			<spot x="2714.69" y="795.74866" z="2872.378" h="0" static_id="104"/>
+			<spot x="2755.2075" y="800.1916" z="2872.4524" h="0" static_id="105"/>
+			<spot x="2756.124" y="816.31116" z="2872.0623" h="0" static_id="16"/>
+			<spot x="2714.69" y="795.74866" z="2872.378" h="0" static_id="17"/>
 			<spot x="2699.5723" y="808.0472" z="2872.0354" h="0" static_id="104"/>
 		</spawn>
 		<!-- Tallesleon ||| AB1_Tallasleon_E -->
@@ -5043,7 +5043,7 @@
 		<spawn npc_id="702833" respawn_time="295">
 			<!-- 2 Spots -->
 			<spot x="670.83716" y="2955.573" z="2893.0176" h="0" static_id="54"/>
-			<spot x="767.5651" y="2969.7263" z="2893.0178" h="0" static_id="54"/>
+			<spot x="767.5651" y="2969.7263" z="2893.0178" h="0" static_id="52"/>
 		</spawn>
 		<!-- Shattered Gate Reinforcer ||| AB1_FOBJ_Broken_Slate_Q25400 -->
 		<spawn npc_id="702834" respawn_time="295">
@@ -5053,7 +5053,7 @@
 		<!-- Big Bomb Box ||| AB1_FOBJ_Ereshkigal_Box_Q25400 -->
 		<spawn npc_id="702835" respawn_time="295">
 			<!-- 2 Spots -->
-			<spot x="703.214" y="2978.5771" z="2893.0115" h="0" static_id="80"/>
+			<spot x="703.214" y="2978.5771" z="2893.0115" h="0" static_id="18"/>
 			<spot x="712.2829" y="2993.7153" z="2892.6323" h="0" static_id="80"/>
 		</spawn>
 		<!-- Dukas ||| Ab1_Dukas_E -->
