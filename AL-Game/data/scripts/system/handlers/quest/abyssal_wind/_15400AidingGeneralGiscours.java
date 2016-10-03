@@ -22,6 +22,7 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.services.QuestService;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
@@ -36,12 +37,8 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
     }
 	
     @Override
-    public boolean onLvlUpEvent(QuestEnv env) {
-        return defaultOnLvlUpEvent(env);
-    }
-
-    @Override
     public void register() {
+    	qe.registerOnEnterWorld(questId);
 		qe.registerQuestNpc(805351).addOnTalkEvent(questId); //Jiskur
 		qe.registerQuestNpc(805352).addOnTalkEvent(questId); //Kirwa
 		qe.registerQuestNpc(805353).addOnTalkEvent(questId); //Baud
@@ -54,6 +51,18 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 		qe.registerQuestNpc(883643).addOnKillEvent(questId);
     }
 
+	@Override
+	public boolean onEnterWorldEvent(QuestEnv env) {
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+			if (player.getLevel() >= 65 && player.getWorldId() == 400010000) {
+				QuestService.startQuest(env);
+				return true;
+			}
+		}
+		return false;
+	}
 	
     @Override
     public boolean onDialogEvent(QuestEnv env) {
@@ -61,10 +70,11 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
         DialogAction dialog = env.getDialog();
-        
-        if (qs == null || qs.getStatus() == QuestStatus.NONE ) {
+        if (qs == null) {
             return false;
-        } else if (qs.getStatus() == QuestStatus.START) {
+        }
+        
+        if (qs.getStatus() == QuestStatus.START) {
         	int var = qs.getQuestVarById(0);
         	switch (targetId) {
         		case 805351: { //Jiskur
@@ -107,8 +117,8 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 						break;
         			}
         		}
-        		case 805353: {
-        			switch (dialog) { //Baud
+        		case 805353: { //Baud
+        			switch (dialog) {
         				case USE_OBJECT: {
         					return sendQuestDialog(env, 1693);
         				}
