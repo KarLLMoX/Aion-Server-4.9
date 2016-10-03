@@ -5036,6 +5036,10 @@
 			<!-- 1 Spots -->
 			<spot x="2751.5376" y="1325.4786" z="2606.475" h="92"/>
 		</spawn>
+		<!-- Raud ||| Ab1_Lagund_E -->
+		<spawn npc_id="805354" respawn_time="295">
+			<spot x="2540.3853" y="1155.1775" z="2800.287" h="0"/>
+		</spawn>
         <!-- Upper Abyss Roah Start -->
 
         <!-- Upper Abyss Asteria Start -->

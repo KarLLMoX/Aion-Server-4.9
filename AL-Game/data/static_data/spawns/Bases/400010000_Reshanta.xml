@@ -196,7 +196,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Balaur, Elyos Spawns Update - 02.10.16 -->
+        <!-- Balaur, Elyos and Asmos Spawns Update - 02.10.16 -->
         <base_spawn id="135"> <!-- Sliversleet Outpost -->
             <simple_race race="ASMODIANS">
                 <!-- Sliversleet Outpost Flag -->
@@ -238,7 +238,44 @@
                 <spawn npc_id="883099" respawn_time="295">
                     <spot x="2186.4548" y="1178.6171" z="3016.289" h="10"/>
                     <spot x="2176.3958" y="1154.3201" z="3016.3005" h="96"/>
-                </spawn>    
+                </spawn>
+
+                <spawn npc_id="883346" respawn_time="295">
+                    <spot x="2004.0548" y="1171.8789" z="2962.6628" h="70"/>
+                    <spot x="1994.1167" y="1202.966" z="2951.6038" h="44"/>
+                    <spot x="1981.0933" y="1202.705" z="2951.916" h="54"/>
+                    <spot x="1949.2623" y="1229.9657" z="2956.296" h="51"/>
+                </spawn>
+                <spawn npc_id="883347" respawn_time="295">
+                    <spot x="1963.9113" y="1221.0464" z="2956.7092" h="4"/>
+                </spawn>
+                <spawn npc_id="883348" respawn_time="295">
+                    <spot x="1967.1533" y="1237.3436" z="2961.096" h="78"/>
+                </spawn>
+                <spawn npc_id="883349" respawn_time="295">
+                    <spot x="2029.28" y="1168.6938" z="2963.0645" h="46"/>
+                </spawn>
+                <spawn npc_id="883350" respawn_time="295">
+                    <spot x="2046.0228" y="1154.9836" z="2964.137" h="18"/>
+                </spawn>
+                <spawn npc_id="883352" respawn_time="295">
+                    <spot x="2226.922" y="1349.1532" z="2964.4048" h="65"/>
+                    <spot x="2275.0967" y="1343.9902" z="2984.36" h="77"/>
+                    <spot x="2269.6965" y="1356.5884" z="2981.711" h="13"/>
+                    <spot x="2225.0442" y="1395.0146" z="2962.6147" h="47"/>
+                </spawn>
+                <spawn npc_id="883353" respawn_time="295">
+                    <spot x="2254.9705" y="1354.0364" z="2975.241" h="6"/>
+                </spawn>
+                <spawn npc_id="883354" respawn_time="295">
+                    <spot x="2239.9487" y="1382.9492" z="2967.012" h="0"/>
+                </spawn>
+                <spawn npc_id="883355" respawn_time="295">
+                    <spot x="2213.193" y="1408.9491" z="2960.6248" h="35"/>
+                </spawn>
+                <spawn npc_id="883356" respawn_time="295">
+                    <spot x="2231.559" y="1362.4897" z="2964.9355" h="83"/>
+                </spawn>
             </simple_race>
             <simple_race race="ELYOS">
                 <!-- Sliversleet Outpost Flag -->
@@ -381,7 +418,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Update Balaur, Elyos Spawns - 02.10.16 -->
+        <!-- Update Balaur, Elyos and Asmos Spawns - 02.10.16 -->
         <base_spawn id="136"> <!-- Coldforge Outpost -->
             <simple_race race="ASMODIANS">
                 <!-- Coldforge Outpost Flag -->
@@ -423,6 +460,43 @@
                 <spawn npc_id="883111" respawn_time="295">
                     <spot x="1691.2771" y="2143.6702" z="2948.2593" h="60"/>
                     <spot x="1706.9065" y="2127.0042" z="2949.175" h="30"/>
+                </spawn>
+
+                <spawn npc_id="883365" respawn_time="295">
+                    <spot x="1559.7993" y="2199.291" z="2925.8215" h="29"/>
+                    <spot x="1528.623" y="2225.7964" z="2925.2712" h="76"/>
+                    <spot x="1522.6324" y="2264.0618" z="2919.975" h="6"/>
+                    <spot x="1599.1432" y="2190.6135" z="2921.2148" h="10"/>
+                </spawn>
+                <spawn npc_id="883366" respawn_time="295">
+                    <spot x="1575.014" y="2212.3982" z="2922.131" h="16"/>
+                </spawn>
+                <spawn npc_id="883367" respawn_time="295">
+                    <spot x="1543.9027" y="2217.8381" z="2924.8787" h="96"/>
+                </spawn>
+                <spawn npc_id="883368" respawn_time="295">
+                    <spot x="1529.1786" y="2248.5078" z="2921.2053" h="67"/>
+                </spawn>
+                <spawn npc_id="883369" respawn_time="295">
+                    <spot x="1573.0104" y="2196.7349" z="2924.4358" h="61"/>
+                </spawn>
+                <spawn npc_id="883371" respawn_time="295">
+                    <spot x="1832.7883" y="2091.97" z="2946.8433" h="4"/>
+                    <spot x="1870.2201" y="2122.2676" z="2948.3604" h="56"/>
+                    <spot x="1887.3671" y="2076.8218" z="2958.4907" h="39"/>
+                    <spot x="1849.5426" y="2066.6267" z="2951.177" h="0"/>
+                </spawn>
+                <spawn npc_id="883372" respawn_time="295">
+                    <spot x="1880.4781" y="2094.9563" z="2955.1243" h="45"/>
+                </spawn>
+                <spawn npc_id="883373" respawn_time="295">
+                    <spot x="1857.6351" y="2107.6497" z="2948.5505" h="0"/>
+                </spawn>
+                <spawn npc_id="883374" respawn_time="295">
+                    <spot x="1842.5823" y="2077.7903" z="2949.819" h="0"/>
+                </spawn>
+                <spawn npc_id="883375" respawn_time="295">
+                    <spot x="1846.1134" y="2088.8254" z="2949.3916" h="29"/>
                 </spawn>
             </simple_race>
             <simple_race race="ELYOS">
@@ -788,7 +862,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Update Balaur, Elyos Spawns - 02.10.16 -->
+        <!-- Update Balaur, Elyos and Asmo Spawns - 02.10.16 -->
         <base_spawn id="138"> <!-- Icehowl Outpost -->
             <simple_race race="ASMODIANS">
                 <!-- Icehowl Outpost Flag -->
@@ -830,7 +904,43 @@
                 <spawn npc_id="883135" respawn_time="295">
                     <spot x="2396.7632" y="2211.4802" z="3085.523" h="66"/>
                     <spot x="2425.1868" y="2212.16" z="3085.432" h="110"/>
-                </spawn>  
+                </spawn>
+
+                <spawn npc_id="883403" respawn_time="295">
+                    <spot x="2350.2646" y="2168.4841" z="3015.7795" h="12"/>
+                    <spot x="2365.5403" y="2148.1118" z="3014.9172" h="14"/>
+                    <spot x="2352.856" y="2131.5386" z="3018.096" h="91"/>
+                    <spot x="2286.4348" y="2135.123" z="3022.384" h="27"/>
+                </spawn>
+                <spawn npc_id="883404" respawn_time="295">
+                    <spot x="2308.4983" y="2126.4753" z="3023.2463" h="75"/>
+                </spawn>
+                <spawn npc_id="883405" respawn_time="295">
+                    <spot x="2325.1277" y="2147.7095" z="3019.3945" h="66"/>
+                </spawn>
+                <spawn npc_id="883406" respawn_time="295">
+                    <spot x="2316.688" y="2097.3123" z="3028.02" h="114"/>
+                </spawn>
+                <spawn npc_id="883407" respawn_time="295">
+                    <spot x="2387.0684" y="2163.2668" z="3009.9705" h="35"/>
+                </spawn>
+                <spawn npc_id="883409" respawn_time="295">
+                    <spot x="2500.7913" y="2276.1355" z="3000.1301" h="111"/>
+                    <spot x="2567.365" y="2258.8267" z="2993.0725" h="69"/>
+                    <spot x="2573.8716" y="2308.9136" z="2983.9756" h="0"/>
+                </spawn>
+                <spawn npc_id="883410" respawn_time="295">
+                    <spot x="2529.362" y="2253.9905" z="2998.326" h="116"/>
+                </spawn>
+                <spawn npc_id="883411" respawn_time="295">
+                    <spot x="2558.7527" y="2288.5757" z="2988.3704" h="0"/>
+                </spawn>
+                <spawn npc_id="883412" respawn_time="295">
+                    <spot x="2516.2998" y="2275.1516" z="2997.621" h="0"/>
+                </spawn>
+                <spawn npc_id="883413" respawn_time="295">
+                    <spot x="2548.8235" y="2265.8623" z="2993.654" h="29"/>
+                </spawn>
             </simple_race>
             <simple_race race="ELYOS">
                 <!-- Icehowl Outpost Flag -->
@@ -971,7 +1081,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Update Balaur, Elyos Spawns - 02.10.16 -->
+        <!-- Update Balaur, Elyos and Asmo Spawns - 02.10.16 -->
         <base_spawn id="139"> <!-- Chillhaunt Outpost (Base 55) -->
             <simple_race race="ASMODIANS">
                 <!-- Chillhaunt Outpost Flag -->
@@ -1013,6 +1123,41 @@
                 <spawn npc_id="883147" respawn_time="295">
                     <spot x="2622.5696" y="2020.7412" z="3085.5762" h="10"/>
                     <spot x="2604.637" y="1998.574" z="3085.685" h="83"/>
+                </spawn>
+
+                <spawn npc_id="883422" respawn_time="295">
+                    <spot x="2563.3433" y="1929.0443" z="3012.0896" h="9"/>
+                    <spot x="2535.6528" y="1906.2825" z="3014.938" h="32"/>
+                    <spot x="2499.8684" y="1946.9951" z="3011.6084" h="36"/>
+                    <spot x="2466.862" y="1971.3542" z="3010.3506" h="116"/>
+                </spawn>
+                <spawn npc_id="883423" respawn_time="295">
+                    <spot x="2528.3171" y="1957.6793" z="3012.7063" h="3"/>
+                </spawn>
+                <spawn npc_id="883424" respawn_time="295">
+                    <spot x="2532.755" y="1919.9396" z="3014.3516" h="1"/>
+                </spawn>
+                <spawn npc_id="883425" respawn_time="295">
+                    <spot x="2485.2756" y="1966.006" z="3010.7834" h="116"/>
+                </spawn>
+                <spawn npc_id="883426" respawn_time="295">
+                    <spot x="2523.4026" y="1924.4489" z="3014.6055" h="4"/>
+                </spawn>
+                <spawn npc_id="883428" respawn_time="295">
+                    <spot x="2729.6082" y="1967.4878" z="3028.9504" h="9"/>
+                    <spot x="2746.9214" y="1929.4863" z="3035.201" h="119"/>
+                </spawn>
+                <spawn npc_id="883429" respawn_time="295">
+                    <spot x="2739.231" y="1944.9161" z="3032.3457" h="119"/>
+                </spawn>
+                <spawn npc_id="883430" respawn_time="295">
+                    <spot x="2745.463" y="1968.7233" z="3027.8237" h="0"/>
+                </spawn>
+                <spawn npc_id="883431" respawn_time="295">
+                    <spot x="2729.8635" y="1987.8809" z="3024.733" h="109"/>
+                </spawn>
+                <spawn npc_id="883432" respawn_time="295">
+                    <spot x="2774.1265" y="1932.0889" z="3034.1265" h="15"/>
                 </spawn>
             </simple_race>
             <simple_race race="ELYOS">
@@ -1840,7 +1985,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Update Balaur, Asmos Spawns - 02.10.16 -->
+        <!-- Update Balaur, Asmos and Elyos Spawns - 02.10.16 -->
         <base_spawn id="147"> <!-- Blazerack Outpost -->
             <simple_race race="ASMODIANS">
                 <!-- Blazerack Outpost Flag -->
@@ -1968,6 +2113,43 @@
                     <spot x="628.27563" y="2857.6309" z="2692.3208" h="96"/>
                     <spot x="609.8839" y="2878.619" z="2692.4465" h="53"/>
                 </spawn>
+
+                <spawn npc_id="883498" respawn_time="295">
+                    <spot x="474.92795" y="2825.5452" z="2838.08" h="115"/>
+                    <spot x="461.7448" y="2818.7825" z="2838.0718" h="20"/>
+                    <spot x="471.97885" y="2792.7222" z="2836.9058" h="14"/>
+                    <spot x="484.58212" y="2774.09" z="2836.2178" h="8"/>
+                </spawn>
+                <spawn npc_id="883499" respawn_time="295">
+                    <spot x="497.0982" y="2788.3667" z="2837.0479" h="118"/>
+                </spawn>
+                <spawn npc_id="883500" respawn_time="295">
+                    <spot x="500.3915" y="2769.0288" z="2836.7126" h="92"/>
+                </spawn>
+                <spawn npc_id="883501" respawn_time="295">
+                    <spot x="486.0896" y="2806.983" z="2837.542" h="19"/>
+                </spawn>
+                <spawn npc_id="883502" respawn_time="295">
+                    <spot x="455.74088" y="2776.5479" z="2835.7139" h="2"/>
+                </spawn>
+                <spawn npc_id="883510" respawn_time="295">
+                    <spot x="448.63034" y="2950.683" z="2837.1802" h="0"/>
+                    <spot x="437.25793" y="2939.295" z="2836.749" h="117"/>
+                    <spot x="429.46005" y="2979.9995" z="2837.2244" h="119"/>
+                    <spot x="409.2868" y="2949.7175" z="2833.5696" h="116"/>
+                </spawn>
+                <spawn npc_id="883511" respawn_time="295">
+                    <spot x="409.9816" y="2965.089" z="2834.1067" h="115"/>
+                </spawn>
+                <spawn npc_id="883512" respawn_time="295">
+                    <spot x="421.33078" y="2952.8252" z="2835.0369" h="0"/>
+                </spawn>
+                <spawn npc_id="883513" respawn_time="295">
+                    <spot x="425.69434" y="2966.4524" z="2835.5261" h="111"/>
+                </spawn>
+                <spawn npc_id="883514" respawn_time="295">
+                    <spot x="436.42572" y="2958.0386" z="2836.1782" h="10"/>
+                </spawn>
             </simple_race>
             <simple_race race="NPC">
                 <!-- Blazerack Outpost Flag -->
@@ -2031,7 +2213,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Update Balaur Spawns - 02.10.16 -->
+        <!-- Update Balaur, Elyos and Asmos Spawns - 02.10.16 -->
         <base_spawn id="148"> <!-- Smoldergeist Outpost -->
             <simple_race race="ASMODIANS">
                 <!-- Smoldergeist Outpost Flag -->
@@ -2077,6 +2259,43 @@
                     <spot x="687.71295" y="3198.936" z="2914.7256" h="50"/>
                     <spot x="712.61444" y="3192.7703" z="2914.414" h="10"/>
                 </spawn>
+
+                <spawn npc_id="883517" respawn_time="295">
+                    <spot x="567.6112" y="3184.7341" z="2826.4333" h="9"/>
+                    <spot x="547.08093" y="3215.704" z="2824.5225" h="5"/>
+                    <spot x="586.40106" y="3220.0757" z="2824.3252" h="115"/>
+                    <spot x="544.40643" y="3264.8113" z="2822.1633" h="3"/>
+                </spawn>
+                <spawn npc_id="883518" respawn_time="295">
+                    <spot x="554.46027" y="3232.225" z="2823.1287" h="0"/>
+                </spawn>
+                <spawn npc_id="883519" respawn_time="295">
+                    <spot x="562.26746" y="3208.6252" z="2824.6033" h="40"/>
+                </spawn>
+                <spawn npc_id="883520" respawn_time="295">
+                    <spot x="555.9329" y="3199.2798" z="2824.9348" h="0"/>
+                </spawn>
+                <spawn npc_id="883521" respawn_time="295">
+                    <spot x="574.74005" y="3201.4805" z="2825.6475" h="4"/>
+                </spawn>
+                <spawn npc_id="883523" respawn_time="295">
+                    <spot x="777.3483" y="3358.9343" z="2897.819" h="113"/>
+                    <spot x="751.2604" y="3381.101" z="2903.3733" h="116"/>
+                    <spot x="704.5888" y="3391.128" z="2912.7776" h="51"/>
+                    <spot x="783.28503" y="3391.8733" z="2903.5122" h="0"/>
+                </spawn>
+                <spawn npc_id="883524" respawn_time="295">
+                    <spot x="770.1301" y="3370.649" z="2900.821" h="117"/>
+                </spawn>
+                <spawn npc_id="883525" respawn_time="295">
+                    <spot x="720.66833" y="3376.9749" z="2905.4382" h="0"/>
+                </spawn>
+                <spawn npc_id="883526" respawn_time="295">
+                    <spot x="775.28827" y="3383.7273" z="2903.447" h="0"/>
+                </spawn>
+                <spawn npc_id="883527" respawn_time="295">
+                    <spot x="742.96497" y="3373.9817" z="2901.687" h="3"/>
+                </spawn>
             </simple_race>
             <simple_race race="ELYOS">
                 <!-- Smoldergeist Outpost Flag -->
@@ -2121,6 +2340,43 @@
                 <spawn npc_id="883201" respawn_time="295">
                     <spot x="712.61444" y="3192.7703" z="2914.414" h="10"/>
                     <spot x="687.71295" y="3198.936" z="2914.7256" h="116"/>
+                </spawn>
+
+                <spawn npc_id="883517" respawn_time="295">
+                    <spot x="586.72253" y="3224.4922" z="2823.935" h="36"/>
+                    <spot x="536.27466" y="3264.7605" z="2823.007" h="54"/>
+                    <spot x="565.1541" y="3184.779" z="2826.1711" h="78"/>
+                    <spot x="538.14325" y="3211.839" z="2825.1064" h="61"/>
+                </spawn>
+                <spawn npc_id="883518" respawn_time="295">
+                    <spot x="546.54645" y="3232.8452" z="2823.7034" h="71"/>
+                </spawn>
+                <spawn npc_id="883519" respawn_time="295">
+                    <spot x="560.15924" y="3213.8486" z="2824.1038" h="83"/>
+                </spawn>
+                <spawn npc_id="883520" respawn_time="295">
+                    <spot x="562.9018" y="3199.478" z="2825.1548" h="21"/>
+                </spawn>
+                <spawn npc_id="883521" respawn_time="295">
+                    <spot x="576.55066" y="3204.8516" z="2825.346" h="53"/>
+                </spawn>
+                <spawn npc_id="883529" respawn_time="295">
+                    <spot x="777.3916" y="3359.0806" z="2897.8887" h="116"/>
+                    <spot x="751.2816" y="3381.3032" z="2903.4402" h="0"/>
+                    <spot x="705.6452" y="3385.6406" z="2911.9663" h="115"/>
+                    <spot x="783.2205" y="3391.525" z="2903.5522" h="113"/>
+                </spawn>
+                <spawn npc_id="883530" respawn_time="295">
+                    <spot x="770.1405" y="3370.8464" z="2900.8757" h="1"/>
+                </spawn>
+                <spawn npc_id="883531" respawn_time="295">
+                    <spot x="720.66833" y="3376.9749" z="2905.4382" h="0"/>
+                </spawn>
+                <spawn npc_id="883532" respawn_time="295">
+                    <spot x="775.28827" y="3383.7273" z="2903.447" h="0"/>
+                </spawn>
+                <spawn npc_id="883533" respawn_time="295">
+                    <spot x="738.08887" y="3374.3672" z="2902.9568" h="0"/>
                 </spawn>
             </simple_race>
             <simple_race race="NPC">
@@ -2185,7 +2441,7 @@
             </simple_race>
         </base_spawn>
 
-        <!-- Update Balaur, Asmos Spawns - 02.10.16 -->
+        <!-- Update Balaur, Asmos and Elyos Spawns - 02.10.16 -->
         <base_spawn id="149"> <!-- Moltenspike Outpost (Base 65) -->
             <simple_race race="ASMODIANS">
                 <!-- Moltenspike Outpost Flag -->
@@ -2306,7 +2562,44 @@
                 <spawn npc_id="883213" respawn_time="295">
                     <spot x="842.8671" y="3034.4558" z="3051.6716" h="6"/>
                     <spot x="812.2547" y="3042.5264" z="3051.4736" h="50"/>
-                </spawn> 
+                </spawn>
+
+                <spawn npc_id="883536" respawn_time="295">
+                    <spot x="986.10364" y="3181.8054" z="2920.2153" h="19"/>
+                    <spot x="981.7188" y="3219.0503" z="2924.3694" h="119"/>
+                    <spot x="942.1207" y="3186.4011" z="2908.968" h="45"/>
+                    <spot x="950.98346" y="3199.9016" z="2911.6013" h="46"/>
+                </spawn>
+                <spawn npc_id="883537" respawn_time="295">
+                    <spot x="964.5755" y="3206.9663" z="2916.7341" h="115"/>
+                </spawn>
+                <spawn npc_id="883538" respawn_time="295">
+                    <spot x="960.29596" y="3187.0544" z="2913.4126" h="6"/>
+                </spawn>
+                <spawn npc_id="883539" respawn_time="295">
+                    <spot x="959.8302" y="3179.1606" z="2912.7458" h="19"/>
+                </spawn>
+                <spawn npc_id="883540" respawn_time="295">
+                    <spot x="980.0188" y="3200.4092" z="2920.0825" h="5"/>
+                </spawn>
+                <spawn npc_id="883548" respawn_time="295">
+                    <spot x="1011.8731" y="2953.8342" z="2923.8203" h="19"/>
+                    <spot x="1006.4989" y="2913.8225" z="2915.3992" h="119"/>
+                    <spot x="1029.2332" y="2939.5186" z="2925.2544" h="113"/>
+                    <spot x="1021.58295" y="2894.464" z="2919.1165" h="116"/>
+                </spawn>
+                <spawn npc_id="883549" respawn_time="295">
+                    <spot x="1020.9459" y="2908.5403" z="2918.5059" h="67"/>
+                </spawn>
+                <spawn npc_id="883550" respawn_time="295">
+                    <spot x="1004.8661" y="2930.9756" z="2918.8992" h="0"/>
+                </spawn>
+                <spawn npc_id="883551" respawn_time="295">
+                    <spot x="1035.565" y="2924.5667" z="2925.9163" h="90"/>
+                </spawn>
+                <spawn npc_id="883552" respawn_time="295">
+                    <spot x="990.62726" y="2925.5474" z="2914.509" h="1"/>
+                </spawn>
             </simple_race>
             <simple_race race="NPC">
                 <!-- Moltenspike Outpost Flag -->
