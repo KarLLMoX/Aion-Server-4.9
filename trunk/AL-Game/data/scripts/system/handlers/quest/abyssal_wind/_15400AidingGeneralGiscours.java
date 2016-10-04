@@ -258,7 +258,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 
     @Override
     public boolean onMovieEndEvent(QuestEnv env, int movieId) {
-        if (movieId == 277) {
+        if (movieId == 276) {
             Player player = env.getPlayer();
             TeleportService2.teleportTo(player, 400010000, 2393.6316f, 376.47012f, 2938.0315f, (byte) 33, TeleportAnimation.BEAM_ANIMATION);
             return true;
