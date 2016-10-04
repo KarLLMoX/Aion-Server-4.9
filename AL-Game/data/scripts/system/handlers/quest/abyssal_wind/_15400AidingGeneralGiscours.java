@@ -17,12 +17,14 @@
 package quest.abyssal_wind;
 
 import com.aionemu.gameserver.model.DialogAction;
+import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
+import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
@@ -47,6 +49,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 		qe.registerQuestNpc(702832).addOnTalkEvent(questId); //Weighty Bomb Chest
 		qe.registerQuestNpc(805354).addOnTalkEvent(questId); //Raud
 		qe.registerQuestNpc(805355).addOnTalkEvent(questId); //Perier
+		qe.registerOnMovieEndQuest(276, questId);
 		qe.registerOnEnterZone(ZoneName.get("KROTAN_REFUGE_400010000"), questId);
 		qe.registerQuestNpc(883643).addOnKillEvent(questId);
     }
@@ -107,6 +110,10 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
         					changeQuestStep(env, 1, 2, false);
         					return closeDialogWindow(env);
         				}
+        				case SELECT_ACTION_3740: {
+        					playQuestMovie(env, 277);
+        					return sendQuestDialog(env, 3740);
+        				}
         				case SET_SUCCEED: {
     						changeQuestStep(env, 8, 9, false);
     						qs.setStatus(QuestStatus.REWARD);
@@ -139,7 +146,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 						break;
         			}
         		}
-        		case 702831: { //Destroyed Gate Repair Equipment TODO SPAWN + STATIC ID
+        		case 702831: { //Destroyed Gate Repair Equipment
         			switch (dialog) {
         				case USE_OBJECT: {
         					return true;
@@ -149,7 +156,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
         					
         			}
         		}
-        		case 702832: { //Weighty Bomb Chest TODO SPAWN + STATIC ID
+        		case 702832: { //Weighty Bomb Chest
         			switch (dialog) {
         				case USE_OBJECT: {
         					return true;
@@ -186,6 +193,7 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
         				}
         				case SETPRO8: {
         					changeQuestStep(env, 7, 8, false);
+        					playQuestMovie(env, 276);
         					return closeDialogWindow(env);
         				}
 					default:
@@ -247,4 +255,14 @@ public class _15400AidingGeneralGiscours extends QuestHandler {
 		}
 		return false;
 	}
+
+    @Override
+    public boolean onMovieEndEvent(QuestEnv env, int movieId) {
+        if (movieId == 277) {
+            Player player = env.getPlayer();
+            TeleportService2.teleportTo(player, 400010000, 2393.6316f, 376.47012f, 2938.0315f, (byte) 33, TeleportAnimation.BEAM_ANIMATION);
+            return true;
+        }
+        return false;
+    }
 }

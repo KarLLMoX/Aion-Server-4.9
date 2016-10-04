@@ -28,7 +28,7 @@ import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
- * @FrozenKiller 
+ * @author FrozenKiller 
  */
 public class _25400PontekanesPlight extends QuestHandler {
 
