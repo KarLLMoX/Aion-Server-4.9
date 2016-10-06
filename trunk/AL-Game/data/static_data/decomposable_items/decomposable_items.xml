@@ -23327,7 +23327,15 @@
 		</items>
 	</decomposable>
 	<decomposable item_id="188052546" decomposable_name="Harmonious Reward Bundle"/>
-	<decomposable item_id="188052547" decomposable_name="Valorous Reward Bundle"/>
+	<decomposable item_id="188052547" decomposable_name="Valorous Reward Bundle">
+        <items>
+            <item id="188052544" name="Greater Stigma Bundle" race="ELYOS"/>
+            <item id="188052545" name="Greater Stigma Bundle" race="ASMODIANS"/>
+        </items>
+        <items>
+            <item id="169405252" name="Fury Powder"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052548" decomposable_name="Relic Bundle"/>
 	<decomposable item_id="188052549" decomposable_name="Writhing Chaotic Pistol Box">
 		<items>
@@ -23475,7 +23483,32 @@
 			<item id="167020058" name="Ancient Manastone: Parry +33" count="2" player_class="RIDER"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188052573" decomposable_name="Conquerer's Composite Manastone Bundle"/>
+	<decomposable item_id="188052573" decomposable_name="Conquerer's Composite Manastone Bundle">
+        <items chance="20.0">
+            <item id="167000749" name="Manastone: Attack +5 / Crit Strike +8"/>
+        </items>
+        <items chance="30.0">
+            <item id="167000750" name="Manastone: Attack +5 / Resist Magic +7"/>
+        </items>
+        <items chance="30.0">
+            <item id="167000751" name="Manastone: Attack +5 / Magical Accuracy +7"/>
+        </items>
+        <items chance="20.0">
+            <item id="167000690" name="Manastone: Crit Strike +17 / Attack +2"/>
+        </items>
+        <items chance="30.0">
+            <item id="167000704" name="Manastone: Magic Boost +27 / Resist Magic +7"/>
+        </items>
+        <items chance="20.0">
+            <item id="167000705" name="Manastone: Magic Boost +27 / Magical Accuracy +7"/>
+        </items>
+        <items chance="20.0">
+            <item id="167000708" name="Manastone: Magical Accuracy +14 / Magic Boost +13"/>
+        </items >
+        <items chance="30.0">
+            <item id="167000714" name="Manastone: Magical Accuracy +14 / Resist Magic +7"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188052574" decomposable_name="Hamerun's Special Box">
 		<items>
 			<item id="121001029" name="Hamerun's Jewel Necklace" player_class="GLADIATOR"/>
@@ -33892,10 +33925,437 @@
 	<decomposable item_id="188053318" decomposable_name="Legion's Greater Crown Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053319" decomposable_name="Legion's Crown Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053320" decomposable_name="Legion's Lesser Crown Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053322" decomposable_name="Levinshor Alliance Manastone Box"/> <!-- NEW -->
-	<decomposable item_id="188053323" decomposable_name="Levinshor Alliance Ancient Manastone Box"/> <!-- NEW -->
-	<decomposable item_id="188053324" decomposable_name="Levinshor Alliance Noble Ancient Manastone Box"/> <!-- NEW -->
-	<decomposable item_id="188053325" decomposable_name="Heavy Ancient Manastone Box of Levinshor Alliance"/> <!-- NEW -->
+	<decomposable item_id="188053322" decomposable_name="Levinshor Alliance Manastone Box">
+        <items chance="3.0">
+            <item id="167000758" name="Manastone: HP +80" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000759" name="Manastone: MP +80" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000760" name="Manastone: Accuracy +24" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000761" name="Manastone: Evasion +16" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000762" name="Manastone: Magic Boost +24" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000763" name="Manastone: Parry +24" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000764" name="Manastone: Block +24" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000765" name="Manastone: Crit Strike +16" count="2"/>
+        </items>
+        <items chance="3.0">
+            <item id="167000358" name="Manastone: Attack +3" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000766" name="Manastone: HP +100" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000767" name="Manastone: MP +105" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000768" name="Manastone: Accuracy +29" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000769" name="Manastone: Evasion +19" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000771" name="Manastone: Parry +29" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000772" name="Manastone: Block +29" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000770" name="Manastone: Magic Boost +28" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000773" name="Manastone: Crit Strike +19" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000775" name="Manastone: Magical Accuracy +16" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000776" name="Manastone: Resist Magic +16" count="2"/>
+        </items>
+        <items chance="2.0">
+            <item id="167000777" name="Manastone: Crit Spell +5" count="2"/>
+        </items>
+        <items>
+            <item id="167000518" name="Manastone: Attack +5" count="2"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053323" decomposable_name="Levinshor Alliance Ancient Manastone Box">
+        <items>
+            <item id="167020041" name="Ancient Manastone: Accuracy +29"/>
+        </items>
+        <items>
+            <item id="167020042" name="Ancient Manastone: Evasion +19"/>
+        </items>
+        <items>
+            <item id="167020043" name="Ancient Manastone: Parry +29"/>
+        </items>
+        <items>
+            <item id="167020044" name="Ancient Manastone: Block +29"/>
+        </items>
+        <items>
+            <item id="167020045" name="Ancient Manastone: Crit Strike +18"/>
+        </items>
+        <items>
+            <item id="167020046" name="Ancient Manastone: Physical Critical Resistance +20"/>
+        </items>
+        <items>
+            <item id="167020047" name="Ancient Manastone: Crit Spell +6"/>
+        </items>
+        <items>
+            <item id="167020048" name="Ancient Manastone: Magical Critical Resistance +7"/>
+        </items>
+        <items>
+            <item id="167020049" name="Ancient Manastone: Physical Defense +60"/>
+        </items>
+        <items>
+            <item id="167020050" name="Ancient Manastone: Resist Magic +17"/>
+        </items>
+        <items>
+            <item id="167020051" name="Ancient Manastone: Attack +5"/>
+        </items>
+        <items>
+            <item id="167020052" name="Ancient Manastone: Magical Accuracy +16"/>
+        </items>
+        <items>
+            <item id="167020053" name="Ancient Manastone: Magic Boost +28"/>
+        </items>
+        <items>
+            <item id="167020054" name="Ancient Manastone: Magic Suppression +30"/>
+        </items>
+        <items>
+            <item id="167020055" name="Ancient Manastone: Healing Boost +4"/>
+        </items>
+        <items>
+            <item id="167020024" name="Ancient Manastone: HP +105"/>
+        </items>
+        <items>
+            <item id="167020025" name="Ancient Manastone: MP +120"/>
+        </items>
+        <items>
+            <item id="167020026" name="Ancient Manastone: Accuracy +31"/>
+        </items>
+        <items>
+            <item id="167020027" name="Ancient Manastone: Evasion +21"/>
+        </items>
+        <items>
+            <item id="167020028" name="Ancient Manastone: Parry +31"/>
+        </items>
+        <items>
+            <item id="167020029" name="Ancient Manastone: Block +31"/>
+        </items>
+        <items>
+            <item id="167020030" name="Ancient Manastone: Crit Strike +20"/>
+        </items>
+        <items>
+            <item id="167020031" name="Ancient Manastone: Strike Resist +21"/>
+        </items>
+        <items>
+            <item id="167020032" name="Ancient Manastone: Crit Spell +7"/>
+        </items>
+        <items>
+            <item id="167020033" name="Ancient Manastone: Magical Critical Resistance +8"/>
+        </items>
+        <items>
+            <item id="167020034" name="Ancient Manastone: Physical Defense +70"/>
+        </items>
+        <items>
+            <item id="167020035" name="Ancient Manastone: Resist Magic +19"/>
+        </items>
+        <items>
+            <item id="167020036" name="Ancient Manastone: Attack +6"/>
+        </items>
+        <items>
+            <item id="167020037" name="Ancient Manastone: Magical Accuracy +18"/>
+        </items>
+        <items>
+            <item id="167020038" name="Ancient Manastone: Magic Boost +30"/>
+        </items>
+        <items>
+            <item id="167020039" name="Ancient Manastone: Magic Suppression +40"/>
+        </items>
+        <items>
+            <item id="167020040" name="Ancient Manastone: Healing Boost +5"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053324" decomposable_name="Levinshor Alliance Noble Ancient Manastone Box">
+        <items>
+            <item id="167020041" name="Ancient Manastone: Accuracy +29"/>
+        </items>
+        <items>
+            <item id="167020042" name="Ancient Manastone: Evasion +19"/>
+        </items>
+        <items>
+            <item id="167020043" name="Ancient Manastone: Parry +29"/>
+        </items>
+        <items>
+            <item id="167020044" name="Ancient Manastone: Block +29"/>
+        </items>
+        <items>
+            <item id="167020045" name="Ancient Manastone: Crit Strike +18"/>
+        </items>
+        <items>
+            <item id="167020046" name="Ancient Manastone: Physical Critical Resistance +20"/>
+        </items>
+        <items>
+            <item id="167020047" name="Ancient Manastone: Crit Spell +6"/>
+        </items>
+        <items>
+            <item id="167020048" name="Ancient Manastone: Magical Critical Resistance +7"/>
+        </items>
+        <items>
+            <item id="167020049" name="Ancient Manastone: Physical Defense +60"/>
+        </items>
+        <items>
+            <item id="167020050" name="Ancient Manastone: Resist Magic +17"/>
+        </items>
+        <items>
+            <item id="167020051" name="Ancient Manastone: Attack +5"/>
+        </items>
+        <items>
+            <item id="167020052" name="Ancient Manastone: Magical Accuracy +16"/>
+        </items>
+        <items>
+            <item id="167020053" name="Ancient Manastone: Magic Boost +28"/>
+        </items>
+        <items>
+            <item id="167020054" name="Ancient Manastone: Magic Suppression +30"/>
+        </items>
+        <items>
+            <item id="167020055" name="Ancient Manastone: Healing Boost +4"/>
+        </items>
+        <items>
+            <item id="167020024" name="Ancient Manastone: HP +105"/>
+        </items>
+        <items>
+            <item id="167020025" name="Ancient Manastone: MP +120"/>
+        </items>
+        <items>
+            <item id="167020026" name="Ancient Manastone: Accuracy +31"/>
+        </items>
+        <items>
+            <item id="167020027" name="Ancient Manastone: Evasion +21"/>
+        </items>
+        <items>
+            <item id="167020028" name="Ancient Manastone: Parry +31"/>
+        </items>
+        <items>
+            <item id="167020029" name="Ancient Manastone: Block +31"/>
+        </items>
+        <items>
+            <item id="167020030" name="Ancient Manastone: Crit Strike +20"/>
+        </items>
+        <items>
+            <item id="167020031" name="Ancient Manastone: Strike Resist +21"/>
+        </items>
+        <items>
+            <item id="167020032" name="Ancient Manastone: Crit Spell +7"/>
+        </items>
+        <items>
+            <item id="167020033" name="Ancient Manastone: Magical Critical Resistance +8"/>
+        </items>
+        <items>
+            <item id="167020034" name="Ancient Manastone: Physical Defense +70"/>
+        </items>
+        <items>
+            <item id="167020035" name="Ancient Manastone: Resist Magic +19"/>
+        </items>
+        <items>
+            <item id="167020036" name="Ancient Manastone: Attack +6"/>
+        </items>
+        <items>
+            <item id="167020037" name="Ancient Manastone: Magical Accuracy +18"/>
+        </items>
+        <items>
+            <item id="167020038" name="Ancient Manastone: Magic Boost +30"/>
+        </items>
+        <items>
+            <item id="167020039" name="Ancient Manastone: Magic Suppression +40"/>
+        </items>
+        <items>
+            <item id="167020040" name="Ancient Manastone: Healing Boost +5"/>
+        </items>
+        <items>
+            <item id="167020056" name="Ancient Manastone: Accuracy +33"/>
+        </items>
+        <items>
+            <item id="167020057" name="Ancient Manastone: Evasion +23"/>
+        </items>
+        <items>
+            <item id="167020058" name="Ancient Manastone: Parry +33"/>
+        </items>
+        <items>
+            <item id="167020059" name="Ancient Manastone: Block +33"/>
+        </items>
+        <items>
+            <item id="167020060" name="Ancient Manastone: Physical Critical Resistance +22"/>
+        </items>
+        <items>
+            <item id="167020061" name="Ancient Manastone: Magical Critical Resistance +9"/>
+        </items>
+        <items>
+            <item id="167020062" name="Ancient Manastone: Physical Defense +80"/>
+        </items>
+        <items>
+            <item id="167020063" name="Ancient Manastone: Attack +7"/>
+        </items>
+        <items>
+            <item id="167020064" name="Ancient Manastone: Magical Accuracy +20"/>
+        </items>
+        <items>
+            <item id="167020065" name="Ancient Manastone: Magic Boost +32"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053325" decomposable_name="Heavy Ancient Manastone Box of Levinshor Alliance">
+        <items chance="75.0">
+            <item id="167020049" name="Ancient Manastone: Physical Defense +60"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020051" name="Ancient Manastone: Attack +5"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020042" name="Ancient Manastone: Evasion +19"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020044" name="Ancient Manastone: Block +29"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020055" name="Ancient Manastone: Healing Boost +4"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020048" name="Ancient Manastone: Magical Critical Resistance +7"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020045" name="Ancient Manastone: Crit Strike +18"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020046" name="Ancient Manastone: Physical Critical Resistance +20"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020047" name="Ancient Manastone: Crit Spell +6"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020052" name="Ancient Manastone: Magical Accuracy +16"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020054" name="Ancient Manastone: Magic Suppression +30"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020053" name="Ancient Manastone: Magic Boost +28"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020050" name="Ancient Manastone: Resist Magic +17"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020069" name="Ancient Manastone : PvP Magical Defense +3"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020043" name="Ancient Manastone: Parry +29"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020068" name="Ancient Manastone : PvP Physical Defense +3"/>
+        </items>
+        <items chance="75.0">
+            <item id="167020041" name="Ancient Manastone: Accuracy +29"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020034" name="Ancient Manastone: Physical Defense +70"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020036" name="Ancient Manastone: Attack +6"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020027" name="Ancient Manastone: Evasion +21"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020029" name="Ancient Manastone: Block +31"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020040" name="Ancient Manastone: Healing Boost +5"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020033" name="Ancient Manastone: Magical Critical Resistance +8"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020030" name="Ancient Manastone: Crit Strike +20"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020031" name="Ancient Manastone: Strike Resist +21"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020032" name="Ancient Manastone: Crit Spell +7"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020037" name="Ancient Manastone: Magical Accuracy +18"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020039" name="Ancient Manastone: Magic Suppression +40"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020038" name="Ancient Manastone: Magic Boost +30"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020035" name="Ancient Manastone: Resist Magic +19"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020071" name="Ancient Manastone : PvP Magical Defense +5"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020025" name="Ancient Manastone: MP +120"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020028" name="Ancient Manastone: Parry +31"/>
+        </items>
+        <items chance="60.0">
+            <item id="167020070" name="Ancient Manastone : PvP Physical Defense +5"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020026" name="Ancient Manastone: Accuracy +31"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020024" name="Ancient Manastone: HP +105"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020062" name="Ancient Manastone: Physical Defense +80"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020063" name="Ancient Manastone: Attack +7"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020057" name="Ancient Manastone: Evasion +23"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020059" name="Ancient Manastone: Block +33"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020061" name="Ancient Manastone: Magical Critical Resistance +9"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020060" name="Ancient Manastone: Physical Critical Resistance +22"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020064" name="Ancient Manastone: Magical Accuracy +20"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020065" name="Ancient Manastone: Magic Boost +32"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020058" name="Ancient Manastone: Parry +33"/>
+        </items>
+        <items chance="20.0">
+            <item id="167020056" name="Ancient Manastone: Accuracy +33"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053326" decomposable_name="Levinshor Alliance Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188053327" decomposable_name="Levinshor Alliance Noble Composite Manastone Box"/> <!-- NEW -->
 	<decomposable item_id="188053328" decomposable_name="Levinshor Alliance Heavy Composite Manastone Box"/> <!-- NEW -->
