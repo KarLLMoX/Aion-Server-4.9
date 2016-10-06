@@ -22,10 +22,10 @@ import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
-import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author Phantom_KNA
+ * @rework FrozenKiller
  */
 public class _25401HarbingersHero extends QuestHandler {
 
@@ -34,27 +34,23 @@ public class _25401HarbingersHero extends QuestHandler {
     public _25401HarbingersHero() {
         super(questId);
     }
-	
-	@Override
-    public boolean onLvlUpEvent(QuestEnv env) {
-        return defaultOnLvlUpEvent(env);
-    }
 
     @Override
 	public void register() {
-        qe.registerQuestNpc(804753).addOnTalkEvent(questId);
-		qe.registerQuestNpc(804753).addOnTalkEvent(questId); 
-		qe.registerOnEnterZone(ZoneName.get("220080000"), questId);
+        qe.registerQuestNpc(804719).addOnQuestStart(questId); //Haldor
+        qe.registerQuestNpc(804753).addOnTalkEvent(questId); //Mirak
+		qe.registerQuestNpc(805356).addOnTalkEvent(questId); //Pontekai
     }
 
-@Override
+    @Override
     public boolean onDialogEvent(QuestEnv env) {
         Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
+        DialogAction dialog = env.getDialog();
 
-        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
-            if (targetId == 804753) {
+        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+            if (targetId == 804719) { //Haldor
                 if (env.getDialog() == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);
                 } else {
@@ -62,24 +58,35 @@ public class _25401HarbingersHero extends QuestHandler {
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if (targetId == 804753) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 10002);
-                } else if (env.getDialog() == DialogAction.SELECT_QUEST_REWARD) {
-                    changeQuestStep(env, 0, 0, true);
-                    return sendQuestDialog(env, 5);
+            if (targetId == 804753) { //Mirak
+               switch (dialog) {
+               		case QUEST_SELECT: {
+               			return sendQuestDialog(env, 1011);
+               		}
+               		case SET_SUCCEED: {
+               			changeQuestStep(env, 0, 1, false);
+               			qs.setStatus(QuestStatus.REWARD);
+						updateQuestStatus(env);
+               			return closeDialogWindow(env);
+               		}
+               	default:
+               		break;
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 804753) {
-                return sendQuestEndDialog(env);
+            if (targetId == 805356) { //Pontekai
+            	switch (dialog) {
+    				case USE_OBJECT: {
+    					return sendQuestDialog(env, 10002);
+    				} 
+    				case SELECT_QUEST_REWARD: {
+    					return sendQuestDialog(env, 5);
+    				}
+    			default:
+    				return sendQuestEndDialog(env);
+            	}
             }
-        } 
-        return false;
-    }
-	
-	@Override
-    public boolean onEnterZoneEvent(QuestEnv env, ZoneName zoneName) {
-    	return defaultOnEnterZoneEvent(env, zoneName, ZoneName.get("220080000"));
+        }
+		return false;
     }
 }

@@ -55,7 +55,7 @@ public class _25402FixingTheLanding extends QuestHandler {
         QuestState qs = player.getQuestStateList().getQuestState(questId);
         DialogAction dialog = env.getDialog();
 
-        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
+        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 805356) { //Pontekai
                 if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);
@@ -67,7 +67,7 @@ public class _25402FixingTheLanding extends QuestHandler {
         	switch (targetId) {
         		case 805357: { //Damian
         			switch (dialog) {
-        				case QUEST_SELECT: {
+        				case USE_OBJECT: {
        						return sendQuestDialog(env, 1011);
         				}
         				case SETPRO1: {
