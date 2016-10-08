@@ -77,11 +77,6 @@ public class EnchantService {
     	if (targetItem.getEnchantLevel() < 15 && targetItem.getItemTemplate().getMaxEnchantLevel() == 15)
     		return;
     	
-    	if (targetItem.getItemId() != material.getItemId() && material.getItemId() != 166500002) {
-    		log.warn("[AMPLIFICATION] player " + player.getName() + " tried to amplificate with material " + material.getItemId());
-    		return;
-    	}
-    	
     	if (targetItem.getItemTemplate().isArmor()) {
     		buffId = getArmorBuff(targetItem);
     	} else if (targetItem.getItemTemplate().isWeapon()) {
@@ -532,6 +527,13 @@ public class EnchantService {
                         currentEnchant += critLevel;
 					} else if (currentEnchant == targetItem.getItemTemplate().getMaxEnchantLevel() - 1 && !targetItem.isAmplified()) {
     	                targetItem.setAmplified(true);
+    	                
+    	                if (targetItem.getItemTemplate().isArmor()) {
+    	            		buffId = getArmorBuff(targetItem);
+    	            	} else if (targetItem.getItemTemplate().isWeapon()) {
+    	            		buffId = getWeaponBuff(player);
+    	            	}
+    	                
     	                targetItem.setBuffSkill(buffId);
 						currentEnchant += 1;
     	                ItemPacketService.updateItemAfterInfoChange(player, targetItem);
@@ -552,6 +554,13 @@ public class EnchantService {
                         currentEnchant += critLevel;
 					} else if (currentEnchant == targetItem.getItemTemplate().getMaxEnchantLevel() - 1 && !targetItem.isAmplified()) {
     	                targetItem.setAmplified(true);
+    	                
+    	                if (targetItem.getItemTemplate().isArmor()) {
+    	            		buffId = getArmorBuff(targetItem);
+    	            	} else if (targetItem.getItemTemplate().isWeapon()) {
+    	            		buffId = getWeaponBuff(player);
+    	            	}
+    	                
     	                targetItem.setBuffSkill(buffId);
 						currentEnchant += 1;
     	                ItemPacketService.updateItemAfterInfoChange(player, targetItem);

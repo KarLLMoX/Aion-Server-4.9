@@ -25,7 +25,6 @@ import com.aionemu.gameserver.model.templates.item.actions.GodstoneAction;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
-import com.aionemu.gameserver.services.EnchantService;
 import com.aionemu.gameserver.services.item.ItemSocketService;
 import com.aionemu.gameserver.services.trade.PricesService;
 import com.aionemu.gameserver.utils.MathUtil;
@@ -56,6 +55,7 @@ public class CM_MANASTONE extends AionClientPacket {
         actionType = readC();
         targetFusedSlot = readC();
         targetItemUniqueId = readD();
+        System.out.println("ActionType: " + actionType + " Slot: " + targetFusedSlot + " ID: " +  targetItemUniqueId);
         switch (actionType) {
             case 1:
             case 2:
@@ -123,15 +123,6 @@ public class CM_MANASTONE extends AionClientPacket {
                     godAction.act(player, godStone, targetItemGod);
                 }
                 break;
-            case 8: // amplification
-            	Item amplyMaterial = player.getInventory().getItemByObjId(supplementUniqueId);
-            	Item targetItemAmply = player.getEquipment().getEquippedItemByObjId(targetItemUniqueId);
-                if (targetItemAmply == null) {
-                	targetItemAmply = player.getInventory().getItemByObjId(targetItemUniqueId);
-                }
-            	Item tool = player.getInventory().getItemByObjId(stoneUniqueId);
-            	EnchantService.amplifyItem(player, targetItemAmply, amplyMaterial, tool);
-            	break;
         }
     }
 }
