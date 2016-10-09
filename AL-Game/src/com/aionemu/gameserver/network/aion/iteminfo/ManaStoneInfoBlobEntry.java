@@ -81,14 +81,9 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
         writeC(buf, item.getAuthorize());
         writeH(buf, 0);
         writePlumeStats(buf); // 64-bytes
-        writeD(buf, 0);        
-        
-        writeAmplification(buf); // 13-bytes
-                
-        writeD(buf, 0);
-		writeD(buf, 0);
-		writeC(buf, 0);
-		writeB(buf, new byte[36]); // 4.9
+        writeB(buf, new byte[36]);
+        writeAmplification(buf); // 6-bytes
+		writeB(buf, new byte[12]);
     }
     
     /**
@@ -97,10 +92,8 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
      */
     private void writeAmplification(ByteBuffer buf) {
     	Item item = ownerItem;
-    	
-    	writeC(buf, item.isAmplified() ? 1 : 0);    	
-        writeH(buf, item.getBuffSkill());     
-        writeC(buf, 0);
+    	writeC(buf, item.isAmplified() ? 1 : 0);
+        writeD(buf, item.getBuffSkill());
     }
     
     /**

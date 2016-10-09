@@ -55,7 +55,6 @@ public class CM_MANASTONE extends AionClientPacket {
         actionType = readC();
         targetFusedSlot = readC();
         targetItemUniqueId = readD();
-        System.out.println("ActionType: " + actionType + " Slot: " + targetFusedSlot + " ID: " +  targetItemUniqueId);
         switch (actionType) {
             case 1:
             case 2:
