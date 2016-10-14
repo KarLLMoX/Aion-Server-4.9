@@ -17,7 +17,9 @@
 		<open schedule="0 0 11,23 ? * MON,THU" spawn="true"/> <!-- 4.9 -->
     </rift>
 	<rift id="210070000"> <!-- Cygnea -->
-		<open schedule="0 0 * ? * *" spawn="true"/> <!-- 4.9 -->
+		<open schedule="0 0 * ? * *"/> <!-- 4.9 -->
+		<open schedule="0 0 19 ? * MON,WED,SAT" spawn="true"/> <!-- Chaos -->
+		<open schedule="0 0 15 ? * SUN" spawn="true"/> <!-- Chaos -->
 	</rift>
 	<rift id="220020000"> <!-- Morheim -->
         <open schedule="0 0 13 ? * TUE,THU"/> <!-- 4.9 -->
@@ -36,6 +38,8 @@
 		<open schedule="0 0 11,23 ? * TUE,FRI" spawn="true"/> <!-- 4.9 -->
 	</rift>
 	<rift id="220080000"> <!-- Enshar -->
-		<open schedule="0 0 * ? * *" spawn="true"/> <!-- 4.9 -->
+		<open schedule="0 0 * ? * *"/> <!-- 4.9 -->
+		<open schedule="0 0 19 ? * TUE,THU,SUN" spawn="true"/> <!-- Chaos -->
+		<open schedule="0 0 15 ? * SAT" spawn="true"/> <!-- Chaos -->
 	</rift>
 </rift_schedule>
