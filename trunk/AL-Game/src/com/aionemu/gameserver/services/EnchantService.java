@@ -581,11 +581,21 @@ public class EnchantService {
         	if (targetItem.isAmplified()) {
         		int skillId = targetItem.getBuffSkill();
                 currentEnchant = targetItem.getItemTemplate().getMaxEnchantLevel();
-				targetItem.setAmplified(true);
-				targetItem.setBuffSkill(buffId);
-				if (player.getSkillList().isSkillPresent(skillId)){
-				SkillLearnService.removeSkill(player, skillId);
+                
+                if (player.getSkillList().isSkillPresent(skillId)){
+					SkillLearnService.removeSkill(player, skillId);
 				}
+                
+				targetItem.setAmplified(true);
+				
+				if (targetItem.getItemTemplate().isArmor()) {
+            		buffId = getArmorBuff(targetItem);
+            	} else if (targetItem.getItemTemplate().isWeapon()) {
+            		buffId = getWeaponBuff(player);
+            	}
+				
+				targetItem.setBuffSkill(buffId);
+				
         	} else if ((currentEnchant > 10 && currentEnchant <= targetItem.getItemTemplate().getMaxEnchantLevel()) && ((parentItem.getItemId() >= 166020000 && parentItem.getItemId() <= 166020005) || (parentItem.getItemId() >= 166022000 && parentItem.getItemId() <= 166022002))) {
                 // IF Omega Enchantment Stone is used on enchanting between +11 to maxEnchantLvl of the item..
                 // and failed, it should go by -1 instead of going back to all way +10
