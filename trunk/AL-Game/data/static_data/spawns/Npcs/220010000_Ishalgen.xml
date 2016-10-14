@@ -1896,6 +1896,10 @@
 		<spawn npc_id="805743" respawn_time="295">
 			<spot x="384.03482" y="1888.1105" z="327.74988" h="15" static_id="316"/>
 		</spawn>
+        <!-- Ishalgen Teleport Statue ||| DF1_Three_Way_Teleport -->
+        <spawn npc_id="805742" respawn_time="295">
+            <spot x="942.4028" y="1694.97" z="259.9264" h="75" static_id="315"/>
+        </spawn>
 
 		<!-- OBELISK -->
 

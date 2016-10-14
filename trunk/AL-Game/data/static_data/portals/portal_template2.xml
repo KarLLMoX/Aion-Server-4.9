@@ -2551,6 +2551,15 @@
         <portal_path dialog="104" loc_id="2200803" race="ASMODIANS"/>
     </portal_dialog>
 
+    <!-- Ishalgen Teleport Statue ||| DF1_Three_Way_Teleport -->
+    <portal_dialog npc_id="805742">
+        <portal_path dialog="104" loc_id="2200102"/>
+    </portal_dialog>
+    <!-- Ishalgen Teleport Statue ||| DF1_Munin_Teleport -->
+    <portal_dialog npc_id="805743">
+        <portal_path dialog="104" loc_id="2200100"/>
+    </portal_dialog>
+
     <!-- **************** PORTAL SCROLL **************** -->
     <!-- SCROLL TELEPORTS ELYOS -->
     <portal_scroll name="LC1_RETURN_AREA_1">
@@ -2635,5 +2644,5 @@
     </portal_scroll>
     <portal_scroll name="ARENA_D_CLOBBY_RETURN01">
         <portal_path loc_id="1400100" race="ASMODIANS"/>
-    </portal_scroll>
+    </portal_scroll>    
 </portal_templates2>
