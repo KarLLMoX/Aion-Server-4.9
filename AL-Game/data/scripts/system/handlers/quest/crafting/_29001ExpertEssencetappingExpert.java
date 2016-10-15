@@ -16,7 +16,6 @@
  */
 package quest.crafting;
 
-import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
 import com.aionemu.gameserver.model.DialogAction;
@@ -26,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author Gigi,Modifly by Newlives@aioncore 29-1-2015
+ * @rework FrozenKiller
  */
 public class _29001ExpertEssencetappingExpert extends QuestHandler {
 
@@ -37,61 +37,59 @@ public class _29001ExpertEssencetappingExpert extends QuestHandler {
 
     @Override
     public void register() {
-        qe.registerQuestNpc(204096).addOnQuestStart(questId);
-        qe.registerQuestNpc(204096).addOnTalkEvent(questId);
-        qe.registerQuestNpc(798800).addOnTalkEvent(questId);
+        qe.registerQuestNpc(204096).addOnQuestStart(questId); // Latatusk
+        qe.registerQuestNpc(204096).addOnTalkEvent(questId); 
+        qe.registerQuestNpc(798800).addOnTalkEvent(questId); // Vidar
     }
 
     @Override
     public boolean onDialogEvent(QuestEnv env) {
         final Player player = env.getPlayer();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-
-        int targetId = 0;
-        if (env.getVisibleObject() instanceof Npc) {
-            targetId = ((Npc) env.getVisibleObject()).getNpcId();
-        }
+        DialogAction dialog = env.getDialog();
+        int targetId = env.getTargetId();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 204096) { // Latatusk
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    if (giveQuestItem(env, 182207141, 1)) {
-                        return sendQuestDialog(env, 1011);
-                    } else {
-                        return true;
-                    }
-                } else {
-                    return sendQuestStartDialog(env);
-                }
+            	switch (dialog) {
+					case QUEST_SELECT: {
+						return sendQuestDialog(env, 1011);
+					}
+					case ASK_QUEST_ACCEPT: {
+						return sendQuestDialog(env, 4);
+					}
+					case QUEST_ACCEPT_1: {
+						giveQuestItem(env, 182207141, 1);
+						return sendQuestStartDialog(env);
+					}
+					case QUEST_REFUSE_1: {
+						return sendQuestDialog(env, 1004);
+					}
+				default:
+					break;
+            		
+            	}
             }
-        }
-
-        if (qs == null) {
-            return false;
-        }
-
-        if (qs != null && qs.getStatus() == QuestStatus.START) {
-            switch (targetId) {
-                case 798800: { // Agehia
-                    switch (env.getDialog()) {
-                        case QUEST_SELECT:
-                            qs.setStatus(QuestStatus.REWARD);
-                            updateQuestStatus(env);
-                            return sendQuestDialog(env, 2375);
-					default:
-						break;
-                    }
+        } else if (qs.getStatus() == QuestStatus.START) { 
+            if (targetId == 204052) { // Vidar
+                switch (env.getDialog()) {
+                	case QUEST_SELECT: {
+                		return sendQuestDialog(env, 2375);
+                	}
+                	case SELECT_QUEST_REWARD: {
+                		qs.setStatus(QuestStatus.REWARD);
+                		updateQuestStatus(env);
+                		return sendQuestDialog(env, 5);
+                	}
+				default:
+					break;
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 798800) { // Agehia
-                if (env.getDialogId() == DialogAction.CHECK_USER_HAS_QUEST_ITEM.id()) {
-                    return sendQuestDialog(env, 5);
-                } else {
-                    player.getSkillList().addSkill(player, 30002, 400);
-                    removeQuestItem(env, 182207141, 1);
-                    return sendQuestEndDialog(env);
-                }
+            if (targetId == 204052) { // Vidar
+            	player.getSkillList().addSkill(player, 30002, 400);
+            	removeQuestItem(env, 182207141, 1);
+            	return sendQuestEndDialog(env);
             }
         }
         return false;
