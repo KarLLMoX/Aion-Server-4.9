@@ -279,7 +279,12 @@ public class cmd_shop extends PlayerCommand {
 
     @Override
     public void execute(final Player player, String... params) {
-        String cmd = params[0];
+		if (params.length < 1) {
+			showHelp(player);
+			return;
+		}
+		
+		String cmd = params[0];
 
         Shop shop;
         try {
@@ -309,4 +314,8 @@ public class cmd_shop extends PlayerCommand {
     public void onFail(Player player, String message) {
         PacketSendUtility.sendMessage(player, "syntax: .shop list|buy NAME|show NAME");
     }
+    
+	protected void showHelp(Player player) {
+		PacketSendUtility.sendMessage(player, "syntax: .shop list|buy NAME|show NAME");
+	}
 }
