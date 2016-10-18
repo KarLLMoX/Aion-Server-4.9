@@ -102,10 +102,11 @@ public class SkillLearnService {
 			if (!checkLearnIsPossible(player, playerSkillList, template))
 				continue;
 
-			if (template.isStigma())
+			if (template.isStigma()) {
 				playerSkillList.addStigmaSkill(player, template.getSkillId(), template.getSkillLevel());
-			else
+			} else {
 				playerSkillList.addSkill(player, template.getSkillId(), template.getSkillLevel());
+			}
 		}
 	}
 
@@ -116,16 +117,18 @@ public class SkillLearnService {
 	 * @param template
 	 * @return
 	 */
-	private static boolean checkLearnIsPossible(Player player, PlayerSkillList playerSkillList,
-		SkillLearnTemplate template) {
-		if (playerSkillList.isSkillPresent(template.getSkillId()))
+	private static boolean checkLearnIsPossible(Player player, PlayerSkillList playerSkillList, SkillLearnTemplate template) {
+		if (playerSkillList.isSkillPresent(template.getSkillId())) {
 			return true;
+		}
+	
+		if (player.havePermission(MembershipConfig.STIGMA_AUTOLEARN) && template.isStigma()) {
+			return true;
+		}
 
-		if (player.havePermission(MembershipConfig.STIGMA_AUTOLEARN) && template.isStigma())
+		if (template.isAutolearn()) {
 			return true;
-
-		if (template.isAutolearn())
-			return true;
+		}
 
 		return false;
 	}

@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -29,15 +30,14 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Equipment;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.items.ItemSlot;
-import com.aionemu.gameserver.model.skill.PlayerSkillEntry;
 import com.aionemu.gameserver.model.templates.HiddenStigmasTemplate;
 import com.aionemu.gameserver.model.templates.item.RequireSkill;
 import com.aionemu.gameserver.model.templates.item.Stigma;
 import com.aionemu.gameserver.model.templates.item.Stigma.StigmaSkill;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_CUBE_UPDATE;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
+import com.aionemu.gameserver.skillengine.model.SkillLearnTemplate;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.audit.AuditLogger;
 
@@ -61,126 +61,206 @@ public class StigmaService {
 		return false;
 	}
 
-	/**
-	 * @param player
-	 * @param resultItem
-	 * @param slot
-	 * @return
-	 */
-	public static boolean notifyEquipAction(Player player, Item resultItem, long slot) {
-		if (resultItem.getItemTemplate().isStigma()) {
-			if (ItemSlot.isRegularStigma(slot)) {
-				// check the number of stigma wearing
-				if (getPossibleStigmaCount(player) <= player.getEquipment().getEquippedItemsRegularStigma().size()) {
-					AuditLogger.info(player, "Possible client hack stigma count big :O");
-					return false;
-				}
-			}
-			else if (ItemSlot.isAdvancedStigma(slot)) {
-				// check the number of advanced stigma wearing
-				if (getPossibleAdvencedStigmaCount(player) <= player.getEquipment().getEquippedItemsAdvancedStigma().size()) {
-					AuditLogger.info(player,"Possible client hack advanced stigma count big :O");
-					return false;
-				}
-			}
-
-			if (resultItem.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass()) == false) {
-				AuditLogger.info(player,"Possible client hack not valid for class.");
-				return false;
-			}
-
-			Stigma stigmaInfo = resultItem.getItemTemplate().getStigma();
-
-			if (stigmaInfo == null) {
-				log.warn("Stigma info missing for item: " + resultItem.getItemTemplate().getTemplateId());
-				return false;
-			}
-
-			int kinahCount = stigmaInfo.getKinah();
-			if (player.getInventory().getKinah() < kinahCount) {
-				AuditLogger.info(player,"Possible client hack stigma kinah count low.");
-				return false;
-			}
-			int neededSkillsCount = stigmaInfo.getRequireSkill().size();
-			for (RequireSkill rs : stigmaInfo.getRequireSkill()) {
-				for (int id : rs.getSkillIds()) {
-					if (player.getSkillList().isSkillPresent(id)) {
-						neededSkillsCount--;
-						break;
-					}
-				}
-			}
-			if (neededSkillsCount != 0) {
-				AuditLogger.info(player, "Possible client hack advenced stigma skill.");
-				return false;
-			}
-
-			if (!player.getInventory().tryDecreaseKinah(kinahCount))
-				return false;
-            Integer realSkillId = DataManager.SKILL_TREE_DATA.getStigmaTree().get(player.getRace()).
-                        get(DataManager.SKILL_DATA.getSkillTemplate(stigmaInfo.getSkills().get(0).getSkillId()).getStack()).get(resultItem.getEnchantLevel() + 1);
-            if (realSkillId != null)
-                player.getSkillList().addStigmaSkill(player, realSkillId, 1);
-            else {
-				log.error("No have Stigma skill for enchanted stigma item.");
+    /**
+     * @param player
+     * @param resultItem
+     * @param slot
+     * @return
+     */
+    public static boolean notifyEquipAction(Player player, Item resultItem, long slot) {
+        if (resultItem.getItemTemplate().isStigma()) {
+            if (ItemSlot.isRegularStigma(slot)) {
+                // check the number of stigma wearing
+                if (getPossibleStigmaCount(player) <= player.getEquipment().getEquippedItemsRegularStigma().size()) {
+                    AuditLogger.info(player, "Possible client hack stigma count big :O");
+                    return false;
+                }
+            } else if (ItemSlot.isAdvancedStigma(slot)) {
+                // check the number of advanced stigma wearing
+                if (getPossibleAdvencedStigmaCount(player) <= player.getEquipment().getEquippedItemsAdvancedStigma().size()) {
+                    AuditLogger.info(player, "Possible client hack advanced stigma count big :O");
+                    return false;
+                }
             }
-            //Item Equip Message with + Lvl
-            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300401, new DescriptionId(resultItem.getNameId()), resultItem.getEnchantLevel() + 1));
-            //Temp fix to Display Stigma Skills in StigmaSkillList (Skill Window)
-            for (PlayerSkillEntry stigmaSkill : player.getSkillList().getStigmaSkills()) {
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, stigmaSkill));
+
+            if (!resultItem.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass())) {
+                AuditLogger.info(player, "Possible client hack not valid for class.");
+                return false;
             }
- 		}
-		return true;
-	}
 
-	/**
-	 * @param player
-	 * @param resultItem
-	 * @return
-	 */
-	public static boolean notifyUnequipAction(Player player, Item resultItem) {
-		if (resultItem.getItemTemplate().isStigma()) {
-			Stigma stigmaInfo = resultItem.getItemTemplate().getStigma();
-			int itemId = resultItem.getItemId();
-			Equipment equipment = player.getEquipment();
-			if (itemId == 140000007 || itemId == 140000005) {
-				if (equipment.hasDualWeaponEquipped(ItemSlot.LEFT_HAND)) {
-					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_STIGMA_CANNT_UNEQUIP_STONE_FIRST_UNEQUIP_CURRENT_EQUIPPED_ITEM);
-					return false;
-				}
-			}
-			for (Item item : player.getEquipment().getEquippedItemsAllStigma()) {
-				Stigma si = item.getItemTemplate().getStigma();
-				if (resultItem == item || si == null)
-					continue;
+            // You cannot equip 2 stigma skills at 1 slot , was possible before.. o.o
+            if (!StigmaService.isPossibleEquippedStigma(player, resultItem)) {
+                AuditLogger.info(player, "Player tried to get Multiple Stigma's from One Stigma Stone!");
+                return false;
+            }
 
-				for (StigmaSkill sSkill : stigmaInfo.getSkills()) {
-					for (RequireSkill rs : si.getRequireSkill()) {
-						if (rs.getSkillIds().contains(sSkill.getSkillId())) {
-							PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300410, new DescriptionId(resultItem
-								.getItemTemplate().getNameId()), new DescriptionId(item.getItemTemplate().getNameId())));
-							return false;
-						}
-					}
-				}
-			}
-            for (StigmaSkill sSkill : stigmaInfo.getSkills()) {
-                String sSkillStack = DataManager.SKILL_DATA.getSkillTemplate(sSkill.getSkillId()).getStack();
+            Stigma stigmaInfo = resultItem.getItemTemplate().getStigma();
 
-                for (PlayerSkillEntry psSkill : player.getSkillList().getStigmaSkills()){
-                    if (psSkill.getSkillTemplate().getStack().equals(sSkillStack)) {
-                        PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300403, new DescriptionId(resultItem.getNameId())));
-                        SkillLearnService.removeSkill(player, psSkill.getSkillId()); // Remove Basic Skill
-                        SkillLearnService.removeSkill(player, psSkill.getSkillId() + resultItem.getEnchantLevel()); // Remove Enchanted Skill
-                        player.getEffectController().removeEffect(psSkill.getSkillId());
-                		player.getSkillList().deleteHiddenStigma(player);
+            if (stigmaInfo == null) {
+                log.warn("Stigma info missing for item: " + resultItem.getItemTemplate().getTemplateId());
+                return false;
+            }
+
+            int kinahCount = stigmaInfo.getKinah();
+            if (player.getInventory().getKinah() < kinahCount) {
+                //You do not have enough Kinah to equip the Stigma Stone.
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300413));
+                AuditLogger.info(player, "Possible client hack kinah count low.");
+                return false;
+            }
+
+            if (!player.getInventory().tryDecreaseKinah(kinahCount)) {
+                return false;
+            }
+
+            //default main stigma skill
+            player.getSkillList().addStigmaSkill(player, stigmaInfo.getSkills(), true);
+
+
+            //other stigma lvls of the same skill
+            List<Integer> stigmaData = stigmaInfo.getSkillIdOnly();
+            List<StigmaSkill> stigmaUpperLvls;
+
+            if (stigmaData.size() != 1){ //Dual Skill i.e Exhausting Wave
+                for (Integer id : stigmaData){
+                    stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(),id); // only 2 skill here '1:534 1:434
+                    if (stigmaUpperLvls != null){
+                        for (StigmaSkill stigma : stigmaUpperLvls){
+                            player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), resultItem.getEnchantLevel() + 1, false, true);
+                        }
+                    }
+                }
+            } else {
+                // Single Skill
+                stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), stigmaData.get(0)); // only 1 skill here '1:534'
+                if (stigmaUpperLvls != null){
+                    for (StigmaSkill stigma : stigmaUpperLvls){
+                        player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), resultItem.getEnchantLevel() + 1, false, true);
                     }
                 }
             }
-		}
-		return true;
-	}
+            List<Integer> sStigma = player.getEquipment().getEquippedItemsAllStigmaIds();
+            sStigma.add(resultItem.getItemId()); // The last item ur about to add is not in getEquippedItemsAllStigma , so adding manual
+        }
+        return true;
+    }
+
+    /**
+     * Sends the player current Level and startingStigmaSkillId to process and obtain
+     *  all the stigma skill level of that skill. Which then returns all those stigmas as a List<StigmaSkill>
+     * @param playerLvl Players Current Level
+     * @param startingStigmaSkillid The Skill ID of that stigma skill you want to get the other levels of.
+     * @return A List of Stigma Skill of other lvls of that stigma.
+     */
+    public static List<StigmaSkill> getStigmaInfoUpToLevel(int playerLvl, int startingStigmaSkillid) {
+        List<StigmaSkill> stigmaList = new ArrayList<StigmaSkill>();
+        SkillLearnTemplate[] temps = DataManager.SKILL_TREE_DATA.getTemplatesForSkill(startingStigmaSkillid);
+        String skillName;
+
+        for (SkillLearnTemplate skillTemp : temps) {
+            skillName = skillTemp.getName();
+            for (int id = startingStigmaSkillid; id <= 5000; id++) {
+                if (startingStigmaSkillid == 3330 && id == 3331){
+                    id = 4591; //exception for Shadowfall, its lvl1 id is 3330 and lvl2 is starting from 4591
+                } else if (startingStigmaSkillid == 1210 && id == 1216){
+                	id = 4603;
+                }
+                SkillLearnTemplate[] NextTemps = DataManager.SKILL_TREE_DATA.getTemplatesForSkill(id);
+                for (SkillLearnTemplate skillTemp2 : NextTemps){
+                    if (skillTemp2.getName().equalsIgnoreCase(skillName)){
+                        if (playerLvl >= skillTemp2.getMinLevel()){
+                            //log.info("!! The player is eligible to learn this skill at lvl " + playerLvl + " .. New skill Lvl : " + skillTemp2.getMinLevel() + " Old skill Lvl : " +skillTemp.getMinLevel());
+                            int lv = skillTemp2.getSkillLevel(), i = skillTemp2.getSkillId();
+                            StigmaSkill sti = new StigmaSkill(lv, i);
+
+                            stigmaList.add(sti);
+                        }
+                    } else {
+                        return stigmaList;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+	/**
+	 * @param player
+	 * @param resultItem
+	 * @return
+	 */
+    public static boolean notifyUnequipAction(Player player, Item resultItem) {
+        if (resultItem.getItemTemplate().isStigma()) {
+            Stigma stigmaInfo = resultItem.getItemTemplate().getStigma();
+            int itemId = resultItem.getItemId();
+            Equipment equipment = player.getEquipment();
+            if (itemId == 140000007 || itemId == 140000005) {
+                if (equipment.hasDualWeaponEquipped(ItemSlot.LEFT_HAND)) {
+                    PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_STIGMA_CANNT_UNEQUIP_STONE_FIRST_UNEQUIP_CURRENT_EQUIPPED_ITEM);
+                    return false;
+                }
+            }
+            for (Item item : player.getEquipment().getEquippedItemsAllStigma()) {
+                Stigma si = item.getItemTemplate().getStigma();
+                if (resultItem == item || si == null) {
+                    continue;
+                }
+
+                for (StigmaSkill sSkill : stigmaInfo.getSkills()) {
+                    for (RequireSkill rs : si.getRequireSkill()) {
+                        if (rs.getSkillIds().contains(sSkill.getSkillId())) {
+                            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300410, new DescriptionId(resultItem.getItemTemplate().getNameId()), new DescriptionId(item.getItemTemplate().getNameId())));
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            for (StigmaSkill sSkill : stigmaInfo.getSkills()) {
+                int nameId = DataManager.SKILL_DATA.getSkillTemplate(sSkill.getSkillId()).getNameId();
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300403, new DescriptionId(nameId)));
+
+                // remove skill
+                SkillLearnService.removeSkill(player, sSkill.getSkillId());
+
+                // remove effect
+                player.getEffectController().removeEffect(sSkill.getSkillId());
+                
+                // remove hidden stigma
+                player.getSkillList().deleteHiddenStigma(player);
+            }
+
+            //for remaining lvls for the same skill ..
+            List<Integer> stigmaData = stigmaInfo.getSkillIdOnly();
+            List<StigmaSkill> stigmaUpperLvls;
+
+            if (stigmaData.size() != 1){
+                for (Integer id : stigmaData){
+                    stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), id); // only 2 skill here '1:534 1:434
+                    if (stigmaUpperLvls != null){
+                        for (StigmaSkill stigma : stigmaUpperLvls){
+                            player.getSkillList().removeSkill(stigma.getSkillId());
+
+                            // remove effect
+                            player.getEffectController().removeEffect(stigma.getSkillId());
+                        }
+                    }
+                }
+            }else{
+                stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), stigmaData.get(0)); // only 1 skill here '1:534'
+                if (stigmaUpperLvls != null){
+                    for (StigmaSkill stigma : stigmaUpperLvls){
+                        player.getSkillList().removeSkill(stigma.getSkillId());
+
+                        // remove effect
+                        player.getEffectController().removeEffect(stigma.getSkillId());
+                    }
+                }
+            }
+
+        }
+        return true;
+    }
 
     public static void recheckHiddenStigma(Player player) {
         if (player.getLevel() >= 55 && player.getEquipment().getEquippedItemsAllStigma().size() >= 6) {
@@ -201,56 +281,66 @@ public class StigmaService {
 	/**
 	 * @param player
 	 */
-	public static void onPlayerLogin(Player player) {
-		List<Item> equippedItems = player.getEquipment().getEquippedItemsAllStigma();
-		for (Item item : equippedItems) {
-			if (item.getItemTemplate().isStigma()) {
-				Stigma stigmaInfo = item.getItemTemplate().getStigma();
-				player.getSkillList().addStigmaSkill(player, stigmaInfo.getSkills(), false);
-			}
-		}
-		player.getSkillList().deleteHiddenStigmaSilent(player);
-        recheckHiddenStigma(player);
+    public static void onPlayerLogin(Player player) {
+        List<Item> equippedItems = player.getEquipment().getEquippedItemsAllStigma();
+        for (Item item : equippedItems) { // All Equipped Items are Stigmas
+            if (item.getItemTemplate().isStigma()) {
+                Stigma stigmaInfo = item.getItemTemplate().getStigma();
 
-		for (Item item : equippedItems) {
-			if (item.getItemTemplate().isStigma()) {
-				if (!isPossibleEquippedStigma(player, item)) {
-					AuditLogger.info(player,"Possible client hack stigma count big :O");
-					player.getEquipment().unEquipItem(item.getObjectId(), 0);
-					continue;
-				}
+                if (stigmaInfo == null) {
+                    log.warn("Stigma info missing for item: " + item.getItemTemplate().getTemplateId());
+                    return;
+                }
+                player.getSkillList().addStigmaSkill(player, stigmaInfo.getSkills(), false);
+        		player.getSkillList().deleteHiddenStigmaSilent(player);
+                recheckHiddenStigma(player);
 
-				Stigma stigmaInfo = item.getItemTemplate().getStigma();
+                List<Integer> stigmaData = stigmaInfo.getSkillIdOnly();
+                List<StigmaSkill> stigmaUpperLvls;
 
-				if (stigmaInfo == null) {
-					log.warn("Stigma info missing for item: " + item.getItemTemplate().getTemplateId());
-					player.getEquipment().unEquipItem(item.getObjectId(), 0);
-					continue;
-				}
+                if (stigmaData.size() != 1){
+                    for (Integer id : stigmaData){
+                        stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), id); // only 2 skill here '1:534 1:434'
+                        if (stigmaUpperLvls != null){
+                            for (StigmaSkill stigma : stigmaUpperLvls){
+                                player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), item.getEnchantLevel() + 1, false, false);
+                            }
+                        }
+                    }
+                } else {
+                    stigmaUpperLvls = getStigmaInfoUpToLevel(player.getCommonData().getLevel(), stigmaData.get(0)); // only 1 skill here '1:534'
+                    if (stigmaUpperLvls != null){
+                        for (StigmaSkill stigma : stigmaUpperLvls){
+                            player.getSkillList().addStigmaSkill(player, stigma.getSkillId(), item.getEnchantLevel() + 1, false, false);
+                        }
+                    }
+                }
+            }
+        }
 
-				int needSkill = stigmaInfo.getRequireSkill().size();
-				for (RequireSkill rs : stigmaInfo.getRequireSkill()) {
-					for (int id : rs.getSkillIds()) {
-						if (player.getSkillList().isSkillPresent(id)) {
-							needSkill--;
-							break;
-						}
-					}
-				}
-				if (needSkill != 0) {
-					AuditLogger.info(player,"Possible client hack advenced stigma skill.");
-					player.getEquipment().unEquipItem(item.getObjectId(), 0);
-					continue;
-				}
-				if (item.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass()) == false) {
-					AuditLogger.info(player,"Possible client hack not valid for class.");
-					player.getEquipment().unEquipItem(item.getObjectId(), 0);
-					continue;
-				}
-			}
-		}
-	SkillLearnService.addMissingSkills(player); // TEMP Fix for Displaying Enchanted Stigma Skills after Relog
-	}
+        for (Item item : equippedItems) {
+            if (item.getItemTemplate().isStigma()) {
+                if (!isPossibleEquippedStigma(player, item)) {
+                    AuditLogger.info(player, "Possible client hack stigma count big :O");
+                    player.getEquipment().unEquipItem(item.getObjectId(), 0);
+                    continue;
+                }
+
+                Stigma stigmaInfo = item.getItemTemplate().getStigma();
+
+                if (stigmaInfo == null) {
+                    log.warn("Stigma info missing for item: " + item.getItemTemplate().getTemplateId());
+                    player.getEquipment().unEquipItem(item.getObjectId(), 0);
+                    continue;
+                }
+
+                if (!item.getItemTemplate().isClassSpecific(player.getCommonData().getPlayerClass())) {
+                    AuditLogger.info(player, "Possible client hack not valid for class.");
+                    player.getEquipment().unEquipItem(item.getObjectId(), 0);
+                }
+            }
+        }
+    }
 	
 	/**
 	 * Get the number of available Stigma

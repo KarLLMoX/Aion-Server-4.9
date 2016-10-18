@@ -36,7 +36,13 @@ import com.aionemu.gameserver.model.items.ItemSlot;
 import com.aionemu.gameserver.model.stats.listeners.ItemEquipmentListener;
 import com.aionemu.gameserver.model.templates.item.*;
 import com.aionemu.gameserver.model.templates.itemset.ItemSetTemplate;
-import com.aionemu.gameserver.network.aion.serverpackets.*;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_DELETE_ITEM;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE_ITEM;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
 import com.aionemu.gameserver.questEngine.QuestEngine;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.services.StigmaService;
@@ -45,7 +51,9 @@ import com.aionemu.gameserver.services.item.ItemPacketService.ItemUpdateType;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
+
 import javolution.util.FastList;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -627,32 +635,48 @@ public class Equipment {
 	 * @return List<Item>
 	 */
 	public FastList<Item> getEquippedItemsWithoutStigma() {
-		FastList<Item> equippedItems = FastList.newInstance();
-		Item twoHanded = null;
-		Item offTwoHanded = null;
-		for (Item item : equipment.values()) {
-			if (!ItemSlot.isStigma(item.getEquipmentSlot())) {
-				if (item.getItemTemplate().isTwoHandWeapon()) {
-					if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) != 0 && offTwoHanded != null) {
-						continue;
-					}
-					else if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) != 0) {
-						offTwoHanded = item;
-					}
+        FastList<Item> equippedItems = FastList.newInstance();
+        Item twoHanded = null;
+        for (Item item : equipment.values()) {
+            if (!ItemSlot.isStigma(item.getEquipmentSlot())) {
+                if (item.getItemTemplate().isTwoHandWeapon()) {
+                    if (twoHanded != null) {
+                        continue;
+                    }
+                    twoHanded = item;
+                }
+                equippedItems.add(item);
+            }
+        }
 
-					if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) == 0 && twoHanded != null) {
-						continue;
-					}
-					else if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) == 0) {
-						twoHanded = item;
-					}
-				}
-				equippedItems.add(item);
-			}
-		}
+        return equippedItems;
+    }
 
-		return equippedItems;
-	}
+    public FastList<Item> getEquippedItemsWithoutStigmaOld() {
+        FastList<Item> equippedItems = FastList.newInstance();
+        Item twoHanded = null;
+        Item offTwoHanded = null;
+        for (Item item : equipment.values()) {
+            if (!ItemSlot.isStigma(item.getEquipmentSlot())) {
+                if (item.getItemTemplate().isTwoHandWeapon()) {
+                    if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) != 0 && offTwoHanded != null) {
+                        continue;
+                    } else if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) != 0) {
+                        offTwoHanded = item;
+                    }
+
+                    if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) == 0 && twoHanded != null) {
+                        continue;
+                    } else if ((item.getEquipmentSlot() & ItemSlot.MAIN_OFF_OR_SUB_OFF.getSlotIdMask()) == 0) {
+                        twoHanded = item;
+                    }
+                }
+                equippedItems.add(item);
+            }
+        }
+
+        return equippedItems;
+    }
 
 	/**
 	 * @return List<Item>
@@ -690,17 +714,28 @@ public class Equipment {
 		return equippedItems;
 	}
 
-	/**
-	 * @return List<Item>
-	 */
-	public List<Item> getEquippedItemsRegularStigma() {
-		List<Item> equippedItems = new ArrayList<Item>();
-		for (Item item : equipment.values()) {
-			if (ItemSlot.isRegularStigma(item.getEquipmentSlot()))
-				equippedItems.add(item);
-		}
-		return equippedItems;
-	}
+    public List<Integer> getEquippedItemsAllStigmaIds() {
+        List<Integer> equippedItemIds = new ArrayList<Integer>();
+        for (Item item : equipment.values()) {
+            if (ItemSlot.isStigma(item.getEquipmentSlot())){
+                equippedItemIds.add(item.getItemId());
+            }
+        }
+        return equippedItemIds;
+    }
+
+    /**
+     * @return List<Item>
+     */
+    public List<Item> getEquippedItemsRegularStigma() {
+        List<Item> equippedItems = new ArrayList<Item>();
+        for (Item item : equipment.values()) {
+            if (ItemSlot.isRegularStigma(item.getEquipmentSlot())) {
+                equippedItems.add(item);
+            }
+        }
+        return equippedItems;
+    }
 
 	/**
 	 * @return List<Item>
