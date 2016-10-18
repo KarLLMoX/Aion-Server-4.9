@@ -48,6 +48,27 @@ public class Stigma {
         return list;
     }
 
+    public List<Integer> getSkillIdOnly() {
+        List<Integer> ids = new ArrayList<Integer>();
+        List<String> skill = this.skill;
+        if (skill.size() != 1) { //Dual Skills like Exhausting Wave
+            String[] tempArray = new String[0];
+            for (String parts : skill){ // loops each of the 1:534 and 1:4342
+                tempArray = parts.split(":");
+                ids.add(Integer.parseInt(tempArray[1]));
+            }
+            return ids;
+        }
+
+        //Single 1 Skill
+        for (String st : this.skill) {
+            String[] array = st.split(":");
+            ids.add(Integer.parseInt(array[1]));
+        }
+        return ids;
+    }
+
+
     /**
      * @return the kinah //4.8
      */
@@ -62,7 +83,7 @@ public class Stigma {
         return this.requireSkill;
     }
 
-    public class StigmaSkill {
+    public static class StigmaSkill {
 
         private int skillId;
         private int skillLvl;

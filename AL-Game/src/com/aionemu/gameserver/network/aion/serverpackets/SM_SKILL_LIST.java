@@ -54,7 +54,14 @@ public class SM_SKILL_LIST extends AionServerPacket {
         this.skillList = new PlayerSkillEntry[]{skillListEntry};
         this.messageId = messageId;
         this.skillNameId = DataManager.SKILL_DATA.getSkillTemplate(skillListEntry.getSkillId()).getNameId();
-        this.skillLvl = String.valueOf(skillListEntry.getSkillLevel());
+        if (messageId == 1330053 || messageId == 1330005) {
+            this.skillLvl = String.valueOf(skillListEntry.getSkillLevel());
+        } else {
+               String str = skillListEntry.getSkillTemplate().getNamedesc();
+               String str1 = String.valueOf(str.charAt(str.length() - 2));
+               String str2 = String.valueOf(str.charAt(str.length() - 1));
+            this.skillLvl = String.valueOf(str1.replace("G", "") + str2);
+        }
         this.isNew = isNew;
     }
 

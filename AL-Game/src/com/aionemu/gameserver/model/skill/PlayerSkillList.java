@@ -179,6 +179,14 @@ public final class PlayerSkillList implements SkillList<Player> {
 			}
 		}
 	}
+	
+	public void addStigmaSkill(Player player, int skillId, int skillLevel, boolean withMsg, boolean equipedByNpc) {
+		PlayerSkillEntry skill = new PlayerSkillEntry(skillId, true, false, skillLevel, PersistentState.NOACTION);
+		this.stigmaSkills.put(skillId, skill);
+		if (equipedByNpc) {
+			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(skill, withMsg ? 1300401 : 0, false));
+		}
+	}
 
 	public void addHiddenStigmaSkill(Player player, int skillId, int skillLvl) {
 		PlayerSkillEntry skill = new PlayerSkillEntry(skillId, false, true, skillLvl, PersistentState.NOACTION);
@@ -296,29 +304,33 @@ public final class PlayerSkillList implements SkillList<Player> {
 	 * @param player
 	 * @param skillId
 	 */
-	private void sendMessage(Player player, int skillId, boolean isNew) {
-		switch (skillId) {
-			case 30001:
-			case 30002:
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330005, false));
-				break;
-			case 30003:
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330005, false));
-				break;
-			case 40001:
-			case 40002:
-			case 40003:
-			case 40004:
-			case 40005:
-			case 40006:
-			case 40007:
-			case 40008:
-			case 40009:
-			case 40010:
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330053, false));
-				break;
-			default:
-				PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1300050, isNew));
-		}
-	}
+    private void sendMessage(Player player, int skillId, boolean isNew) {
+        switch (skillId) {
+            case 30001:
+            case 30002:
+                PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330005, false));
+                break;
+            case 30003:
+                PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330005, false));
+                break;
+            case 40001:
+            case 40002:
+            case 40003:
+            case 40004:
+            case 40005:
+            case 40006:
+            case 40007:
+            case 40008:
+            case 40009:
+            case 40010:
+                PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1330053, false));
+                break;
+            default:
+                if (player.getSkillList().getSkillEntry(skillId).getSkillLevel() > 1) {
+                    PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 0, isNew));
+                } else {
+                    PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player.getSkillList().getSkillEntry(skillId), 1300050, isNew));
+                }
+        }
+    }
 }

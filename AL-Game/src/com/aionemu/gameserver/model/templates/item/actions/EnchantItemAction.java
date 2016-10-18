@@ -73,6 +73,11 @@ public class EnchantItemAction extends AbstractItemAction {
         if (parentItem == null) {
             return false;
         }
+        if (targetItem.isEquipped() && targetItem.getItemTemplate().getCategory() == ItemCategory.STIGMA) {
+        	String message = "Can't Enchant equiped Stigma";
+        	PacketSendUtility.sendMessage(player, message);
+        	return false;
+        }
         if (targetItem.isAmplified() && parentItem.getItemTemplate().isAmplificationStone() && player.getInventory().getKinah() < EnchantKinah) {
 			return false;
 		}
@@ -169,7 +174,7 @@ public class EnchantItemAction extends AbstractItemAction {
                     EnchantService.enchantItemAct(player, parentItem, targetItem, currentEnchant, isSuccess);
                 } // Stigma
                 else if (itemTemplate.getCategory() == ItemCategory.STIGMA && parentItem.getItemTemplate().getCategory() == targetItem.getItemTemplate().getCategory()) {
-					EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);				
+                	EnchantService.enchantStigmaAct(player, parentItem, targetItem, currentEnchant, isSuccess);
                 } // Manastone
                 else {
                     EnchantService.socketManastoneAct(player, parentItem, targetItem, targetWeapon, isSuccess);
