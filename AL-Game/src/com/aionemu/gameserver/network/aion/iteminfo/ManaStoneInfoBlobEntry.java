@@ -109,26 +109,26 @@ public class ManaStoneInfoBlobEntry extends ItemBlobEntry {
             writeD(buf, 0);//value
             writeD(buf, 42);
             writeD(buf, item.getAuthorize() * 150); //HP Boost for Tempering Solution    
-            if (item.getItemTemplate().getAuthorizeName() == 52 || item.getItemTemplate().getAuthorizeName() == 10063) {
+            if (item.getItemTemplate().getAuthorizeName() == 10051 || item.getItemTemplate().getAuthorizeName() == 10063) {
             	writeD(buf, 30);
                 writeD(buf, item.getAuthorize() * 4);//Physical Attack
                 writeD(buf, 0);//New Plume Stat 4.7.5.6 (NcSoft will implement it at future)
                 writeD(buf, 0);//it's Value                
-			} else if (item.getItemTemplate().getAuthorizeName() == 57 || item.getItemTemplate().getAuthorizeName() == 10065){
-				writeD(buf, 33);
-				writeD(buf, item.getAuthorize() * 12); //Physical Critical.
-				writeD(buf, 0);
-				writeD(buf, 0);
-			} else if (item.getItemTemplate().getAuthorizeName() == 58 || item.getItemTemplate().getAuthorizeName() == 10066) {
-				writeD(buf, 36);
-				writeD(buf, item.getAuthorize() * 8); //Magical Accuracy.
-				writeD(buf, 0);
-				writeD(buf, 0);
-			} else {
+			} else if (item.getItemTemplate().getAuthorizeName() == 10052 || item.getItemTemplate().getAuthorizeName() == 10064){
 				writeD(buf, 35);
-                writeD(buf, item.getAuthorize() * 20); //Magic Boost
-				writeD(buf, 0);//New Plume Stat 4.7.5.6 (NcSoft will implement it at future)
-            	writeD(buf, 0);//it's Value                
+				writeD(buf, item.getAuthorize() * 20); //Magic Boost
+				writeD(buf, 0);
+				writeD(buf, 0);
+			} else if (item.getItemTemplate().getAuthorizeName() == 10056 || item.getItemTemplate().getAuthorizeName() == 10065){
+				writeD(buf, 33);
+				writeD(buf, item.getAuthorize() * 12); //Physical Critical
+				writeD(buf, 0);
+				writeD(buf, 0);
+			} else if (item.getItemTemplate().getAuthorizeName() == 10057 || item.getItemTemplate().getAuthorizeName() == 10066) {
+				writeD(buf, 36);
+				writeD(buf, item.getAuthorize() * 8); //Magical Accuracy
+				writeD(buf, 0);
+				writeD(buf, 0);
 			}
             //Some Padding for future.
             writeD(buf, 0);//unk plume stat
