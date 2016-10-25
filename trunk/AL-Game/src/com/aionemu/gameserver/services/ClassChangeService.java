@@ -39,7 +39,7 @@ public class ClassChangeService {
      * @param player
      */
     public static void showClassChangeDialog(Player player) {
-        if (CustomConfig.ENABLE_SIMPLE_2NDCLASS || player.getAccessLevel() > 1) {
+        if (CustomConfig.ENABLE_SIMPLE_2NDCLASS) {
             PlayerClass playerClass = player.getPlayerClass();
             Race playerRace = player.getRace();
             if (player.getLevel() >= 9 && playerClass.isStartingClass()) {
@@ -100,7 +100,7 @@ public class ClassChangeService {
      */
     public static void changeClassToSelection(final Player player, final int dialogId) {
         Race playerRace = player.getRace();
-        if (CustomConfig.ENABLE_SIMPLE_2NDCLASS || player.getAccessLevel() > 1) {
+        if (CustomConfig.ENABLE_SIMPLE_2NDCLASS) {
             if (playerRace == Race.ELYOS) {
                 switch (dialogId) {
                     case 2376:

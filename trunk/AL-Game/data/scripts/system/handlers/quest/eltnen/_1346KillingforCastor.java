@@ -26,11 +26,12 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author Aion Gates
+ * @rework FrozenKiller
  */
 public class _1346KillingforCastor extends QuestHandler {
 
     private final static int questId = 1346;
-    private final static int[] mob_ids = {210898, 210878, 210872, 210844};
+    private final static int[] mob_ids = {210844, 210872, 210878, 210898, 210821, 210845, 210873, 210900};
 
     public _1346KillingforCastor() {
         super(questId);
@@ -53,28 +54,11 @@ public class _1346KillingforCastor extends QuestHandler {
         if (qs == null || qs.getStatus() != QuestStatus.START) {
             return false;
         }
-
-        int targetId = 0;
-        if (env.getVisibleObject() instanceof Npc) {
-            targetId = ((Npc) env.getVisibleObject()).getNpcId();
-        }
-
-        switch (targetId) {
-            case 210872:
-            case 210844:
-                if (qs.getQuestVarById(0) < 4) {
-                    qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
-                    updateQuestStatus(env);
-                    return true;
-                }
-                break;
-            case 210898:
-            case 210878:
-                if (qs.getQuestVarById(1) < 6) {
-                    qs.setQuestVarById(1, qs.getQuestVarById(1) + 1);
-                    updateQuestStatus(env);
-                    return true;
-                }
+        
+        int var = qs.getQuestVarById(0);
+        
+        if (var < 9) {
+			return defaultOnKillEvent(env, mob_ids, var, var + 1); // 0 - 9
         }
         return false;
     }
@@ -100,8 +84,9 @@ public class _1346KillingforCastor extends QuestHandler {
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
+        	int var = qs.getQuestVarById(0);
             if (targetId == 203965) {
-                if (env.getDialog() == DialogAction.QUEST_SELECT && qs.getQuestVarById(1) == 6 && qs.getQuestVarById(0) == 4) {
+                if (env.getDialog() == DialogAction.QUEST_SELECT && var == 9) {
                     qs.setQuestVarById(0, qs.getQuestVarById(0) + 1);
                     qs.setStatus(QuestStatus.REWARD);
                     updateQuestStatus(env);
