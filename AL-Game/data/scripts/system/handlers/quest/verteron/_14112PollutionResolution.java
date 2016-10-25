@@ -55,17 +55,25 @@ public class _14112PollutionResolution extends QuestHandler {
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 203149) { // Geolus
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1011);
-                } else {
-                    return sendQuestStartDialog(env, -1);
-                }
+            	switch (dialog) {
+            		case QUEST_SELECT: {
+            			return sendQuestDialog(env, 1011);
+            		}
+            		case QUEST_ACCEPT_1:
+            		case QUEST_ACCEPT_SIMPLE:
+            			QuestService.startQuest(env, 0);
+                    	qs.setQuestVarById(5, 1);
+                    	updateQuestStatus(env);
+                    	return closeDialogWindow(env);
+				default:
+					break;
+            	}
             }
 		} else if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
 			if (targetId == 203148) { // Lepios
 				switch (dialog) {
-					case USE_OBJECT: {
+					case QUEST_SELECT: {
 						if (var == 0) {
 							return sendQuestDialog(env, 1352);
 						}

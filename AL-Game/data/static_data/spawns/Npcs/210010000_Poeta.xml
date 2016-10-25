@@ -1466,5 +1466,9 @@
 		<spawn npc_id="801032"  respawn_time="295">
 			<spot h="0" x="830.73926" y="1249.6381" z="118.875"/>
 		</spawn>
+		<!-- Madeline -->
+		<spawn npc_id="801033" respawn_time="295">
+            <spot x="869.7239" y="1226.9081" z="118.806755" h="60"/>
+        </spawn>
 	</spawn_map>
 </spawns>
