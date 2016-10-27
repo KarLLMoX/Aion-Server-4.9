@@ -16,9 +16,9 @@
  */
 package quest.beluslan;
 
-import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
+import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
@@ -28,35 +28,34 @@ import com.aionemu.gameserver.services.QuestService;
  * @author FrozenKiller
  */
 
-public class _24151ReclaimingtheDamned extends QuestHandler {
+public class _24155LeatherWingsandShinyThings extends QuestHandler {
 
-    private final static int questId = 24151;
-    private final static int[] mob_ids = {213044, 213045, 214092, 214093};
+    private final static int questId = 24155;
 
-    public _24151ReclaimingtheDamned() {
+    public _24155LeatherWingsandShinyThings() {
         super(questId);
     }
 
     @Override
     public void register() {
-        qe.registerQuestNpc(204715).addOnQuestStart(questId);
-        qe.registerQuestNpc(204715).addOnTalkEvent(questId); // Grundt
-        qe.registerQuestNpc(204801).addOnTalkEvent(questId); // Gigrite
-        for (int mob_id : mob_ids) {
-            qe.registerQuestNpc(mob_id).addOnKillEvent(questId);
-        }
-    }
+    	qe.registerQuestNpc(204701).addOnQuestStart(questId);
+    	qe.registerQuestNpc(204701).addOnTalkEvent(questId); //Hod
+    	qe.registerQuestNpc(204785).addOnTalkEvent(questId); //Gwendolin
+        qe.registerQuestNpc(700290).addOnKillEvent(questId);    	
+        qe.registerQuestItem(182204318, questId);
 
+    }
 
     @Override
     public boolean onDialogEvent(final QuestEnv env) {
-        final Player player = env.getPlayer();
-        int targetId = env.getTargetId();
+        Player player = env.getPlayer();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
+
         DialogAction dialog = env.getDialog();
+        int targetId = env.getTargetId();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 204715) { // Grundt
+            if (targetId == 204701) { //Hod
             	switch (dialog) {
         			case QUEST_SELECT: {
         				return sendQuestDialog(env, 1011);
@@ -78,31 +77,39 @@ public class _24151ReclaimingtheDamned extends QuestHandler {
             	}
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-        	int var = qs.getQuestVarById(0);
-            if (targetId == 204801) { // Gigrite
-                switch (dialog) {
-                    case QUEST_SELECT: {
-                    	if (var == 5) {
-                    		return sendQuestDialog(env, 2375);
-                    	}
-                    	return sendQuestDialog(env, 1352);
+        	switch (targetId) {
+                case 204785: { //Gwendolin
+                    switch (dialog) {
+                        case QUEST_SELECT: {
+                                return sendQuestDialog(env, 1352);
+                        }
+                        case SETPRO2: {
+                        	qs.setQuestVar(0);
+        					updateQuestStatus(env);
+                            return closeDialogWindow(env);
+                        }
+					default:
+						break;
                     }
-                    case SETPRO1: {
-                        qs.setQuestVar(0);
-                        updateQuestStatus(env);
-                        return closeDialogWindow(env);
+                }
+                case 204701: { //Hod
+                    switch (dialog) {
+                        case QUEST_SELECT: {
+                        	return sendQuestDialog(env, 2375);
+                        }
+                        case SELECT_QUEST_REWARD: {
+                        	qs.setStatus(QuestStatus.REWARD);
+                            updateQuestStatus(env);
+    						return sendQuestDialog(env, 5);
+                        }
+					default:
+						break;
                     }
-                    case SELECT_QUEST_REWARD: {
-                    	qs.setStatus(QuestStatus.REWARD);
-                        updateQuestStatus(env);
-						return sendQuestDialog(env, 5);
-                    }
-                default:
                     break;
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 204801) { // Gigrite
+            if (targetId == 204701) { // Hod
             	if (dialog == DialogAction.SELECT_QUEST_REWARD) {
             		return sendQuestDialog(env, 5);
             	} else {
@@ -123,8 +130,8 @@ public class _24151ReclaimingtheDamned extends QuestHandler {
 
         int var = qs.getQuestVarById(0);
 
-        if (var < 5) {
-            return defaultOnKillEvent(env, mob_ids, var, var + 1); // 0 - 5
+        if (var < 3) {
+            return defaultOnKillEvent(env, 700290, var, var + 1); // 0 - 3
         }
         return false;
     }
