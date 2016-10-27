@@ -238,7 +238,7 @@
                     4538 [XML] The Letter
                     4539 [XML] The Trade Route
                     4542  [SCRIPT] The Secret of the Seiren Treasure
-                    23831  [SCRIPT] Stigma Stones May Break Your Bones?
+                    23831 [SCRIPT] Stigma Stones May Break Your Bones?
                     16909 [TODO] [Spy] A Mark of Distinction
                     24050 [SCRIPT] Nerita's Orders
                     24051 [SCRIPT] Invesetigate the Disappearance
@@ -249,14 +249,14 @@
                     24151 [SCRIPT] Reclaiming the Damned
                     24152 [SCRIPT] Through the Looking Glass
                     24153 [SCRIPT] The Efficacy of Fire
-                    24154 [TODO] Better than Last Time
-                    24155 [TODO] Leather Wings and Shiny Things
-                    24250 [TODO] Time Has Come
+                    24154 [SCRIPT] Better than Last Time
+                    24155 [SCRIPT] Leather Wings and Shiny Things
+                    24250 [XML] Time Has Come
                     26902 [XML] [Spy] An Eye on the Research
                     26903 [XML] [Spy] Bottling Kishar Krall
                     26907 [XML] Malek-nant Growth
                     26908 [XML] Blast it, Neritra, I'm a Researcher
-                    26909 [TODO] Tribal Emblems
+                    26909 [TODO] Tribal Emblems (LOL Elyos NPC should give Asmodian Quest)
                     28600 [SCRIPT] Suspicious Errand
                     28601 [SCRIPT] Nightmares and Dreamscapes
                     28602 [SCRIPT] Into the Unknown
@@ -304,6 +304,7 @@
     <report_to id="4221" start_npc_ids="204710" end_npc_ids="204839"/>
     <report_to id="4521" start_npc_ids="204725" end_npc_ids="205143" item_id="182204554"/>
     <report_to id="4538" start_npc_ids="204701" end_npc_ids="204768" item_id="182204558"/>
+    <report_to id="24250" start_npc_ids="802053" end_npc_ids="832820"/>
     <!-- COLLECTING QUESTS -->
     <item_collecting id="2502" start_npc_ids="204701"/>
     <item_collecting id="2503" start_npc_ids="204733" action_item_ids="700327"/>
