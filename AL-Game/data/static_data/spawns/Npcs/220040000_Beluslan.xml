@@ -8754,5 +8754,9 @@
         <spawn npc_id="805376" respawn_time="295">
             <spot x="281.6729" y="399.5327" z="236.16115" h="90"/>
         </spawn>
+		<!-- Dojer -->
+		<spawn npc_id="802364" respawn_time="295">
+            <spot x="507.65833" y="2209.8655" z="382.92343" h="49"/>
+        </spawn>
 	</spawn_map>
 </spawns>

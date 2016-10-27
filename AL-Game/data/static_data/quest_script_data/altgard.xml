@@ -121,6 +121,7 @@
                     24015 [SCRIPT] Totem-Plowed
                     24016 [SCRIPT] A Strange New Threat
                     24020 [SCRIPT] Aegir's Orders
+                    24110 [XML] Guardian of the Ice Lake
                     24111 [XML] What's Up, Dock?
                     24112 [SCRIPT] No Laissez-faire for Lepharists
                     24113 [XML] Sword to Secrecy
@@ -253,6 +254,9 @@
     <monster_hunt id="2293" start_npc_ids="203659">
         <monster var="0" npc_ids="210576" end_var="6"/>
         <monster var="1" npc_ids="210578 210523" end_var="16"/>
+    </monster_hunt>
+    <monster_hunt id="24110" start_npc_ids="203559">
+        <monster var="0" npc_ids="210714 210715" end_var="4"/>
     </monster_hunt>
     <monster_hunt id="24115" start_npc_ids="798033" end_npc_ids="203673"> <!-- TODO QUEST ITEM -->
         <monster var="0" npc_ids="210492 210493" end_var="3"/>
