@@ -18,6 +18,7 @@ package com.aionemu.gameserver.model.templates.item.actions;
 
 import com.aionemu.gameserver.configs.main.CustomConfig;
 import com.aionemu.gameserver.configs.main.EnchantsConfig;
+import com.aionemu.gameserver.controllers.observer.ItemUseObserver;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
@@ -164,9 +165,24 @@ public class EnchantItemAction extends AbstractItemAction {
         final boolean isSuccess = isSuccess(player, parentItem, targetItem, supplementItem, targetWeapon);
         //player.getController().cancelUseItem();
         PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), EnchantsConfig.ENCHANT_CAST_DELAY, 0, 0));
+        
+        final ItemUseObserver observer = new ItemUseObserver() {
+            @Override
+            public void abort() {
+                player.getController().cancelTask(TaskId.ITEM_USE);
+                player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300457, new DescriptionId(targetItem.getNameId()))); //Enchant Item canceled
+                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), targetItem.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 2, 0), true);
+
+                player.getObserveController().removeObserver(this);
+            }
+        };
+        player.getObserveController().attach(observer);
+        
         player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
+                player.getObserveController().removeObserver(observer);
             	 // Item template
                 ItemTemplate itemTemplate = parentItem.getItemTemplate();
                 // Enchantment stone
@@ -179,7 +195,6 @@ public class EnchantItemAction extends AbstractItemAction {
                 else {
                     EnchantService.socketManastoneAct(player, parentItem, targetItem, targetWeapon, isSuccess);
                 }
-
                 PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, isSuccess ? 1 : 2, 384));
                 if (CustomConfig.ENABLE_ENCHANT_ANNOUNCE) {
                 	if (itemTemplate.getCategory() == ItemCategory.ENCHANTMENT || itemTemplate.getCategory() == ItemCategory.AMPLIFICATION) {
