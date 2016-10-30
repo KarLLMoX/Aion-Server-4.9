@@ -75,7 +75,7 @@ public class PolishAction extends AbstractItemAction {
             public void abort() {
                 player.getController().cancelTask(TaskId.ITEM_USE);
                 player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(parentNameId)));
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
                 PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentObjectId, parentItemId, 0, 2, 0), true);
                 player.getObserveController().removeObserver(this);
             }

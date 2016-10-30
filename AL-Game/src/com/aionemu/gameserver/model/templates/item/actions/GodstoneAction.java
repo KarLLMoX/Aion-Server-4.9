@@ -17,7 +17,6 @@
 package com.aionemu.gameserver.model.templates.item.actions;
 
 import com.aionemu.gameserver.controllers.observer.ItemUseObserver;
-import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
@@ -50,14 +49,13 @@ public class GodstoneAction extends AbstractItemAction {
     public void act(final Player player, final Item parentItem, final Item targetItem) {
         final int parentItemId = parentItem.getItemId();
         final int parentObjectId = parentItem.getObjectId();
-        final int parentNameId = parentItem.getNameId();
         PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItemId, 5000, 0, 0), true);
         final ItemUseObserver observer = new ItemUseObserver() {
             @Override
             public void abort() {
                 player.getController().cancelTask(TaskId.ITEM_USE);
                 player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(parentNameId)));
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
                 PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentObjectId, parentItemId, 0, 2, 0), true);
                 player.getObserveController().removeObserver(this);
             }

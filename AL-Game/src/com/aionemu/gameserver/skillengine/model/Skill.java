@@ -193,7 +193,7 @@ public class Skill {
             }
 
             if (skillMethod == SkillMethod.ITEM && duration > 0 && player.getMoveController().isInMove()) {
-                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(getItemTemplate().getNameId())));
+            	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
                 return false;
             }
         }

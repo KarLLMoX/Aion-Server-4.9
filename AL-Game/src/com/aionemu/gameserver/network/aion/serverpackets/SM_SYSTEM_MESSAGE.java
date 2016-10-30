@@ -9986,9 +9986,7 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
     /**
      * You have cancelled using the item.
      */
-    public static final SM_SYSTEM_MESSAGE STR_ITEM_CANCELED(DescriptionId id) {
-        return new SM_SYSTEM_MESSAGE(1300427, id);
-    }
+    public static final SM_SYSTEM_MESSAGE STR_ITEM_CANCELED = new SM_SYSTEM_MESSAGE(1300427);
 
     /**
      * The other player is carrying too many items.
@@ -21753,8 +21751,11 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
      * %1 cannot be wrapped with %0.
      */
     public static SM_SYSTEM_MESSAGE STR_MSG_PACK_ITEM_WRONG_TARGET_ITEM_CATEGORY(int parentNameId, int targetNameId) {
-        return new SM_SYSTEM_MESSAGE(1402018, parentNameId, targetNameId);
+    	return new SM_SYSTEM_MESSAGE(1402018, new DescriptionId(parentNameId), new DescriptionId(targetNameId));
     }
+    
+    public static final SM_SYSTEM_MESSAGE STR_MSG_PACK_ITEM_NEED_IDENTIFY = new SM_SYSTEM_MESSAGE(1402030); 
+    
 	/**
 	 * Legion Join Request System
 	 */
