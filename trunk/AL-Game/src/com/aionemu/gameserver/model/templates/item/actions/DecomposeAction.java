@@ -145,6 +145,12 @@ public class DecomposeAction extends AbstractItemAction {
                 return false;
             }
         }
+        
+        if (player.getInventory().isFull()) {
+       		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300447));
+        	return false;
+        }
+        
         return true;
     }
 
@@ -180,7 +186,7 @@ public class DecomposeAction extends AbstractItemAction {
                 } else if ((targetItem != null) && (targetItem.getItemTemplate().isArmor() || targetItem.getItemTemplate().isWeapon())) {
                     PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_DECOMPOSE_ITEM_CANCELED(targetItem.getNameId()));
                 } else {
-                	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
+                	PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_DECOMPOSE_ITEM_CANCELED(parentItem.getNameId()));
                 }
                 PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 2, 0), true);
                 player.getObserveController().removeObserver(this);
