@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * @author Ever'
+ * @rework FrozenKiller
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PackAction")
@@ -48,10 +49,44 @@ public class PackAction extends AbstractItemAction {
         if (target.equals(UseTarget.WEAPON) && !targetItem.getItemTemplate().isWeapon()) {
             return false;
         }
+        
         if (target.equals(UseTarget.ARMOR) && !targetItem.getItemTemplate().isArmor()) {
             return false;
         }
-        return targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() && !targetItem.isEquipped();
+        
+        if (targetItem.getOptionalSocket() == -1) {
+        	PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402030));
+        	return false;
+        }
+        
+        if (targetItem.isEquipped()) {
+            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402020)); // You cannot wrap equipped items
+            return false;
+        }
+
+        if (targetItem.isTradeable(player)) {
+            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402022)); // A tradeable item cannot be wrapped
+            return false;
+        }
+        
+        if (parentItem.getItemTemplate().getItemQuality() != targetItem.getItemTemplate().getItemQuality()) {
+        	if (parentItem.getItemTemplate().getItemQuality().getQualityId() < targetItem.getItemTemplate().getItemQuality().getQualityId()) { //Allow's Pack with greater Scrolls (Myth Scroll + Epic Item) 
+        		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402018, new DescriptionId(parentItem.getNameId()), new DescriptionId(targetItem.getNameId())));// %1 cannot be wrapped with %0
+        		return false;
+        	}
+        }
+        
+        int enchantPack = 0; // Added with 4.9 Enchant > 10 = PackCount +1 , Enchant > 20 = PackCount +2 
+        
+        if (targetItem.getEnchantLevel() > 10 && targetItem.getEnchantLevel() < 20 && targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() + 1) {
+        	enchantPack += 1;
+        } else if (targetItem.getEnchantLevel() > 20 && targetItem.getPackCount() < targetItem.getItemTemplate().getPackCount() + 2) {
+        	enchantPack += 2;
+        } else if (targetItem.getEnchantLevel() <= 10 && targetItem.getPackCount() > targetItem.getItemTemplate().getPackCount()) {
+            PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402015, new Object[]{new DescriptionId(targetItem.getNameId())}));
+            return false;
+        }
+        return targetItem.getPackCount() < (targetItem.getItemTemplate().getPackCount() + enchantPack) && !targetItem.isEquipped();
     }
 
     public UseTarget getTarget() {
@@ -61,8 +96,7 @@ public class PackAction extends AbstractItemAction {
     @Override
     public void act(final Player player, final Item parentItem, final Item targetItem) {
         final int parentItemId = parentItem.getItemId();
-        final int parntObjectId = parentItem.getObjectId().intValue();
-        final int parentNameId = parentItem.getNameId();
+        final int parentObjectId = parentItem.getObjectId().intValue();
         PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId().intValue(), parentItem.getObjectId().intValue(), parentItemId, 5000, 0, 0), true);
 
         final ItemUseObserver observer = new ItemUseObserver() {
@@ -70,8 +104,8 @@ public class PackAction extends AbstractItemAction {
             public void abort() {
                 player.getController().cancelTask(TaskId.ITEM_USE);
                 player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402015, new Object[]{new DescriptionId(parentNameId)})); // You cannot wrap %0
-                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId().intValue(), parntObjectId, parentItemId, 0, 2, 0), true);
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
+                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId().intValue(), parentObjectId, parentItemId, 0, 2, 0), true);
 
                 player.getObserveController().removeObserver(this);
             }
@@ -82,30 +116,11 @@ public class PackAction extends AbstractItemAction {
             @Override
             public void run() {
                 player.getObserveController().removeObserver(observer);
-                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId().intValue(), parntObjectId, parentItemId, 0, 1, 1), true);
-                if (!player.getInventory().decreaseByObjectId(parntObjectId, 1)) {
+                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId().intValue(), parentObjectId, parentItemId, 0, 1, 1), true);
+                if (!player.getInventory().decreaseByObjectId(parentObjectId, 1)) {
                     return;
                 }
                 int _packCount = targetItem.getPackCount();
-                if (_packCount >= targetItem.getItemTemplate().getPackCount()) {
-                    return;
-                }
-                if (targetItem.isEquipped()) {
-                    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402020)); // You cannot wrap equipped items
-                    return;
-                }
-                if (targetItem.isTradeable(player)) {
-                    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402022)); // A tradeable item cannot be wrapped
-                    return;
-                }
-                if (parentItem.getItemTemplate().getItemQuality() != targetItem.getItemTemplate().getItemQuality()) {
-                    PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_PACK_ITEM_WRONG_TARGET_ITEM_CATEGORY(parentNameId, targetItem.getNameId())); // %1 cannot be wrapped with %0
-                    return;
-                }
-                if (targetItem.getPackCount() > targetItem.getItemTemplate().getPackCount()) {
-                    PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402015, new Object[]{new DescriptionId(targetItem.getNameId())}));
-                    return;
-                }
                 targetItem.setPacked(true);
                 targetItem.setPackCount(++_packCount);
                 targetItem.setPersistentState(PersistentState.UPDATE_REQUIRED);

@@ -266,6 +266,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_SECURITY_TOKEN(0x1A3, State.IN_GAME)); // 4.9
 		addPacket(new CM_11A_UNK(0x11A, State.AUTHED)); // 4.9
 		addPacket(new CM_TUNE_RESULT(0x1A8, State.IN_GAME)); // 4.9
+		addPacket(new CM_USE_PACK_ITEM(0x1CE, State.IN_GAME)); // 4.9
     }
 
     public AionPacketHandler getPacketHandler() {

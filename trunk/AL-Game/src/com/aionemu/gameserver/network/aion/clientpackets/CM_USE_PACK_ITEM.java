@@ -16,77 +16,78 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import com.aionemu.commons.utils.Rnd;
+import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.gameserver.controllers.observer.ItemUseObserver;
 import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.PersistentState;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.model.items.storage.Storage;
-import com.aionemu.gameserver.model.templates.item.ItemTemplate;
-import com.aionemu.gameserver.model.templates.item.actions.TuningAction;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
 import com.aionemu.gameserver.network.aion.AionConnection.State;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_INVENTORY_UPDATE_ITEM;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.utils.ThreadPoolManager;
 
 /**
- * @author xTz
+ * @author Ever'
+ * @rework FrozenKiller
  */
-public class CM_TUNE extends AionClientPacket {
+public class CM_USE_PACK_ITEM extends AionClientPacket {
 
-    private int itemObjectId, tuningScrollId;
+    private int uniqueItemId;
 
-    public CM_TUNE(int opcode, State state, State... restStates) {
+    /**
+     * Constructs new instance of <tt>CM_UNPACK_ITEM </tt> packet
+     *
+     * @param opcode
+     */
+    public CM_USE_PACK_ITEM(int opcode, State state, State... restStates) {
         super(opcode, state, restStates);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void readImpl() {
-        itemObjectId = readD();
-        tuningScrollId = readD();
+        uniqueItemId = readD();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void runImpl() {
         final Player player = getConnection().getActivePlayer();
         if (player == null) {
             return;
         }
-        Storage inventory = player.getInventory();
-        final Item item = inventory.getItemByObjId(itemObjectId);
+        if (uniqueItemId == 0) {
+            return;
+        }
+        if (player.isProtectionActive()) {
+            player.getController().stopProtectionActiveTask();
+        }
+        final Item item = player.getInventory().getItemByObjId(uniqueItemId);
         if (item == null) {
             return;
         }
-        if (tuningScrollId != 0) {
-            final Item tuningItem = inventory.getItemByObjId(tuningScrollId);
-            if (tuningItem == null) {
-                return;
-            }
-            TuningAction action = tuningItem.getItemSkinTemplate().getActions().getTuningAction();
-            if (action != null && action.canAct(player, tuningItem, item)) {
-                action.act(player, tuningItem, item);
-            }
-            return;
+
+        // check use item multicast delay exploit cast (spam)
+        if (player.isCasting()) {
+            player.getController().cancelCurrentSkill();
         }
-        if (item.getOptionalSocket() != -1) {
-            return;
-        }
-        final int itemId = item.getItemId();
-        final ItemTemplate template = item.getItemTemplate();
-        final int nameId = template.getNameId();
-        PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), itemId, 5000, 0, 0), true);
+        
+        PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 5000, 0, 0), true);
         final ItemUseObserver observer = new ItemUseObserver() {
             @Override
             public void abort() {
                 player.getController().cancelTask(TaskId.ITEM_USE);
-                player.removeItemCoolDown(template.getUseLimits().getDelayId());
+                player.removeItemCoolDown(item.getItemTemplate().getUseLimits().getDelayId());
                 PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
-                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjectId, itemId, 0, 2, 0), true);
+                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 0, 2, 0), true);
                 player.getObserveController().removeObserver(this);
             }
         };
@@ -94,17 +95,12 @@ public class CM_TUNE extends AionClientPacket {
         player.getController().addTask(TaskId.ITEM_USE, ThreadPoolManager.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
-                if (item.getOptionalSocket() != -1) {
-                    return;
-                }
+            	item.setPacked(false);
                 player.getObserveController().removeObserver(observer);
-                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), itemObjectId, itemId, 0, 1, 1), true);
-
-                item.setOptionalSocket(Rnd.get(0, item.getItemTemplate().getOptionSlotBonus()));
-                item.setRndBonus();
+                PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), item.getObjectId(), item.getItemTemplate().getTemplateId(), 0, 1, 1), true);
                 item.setPersistentState(PersistentState.UPDATE_REQUIRED);
                 PacketSendUtility.sendPacket(player, new SM_INVENTORY_UPDATE_ITEM(player, item));
-				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1401626, new DescriptionId(nameId)));
+				PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402968, new DescriptionId(item.getItemTemplate().getNameId())));
             }
         }, 5000));
 
