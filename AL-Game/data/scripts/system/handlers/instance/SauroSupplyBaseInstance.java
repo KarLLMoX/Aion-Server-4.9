@@ -14,6 +14,7 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
+
 package instance;
 
 import java.util.Map;
@@ -22,164 +23,197 @@ import com.aionemu.commons.network.util.ThreadPoolManager;
 import com.aionemu.commons.utils.Rnd;
 import com.aionemu.gameserver.instance.handlers.GeneralInstanceHandler;
 import com.aionemu.gameserver.instance.handlers.InstanceID;
+import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.StaticDoor;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.services.teleport.TeleportService2;
-import com.aionemu.gameserver.world.WorldMapInstance;
-import com.aionemu.gameserver.model.EmotionType;
-import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.Npc;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_DIE;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_QUEST_ACTION;
+import com.aionemu.gameserver.services.teleport.TeleportService2;
+import com.aionemu.gameserver.skillengine.SkillEngine;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.world.knownlist.Visitor;
+import com.aionemu.gameserver.world.WorldMapInstance;
+import com.aionemu.gameserver.world.zone.ZoneInstance;
+import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
- * Author boscar
- * Author yayaya
- * Author NightRider
- * Author Ever
- *
- * :: 1. boss : Guard Captain Rohuka 1.BOSS , 1.door (230849) >> Door ID : 383
- * :: 2. boss : Chief Gunner Kurmata 2.BOSS (230851) >> room, door ID : 382
- * (left), 387 (right) :: Door NPC : Sheban Legion Elite Ambusher (230797) >>
- * door ID : 59 :: 3. boss : Derakanak the Reaver 3.BOSS (233258) :: Prison	:
- * 373, 380, 377 (left) ; 384, 374 (right) :: Door NPC : Sheban Legion Elite
- * Gunner (230818) >> door ID : 372 :: 4. boss : Researcher Teselik (230850) >>
- * Door ID : 375 :: 5. boss	: Gatekeeper Stranir (233255) >> Door ID : 378 :: 6.
- * boss : Commander Ranodim (230852) >> Door ID : 388 :: Door ID : Blue : 385
- * (key : 185000177), Red 379 (key : 185000176), Green : 381 (key : 185000178)
- * :: 7/1. boss: Archmagus Sayahum (233257) :: 7/2. boss: Darkblade Ovanuka
- * (233256) :: Ajto NPC : Sheban Legion Elite Assaulter (230791) >> Door ID :
- * 376 :: Port NPC : 8. boss : Chief of Staff Moriata (230853) :: Portal :
- * (730872) ; Portal key : 185000179 :: 1 KEY : Guard Leader Achradim (230857)
- * :: 2 KEY : Brigadian General Sheba (230858)
-*
+ * @author Alcapwnd
+ * @reworked Falke_34
  */
 @InstanceID(301130000)
 public class SauroSupplyBaseInstance extends GeneralInstanceHandler {
-	
-    private Map<Integer, StaticDoor> doors;
-    public boolean isInstanceDestroyed;
 
+    Npc bossBrigadeGeneralSheba = null;
+    Npc bossGuardCaptainAhuradim = null;
+    Npc firstPortal = null;
+    private boolean isStartTimer1 = false;
+    private boolean isStartTimer2 = false;
+    private Map<Integer, StaticDoor> doors;
+
+    /**
+     * Bonus Monster: He can appear in "5 different rooms" and give ancient
+     * coins, ancient manastones, and skins. Swift military bases robbers
+     * (Shulacks)
+     */
     @Override
     public void onInstanceCreate(WorldMapInstance instance) {
         super.onInstanceCreate(instance);
         doors = instance.getDoors();
+        if (Rnd.get(1, 2) == 1) {
+			spawn(230846, 497.44034f, 410.62006f, 182.13792f, (byte) 90);
+		}
+		else {
+			spawn(230845, 494.81485f, 401.50598f, 182.13792f, (byte) 90);
+		}
+		
+		int chance = Rnd.get(1, 2);
+		spawn(chance == 1 ? 230847 : 230848, 673.56476f, 350.30112f, 203.68098f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 673.5929f, 355.43643f, 203.68098f, (byte) 0);
+		spawn(chance == 1 ? 230847 : 230848, 319.44083f, 388.2419f, 159.1054f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 320.11377f, 363.97287f, 159.13863f, (byte) 0);
+		spawn(chance == 1 ? 230847 : 230848, 260.303f, 364.23767f, 159.13574f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 280.89667f, 327.7948f, 159.36792f, (byte) 0);
+		spawn(chance == 1 ? 230847 : 230848, 299.76794f, 328.2231f, 159.36792f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 516.25977f, 460.57306f, 182.00262f, (byte) 0);
+		spawn(chance == 1 ? 230847 : 230848, 582.1885f, 474.40613f, 191.13799f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 508.2988f, 528.0495f, 181.9969f, (byte) 0);
+		spawn(chance == 1 ? 230847 : 230848, 470.9632f, 413.62903f, 181.98624f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 490.32245f, 392.86053f, 181.98306f, (byte) 0);
+		spawn(chance == 1 ? 230847 : 230848, 488.26163f, 357.20752f, 182.0165f, (byte) 0);
+		spawn(chance == 1 ? 230848 : 230847, 492.07034f, 357.97043f, 181.98257f, (byte) 0);
     }
 
     @Override
     public void onDie(Npc npc) {
-        int npcId = npc.getNpcId();
-        switch (npcId) {
-
-            case 230849: //Guard Captain Rohuka
+        switch (npc.getObjectTemplate().getTemplateId()) {
+            /**
+             * Area 1: Guardroom And Rune Hall
+             */
+            case 230849: // Guard Captain Rohuka
                 sendMsg(1401914);
                 doors.get(383).setOpen(true);
                 break;
 
-            case 230851: //Chief Cannoneer Kurmata
-                if (Rnd.get(1, 100) < 50) {
-                    spawn(230797, 611.1872f, 452.91882f, 191.2776f, (byte) 39);
-                } else {
-                    spawn(230797, 610.7328f, 518.80884f, 191.2776f, (byte) 75);
-                }
-                doors.get(382).setOpen(true);
-                doors.get(387).setOpen(true);
-                break;
-            case 230797: //Sheban Legion Elite Ambusher
-                sendMsg(1401916);
+            case 230797: //Sheban Legion Elite Ambusher - after dead open the Door
+                sendMsg(1401915);
                 doors.get(59).setOpen(true);
                 break;
 
-            case 230818: //Sheban Legion Elite Gunner.
+            case 230818: //Sheban Legion Elite Gunner - after dead open the Door
                 sendMsg(1401916);
                 doors.get(372).setOpen(true);
                 break;
-            case 230850: //Research Teselik.
+
+            /**
+             * Area 2: Rune Cloister And Logistic Base
+             */
+            case 230850: // Research Teselik
                 sendMsg(1401917);
                 doors.get(375).setOpen(true);
+                despawnNpc(getNpc(284455));
+				despawnNpc(getNpc(284457));
+				despawnNpc(getNpc(284687));
                 break;
 
-            case 233255: //Gate Sentry Slurt
+            /**
+             * Area 3: Rune Bridge And Logistic Base Arsenal.
+             */
+            case 233255: // Gatekeeper Stranir
                 sendMsg(1401918);
                 doors.get(378).setOpen(true);
                 break;
-            case 230852: //Supplies Commander Ranodim
+
+            case 233316: // Commander Ranodim
                 sendMsg(1401919);
                 doors.get(388).setOpen(true);
                 break;
 
-            case 230790: // Sheban Legion Elite Assaulter
+            /**
+             * Area 4: Chiefs Chamber.
+             */
+            case 230791: // Sheban Legion Elite Assaulter
                 sendMsg(1401920);
                 doors.get(376).setOpen(true);
                 break;
-            case 230853: // Staff Commander Moriata
+
+            case 230853: // Chief Of Staff Moriata
                 sendMsg(1401921);
-                spawn(730872, 129.16f, 432.33f, 153.33f, (byte) 0, 3); //portal to boss
+                firstPortal = (Npc) spawn(730872, 131.85886f, 432.22598f, 151.66972f, (byte) 57, 3); // hidden passage
                 break;
 
-			//230847 : Mystery Box Key spawn
-            case 233258: // Dark Devourer Derakanak
-                spawn(230847, 139.66022f, 437.02383f, 150.99849f, (byte) 106);
-                break;
-            case 233257: // Inspector Officer Sayahum
-                spawn(230847, 153.27214f, 436.90598f, 150.99849f, (byte) 76);
-                break;
-            case 233256: // Inspection Officer Obanuka
-                spawn(230847, 153.34435f, 423.44098f, 150.99849f, (byte) 45);
+            /**
+             * Area 5: Final Boss. 4.6: only 2 bosses left! ncsoft minimized the
+             * keys are need for the two last bosses and removed the rest
+             */
+            case 230857: // Guard Captain Ahuradim's
+                spawn(801967, 719.0f, 889.0f, 414.0f, (byte) 15); //Sauro War Depot Emergency Exit
+                spawn(702659, 705.7701f, 897.00543f, 411.53317f, (byte) 0); //Noble Abbey Box
                 break;
 
-            case 230857: // Guard Leader Achradim , 1 key boss
-                spawn(801967, 689.85376f, 903.41785f, 411.45676f, (byte) 105);
-                scheduleExit();
-                break;
-            case 230858: // Brigadian General Sheba , 2 key boss
-                spawn(801967, 886.4798f, 876.16693f, 411.45676f, (byte) 15); // exit portal
-                spawn(702659, 897.20306f, 886.9926f, 411.57693f, (byte) 15); // Noble Abbey Box
-                scheduleExit();
+            case 230858: // Brigade General Sheba's
+                spawn(801967, 719.0f, 889.0f, 414.0f, (byte) 15); //Sauro War Depot Emergency Exit
+                spawn(702659, 705.7701f, 897.00543f, 411.53317f, (byte) 0); //Noble Abbey Box
                 break;
         }
     }
 
-    private void scheduleExit() {
-        instance.doOnAllPlayers(new Visitor<Player>() {
-            @Override
-            public void visit(Player player) {
-                PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 180));
-                PacketSendUtility.sendMessage(player, "You will leave this instance in 3 minutes");
-            }
-        });
-        ThreadPoolManager.getInstance().schedule(new Runnable() {
-            @Override
-            public void run() {
-                instance.doOnAllPlayers(new Visitor<Player>() {
+    /**
+     * After you choose the level of difficulty, the portal will remain open for
+     * "5 mins" then disappear.
+     */
+    @Override
+    public void onEnterZone(Player player, ZoneInstance zone) {
+        if (zone.getAreaTemplate().getZoneName() == ZoneName.get("NO_GLIDE_AREA_BOSS_1")) {
+            if (!isStartTimer1) {
+                isStartTimer1 = true;
+                System.currentTimeMillis();
+                PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 303));
+                firstPortal.getController().delete();
+                final Npc PortalA = (Npc) spawn(730876, 131.85886f, 432.22598f, 151.66972f, (byte) 57);
+                ThreadPoolManager.getInstance().schedule(new Runnable() {
                     @Override
-                    public void visit(Player player) {
-                        onExitInstance(player);
+                    public void run() {
+                        sendMsg(1401813);
+                        PortalA.getController().delete();
+                        bossGuardCaptainAhuradim = (Npc) spawn(230857, 703.7477f, 889.7424f, 411.5368f, (byte) 0); // Guard Captain
+
+                        SkillEngine.getInstance().applyEffectDirectly(19049, bossGuardCaptainAhuradim, bossGuardCaptainAhuradim, 0); // Devour Soul
                     }
-                });
-                onInstanceDestroy();
+                }, 300000);
             }
-        }, 300000);
+        } 
+        else if (zone.getAreaTemplate().getZoneName() == ZoneName.get("NO_GLIDE_AREA_BOSS_2")) {
+            if (!isStartTimer2) {
+                isStartTimer2 = true;
+                System.currentTimeMillis();
+                PacketSendUtility.sendPacket(player, new SM_QUEST_ACTION(0, 304));
+                firstPortal.getController().delete();
+                final Npc PortalB = (Npc) spawn(730877, 131.85886f, 432.22598f, 151.66972f, (byte) 57);
+                ThreadPoolManager.getInstance().schedule(new Runnable() {
+                    @Override
+                    public void run() {
+                        sendMsg(1401814);
+                        PortalB.getController().delete();
+                        bossBrigadeGeneralSheba = (Npc) spawn(230858, 900.43726f, 889.94135f, 411.5362f, (byte) 75); // Brigade
+
+                        SkillEngine.getInstance().applyEffectDirectly(19049, bossBrigadeGeneralSheba, bossBrigadeGeneralSheba, 0); // Devour Soul.
+                    }
+                }, 300000);
+            }
+        }
     }
 
     @Override
     public void onExitInstance(Player player) {
         TeleportService2.moveToInstanceExit(player, mapId, player.getRace());
     }
-
-    @Override
-    public boolean onDie(final Player player, Creature lastAttacker) {
-        PacketSendUtility.broadcastPacket(player, new SM_EMOTION(player, EmotionType.DIE, 0, player.equals(lastAttacker) ? 0 : lastAttacker.getObjectId()), true);
-        PacketSendUtility.sendPacket(player, new SM_DIE(player.haveSelfRezEffect(), player.haveSelfRezItem(), 0, 8));
-        return true;
-    }
+    
+    private void despawnNpc(Npc npc) {
+		if (npc != null) {
+			npc.getController().onDelete();
+		}
+	}
 
     @Override
     public void onInstanceDestroy() {
         doors.clear();
-        isInstanceDestroyed = true;
     }
 }
