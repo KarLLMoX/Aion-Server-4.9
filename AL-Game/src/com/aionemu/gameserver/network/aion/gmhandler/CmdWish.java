@@ -19,6 +19,7 @@ package com.aionemu.gameserver.network.aion.gmhandler;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.Util;
@@ -51,6 +52,10 @@ public class CmdWish extends AbstractGMHandler {
             Integer itemId = Integer.parseInt(p[1]);
 
             if (qty > 0 && itemId > 0) {
+            	if(itemId >= 187100023 && itemId <= 187100030) {//Those Items wont work correct on 4.9.
+                	PacketSendUtility.sendPacket(admin, new SM_SYSTEM_MESSAGE(1300493)); 
+                	return;
+                }
                 if (DataManager.ITEM_DATA.getItemTemplate(itemId) == null) {
                     PacketSendUtility.sendMessage(admin, "Item id is incorrect: " + itemId);
                 } else {
@@ -71,6 +76,10 @@ public class CmdWish extends AbstractGMHandler {
             if (itemDesc != null && countitems > 0) {
                 for (ItemTemplate template : DataManager.ITEM_DATA.getItemData().valueCollection()) {
                     if (template.getNamedesc() != null && template.getNamedesc().equalsIgnoreCase(itemDesc)) {
+                    	if(template.getTemplateId() >= 187100023 && template.getTemplateId() <= 187100030) {//Those Items wont work correct on 4.9.
+                        	PacketSendUtility.sendPacket(admin, new SM_SYSTEM_MESSAGE(1300493)); 
+                        	return;
+                        }
                         long count = ItemService.addItem(t, template.getTemplateId(), countitems);
                         if (count == 0) {
                             PacketSendUtility.sendMessage(admin, "You successfully gave " + countitems + " x [item:" + template.getTemplateId() + "] ID: " + template.getTemplateId() + " to " + t.getName() + ".");

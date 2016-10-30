@@ -18,6 +18,7 @@ package admincommands;
 
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.AdminService;
 import com.aionemu.gameserver.services.item.ItemService;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -128,7 +129,12 @@ public class Add extends AdminCommand {
         if (!AdminService.getInstance().canOperate(player, receiver, itemId, "command //add")) {
             return;
         }
-
+        
+        if(itemId >= 187100023 && itemId <= 187100030) {//Those Items wont work correct on 4.9.
+        	PacketSendUtility.sendPacket(receiver, new SM_SYSTEM_MESSAGE(1300493)); 
+        	return;
+        }
+        
         long count = ItemService.addItem(receiver, itemId, itemCount);
 
         if (count == 0) {

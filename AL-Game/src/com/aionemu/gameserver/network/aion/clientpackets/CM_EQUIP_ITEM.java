@@ -59,11 +59,15 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
         if (!RestrictionsManager.canChangeEquip(activePlayer)) {
             return;
         }
-
+        
         switch (action) {
             case 0:
                 Item targetItem = activePlayer.getInventory().getItemByObjId(itemUniqueId);
-                if (targetItem == null) return;
+                if (targetItem == null) {
+                	return;
+                } else if(targetItem.getItemId() >= 187100023 && targetItem.getItemId() <= 187100030) {//Those Items wont work correct on 4.9.
+                	return;
+                }
                 resultItem = equipment.equipItem(itemUniqueId, slotRead);
                 break;
             case 1:
