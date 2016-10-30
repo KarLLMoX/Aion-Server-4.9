@@ -62,7 +62,7 @@ public class SauroBossPortalAI2 extends NpcAI2 {
                 break;
         }
         if (spawnportal) {
-            spawn(portal, 129.99165f, 432.41684f, 151.66982f, (byte) 117);
+            spawn(portal, 127.5f, 432.8f, 151.0f, (byte) -19);
             PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 0));
             AI2Actions.deleteOwner(this);
         } else {
