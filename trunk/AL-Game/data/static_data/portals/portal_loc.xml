@@ -540,14 +540,10 @@
 	<portal_loc world_id="600090000" loc_id="60009003" x="1280.1664" y="1247.0724" z="190.47186" h="29"/>
     <!-- Levinshor -->
     <portal_loc world_id="600100000" loc_id="6001001" x="1582.02" y="1731.65" z="284.4" h="45"/>
-    <!-- Exit Sauro asmo 4.7 -->
-    <portal_loc world_id="600100000" loc_id="6001002" x="1399.6" y="375.2" z="248.4" h="20"/>
     <!-- Exit Daytaum asmo 4.7 -->
     <portal_loc world_id="600100000" loc_id="6001003" x="1764.2037" y="1614.29" z="289.63" h="70"/>
     <!-- Exit Varuna asmo 4.7 -->
     <portal_loc world_id="600100000" loc_id="6001004" x="352.09" y="154.8" z="154.81" h="110"/>
-    <!-- Exit Sauro ely 4.7 -->
-    <portal_loc world_id="600100000" loc_id="6001005" x="457.1" y="1545.17" z="241.51" h="100"/>
     <!-- Exit Daytaum ely 4.7 -->
     <portal_loc world_id="600100000" loc_id="6001006" x="330.85" y="401.32" z="318.625" h="40"/>
     <!-- Exit Varuna ely 4.7 -->
@@ -620,13 +616,18 @@
     <portal_loc world_id="301110000" loc_id="3011100" x="255.91138" y="244.00887" z="241.8949" h="30"/>
     <!-- Lucky Danuar Reliquary -->
     <portal_loc world_id="301330000" loc_id="3013300" x="258.953" y="245.92004" z="241.89487" h="30"/>    
+    
     <!-- Sauro Supply Base -->
-    <portal_loc world_id="301130000" loc_id="3011300" x="640.7884" y="174.29156" z="195.625" h="0"/>
-    <!-- Sauro Supply Base Start -->
-    <portal_loc world_id="301130000" loc_id="3011301" x="122.88202" y="903.0952" z="411.45676" h="75"/>
-    <!-- Sauro Supply Boss -->
-    <portal_loc world_id="301130000" loc_id="3011304" x="689.85376" y="903.41785" z="411.45676" h="105"/>
-    <portal_loc world_id="301130000" loc_id="3011305" x="886.4798" y="876.16693" z="411.45676" h="15"/>
+    <!-- Sauro Supply Base Entrance -->
+    <portal_loc world_id="301130000" loc_id="3011300" x="637.8232" y="169.94272" z="195.73926" h="0"/>
+    <!-- Sauro Supply Boss - Boss 1 -->
+    <portal_loc world_id="301130000" loc_id="3011301" x="720.1785" y="889.784" z="411.45673" h="60"/>
+    <!-- Sauro Supply Boss - Boss 2 -->
+    <portal_loc world_id="301130000" loc_id="3011302" x="886.4798" y="876.16693" z="411.45676" h="15"/>
+    <!-- Sauro Supply Boss - Exit Elyos -->
+    <portal_loc world_id="600100000" loc_id="3011303" x="357.16898" y="151.33981" z="352.5" h="115"/>
+    <!-- Sauro Supply Boss - Exit Asmodians -->
+    <portal_loc world_id="600100000" loc_id="3011304" x="1399.6" y="375.2" z="248.4" h="20"/> <!-- Todo -->
 
     <!-- Danuar Sanctuary -->
     <!-- Danuar Sanctuary Entrance -->

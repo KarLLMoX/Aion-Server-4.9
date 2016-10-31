@@ -914,16 +914,16 @@
     <!-- SAURO SUPPLY BASE TELEPORTER -->
     <!-- Sauro Supply Base Boss 1 -->
     <portal_use npc_id="730876">
-        <portal_path loc_id="3011304"/>
+        <portal_path loc_id="3011301"/>
     </portal_use>
     <!-- Sauro Supply Base Boss 2 -->
     <portal_use npc_id="730877">
-        <portal_path loc_id="3011305"/>
+        <portal_path loc_id="3011302"/>
     </portal_use>
     <!-- Sauro Supply Base Exit -->
     <portal_use npc_id="801967">
-        <portal_path loc_id="6000608" race="ASMODIANS"/>
-        <portal_path loc_id="6000607" race="ELYOS"/>
+        <portal_path loc_id="3011304" race="ASMODIANS"/>
+        <portal_path loc_id="3011303" race="ELYOS"/>
     </portal_use>
     <!-- SAURO SUPPLY BASE TELEPORTER END -->
 
@@ -1821,13 +1821,13 @@
     </portal_dialog>
     <!-- Sauro Supply Base Boss Teleporter -->
     <portal_dialog npc_id="730872">
-        <portal_path dialog="20008" loc_id="3011304">
+        <portal_path dialog="20008" loc_id="3011301">
             <portal_req min_level="65">
                 <item_req item_id="185000179" item_count="1"/>
                 <!-- Boss N°4 -->
             </portal_req>
         </portal_path>
-        <portal_path dialog="20009" loc_id="3011305">
+        <portal_path dialog="20009" loc_id="3011302">
             <portal_req min_level="65">
                 <item_req item_id="185000179" item_count="2"/>
                 <!-- Boss N°5 -->
