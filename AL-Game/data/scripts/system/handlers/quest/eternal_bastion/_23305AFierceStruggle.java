@@ -23,25 +23,22 @@ import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
+/**
+ * @author FrozenKiller
+ *
+ */
 public class _23305AFierceStruggle extends QuestHandler {
 
-    public static final int questId = 23305;
+    private final static int questId = 23305;
 
     public _23305AFierceStruggle() {
         super(questId);
     }
 
-    @Override
-    public boolean onLvlUpEvent(QuestEnv env) {
-        return defaultOnLvlUpEvent(env);
-    }
-
-    @Override
     public void register() {
-        qe.registerOnLevelUp(questId);
-        qe.registerQuestNpc(801953).addOnQuestStart(questId); //Alkatron.
-        qe.registerQuestNpc(801953).addOnTalkEvent(questId); //Alkatron.
-        qe.registerQuestNpc(801953).addOnTalkEvent(questId); //Alkatron.
+        qe.registerQuestNpc(804927).addOnQuestStart(questId);
+        qe.registerQuestNpc(804927).addOnTalkEvent(questId); //Bastan
+        qe.registerQuestNpc(801280).addOnTalkEvent(questId); //Ludvarr
     }
 
     @Override
@@ -50,38 +47,50 @@ public class _23305AFierceStruggle extends QuestHandler {
         QuestState qs = player.getQuestStateList().getQuestState(questId);
         DialogAction dialog = env.getDialog();
         int targetId = env.getTargetId();
+
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 801953) { //Alkatron.
-                switch (dialog) {
-                    case QUEST_SELECT: {
-                        return sendQuestDialog(env, 1011);
-                    }
-                    case QUEST_ACCEPT_1:
-                    case QUEST_ACCEPT_SIMPLE:
-                        return sendQuestStartDialog(env);
+            if (targetId == 804927) { //Bastan
+            	switch (dialog) {
+            		case QUEST_SELECT: {
+            			return sendQuestDialog(env, 1011);
+            		}
+            		case ASK_QUEST_ACCEPT: {
+            			return sendQuestDialog(env, 4);
+            		}
+            		case QUEST_ACCEPT_SIMPLE: {
+            			return sendQuestStartDialog(env);
+            		}
+            		case QUEST_REFUSE_SIMPLE: {
+            			return closeDialogWindow(env);
+            		}
 				default:
 					break;
-                }
+            	}
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-                case 801953: { //Alkatron.
-                    switch (dialog) {
-                        case QUEST_SELECT: {
-                            return sendQuestDialog(env, 2375);
-                        }
-                        case SELECT_QUEST_REWARD: {
-                            changeQuestStep(env, 0, 0, true);
-                            return sendQuestEndDialog(env);
-                        }
-					default:
-						break;
-                    }
-                }
+            	case 801280: { //Ludvarr
+            		switch (dialog) {
+            			case QUEST_SELECT: {
+           					return sendQuestDialog(env, 2375);
+            			}
+            			case SELECT_QUEST_REWARD: {
+            				qs.setStatus(QuestStatus.REWARD);
+                            updateQuestStatus(env);
+            				return sendQuestDialog(env, 5);
+            			}
+            			default:
+            				break;
+            		}
+            	}
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 801953) { //Alkatron.
-                return sendQuestEndDialog(env);
+            if (targetId == 801280) { // Ludvarr
+                if (dialog == DialogAction.SELECT_QUEST_REWARD) {
+                    return sendQuestDialog(env, 5);
+                } else {
+                    return sendQuestEndDialog(env);
+                }
             }
         }
         return false;
