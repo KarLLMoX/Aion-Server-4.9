@@ -10,7 +10,7 @@
                18033 [XML] [Alliance] Retreat Into Death
                18034 [XML] [Alliance] The Follow-Through
                18035 [XML] [Alliance] Sheba's Surveillance
-               18036 [XML] Bastions Are Eternal; Positions Are Not
+               18036 [SCRIPT] Bastions Are Eternal; Positions Are Not
                18037 [XML] [Alliance] Keep Up the Defense
                23305 [SCRIPT] A Fierce Struggle
                28030 [XML] [Alliance] Protecting The Eternal Bastion
@@ -19,15 +19,13 @@
                28033 [XML] [Alliance] Confusing the Chain of Command
                28034 [XML] [Alliance] Conquering Ambitions
                28035 [XML] [Alliance] Trust In None, But Verify
-               28036 [XML] Interrogate Kvash
+               28036 [SCRIPT] Interrogate Kvash
                28037 [XML] [Alliance] Defend to the End
         [END] SUMMARY
     -->
     <!-- REPORTING QUESTS -->
     <report_to id="18035" start_npc_ids="801037" end_npc_ids="800527"/>
-    <report_to id="18036" start_npc_ids="802008" end_npc_ids="801037"/>
     <report_to id="28035" start_npc_ids="801047" end_npc_ids="800529"/>
-    <report_to id="28036" start_npc_ids="802008" end_npc_ids="801047"/>
     <!-- COLLECTING QUESTS -->
     <item_collecting id="18034" start_npc_ids="801226"/>
     <item_collecting id="28034" start_npc_ids="801047"/>

@@ -27,18 +27,18 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
  * @author FrozenKiller
  *
  */
-public class _13305MeetStifasTheStiff extends QuestHandler {
+public class _28036InterrogateKvash extends QuestHandler {
 
-    private final static int questId = 13305;
+    private final static int questId = 28036;
 
-    public _13305MeetStifasTheStiff() {
+    public _28036InterrogateKvash() {
         super(questId);
     }
 
     public void register() {
-        qe.registerQuestNpc(804709).addOnQuestStart(questId);
-        qe.registerQuestNpc(804709).addOnTalkEvent(questId); //Brunte
-        qe.registerQuestNpc(801281).addOnTalkEvent(questId); //Demades
+        qe.registerQuestNpc(801280).addOnQuestStart(questId);
+        qe.registerQuestNpc(801280).addOnTalkEvent(questId); //Lundvarr
+        qe.registerQuestNpc(802015).addOnTalkEvent(questId); //Kvash
     }
 
     @Override
@@ -49,19 +49,21 @@ public class _13305MeetStifasTheStiff extends QuestHandler {
         int targetId = env.getTargetId();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 804709) { //Brunte
+            if (targetId == 801280) { //Lundvarr
             	switch (dialog) {
             		case QUEST_SELECT: {
-            			return sendQuestDialog(env, 1011);
+            			return sendQuestDialog(env, 4762);
             		}
             		case ASK_QUEST_ACCEPT: {
             			return sendQuestDialog(env, 4);
             		}
+            		case QUEST_ACCEPT_1:
             		case QUEST_ACCEPT_SIMPLE: {
             			return sendQuestStartDialog(env);
             		}
+            		case QUEST_REFUSE_1:
             		case QUEST_REFUSE_SIMPLE: {
-            			return closeDialogWindow(env);
+            			return sendQuestDialog(env, 1004);
             		}
 				default:
 					break;
@@ -69,15 +71,15 @@ public class _13305MeetStifasTheStiff extends QuestHandler {
             }
         } else if (qs.getStatus() == QuestStatus.START) {
             switch (targetId) {
-            	case 801281: { //Demades
+            	case 802015: { //Kvash
             		switch (dialog) {
             			case QUEST_SELECT: {
-           					return sendQuestDialog(env, 2375);
+           					return sendQuestDialog(env, 1011);
             			}
-            			case SELECT_QUEST_REWARD: {
+            			case SETPRO1: {
             				qs.setStatus(QuestStatus.REWARD);
                             updateQuestStatus(env);
-            				return sendQuestDialog(env, 5);
+            				return closeDialogWindow(env);
             			}
             			default:
             				break;
@@ -85,12 +87,17 @@ public class _13305MeetStifasTheStiff extends QuestHandler {
             	}
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if (targetId == 801281) { // Demades
-                if (dialog == DialogAction.SELECT_QUEST_REWARD) {
-                    return sendQuestDialog(env, 5);
-                } else {
-                    return sendQuestEndDialog(env);
-                }
+            if (targetId == 801280) { //Lundvarr
+            	switch (dialog) {
+            		case USE_OBJECT: {
+            			return sendQuestDialog(env, 10002);
+            		}
+            		case SELECT_QUEST_REWARD: {
+            			return sendQuestDialog(env, 5);
+            		}
+				default:
+					return sendQuestEndDialog(env);
+            	}
             }
         }
         return false;
