@@ -23,6 +23,7 @@ import com.aionemu.gameserver.skillengine.model.Effect;
 
 /**
  * @author antness
+ * @Reworked Kill3r
  */
 public class MpUsePeriodicAction extends PeriodicAction {
 
@@ -35,15 +36,16 @@ public class MpUsePeriodicAction extends PeriodicAction {
 	public void act(final Effect effect) {
         Creature effected = effect.getEffected();
         int maxMp = effected.getGameStats().getMaxMp().getCurrent();
-        int requiredMp = (int) (maxMp * (value / 100f));
+        int requiredMp = value;
+        if (ratio) {
+            requiredMp = (int) (maxMp * (value / 100f));
+        }
+
         if (effected.getLifeStats().getCurrentMp() < requiredMp) {
             effect.endEffect();
 			return;
 		}
-        if (ratio) {
-        	//requiredMp = (int) ((effected.getLifeStats().getMaxMp() * requiredMp) / 100);
-            requiredMp = value;
-        }
+
 
         effected.getLifeStats().reduceMp(requiredMp);
     }
