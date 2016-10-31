@@ -25,7 +25,8 @@ public enum TeleportAnimation {
     BEAM_ANIMATION(1, 3),
     JUMP_ANIMATION(3, 10),
     JUMP_ANIMATION_2(4, 10),
-    JUMP_ANIMATION_3(8, 3);
+    JUMP_ANIMATION_3(8, 3),
+    JUMP_ANIMATION_4(8, 10);// Mage Grp Gate
     private int startAnimation;
     private int endAnimation;
 
