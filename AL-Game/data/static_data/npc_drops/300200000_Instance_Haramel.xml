@@ -358,7 +358,7 @@
             <drop item_id="182003776" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Worn Herb Sack" />
         </drop_group>
         <drop_group name="KEY_COMMON" use_category="true" race="PC_ALL">
-            <drop item_id="185000103" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Key" />
+            <drop item_id="185000103" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Rusty Key" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="217108">
@@ -380,7 +380,7 @@
             <drop item_id="182003776" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Worn Herb Sack" />
         </drop_group>
         <drop_group name="OTHER_COMMON" use_category="true" race="PC_ALL">
-            <drop item_id="185000107" chance="10.00" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lubricating Oil" />
+            <drop item_id="185000107" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Lubricating Oil" />
         </drop_group>
     </npc_drop>
     <npc_drop npc_id="700829">
