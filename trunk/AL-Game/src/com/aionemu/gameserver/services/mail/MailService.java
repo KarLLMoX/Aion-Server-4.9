@@ -331,6 +331,9 @@ public class MailService {
                     PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_FULL_INVENTORY);
                     return;
                 }
+                if (attachedItem.isPacked()) {
+                	attachedItem.setPacked(false);
+                }
                 player.getInventory().add(attachedItem);
                 if (!DAOManager.getDAO(InventoryDAO.class).store(attachedItem, player.getObjectId())) {
                     return;
