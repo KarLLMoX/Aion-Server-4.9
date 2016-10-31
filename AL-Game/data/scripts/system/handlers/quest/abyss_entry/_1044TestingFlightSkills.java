@@ -59,6 +59,7 @@ public class _1044TestingFlightSkills extends QuestHandler {
 		qe.registerOnQuestTimerEnd(questId);
 		qe.registerOnDie(questId);
 		qe.registerOnEnterWorld(questId);
+		qe.registerOnMovieEndQuest(40, questId);
 	}
 
 	@Override
@@ -97,14 +98,14 @@ public class _1044TestingFlightSkills extends QuestHandler {
 						case QUEST_SELECT: {
 							if (var == 1) {
 								return sendQuestDialog(env, 1352);
-							} else if (var == 8) {
+							} else if (var == 10) {
 								return sendQuestDialog(env, 3057);
 							} else if (var == 9) {
 								return sendQuestDialog(env, 1693);
 							}
 						}
 						case SELECT_ACTION_1354: {
-							if (var == 1 || var == 8) {
+							if (var == 1) {
 								playQuestMovie(env, 40);
 								return sendQuestDialog(env, 1354);
 							}
@@ -114,16 +115,16 @@ public class _1044TestingFlightSkills extends QuestHandler {
 								QuestService.questTimerStart(env, 90);
 								updateQuestStatus(env);
 								return defaultCloseDialog(env, 1, 2);
-							} else if (var == 8) {
-								QuestService.questTimerStart(env, 90);
-								return defaultCloseDialog(env, 8, 2);
+							} else if (var == 10) {
+								playQuestMovie(env, 40);
+								return sendQuestDialog(env, 3143);
 							}
 						}
 						case SET_SUCCEED: {
 							if (var == 9) {
 								qs.setStatus(QuestStatus.REWARD);
 								updateQuestStatus(env);
-								return sendQuestSelectionDialog(env);
+								return closeDialogWindow(env);
 							}
 						}
 						case FINISH_DIALOG: {
@@ -187,7 +188,7 @@ public class _1044TestingFlightSkills extends QuestHandler {
 		if (qs != null && qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
 			if ((var > 1) && (var < 7)) {
-				changeQuestStep(env, var, 8, false);
+				changeQuestStep(env, var, 10, false);
 				return true;
 			}
 		}
@@ -221,4 +222,21 @@ public class _1044TestingFlightSkills extends QuestHandler {
 		}
 		return false;
 	}
+	
+    @Override
+    public boolean onMovieEndEvent(QuestEnv env, int movieId) {
+    	Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+        
+        if (qs != null && qs.getStatus() == QuestStatus.START) {
+        	int var = qs.getQuestVarById(0);
+        	if (movieId == 40 && var == 10) {
+				QuestService.questTimerStart(env, 90);
+				qs.setQuestVar(2);
+				updateQuestStatus(env);
+        		return true;
+        	}
+        }
+        return false;
+    }
 }
