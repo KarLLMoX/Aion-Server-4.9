@@ -131,7 +131,7 @@
 	<instance_exit instance_id="301100000" exit_world="120080000" race="ASMODIANS" x="549.32" y="328.39505" z="93.49" h="0"/>
 	<!-- Sauro Supply Base -->
 	<instance_exit instance_id="301130000" exit_world="600100000" race="ELYOS" x="357.16898" y="151.33981" z="352.5" h="115"/>
-	<instance_exit instance_id="301130000" exit_world="600100000" race="ASMODIANS" x="1575.7242" y="1728.872" z="284.375" h="6"/>
+	<instance_exit instance_id="301130000" exit_world="600100000" race="ASMODIANS" x="1574.9246" y="1728.4523" z="284.375" h="67"/>
 	<!-- Danuar Sanctuary (4.8 update) -->
 	<instance_exit instance_id="301140000" exit_world="210070000" race="ELYOS" x="2098.4587" y="2283.0388" z="294.625" h="21"/>
 	<instance_exit instance_id="301140000" exit_world="220080000" race="ASMODIANS" x="1673.2377" y="560.71545" z="257.77853" h="119"/>
