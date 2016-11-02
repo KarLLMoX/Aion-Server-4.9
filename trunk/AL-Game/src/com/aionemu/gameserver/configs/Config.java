@@ -156,6 +156,9 @@ public class Config {
             ConfigurableProcessor.process(MoltenusConfig.class, mainProps);
             log.info("[Config] Loading: " + main + "/moltenus.properties");
 
+            ConfigurableProcessor.process(AbyssBossesConfig.class, mainProps);
+            log.info("[Config] Loading: " + main + "/abyssbosses.properties");
+
             ConfigurableProcessor.process(NameConfig.class, mainProps);
             log.info("[Config] Loading: " + main + "/name.properties");
 

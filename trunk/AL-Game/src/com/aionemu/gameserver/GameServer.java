@@ -225,6 +225,8 @@ public class GameServer {
         SiegeService.getInstance().initSieges();
         AgentFightService.getInstance().initAgentFight();
         MoltenusService.getInstance().initMoltenus();
+		DiflodoxService.getInstance().initDiflodox(); // 4.9
+		DiflonaxService.getInstance().initDiflonax(); // 4.9
         DisputeLandService.getInstance().init();
         Util.printSsSection("Bases");
         if(BaseConfig.BASE_ENABLED) {
