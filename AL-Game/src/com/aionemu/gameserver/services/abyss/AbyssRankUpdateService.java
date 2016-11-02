@@ -23,6 +23,8 @@ import com.aionemu.gameserver.dao.AbyssRankDAO;
 import com.aionemu.gameserver.dao.ServerVariablesDAO;
 import com.aionemu.gameserver.model.Race;
 import com.aionemu.gameserver.model.gameobjects.player.AbyssRank;
+import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 import com.aionemu.gameserver.world.World;
@@ -36,16 +38,54 @@ import java.util.Map.Entry;
 /**
  * @author ATracer
  * @author ThunderBolt - GloryPoints
+ * @rework Phantom_KNA
  */
 public class AbyssRankUpdateService {
 
     private static final Logger log = LoggerFactory.getLogger(AbyssRankUpdateService.class);
+	private static final String GP_UPDATA_TIME = "0 10 2 ? * *";
+	private static final Logger debuglog = LoggerFactory.getLogger("ABYSSRANK_LOG");
 
     private AbyssRankUpdateService() {
     }
 
     public static AbyssRankUpdateService getInstance() {
         return SingletonHolder.instance;
+    }
+	
+	public void GpointUpdata() {
+        CronService.getInstance().schedule(new Runnable() {
+            public void run() {
+                AbyssRankUpdateService.this.loadGpRank();
+            }
+        }, GP_UPDATA_TIME);
+    }
+	
+	private void loadGpRank() {
+        List<Integer> rankPlayers = DAOManager.getDAO(AbyssRankDAO.class).RankPlayers(9);
+        reduceGP(rankPlayers);
+    }
+	
+	private void reduceGP(List<Integer> rankPlayers) {
+        for (int playerId : rankPlayers) {
+            AbyssRank rank = DAOManager.getDAO(AbyssRankDAO.class).loadAbyssRank(playerId);
+            Player player = World.getInstance().findPlayer(playerId);
+            int lostGp = rank.getRank().getDailyReduceGp();
+            // Only Rank Officer
+            if (rank.getRank().getId() < AbyssRankEnum.STAR1_OFFICER.getId())
+                continue;
+            if (player != null) {
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402082, new Object[0]));
+                PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1402209, player.getName(), rank.getRank().getDailyReduceGp()));
+                AbyssPointsService.addGp(player, lostGp * -1);
+            } else {
+                int newGP = rank.getGp() - lostGp;
+                if (newGP < 0)
+                    newGP = 0;
+                debuglog.info("[GP REWARD LOG] Scheduled delete. Player: " + playerId + ". Last: " + rank.getGp() +". New: "+ newGP);
+                DAOManager.getDAO(AbyssRankDAO.class).updateGloryPoints(playerId, newGP);
+            }
+        }
     }
 
     public void scheduleUpdate() {

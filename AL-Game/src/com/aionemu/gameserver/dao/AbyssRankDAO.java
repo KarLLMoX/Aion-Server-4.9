@@ -24,10 +24,12 @@ import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
  * @author ATracer
+ * @rework Phantom_KNA
  */
 public abstract class AbyssRankDAO implements DAO {
 
@@ -35,6 +37,10 @@ public abstract class AbyssRankDAO implements DAO {
     public final String getClassName() {
         return AbyssRankDAO.class.getName();
     }
+	
+	public abstract List<Integer> RankPlayers(final int rank); //DailyReduceGp
+	
+	public abstract void updateGloryPoints(final int playerId, final int gp); //DailyReduceGp
 
     public abstract void loadAbyssRank(Player player);
 
@@ -53,4 +59,5 @@ public abstract class AbyssRankDAO implements DAO {
     public abstract void updateAbyssRank(int playerId, AbyssRankEnum rankEnum);
 
     public abstract void updateRankList(final int maxOfflineDays);
+
 }
