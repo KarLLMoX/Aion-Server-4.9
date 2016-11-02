@@ -149,7 +149,12 @@ public class CM_BUY_ITEM extends AionClientPacket {
 						npc.getObjectTemplate().getTitleId() == 370408 || //<Ancient Icon Custodian>
 						npc.getObjectTemplate().getTitleId() == 370409 || //<Ancient Seal Custodian>
 						npc.getObjectTemplate().getTitleId() == 370410 || //<Ancient Goblet Custodian>
-						npc.getObjectTemplate().getTitleId() == 370411) { //<Ancient Crown Custodian>
+						npc.getObjectTemplate().getTitleId() == 370411 || //<Ancient Crown Custodian>
+						// Reshanta By Phantom_KNA
+						npc.getObjectTemplate().getTitleId() == 314357 || //<Oficial de iconos>
+						npc.getObjectTemplate().getTitleId() == 314358 || //<Oficial de sellos>
+						npc.getObjectTemplate().getTitleId() == 314359 || //<Oficial de calices>
+						npc.getObjectTemplate().getTitleId() == 314360) { //<Oficial de coronas>
                         TradeService.performSellForAPToShop(player, tradeList, purchaseTemplate);
                     }
                         //Sell To Shop [Purchase List Kinah]

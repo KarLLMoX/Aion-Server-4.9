@@ -49,4 +49,9 @@ public class EnchantsConfig {
     public static boolean CLEAN_STONE;
 	@Property(key="gameserver.manastone.enchant_cast_delay", defaultValue="5000")
 	public static int ENCHANT_CAST_DELAY;
+	/**
+     * Godstone Rates
+     */
+	@Property(key="gameserver.godstone.base", defaultValue="1000")
+	public static int BASE_GODSTONE;
 }
