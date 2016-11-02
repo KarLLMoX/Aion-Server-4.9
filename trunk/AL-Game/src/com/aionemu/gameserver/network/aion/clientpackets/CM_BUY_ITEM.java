@@ -36,6 +36,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author orz, ATracer, Simple, xTz
  * @modify pralinka
+ * @modify Phantom_KNA
  */
 public class CM_BUY_ITEM extends AionClientPacket {
 
@@ -151,10 +152,10 @@ public class CM_BUY_ITEM extends AionClientPacket {
 						npc.getObjectTemplate().getTitleId() == 370410 || //<Ancient Goblet Custodian>
 						npc.getObjectTemplate().getTitleId() == 370411 || //<Ancient Crown Custodian>
 						// Reshanta By Phantom_KNA
-						npc.getObjectTemplate().getTitleId() == 314357 || //<Oficial de iconos>
-						npc.getObjectTemplate().getTitleId() == 314358 || //<Oficial de sellos>
-						npc.getObjectTemplate().getTitleId() == 314359 || //<Oficial de calices>
-						npc.getObjectTemplate().getTitleId() == 314360) { //<Oficial de coronas>
+						npc.getObjectTemplate().getTitleId() == 314357 || //<Ancient Icon Administration Officer>
+						npc.getObjectTemplate().getTitleId() == 314358 || //<Ancient Seal Administration Officer>
+						npc.getObjectTemplate().getTitleId() == 314359 || //<Ancient Goblet Administration Officer>
+						npc.getObjectTemplate().getTitleId() == 314360) { //<Ancient Crown Administration Officer>
                         TradeService.performSellForAPToShop(player, tradeList, purchaseTemplate);
                     }
                         //Sell To Shop [Purchase List Kinah]
