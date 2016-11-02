@@ -17,6 +17,7 @@
 package com.aionemu.gameserver.model.items;
 
 import com.aionemu.commons.utils.Rnd;
+import com.aionemu.gameserver.configs.main.EnchantsConfig;
 import com.aionemu.gameserver.controllers.observer.ActionObserver;
 import com.aionemu.gameserver.controllers.observer.ObserverType;
 import com.aionemu.gameserver.dataholders.DataManager;
@@ -37,6 +38,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author ATracer
  * @Reworked Kill3r
+ * reworker Phantom_KNA
  */
 public class GodStone extends ItemStone {
 
@@ -78,7 +80,7 @@ public class GodStone extends ItemStone {
         actionListener = new ActionObserver(ObserverType.ATTACK) {
             @Override
             public void attack(Creature creature) {
-                if (handProbability > Rnd.get(0, 1000)) {
+                if (handProbability > Rnd.get(0, EnchantsConfig.BASE_GODSTONE)) { 
                     Skill skill = SkillEngine.getInstance().getSkill(player, godstoneInfo.getSkillid(), godstoneInfo.getSkilllvl(), player.getTarget(), godItem);
                     PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_SKILL_PROC_EFFECT_OCCURRED(skill.getSkillTemplate().getNameId()));
                     skill.setFirstTargetRangeCheck(false);
