@@ -38,7 +38,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author ATracer
  * @Reworked Kill3r
- * reworker Phantom_KNA
+ * @Rework Phantom_KNA
  */
 public class GodStone extends ItemStone {
 
