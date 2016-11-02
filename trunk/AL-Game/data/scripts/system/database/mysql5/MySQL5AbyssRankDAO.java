@@ -42,9 +42,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 /**
  * @author ATracer, Divinity, nrg
+ * @rework Phantom_KNA
  */
 public class MySQL5AbyssRankDAO extends AbyssRankDAO {
 
@@ -68,6 +70,52 @@ public class MySQL5AbyssRankDAO extends AbyssRankDAO {
     public static final String UPDATE_PLAYER_RANK_LIST = "UPDATE abyss_rank SET abyss_rank.old_rank_pos = abyss_rank.rank_pos, abyss_rank.rank_pos = @a:=@a+1 where player_id in (SELECT id FROM players where race = ?) order by gp desc" + (RankingConfig.TOP_RANKING_SMALL_CACHE ? " limit 500" : "");  //only 300 positions are relevant later, so we update them + some extra positions that can get into the toprankings
     public static final String UPDATE_PLAYER_RANK_LIST_ACTIVE_ONLY = "UPDATE abyss_rank SET abyss_rank.old_rank_pos = abyss_rank.rank_pos, abyss_rank.rank_pos = @a:=@a+1 where player_id in (SELECT id FROM players where race = ? AND UNIX_TIMESTAMP(CURDATE())-UNIX_TIMESTAMP(players.last_online) <= ? * 24 * 60 * 60) order by gp desc" + (RankingConfig.TOP_RANKING_SMALL_CACHE ? " limit 500" : "");  //only 300 positions are relevant later, so we update them + some extra positions that can get into the toprankings
     public static final String UPDATE_LEGION_RANK_LIST = "UPDATE legions SET legions.old_rank_pos = legions.rank_pos, legions.rank_pos = @a:=@a+1 where id in (SELECT legion_id FROM legion_members, players where rank = 'BRIGADE_GENERAL' AND players.id = legion_members.player_id and players.race = ?) order by legions.contribution_points DESC" + (RankingConfig.TOP_RANKING_SMALL_CACHE ? " limit 75" : ""); //only 50 positions are relevant later, so we update them + some extra positions that can get into the toprankings
+	public static final String SELECT_ALL_GPRANK = "SELECT player_id FROM abyss_rank WHERE rank > ?";
+	public static final String UPDATE_GLORY_POINTS = "UPDATE `abyss_rank` SET `gp` = ? WHERE `player_id` = ?";
+	
+	@Override
+    public List<Integer> RankPlayers(final int rank) {
+        List<Integer> players = new ArrayList<Integer>();
+        Connection con = null;
+        PreparedStatement stmt = null;
+        try {
+            con = DatabaseFactory.getConnection();
+            stmt = con.prepareStatement(SELECT_ALL_GPRANK);
+            stmt.setInt(1, rank);
+            ResultSet resultSet = stmt.executeQuery();
+            while (resultSet.next()) {
+                int playerId = resultSet.getInt("player_id");
+                if (!players.contains(playerId))
+                    players.add(playerId);
+            }
+        }
+        catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+        finally {
+            DatabaseFactory.close(stmt, con);
+        }
+        return players;
+    }
+	
+	@Override
+    public void updateGloryPoints(final int playerId, final int gp) {
+        Connection con = null;
+        try {
+            con = DatabaseFactory.getConnection();
+            PreparedStatement stmt = con.prepareStatement(UPDATE_GLORY_POINTS);
+            stmt.setInt(1, gp);
+            stmt.setInt(2, playerId);
+            stmt.execute();
+            stmt.close();
+        }
+        catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+        finally {
+            DatabaseFactory.close(con);
+        }
+    }
 
     @Override
     public AbyssRank loadAbyssRank(int playerId) {
