@@ -39,19 +39,27 @@ public class HomewardBoundEventAI2 extends GeneralNpcAI2 {
     			case 833671: {
     				if (player.getRace() == Race.ELYOS) {
     					SkillEngine.getInstance().getSkill(player, 11047, 1, player).useWithoutPropSkill();
-    				} else {
-    					SkillEngine.getInstance().getSkill(player, 11048, 1, player).useWithoutPropSkill();
     				}
     				break;
     			}
     			case 833672: {
-    				if (getNpcId() == 833672 && player.getRace() == Race.ELYOS) {
-    	    			SkillEngine.getInstance().getSkill(player, 11049, 1, player).useWithoutPropSkill();
-    	            } else {
-    	            	SkillEngine.getInstance().getSkill(player, 11050, 1, player).useWithoutPropSkill();
-    	            }
+    				if (player.getRace() == Race.ELYOS) {
+    					SkillEngine.getInstance().getSkill(player, 11049, 1, player).useWithoutPropSkill();
+    				}
     				break;
     			}
+				case 833673: {
+					if (player.getRace() == Race.ASMODIANS) {
+						SkillEngine.getInstance().getSkill(player, 11048, 1, player).useWithoutPropSkill();
+					}
+    				break;				
+				}
+				case 833674: {
+					if (player.getRace() == Race.ASMODIANS) {
+						SkillEngine.getInstance().getSkill(player, 11050, 1, player).useWithoutPropSkill();
+					}
+    				break;					
+				}
     			default:
     				break;
     		}
