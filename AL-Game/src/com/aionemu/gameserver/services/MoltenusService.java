@@ -19,7 +19,7 @@ package com.aionemu.gameserver.services;
 
 import com.aionemu.commons.services.CronService;
 import com.aionemu.commons.utils.Rnd;
-import com.aionemu.gameserver.configs.main.MoltenusConfig;
+import com.aionemu.gameserver.configs.main.AbyssBossesConfig;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.VisibleObject;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
@@ -34,12 +34,12 @@ import org.slf4j.LoggerFactory;
 
 public class MoltenusService {
 
-    private static final Logger log = LoggerFactory.getLogger("MOLTENUS_LOG");
+    private static final Logger log = LoggerFactory.getLogger("ABYSS_BOSS_LOG");
 
     /**
      * Balaurea race protector spawn schedule.
      */
-    private static final String MOLTENUS_SPAWN_SCHEDULE = MoltenusConfig.MOLTENUS_SPAWN_SCHEDULE;
+    private static final String MOLTENUS_SPAWN_SCHEDULE = AbyssBossesConfig.MOLTENUS_SPAWN_SCHEDULE;
 
     private FastMap<Integer, VisibleObject> moltenusAbyssBoss = new FastMap<Integer, VisibleObject>();
 
@@ -53,6 +53,16 @@ public class MoltenusService {
     }
 
     public void initMoltenus() {
+        if (!AbyssBossesConfig.MOLTENUS_ENABLE) {
+            log.info("[MoltenusService] Moltenus disabled...");
+        }
+        else {
+            log.info("[MoltenusService] Moltenus actived...");
+            startMoltenus();
+        }
+    }
+
+    public void startMoltenus() {
         // Abyss Moltenus start...
         CronService.getInstance().schedule(new Runnable() {
             @Override

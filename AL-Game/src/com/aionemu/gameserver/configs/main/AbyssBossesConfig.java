@@ -23,12 +23,33 @@ import com.aionemu.commons.configuration.Property;
  */
 public class AbyssBossesConfig {
 
+	/**
+     * Moltenus Spawn
+     */
+    @Property(key="gameserver.moltenus.enable", defaultValue = "true")
+    public static boolean MOLTENUS_ENABLE;
+    /**
+     * Moltenus Spawn Time
+     */
+    @Property(key = "gameserver.moltenus.time", defaultValue = "0 0 22 ? * SUN")
+    public static String MOLTENUS_SPAWN_SCHEDULE;
+
+	/**
+     * Diflodox Spawn
+     */
+    @Property(key="gameserver.diflodox.enable", defaultValue = "true")
+    public static boolean DIFLODOX_ENABLE;
     /**
      * Diflodox Spawn Time
      */
     @Property(key = "gameserver.diflodox.time", defaultValue = "0 0 23 ? * SAT")
     public static String DIFLODOX_SPAWN_SCHEDULE;
 
+	/**
+     * Diflonax Spawn
+     */
+    @Property(key="gameserver.diflonax.enable", defaultValue = "true")
+    public static boolean DIFLONAX_ENABLE;
     /**
      * Diflonax Spawn Time
      */
