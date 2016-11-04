@@ -41,14 +41,14 @@ import com.aionemu.gameserver.world.knownlist.Visitor;
  */
 public class DiflonaxService {
 
-    private static final Logger log = LoggerFactory.getLogger("BOSS_ABYSS_LOG");
+    private static final Logger log = LoggerFactory.getLogger("ABYSS_BOSS_LOG");
 
     /**
      * Balaurea race protector spawn schedule.
      */
     private static final String DIFLONAX_SPAWN_SCHEDULE = AbyssBossesConfig.DIFLONAX_SPAWN_SCHEDULE;
 
-    private FastMap<Integer, VisibleObject> BossAbyssService = new FastMap<Integer, VisibleObject>();
+    private FastMap<Integer, VisibleObject> diflonaxAbyssBoss = new FastMap<Integer, VisibleObject>();
 
     /**
      * Singleton that is loaded on the class initialization.
@@ -60,23 +60,33 @@ public class DiflonaxService {
     }
 
     public void initDiflonax() {
+        if (!AbyssBossesConfig.DIFLONAX_ENABLE) {
+            log.info("[DiflonaxService] Diflonax disabled...");
+        }
+        else {
+            log.info("[DiflonaxService] Diflonax actived...");
+            startDiflonax();
+        }
+    }
+
+    public void startDiflonax() {
         // Abyss Diflonax start... Diflonax
         CronService.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
-                if (BossAbyssService.containsKey(883322) && BossAbyssService.get(883322).isSpawned()) {
+                if (diflonaxAbyssBoss.containsKey(883322) && diflonaxAbyssBoss.get(883322).isSpawned()) {
                     log.warn("Diflonax was already spawned...");
                 } else {
                     int randomPos = Rnd.get(1, 3);
                     switch (randomPos) {
                         case 1:
-                            BossAbyssService.put(883322, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 883322, 2464.9199f, 1689f, 2882.221f, (byte) 0), 1));
+                            diflonaxAbyssBoss.put(883322, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 883322, 2464.9199f, 1689f, 2882.221f, (byte) 0), 1));
                             break;
                         case 2:
-                            BossAbyssService.put(883322, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 883322, 3083.1191f, 925.84436f, 2844.6846f, (byte) 74), 1));
+                            diflonaxAbyssBoss.put(883322, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 883322, 3083.1191f, 925.84436f, 2844.6846f, (byte) 74), 1));
                             break;
                         case 3:
-                            BossAbyssService.put(883322, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 883322, 1692.96f, 1809.04f, 2886.027f, (byte) 0), 1));
+                            diflonaxAbyssBoss.put(883322, SpawnEngine.spawnObject(SpawnEngine.addNewSingleTimeSpawn(400010000, 883322, 1692.96f, 1809.04f, 2886.027f, (byte) 0), 1));
                             break;
                     }
                     log.info("Diflonax spawned in the Abyss");
@@ -90,14 +100,14 @@ public class DiflonaxService {
                     ThreadPoolManager.getInstance().schedule(new Runnable() {
                         @Override
                         public void run() {
-                            for (VisibleObject vo : BossAbyssService.values()) {
+                            for (VisibleObject vo : diflonaxAbyssBoss.values()) {
                                 if (vo != null) {
                                     Npc npc = (Npc) vo;
                                     if (!npc.getLifeStats().isAlreadyDead()) {
                                         npc.getController().onDelete();
                                     }
                                 }
-                                BossAbyssService.clear();
+                                diflonaxAbyssBoss.clear();
                                 log.info("Diflonax dissapeared");
                                 World.getInstance().doOnAllPlayers(new Visitor<Player>() {
                                     @Override
