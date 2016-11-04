@@ -26,12 +26,12 @@ public class AbyssBossesConfig {
     /**
      * Diflodox Spawn Time
      */
-    @Property(key = "gameserver.diflodox.time", defaultValue = "0 0 22 ? * SUN") //TODO
+    @Property(key = "gameserver.diflodox.time", defaultValue = "0 0 23 ? * SAT")
     public static String DIFLODOX_SPAWN_SCHEDULE;
 
     /**
      * Diflonax Spawn Time
      */
-    @Property(key = "gameserver.diflonax.time", defaultValue = "0 0 22 ? * SUN") //TODO
+    @Property(key = "gameserver.diflonax.time", defaultValue = "0 0 23 ? * SAT")
     public static String DIFLONAX_SPAWN_SCHEDULE;
 }
