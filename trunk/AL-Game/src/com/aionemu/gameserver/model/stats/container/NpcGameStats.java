@@ -412,4 +412,14 @@ public class NpcGameStats extends CreatureGameStats<Npc> {
          * always (int) *
          */
     }
+
+	@Override
+	public Stat2 getPvpAttack() {
+		return null;
+	}
+	
+	@Override
+	public Stat2 getPvpDeff() {
+		return null;
+	}
 }

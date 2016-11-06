@@ -735,13 +735,14 @@ public class StatFunctions {
             }
 
             // PVP damages is capped of 50% of the actual baseDamage
-            damages = Math.round(damages * 0.50f);
+//            damages = Math.round(damages * 0.50f);
+            // TESTING
             float pvpAttackBonus = attacker.getGameStats().getStat(StatEnum.PVP_ATTACK_RATIO, 0).getCurrent();
 			float pvpDefenceBonus = target.getGameStats().getStat(StatEnum.PVP_DEFEND_RATIO, 0).getCurrent();
 			switch (elements) {
 				case NONE:
-					pvpAttackBonus += attacker.getGameStats().getStat(StatEnum.PVP_PHYSICAL_ATTACK, 0).getCurrent();
-					pvpDefenceBonus += target.getGameStats().getStat(StatEnum.PVP_PHYSICAL_DEFEND, 0).getCurrent();
+					pvpAttackBonus += attacker.getGameStats().getStat(StatEnum.PVP_ATTACK_RATIO, 0).getCurrent();
+					pvpDefenceBonus += target.getGameStats().getStat(StatEnum.PVP_DEFEND_RATIO, 0).getCurrent();
 					break;
 				case FIRE:
 				case WATER:
@@ -749,8 +750,8 @@ public class StatFunctions {
 				case EARTH:
 				case LIGHT:
 				case DARK:
-						pvpAttackBonus += attacker.getGameStats().getStat(StatEnum.PVP_MAGICAL_ATTACK, 0).getCurrent();
-						pvpDefenceBonus += target.getGameStats().getStat(StatEnum.PVP_MAGICAL_DEFEND, 0).getCurrent();
+						pvpAttackBonus += attacker.getGameStats().getStat(StatEnum.PVP_ATTACK_RATIO, 0).getCurrent();
+						pvpDefenceBonus += target.getGameStats().getStat(StatEnum.PVP_DEFEND_RATIO, 0).getCurrent();
 						break;
 				default:
 						break;					

@@ -278,4 +278,14 @@ public class SummonGameStats extends CreatureGameStats<Summon> {
     public void updateSpeedInfo() {
         PacketSendUtility.broadcastPacket(owner, new SM_EMOTION(owner, EmotionType.START_EMOTE2, 0, 0));
     }
+
+	@Override
+	public Stat2 getPvpAttack() {
+		return null;
+	}
+	
+	@Override
+	public Stat2 getPvpDeff() {
+		return null;
+	}
 }

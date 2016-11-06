@@ -260,6 +260,10 @@ public abstract class CreatureGameStats<T extends Creature> {
     public abstract Stat2 getMCR();
 
     public abstract Stat2 getAllSpeed();
+    
+    public abstract Stat2 getPvpAttack();
+    
+    public abstract Stat2 getPvpDeff();
 
     public int getMagicalDefenseFor(SkillElement element) {
         switch (element) {
