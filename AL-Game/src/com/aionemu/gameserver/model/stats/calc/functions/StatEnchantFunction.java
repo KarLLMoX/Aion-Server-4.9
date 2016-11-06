@@ -146,41 +146,28 @@ public class StatEnchantFunction extends StatAddFunction {
     private int getAccessoryModifiers(int autorizeLvl) {
         switch (stat) {
             case PVP_ATTACK_RATIO:
-                switch (autorizeLvl) {
-                    case 1:
-                        return 2;
-                    case 2:
-                        return 7;
-                    case 3:
-                        return 12;
-                    case 4:
-                        return 17;
-                    case 5:
-                        return 25;
-                    case 6:
-                        return 60;
-                    case 7:
-                        return 75;
-                }
-                return 0;
+            case PVP_ATTACK_RATIO_PHYSICAL:
+            case PVP_ATTACK_RATIO_MAGICAL: {
+            	switch (item.getItemTemplate().getCategory()) {
+                	case HELMET:
+                	case EARRINGS:
+                	case NECKLACE:
+                		return (int) (5 * autorizeLvl);
+				default:
+					break;
+            	}
+            }
             case PVP_DEFEND_RATIO:
-                switch (autorizeLvl) {
-                    case 1:
-                        return 3;
-                    case 2:
-                        return 9;
-                    case 3:
-                        return 15;
-                    case 4:
-                        return 21;
-                    case 5:
-                        return 31;
-                    case 6:
-                        return 41;
-                    case 7:
-                        return 55;
-                }
-                return 0;
+            case PVP_DEFEND_RATIO_PHYSICAL:
+            case PVP_DEFEND_RATIO_MAGICAL: {
+            	switch (item.getItemTemplate().getCategory()) {
+            		case RINGS:
+            		case BELT:
+            			return (int) (7 * autorizeLvl);
+				default:
+					break;
+            	}
+            }
 		default:
 			break;
         }

@@ -63,8 +63,8 @@ public class Info extends AdminCommand {
                     + "\n TribeBase: " + player.getBaseTribe());
 
             PacketSendUtility.sendMessage(admin, "[Stats]"
-                    + "\nPvP attack: " + pvpAttackRatio * 0.1f + "%" + " (Physical : " + player.getGameStats().getStat(StatEnum.PVP_PHYSICAL_ATTACK, 0).getCurrent() + " ) (Magical : " + player.getGameStats().getStat(StatEnum.PVP_MAGICAL_ATTACK, 0).getCurrent() + " )"
-					+ "\nPvP defend: " + pvpDefenseRatio * 0.1f + "%" + " (Physical: " + player.getGameStats().getStat(StatEnum.PVP_PHYSICAL_DEFEND, 0).getCurrent() + " ) (Magical : " + player.getGameStats().getStat(StatEnum.PVP_MAGICAL_DEFEND, 0).getCurrent() + " )"
+                    + "\nPvP attack: " + pvpAttackRatio * 0.1f + "%" + " (Enchant Bonus : " + player.getGameStats().getPvpAttack().getCurrent() * 0.1f + "%" + " )"
+					+ "\nPvP defend: " + pvpDefenseRatio * 0.1f + "%" + " (Enchant Bonus: " + player.getGameStats().getPvpDeff().getCurrent() * 0.1f + "%" + " )"
                     + "\nHP: " + player.getLifeStats().getCurrentHp() + " / " + player.getGameStats().getMaxHp().getCurrent()
                     + "\nMP: " + player.getLifeStats().getCurrentMp() + " / " + player.getGameStats().getMaxMp().getCurrent()
                     + "\nDP: " + player.getCommonData().getDp() + " / " + player.getGameStats().getMaxDp().getCurrent()

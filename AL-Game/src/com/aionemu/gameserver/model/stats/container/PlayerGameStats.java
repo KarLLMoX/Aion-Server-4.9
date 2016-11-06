@@ -363,6 +363,18 @@ public class PlayerGameStats extends CreatureGameStats<Player> {
         int base = 0;
         return getStat(StatEnum.MAGIC_SKILL_BOOST_RESIST, base);
     }
+    
+    @Override
+    public Stat2 getPvpAttack() {
+        int base = 0;
+        return getStat(StatEnum.PVP_ATTACK_RATIO_PHYSICAL, base);
+    }
+    
+    @Override
+    public Stat2 getPvpDeff() {
+        int base = 0;
+        return getStat(StatEnum.PVP_DEFEND_RATIO_PHYSICAL, base);
+    }
 
     /*@Override
     public Stat2 getMAccuracy() {
