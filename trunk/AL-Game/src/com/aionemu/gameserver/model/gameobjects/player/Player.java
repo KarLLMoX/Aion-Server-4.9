@@ -99,6 +99,7 @@ import com.aionemu.gameserver.model.templates.item.ItemUseLimits;
 import com.aionemu.gameserver.model.templates.ride.RideInfo;
 import com.aionemu.gameserver.model.templates.stats.PlayerStatsTemplate;
 import com.aionemu.gameserver.model.templates.windstreams.WindstreamPath;
+import com.aionemu.gameserver.model.templates.zone.ZoneType;
 import com.aionemu.gameserver.network.aion.AionConnection;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_STATS_INFO;
 import com.aionemu.gameserver.questEngine.model.QuestState;
@@ -121,6 +122,7 @@ import com.aionemu.gameserver.utils.rates.RegularRates;
 import com.aionemu.gameserver.world.World;
 import com.aionemu.gameserver.world.WorldPosition;
 //import com.aionemu.gameserver.world.zone.ZoneInstance;
+import com.aionemu.gameserver.world.zone.ZoneInstance;
 
 /**
  * This class is representing Player object, it contains all needed data.
@@ -1245,36 +1247,38 @@ public class Player extends Creature {
     }
 
     private boolean canPvP(Player enemy) {
-        // int worldId = enemy.getWorldId();
+//        int worldId = enemy.getWorldId();
         if (!enemy.getRace().equals(getRace())) {
             if (World.getInstance().getWorldMap(getWorldId()).isPvpAllowed()) {
-//                return (!this.isInDisablePvPZone() && !enemy.isInDisablePvPZone());
-//            } else {
+                return (!this.isInDisablePvPZone() && !enemy.isInDisablePvPZone());
+            } else {
                 return (this.isInPvPZone() && enemy.isInPvPZone());
             }
+        } else {
+        	return (this.isInsideZoneType(ZoneType.PVP) && enemy.isInsideZoneType(ZoneType.PVP) && !isInSameTeam(enemy));
+           }
+    }
+
+    private boolean isInDisablePvPZone() {
+        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
+        for (ZoneInstance zone : zones) {
+            if (!zone.isPvpAllowed()) {
+                return true;
+            }
         }
+
         return false;
     }
 
-//    private boolean isInDisablePvPZone() {
-//        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
-//        for (ZoneInstance zone : zones) {
-//            if (!zone.isPvpAllowed()) {
-//                return true;
-//            }
-//        }
-//
-//        return false;
-//    }
-
     private boolean isInPvPZone() {
-//        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
-//        for (ZoneInstance zone : zones) {
-//            if (zone.isPvpAllowed()) {
-//                return true;
-//            }
-//        }
-        return true;
+        List<ZoneInstance> zones = this.getPosition().getMapRegion().getZones(this);
+        for (ZoneInstance zone : zones) {
+            if (zone.isPvpAllowed()) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public boolean isInSameTeam(Player player) {
