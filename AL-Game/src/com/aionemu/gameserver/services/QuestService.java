@@ -357,6 +357,18 @@ public final class QuestService {
         if (template.getNpcFactionId() != 0) {
             player.getNpcFactions().completeQuest(template);
         }
+        if (template.getId() == id) {
+        	switch (id) {
+        		case 19001: {
+        			player.getSkillList().addSkill(player, 30002, 400);
+        			break;
+        		}
+        		case 19003: {
+        			player.getSkillList().addSkill(player, 30003, 400);
+        			break;
+        		}
+        	}
+        }
         return true;
     }
 
