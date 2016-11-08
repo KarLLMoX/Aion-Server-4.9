@@ -177,7 +177,7 @@ public class TribeRelationService {
 	                case PC_DARK:
 	                	if (creature1 instanceof Npc) {
 	                		Npc targetNpc = (Npc) creature1;
-	                		if (targetNpc.getObjectTemplate().getNpcUiType().equals(NpcUiType.NONE)) {
+	                		if (creature2.getWorldId() != 301310000 && targetNpc.getObjectTemplate().getNpcUiType().equals(NpcUiType.NONE)) {
 	                			return true;
 	                		}
 	                	}
