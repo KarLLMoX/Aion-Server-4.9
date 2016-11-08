@@ -355,7 +355,7 @@
         </spawn>
         <!-- Jhaelas / bacchus -->
         <spawn npc_id="203782" respawn_time="295">
-			<spot x="1852.26" y="1474.57" z="590.1246" h="90"/>
+			<spot x="1852.26" y="1474.57" z="590.1246" h="33"/>
         </spawn>
         <!-- Maire / SPLC1_NPC_SPG21 -->
         <spawn npc_id="203783" respawn_time="295">
