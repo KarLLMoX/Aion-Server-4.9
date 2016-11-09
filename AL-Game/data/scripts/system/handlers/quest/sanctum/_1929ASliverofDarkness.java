@@ -19,12 +19,12 @@ package quest.sanctum;
 import com.aionemu.gameserver.dataholders.DataManager;
 import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.model.EmotionType;
+import com.aionemu.gameserver.model.TeleportAnimation;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.gameobjects.state.CreatureState;
 import com.aionemu.gameserver.network.aion.SystemMessageId;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_EMOTION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
@@ -42,6 +42,7 @@ import com.aionemu.gameserver.world.WorldMapInstance;
  * @modified Rolandas
  * @reworked vlog
  * @modified apozema
+ * @rework FrozenKiller
  */
 public class _1929ASliverofDarkness extends QuestHandler {
 
@@ -84,12 +85,11 @@ public class _1929ASliverofDarkness extends QuestHandler {
 				case 203752: { // Jucleas
 					switch (dialog) {
 						case QUEST_SELECT: {
-							if (var == 0) {
-								return sendQuestDialog(env, 1011);
-							}
+							return sendQuestDialog(env, 1011);
 						}
 						case SETPRO1: {
-							return defaultCloseDialog(env, 0, 1); // 1
+							changeQuestStep(env, 0, 1, false); // 1
+							return closeDialogWindow(env);
 						}
 						default:
 							break;
@@ -97,12 +97,17 @@ public class _1929ASliverofDarkness extends QuestHandler {
 					break;
 				}
 				case 203852: { // Ludina
-					if (env.getDialog() == DialogAction.QUEST_SELECT && var == 1) {
-						return sendQuestDialog(env, 1352);
-					} else if (env.getDialog() == DialogAction.SETPRO2) {
-						TeleportService2.teleportTo(player, 210030000, 2325.1685f, 1808.1615f, 194.2152f);
-						changeQuestStep(env, 1, 2, false); // 2
-						return closeDialogWindow(env);
+					switch (dialog) {
+						case QUEST_SELECT: {
+							return sendQuestDialog(env, 1352);
+						}
+						case SETPRO2: {
+							TeleportService2.teleportTo(player, 210030000, 2325.1685f, 1808.1615f, 194.2152f, (byte)77, TeleportAnimation.BEAM_ANIMATION);
+							changeQuestStep(env, 1, 2, false); // 2
+							return closeDialogWindow(env);
+						}
+					default:
+						break;
 					}
 					break;
 				}
@@ -116,42 +121,34 @@ public class _1929ASliverofDarkness extends QuestHandler {
 							}
 						}
 						case SETPRO3: {
-							if (var == 2) {
-								changeQuestStep(env, 2, 93, false); // 93
-								WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(310070000);
-								InstanceService.registerPlayerWithInstance(newInstance, player);
-								TeleportService2.teleportTo(player, 310070000, newInstance.getInstanceId(), 338, 101, 1191);
-								return closeDialogWindow(env);
-							}
+							changeQuestStep(env, 2, 93, false); // 93
+							WorldMapInstance newInstance = InstanceService.getNextAvailableInstance(310070000);
+							InstanceService.registerPlayerWithInstance(newInstance, player);
+							TeleportService2.teleportTo(player, 310070000, newInstance.getInstanceId(), 338f, 101f, 1191f, (byte)45, TeleportAnimation.BEAM_ANIMATION);
+							return closeDialogWindow(env);
 						}
 						case SETPRO7: {
-							if (var == 8) {
-								changeQuestStep(env, 8, 9, false); // 9
-								TeleportService2.teleportTo(player, 110010000, 1876.0033f, 1513.4586f, 812.6755f);
-								return closeDialogWindow(env);
-							}
-							break;
+							changeQuestStep(env, 8, 9, false); // 9
+							TeleportService2.teleportTo(player, 110010000, 1876.0033f, 1513.4586f, 812.6755f, (byte)45, TeleportAnimation.BEAM_ANIMATION);
+							return closeDialogWindow(env);
 						}
 					default:
 						break;
 					}
+					break;
 				}	
 				case 205110: { // Icaronix
 					switch (dialog) {
 						case QUEST_SELECT: {
-							if (var == 93) {
-								return sendQuestDialog(env, 2034);
-							}
+							return sendQuestDialog(env, 2034);
 						}
 						case SETPRO4: {
-							if (var == 93) {
-								changeQuestStep(env, 93, 94, false); // 94
-								player.setState(CreatureState.FLIGHT_TELEPORT);
-								player.unsetState(CreatureState.ACTIVE);
-								player.setFlightTeleportId(31001);
-								PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 31001, 0));
-								return true;
-							}
+							changeQuestStep(env, 93, 94, false); // 94
+							player.setState(CreatureState.FLIGHT_TELEPORT);
+							player.unsetState(CreatureState.ACTIVE);
+							player.setFlightTeleportId(31001);
+							PacketSendUtility.sendPacket(player, new SM_EMOTION(player, EmotionType.START_FLYTELEPORT, 31001, 0));
+							return true;
 						}
 						default:
 							break;
@@ -161,45 +158,34 @@ public class _1929ASliverofDarkness extends QuestHandler {
 				case 700240: { // Icaronix's Box
 					if (dialog == DialogAction.USE_OBJECT) {
 						if (var == 94) {
-							return playQuestMovie(env, 155);
+							playQuestMovie(env, 155);
+							return true;
+						} else {
+							return closeDialogWindow(env);
 						}
 					}
 					break;
 				}
 				case 205111: { // Ecus
 					switch (dialog) {
-						case USE_OBJECT: {
-							if (var == 96) {
+						case QUEST_SELECT: {
+							if (var == 95) {
+								return sendQuestDialog(env, 2375);
+							} else if (var == 96) {
 								if (isStigmaEquipped(env)) {
 									return sendQuestDialog(env, 2716);
 								} else {
-									PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 1));
-									return closeDialogWindow(env);
+									return sendQuestDialog(env, 1);
 								}
-							}
-						}
-						case QUEST_SELECT: {
-							if (var == 98) {
-								return sendQuestDialog(env, 2375);
 							}
 						}
 						case SELECT_ACTION_2546: {
-							if (var == 98) {
+							if (var == 95) {
 								if (giveQuestItem(env, getStoneId(player), 1)) {
-								    /*
-									long existendStigmaShards = player.getInventory().getItemCountByItemId(141000001);
-									if (existendStigmaShards < 300) {
-										if (!player.getInventory().isFull()) {
-											ItemService.addItem(player, 141000001, 300 - existendStigmaShards);
-											PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 1));
-											return true;
-										}
-									} else {
-									*/
-										PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(env.getVisibleObject().getObjectId(), 1));
-										return true;
-									/*}*/
-								}
+									qs.setQuestVar(98);
+									updateQuestStatus(env);
+									return sendQuestDialog(env, 1);
+								}	
 							}
 						}
 						case SELECT_ACTION_2720: {
@@ -207,7 +193,8 @@ public class _1929ASliverofDarkness extends QuestHandler {
 								Npc npc = (Npc) env.getVisibleObject();
 								npc.getController().onDelete();
 								QuestService.addNewSpawn(310070000, player.getInstanceId(), 212992, (float) 191.9, (float) 267.68, 1374, (byte) 0);
-								changeQuestStep(env, 96, 97, false); // 97
+								qs.setQuestVar(97);
+								updateQuestStatus(env);
 								return closeDialogWindow(env);
 							}
 						}
@@ -219,9 +206,7 @@ public class _1929ASliverofDarkness extends QuestHandler {
 				case 203701: { // Lavirintos
 					switch (dialog) {
 						case QUEST_SELECT: {
-							if (var == 9) {
-								return sendQuestDialog(env, 3398);
-							}
+							return sendQuestDialog(env, 3398);
 						}
 						case SETPRO8: {
 							return defaultCloseDialog(env, 9, 9, true, false); // reward
@@ -229,11 +214,12 @@ public class _1929ASliverofDarkness extends QuestHandler {
 						default:
 							break;
 					}
+					break;
 				}
 			}
 		} else if (qs.getStatus() == QuestStatus.REWARD) {
 			if (targetId == 203711) { // Miriya
-				if (env.getDialog() == DialogAction.USE_OBJECT) {
+				if (dialog == DialogAction.USE_OBJECT) {
 					return sendQuestDialog(env, 10002);
 				} else {
 					return sendQuestEndDialog(env);
@@ -245,10 +231,12 @@ public class _1929ASliverofDarkness extends QuestHandler {
 
 	@Override
 	public boolean onMovieEndEvent(QuestEnv env, int movieId) {
-		final Player player = env.getPlayer();
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (movieId == 155) {
 			QuestService.addNewSpawn(310070000, player.getInstanceId(), 205111, (float) 197.6, (float) 265.9, (float) 1374.0, (byte) 0);
-			changeQuestStep(env, 94, 98, false); // 98
+			qs.setQuestVar(95);
+			updateQuestStatus(env);
 			return true;
 		}
 		return false;
@@ -256,7 +244,10 @@ public class _1929ASliverofDarkness extends QuestHandler {
 
 	@Override
 	public boolean onEquipItemEvent(QuestEnv env, int itemId) {
-		changeQuestStep(env, 98, 96, false); // 96
+		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
+		qs.setQuestVar(96);
+		updateQuestStatus(env);
 		return closeDialogWindow(env);
 	}
 
@@ -264,10 +255,12 @@ public class _1929ASliverofDarkness extends QuestHandler {
 	public boolean onKillEvent(QuestEnv env) {
 		Player player = env.getPlayer();
 		QuestState qs = player.getQuestStateList().getQuestState(questId);
-		if (qs != null && qs.getStatus() == QuestStatus.START) {
+		if (qs.getStatus() == QuestStatus.START) {
 			int var = qs.getQuestVarById(0);
-			if (var == 97) {
-				changeQuestStep(env, 97, 8, false); // 8
+			int var1 = qs.getQuestVarById(1);
+			if (var == 33 && var1 == 1) {
+				qs.setQuestVar(8);
+				updateQuestStatus(env);
 				TeleportService2.teleportTo(player, 210030000, 1, 2315.9f, 1800f, 195.2f);
 				return true;
 			}
