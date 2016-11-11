@@ -18,10 +18,10 @@ package com.aionemu.gameserver.model.templates.item.actions;
 
 import com.aionemu.gameserver.controllers.observer.ItemUseObserver;
 import com.aionemu.gameserver.dataholders.DataManager;
+import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_INSTANCE_INFO;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_ITEM_USAGE_ANIMATION;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
@@ -65,8 +65,7 @@ public class InstanceTimeClear extends AbstractItemAction {
 
     @Override
     public void act(final Player player, final Item parentItem, Item targetItem) {
-        PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(),
-                parentItem.getItemId(), 1000, 0, 0));
+        PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 1000, 0, 0));
 
         final ItemUseObserver observer = new ItemUseObserver() {
             @Override
@@ -74,7 +73,7 @@ public class InstanceTimeClear extends AbstractItemAction {
                 // TODO: abort is invalid. Should we abort all or only the last syncid?
                 player.getController().cancelTask(TaskId.ITEM_USE);
                 player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
-           		PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1300427)); //Item use cancel
+                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(parentItem.getItemTemplate().getNameId())));
                 PacketSendUtility.broadcastPacket(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemTemplate().getTemplateId(), 0, 2, 0), true);
                 player.getObserveController().removeObserver(this);
             }
@@ -95,13 +94,7 @@ public class InstanceTimeClear extends AbstractItemAction {
                     if (player.getPortalCooldownList().getPortalCooldown(mapid) == 0) {
                         continue; // don't spam with not needed packets!
                     }
-
-                    player.getPortalCooldownList().removePortalCoolDown(mapid);
-                    if (player.isInTeam()) {
-                        player.getCurrentTeam().sendPacket(new SM_INSTANCE_INFO(player, mapid));
-                    } else {
-                        PacketSendUtility.sendPacket(player, new SM_INSTANCE_INFO(player, mapid));
-                    }
+                    player.getPortalCooldownList().reduceEntry(mapid);
                 }
                 PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(),
                         parentItem.getItemId(), 0, 1, 0));

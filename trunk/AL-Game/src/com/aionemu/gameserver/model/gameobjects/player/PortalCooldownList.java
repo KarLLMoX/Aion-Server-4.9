@@ -73,6 +73,14 @@ public class PortalCooldownList {
 
         return portalCooldowns.get(worldId).getCooldown();
     }
+    
+    public long getEntryCount(int worldId) {
+        if (portalCooldowns == null || !portalCooldowns.containsKey(worldId)) {
+            return 0;
+        }
+
+        return portalCooldowns.get(worldId).getEntryCount();
+    }
 
     public PortalCooldownItem getPortalCooldownItem(int worldId) {
         if(portalCooldowns == null || !portalCooldowns.containsKey(worldId)) {
@@ -113,11 +121,34 @@ public class PortalCooldownList {
         if (portalCooldowns != null) {
             portalCooldowns.remove(worldId);
         }
+        
+        if (owner.isInTeam()) {
+            owner.getCurrentTeam().sendPacket(new SM_INSTANCE_INFO(owner, worldId));
+        } else {
+            PacketSendUtility.sendPacket(owner, new SM_INSTANCE_INFO(owner, worldId));
+        }
     }
 
     public void addEntry(int worldId) {
         if(portalCooldowns != null && portalCooldowns.containsKey(worldId)) {
             portalCooldowns.get(worldId).setEntryCount(portalCooldowns.get(worldId).getEntryCount() +1);
+        }
+
+        if (owner.isInTeam()) {
+            owner.getCurrentTeam().sendPacket(new SM_INSTANCE_INFO(owner, worldId));
+        } else {
+            PacketSendUtility.sendPacket(owner, new SM_INSTANCE_INFO(owner, worldId));
+        }
+    }
+    
+    public void reduceEntry(int worldId) {
+        if(portalCooldowns != null && portalCooldowns.containsKey(worldId)) {
+            portalCooldowns.get(worldId).setEntryCount(portalCooldowns.get(worldId).getEntryCount() -1);
+        }
+        
+        if (portalCooldowns.get(worldId).getEntryCount() == 0) {
+        	removePortalCoolDown(worldId);
+        	return;
         }
 
         if (owner.isInTeam()) {
