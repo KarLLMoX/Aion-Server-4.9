@@ -55,10 +55,10 @@ public class SM_INSTANCE_INFO extends AionServerPacket {
     @Override
     protected void writeImpl(AionConnection con) {
         boolean hasTeam = playerTeam != null;
-        writeC(!isAnswer ? 0x2 : hasTeam ? 0x1 : 0x0);
-        writeD(0x0);
-        writeC(cooldownId);
-        writeH(0x01);
+        writeC(!isAnswer ? 2 : hasTeam ? 1 : 0);
+        writeD(cooldownId);
+        writeC(0);
+        writeH(1);
         if(cooldownId == 0) {
             writeD(player.getObjectId());
             writeH(DataManager.INSTANCE_COOLTIME_DATA.size());
@@ -73,21 +73,22 @@ public class SM_INSTANCE_INFO extends AionServerPacket {
 				}
                 writeD(DataManager.INSTANCE_COOLTIME_DATA.getInstanceEntranceCountByWorldId(e.getKey()));
                 writeD(cooldownList.getPortalCooldownItem(e.getValue().getWorldId()) != null ? cooldownList.getPortalCooldownItem(e.getValue().getWorldId()).getEntryCount() * -1 : 0);
-				writeD(0x00); // 4.9
-                writeC(0x01); //activated
+				writeD(0); // 4.9
+				writeD(0); // 4.9
+                writeC(1); //activated
             }
             writeS(player.getName());
         } else {
             writeD(player.getObjectId());
             writeH(1);
-            writeD(cooldownId);
-            writeD(0x0);
-            long time = player.getPortalCooldownList().getPortalCooldown(worldId);
-            writeD((time == 0 ? 0 : ((int) (time - System.currentTimeMillis()) / 1000)));
-            writeD(DataManager.INSTANCE_COOLTIME_DATA.getInstanceEntranceCountByWorldId(worldId));
-            writeD(player.getPortalCooldownList().getPortalCooldownItem(worldId).getEntryCount() * -1);
-			writeD(0x00); // 4.9
-            writeC(0x01); //activated
+            writeD(cooldownId); //InstanceID
+            writeD(0);
+            writeD(0);
+            writeD(DataManager.INSTANCE_COOLTIME_DATA.getInstanceEntranceCountByWorldId(worldId)); // Max Entry's
+            writeD(player.getPortalCooldownList().getPortalCooldownItem(worldId) != null ? player.getPortalCooldownList().getPortalCooldownItem(worldId).getEntryCount() * -1 : 0); // Used Entry's (negative -)
+       		writeD(0); // 4.9
+       		writeD(0); // 4.9
+            writeC(1); //activated
             writeS(player.getName());
         }
     }

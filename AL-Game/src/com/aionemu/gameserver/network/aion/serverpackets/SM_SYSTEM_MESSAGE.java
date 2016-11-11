@@ -8472,6 +8472,12 @@ public final class SM_SYSTEM_MESSAGE extends AionServerPacket {
      */
     public static final SM_SYSTEM_MESSAGE STR_SKILL_CAN_NOT_USE_ITEM_IN_CURRENT_POSITION = new SM_SYSTEM_MESSAGE(1300143);
     /**
+     * You have cancelled using the item.
+     */
+    public static final SM_SYSTEM_MESSAGE STR_ITEM_CANCELED(DescriptionId id) {
+        return new SM_SYSTEM_MESSAGE(1300427, id);
+    }
+    /**
      * You cannot craft here.
      */
     public static final SM_SYSTEM_MESSAGE STR_COMBINE_CAN_NOT_COMBINE_IN_CURRENT_POSITION = new SM_SYSTEM_MESSAGE(1300144);
