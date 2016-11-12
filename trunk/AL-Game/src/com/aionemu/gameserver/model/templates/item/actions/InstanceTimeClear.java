@@ -27,50 +27,35 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 import com.aionemu.gameserver.utils.ThreadPoolManager;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import java.util.List;
-
 /**
  * @author Tiger
+ * @rework FrozenKiller
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "InstanceTimeClear")
-public class InstanceTimeClear extends AbstractItemAction {
 
-    @XmlAttribute(name = "sync_ids")
-    protected List<Integer> syncIds;
+public class InstanceTimeClear extends AbstractItemAction {
 
     @Override
     public boolean canAct(Player player, Item parentItem, Item targetItem) {
-        // TODO: there's a dialog of selection of the instance you want to reset
-        // Meanwhile, resest only those, without CD
-        boolean hasAnyCd = false;
-        for (Integer syncId : syncIds) {
-            int mapid = DataManager.INSTANCE_COOLTIME_DATA.getWorldId(syncId);
-            if (player.getPortalCooldownList().getPortalCooldown(mapid) == 0) {
-                // Notify that not able to reset, already don't have CD
-                PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_COOL_TIME_INIT);
-                if (syncIds.size() == 1) {
-                    return false;
-                }
-            } else {
-                hasAnyCd = true;
-            }
-        }
-        return hasAnyCd;
+    	return true;
     }
-
+    
     @Override
     public void act(final Player player, final Item parentItem, Item targetItem) {
+    }
+
+    public void act(final Player player, final Item parentItem, final int SelectedSyncId) {
+    	int mapid = DataManager.INSTANCE_COOLTIME_DATA.getWorldId(SelectedSyncId);
+    	if (player.getPortalCooldownList().getPortalCooldown(mapid) == 0) {
+    		player.getController().cancelTask(TaskId.ITEM_USE);
+            player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
+    		PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_COOL_TIME_INIT);
+    		return;
+    	}
         PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 1000, 0, 0));
 
         final ItemUseObserver observer = new ItemUseObserver() {
             @Override
             public void abort() {
-                // TODO: abort is invalid. Should we abort all or only the last syncid?
                 player.getController().cancelTask(TaskId.ITEM_USE);
                 player.removeItemCoolDown(parentItem.getItemTemplate().getUseLimits().getDelayId());
                 PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_ITEM_CANCELED(new DescriptionId(parentItem.getItemTemplate().getNameId())));
@@ -88,16 +73,9 @@ public class InstanceTimeClear extends AbstractItemAction {
                 } else {
                     player.getInventory().decreaseByObjectId(parentItem.getObjectId(), 1);
                 }
-
-                for (Integer syncId : syncIds) {
-                    int mapid = DataManager.INSTANCE_COOLTIME_DATA.getWorldId(syncId);
-                    if (player.getPortalCooldownList().getPortalCooldown(mapid) == 0) {
-                        continue; // don't spam with not needed packets!
-                    }
-                    player.getPortalCooldownList().reduceEntry(mapid);
-                }
-                PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(),
-                        parentItem.getItemId(), 0, 1, 0));
+                int mapid = DataManager.INSTANCE_COOLTIME_DATA.getWorldId(SelectedSyncId);
+                player.getPortalCooldownList().reduceEntry(mapid);
+                PacketSendUtility.broadcastPacketAndReceive(player, new SM_ITEM_USAGE_ANIMATION(player.getObjectId(), parentItem.getObjectId(), parentItem.getItemId(), 0, 1, 0));
             }
         }, 1000));
     }

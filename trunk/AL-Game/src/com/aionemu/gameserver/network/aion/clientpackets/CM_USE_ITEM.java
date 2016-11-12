@@ -23,6 +23,7 @@ import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.model.templates.item.actions.AbstractItemAction;
 import com.aionemu.gameserver.model.templates.item.actions.IHouseObjectDyeAction;
+import com.aionemu.gameserver.model.templates.item.actions.InstanceTimeClear;
 import com.aionemu.gameserver.model.templates.item.actions.ItemActions;
 import com.aionemu.gameserver.model.templates.item.actions.MultiReturnAction;
 import com.aionemu.gameserver.network.aion.AionClientPacket;
@@ -33,6 +34,7 @@ import com.aionemu.gameserver.questEngine.handlers.HandlerResult;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,12 +43,13 @@ import java.util.ArrayList;
 /**
  * @author Avol
  * @author GiGatR00n v4.7.5.x
+ * @rework FrozenKiller
  */
 public class CM_USE_ITEM extends AionClientPacket {
 
     private static final Logger log = LoggerFactory.getLogger(CM_USE_ITEM.class);
     public int uniqueItemId;
-    public int type, targetItemId, returnId;
+    public int type, targetItemId, syncId, returnId;
 
     public CM_USE_ITEM(int opcode, State state, State... restStates) {
         super(opcode, state, restStates);
@@ -59,8 +62,11 @@ public class CM_USE_ITEM extends AionClientPacket {
     protected void readImpl() {
         uniqueItemId = readD();
         type = readC();
+        System.out.println("Type: " + type);
         if (type == 2) {
             targetItemId = readD();
+        } else if (type == 5) {
+        	syncId = readD();
         } else if (type == 6) {
             returnId = readD();
         }
@@ -177,8 +183,14 @@ public class CM_USE_ITEM extends AionClientPacket {
             if (targetHouseObject != null && itemAction instanceof IHouseObjectDyeAction) {
                 IHouseObjectDyeAction action = (IHouseObjectDyeAction) itemAction;
                 action.act(player, item, targetHouseObject);
+            } else if (type == 5) {
+            	// Instance Reset Scroll's
+            	if (itemAction instanceof InstanceTimeClear) {
+            		InstanceTimeClear action = (InstanceTimeClear) itemAction;
+            		int SelectedSyncId = syncId;
+            		action.act(player, item, SelectedSyncId);
+            	}
             } else if (type == 6) {
-            	
                 // Multi Returns Items (Scroll Teleporter)
             	if (itemAction instanceof MultiReturnAction){
             		MultiReturnAction action = (MultiReturnAction) itemAction;
