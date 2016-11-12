@@ -62,7 +62,6 @@ public class CM_USE_ITEM extends AionClientPacket {
     protected void readImpl() {
         uniqueItemId = readD();
         type = readC();
-        System.out.println("Type: " + type);
         if (type == 2) {
             targetItemId = readD();
         } else if (type == 5) {
