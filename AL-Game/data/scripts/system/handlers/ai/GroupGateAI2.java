@@ -25,6 +25,7 @@ import com.aionemu.gameserver.model.gameobjects.Creature;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_QUESTION_WINDOW;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
+import com.aionemu.gameserver.services.instance.InstanceService;
 import com.aionemu.gameserver.services.teleport.TeleportService2;
 import com.aionemu.gameserver.utils.PacketSendUtility;
 
@@ -90,7 +91,7 @@ public class GroupGateAI2 extends NpcAI2 {
                     if (!decisionTaken) {
                         switch (getNpcId()) {
                             // Group Gates Invasion Rift
-                            case 296534:
+                            case 296534: {
                                 if (responder.getWorldId() == 210050000 || responder.getWorldId() == 220070000) {
                                     switch (responder.getRace()) {
                                         case ASMODIANS:
@@ -104,6 +105,10 @@ public class GroupGateAI2 extends NpcAI2 {
                                 } else {
                                     PacketSendUtility.sendMessage(responder, "You cannot use this portal here.");
                                 }
+                            }
+                            case 832950: {
+                            	InstanceService.moveToExitPoint(responder);
+                            }
                         }
                         decisionTaken = true;
                     }
