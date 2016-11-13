@@ -702,9 +702,9 @@ public class SM_INSTANCE_SCORE extends AionServerPacket {
                 writeD(0);
                 writeD(shugoReward.getRank());
                 writeD(0);
-                writeD(instanceScoreType.isEndProgress() ? 185000222 : 0);
-                writeD(instanceScoreType.isEndProgress() ? shugoReward.getKeys() : 0);
                 writeD(0);
+                writeD(instanceScoreType.isEndProgress() ? shugoReward.getKeys() : 0);
+                writeD(instanceScoreType.isEndProgress() ? shugoReward.getKeys() : 0);
                 writeD(0);
                 writeD(0);
                 writeD(0);

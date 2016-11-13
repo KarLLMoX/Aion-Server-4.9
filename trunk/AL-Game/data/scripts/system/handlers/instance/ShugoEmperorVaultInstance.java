@@ -50,6 +50,8 @@ public class ShugoEmperorVaultInstance extends GeneralInstanceHandler {
 
 	private ShugoEmperorVaultReward instanceReward;
 	private long startTime;
+	private long currentTime;
+	private long result;
 	private int doorcount = 0;
 	private boolean boss1_spawned = false;
 	private boolean boss2_spawned = false;
@@ -139,16 +141,19 @@ public class ShugoEmperorVaultInstance extends GeneralInstanceHandler {
 			public void visit(Player player) {
 				if (nameId != 0) {
 					PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1400237, new DescriptionId(nameId * 2 + 1), point));
+				} else if (nameId < 0) {
+					PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(0, instanceReward, null));
 				}
-				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime(), instanceReward, null));
+				PacketSendUtility.sendPacket(player, new SM_INSTANCE_SCORE(getTime() < 0 ? 0 : getTime() , instanceReward, null));
+				System.out.println("Time: " + getTime());
 			}
 		});
 	}
 
 	private int getTime() {
-		long result = (int) (System.currentTimeMillis() - startTime);
-
-		return instanceTimerSeconds - (int) result;
+		currentTime = System.currentTimeMillis();
+		result = (currentTime - startTime);
+		return (int) (instanceTimerSeconds - result);
 	}
 
 	private void onTimerEnd() {
@@ -275,8 +280,9 @@ public class ShugoEmperorVaultInstance extends GeneralInstanceHandler {
 		if (instanceReward.getInstanceScoreType().isStartProgress()) {
 			instanceReward.addPoints(points);
 			instanceReward.setRank(checkRank(instanceReward.getPoints()));
-			if(timerEnd)
+			if(timerEnd) {
 				onTimerEnd();
+			}
 			sendPacket(npc.getObjectTemplate().getNameId(), points);
 			checkBosses();
 		}
