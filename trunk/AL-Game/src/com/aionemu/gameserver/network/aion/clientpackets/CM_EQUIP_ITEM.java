@@ -61,15 +61,8 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
         if (!RestrictionsManager.canChangeEquip(activePlayer)) {
             return;
         }
-        
-        int minRank = activePlayer.getInventory().getItemByObjId(itemUniqueId).getItemTemplate().getUseLimits().getMinRank();
-        
-        if(activePlayer.getAbyssRank().getRank().getId() < minRank) {
-        	int descriptionId = AbyssRankEnum.getRankById(minRank).getDescriptionId();
-			PacketSendUtility.sendPacket(activePlayer, new SM_SYSTEM_MESSAGE(1300370, new DescriptionId(descriptionId))); //Wrong Abyys Rank
-        	return;
-        }
-        
+
+        System.out.println("Action " + action);
         switch (action) {
             case 0:
                 Item targetItem = activePlayer.getInventory().getItemByObjId(itemUniqueId);
