@@ -16,6 +16,7 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
+import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Equipment;
@@ -26,6 +27,7 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.utils.PacketSendUtility;
+import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
 /**
  * @author Avol modified by ATracer
@@ -60,12 +62,20 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
             return;
         }
         
+        int minRank = activePlayer.getInventory().getItemByObjId(itemUniqueId).getItemTemplate().getUseLimits().getMinRank();
+        
+        if(activePlayer.getAbyssRank().getRank().getId() < minRank) {
+        	int descriptionId = AbyssRankEnum.getRankById(minRank).getDescriptionId();
+			PacketSendUtility.sendPacket(activePlayer, new SM_SYSTEM_MESSAGE(1300370, new DescriptionId(descriptionId))); //Wrong Abyys Rank
+        	return;
+        }
+        
         switch (action) {
             case 0:
                 Item targetItem = activePlayer.getInventory().getItemByObjId(itemUniqueId);
                 if (targetItem == null) {
                 	return;
-                } else if(targetItem.getItemId() >= 187100023 && targetItem.getItemId() <= 187100030) {//Those Items wont work correct on 4.9.
+                } else if (targetItem.getItemId() >= 187100023 && targetItem.getItemId() <= 187100030) {//Those Items wont work correct on 4.9.
                 	return;
                 }
                 resultItem = equipment.equipItem(itemUniqueId, slotRead);
