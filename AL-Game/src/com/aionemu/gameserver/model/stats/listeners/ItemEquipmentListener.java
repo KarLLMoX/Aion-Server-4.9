@@ -235,9 +235,11 @@ public class ItemEquipmentListener {
                 }
             } else if (!isWeapon) {
                 // If the partbonus was not applied before, do it now
-                if (itempartbonus.getCount() <= itemSetPartsEquipped) {
-                    player.getGameStats().addEffect(itemSetTemplate, itempartbonus.getModifiers());
-                }
+           		if (itempartbonus.getCount() <= itemSetPartsEquipped) {
+           			if (itempartbonus.getModifiers() != null) {
+           				player.getGameStats().addEffect(itemSetTemplate, itempartbonus.getModifiers());
+           			}
+                } 
             }
         }
 
