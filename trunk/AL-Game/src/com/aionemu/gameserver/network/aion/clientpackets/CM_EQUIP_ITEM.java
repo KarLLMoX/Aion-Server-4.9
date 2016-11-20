@@ -16,7 +16,6 @@
  */
 package com.aionemu.gameserver.network.aion.clientpackets;
 
-import com.aionemu.gameserver.model.DescriptionId;
 import com.aionemu.gameserver.model.TaskId;
 import com.aionemu.gameserver.model.gameobjects.Item;
 import com.aionemu.gameserver.model.gameobjects.player.Equipment;
@@ -27,7 +26,6 @@ import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_UPDATE_PLAYER_APPEARANCE;
 import com.aionemu.gameserver.restrictions.RestrictionsManager;
 import com.aionemu.gameserver.utils.PacketSendUtility;
-import com.aionemu.gameserver.utils.stats.AbyssRankEnum;
 
 /**
  * @author Avol modified by ATracer
@@ -62,7 +60,6 @@ public class CM_EQUIP_ITEM extends AionClientPacket {
             return;
         }
 
-        System.out.println("Action " + action);
         switch (action) {
             case 0:
                 Item targetItem = activePlayer.getInventory().getItemByObjId(itemUniqueId);
