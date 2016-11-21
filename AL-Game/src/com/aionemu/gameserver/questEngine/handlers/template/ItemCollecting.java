@@ -171,7 +171,7 @@ public class ItemCollecting extends QuestHandler {
 							updateQuestStatus(env);
 							return sendQuestDialog(env, 5);
 						} else {
-							return sendQuestDialog(env, 10001);
+							return closeDialogWindow(env);
 						}
                     }
                     case FINISH_DIALOG: {
