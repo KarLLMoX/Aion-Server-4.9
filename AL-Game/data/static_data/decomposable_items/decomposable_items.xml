@@ -13689,41 +13689,35 @@
 	</decomposable>
 	<decomposable item_id="188051541" decomposable_name="Dye Bundle">
         <items>
-            <item id="169240002" name="Omblic Petal" count="5" race="ELYOS"/>
+			<item id="169240001" name="Wiki Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240008" name="Vinna Petal" count="5" race="ELYOS"/>
+            <item id="169240002" name="Omblic Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240010" name="Brommel Petal" count="5" race="ELYOS"/>
+            <item id="169240004" name="Ormea Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240011" name="Pressa Petal" count="5" race="ELYOS"/>
+            <item id="169240005" name="Tange Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240013" name="Kukar Petal" count="5" race="ELYOS"/>
+            <item id="169240006" name="Ervio Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240014" name="Leopis Petal" count="5" race="ELYOS"/>
+            <item id="169240008" name="Vinna Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240001" name="Wiki Petal" count="5" race="ASMODIANS"/>
+            <item id="169240010" name="Brommel Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240002" name="Omblic Petal" count="5" race="ASMODIANS"/>
+            <item id="169240011" name="Pressa Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240004" name="Ormea Petal" count="5" race="ASMODIANS"/>
+            <item id="169240013" name="Kukar Petal" count="5"/>
 		</items>
 		<items>
-            <item id="169240005" name="Tange Petal" count="5" race="ASMODIANS"/>
+            <item id="169240014" name="Leopis Petal" count="5"/>
 		</items>
-		<items>
-            <item id="169240006" name="Ervio Petal" count="5" race="ASMODIANS"/>
-		</items>
-		<items>
-            <item id="169240008" name="Vinna Petal" count="5" race="ASMODIANS"/>
-        </items>
     </decomposable>
 	<decomposable item_id="188051544" decomposable_name="Crystal and Elixir Bundle"/> <!-- NEW -->
 	<decomposable item_id="188051545" decomposable_name="Ore Bundle">
@@ -15516,14 +15510,10 @@
 	<decomposable item_id="188051649" decomposable_name="[Event] White Tiger Jade Crate">
 		<items>
 			<item id="160010011" name="[Event] Valiant Tiger Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010012" name="[Event] Valiant Tiger Candy" race="ASMODIANS"/>
 		</items>
 		<items>
 			<item id="160010013" name="[Event] Adoring Tiger Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010014" name="[Event] Adoring Tiger Candy" race="ASMODIANS"/>
 		</items>
 	</decomposable>
@@ -15914,14 +15904,10 @@
 	<decomposable item_id="188051701" decomposable_name="[Event] White Tiger Jade Crate">
 		<items>
 			<item id="160010115" name="[Event] Valiant Tiger Form Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010116" name="[Event] Valiant Tiger Form Candy" race="ASMODIANS"/>
 		</items>
 		<items>
 			<item id="160010117" name="[Event] Lovestruck Tiger Form Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010118" name="[Event] Lovestruck Tiger Form Candy" race="ASMODIANS"/>
 		</items>
 	</decomposable>
@@ -17311,32 +17297,22 @@
 	<decomposable item_id="188051868" decomposable_name="[Event] Strongest Inquin Form Candy Pouch">
 		<items>
 			<item id="160010283" name="Yellow Inquin Form Candy" race="ELYOS"/>
-		</items>
-		<items>
-			<item id="160010281" name="Gold Inquin Form Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010284" name="Yellow Inquin Form Candy" race="ASMODIANS"/>
 		</items>
 		<items>
+			<item id="160010281" name="Gold Inquin Form Candy" race="ELYOS"/>
 			<item id="160010282" name="Gold Inquin Form Candy" race="ASMODIANS"/>
 		</items>
 		<items>
 			<item id="160010285" name="Green Inquin Form Candy" race="ELYOS"/>
-		</items>
-		<items>
-			<item id="160010279" name="Red Inquin Form Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010286" name="Green Inquin Form Candy" race="ASMODIANS"/>
 		</items>
 		<items>
+			<item id="160010279" name="Red Inquin Form Candy" race="ELYOS"/>
 			<item id="160010280" name="Red Inquin Form Candy" race="ASMODIANS"/>
 		</items>
 		<items>
 			<item id="160010287" name="Violet Inquin Form Candy" race="ELYOS"/>
-		</items>
-		<items>
 			<item id="160010288" name="Violet Inquin Form Candy" race="ASMODIANS"/>
 		</items>
 	</decomposable>
@@ -28658,8 +28634,8 @@
 	<decomposable item_id="188052956" decomposable_name="[Event] Pirate's Tool Bundle">
 		<items chance="50.0">
 			<item id="160010326" name="Captain Harlock Form Candy" count="1" race="ASMODIANS"/>
-			<item id="160010328" name="Captain Harlock Form Candy" count="1" race="ASMODIANS"/>
 			<item id="160010325" name="Captain Harlock Form Candy" count="1" race="ELYOS"/>
+			<item id="160010328" name="Captain Harlock Form Candy" count="1" race="ASMODIANS"/>
 			<item id="160010327" name="Captain Harlock Form Candy" count="1" race="ELYOS"/>
 		</items>
 		<items chance="90.0">
@@ -31257,10 +31233,161 @@
 	<decomposable item_id="188053103" decomposable_name="Equipment Purification Material Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053104" decomposable_name="Talisman Recipe Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053105" decomposable_name="Equipment Purification Material Bundle"/> <!-- NEW -->
-	<decomposable item_id="188053106" decomposable_name="Ahserion's Weapon Box"/>
-	<decomposable item_id="188053107" decomposable_name="Ahserion's Armor Box"/>
-	<decomposable item_id="188053108" decomposable_name="Ahserion's Accessory Box"/>
-	<decomposable item_id="188053109" decomposable_name="Ahserion's Equipment Box"/>
+	<decomposable item_id="188053109" decomposable_name="Ahserion's Equipment Box">
+		<items>
+            <item id="188053106" name="Ahserion's Weapon Box"/>
+		</items>
+		<items>
+            <item id="188053107" name="Ahserion's Armor Box"/>
+		</items>
+		<items>
+			<item id="188053108" name="Ahserion's Accessory Box"/>
+		</items>
+	</decomposable>
+	<decomposable item_id="188053106" decomposable_name="Ahserion's Weapon Box">
+		<items>
+            <item id="100001684" name="Awakened Ahserion's Sword"/>
+		</items>
+		<items>
+            <item id="100201457" name="Awakened Ahserion's Dagger"/>
+		</items>
+		<items>
+            <item id="100901312" name="Awakened Ahserion's Greatsword"/>
+		</items>
+		<items>
+            <item id="101301217" name="Awakened Ahserion's Polearm"/>
+		</items>
+		<items>
+            <item id="101701321" name="Awakened Ahserion's Bow"/>
+		</items>
+		<items>
+            <item id="115001704" name="Awakened Ahserion's Shield"/>
+		</items>
+		<items>
+            <item id="100101283" name="Awakened Ahserion's Mace"/>
+		</items>
+		<items>
+            <item id="101501306" name="Awakened Ahserion's Staff"/>
+		</items>
+		<items>
+            <item id="100501270" name="Awakened Ahserion's Orb"/>
+		</items>
+		<items>
+            <item id="100601380" name="Awakened Ahserion's Spellbook"/>
+		</items>
+		<items>
+            <item id="101801172" name="Awakened Ahserion's Pistol"/>
+		</items>
+		<items>
+            <item id="101901083" name="Awakened Ahserion's Aethercannon"/>
+		</items>
+		<items>
+            <item id="102001199" name="Awakened Ahserion's Harp"/>
+		</items>
+		<items>
+            <item id="102101005" name="Awakened Ahserion's Cipher-Blade"/>
+		</items>
+	</decomposable>
+	<decomposable item_id="188053107" decomposable_name="Ahserion's Armor Box">
+		<items>
+            <item id="110601562" name="Awakened Ahserion's Breastplate"/>
+		</items>
+		<items>
+            <item id="113601508" name="Awakened Ahserion's Greaves"/>
+		</items>
+		<items>
+            <item id="111601525" name="Awakened Ahserion's Gauntlets"/>
+		</items>
+		<items>
+            <item id="114601515" name="Awakened Ahserion's Sabatons"/>
+		</items>
+		<items>
+            <item id="112601507" name="Awakened Ahserion's Shoulderplates"/>
+		</items>
+		<items>
+            <item id="125004009" name="Awakened Ahserion's Helm"/>
+		</items>
+		<items>
+            <item id="110301757" name="Awakened Ahserion's Jerkin"/>
+		</items>
+		<items>
+            <item id="113301726" name="Awakened Ahserion's Breeches"/>
+		</items>
+		<items>
+            <item id="111301695" name="Awakened Ahserion's Vambrace"/>
+		</items>
+		<items>
+            <item id="114301763" name="Awakened Ahserion's Boots"/>
+		</items>
+		<items>
+            <item id="112301634" name="Awakened Ahserion's Shoulderguards"/>
+		</items>
+		<items>
+            <item id="125004011" name="Awakened Ahserion's Hat"/>
+		</items>
+		<items>
+            <item id="110551090" name="Awakened Ahserion's Hauberk"/>
+		</items>
+		<items>
+            <item id="113501667" name="Awakened Ahserion's Chausses"/>
+		</items>
+		<items>
+            <item id="111501649" name="Awakened Ahserion's Handguards"/>
+		</items>
+		<items>
+            <item id="114501677" name="Awakened Ahserion's Brogans"/>
+		</items>
+		<items>
+            <item id="112501588" name="Awakened Ahserion's Spaulders"/>
+		</items>
+		<items>
+            <item id="125004010" name="Awakened Ahserion's Chain Helm"/>
+		</items>
+		<items>
+            <item id="110101772" name="Awakened Ahserion's Tunic"/>
+		</items>
+		<items>
+            <item id="113101604" name="Awakened Ahserion's Leggings"/>
+		</items>
+		<items>
+            <item id="111101592" name="Awakened Ahserion's Gloves"/>
+		</items>
+		<items>
+            <item id="114101638" name="Awakened Ahserion's Shoes"/>
+		</items>
+		<items>
+            <item id="112101542" name="Awakened Ahserion's Pauldrons"/>
+		</items>
+		<items>
+            <item id="125004012" name="Awakened Ahserion's Headband"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053108" decomposable_name="Ahserion's Accessory Box">
+        <items>
+            <item id="121001375" name="Awakened Ahserion's Opal Necklace"/>
+		</items>
+		<items>
+            <item id="120001503" name="Awakened Ahserion's Opal Earrings"/>
+		</items>
+		<items>
+            <item id="122001644" name="Awakened Ahserion's Opal Ring"/>
+		</items>
+		<items>
+            <item id="123001421" name="Awakened Ahserion's Leather Belt"/>
+		</items>
+		<items>
+            <item id="121001376" name="Awakened Ahserion's Nolan Necklace"/>
+		</items>
+		<items>
+            <item id="120001504" name="Awakened Ahserion's Nolan Earrings"/>
+		</items>
+		<items>
+            <item id="122001645" name="Awakened Ahserion's Nolan Ring"/>
+		</items>
+		<items>
+            <item id="123001422" name="Awakened Ahserion's Sash"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053110" decomposable_name="Ahserion's Flight Battlefield Material Bundle">
         <items>
             <item id="152012598" name="Heart of Destruction" count="2"/>
@@ -31291,16 +31418,12 @@
 	<decomposable item_id="188053116" decomposable_name="Ahserion's Flight Recharger Bundle">
         <items>
             <item id="168310016" name="Major Deep Conditioning: Level 2" race="ELYOS"/>
+			<item id="168310017" name="Major Deep Conditioning: Level 2" race="ASMODIANS"/>
 		</items>
 		<items>
             <item id="168310018" name="Major Blessed Augment: Level 2" race="ELYOS"/>
+			<item id="168310019" name="Major Blessed Augment: Level 2" race="ASMODIANS"/>
 		</items>
-		<items>
-            <item id="168310017" name="Major Deep Conditioning: Level 2" race="ASMODIANS"/>
-		</items>
-		<items>
-            <item id="168310019" name="Major Blessed Augment: Level 2" race="ASMODIANS"/>
-        </items>
     </decomposable>
 	<decomposable item_id="188053117" decomposable_name="Ahserion's Glory Reward Box">
         <items>
@@ -37752,10 +37875,10 @@
             <item id="186000238" name="Conqueror's Mark"/>
 		</items>
 		<items>
-            <item id="186000236" name="Blood Mark" race="ASMODIANS"/>
+            <item id="186000236" name="Blood Mark"/>
 		</items>
 		<items>
-            <item id="186000399" name="Honorable Conqueror's Mark" race="ASMODIANS"/>
+            <item id="186000399" name="Honorable Conqueror's Mark"/>
         </items>
     </decomposable>
 	<decomposable item_id="188053689" decomposable_name="Inggison Conqueror's Mark Box">
@@ -37763,10 +37886,10 @@
             <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="3"/>
 		</items>
 		<items>
-            <item id="186000236" name="Blood Mark" race="ASMODIANS"/>
+            <item id="186000236" name="Blood Mark"/>
 		</items>
 		<items>
-            <item id="186000399" name="Honorable Conqueror's Mark" race="ASMODIANS"/>
+            <item id="186000399" name="Honorable Conqueror's Mark"/>
         </items>
     </decomposable>
 	<decomposable item_id="188053690" decomposable_name="Inggison Greater Conqueror's Mark Box">
@@ -37774,10 +37897,10 @@
             <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="5"/>
 		</items>
 		<items>
-            <item id="186000236" name="Blood Mark" race="ASMODIANS"/>
+            <item id="186000236" name="Blood Mark"/>
 		</items>
 		<items>
-            <item id="186000399" name="Honorable Conqueror's Mark" race="ASMODIANS"/>
+            <item id="186000399" name="Honorable Conqueror's Mark"/>
         </items>
     </decomposable>
 	<decomposable item_id="188053691" decomposable_name="Gelkmaros Lesser Conqueror's Mark Box">
@@ -37785,10 +37908,10 @@
             <item id="186000238" name="Conqueror's Mark"/>
 		</items>
 		<items>
-            <item id="186000236" name="Blood Mark" race="ELYOS"/>
+            <item id="186000236" name="Blood Mark"/>
 		</items>
 		<items>
-            <item id="186000399" name="Honorable Conqueror's Mark" race="ELYOS"/>
+            <item id="186000399" name="Honorable Conqueror's Mark"/>
         </items>
     </decomposable>
 	<decomposable item_id="188053692" decomposable_name="Gelkmaros Conqueror's Mark Box">
@@ -37796,10 +37919,10 @@
             <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="3"/>
 		</items>
 		<items>
-            <item id="186000236" name="Blood Mark" race="ELYOS"/>
+            <item id="186000236" name="Blood Mark"/>
 		</items>
 		<items>
-            <item id="186000399" name="Honorable Conqueror's Mark" race="ELYOS"/>
+            <item id="186000399" name="Honorable Conqueror's Mark"/>
         </items>
     </decomposable>
 	<decomposable item_id="188053693" decomposable_name="Gelkmaros Greater Conqueror's Mark Box">
@@ -37807,10 +37930,10 @@
             <item id="186000238" name="Conqueror's Mark" rnd_min="1" rnd_max="5"/>
 		</items>
 		<items>
-            <item id="186000236" name="Blood Mark" race="ELYOS"/>
+            <item id="186000236" name="Blood Mark"/>
 		</items>
 		<items>
-            <item id="186000399" name="Honorable Conqueror's Mark" race="ELYOS"/>
+            <item id="186000399" name="Honorable Conqueror's Mark"/>
         </items>
     </decomposable>
 	<decomposable item_id="188053694" decomposable_name="Ride Box of Conquest">
@@ -41398,16 +41521,12 @@
 	<decomposable item_id="188054222" decomposable_name="Sea and Wave Hairpin Box">
         <items>
             <item id="125004300" name="Deep Sea Feast Hairpin" race="ELYOS"/>
+			<item id="125004300" name="Deep Sea Feast Hairpin" race="ASMODIANS"/>
 		</items>
 		<items>
             <item id="125004301" name="Wave Song Hairpin" race="ELYOS"/>
+			<item id="125004301" name="Wave Song Hairpin" race="ASMODIANS"/>
 		</items>
-		<items>
-            <item id="125004300" name="Deep Sea Feast Hairpin" race="ASMODIANS"/>
-		</items>
-		<items>
-            <item id="125004301" name="Wave Song Hairpin" race="ASMODIANS"/>
-        </items>
     </decomposable>
 	<decomposable item_id="188054223" decomposable_name="Shining Ornate Ruby Glasses Box">
         <items>
@@ -44215,9 +44334,25 @@
         </items>
     </decomposable>
 	<decomposable item_id="188055322" decomposable_name="Ahserion's Weapon Box"/> <!-- NEW -->
-	<decomposable item_id="188100065" decomposable_name="[Event] Harvest Revel Pumpkin Clothes Set Bundle (6 hours)"/> <!-- NEW -->
-	<decomposable item_id="188100066" decomposable_name="[Event] Enchanting Sorcerer Robe Set Bundle (6 hours)"/> <!-- NEW -->
-	<decomposable item_id="188100067" decomposable_name="[Event] Velvet Sorcerer Clothes Bundle (6 hours)"/> <!-- NEW -->
+	<decomposable item_id="188100065" decomposable_name="[Event] Harvest Revel Pumpkin Clothes Set Bundle (6 hours)">
+		<items>
+			<item id="110900376" name="[Event] Harvest Revel Pumpkin Clothes (6 hours)"/>
+			<item id="111000047" name="[Event] Harvest Revel Pumpkin Gloves (6 hours)"/>
+			<item id="114000051" name="[Event] Harvest Revel Pumpkin Shoes (6 hours)"/>
+		</items>
+	</decomposable>
+	<decomposable item_id="188100066" decomposable_name="[Event] Enchanting Sorcerer Robe Set Bundle (6 hours)">
+		<items>
+			<item id="110900378" name="[Event] Enchanting Sorcerer Robe (6 hours)"/>
+			<item id="114000052" name="[Event] Enchanting Sorcerer Shoes (6 hours)"/>
+			<item id="111000048" name="[Event] Enchanting Sorcerer Gloves (6 hours)"/>
+		</items>
+	</decomposable>
+	<decomposable item_id="188100067" decomposable_name="[Event] Velvet Sorcerer Clothes Bundle (6 hours)">
+		<items>
+			<item id="110900377" name="[Event] Velvet Sorcerer Clothes (6 hours)"/>
+		</items>
+	</decomposable>
 	<decomposable item_id="188710071" decomposable_name="Value Boost Pack I">
 		<items>
 			<item id="162001020" name="[Event] Tea of Repose - 10% Recovery" count="10"/>
@@ -44227,5 +44362,9 @@
 			<item id="164002237" name="Greater Awakening Scroll (10 Minutes)" count="5"/>
 		</items>
 	</decomposable>
-	<decomposable item_id="188710084" decomposable_name="Coin Crate"/> <!-- NEW -->
+	<decomposable item_id="188710084" decomposable_name="Coin Crate">
+		<items>
+			<item id="182006999" name="Shugo Coin" count="5"/>
+		</items>
+	</decomposable>
 </decomposable_items>
