@@ -28,13 +28,25 @@ public class PortalRentusAI2 extends NpcAI2 {
 
 	@Override
 	protected void handleDialogStart(Player player) {
-		if (player.getLevel() >= 55 && player.getLevel() <= 62) {
-		    PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 10));
-		} else if (player.getLevel() >= 63 && player.getLevel() <= 65) {
-		    PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 1011));
-		} else {
-            PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
-			PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
-        }
+		 switch (getNpcId()) {
+		 	case 832991: {
+		 		if (player.getLevel() < 57) {
+		 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
+		 		} else {
+		 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 10));
+		 		}
+		 		break;
+		 	}
+		 	case 832992: {
+		 		if (player.getLevel() < 65) {
+		 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getObjectId(), 27));
+					PacketSendUtility.sendPacket(player, SM_SYSTEM_MESSAGE.STR_MSG_CANT_INSTANCE_ENTER_LEVEL);
+		 		} else {
+		 			PacketSendUtility.sendPacket(player, new SM_DIALOG_WINDOW(getOwner().getObjectId(), 1011));
+		 		}
+		 		break;
+			}
+		 }
 	}
 }
