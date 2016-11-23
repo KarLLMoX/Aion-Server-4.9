@@ -2055,4 +2055,8 @@
 	<chest npcid="833660">
         <keyitem id="1" itemid="0" quantity="1"/>
     </chest>
+	<!-- Rentus Quality Supplies Storage Box -->
+	<chest npcid="833048">
+        <keyitem id="1" itemid="185000229" quantity="1"/>
+    </chest>
 </chest_templates>
