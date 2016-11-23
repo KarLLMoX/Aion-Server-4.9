@@ -799,5 +799,22 @@
         <drop_group name="KINAH" use_category="true" race="PC_ALL">
             <drop item_id="182400001" chance="10.00" min_amount="1" max_amount="22113" no_reduce="false" eachmember="false" name="Kinah" />
         </drop_group>
+	</npc_drop>
+	<!-- Rentus Quality Supplies Storage Box -->
+	<npc_drop npc_id="833048">
+		<drop_group name="VASHARTI'S EQUIPMENT BOX" use_category="true" race="PC_ALL">
+			<drop item_id="188053702" chance="10" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti's Equipment Box" />
+        </drop_group>
+		<drop_group name="SUPPLIES" use_category="true" race="PC_ALL">
+            <drop item_id="188053706" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="true" name="Rentus Base Supplies" />
+        </drop_group>
+		<drop_group name="ARMOR" use_category="true" race="PC_ALL">
+			<drop item_id="125004272" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti Legionnaire's Cloth Hat" />
+			<drop item_id="125004268" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti Legionnaire's Magic Chain Helm" />
+			<drop item_id="125004269" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti Legionnaire's Magic Chain Helm" />
+			<drop item_id="125004270" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti Legionnaire's Magic Hat" />
+			<drop item_id="125004271" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti Legionnaire's Magic Hat" />
+			<drop item_id="125004267" chance="100" min_amount="1" max_amount="1" no_reduce="false" eachmember="false" name="Vasharti Legionnaire's Plate Helmet" />
+        </drop_group>
     </npc_drop>
 </npc_drops>
