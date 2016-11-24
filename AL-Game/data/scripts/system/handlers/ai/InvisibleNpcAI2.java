@@ -21,37 +21,34 @@ import ai.AggressiveNpcAI2;
 import com.aionemu.gameserver.ai2.AIName;
 import com.aionemu.gameserver.ai2.AI2Actions;
 import com.aionemu.gameserver.model.gameobjects.Creature;
-import com.aionemu.gameserver.model.gameobjects.state.CreatureVisualState;
 
 /**
  * @author xTz
+ * @rework FrozenKiller
  */
-@AIName("invisible_npc")
+@AIName("invisible_npc")//211172,211198,212112,211231,211233,211246
 public class InvisibleNpcAI2 extends AggressiveNpcAI2
 {
     @Override
     public void handleSpawned() {
         super.handleSpawned();
-        if (!isAlreadyDead()) {
-        	AI2Actions.useSkill(InvisibleNpcAI2.this, 19493); 
-        	getOwner().setVisualState(CreatureVisualState.HIDE1);
+    	if (!isAlreadyDead()) {
+        	AI2Actions.useSkill(InvisibleNpcAI2.this, 18621); 
         }
     }
 	
     @Override
     protected void handleAttack(Creature creature) {
         super.handleAttack(creature);
-        getEffectController().removeEffect(19493); 
-        getOwner().unsetVisualState(CreatureVisualState.HIDE1);
+        getEffectController().removeEffect(18621); 
         getOwner().getEffectController().removeAllEffects();
     }
     
     @Override
-	protected void handleBackHome() {
-    	super.handleBackHome();
+	protected void handleTargetGiveup() {
+    	super.handleTargetGiveup();
     	if (!isAlreadyDead()) {
-        	AI2Actions.useSkill(InvisibleNpcAI2.this, 19493);
-        	getOwner().setVisualState(CreatureVisualState.HIDE1);
+        	AI2Actions.useSkill(InvisibleNpcAI2.this, 18621);
         }
 	}
 }
