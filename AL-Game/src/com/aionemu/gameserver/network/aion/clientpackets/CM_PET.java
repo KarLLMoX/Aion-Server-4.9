@@ -67,13 +67,17 @@ public class CM_PET extends AionClientPacket {
 
     //Buff
     private int activateCheering;
-    private int unkCheer2;
-    private int unkCheer3;
+    @SuppressWarnings("unused")
+	private int unkCheer2;
+    @SuppressWarnings("unused")
+	private int unkCheer3;
 
     //Merchand
     private int activateAutoSell;
-    private int unkMerchand2;
-    private int unkMerchand3;
+    @SuppressWarnings("unused")
+	private int unkMerchand2;
+    @SuppressWarnings("unused")
+	private int unkMerchand3;
 
     public CM_PET(int opcode, State state, State... restStates) {
         super(opcode, state, restStates);
