@@ -37,6 +37,8 @@ public class ReportTo extends QuestHandler {
     private final Set<Integer> startNpcs = new HashSet<Integer>();
     private final Set<Integer> endNpcs = new HashSet<Integer>();
     private final int itemId;
+    private final int startDialogId;
+    private final int startDialogId2;
 
     /**
      * @param id
@@ -44,7 +46,7 @@ public class ReportTo extends QuestHandler {
      * @param endNpcIds
      * @param itemId2
      */
-    public ReportTo(int questId, List<Integer> startNpcIds, List<Integer> endNpcIds, int itemId) {
+    public ReportTo(int questId, List<Integer> startNpcIds, List<Integer> endNpcIds, int startDialogId, int startDialogId2, int itemId) {
         super(questId);
         startNpcs.addAll(startNpcIds);
         startNpcs.remove(0);
@@ -52,6 +54,8 @@ public class ReportTo extends QuestHandler {
             endNpcs.addAll(endNpcIds);
             endNpcs.remove(0);
         }
+        this.startDialogId = startDialogId;
+        this.startDialogId2 = startDialogId2;
         this.itemId = itemId;
     }
 
@@ -81,7 +85,11 @@ public class ReportTo extends QuestHandler {
             if (startNpcs.isEmpty() || startNpcs.contains(targetId)) {
                 switch (dialog) {
                     case QUEST_SELECT: {
-                        return sendQuestDialog(env, 1011);
+                    	if (startDialogId != 0) {
+							return sendQuestDialog(env, startDialogId);	
+						} else {
+							return sendQuestDialog(env, 1011);
+						}
                     }
                     case QUEST_ACCEPT_1:
                     case QUEST_ACCEPT_SIMPLE: {
@@ -102,9 +110,13 @@ public class ReportTo extends QuestHandler {
         } else if (qs.getStatus() == QuestStatus.START) {
 			if (endNpcs.contains(targetId)) {
                 switch (dialog) {
-                    case QUEST_SELECT: {
-                        return sendQuestDialog(env, 2375);
-                    }
+                	case QUEST_SELECT: {
+                		if (startDialogId2 != 0) {
+                			return sendQuestDialog(env, startDialogId2);	
+                		} else {
+                			return sendQuestDialog(env, 2375);
+                		}
+                	}
                     case SELECT_QUEST_REWARD: {
                         if (itemId != 0) {
                             if (player.getInventory().getItemCountByItemId(itemId) < 1) {
