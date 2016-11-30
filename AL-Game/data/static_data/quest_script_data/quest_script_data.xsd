@@ -289,6 +289,8 @@
             <xs:extension base="QuestScriptData">
                 <xs:attribute name="start_npc_ids" type="IntListType" use="required"/>
                 <xs:attribute name="end_npc_ids" type="IntListType" use="required"/>
+				<xs:attribute name="start_dialog_id" type="xs:int" default="0"/>
+                <xs:attribute name="start_dialog_id2" type="xs:int" default="0"/>
                 <xs:attribute name="item_id" type="xs:int" default="0"/>
             </xs:extension>
         </xs:complexContent>

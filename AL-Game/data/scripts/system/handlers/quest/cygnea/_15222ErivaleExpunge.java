@@ -26,6 +26,7 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author pralinka
+ * @rework FrozenKiller
  */
 public class _15222ErivaleExpunge extends QuestHandler {
 
@@ -46,9 +47,20 @@ public class _15222ErivaleExpunge extends QuestHandler {
 	@Override
 	public boolean onKillInWorldEvent(QuestEnv env) {
 		Player player = env.getPlayer();
+		QuestState qs = player.getQuestStateList().getQuestState(questId);
 		if (env.getVisibleObject() instanceof Player && player != null && player.isInsideZone(ZoneName.get("TWILIGHT_TEMPLE_210070000"))) {
 			if ((env.getPlayer().getLevel() >= (((Player)env.getVisibleObject()).getLevel() - 5)) && (env.getPlayer().getLevel() <= (((Player)env.getVisibleObject()).getLevel() + 9))) {
-				return defaultOnKillRankedEvent(env, 0, 2, true);
+				int var = qs.getQuestVarById(1);
+				if (var < 1) {
+					qs.setQuestVarById(1, 1);
+					updateQuestStatus(env);
+					return true;
+				} else {
+					qs.setQuestVarById(0, 1);
+					qs.setStatus(QuestStatus.REWARD);
+                    updateQuestStatus(env);
+                    return true;
+				}
 			}
 		}
 		return false;
@@ -67,12 +79,14 @@ public class _15222ErivaleExpunge extends QuestHandler {
                         return sendQuestDialog(env, 4762);
                     case QUEST_ACCEPT_SIMPLE:
                         return sendQuestStartDialog(env);
+					case QUEST_REFUSE_SIMPLE:
+						return closeDialogWindow(env);
 				default:
 					break;
                 }
             } else if (qs.getStatus() == QuestStatus.REWARD) {
                 if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1352);
+                    return sendQuestDialog(env, 10002);
                 } else {
                     return sendQuestEndDialog(env);
                 }
