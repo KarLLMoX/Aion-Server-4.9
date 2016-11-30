@@ -33918,10 +33918,71 @@
 	<decomposable item_id="188053273" decomposable_name="Lannok's Fabled Accessory Box"/> <!-- NEW -->
 	<decomposable item_id="188053274" decomposable_name="Triroan's Fabled Weapon Box"/> <!-- NEW -->
 	<decomposable item_id="188053275" decomposable_name="Lannok's Fabled Weapon Box"/> <!-- NEW -->
-	<decomposable item_id="188053290" decomposable_name="Vanuka's Fabled Accessory Box"/> <!-- NEW -->
-	<decomposable item_id="188053295" decomposable_name="Empyrean Plume Chest"/> <!-- NEW -->
-	<decomposable item_id="188053296" decomposable_name="Divine Fortress Siege Defense Reward Box"/> <!-- NEW -->
-	<decomposable item_id="188053297" decomposable_name="Expeditionary Force Supply Box"/> <!-- NEW -->
+	<decomposable item_id="188053290" decomposable_name="Vanuka's Fabled Accessory Box">
+        <items>
+            <item id="122001039" name="Noah's Tears"/>
+		</items>
+		<items>
+            <item id="122001040" name="Elder's Tears"/>
+		</items>
+		<items>
+            <item id="120000902" name="Earrings of Ascending"/>
+		</items>
+		<items>
+            <item id="120000903" name="Atmach's Earrings"/>
+		</items>
+		<items>
+            <item id="123000929" name="Brigade General Anuhart's Leather Belt"/>
+		</items>
+		<items>
+            <item id="123000930" name="Brigade General Anuhart's Sash"/>
+		</items>
+		<items>
+            <item id="121000820" name="Dragon Flame Diamond Necklace"/>
+		</items>
+		<items>
+            <item id="121000821" name="Dragon Flame Sapphire Necklace"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053295" decomposable_name="Empyrean Plume Chest">
+      <items>
+            <item id="187100015" name="Kaisinel's Plume: Attack" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="187100019" name="Kaisinel's Plume: Crit. Strike" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="187100016" name="Kaisinel's Plume: Magic Boost" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="187100020" name="Kaisinel's Plume: Magic. Accuracy" race="ELYOS"/>
+		</items>
+		<items>
+            <item id="187100017" name="Marchutan's Plume: Attack" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="187100021" name="Marchutan's Plume: Crit. Strike" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="187100018" name="Marchutan's Plume: Magic Boost" race="ASMODIANS"/>
+		</items>
+		<items>
+            <item id="187100022" name="Marchutan's Plume: Magic. Accuracy" race="ASMODIANS"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053296" decomposable_name="Divine Fortress Siege Defense Reward Box">
+        <items>
+            <item id="186000242" name="Ceranium Medal"/>
+        </items>
+    </decomposable>
+	<decomposable item_id="188053297" decomposable_name="Expeditionary Force Supply Box">
+        <items>
+            <item id="188053298" name="Manastone Bundle of the Expedition Troop"/>
+		</items>
+		<items>
+            <item id="188053299" name="Expedition Troop Bundle"/>
+        </items>
+    </decomposable>
 	<decomposable item_id="188053298" decomposable_name="Expeditionary Force Manastone Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053299" decomposable_name="Expeditionary Force Supplement Bundle"/> <!-- NEW -->
 	<decomposable item_id="188053300" decomposable_name="Expeditionary Force Ceramium Medal Box"/> <!-- NEW -->
