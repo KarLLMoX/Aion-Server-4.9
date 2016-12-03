@@ -45,11 +45,11 @@ public class SM_CONQUEROR_PROTECTOR extends AionServerPacket {
         GameServer.log.info("Sending SM_SERIAL_KILLER Type: "+type+ " Players Size: "+players.size());
     }
 
-    public SM_CONQUEROR_PROTECTOR(Player player, boolean isProtector, boolean broadcastPacket, int buffLvl){
+    public SM_CONQUEROR_PROTECTOR(Player player, boolean isProtector, boolean broadcastPacket, int buffLvl) {
         this.player = player;
-        if (broadcastPacket){
+        if (broadcastPacket) {
             this.type = isProtector ? 9 : 6;
-        }else{
+        } else {
             this.type = isProtector ? 8 : 1;
         }
         this.debuffLvl = buffLvl;
@@ -98,13 +98,20 @@ public class SM_CONQUEROR_PROTECTOR extends AionServerPacket {
 */                    writeH(4); // unk
                 }
                 break;    
-/*            case 5: // Intruder Radar
+            case 5: // Intruder Radar
                 writeH(players.size());
-                for (Player player : players) 
-                {
-                	
+                for (Player player : players) {
+                    writeD(player.getConquerorProtectorData().getConquerorBuffLevel());
+                    writeD(player.getObjectId());
+                    writeD(0x01); // unk
+                    writeD(player.getAbyssRank().getRank().getId());
+                    writeH(player.getLevel());
+                    writeF(player.getX());
+                    writeF(player.getY());
+                    writeS(player.getName(), 134);
+                    writeH(0); // unk
                 }
-                break;  
-*/        }
+                break;
+        }
     }
 }
