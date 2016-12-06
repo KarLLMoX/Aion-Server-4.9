@@ -27,7 +27,7 @@ import com.aionemu.gameserver.services.QuestService;
 
 /**
  * @author Cheatkiller
- *
+ * @rework FrozenKiller
  */
 public class _2284EscapingAsmodae extends QuestHandler {
 
@@ -58,40 +58,59 @@ public class _2284EscapingAsmodae extends QuestHandler {
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
             if (targetId == 203645) {
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1011);
-                } else {
-                    return sendQuestStartDialog(env);
-                }
+            	switch (dialog) {
+            		case QUEST_SELECT: {
+            			return sendQuestDialog(env, 1011);
+            		}
+				default:
+					return sendQuestStartDialog(env);
+            	}
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if (targetId == 798040) {
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1352);
-                } else if (dialog == DialogAction.SETPRO2) {
-                    if (env.getVisibleObject() instanceof Npc) {
-                        targetId = ((Npc) env.getVisibleObject()).getNpcId();
-                        Npc npc = (Npc) env.getVisibleObject();
-                        npc.getController().onDelete();
-                        QuestService.addNewSpawn(npc.getWorldId(), npc.getInstanceId(), 798041, 2553.9f, 916.9f,
-                                311.8f, (byte) 82);
-                        return defaultCloseDialog(env, 0, 1);
-                    }
-                }
-            } else if (targetId == 798041) {
-                if (dialog == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1693);
-                } else if (dialog == DialogAction.SETPRO3) {
-                    return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 798034, 1, 2);
-                }
-            }
+        	switch (targetId) {
+        		case 798040: {
+        	      	switch (dialog) {
+        	      		case QUEST_SELECT: {
+        	      			return sendQuestDialog(env, 1352);
+        	      		}
+        	      		case SETPRO2: {
+        	      			if (env.getVisibleObject() instanceof Npc) {
+        	      				targetId = ((Npc) env.getVisibleObject()).getNpcId();
+        	      				Npc npc = (Npc) env.getVisibleObject();
+        	      				npc.getController().onDelete();
+        	      				QuestService.addNewSpawn(npc.getWorldId(), npc.getInstanceId(), 798041, 2553.9f, 916.9f, 311.8f, (byte) 82);
+        	      				return defaultCloseDialog(env, 0, 1);
+        	      			}
+        	      		}
+					default:
+						break;
+        	      	}
+        		}
+        		case 798041: {
+        			switch (dialog) {
+        				case QUEST_SELECT: {
+        					return sendQuestDialog(env, 1693);
+        				}
+        				case SETPRO3: {
+        					return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 798034, 1 , 2);
+        				}
+					default:
+						break;
+        			}
+        		}
+        	}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
             if (targetId == 798034) {
-                if (env.getDialogId() == DialogAction.SELECT_QUEST_REWARD.id()) {
-                    return sendQuestDialog(env, 10002);
-                } else {
-                    return sendQuestEndDialog(env);
-                }
+            	switch (dialog) {
+            		case USE_OBJECT: {
+            			return sendQuestDialog(env, 2034);
+            		}
+            		case SELECT_QUEST_REWARD: {
+            			return sendQuestDialog(env, 5);
+            		}
+				default:
+					return sendQuestEndDialog(env);
+            	}
             }
         }
         return false;
@@ -113,7 +132,7 @@ public class _2284EscapingAsmodae extends QuestHandler {
 
     @Override
     public boolean onNpcReachTargetEvent(QuestEnv env) {
-        return defaultFollowEndEvent(env, 2, 2, true); // reward
+        return defaultFollowEndEvent(env, 2, 2, true); // Reward
     }
 
     @Override
