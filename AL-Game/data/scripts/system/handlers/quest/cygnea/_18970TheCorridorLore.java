@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author pralinka
+ * @rework ddmbest88
  */
 public class _18970TheCorridorLore extends QuestHandler {
 
@@ -36,10 +37,9 @@ public class _18970TheCorridorLore extends QuestHandler {
 
     @Override
     public void register() {
-		qe.registerQuestNpc(804709).addOnQuestStart(questId);
-		qe.registerQuestNpc(805213).addOnTalkEvent(questId);
-		qe.registerQuestNpc(805214).addOnTalkEvent(questId);
-		qe.registerQuestNpc(805215).addOnTalkEvent(questId);
+      qe.registerQuestNpc(804709).addOnQuestStart(questId);
+      qe.registerQuestNpc(804865).addOnTalkEvent(questId);
+      qe.registerQuestNpc(805215).addOnTalkEvent(questId);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class _18970TheCorridorLore extends QuestHandler {
                 }
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if ((targetId == 805213) || (targetId == 805214) || (targetId == 805215)) {
+            if ((targetId == 804865) || (targetId == 805215)) {
                 if (env.getDialog() == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 10002);
                 } else if (env.getDialog() == DialogAction.SELECT_QUEST_REWARD) {
@@ -66,10 +66,10 @@ public class _18970TheCorridorLore extends QuestHandler {
                 }
             }
         } else if (qs.getStatus() == QuestStatus.REWARD) {
-            if ((targetId == 805213) || (targetId == 805214) || (targetId == 805215)) {
+            if ((targetId == 804865) || (targetId == 805215)) {
                 return sendQuestEndDialog(env);
             }
         } 
         return false;
-    }
+	}
 }
