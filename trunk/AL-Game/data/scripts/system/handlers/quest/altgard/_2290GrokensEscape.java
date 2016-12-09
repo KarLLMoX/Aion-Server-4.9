@@ -26,10 +26,9 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 import com.aionemu.gameserver.services.QuestService;
 
 /**
- * Escort Groken (203608) to the sailboat (700178). Talk with Manir (203607).
- *
  * @author Mr. Poke
  * @reworked vlog
+ * @rework FrozenKiller
  */
 public class _2290GrokensEscape extends QuestHandler {
 
@@ -42,67 +41,80 @@ public class _2290GrokensEscape extends QuestHandler {
     @Override
     public void register() {
         qe.registerQuestNpc(203608).addOnQuestStart(questId);
-        qe.registerOnLogOut(questId);
         qe.registerQuestNpc(203608).addOnTalkEvent(questId);
-        qe.registerQuestNpc(700178).addOnTalkEvent(questId);
         qe.registerQuestNpc(203607).addOnTalkEvent(questId);
         qe.registerAddOnReachTargetEvent(questId);
         qe.registerAddOnLostTargetEvent(questId);
+        qe.registerOnLogOut(questId);
     }
-
+    
     @Override
     public boolean onDialogEvent(final QuestEnv env) {
-        final Player player = env.getPlayer();
-        int targetId = 0;
-        if (env.getVisibleObject() instanceof Npc) {
-            targetId = ((Npc) env.getVisibleObject()).getNpcId();
-        }
-        final QuestState qs = player.getQuestStateList().getQuestState(questId);
+        Player player = env.getPlayer();
+        QuestState qs = player.getQuestStateList().getQuestState(questId);
+        DialogAction dialog = env.getDialog();
+        int targetId = env.getTargetId();
 
         if (qs == null || qs.getStatus() == QuestStatus.NONE) {
-            if (targetId == 203608) { // Groken
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 1011);
-                }
-                if (env.getDialogId() == DialogAction.ASK_QUEST_ACCEPT.id()) {
-                    return sendQuestDialog(env, 4);
-                }
-                if (env.getDialogId() == DialogAction.QUEST_ACCEPT_1.id()) {
-                    return sendQuestDialog(env, 1003);
-                }
-                if (env.getDialogId() == DialogAction.QUEST_REFUSE_1.id()) {
-                    return sendQuestDialog(env, 1004);
-                }
-                if (env.getDialogId() == DialogAction.FINISH_DIALOG.id()) {
-                    return sendQuestSelectionDialog(env);
-                }
-                if (env.getDialogId() == DialogAction.SELECT_ACTION_1012.id()) {
-                    if (QuestService.startQuest(env)) {
-                        return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 700178, 0, 1); // 1
-                    }
-                } else {
-                    return sendQuestStartDialog(env);
-                }
+            if (targetId == 203608) { //Groken
+            	switch (dialog) {
+            		case QUEST_SELECT: {
+            			return sendQuestDialog(env, 1011);
+            		}
+            		case ASK_QUEST_ACCEPT: {
+            			return sendQuestDialog(env, 4);
+            		}
+            		case QUEST_ACCEPT_1: {
+            			return sendQuestDialog(env, 1003);
+            		}
+            		case QUEST_REFUSE_1: {
+            			return sendQuestDialog(env, 1004);
+            		}
+            		case FINISH_DIALOG: {
+            			return sendQuestSelectionDialog(env);
+            		}
+            		case SELECT_ACTION_1012: {
+            			 if (QuestService.startQuest(env)) {
+                             return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 700178, 0, 1); // 1
+            			 }
+            		}
+            		default:
+            			return sendQuestStartDialog(env);
+            	}
             }
         } else if (qs.getStatus() == QuestStatus.START) {
-            if (targetId == 203608) { // Groken
-                if (env.getDialog() == DialogAction.QUEST_SELECT && qs.getQuestVarById(0) == 0) {
-                    return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 700178, 0, 1); // 1
-                }
-            } else if (targetId == 203607) { // Groken
-                if (env.getDialog() == DialogAction.QUEST_SELECT && qs.getQuestVarById(0) == 3) {
-                    return sendQuestDialog(env, 1693);
-                } else if (env.getDialog() == DialogAction.SELECT_QUEST_REWARD) {
-                    return defaultCloseDialog(env, 3, 3, true, true);
-                }
-            }
+        	switch (targetId) {
+        		case 203608: { //Groken
+        			switch (dialog) {
+        				case QUEST_SELECT: {
+        					return defaultStartFollowEvent(env, (Npc) env.getVisibleObject(), 700178, 0, 1); // 1
+        				}
+					default:
+						break;
+                    }
+        		}
+        		case 203607: { //Manir
+        			switch (dialog) {
+            			case QUEST_SELECT: {
+            				return sendQuestDialog(env, 1693);
+            			}
+            			case SELECT_QUEST_REWARD: {
+            				return defaultCloseDialog(env, 3, 3, true, true);
+            			}
+            		default:
+            			break;
+        			}
+            	}
+        	}
         } else if (qs.getStatus() == QuestStatus.REWARD) {
             if (targetId == 203607) { // Manir
-                if (env.getDialog() == DialogAction.QUEST_SELECT) {
-                    return sendQuestDialog(env, 5);
-                } else {
-                    return sendQuestEndDialog(env);
-                }
+            	switch (dialog) {
+    				case QUEST_SELECT: {
+    					return sendQuestDialog(env, 5);
+    				}
+				default:
+					return sendQuestEndDialog(env);
+            	}
             }
         }
         return false;
