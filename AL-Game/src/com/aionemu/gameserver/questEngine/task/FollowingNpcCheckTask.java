@@ -109,7 +109,7 @@ final class TargetDestinationChecker extends DestinationChecker {
 
     @Override
     boolean check() {
-        return MathUtil.isIn3dRange(target, follower, 3);
+        return MathUtil.isIn3dRange(target, follower, 10);
     }
 }
 
@@ -134,7 +134,7 @@ final class CoordinateDestinationChecker extends DestinationChecker {
 
     @Override
     boolean check() {
-        return MathUtil.isNearCoordinates(follower, x, y, z, 3);
+        return MathUtil.isNearCoordinates(follower, x, y, z, 10);
     }
 }
 
