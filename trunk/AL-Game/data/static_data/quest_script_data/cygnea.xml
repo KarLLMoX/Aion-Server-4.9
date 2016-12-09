@@ -104,14 +104,14 @@
 	<item_collecting id="18975" start_npc_ids="805215"/>
 	<item_collecting id="18976" start_npc_ids="805215"/>
 	<!-- HUNTING QUESTS -->
-	<monster_hunt id="18972" start_npc_ids="804865" end_npc_ids="805213">
-        <monster var="0" npc_ids="235824 235825" end_var="6"/>
+	<monster_hunt id="18972" start_npc_ids="804865" start_dialog_id="4762" end_npc_ids="805213">
+        <monster var="1" npc_ids="235824 235825" end_var="6"/>
     </monster_hunt>
-	<monster_hunt id="18973" start_npc_ids="804865" end_npc_ids="805214">
-        <monster var="0" npc_ids="235867 235868" end_var="6"/>
+	<monster_hunt id="18973" start_npc_ids="804865" start_dialog_id="4762" end_npc_ids="805214">
+        <monster var="1" npc_ids="235867 235868" end_var="6"/>
     </monster_hunt>
-	<monster_hunt id="18974" start_npc_ids="804865" end_npc_ids="805215">
-        <monster var="0" npc_ids="235881" end_var="6"/>
+	<monster_hunt id="18974" start_npc_ids="804865" start_dialog_id="4762" end_npc_ids="805215">
+        <monster var="1" npc_ids="235881" end_var="6"/>
     </monster_hunt>
 	<!-- OTHERS -->
 	<fountain_rewards id="15205" start_npc_ids="804788"/>
