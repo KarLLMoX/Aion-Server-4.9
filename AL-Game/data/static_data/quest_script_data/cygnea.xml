@@ -101,8 +101,8 @@
 	<item_collecting id="15215" start_npc_ids="804709" end_npc_ids="804709" start_dialog_id="4762" start_dialog_id2="1011"/>
 	<item_collecting id="15216" start_npc_ids="804709" end_npc_ids="804709" start_dialog_id="4762" start_dialog_id2="1011"/>
 	<item_collecting id="15217" start_npc_ids="804709" end_npc_ids="804709" start_dialog_id="4762" start_dialog_id2="1011"/>
-	<item_collecting id="18975" start_npc_ids="805215"/>
-	<item_collecting id="18976" start_npc_ids="805215"/>
+	<item_collecting id="18975" start_npc_ids="805215" start_dialog_id="4762" start_dialog_id2="1011"/>
+	<item_collecting id="18976" start_npc_ids="805215" start_dialog_id="4762" start_dialog_id2="1011"/>
 	<!-- HUNTING QUESTS -->
 	<monster_hunt id="18972" start_npc_ids="804865" start_dialog_id="4762" end_npc_ids="805213">
         <monster var="1" npc_ids="235824 235825" end_var="6"/>
