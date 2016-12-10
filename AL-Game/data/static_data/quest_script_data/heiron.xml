@@ -470,8 +470,8 @@
         <monster npc_ids="212104 212105" var="2" end_var="6"/>
     </monster_hunt>
     <monster_hunt id="1570" start_npc_ids="204557">
-        <monster npc_ids="211933" var="0" end_var="4"/>
-        <monster npc_ids="211930 211967" var="1" end_var="6"/>
+        <monster npc_ids="211174 211962" var="0" end_var="4"/>
+        <monster npc_ids="211933" var="1" end_var="6"/>
     </monster_hunt>
     <monster_hunt id="1571" start_npc_ids="204557">
         <monster var="0" npc_ids="211079 211089" end_var="10"/>
