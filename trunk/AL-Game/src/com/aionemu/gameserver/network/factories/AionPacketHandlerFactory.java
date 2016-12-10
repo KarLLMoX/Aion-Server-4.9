@@ -227,6 +227,7 @@ public class AionPacketHandlerFactory {
 		addPacket(new CM_MOVE_ITEM(0x15A, State.IN_GAME)); // 4.9
 		addPacket(new CM_SELECTITEM_OK(0x1AA, State.IN_GAME)); // 4.9
 		addPacket(new CM_GAMEGUARD(0x126, State.IN_GAME)); // 4.9
+		addPacket(new CM_CHANGE_CHANNEL(0x16A, State.IN_GAME)); // 4.9
 
 		// ******************(Fast Track Server)******************
 		addPacket(new CM_FAST_TRACK_CHECK(0x191, State.IN_GAME)); // 4.9	
