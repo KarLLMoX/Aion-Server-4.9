@@ -14,31 +14,18 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.network.loginserver.serverpackets;
-
-import com.aionemu.gameserver.network.loginserver.LoginServerConnection;
-import com.aionemu.gameserver.network.loginserver.LsServerPacket;
+package com.aionemu.gameserver.network;
 
 /**
- * @author nrg, Alex
+ * @author Alex
  */
-public class SM_MAC extends LsServerPacket {
+public class IPv4 {
 
-    private int accountId;
-    private String address;
-    private String hdd;
-
-    public SM_MAC(int accountId, String address, String hdd) {
-        super(13);
-        this.accountId = accountId;
-        this.address = address;
-        this.hdd = hdd;
-    }
-
-    @Override
-    protected void writeImpl(LoginServerConnection con) {
-        writeD(accountId);
-        writeS(address);
-        writeS(hdd);
+    public static String getIP(int ip) {
+        byte[] s = new byte[]{(byte) ip,
+            (byte) (ip >>> 8),
+            (byte) (ip >>> 16),
+            (byte) (ip >>> 24)};
+        return (s[0] & 0xFF) + "." + (s[1] & 0xFF) + "." + (s[2] & 0xFF) + "." + (s[3] & 0xFF);
     }
 }

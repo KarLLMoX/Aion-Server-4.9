@@ -97,4 +97,7 @@ public class AdminConfig {
      */
     @Property(key = "administration.command.special.skill", defaultValue = "9")
     public static int COMMAND_SPECIAL_SKILL;
+
+    @Property(key = "gameserver.not-open.twoclienwindow", defaultValue = "false")
+    public static boolean NO_OPEN_NEW_WINDOW;
 }

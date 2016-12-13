@@ -57,6 +57,8 @@ public class CommandsConfig {
     public static int BANCHAR;
     @Property(key = "banip", defaultValue = "3")
     public static int BANIP;
+    @Property(key = "banhdd", defaultValue = "3")
+    public static int BANHDD;	
     @Property(key = "banmac", defaultValue = "3")
     public static int BANMAC;
     @Property(key = "base", defaultValue = "3")
@@ -151,6 +153,8 @@ public class CommandsConfig {
     public static int MOVETOPLAYER;
     @Property(key = "movie", defaultValue = "1")
     public static int MOVIE;
+    @Property(key = "netban", defaultValue = "1")
+    public static int NETBAN;
     @Property(key = "neutral", defaultValue = "1")
     public static int NEUTRAL;
     @Property(key = "notice", defaultValue = "1")
@@ -233,8 +237,12 @@ public class CommandsConfig {
     public static int UNBAN;
     @Property(key = "unbanchar", defaultValue = "4")
     public static int UNBANCHAR;
+    @Property(key = "unbanhdd", defaultValue = "4")
+    public static int UNBANHDD;
+    @Property(key = "unbannet", defaultValue = "4")
+    public static int UNBANNET;
     @Property(key = "unbanip", defaultValue = "4")
-    public static int UNBANIP;
+    public static int UNBANIP; 
     @Property(key = "ungag", defaultValue = "1")
     public static int UNGAG;
     @Property(key = "useskill", defaultValue = "3")
