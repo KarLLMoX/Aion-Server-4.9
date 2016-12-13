@@ -14,31 +14,27 @@
  *  along with Aion-Lightning.
  *  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aionemu.gameserver.network.loginserver.serverpackets;
+package com.aionemu.gameserver.dao;
 
-import com.aionemu.gameserver.network.loginserver.LoginServerConnection;
-import com.aionemu.gameserver.network.loginserver.LsServerPacket;
+import com.aionemu.commons.database.dao.DAO;
+import com.aionemu.gameserver.network.BannedHDDEntry;
+import java.util.Map;
 
 /**
- * @author nrg, Alex
+ * @author Alex
  */
-public class SM_MAC extends LsServerPacket {
+public abstract class BannedHddDAO implements DAO {
 
-    private int accountId;
-    private String address;
-    private String hdd;
+    public abstract boolean update(BannedHDDEntry entry);
 
-    public SM_MAC(int accountId, String address, String hdd) {
-        super(13);
-        this.accountId = accountId;
-        this.address = address;
-        this.hdd = hdd;
-    }
+    public abstract boolean remove(String address);
+
+    public abstract Map<String, BannedHDDEntry> load();
+
+    public abstract void cleanExpiredBans();
 
     @Override
-    protected void writeImpl(LoginServerConnection con) {
-        writeD(accountId);
-        writeS(address);
-        writeS(hdd);
+    public final String getClassName() {
+        return BannedHddDAO.class.getName();
     }
 }
