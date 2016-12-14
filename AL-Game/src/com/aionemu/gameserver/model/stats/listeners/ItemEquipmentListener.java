@@ -41,6 +41,7 @@ import java.util.Set;
 
 /**
  * @author xavier modified by Wakizashi
+ * rework Phantom_KNA
  */
 public class ItemEquipmentListener {
 
@@ -82,6 +83,7 @@ public class ItemEquipmentListener {
             StigmaService.recheckHiddenStigma(owner);
         }
         EnchantService.onItemEquip(owner, item);
+		EnchantService.getGloryShield(owner);
     }
 
     /**
@@ -126,6 +128,7 @@ public class ItemEquipmentListener {
 		if (item.getItemTemplate().isStigma()) {
             StigmaService.recheckHiddenStigma(owner);
         }
+		EnchantService.getGloryShield(owner);
     }
 
     /**
