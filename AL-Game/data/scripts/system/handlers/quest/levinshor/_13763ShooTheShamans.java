@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author pralinka
+ * @rework Phantom_KNA
  */
 public class _13763ShooTheShamans extends QuestHandler {
 
@@ -73,7 +74,7 @@ public class _13763ShooTheShamans extends QuestHandler {
         DialogAction dialog = env.getDialog();
         int targetId = env.getTargetId();
 
-        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
             if ((targetId == 805275) || (targetId == 805276) || (targetId == 805277)) {
                 if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);

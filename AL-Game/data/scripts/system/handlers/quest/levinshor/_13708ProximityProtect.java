@@ -31,6 +31,7 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author pralinka
+ * @rework Phantom_KNA
  */
 public class _13708ProximityProtect extends QuestHandler {
 
@@ -54,7 +55,7 @@ public class _13708ProximityProtect extends QuestHandler {
         int targetId = env.getTargetId();
         DialogAction dialog = env.getDialog();
 
-        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
             if (targetId == 802332) {
                 if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 1011);

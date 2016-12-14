@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author pralinka
+ * @rework Phantom_KNA
  */
 public class _23760SouthernHospitality extends QuestHandler {
 
@@ -73,7 +74,7 @@ public class _23760SouthernHospitality extends QuestHandler {
         DialogAction dialog = env.getDialog();
         int targetId = env.getTargetId();
 
-        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
             if ((targetId == 805291) || (targetId == 805292) || (targetId == 805293)) {
                 if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);

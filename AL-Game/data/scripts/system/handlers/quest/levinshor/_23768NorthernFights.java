@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author pralinka
+ * @rework Phantom_KNA
  */
 public class _23768NorthernFights extends QuestHandler {
 
@@ -73,7 +74,7 @@ public class _23768NorthernFights extends QuestHandler {
         DialogAction dialog = env.getDialog();
         int targetId = env.getTargetId();
 
-        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
             if ((targetId == 805282) || (targetId == 805283) || (targetId == 805284)) {
                 if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);

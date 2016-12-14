@@ -25,6 +25,7 @@ import com.aionemu.gameserver.questEngine.model.QuestStatus;
 
 /**
  * @author pralinka
+ * @rework Phantom_KNA
  */
 public class _13767SouthernBrawlers extends QuestHandler {
 
@@ -75,8 +76,8 @@ public class _13767SouthernBrawlers extends QuestHandler {
         QuestState qs = player.getQuestStateList().getQuestState(questId);
         DialogAction dialog = env.getDialog();
         int targetId = env.getTargetId();
-
-        if (qs == null || qs.getStatus() == QuestStatus.NONE) {
+        
+        if (qs == null || qs.getStatus() == QuestStatus.NONE || qs.canRepeat()) {
             if ((targetId == 805278) || (targetId == 805279) || (targetId == 805280)) {
                 if (dialog == DialogAction.QUEST_SELECT) {
                     return sendQuestDialog(env, 4762);
