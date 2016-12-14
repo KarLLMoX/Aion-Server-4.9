@@ -1015,12 +1015,14 @@ public class EnchantService {
 				return;
 			}			
 			player.getSkillList().addSkill(player, skillId, 1);
-			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
+			//PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
+			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403100));
 		} else {
 			if (player.getSkillList().isSkillPresent(skillId)) {
 				SkillLearnService.removeSkill(player, skillId);
 			}
-			PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
+			//PacketSendUtility.sendPacket(player, new SM_SKILL_LIST(player, player.getSkillList().getBasicSkills()));
+			PacketSendUtility.sendPacket(player, new SM_SYSTEM_MESSAGE(1403101));
 		}
 	}
 	
