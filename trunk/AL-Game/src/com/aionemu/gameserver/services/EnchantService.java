@@ -49,7 +49,6 @@ import com.aionemu.gameserver.model.templates.item.ItemQuality;
 import com.aionemu.gameserver.model.templates.item.ItemTemplate;
 import com.aionemu.gameserver.model.templates.item.Stigma;
 import com.aionemu.gameserver.model.templates.item.actions.EnchantItemAction;
-import com.aionemu.gameserver.network.aion.serverpackets.SM_SKILL_LIST;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_SYSTEM_MESSAGE;
 import com.aionemu.gameserver.services.item.ItemPacketService;
 import com.aionemu.gameserver.services.item.ItemService;

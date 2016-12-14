@@ -28,6 +28,7 @@ import com.aionemu.gameserver.world.zone.ZoneName;
 
 /**
  * @author pralinka
+ * @rework Phantom_KNA
  */
 public class _13744AgentInNeed extends QuestHandler {
 
