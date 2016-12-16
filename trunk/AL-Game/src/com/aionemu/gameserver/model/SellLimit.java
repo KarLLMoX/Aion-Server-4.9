@@ -16,18 +16,20 @@
  */
 package com.aionemu.gameserver.model;
 
+import com.aionemu.gameserver.configs.main.CustomConfig;
 import java.util.NoSuchElementException;
 
 /**
  * @author synchro2
+ * @rework Phantom_KNA
  */
 public enum SellLimit {
 
-    LIMIT_1_30(1, 30, 5300047),
-    LIMIT_31_40(31, 40, 7100047),
-    LIMIT_41_55(41, 55, 12050047),
-    LIMIT_56_60(56, 60, 14600047),
-    LIMIT_61_65(61, 65, 17150047);
+    LIMIT_1_30(1, 30, CustomConfig.SELL_LIMIT_KINAH_LV1_LV30),
+    LIMIT_31_40(31, 40, CustomConfig.SELL_LIMIT_KINAH_LV31_LV40),
+    LIMIT_41_55(41, 55, CustomConfig.SELL_LIMIT_KINAH_LV41_LV55),
+    LIMIT_56_60(56, 60, CustomConfig.SELL_LIMIT_KINAH_LV56_LV60),
+    LIMIT_61_65(61, 65, CustomConfig.SELL_LIMIT_KINAH_LV61_LV65);
     private int playerMinLevel;
     private int playerMaxLevel;
     private long limit;

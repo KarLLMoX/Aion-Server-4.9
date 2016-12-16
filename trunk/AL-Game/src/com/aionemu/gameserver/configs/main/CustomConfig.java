@@ -288,6 +288,16 @@ public class CustomConfig {
     public static boolean LIMITS_ENABLED;
     @Property(key = "gameserver.limits.update", defaultValue = "0 0 0 * * ?")
     public static String LIMITS_UPDATE;
+	@Property(key = "gameserver.sell.limit.kinah", defaultValue = "5300047")
+	public static long SELL_LIMIT_KINAH_LV1_LV30;
+	@Property(key = "gameserver.sell.limit.kinah", defaultValue = "7100047")
+	public static long SELL_LIMIT_KINAH_LV31_LV40;
+	@Property(key = "gameserver.sell.limit.kinah", defaultValue = "12050047")
+	public static long SELL_LIMIT_KINAH_LV41_LV55;
+	@Property(key = "gameserver.sell.limit.kinah", defaultValue = "14600047")
+	public static long SELL_LIMIT_KINAH_LV56_LV60;
+	@Property(key = "gameserver.sell.limit.kinah", defaultValue = "17150047")
+	public static long SELL_LIMIT_KINAH_LV61_LV65;
     @Property(key = "gameserver.chat.text.length", defaultValue = "150")
     public static int MAX_CHAT_TEXT_LENGHT;
     @Property(key = "gameserver.abyssxform.afterlogout", defaultValue = "false")
