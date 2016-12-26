@@ -21,7 +21,6 @@ import com.aionemu.gameserver.model.gameobjects.Npc;
 import com.aionemu.gameserver.model.gameobjects.player.Player;
 import com.aionemu.gameserver.network.aion.serverpackets.SM_DIALOG_WINDOW;
 import com.aionemu.gameserver.questEngine.handlers.QuestHandler;
-import com.aionemu.gameserver.model.DialogAction;
 import com.aionemu.gameserver.questEngine.model.QuestEnv;
 import com.aionemu.gameserver.questEngine.model.QuestState;
 import com.aionemu.gameserver.questEngine.model.QuestStatus;
@@ -70,8 +69,7 @@ public class _14054KrallingToKralltumagna extends QuestHandler {
         Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-        @SuppressWarnings("unused")
-		DialogAction dialog = env.getDialog();
+        
         if (qs == null) {
             return false;
         }
@@ -82,10 +80,10 @@ public class _14054KrallingToKralltumagna extends QuestHandler {
             return false;
         } else if (qs.getStatus() == QuestStatus.START) {
             int var = qs.getQuestVarById(0);
-            @SuppressWarnings("unused")
-			int var1 = qs.getQuestVarById(1);
-            @SuppressWarnings("unused")
-			int var2 = qs.getQuestVarById(2);
+            
+			qs.getQuestVarById(1);
+            
+			qs.getQuestVarById(2);
             if (targetId == 204602) {
                 switch (env.getDialog()) {
                     case QUEST_SELECT:

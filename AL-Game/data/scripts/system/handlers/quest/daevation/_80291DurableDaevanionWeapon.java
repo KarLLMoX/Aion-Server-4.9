@@ -75,11 +75,7 @@ public class _80291DurableDaevanionWeapon extends QuestHandler {
 		if (qs == null) {
 			return false;
 		}
-
 		int var = qs.getQuestVarById(0);
-		@SuppressWarnings("unused")
-		int var1 = qs.getQuestVarById(1);
-
 		if (qs.getStatus() == QuestStatus.START) {
 			if (targetId == 831384) {
 				switch (env.getDialog()) {

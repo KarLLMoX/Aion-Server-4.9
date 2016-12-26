@@ -48,8 +48,6 @@ public class _14122OasisWasted extends QuestHandler {
         final Player player = env.getPlayer();
         int targetId = env.getTargetId();
         QuestState qs = player.getQuestStateList().getQuestState(questId);
-        @SuppressWarnings("unused")
-		DialogAction dialog = env.getDialog();
 
 		if (qs == null || qs.getStatus() == QuestStatus.NONE) {
 			if (targetId == 203917) { // Gaia
@@ -60,8 +58,6 @@ public class _14122OasisWasted extends QuestHandler {
 			   }
 			}
 		} else if (qs.getStatus() == QuestStatus.START) {
-			@SuppressWarnings("unused")
-			int var = qs.getQuestVarById(0);
 			if (targetId == 203992) { // Ophelos
 			    if (env.getDialog() == DialogAction.QUEST_SELECT) {
 					return sendQuestDialog(env, 1352);

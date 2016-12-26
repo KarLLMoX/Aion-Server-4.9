@@ -149,8 +149,6 @@ public class _2620SummoningPhagrasul extends QuestHandler {
                             ThreadPoolManager.getInstance().schedule(new Runnable() {
                                 @Override
                                 public void run() {
-                                    @SuppressWarnings("unused")
-                                    final QuestState qs = player.getQuestStateList().getQuestState(questId);
                                     removeQuestItem(env, 182204498, 1);
                                     if (player.getTarget() == null || player.getTarget().getObjectId() != targetObjectId) {
                                         return;
