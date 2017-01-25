@@ -58,8 +58,8 @@ public class RideRobotEffect extends EffectTemplate {
         ActionObserver obsZ = new ActionObserver(ObserverType.SKILLUSE){
             @Override
             public void skilluse(Skill skill) { // can put stability thruster and mobility thrsuter in here (but for now not sure if its stackable or not)
-                int[] batteryId = {3770, 3769, 3768, 3767, 3766};
-                int[] bulwarkId = {3774, 3773, 3772, 3771};
+                int[] batteryId = {2440, 2441, 2442, 2443, 2444, 2445, 2446, 2447, 2448, 2449};
+                int[] bulwarkId = {2579, 2580, 2581};
                 for(int id : batteryId){
                     if (skill.getSkillTemplate().getSkillId() == id){
                         for(int bulId : bulwarkId){
