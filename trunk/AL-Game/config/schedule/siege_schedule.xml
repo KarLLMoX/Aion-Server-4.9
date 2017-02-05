@@ -48,21 +48,22 @@
         <siegeTime>0 0 21 ? * SUN</siegeTime> <!-- 4.9 -->
     </fortress>
 
+	<!-- TODO -->
     <!-- Pangea Fortress -->
     <!-- Belus Fortress -->
-    <fortress id="10111">
-        <siegeTime>0 0 21 ? * SAT</siegeTime> <!-- 4.9 -->
-    </fortress>
+    <!-- <fortress id="10111"> -->
+        <!-- <siegeTime>0 0 21 ? * SAT</siegeTime> -->
+    <!-- </fortress> -->
     <!-- Aspida Fortress -->
-    <fortress id="10211">
-        <siegeTime>0 0 21 ? * SAT</siegeTime> <!-- 4.9 -->
-    </fortress>
+    <!-- <fortress id="10211"> -->
+        <!-- <siegeTime>0 0 21 ? * SAT</siegeTime> -->
+    <!-- </fortress> -->
     <!-- Atanaos Fortress -->
-    <fortress id="10311">
-        <siegeTime>0 0 21 ? * SAT</siegeTime> <!-- 4.9 -->
-    </fortress>
+    <!-- <fortress id="10311"> -->
+        <!-- <siegeTime>0 0 21 ? * SAT</siegeTime> -->
+    <!-- </fortress> -->
     <!-- Disillon Fortress -->
-    <fortress id="10411">
-        <siegeTime>0 0 21 ? * SAT</siegeTime> <!-- 4.9 -->
-    </fortress>
+    <!-- <fortress id="10411"> -->
+        <!-- <siegeTime>0 0 21 ? * SAT</siegeTime> -->
+    <!-- </fortress> -->
 </siege_schedule>
