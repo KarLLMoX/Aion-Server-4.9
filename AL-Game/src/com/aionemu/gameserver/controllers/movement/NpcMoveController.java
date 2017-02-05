@@ -380,7 +380,7 @@ public class NpcMoveController extends CreatureMoveController<Npc> {
         int oldPoint = currentPoint;
         if (currentRoute == null) {
             WalkManager.stopWalking((NpcAI2) owner.getAi2());
-            log.warn("Bad Walker Id: " + owner.getNpcId() + " - point: " + oldPoint);
+            log.warn("Bad Walker Id: "+ owner.getSpawn().getWalkerId() + " NpcId: " + owner.getNpcId() + " - point: " + oldPoint);
             return;
         }
         if (currentPoint < (currentRoute.size() - 1)) {
