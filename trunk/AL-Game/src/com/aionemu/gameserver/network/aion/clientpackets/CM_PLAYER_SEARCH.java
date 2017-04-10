@@ -107,6 +107,8 @@ public class CM_PLAYER_SEARCH extends AionClientPacket {
             } else if ((player.getRace() != activePlayer.getRace())
                     && (CustomConfig.FACTIONS_SEARCH_MODE == false)) {
                 continue;
+            } else if (player.getName() == activePlayer.getName()) {
+                continue;
             } else // This player matches criteria
             {
                 matches.add(player);
